@@ -70,11 +70,19 @@ module propogate (
     randomizer.clkregEn = 0;
     randomizer.randnumrst=rst;
     randomizer.randclkrst = rst;
+    if (randomizer.ranNum==3b000){
+            randNum = numb_gen1.q;
+        }
+    else{
+          randNum = randomizer.ranNum;
+    }
     
-    randNum = randomizer.ranNum;
-    numSeq = randNum;
-    clkSel = randomizer.ranClk;
-   
+    if (randomizer.ranClk==3b101|randomizer.ranClk==3b110|randomizer.ranClk==3b111){
+              clkSel = ClkNumb.SLOWCLK23;
+    }
+    else{
+        clkSel = randomizer.ranClk;
+    }
     
     
   //instantiate outputs 
@@ -86,6 +94,8 @@ module propogate (
     gnd1 = ~randNum[0];  //when column is active connect corresponding gnd to 0
     gnd2 = ~randNum[1];
     gnd3 = ~randNum[2];
+    
+    numSeq = randNum;
     
       
    case (clkSel){
@@ -105,6 +115,7 @@ module propogate (
     case (rowCtr.value){
     //when the corresponding row is 'active' make the entire row active
       RowNumb.ROW1:
+          numb_gen1.d = numb_gen1.q + 1;
           seed.d = seed.q + 1;
           clkseed.d = clkseed.q + 1;
           randomizer.randnumNext = 1; //generate random number seq
@@ -113,30 +124,36 @@ module propogate (
           randomizer.clkregEn = 1;
           randomizer.randnumrst = 1; //reset so you can generate new numb later
           randomizer.randclkrst = 1; 
-           if (randomizer.ranNum==3b000){
-              randNum = numb_gen1.q;
-        }
-           if (randomizer.ranClk==3b101|randomizer.ranClk==3b110|randomizer.ranClk==3b111){
-              clkSel = ClkNumb.SLOWCLK23;
-        }
           row1=1;
           row2=0;
           row3=0;
    
       RowNumb.ROW2:
       //light up row 2 with specified numbers
+        randomizer.randnumNext = 0; //generate random number seq
+          randomizer.randclkNext = 0; //generate random clk number
+          randomizer.numbregEn = 0; //write enable register to rmb new value
+          randomizer.clkregEn = 0;
         row1=0;
         row2=1;
         row3=0;
         
       RowNumb.ROW3:
       //light up row 3 with active numbers
+        randomizer.randnumNext = 0; //generate random number seq
+          randomizer.randclkNext = 0; //generate random clk number
+          randomizer.numbregEn = 0; //write enable register to rmb new value
+          randomizer.clkregEn = 0;
         row1=0;
         row2=0;
         row3=1;
         
         RowNumb.ROW4:
       //no rows light up (pause to give user time to react) 
+        randomizer.randnumNext = 0; //generate random number seq
+          randomizer.randclkNext = 0; //generate random clk number
+          randomizer.numbregEn = 0; //write enable register to rmb new value
+          randomizer.clkregEn = 0;
         row1=0;
         row2=0; //change to all 0 after debugging
         row3=0;

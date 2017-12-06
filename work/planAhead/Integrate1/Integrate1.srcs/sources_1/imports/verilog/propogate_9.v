@@ -104,9 +104,16 @@ module propogate_9 (
     M_randomizer_clkregEn = 1'h0;
     M_randomizer_randnumrst = rst;
     M_randomizer_randclkrst = rst;
-    randNum = M_randomizer_ranNum;
-    numSeq = randNum;
-    clkSel = M_randomizer_ranClk;
+    if (M_randomizer_ranNum == 3'h0) begin
+      randNum = M_numb_gen1_q;
+    end else begin
+      randNum = M_randomizer_ranNum;
+    end
+    if (M_randomizer_ranClk == 3'h5 | M_randomizer_ranClk == 3'h6 | M_randomizer_ranClk == 3'h7) begin
+      clkSel = 3'h2;
+    end else begin
+      clkSel = M_randomizer_ranClk;
+    end
     rowLit = M_rowCtr_value;
     row1 = 1'h0;
     row2 = 1'h0;
@@ -114,6 +121,7 @@ module propogate_9 (
     gnd1 = ~randNum[0+0-:1];
     gnd2 = ~randNum[1+0-:1];
     gnd3 = ~randNum[2+0-:1];
+    numSeq = randNum;
     
     case (clkSel)
       3'h0: begin
@@ -135,6 +143,7 @@ module propogate_9 (
     
     case (M_rowCtr_value)
       2'h0: begin
+        M_numb_gen1_d = M_numb_gen1_q + 1'h1;
         M_seed_d = M_seed_q + 1'h1;
         M_clkseed_d = M_clkseed_q + 1'h1;
         M_randomizer_randnumNext = 1'h1;
@@ -143,27 +152,33 @@ module propogate_9 (
         M_randomizer_clkregEn = 1'h1;
         M_randomizer_randnumrst = 1'h1;
         M_randomizer_randclkrst = 1'h1;
-        if (M_randomizer_ranNum == 3'h0) begin
-          randNum = M_numb_gen1_q;
-        end
-        if (M_randomizer_ranClk == 3'h5 | M_randomizer_ranClk == 3'h6 | M_randomizer_ranClk == 3'h7) begin
-          clkSel = 3'h2;
-        end
         row1 = 1'h1;
         row2 = 1'h0;
         row3 = 1'h0;
       end
       2'h1: begin
+        M_randomizer_randnumNext = 1'h0;
+        M_randomizer_randclkNext = 1'h0;
+        M_randomizer_numbregEn = 1'h0;
+        M_randomizer_clkregEn = 1'h0;
         row1 = 1'h0;
         row2 = 1'h1;
         row3 = 1'h0;
       end
       2'h2: begin
+        M_randomizer_randnumNext = 1'h0;
+        M_randomizer_randclkNext = 1'h0;
+        M_randomizer_numbregEn = 1'h0;
+        M_randomizer_clkregEn = 1'h0;
         row1 = 1'h0;
         row2 = 1'h0;
         row3 = 1'h1;
       end
       2'h3: begin
+        M_randomizer_randnumNext = 1'h0;
+        M_randomizer_randclkNext = 1'h0;
+        M_randomizer_numbregEn = 1'h0;
+        M_randomizer_clkregEn = 1'h0;
         row1 = 1'h0;
         row2 = 1'h0;
         row3 = 1'h0;
