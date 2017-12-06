@@ -50,7 +50,7 @@ module main (
     myalu.a = 8b0;
     myalu.b = 8b0; 
     
-    mypropogater.num = 3b110;
+   // mypropogater.num = 3b110;
     rowOn = mypropogater.rowLit;
     butt1 = left.q;
     butt2 = cent.q;
@@ -65,7 +65,6 @@ module main (
     low2 = mypropogater.gnd2;
     low3 = mypropogater.gnd3;
        
-    //instantiate my dff
     
     //propagate should have a dff counter somewhere where i can refer to.
     button_cond1.in = left2;            // raw button input
@@ -109,7 +108,7 @@ module main (
                   result = 2b01;
           }
       else{
-      result = 2b11;
+      result = 2b00;
       }
       
       //will default to 10 when goes to row 3
@@ -119,7 +118,7 @@ module main (
                   result = 2b10;
           }
       else{
-      result = 2b11;
+      result = 2b00;
       }
     }
       

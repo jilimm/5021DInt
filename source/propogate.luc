@@ -17,73 +17,108 @@ module propogate (
     input clk,  // clock
 //input clkinput[3],
     input rst,  // reset
-    input num[3], //LED column to light up on each row
+ //   input num[3], //LED column to light up on each row
+//    input clkSel[3], //numbers to select which clock
     output rowLit[2], //the row to be lit up (ctr.value)
-    output numSeq[3],
+    output numSeq[3], //column to be lit-ted up
     //output numOut[3], //LED column that should be lit up on the active row
     output row1,
     output row2,
     output row3,
     output gnd1,
     output gnd2,
-    output gnd3,
-    output propClk //which row should be active
+    output gnd3
   ) {
 
-  //sig clkinvalue; 
+  sig chosenClk; 
+  sig randNum[3];
+  sig clkSel[3];
   
   .clk(clk){
   .rst(rst){
-        //counter slowclk21(#SIZE(1),#DIV(21));
-        //counter slowclk22(#SIZE(1),#DIV(22));
-        //counter slowclk23(#SIZE(1),#DIV(23));
-        //counter slowclk24(#SIZE(1),#DIV(24));
-        //counter slowclk25(#SIZE(1),#DIV(25));
-        counter ctr(#SIZE(2),#DIV(24));
-        counter propClk1(#SIZE(1),#DIV(24));
+        //set up an array of slow clocks i can choose from
+        counter slowclk21(#SIZE(1),#DIV(21));
+        counter slowclk22(#SIZE(1),#DIV(22));
+        counter slowclk23(#SIZE(1),#DIV(23));
+        counter slowclk24(#SIZE(1),#DIV(24));
+        counter slowclk25(#SIZE(1),#DIV(25));
+        randomizer randomizer;
     }
   } 
-/*
- .clk(clkinvalue) {
+
+ .clk(chosenClk) {   //connect my normal clock to a slower clock
     .rst(rst){
-        counter ctr(#SIZE(2),#DIV(25));
-    }
-    
+        counter rowCtr(#SIZE(2)); //ctr will go from 00 to 11 this will be the number of row that is lit
+        dff seed[32] (#INIT(32d1)); //seed to start numb_gen
+        dff clkseed[32] (#INIT(32d3)); // seed to start clk_gen seed chosen is diff from seed1 to ensure randomness
+        dff numb_gen1[3] (#INIT(3b001)); //if numb_gen gives me 000, I will use this counter number
   }
-  */
+  }
+ 
    
-  always{
- /* 
-    case(clkinput){
+  always {
+      
+    //setting up the randomiszer
+    numb_gen1.d = numb_gen1.q + 1;
+    
+    //initializin randomizer
+    randomizer.numSeed = seed.q;
+    randomizer.clkSeed = clkseed.q;
+    randomizer.randnumNext = 0; 
+    randomizer.randclkNext = 0; 
+    randomizer.numbregEn = 0; 
+    randomizer.clkregEn = 0;
+    randomizer.randnumrst=rst;
+    randomizer.randclkrst = rst;
+    
+    randNum = randomizer.ranNum;
+    numSeq = randNum;
+    clkSel = randomizer.ranClk;
+   
+    
+    
+  //instantiate outputs 
+   rowLit = rowCtr.value;
+  //  numSeq = num;
+    row1=0; 
+   row2=0;
+   row3=0;
+    gnd1 = ~randNum[0];  //when column is active connect corresponding gnd to 0
+    gnd2 = ~randNum[1];
+    gnd3 = ~randNum[2];
+    
+      
+   case (clkSel){
       ClkNumb.SLOWCLK21:
-      clkinvalue =  slowclk21.value;
+       chosenClk= slowclk21.value;
       ClkNumb.SLOWCLK22:
-      clkinvalue=  slowclk22.value;
+      chosenClk = slowclk22.value;
       ClkNumb.SLOWCLK23:
-      clkinvalue = slowclk23.value;
+      chosenClk = slowclk23.value;
       ClkNumb.SLOWCLK24:
-      clkinvalue = slowclk24.value;
+      chosenClk= slowclk24.value;
       ClkNumb.SLOWCLK25:
-      clkinvalue = slowclk25.value;
+      chosenClk = slowclk25.value;
     }
     
-    */
    
-   
-  //instantiate values 
-  //numOut=2b00;
-    propClk = propClk1.value;
-  row1=0;
-  row2=0;
-  row3=0;
-    gnd1 = ~num[0];
-    gnd2 = ~num[1];
-    gnd3 = ~num[2];
-    numSeq = num;
-    rowLit = ctr.value;
-    
-    case (ctr.value){
+    case (rowCtr.value){
+    //when the corresponding row is 'active' make the entire row active
       RowNumb.ROW1:
+          seed.d = seed.q + 1;
+          clkseed.d = clkseed.q + 1;
+          randomizer.randnumNext = 1; //generate random number seq
+          randomizer.randclkNext = 1; //generate random clk number
+          randomizer.numbregEn = 1; //write enable register to rmb new value
+          randomizer.clkregEn = 1;
+          randomizer.randnumrst = 1; //reset so you can generate new numb later
+          randomizer.randclkrst = 1; 
+           if (randomizer.ranNum==3b000){
+              randNum = numb_gen1.q;
+        }
+           if (randomizer.ranClk==3b101|randomizer.ranClk==3b110|randomizer.ranClk==3b111){
+              clkSel = ClkNumb.SLOWCLK23;
+        }
           row1=1;
           row2=0;
           row3=0;

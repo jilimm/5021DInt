@@ -1,0 +1,45 @@
+module randomizer (
+    input clk,  // clock
+    input rst,  // reset
+    input numSeed[32],
+    input clkSeed[32],
+    output ranNum[3],
+    output ranClk[3],
+    input randnumNext,
+    input randclkNext,
+    input randnumrst,
+    input randclkrst,
+    input numbregEn,
+    input clkregEn
+  ) {
+  
+.clk(clk){
+  .rst(rst){
+    register numbreg1;
+    register clkreg;   
+      
+    }
+    pn_gen numb_gen;
+    pn_gen clk_gen;
+  }
+  
+  
+  always {
+    numb_gen.rst = rst;
+    numb_gen.next = randnumNext;
+    numb_gen.seed = numSeed;
+    numb_gen.rst = randnumrst;
+    numbreg1.data = numb_gen.num[2:0];
+    numbreg1.en = numbregEn;
+    ranNum = numbreg1.out;
+    
+    clk_gen.rst = rst;
+    clk_gen.rst = randclkrst;
+    clk_gen.next = randclkNext;
+    clk_gen.seed = clkSeed;
+    clkreg.data = clk_gen.num[2:0];
+    clkreg.en = clkregEn;
+    ranClk = clkreg.out;   
+    
+  }
+}
