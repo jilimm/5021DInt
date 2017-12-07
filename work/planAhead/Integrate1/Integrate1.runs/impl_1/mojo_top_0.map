@@ -8,7 +8,7 @@ Target Device  : xc6slx9
 Target Package : tqg144
 Target Speed   : -2
 Mapper Version : spartan6 -- $Revision: 1.55 $
-Mapped Date    : Fri Dec 08 05:00:06 2017
+Mapped Date    : Fri Dec 08 05:07:58 2017
 
 Mapping design into LUTs...
 WARNING:MapLib:701 - Signal spi_channel[3] connected to top level port
@@ -30,7 +30,7 @@ INFO:Map:215 - The Interim Design Summary has been generated in the MAP Report
    (.mrp).
 Running timing-driven placement...
 Total REAL time at the beginning of Placer: 4 secs 
-Total CPU  time at the beginning of Placer: 3 secs 
+Total CPU  time at the beginning of Placer: 4 secs 
 
 Phase 1.1  Initial Placement Analysis
 Phase 1.1  Initial Placement Analysis (Checksum:e6586b5a) REAL time: 4 secs 
@@ -64,23 +64,23 @@ Phase 8.5  Local Placement Optimization (Checksum:7c838fdf) REAL time: 6 secs
 
 Phase 9.8  Global Placement
 ..................
-.....................
-Phase 9.8  Global Placement (Checksum:43266284) REAL time: 6 secs 
+.................
+Phase 9.8  Global Placement (Checksum:f8ad6175) REAL time: 6 secs 
 
 Phase 10.5  Local Placement Optimization
-Phase 10.5  Local Placement Optimization (Checksum:43266284) REAL time: 6 secs 
+Phase 10.5  Local Placement Optimization (Checksum:f8ad6175) REAL time: 6 secs 
 
 Phase 11.18  Placement Optimization
-Phase 11.18  Placement Optimization (Checksum:3be23824) REAL time: 6 secs 
+Phase 11.18  Placement Optimization (Checksum:ac06ab65) REAL time: 6 secs 
 
 Phase 12.5  Local Placement Optimization
-Phase 12.5  Local Placement Optimization (Checksum:3be23824) REAL time: 6 secs 
+Phase 12.5  Local Placement Optimization (Checksum:ac06ab65) REAL time: 6 secs 
 
 Phase 13.34  Placement Validation
-Phase 13.34  Placement Validation (Checksum:3b58f0dc) REAL time: 6 secs 
+Phase 13.34  Placement Validation (Checksum:aa5f3bb5) REAL time: 6 secs 
 
-Total REAL time to Placer completion: 7 secs 
-Total CPU  time to Placer completion: 7 secs 
+Total REAL time to Placer completion: 6 secs 
+Total CPU  time to Placer completion: 6 secs 
 Running post-placement packing...
 Writing output files...
 
@@ -115,7 +115,7 @@ Slice Logic Utilization:
       Number with other load:                    0
 
 Slice Logic Distribution:
-  Number of occupied Slices:                   128 out of   1,430    8%
+  Number of occupied Slices:                   129 out of   1,430    9%
   Number of MUXCYs used:                       188 out of   2,860    6%
   Number of LUT Flip Flop pairs used:          393
     Number with an unused Flip Flop:           171 out of     393   43%

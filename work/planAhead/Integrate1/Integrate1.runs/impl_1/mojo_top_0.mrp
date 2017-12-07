@@ -8,7 +8,7 @@ Target Device  : xc6slx9
 Target Package : tqg144
 Target Speed   : -2
 Mapper Version : spartan6 -- $Revision: 1.55 $
-Mapped Date    : Fri Dec 08 05:00:06 2017
+Mapped Date    : Fri Dec 08 05:07:58 2017
 
 Design Summary
 --------------
@@ -39,7 +39,7 @@ Slice Logic Utilization:
       Number with other load:                    0
 
 Slice Logic Distribution:
-  Number of occupied Slices:                   128 out of   1,430    8%
+  Number of occupied Slices:                   129 out of   1,430    9%
   Number of MUXCYs used:                       188 out of   2,860    6%
   Number of LUT Flip Flop pairs used:          393
     Number with an unused Flip Flop:           171 out of     393   43%

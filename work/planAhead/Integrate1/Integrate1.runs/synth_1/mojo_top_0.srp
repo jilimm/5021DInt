@@ -3,7 +3,7 @@ Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 --> 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.07 secs
+Total CPU time to Xst completion: 0.05 secs
  
 --> Reading design: mojo_top_0.prj
 
@@ -1321,8 +1321,8 @@ myState/mainState/mypropogater/slowclk25/M_ctr_q_22|    1.744|         |        
 =========================================================================
 
 
-Total REAL time to Xst completion: 6.00 secs
-Total CPU time to Xst completion: 6.58 secs
+Total REAL time to Xst completion: 7.00 secs
+Total CPU time to Xst completion: 7.13 secs
  
 --> 
 

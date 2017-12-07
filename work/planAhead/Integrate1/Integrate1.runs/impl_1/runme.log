@@ -34,7 +34,7 @@ NGDBUILD Design Results Summary:
   Number of warnings:   0
 
 Writing NGD file "mojo_top_0.ngd" ...
-Total REAL time to NGDBUILD completion:  6 sec
+Total REAL time to NGDBUILD completion:  7 sec
 Total CPU time to NGDBUILD completion:   3 sec
 
 Writing NGDBUILD log file "mojo_top_0.bld"...
@@ -68,7 +68,7 @@ INFO:Map:215 - The Interim Design Summary has been generated in the MAP Report
    (.mrp).
 Running timing-driven placement...
 Total REAL time at the beginning of Placer: 4 secs 
-Total CPU  time at the beginning of Placer: 3 secs 
+Total CPU  time at the beginning of Placer: 4 secs 
 
 Phase 1.1  Initial Placement Analysis
 Phase 1.1  Initial Placement Analysis (Checksum:e6586b5a) REAL time: 4 secs 
@@ -102,23 +102,23 @@ Phase 8.5  Local Placement Optimization (Checksum:7c838fdf) REAL time: 6 secs
 
 Phase 9.8  Global Placement
 ..................
-.....................
-Phase 9.8  Global Placement (Checksum:43266284) REAL time: 6 secs 
+.................
+Phase 9.8  Global Placement (Checksum:f8ad6175) REAL time: 6 secs 
 
 Phase 10.5  Local Placement Optimization
-Phase 10.5  Local Placement Optimization (Checksum:43266284) REAL time: 6 secs 
+Phase 10.5  Local Placement Optimization (Checksum:f8ad6175) REAL time: 6 secs 
 
 Phase 11.18  Placement Optimization
-Phase 11.18  Placement Optimization (Checksum:3be23824) REAL time: 6 secs 
+Phase 11.18  Placement Optimization (Checksum:ac06ab65) REAL time: 6 secs 
 
 Phase 12.5  Local Placement Optimization
-Phase 12.5  Local Placement Optimization (Checksum:3be23824) REAL time: 6 secs 
+Phase 12.5  Local Placement Optimization (Checksum:ac06ab65) REAL time: 6 secs 
 
 Phase 13.34  Placement Validation
-Phase 13.34  Placement Validation (Checksum:3b58f0dc) REAL time: 6 secs 
+Phase 13.34  Placement Validation (Checksum:aa5f3bb5) REAL time: 6 secs 
 
-Total REAL time to Placer completion: 7 secs 
-Total CPU  time to Placer completion: 7 secs 
+Total REAL time to Placer completion: 6 secs 
+Total CPU  time to Placer completion: 6 secs 
 Running post-placement packing...
 Writing output files...
 
@@ -150,7 +150,7 @@ Slice Logic Utilization:
       Number with other load:                    0
 
 Slice Logic Distribution:
-  Number of occupied Slices:                   128 out of   1,430    8%
+  Number of occupied Slices:                   129 out of   1,430    9%
   Number of MUXCYs used:                       188 out of   2,860    6%
   Number of LUT Flip Flop pairs used:          393
     Number with an unused Flip Flop:           171 out of     393   43%
@@ -249,7 +249,7 @@ Slice Logic Utilization:
       Number with other load:                    0
 
 Slice Logic Distribution:
-  Number of occupied Slices:                   128 out of   1,430    8%
+  Number of occupied Slices:                   129 out of   1,430    9%
   Number of MUXCYs used:                       188 out of   2,860    6%
   Number of LUT Flip Flop pairs used:          393
     Number with an unused Flip Flop:           171 out of     393   43%
@@ -311,9 +311,9 @@ Phase  1  : 1633 unrouted;      REAL time: 3 secs
 
 Phase  2  : 1350 unrouted;      REAL time: 3 secs 
 
-Phase  3  : 665 unrouted;      REAL time: 3 secs 
+Phase  3  : 628 unrouted;      REAL time: 3 secs 
 
-Phase  4  : 665 unrouted; (Setup:0, Hold:0, Component Switching Limit:0)     REAL time: 4 secs 
+Phase  4  : 628 unrouted; (Setup:0, Hold:0, Component Switching Limit:0)     REAL time: 4 secs 
 
 Updating file: mojo_top_0_routed.ncd with current fully routed design.
 
@@ -340,17 +340,17 @@ Generating Clock Report
 +---------------------+--------------+------+------+------------+-------------+
 |        Clock Net    |   Resource   |Locked|Fanout|Net Skew(ns)|Max Delay(ns)|
 +---------------------+--------------+------+------+------------+-------------+
-|           clk_BUFGP | BUFGMUX_X2Y11| No   |   56 |  0.057     |  1.455      |
+|           clk_BUFGP | BUFGMUX_X2Y11| No   |   56 |  0.066     |  1.458      |
 +---------------------+--------------+------+------+------------+-------------+
 |myState/mainState/my |              |      |      |            |             |
 |propogater/chosenClk |              |      |      |            |             |
-|                     |  BUFGMUX_X2Y3| No   |   15 |  0.011     |  1.441      |
+|                     |  BUFGMUX_X2Y3| No   |   15 |  0.014     |  1.441      |
 +---------------------+--------------+------+------+------------+-------------+
 |myState/mainState/M_ |              |      |      |            |             |
-|      edge_ctr_value |         Local|      |    6 |  0.285     |  1.589      |
+|      edge_ctr_value |         Local|      |    6 |  0.578     |  1.781      |
 +---------------------+--------------+------+------+------------+-------------+
 |myState/bttnpress/M_ |              |      |      |            |             |
-|      edge_ctr_value |         Local|      |    9 |  0.233     |  1.818      |
+|      edge_ctr_value |         Local|      |    9 |  0.243     |  1.628      |
 +---------------------+--------------+------+------+------------+-------------+
 
 * Net Skew is the difference between the minimum and maximum routing
@@ -370,8 +370,8 @@ Asterisk (*) preceding a constraint indicates it was not met.
   Constraint                                |    Check    | Worst Case |  Best Case | Timing |   Timing   
                                             |             |    Slack   | Achievable | Errors |    Score   
 ----------------------------------------------------------------------------------------------------------
-  TS_clk = PERIOD TIMEGRP "clk" 50 MHz HIGH | SETUP       |    15.502ns|     4.498ns|       0|           0
-   50%                                      | HOLD        |     0.415ns|            |       0|           0
+  TS_clk = PERIOD TIMEGRP "clk" 50 MHz HIGH | SETUP       |    14.750ns|     5.250ns|       0|           0
+   50%                                      | HOLD        |     0.409ns|            |       0|           0
 ----------------------------------------------------------------------------------------------------------
 
 
@@ -387,7 +387,7 @@ WARNING:Par:283 - There are 6 loadless signals in this design. This design will 
 Total REAL time to PAR completion: 4 secs 
 Total CPU time to PAR completion (all processors): 4 secs 
 
-Peak Memory Usage:  441 MB
+Peak Memory Usage:  451 MB
 
 Placer: Placement generated during map.
 Routing: Completed - No errors found.
@@ -410,7 +410,7 @@ Loading device for application Rf_Device from file '6slx9.nph' in environment
 C:\Xilinx\14.7\ISE_DS\ISE\.
    "mojo_top_0" is an NCD, version 3.2, device xc6slx9, package tqg144, speed -2
 
-Analysis completed Fri Dec 08 05:00:23 2017
+Analysis completed Fri Dec 08 05:08:15 2017
 --------------------------------------------------------------------------------
 
 Generating Report ...

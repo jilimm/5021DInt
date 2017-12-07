@@ -87,7 +87,7 @@ module mojo_top (
    
     //configuring seven seg display
     ext_seven_seg = seg.seg;
-    seven_seg_sel = ~seg.sel;
+    seven_seg_sel = seg.sel;
     
     seg.values[0] = myState.scoreDisplay[0];
     seg.values[1] = myState.scoreDisplay[1];
