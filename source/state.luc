@@ -18,8 +18,9 @@ module state (
     output gnd2,
     output gnd3,
     output totalScore[8],
-    output result[2],
-    output startbutt
+    output rowresult[2],
+    output startbutt,
+    output scoreDisplay[4] //display to the seven seg
   ) {
 
   .clk(clk) {
@@ -29,13 +30,17 @@ module state (
       
       bcounter bttnpress;
       reg8bit scoreSum; //use an 8bit register to store the toal score of the game // i cannot use dff becuase it mojo clk constantly resets it //try connecting register to the propagtor clock cycle
-      
+      //multi_seven_seg seg;
     }
     main mainState;
     
   }
   alu myalu;
-  
+  binToAscii translater;
+  sig score[8];
+  sig out[8];
+  sig result;
+    
 
   always {
   //  rowResult=2b00; //rowResult is assumed to be 0 unless specified otherwise
@@ -44,7 +49,7 @@ module state (
     scoreSum.en=0;
     
     mainState.rst = rst;
-    result = mainState.result;
+    rowresult = mainState.result;
     //setting up inpts of main state and button press
     mainState.left2 = leftBtn;
     mainState.right0 = rightBtn;
@@ -72,6 +77,16 @@ module state (
     gnd1=1;
     gnd2=1;
     gnd3=1; //put ground to high to deactivate the columns
+    
+    
+    //setting up my seven_seg output
+    //****CURRENTLY DISPLAYS CURRENT SCORE
+    //result = scoreSum.out[0]+scoreSum.out[1]*2+scoreSum.out[2]*4+scoreSum.out[3]*8+scoreSum.out[4]*16+scoreSum.out[5]*32+scoreSum.out[6]*64+scoreSum.out[7]*128;
+    translater.num = 0;
+    scoreDisplay[3] = 0;
+    scoreDisplay[2]=0;
+    scoreDisplay[1]=0;
+    scoreDisplay[0]=0;
     
     case (state.q){
       state.MAIN:
@@ -104,7 +119,12 @@ module state (
           //output is all 1 when i go to state.main
         } 
        
-
+            result = scoreSum.out[0]+scoreSum.out[1]*2+scoreSum.out[2]*4+scoreSum.out[3]*8+scoreSum.out[4]*16+scoreSum.out[5]*32+scoreSum.out[6]*64+scoreSum.out[7]*128;
+    translater.num = result;
+    scoreDisplay[3] = 11;
+    scoreDisplay[2]=translater.ascii[2];
+    scoreDisplay[1]=translater.ascii[1];
+    scoreDisplay[0]=translater.ascii[0];
       state.HALT:
       row1=0; 
     row2=0;

@@ -26,7 +26,10 @@ module mojo_top (
     output high10,
     output low1,
     output low2,
-    output low3
+    output low3,
+    output ext_seven_seg[8],
+    output seven_seg_sel[4]
+    
    // output io_led[3][8]
  //   output io_led[3][8]
   ) {
@@ -40,9 +43,8 @@ module mojo_top (
     reset_conditioner reset_cond2;
     reset_conditioner reset_cond3;
     .rst(rst){
-     // bcounter counter;        // button press counter
-     // main mymain;
       state myState; // my super dope state machine
+      multi_seven_seg seg;
     }
   }
   
@@ -68,6 +70,7 @@ module mojo_top (
     myState.rightBtn = !button3;
    
     //make lights go light up
+    //output to the pins in my io Shield
     high1 = myState.row1; //mymain.high1;
     high2 = myState.row2; //mymain.high2;
     high3 = myState.row3; //mymain.high3;
@@ -81,13 +84,21 @@ module mojo_top (
     low1 = myState.gnd1; //mymain.low1;
     low2 = myState.gnd2; //mymain.low2;
     low3 = myState.gnd3; //mymain.low3;
-    /*
-    io_led[0] = myState.result;
-    io_led[1] = 8b0;
-    io_led[2] = 8b0;
-    led = myState.totalScore;
-    */
-//   led = myState.totalScore; 
+   
+    //configuring seven seg display
+    ext_seven_seg = ~seg.seg;
+    seven_seg_sel = ~seg.sel;
+    
+    seg.values[0] = myState.scoreDisplay[0];
+    seg.values[1] = myState.scoreDisplay[1];
+    seg.values[2] = myState.scoreDisplay[2];
+    seg.values[3] = myState.scoreDisplay[3];
+    
+    
+    
+    
+    
+    
    led = myState.totalScore; //does the bttn press reset?
    
     // led[7:2] =  //for total score of all rounds
