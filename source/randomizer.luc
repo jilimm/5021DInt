@@ -1,3 +1,6 @@
+//this is my randomizer consisting of 2 pn_gen of mojo
+//randomiser takes in 2 seeds one clk seed and one number clkSeed
+//it then spits out 2 random 3 bit numbers (clk period) & number sequence
 module randomizer (
     input clk,  // clock
     input rst,  // reset
@@ -5,7 +8,7 @@ module randomizer (
     input clkSeed[32],
     output ranNum[3],
     output ranClk[3],
-    input randnumNext,
+    input randnumNext, 
     input randclkNext,
     input randnumrst,
     input randclkrst,
@@ -15,7 +18,7 @@ module randomizer (
   
 .clk(clk){
   .rst(rst){
-    reg3bit numbreg;
+    reg3bit numbreg; //register will store the random number captured so there is a stable constant number for propogater to reference
     reg3bit clkreg;   
       
     }

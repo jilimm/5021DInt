@@ -101,7 +101,7 @@ module main (
       myalu.b [2:0] = mypropogater.numSeq;
      
       
-      //in the second last row        
+      //in the second last row if my sequence is correct i get 1 point       
       if(mypropogater.rowLit==RowNumb.ROW9){
               if (myalu.alu[0]){
                   score.data = 2b01;
@@ -113,7 +113,7 @@ module main (
                   }
       
     }
-      //in the last row
+      //in the last row if my sequence is correct i get 2 points
       else if (mypropogater.rowLit==RowNumb.ROW10){
               if (score.out==2b00 && myalu.alu[0]){ //write 2 to score if and only if i enter correct seq at row 3
                     score.data=2b10;
@@ -124,7 +124,7 @@ module main (
                   score.en=0;
               }
     }
-      
+      //at the first row, i reset my number of points 
       else if (mypropogater.rowLit==RowNumb.ROW1){
             //reset my score register value
             score.data=2b00;
@@ -136,7 +136,8 @@ module main (
       else{  //at every other row dont write anything to register
             //keep my register value
               score.en=0;
-               //person gets 0 points // when its not at row 2 or 3 i dont write into my register at all who gives a fuck?
+               //person gets 0 points 
+              //dont register any button inputs
                left.d=0;
                right.d=0;
                cent.d=0;

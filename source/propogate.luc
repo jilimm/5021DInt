@@ -1,3 +1,5 @@
+//****THIS PROPOGATER TAKES IN A RANDOME NUMBER SEQUENCE AND CLOCK SEQUENCE
+//**OUTPUTS THE RANDOM NUMBER SEQUNCE AT THE RANDOMLY SELECTED CLOCK SEQUENCE
 global RowNumb{
   const ROW1 = 4b0000;
   const ROW2= 4b0001;
@@ -63,6 +65,7 @@ module propogate (
  .clk(chosenClk) {   //connect my normal clock to a slower clock
     .rst(rst){
         counter rowCtr(#SIZE(4),#TOP(4b1010)); //ctr will go from 00 to 11 this will be the number of row that is lit
+      //seeds to start pn_gen of mojo seeds must be non-zero
         dff seed[32] (#INIT(32d51)); //seed to start numb_gen
         dff clkseed[32] (#INIT(32d3)); // seed to start clk_gen seed chosen is diff from seed1 to ensure randomness
   }

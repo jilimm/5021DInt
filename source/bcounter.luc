@@ -53,7 +53,7 @@ module bcounter (
     if(edge_ctr.value){ // where i should check position of light
       //check if value matched first, else return 0
       //if(propage counter value ==9, if matched, check location using propagation counter, if 9, add 1 point, if 10, add 2 points, else return 0
-      ctr.d = ctr.q + left.q + right.q + cent.q;
+      ctr.d = ctr.q + left.q + right.q + cent.q; 
       left.d =0;
       right.d=0;
       cent.d=0;

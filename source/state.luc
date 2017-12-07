@@ -151,7 +151,7 @@ module state (
         else if (mainState.result==2b0 && mainState.rowOn==RowNumb.ROW11){//you missed the sequence or you entered it wrongly 
             state.d = state.HALT;
           }
-       
+           //displays my current score
             result = scoreSum.out[0]+scoreSum.out[1]*2+scoreSum.out[2]*4+scoreSum.out[3]*8+scoreSum.out[4]*16+scoreSum.out[5]*32+scoreSum.out[6]*64+scoreSum.out[7]*128;
             translater.num = result;
              scoreDisplay[3] = 11;
@@ -181,18 +181,20 @@ module state (
       gnd1=1;
       gnd2=1;
       gnd3=1;
-        //check register (previous number of button presses) with the current number of button presses 
-        /*  
+       
+        //if the halt signal is from mainstate addition bring it back up to main
         if (fromMain==1){
-           state.d = state.MAIN;
-
-          }
-        */
-        if (fromMain==1){
+            //if button is from main bring it back up to main state
+          //this delay gives it time to halt propogater an properly add
             state.d = state.MAIN;
           }
-         if (btnReg.out < btnCounter.count){
-            anybttnStart=1; //more buttons have been pressed
+        
+        //TODO: Compare current score with high score
+        //update high score if necessary
+        
+        
+         if (btnReg.out < btnCounter.count){  //compares the previous button count with current button count
+            anybttnStart=1; //if its more than --> buttons were pressed during halt state
         }
           else{
             anybttnStart=0;
@@ -200,13 +202,14 @@ module state (
         //scoreSum.data=scoreSum.out;
         
         if (anybttnStart==1) { //buttonpress is remembered :(
-            mainState.rst=1;
+          //restart ur main state 
+           mainState.rst=1;
+          //update the previuos number of button press
             btnReg.data = btnCounter.count;
-            btnReg.en=1; //record new number of button presses
-          //reset my button press 
+            btnReg.en=1; 
+          //go back to main state
           state.d = state.MAIN;
           }
-
   }
 }
 }

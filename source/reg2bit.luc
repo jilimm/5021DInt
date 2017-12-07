@@ -1,3 +1,4 @@
+//**This is a 2 bit register
 module reg2bit #(
     WIDTH=2
   )(
