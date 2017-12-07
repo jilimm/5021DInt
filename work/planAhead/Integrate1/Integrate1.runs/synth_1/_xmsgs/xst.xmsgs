@@ -134,70 +134,10 @@
 <msg type="warning" file="Xst" num="737" delta="new" >Found <arg fmt="%d" index="1">1</arg>-bit latch for signal &lt;<arg fmt="%s" index="2">alu1&lt;15&gt;</arg>&gt;. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
 </msg>
 
-<msg type="info" file="Xst" num="3218" delta="new" >HDL ADVISOR - The RAM &lt;<arg fmt="%s" index="1">Mram__n0077</arg>&gt; will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+<msg type="info" file="Xst" num="3218" delta="new" >HDL ADVISOR - The RAM &lt;<arg fmt="%s" index="1">Mram__n0078</arg>&gt; will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
 </msg>
 
 <msg type="info" file="Xst" num="2146" delta="new" >In block &lt;<arg fmt="%s" index="1">main_4</arg>&gt;, <arg fmt="%s" index="2">Counter</arg> &lt;<arg fmt="%s" index="3">edge_ctr/M_ctr_q</arg>&gt; </msg>
-
-<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">mymain/button_cond2/M_ctr_q_19</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">mojo_top_0</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">mymain/button_cond2/M_ctr_q_18</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">mojo_top_0</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">mymain/button_cond2/M_ctr_q_17</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">mojo_top_0</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">mymain/button_cond2/M_ctr_q_16</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">mojo_top_0</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">mymain/button_cond2/M_ctr_q_15</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">mojo_top_0</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">mymain/button_cond2/M_ctr_q_14</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">mojo_top_0</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">mymain/button_cond2/M_ctr_q_13</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">mojo_top_0</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">mymain/button_cond2/M_ctr_q_12</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">mojo_top_0</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">mymain/button_cond2/M_ctr_q_11</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">mojo_top_0</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">mymain/button_cond2/M_ctr_q_10</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">mojo_top_0</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">mymain/button_cond2/M_ctr_q_9</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">mojo_top_0</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">mymain/button_cond2/M_ctr_q_8</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">mojo_top_0</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">mymain/button_cond2/M_ctr_q_7</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">mojo_top_0</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">mymain/button_cond2/M_ctr_q_6</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">mojo_top_0</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">mymain/button_cond2/M_ctr_q_5</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">mojo_top_0</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">mymain/button_cond2/M_ctr_q_4</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">mojo_top_0</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">mymain/button_cond2/M_ctr_q_3</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">mojo_top_0</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">mymain/button_cond2/M_ctr_q_2</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">mojo_top_0</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">mymain/button_cond2/M_ctr_q_1</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">mojo_top_0</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">mymain/button_cond2/M_ctr_q_0</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">mojo_top_0</arg>&gt;.
-</msg>
 
 <msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">mymain/button_cond1/M_ctr_q_19</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">mojo_top_0</arg>&gt;.
 </msg>
@@ -257,6 +197,66 @@
 </msg>
 
 <msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">mymain/button_cond1/M_ctr_q_0</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">mojo_top_0</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">mymain/button_cond2/M_ctr_q_19</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">mojo_top_0</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">mymain/button_cond2/M_ctr_q_18</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">mojo_top_0</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">mymain/button_cond2/M_ctr_q_17</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">mojo_top_0</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">mymain/button_cond2/M_ctr_q_16</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">mojo_top_0</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">mymain/button_cond2/M_ctr_q_15</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">mojo_top_0</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">mymain/button_cond2/M_ctr_q_14</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">mojo_top_0</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">mymain/button_cond2/M_ctr_q_13</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">mojo_top_0</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">mymain/button_cond2/M_ctr_q_12</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">mojo_top_0</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">mymain/button_cond2/M_ctr_q_11</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">mojo_top_0</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">mymain/button_cond2/M_ctr_q_10</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">mojo_top_0</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">mymain/button_cond2/M_ctr_q_9</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">mojo_top_0</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">mymain/button_cond2/M_ctr_q_8</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">mojo_top_0</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">mymain/button_cond2/M_ctr_q_7</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">mojo_top_0</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">mymain/button_cond2/M_ctr_q_6</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">mojo_top_0</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">mymain/button_cond2/M_ctr_q_5</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">mojo_top_0</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">mymain/button_cond2/M_ctr_q_4</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">mojo_top_0</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">mymain/button_cond2/M_ctr_q_3</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">mojo_top_0</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">mymain/button_cond2/M_ctr_q_2</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">mojo_top_0</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">mymain/button_cond2/M_ctr_q_1</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">mojo_top_0</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">mymain/button_cond2/M_ctr_q_0</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">mojo_top_0</arg>&gt;.
 </msg>
 
 <msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">mymain/button_cond3/M_ctr_q_19</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">mojo_top_0</arg>&gt;.
@@ -346,13 +346,13 @@
 <msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">mymain/button_cond1/sync/M_pipe_q_1</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">mojo_top_0</arg>&gt;.
 </msg>
 
-<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">mymain/M_left_q_0</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">mojo_top_0</arg>&gt;.
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">mymain/M_cent_q_0</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">mojo_top_0</arg>&gt;.
 </msg>
 
 <msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">mymain/M_right_q_0</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">mojo_top_0</arg>&gt;.
 </msg>
 
-<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">mymain/M_cent_q_0</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">mojo_top_0</arg>&gt;.
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">mymain/M_left_q_0</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">mojo_top_0</arg>&gt;.
 </msg>
 
 <msg type="warning" file="Xst" num="1293" delta="new" >FF/Latch &lt;<arg fmt="%s" index="1">mymain/mypropogater/randomizer/clk_gen/M_z_q_18</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">mojo_top_0</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
@@ -787,27 +787,6 @@
 <msg type="warning" file="Xst" num="1898" delta="new" >Due to constant pushing, FF/Latch &lt;<arg fmt="%s" index="1">mymain/mypropogater/randomizer/clk_gen/M_y_q_0</arg>&gt; is unconnected in block &lt;<arg fmt="%s" index="2">mojo_top_0</arg>&gt;.
 </msg>
 
-<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">mymain/mypropogater/M_clkseed_q_31</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">mojo_top_0</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">mymain/mypropogater/M_clkseed_q_30</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">mojo_top_0</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">mymain/mypropogater/M_clkseed_q_29</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">mojo_top_0</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">mymain/mypropogater/M_clkseed_q_28</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">mojo_top_0</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">mymain/mypropogater/M_clkseed_q_27</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">mojo_top_0</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">mymain/mypropogater/M_clkseed_q_26</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">mojo_top_0</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">mymain/mypropogater/M_clkseed_q_25</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">mojo_top_0</arg>&gt;.
-</msg>
-
 <msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">mymain/mypropogater/M_seed_q_31</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">mojo_top_0</arg>&gt;.
 </msg>
 
@@ -827,6 +806,27 @@
 </msg>
 
 <msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">mymain/mypropogater/M_seed_q_25</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">mojo_top_0</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">mymain/mypropogater/M_clkseed_q_31</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">mojo_top_0</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">mymain/mypropogater/M_clkseed_q_30</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">mojo_top_0</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">mymain/mypropogater/M_clkseed_q_29</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">mojo_top_0</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">mymain/mypropogater/M_clkseed_q_28</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">mojo_top_0</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">mymain/mypropogater/M_clkseed_q_27</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">mojo_top_0</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">mymain/mypropogater/M_clkseed_q_26</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">mojo_top_0</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">mymain/mypropogater/M_clkseed_q_25</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">mojo_top_0</arg>&gt;.
 </msg>
 
 <msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">mymain/mypropogater/randomizer/numb_gen/M_y_q_30</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">mojo_top_0</arg>&gt;.
@@ -1084,31 +1084,22 @@
 <msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">mymain/mypropogater/slowclk25/M_ctr_q_9</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">mojo_top_0</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">3 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;mymain/mypropogater/slowclk24/M_ctr_q_9&gt; &lt;mymain/mypropogater/slowclk23/M_ctr_q_9&gt; &lt;mymain/edge_ctr/M_ctr_q_9&gt; </arg>
 </msg>
 
-<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">mymain/mypropogater/randomizer/numb_gen/M_y_q_20</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">mojo_top_0</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">4 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;mymain/mypropogater/randomizer/numb_gen/M_y_q_19&gt; &lt;mymain/mypropogater/randomizer/numb_gen/M_x_q_29&gt; &lt;mymain/mypropogater/randomizer/numb_gen/M_x_q_10&gt; &lt;mymain/mypropogater/randomizer/numb_gen/M_x_q_1&gt; </arg>
+<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">mymain/mypropogater/randomizer/clk_gen/M_y_q_20</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">mojo_top_0</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">4 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;mymain/mypropogater/randomizer/clk_gen/M_y_q_19&gt; &lt;mymain/mypropogater/randomizer/clk_gen/M_x_q_29&gt; &lt;mymain/mypropogater/randomizer/clk_gen/M_x_q_10&gt; &lt;mymain/mypropogater/randomizer/clk_gen/M_x_q_1&gt; </arg>
 </msg>
 
-<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">mymain/mypropogater/randomizer/clk_gen/M_y_q_20</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">mojo_top_0</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">4 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;mymain/mypropogater/randomizer/clk_gen/M_y_q_19&gt; &lt;mymain/mypropogater/randomizer/clk_gen/M_x_q_29&gt; &lt;mymain/mypropogater/randomizer/clk_gen/M_x_q_10&gt; &lt;mymain/mypropogater/randomizer/clk_gen/M_x_q_1&gt; </arg>
+<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">mymain/mypropogater/randomizer/numb_gen/M_y_q_20</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">mojo_top_0</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">4 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;mymain/mypropogater/randomizer/numb_gen/M_y_q_19&gt; &lt;mymain/mypropogater/randomizer/numb_gen/M_x_q_29&gt; &lt;mymain/mypropogater/randomizer/numb_gen/M_x_q_10&gt; &lt;mymain/mypropogater/randomizer/numb_gen/M_x_q_1&gt; </arg>
 </msg>
 
 <msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">mymain/mypropogater/randomizer/numb_gen/M_x_q_20</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">mojo_top_0</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;mymain/mypropogater/randomizer/numb_gen/M_x_q_19&gt; </arg>
 </msg>
 
-<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">mymain/mypropogater/randomizer/clk_gen/M_x_q_20</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">mojo_top_0</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;mymain/mypropogater/randomizer/clk_gen/M_x_q_19&gt; </arg>
-</msg>
-
 <msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">mymain/mypropogater/randomizer/numb_gen/M_y_q_20</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">mojo_top_0</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;mymain/mypropogater/randomizer/clk_gen/M_y_q_20&gt; </arg>
 </msg>
 
+<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">mymain/mypropogater/randomizer/clk_gen/M_x_q_20</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">mojo_top_0</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;mymain/mypropogater/randomizer/clk_gen/M_x_q_19&gt; </arg>
+</msg>
+
 <msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">mymain/mypropogater/randomizer/numb_gen/M_x_q_20</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">mojo_top_0</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;mymain/mypropogater/randomizer/clk_gen/M_x_q_20&gt; </arg>
-</msg>
-
-<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">mymain/mypropogater/M_clkseed_q_24</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">mojo_top_0</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">mymain/mypropogater/M_clkseed_q_23</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">mojo_top_0</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">mymain/mypropogater/M_clkseed_q_22</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">mojo_top_0</arg>&gt;.
 </msg>
 
 <msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">mymain/mypropogater/M_seed_q_24</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">mojo_top_0</arg>&gt;.
@@ -1118,6 +1109,15 @@
 </msg>
 
 <msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">mymain/mypropogater/M_seed_q_22</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">mojo_top_0</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">mymain/mypropogater/M_clkseed_q_24</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">mojo_top_0</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">mymain/mypropogater/M_clkseed_q_23</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">mojo_top_0</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">mymain/mypropogater/M_clkseed_q_22</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">mojo_top_0</arg>&gt;.
 </msg>
 
 <msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">mymain/mypropogater/randomizer/numb_gen/M_w_q_24</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">mojo_top_0</arg>&gt;.

@@ -4,7 +4,7 @@
   (keywordMap (keywordLevel 0))
   (status
     (written
-      (timestamp 2017 12 7 10 51 28)
+      (timestamp 2017 12 7 11 1 42)
       (program "Xilinx ngc2edif" (version "P.20131013"))
       (author "Xilinx. Inc ")
       (comment "This EDIF netlist is to be used within supported synthesis tools")
@@ -129,23 +129,6 @@
           )
       )
     )
-    (cell LUT2
-      (cellType GENERIC)
-        (view view_1
-          (viewType NETLIST)
-          (interface
-            (port I0
-              (direction INPUT)
-            )
-            (port I1
-              (direction INPUT)
-            )
-            (port O
-              (direction OUTPUT)
-            )
-          )
-      )
-    )
     (cell FDE
       (cellType GENERIC)
         (view view_1
@@ -215,6 +198,23 @@
               (direction INPUT)
             )
             (port S
+              (direction INPUT)
+            )
+            (port O
+              (direction OUTPUT)
+            )
+          )
+      )
+    )
+    (cell LUT2
+      (cellType GENERIC)
+        (view view_1
+          (viewType NETLIST)
+          (interface
+            (port I0
+              (direction INPUT)
+            )
+            (port I1
               (direction INPUT)
             )
             (port O
@@ -522,7 +522,6 @@
             (instance (rename M_w_q_21_rstpot_renamed_0 "M_w_q_21_rstpot")
               (viewRef view_1 (cellRef LUT5 (libraryRef UNISIMS)))
               (property XSTLIB (boolean (true)) (owner "Xilinx"))
-              (property PK_HLUTNM (string "___XLNM___5___mymain/M_mypropogater_row11") (owner "Xilinx"))
               (property INIT (string "5555FD01") (owner "Xilinx"))
             )
             (instance Mmux_M_w_d15
@@ -1627,7 +1626,7 @@
             (instance (rename Mcount_M_ctr_q_xor_1_11 "Mcount_M_ctr_q_xor<1>11")
               (viewRef view_1 (cellRef LUT2 (libraryRef UNISIMS)))
               (property XSTLIB (boolean (true)) (owner "Xilinx"))
-              (property PK_HLUTNM (string "___XLNM___4___mymain/mypropogater/rowCtr/Mcount_M_ctr_q_xor<1>11") (owner "Xilinx"))
+              (property PK_HLUTNM (string "___XLNM___5___mymain/mypropogater/rowCtr/Mcount_M_ctr_q_xor<1>11") (owner "Xilinx"))
               (property INIT (string "6") (owner "Xilinx"))
             )
             (instance (rename Mcount_M_ctr_q_xor_0_11_INV_0 "Mcount_M_ctr_q_xor<0>11_INV_0")
@@ -2966,6 +2965,9 @@
             (port M_stage_q_3_1
               (direction INPUT)
             )
+            (port row1
+              (direction OUTPUT)
+            )
             (port row2
               (direction OUTPUT)
             )
@@ -2978,125 +2980,12 @@
             (port clk
               (direction INPUT)
             )
-            (port high1_OBUF
-              (direction INPUT)
-            )
             (port (array (rename rowLit "rowLit<1:0>") 2)
               (direction OUTPUT))
             (port (array (rename clkChoice "clkChoice<2:0>") 3)
               (direction OUTPUT))
           )
           (contents
-            (instance M_clkseed_q_21
-              (viewRef view_1 (cellRef FDE (libraryRef UNISIMS)))
-              (property XSTLIB (boolean (true)) (owner "Xilinx"))
-              (property INIT (string "0") (owner "Xilinx"))
-            )
-            (instance M_clkseed_q_20
-              (viewRef view_1 (cellRef FDE (libraryRef UNISIMS)))
-              (property XSTLIB (boolean (true)) (owner "Xilinx"))
-              (property INIT (string "0") (owner "Xilinx"))
-            )
-            (instance M_clkseed_q_19
-              (viewRef view_1 (cellRef FDE (libraryRef UNISIMS)))
-              (property XSTLIB (boolean (true)) (owner "Xilinx"))
-              (property INIT (string "0") (owner "Xilinx"))
-            )
-            (instance M_clkseed_q_18
-              (viewRef view_1 (cellRef FDE (libraryRef UNISIMS)))
-              (property XSTLIB (boolean (true)) (owner "Xilinx"))
-              (property INIT (string "0") (owner "Xilinx"))
-            )
-            (instance M_clkseed_q_17
-              (viewRef view_1 (cellRef FDE (libraryRef UNISIMS)))
-              (property XSTLIB (boolean (true)) (owner "Xilinx"))
-              (property INIT (string "0") (owner "Xilinx"))
-            )
-            (instance M_clkseed_q_16
-              (viewRef view_1 (cellRef FDE (libraryRef UNISIMS)))
-              (property XSTLIB (boolean (true)) (owner "Xilinx"))
-              (property INIT (string "0") (owner "Xilinx"))
-            )
-            (instance M_clkseed_q_15
-              (viewRef view_1 (cellRef FDE (libraryRef UNISIMS)))
-              (property XSTLIB (boolean (true)) (owner "Xilinx"))
-              (property INIT (string "0") (owner "Xilinx"))
-            )
-            (instance M_clkseed_q_14
-              (viewRef view_1 (cellRef FDE (libraryRef UNISIMS)))
-              (property XSTLIB (boolean (true)) (owner "Xilinx"))
-              (property INIT (string "0") (owner "Xilinx"))
-            )
-            (instance M_clkseed_q_13
-              (viewRef view_1 (cellRef FDE (libraryRef UNISIMS)))
-              (property XSTLIB (boolean (true)) (owner "Xilinx"))
-              (property INIT (string "0") (owner "Xilinx"))
-            )
-            (instance M_clkseed_q_12
-              (viewRef view_1 (cellRef FDE (libraryRef UNISIMS)))
-              (property XSTLIB (boolean (true)) (owner "Xilinx"))
-              (property INIT (string "0") (owner "Xilinx"))
-            )
-            (instance M_clkseed_q_11
-              (viewRef view_1 (cellRef FDE (libraryRef UNISIMS)))
-              (property XSTLIB (boolean (true)) (owner "Xilinx"))
-              (property INIT (string "0") (owner "Xilinx"))
-            )
-            (instance M_clkseed_q_10
-              (viewRef view_1 (cellRef FDE (libraryRef UNISIMS)))
-              (property XSTLIB (boolean (true)) (owner "Xilinx"))
-              (property INIT (string "0") (owner "Xilinx"))
-            )
-            (instance M_clkseed_q_9
-              (viewRef view_1 (cellRef FDE (libraryRef UNISIMS)))
-              (property XSTLIB (boolean (true)) (owner "Xilinx"))
-              (property INIT (string "0") (owner "Xilinx"))
-            )
-            (instance M_clkseed_q_8
-              (viewRef view_1 (cellRef FDE (libraryRef UNISIMS)))
-              (property XSTLIB (boolean (true)) (owner "Xilinx"))
-              (property INIT (string "0") (owner "Xilinx"))
-            )
-            (instance M_clkseed_q_7
-              (viewRef view_1 (cellRef FDE (libraryRef UNISIMS)))
-              (property XSTLIB (boolean (true)) (owner "Xilinx"))
-              (property INIT (string "0") (owner "Xilinx"))
-            )
-            (instance M_clkseed_q_6
-              (viewRef view_1 (cellRef FDE (libraryRef UNISIMS)))
-              (property XSTLIB (boolean (true)) (owner "Xilinx"))
-              (property INIT (string "0") (owner "Xilinx"))
-            )
-            (instance M_clkseed_q_5
-              (viewRef view_1 (cellRef FDE (libraryRef UNISIMS)))
-              (property XSTLIB (boolean (true)) (owner "Xilinx"))
-              (property INIT (string "0") (owner "Xilinx"))
-            )
-            (instance M_clkseed_q_4
-              (viewRef view_1 (cellRef FDE (libraryRef UNISIMS)))
-              (property XSTLIB (boolean (true)) (owner "Xilinx"))
-              (property INIT (string "0") (owner "Xilinx"))
-            )
-            (instance M_clkseed_q_3
-              (viewRef view_1 (cellRef FDE (libraryRef UNISIMS)))
-              (property XSTLIB (boolean (true)) (owner "Xilinx"))
-              (property INIT (string "0") (owner "Xilinx"))
-            )
-            (instance M_clkseed_q_2
-              (viewRef view_1 (cellRef FDE (libraryRef UNISIMS)))
-              (property XSTLIB (boolean (true)) (owner "Xilinx"))
-              (property INIT (string "0") (owner "Xilinx"))
-            )
-            (instance M_clkseed_q_1
-              (viewRef view_1 (cellRef FDE (libraryRef UNISIMS)))
-              (property XSTLIB (boolean (true)) (owner "Xilinx"))
-              (property INIT (string "1") (owner "Xilinx"))
-            )
-            (instance M_clkseed_q_0
-              (viewRef view_1 (cellRef FDE (libraryRef UNISIMS)))
-              (property XSTLIB (boolean (true)) (owner "Xilinx"))
-              (property INIT (string "1") (owner "Xilinx"))
-            )
             (instance M_seed_q_21
               (viewRef view_1 (cellRef FDE (libraryRef UNISIMS)))
               (property XSTLIB (boolean (true)) (owner "Xilinx"))
@@ -3203,6 +3092,116 @@
               (property INIT (string "0") (owner "Xilinx"))
             )
             (instance M_seed_q_0
+              (viewRef view_1 (cellRef FDE (libraryRef UNISIMS)))
+              (property XSTLIB (boolean (true)) (owner "Xilinx"))
+              (property INIT (string "1") (owner "Xilinx"))
+            )
+            (instance M_clkseed_q_21
+              (viewRef view_1 (cellRef FDE (libraryRef UNISIMS)))
+              (property XSTLIB (boolean (true)) (owner "Xilinx"))
+              (property INIT (string "0") (owner "Xilinx"))
+            )
+            (instance M_clkseed_q_20
+              (viewRef view_1 (cellRef FDE (libraryRef UNISIMS)))
+              (property XSTLIB (boolean (true)) (owner "Xilinx"))
+              (property INIT (string "0") (owner "Xilinx"))
+            )
+            (instance M_clkseed_q_19
+              (viewRef view_1 (cellRef FDE (libraryRef UNISIMS)))
+              (property XSTLIB (boolean (true)) (owner "Xilinx"))
+              (property INIT (string "0") (owner "Xilinx"))
+            )
+            (instance M_clkseed_q_18
+              (viewRef view_1 (cellRef FDE (libraryRef UNISIMS)))
+              (property XSTLIB (boolean (true)) (owner "Xilinx"))
+              (property INIT (string "0") (owner "Xilinx"))
+            )
+            (instance M_clkseed_q_17
+              (viewRef view_1 (cellRef FDE (libraryRef UNISIMS)))
+              (property XSTLIB (boolean (true)) (owner "Xilinx"))
+              (property INIT (string "0") (owner "Xilinx"))
+            )
+            (instance M_clkseed_q_16
+              (viewRef view_1 (cellRef FDE (libraryRef UNISIMS)))
+              (property XSTLIB (boolean (true)) (owner "Xilinx"))
+              (property INIT (string "0") (owner "Xilinx"))
+            )
+            (instance M_clkseed_q_15
+              (viewRef view_1 (cellRef FDE (libraryRef UNISIMS)))
+              (property XSTLIB (boolean (true)) (owner "Xilinx"))
+              (property INIT (string "0") (owner "Xilinx"))
+            )
+            (instance M_clkseed_q_14
+              (viewRef view_1 (cellRef FDE (libraryRef UNISIMS)))
+              (property XSTLIB (boolean (true)) (owner "Xilinx"))
+              (property INIT (string "0") (owner "Xilinx"))
+            )
+            (instance M_clkseed_q_13
+              (viewRef view_1 (cellRef FDE (libraryRef UNISIMS)))
+              (property XSTLIB (boolean (true)) (owner "Xilinx"))
+              (property INIT (string "0") (owner "Xilinx"))
+            )
+            (instance M_clkseed_q_12
+              (viewRef view_1 (cellRef FDE (libraryRef UNISIMS)))
+              (property XSTLIB (boolean (true)) (owner "Xilinx"))
+              (property INIT (string "0") (owner "Xilinx"))
+            )
+            (instance M_clkseed_q_11
+              (viewRef view_1 (cellRef FDE (libraryRef UNISIMS)))
+              (property XSTLIB (boolean (true)) (owner "Xilinx"))
+              (property INIT (string "0") (owner "Xilinx"))
+            )
+            (instance M_clkseed_q_10
+              (viewRef view_1 (cellRef FDE (libraryRef UNISIMS)))
+              (property XSTLIB (boolean (true)) (owner "Xilinx"))
+              (property INIT (string "0") (owner "Xilinx"))
+            )
+            (instance M_clkseed_q_9
+              (viewRef view_1 (cellRef FDE (libraryRef UNISIMS)))
+              (property XSTLIB (boolean (true)) (owner "Xilinx"))
+              (property INIT (string "0") (owner "Xilinx"))
+            )
+            (instance M_clkseed_q_8
+              (viewRef view_1 (cellRef FDE (libraryRef UNISIMS)))
+              (property XSTLIB (boolean (true)) (owner "Xilinx"))
+              (property INIT (string "0") (owner "Xilinx"))
+            )
+            (instance M_clkseed_q_7
+              (viewRef view_1 (cellRef FDE (libraryRef UNISIMS)))
+              (property XSTLIB (boolean (true)) (owner "Xilinx"))
+              (property INIT (string "0") (owner "Xilinx"))
+            )
+            (instance M_clkseed_q_6
+              (viewRef view_1 (cellRef FDE (libraryRef UNISIMS)))
+              (property XSTLIB (boolean (true)) (owner "Xilinx"))
+              (property INIT (string "0") (owner "Xilinx"))
+            )
+            (instance M_clkseed_q_5
+              (viewRef view_1 (cellRef FDE (libraryRef UNISIMS)))
+              (property XSTLIB (boolean (true)) (owner "Xilinx"))
+              (property INIT (string "0") (owner "Xilinx"))
+            )
+            (instance M_clkseed_q_4
+              (viewRef view_1 (cellRef FDE (libraryRef UNISIMS)))
+              (property XSTLIB (boolean (true)) (owner "Xilinx"))
+              (property INIT (string "0") (owner "Xilinx"))
+            )
+            (instance M_clkseed_q_3
+              (viewRef view_1 (cellRef FDE (libraryRef UNISIMS)))
+              (property XSTLIB (boolean (true)) (owner "Xilinx"))
+              (property INIT (string "0") (owner "Xilinx"))
+            )
+            (instance M_clkseed_q_2
+              (viewRef view_1 (cellRef FDE (libraryRef UNISIMS)))
+              (property XSTLIB (boolean (true)) (owner "Xilinx"))
+              (property INIT (string "0") (owner "Xilinx"))
+            )
+            (instance M_clkseed_q_1
+              (viewRef view_1 (cellRef FDE (libraryRef UNISIMS)))
+              (property XSTLIB (boolean (true)) (owner "Xilinx"))
+              (property INIT (string "1") (owner "Xilinx"))
+            )
+            (instance M_clkseed_q_0
               (viewRef view_1 (cellRef FDE (libraryRef UNISIMS)))
               (property XSTLIB (boolean (true)) (owner "Xilinx"))
               (property INIT (string "1") (owner "Xilinx"))
@@ -3774,33 +3773,45 @@
             (instance gnd11
               (viewRef view_1 (cellRef LUT3 (libraryRef UNISIMS)))
               (property XSTLIB (boolean (true)) (owner "Xilinx"))
-              (property PK_HLUTNM (string "___XLNM___3___mymain/mypropogater/gnd11") (owner "Xilinx"))
+              (property PK_HLUTNM (string "___XLNM___4___mymain/mypropogater/gnd11") (owner "Xilinx"))
               (property INIT (string "54") (owner "Xilinx"))
             )
             (instance gnd31
               (viewRef view_1 (cellRef LUT3 (libraryRef UNISIMS)))
               (property XSTLIB (boolean (true)) (owner "Xilinx"))
-              (property PK_HLUTNM (string "___XLNM___3___mymain/mypropogater/gnd11") (owner "Xilinx"))
+              (property PK_HLUTNM (string "___XLNM___4___mymain/mypropogater/gnd11") (owner "Xilinx"))
               (property INIT (string "54") (owner "Xilinx"))
             )
-            (instance (rename &_n0063_inv1_renamed_36 "_n0063_inv1")
+            (instance (rename &_n0064_inv1 "_n0064_inv1")
               (viewRef view_1 (cellRef LUT3 (libraryRef UNISIMS)))
               (property XSTLIB (boolean (true)) (owner "Xilinx"))
               (property INIT (string "AB") (owner "Xilinx"))
             )
-            (instance Mram__n0077111
+            (instance Mram__n007831
               (viewRef view_1 (cellRef LUT2 (libraryRef UNISIMS)))
               (property XSTLIB (boolean (true)) (owner "Xilinx"))
-              (property PK_HLUTNM (string "___XLNM___2___mymain/mypropogater/Mram__n0077111") (owner "Xilinx"))
-              (property INIT (string "2") (owner "Xilinx"))
+              (property PK_HLUTNM (string "___XLNM___3___mymain/mypropogater/Mram__n007831") (owner "Xilinx"))
+              (property INIT (string "1") (owner "Xilinx"))
             )
-            (instance Mram__n007711
+            (instance Mram__n007821
               (viewRef view_1 (cellRef LUT2 (libraryRef UNISIMS)))
               (property XSTLIB (boolean (true)) (owner "Xilinx"))
-              (property PK_HLUTNM (string "___XLNM___2___mymain/mypropogater/Mram__n0077111") (owner "Xilinx"))
+              (property PK_HLUTNM (string "___XLNM___3___mymain/mypropogater/Mram__n007831") (owner "Xilinx"))
               (property INIT (string "2") (owner "Xilinx"))
             )
-            (instance (rename &_n0063_inv1_1 "_n0063_inv1_1")
+            (instance Mram__n0078111
+              (viewRef view_1 (cellRef LUT2 (libraryRef UNISIMS)))
+              (property XSTLIB (boolean (true)) (owner "Xilinx"))
+              (property PK_HLUTNM (string "___XLNM___2___mymain/mypropogater/Mram__n0078111") (owner "Xilinx"))
+              (property INIT (string "2") (owner "Xilinx"))
+            )
+            (instance Mram__n007811
+              (viewRef view_1 (cellRef LUT2 (libraryRef UNISIMS)))
+              (property XSTLIB (boolean (true)) (owner "Xilinx"))
+              (property PK_HLUTNM (string "___XLNM___2___mymain/mypropogater/Mram__n0078111") (owner "Xilinx"))
+              (property INIT (string "8") (owner "Xilinx"))
+            )
+            (instance (rename &_n0064_inv1_1 "_n0064_inv1_1")
               (viewRef view_1 (cellRef LUT3 (libraryRef UNISIMS)))
               (property XSTLIB (boolean (true)) (owner "Xilinx"))
               (property INIT (string "AB") (owner "Xilinx"))
@@ -3859,28 +3870,6 @@
             )
             (net chosenClk
               (joined
-                (portRef C (instanceRef M_seed_q_0))
-                (portRef C (instanceRef M_seed_q_1))
-                (portRef C (instanceRef M_seed_q_2))
-                (portRef C (instanceRef M_seed_q_3))
-                (portRef C (instanceRef M_seed_q_4))
-                (portRef C (instanceRef M_seed_q_5))
-                (portRef C (instanceRef M_seed_q_6))
-                (portRef C (instanceRef M_seed_q_7))
-                (portRef C (instanceRef M_seed_q_8))
-                (portRef C (instanceRef M_seed_q_9))
-                (portRef C (instanceRef M_seed_q_10))
-                (portRef C (instanceRef M_seed_q_11))
-                (portRef C (instanceRef M_seed_q_12))
-                (portRef C (instanceRef M_seed_q_13))
-                (portRef C (instanceRef M_seed_q_14))
-                (portRef C (instanceRef M_seed_q_15))
-                (portRef C (instanceRef M_seed_q_16))
-                (portRef C (instanceRef M_seed_q_17))
-                (portRef C (instanceRef M_seed_q_18))
-                (portRef C (instanceRef M_seed_q_19))
-                (portRef C (instanceRef M_seed_q_20))
-                (portRef C (instanceRef M_seed_q_21))
                 (portRef C (instanceRef M_clkseed_q_0))
                 (portRef C (instanceRef M_clkseed_q_1))
                 (portRef C (instanceRef M_clkseed_q_2))
@@ -3903,309 +3892,33 @@
                 (portRef C (instanceRef M_clkseed_q_19))
                 (portRef C (instanceRef M_clkseed_q_20))
                 (portRef C (instanceRef M_clkseed_q_21))
+                (portRef C (instanceRef M_seed_q_0))
+                (portRef C (instanceRef M_seed_q_1))
+                (portRef C (instanceRef M_seed_q_2))
+                (portRef C (instanceRef M_seed_q_3))
+                (portRef C (instanceRef M_seed_q_4))
+                (portRef C (instanceRef M_seed_q_5))
+                (portRef C (instanceRef M_seed_q_6))
+                (portRef C (instanceRef M_seed_q_7))
+                (portRef C (instanceRef M_seed_q_8))
+                (portRef C (instanceRef M_seed_q_9))
+                (portRef C (instanceRef M_seed_q_10))
+                (portRef C (instanceRef M_seed_q_11))
+                (portRef C (instanceRef M_seed_q_12))
+                (portRef C (instanceRef M_seed_q_13))
+                (portRef C (instanceRef M_seed_q_14))
+                (portRef C (instanceRef M_seed_q_15))
+                (portRef C (instanceRef M_seed_q_16))
+                (portRef C (instanceRef M_seed_q_17))
+                (portRef C (instanceRef M_seed_q_18))
+                (portRef C (instanceRef M_seed_q_19))
+                (portRef C (instanceRef M_seed_q_20))
+                (portRef C (instanceRef M_seed_q_21))
                 (portRef clk (instanceRef rowCtr))
                 (portRef O (instanceRef chosenClk_BUFG))
               )
             )
             (net M_randomizer_randnumrst
-              (joined
-                (portRef CE (instanceRef M_clkseed_q_0))
-                (portRef CE (instanceRef M_clkseed_q_1))
-                (portRef CE (instanceRef M_clkseed_q_2))
-                (portRef CE (instanceRef M_clkseed_q_3))
-                (portRef CE (instanceRef M_clkseed_q_4))
-                (portRef CE (instanceRef M_clkseed_q_5))
-                (portRef CE (instanceRef M_clkseed_q_6))
-                (portRef CE (instanceRef M_clkseed_q_7))
-                (portRef CE (instanceRef M_clkseed_q_8))
-                (portRef CE (instanceRef M_clkseed_q_9))
-                (portRef CE (instanceRef M_clkseed_q_10))
-                (portRef CE (instanceRef M_clkseed_q_11))
-                (portRef CE (instanceRef M_clkseed_q_12))
-                (portRef CE (instanceRef M_clkseed_q_13))
-                (portRef CE (instanceRef M_clkseed_q_14))
-                (portRef CE (instanceRef M_clkseed_q_15))
-                (portRef CE (instanceRef M_clkseed_q_16))
-                (portRef CE (instanceRef M_clkseed_q_17))
-                (portRef CE (instanceRef M_clkseed_q_18))
-                (portRef CE (instanceRef M_clkseed_q_19))
-                (portRef CE (instanceRef M_clkseed_q_20))
-                (portRef CE (instanceRef M_clkseed_q_21))
-                (portRef randnumrst (instanceRef randomizer))
-                (portRef O (instanceRef &_n0063_inv1_renamed_36))
-              )
-            )
-            (net Mcount_M_clkseed_q21
-              (joined
-                (portRef D (instanceRef M_clkseed_q_21))
-                (portRef O (instanceRef Mcount_M_clkseed_q_xor_21__))
-              )
-            )
-            (net (rename M_clkseed_q_21_ "M_clkseed_q<21>")
-              (joined
-                (portRef I1 (instanceRef Mcount_M_clkseed_q_lut_21__))
-                (portRef clkSeed_21__ (instanceRef randomizer))
-                (portRef Q (instanceRef M_clkseed_q_21))
-              )
-            )
-            (net Mcount_M_clkseed_q20
-              (joined
-                (portRef D (instanceRef M_clkseed_q_20))
-                (portRef O (instanceRef Mcount_M_clkseed_q_xor_20__))
-              )
-            )
-            (net (rename M_clkseed_q_20_ "M_clkseed_q<20>")
-              (joined
-                (portRef I1 (instanceRef Mcount_M_clkseed_q_lut_20__))
-                (portRef clkSeed_20__ (instanceRef randomizer))
-                (portRef Q (instanceRef M_clkseed_q_20))
-              )
-            )
-            (net Mcount_M_clkseed_q19
-              (joined
-                (portRef D (instanceRef M_clkseed_q_19))
-                (portRef O (instanceRef Mcount_M_clkseed_q_xor_19__))
-              )
-            )
-            (net (rename M_clkseed_q_19_ "M_clkseed_q<19>")
-              (joined
-                (portRef I1 (instanceRef Mcount_M_clkseed_q_lut_19__))
-                (portRef clkSeed_19__ (instanceRef randomizer))
-                (portRef Q (instanceRef M_clkseed_q_19))
-              )
-            )
-            (net Mcount_M_clkseed_q18
-              (joined
-                (portRef D (instanceRef M_clkseed_q_18))
-                (portRef O (instanceRef Mcount_M_clkseed_q_xor_18__))
-              )
-            )
-            (net (rename M_clkseed_q_18_ "M_clkseed_q<18>")
-              (joined
-                (portRef I1 (instanceRef Mcount_M_clkseed_q_lut_18__))
-                (portRef Q (instanceRef M_clkseed_q_18))
-              )
-            )
-            (net Mcount_M_clkseed_q17
-              (joined
-                (portRef D (instanceRef M_clkseed_q_17))
-                (portRef O (instanceRef Mcount_M_clkseed_q_xor_17__))
-              )
-            )
-            (net (rename M_clkseed_q_17_ "M_clkseed_q<17>")
-              (joined
-                (portRef I1 (instanceRef Mcount_M_clkseed_q_lut_17__))
-                (portRef Q (instanceRef M_clkseed_q_17))
-              )
-            )
-            (net Mcount_M_clkseed_q16
-              (joined
-                (portRef D (instanceRef M_clkseed_q_16))
-                (portRef O (instanceRef Mcount_M_clkseed_q_xor_16__))
-              )
-            )
-            (net (rename M_clkseed_q_16_ "M_clkseed_q<16>")
-              (joined
-                (portRef I1 (instanceRef Mcount_M_clkseed_q_lut_16__))
-                (portRef Q (instanceRef M_clkseed_q_16))
-              )
-            )
-            (net Mcount_M_clkseed_q15
-              (joined
-                (portRef D (instanceRef M_clkseed_q_15))
-                (portRef O (instanceRef Mcount_M_clkseed_q_xor_15__))
-              )
-            )
-            (net (rename M_clkseed_q_15_ "M_clkseed_q<15>")
-              (joined
-                (portRef I1 (instanceRef Mcount_M_clkseed_q_lut_15__))
-                (portRef Q (instanceRef M_clkseed_q_15))
-              )
-            )
-            (net Mcount_M_clkseed_q14
-              (joined
-                (portRef D (instanceRef M_clkseed_q_14))
-                (portRef O (instanceRef Mcount_M_clkseed_q_xor_14__))
-              )
-            )
-            (net (rename M_clkseed_q_14_ "M_clkseed_q<14>")
-              (joined
-                (portRef I1 (instanceRef Mcount_M_clkseed_q_lut_14__))
-                (portRef Q (instanceRef M_clkseed_q_14))
-              )
-            )
-            (net Mcount_M_clkseed_q13
-              (joined
-                (portRef D (instanceRef M_clkseed_q_13))
-                (portRef O (instanceRef Mcount_M_clkseed_q_xor_13__))
-              )
-            )
-            (net (rename M_clkseed_q_13_ "M_clkseed_q<13>")
-              (joined
-                (portRef I1 (instanceRef Mcount_M_clkseed_q_lut_13__))
-                (portRef Q (instanceRef M_clkseed_q_13))
-              )
-            )
-            (net Mcount_M_clkseed_q12
-              (joined
-                (portRef D (instanceRef M_clkseed_q_12))
-                (portRef O (instanceRef Mcount_M_clkseed_q_xor_12__))
-              )
-            )
-            (net (rename M_clkseed_q_12_ "M_clkseed_q<12>")
-              (joined
-                (portRef I1 (instanceRef Mcount_M_clkseed_q_lut_12__))
-                (portRef Q (instanceRef M_clkseed_q_12))
-              )
-            )
-            (net Mcount_M_clkseed_q11
-              (joined
-                (portRef D (instanceRef M_clkseed_q_11))
-                (portRef O (instanceRef Mcount_M_clkseed_q_xor_11__))
-              )
-            )
-            (net (rename M_clkseed_q_11_ "M_clkseed_q<11>")
-              (joined
-                (portRef I1 (instanceRef Mcount_M_clkseed_q_lut_11__))
-                (portRef Q (instanceRef M_clkseed_q_11))
-              )
-            )
-            (net Mcount_M_clkseed_q10
-              (joined
-                (portRef D (instanceRef M_clkseed_q_10))
-                (portRef O (instanceRef Mcount_M_clkseed_q_xor_10__))
-              )
-            )
-            (net (rename M_clkseed_q_10_ "M_clkseed_q<10>")
-              (joined
-                (portRef I1 (instanceRef Mcount_M_clkseed_q_lut_10__))
-                (portRef Q (instanceRef M_clkseed_q_10))
-              )
-            )
-            (net Mcount_M_clkseed_q9
-              (joined
-                (portRef D (instanceRef M_clkseed_q_9))
-                (portRef O (instanceRef Mcount_M_clkseed_q_xor_9__))
-              )
-            )
-            (net (rename M_clkseed_q_9_ "M_clkseed_q<9>")
-              (joined
-                (portRef I1 (instanceRef Mcount_M_clkseed_q_lut_9__))
-                (portRef Q (instanceRef M_clkseed_q_9))
-              )
-            )
-            (net Mcount_M_clkseed_q8
-              (joined
-                (portRef D (instanceRef M_clkseed_q_8))
-                (portRef O (instanceRef Mcount_M_clkseed_q_xor_8__))
-              )
-            )
-            (net (rename M_clkseed_q_8_ "M_clkseed_q<8>")
-              (joined
-                (portRef I1 (instanceRef Mcount_M_clkseed_q_lut_8__))
-                (portRef Q (instanceRef M_clkseed_q_8))
-              )
-            )
-            (net Mcount_M_clkseed_q7
-              (joined
-                (portRef D (instanceRef M_clkseed_q_7))
-                (portRef O (instanceRef Mcount_M_clkseed_q_xor_7__))
-              )
-            )
-            (net (rename M_clkseed_q_7_ "M_clkseed_q<7>")
-              (joined
-                (portRef I1 (instanceRef Mcount_M_clkseed_q_lut_7__))
-                (portRef Q (instanceRef M_clkseed_q_7))
-              )
-            )
-            (net Mcount_M_clkseed_q6
-              (joined
-                (portRef D (instanceRef M_clkseed_q_6))
-                (portRef O (instanceRef Mcount_M_clkseed_q_xor_6__))
-              )
-            )
-            (net (rename M_clkseed_q_6_ "M_clkseed_q<6>")
-              (joined
-                (portRef I1 (instanceRef Mcount_M_clkseed_q_lut_6__))
-                (portRef Q (instanceRef M_clkseed_q_6))
-              )
-            )
-            (net Mcount_M_clkseed_q5
-              (joined
-                (portRef D (instanceRef M_clkseed_q_5))
-                (portRef O (instanceRef Mcount_M_clkseed_q_xor_5__))
-              )
-            )
-            (net (rename M_clkseed_q_5_ "M_clkseed_q<5>")
-              (joined
-                (portRef I1 (instanceRef Mcount_M_clkseed_q_lut_5__))
-                (portRef Q (instanceRef M_clkseed_q_5))
-              )
-            )
-            (net Mcount_M_clkseed_q4
-              (joined
-                (portRef D (instanceRef M_clkseed_q_4))
-                (portRef O (instanceRef Mcount_M_clkseed_q_xor_4__))
-              )
-            )
-            (net (rename M_clkseed_q_4_ "M_clkseed_q<4>")
-              (joined
-                (portRef I1 (instanceRef Mcount_M_clkseed_q_lut_4__))
-                (portRef Q (instanceRef M_clkseed_q_4))
-              )
-            )
-            (net Mcount_M_clkseed_q3
-              (joined
-                (portRef D (instanceRef M_clkseed_q_3))
-                (portRef O (instanceRef Mcount_M_clkseed_q_xor_3__))
-              )
-            )
-            (net (rename M_clkseed_q_3_ "M_clkseed_q<3>")
-              (joined
-                (portRef I1 (instanceRef Mcount_M_clkseed_q_lut_3__))
-                (portRef Q (instanceRef M_clkseed_q_3))
-              )
-            )
-            (net Mcount_M_clkseed_q2
-              (joined
-                (portRef D (instanceRef M_clkseed_q_2))
-                (portRef O (instanceRef Mcount_M_clkseed_q_xor_2__))
-              )
-            )
-            (net (rename M_clkseed_q_2_ "M_clkseed_q<2>")
-              (joined
-                (portRef I1 (instanceRef Mcount_M_clkseed_q_lut_2__))
-                (portRef clkSeed_2__ (instanceRef randomizer))
-                (portRef Q (instanceRef M_clkseed_q_2))
-              )
-            )
-            (net Mcount_M_clkseed_q1
-              (joined
-                (portRef D (instanceRef M_clkseed_q_1))
-                (portRef O (instanceRef Mcount_M_clkseed_q_xor_1__))
-              )
-            )
-            (net (rename M_clkseed_q_1_ "M_clkseed_q<1>")
-              (joined
-                (portRef I1 (instanceRef Mcount_M_clkseed_q_lut_1__))
-                (portRef clkSeed_1__ (instanceRef randomizer))
-                (portRef Q (instanceRef M_clkseed_q_1))
-              )
-            )
-            (net Mcount_M_clkseed_q
-              (joined
-                (portRef D (instanceRef M_clkseed_q_0))
-                (portRef O (instanceRef Mcount_M_clkseed_q_xor_0__))
-              )
-            )
-            (net (rename M_clkseed_q_0_ "M_clkseed_q<0>")
-              (joined
-                (portRef I1 (instanceRef Mcount_M_clkseed_q_lut_0__))
-                (portRef clkSeed_0__ (instanceRef randomizer))
-                (portRef Q (instanceRef M_clkseed_q_0))
-              )
-            )
-            (net (rename &_n0063_inv1 "_n0063_inv1")
               (joined
                 (portRef CE (instanceRef M_seed_q_0))
                 (portRef CE (instanceRef M_seed_q_1))
@@ -4229,7 +3942,7 @@
                 (portRef CE (instanceRef M_seed_q_19))
                 (portRef CE (instanceRef M_seed_q_20))
                 (portRef CE (instanceRef M_seed_q_21))
-                (portRef O (instanceRef &_n0063_inv1_1))
+                (portRef O (instanceRef &_n0064_inv1_1))
               )
             )
             (net Mcount_M_seed_q21
@@ -4500,6 +4213,304 @@
                 (portRef I1 (instanceRef Mcount_M_seed_q_lut_0__))
                 (portRef numSeed_0__ (instanceRef randomizer))
                 (portRef Q (instanceRef M_seed_q_0))
+              )
+            )
+            (net (rename &_n0064_inv "_n0064_inv")
+              (joined
+                (portRef CE (instanceRef M_clkseed_q_0))
+                (portRef CE (instanceRef M_clkseed_q_1))
+                (portRef CE (instanceRef M_clkseed_q_2))
+                (portRef CE (instanceRef M_clkseed_q_3))
+                (portRef CE (instanceRef M_clkseed_q_4))
+                (portRef CE (instanceRef M_clkseed_q_5))
+                (portRef CE (instanceRef M_clkseed_q_6))
+                (portRef CE (instanceRef M_clkseed_q_7))
+                (portRef CE (instanceRef M_clkseed_q_8))
+                (portRef CE (instanceRef M_clkseed_q_9))
+                (portRef CE (instanceRef M_clkseed_q_10))
+                (portRef CE (instanceRef M_clkseed_q_11))
+                (portRef CE (instanceRef M_clkseed_q_12))
+                (portRef CE (instanceRef M_clkseed_q_13))
+                (portRef CE (instanceRef M_clkseed_q_14))
+                (portRef CE (instanceRef M_clkseed_q_15))
+                (portRef CE (instanceRef M_clkseed_q_16))
+                (portRef CE (instanceRef M_clkseed_q_17))
+                (portRef CE (instanceRef M_clkseed_q_18))
+                (portRef CE (instanceRef M_clkseed_q_19))
+                (portRef CE (instanceRef M_clkseed_q_20))
+                (portRef CE (instanceRef M_clkseed_q_21))
+                (portRef randnumrst (instanceRef randomizer))
+                (portRef O (instanceRef &_n0064_inv1))
+              )
+            )
+            (net Mcount_M_clkseed_q21
+              (joined
+                (portRef D (instanceRef M_clkseed_q_21))
+                (portRef O (instanceRef Mcount_M_clkseed_q_xor_21__))
+              )
+            )
+            (net (rename M_clkseed_q_21_ "M_clkseed_q<21>")
+              (joined
+                (portRef I1 (instanceRef Mcount_M_clkseed_q_lut_21__))
+                (portRef clkSeed_21__ (instanceRef randomizer))
+                (portRef Q (instanceRef M_clkseed_q_21))
+              )
+            )
+            (net Mcount_M_clkseed_q20
+              (joined
+                (portRef D (instanceRef M_clkseed_q_20))
+                (portRef O (instanceRef Mcount_M_clkseed_q_xor_20__))
+              )
+            )
+            (net (rename M_clkseed_q_20_ "M_clkseed_q<20>")
+              (joined
+                (portRef I1 (instanceRef Mcount_M_clkseed_q_lut_20__))
+                (portRef clkSeed_20__ (instanceRef randomizer))
+                (portRef Q (instanceRef M_clkseed_q_20))
+              )
+            )
+            (net Mcount_M_clkseed_q19
+              (joined
+                (portRef D (instanceRef M_clkseed_q_19))
+                (portRef O (instanceRef Mcount_M_clkseed_q_xor_19__))
+              )
+            )
+            (net (rename M_clkseed_q_19_ "M_clkseed_q<19>")
+              (joined
+                (portRef I1 (instanceRef Mcount_M_clkseed_q_lut_19__))
+                (portRef clkSeed_19__ (instanceRef randomizer))
+                (portRef Q (instanceRef M_clkseed_q_19))
+              )
+            )
+            (net Mcount_M_clkseed_q18
+              (joined
+                (portRef D (instanceRef M_clkseed_q_18))
+                (portRef O (instanceRef Mcount_M_clkseed_q_xor_18__))
+              )
+            )
+            (net (rename M_clkseed_q_18_ "M_clkseed_q<18>")
+              (joined
+                (portRef I1 (instanceRef Mcount_M_clkseed_q_lut_18__))
+                (portRef Q (instanceRef M_clkseed_q_18))
+              )
+            )
+            (net Mcount_M_clkseed_q17
+              (joined
+                (portRef D (instanceRef M_clkseed_q_17))
+                (portRef O (instanceRef Mcount_M_clkseed_q_xor_17__))
+              )
+            )
+            (net (rename M_clkseed_q_17_ "M_clkseed_q<17>")
+              (joined
+                (portRef I1 (instanceRef Mcount_M_clkseed_q_lut_17__))
+                (portRef Q (instanceRef M_clkseed_q_17))
+              )
+            )
+            (net Mcount_M_clkseed_q16
+              (joined
+                (portRef D (instanceRef M_clkseed_q_16))
+                (portRef O (instanceRef Mcount_M_clkseed_q_xor_16__))
+              )
+            )
+            (net (rename M_clkseed_q_16_ "M_clkseed_q<16>")
+              (joined
+                (portRef I1 (instanceRef Mcount_M_clkseed_q_lut_16__))
+                (portRef Q (instanceRef M_clkseed_q_16))
+              )
+            )
+            (net Mcount_M_clkseed_q15
+              (joined
+                (portRef D (instanceRef M_clkseed_q_15))
+                (portRef O (instanceRef Mcount_M_clkseed_q_xor_15__))
+              )
+            )
+            (net (rename M_clkseed_q_15_ "M_clkseed_q<15>")
+              (joined
+                (portRef I1 (instanceRef Mcount_M_clkseed_q_lut_15__))
+                (portRef Q (instanceRef M_clkseed_q_15))
+              )
+            )
+            (net Mcount_M_clkseed_q14
+              (joined
+                (portRef D (instanceRef M_clkseed_q_14))
+                (portRef O (instanceRef Mcount_M_clkseed_q_xor_14__))
+              )
+            )
+            (net (rename M_clkseed_q_14_ "M_clkseed_q<14>")
+              (joined
+                (portRef I1 (instanceRef Mcount_M_clkseed_q_lut_14__))
+                (portRef Q (instanceRef M_clkseed_q_14))
+              )
+            )
+            (net Mcount_M_clkseed_q13
+              (joined
+                (portRef D (instanceRef M_clkseed_q_13))
+                (portRef O (instanceRef Mcount_M_clkseed_q_xor_13__))
+              )
+            )
+            (net (rename M_clkseed_q_13_ "M_clkseed_q<13>")
+              (joined
+                (portRef I1 (instanceRef Mcount_M_clkseed_q_lut_13__))
+                (portRef Q (instanceRef M_clkseed_q_13))
+              )
+            )
+            (net Mcount_M_clkseed_q12
+              (joined
+                (portRef D (instanceRef M_clkseed_q_12))
+                (portRef O (instanceRef Mcount_M_clkseed_q_xor_12__))
+              )
+            )
+            (net (rename M_clkseed_q_12_ "M_clkseed_q<12>")
+              (joined
+                (portRef I1 (instanceRef Mcount_M_clkseed_q_lut_12__))
+                (portRef Q (instanceRef M_clkseed_q_12))
+              )
+            )
+            (net Mcount_M_clkseed_q11
+              (joined
+                (portRef D (instanceRef M_clkseed_q_11))
+                (portRef O (instanceRef Mcount_M_clkseed_q_xor_11__))
+              )
+            )
+            (net (rename M_clkseed_q_11_ "M_clkseed_q<11>")
+              (joined
+                (portRef I1 (instanceRef Mcount_M_clkseed_q_lut_11__))
+                (portRef Q (instanceRef M_clkseed_q_11))
+              )
+            )
+            (net Mcount_M_clkseed_q10
+              (joined
+                (portRef D (instanceRef M_clkseed_q_10))
+                (portRef O (instanceRef Mcount_M_clkseed_q_xor_10__))
+              )
+            )
+            (net (rename M_clkseed_q_10_ "M_clkseed_q<10>")
+              (joined
+                (portRef I1 (instanceRef Mcount_M_clkseed_q_lut_10__))
+                (portRef Q (instanceRef M_clkseed_q_10))
+              )
+            )
+            (net Mcount_M_clkseed_q9
+              (joined
+                (portRef D (instanceRef M_clkseed_q_9))
+                (portRef O (instanceRef Mcount_M_clkseed_q_xor_9__))
+              )
+            )
+            (net (rename M_clkseed_q_9_ "M_clkseed_q<9>")
+              (joined
+                (portRef I1 (instanceRef Mcount_M_clkseed_q_lut_9__))
+                (portRef Q (instanceRef M_clkseed_q_9))
+              )
+            )
+            (net Mcount_M_clkseed_q8
+              (joined
+                (portRef D (instanceRef M_clkseed_q_8))
+                (portRef O (instanceRef Mcount_M_clkseed_q_xor_8__))
+              )
+            )
+            (net (rename M_clkseed_q_8_ "M_clkseed_q<8>")
+              (joined
+                (portRef I1 (instanceRef Mcount_M_clkseed_q_lut_8__))
+                (portRef Q (instanceRef M_clkseed_q_8))
+              )
+            )
+            (net Mcount_M_clkseed_q7
+              (joined
+                (portRef D (instanceRef M_clkseed_q_7))
+                (portRef O (instanceRef Mcount_M_clkseed_q_xor_7__))
+              )
+            )
+            (net (rename M_clkseed_q_7_ "M_clkseed_q<7>")
+              (joined
+                (portRef I1 (instanceRef Mcount_M_clkseed_q_lut_7__))
+                (portRef Q (instanceRef M_clkseed_q_7))
+              )
+            )
+            (net Mcount_M_clkseed_q6
+              (joined
+                (portRef D (instanceRef M_clkseed_q_6))
+                (portRef O (instanceRef Mcount_M_clkseed_q_xor_6__))
+              )
+            )
+            (net (rename M_clkseed_q_6_ "M_clkseed_q<6>")
+              (joined
+                (portRef I1 (instanceRef Mcount_M_clkseed_q_lut_6__))
+                (portRef Q (instanceRef M_clkseed_q_6))
+              )
+            )
+            (net Mcount_M_clkseed_q5
+              (joined
+                (portRef D (instanceRef M_clkseed_q_5))
+                (portRef O (instanceRef Mcount_M_clkseed_q_xor_5__))
+              )
+            )
+            (net (rename M_clkseed_q_5_ "M_clkseed_q<5>")
+              (joined
+                (portRef I1 (instanceRef Mcount_M_clkseed_q_lut_5__))
+                (portRef Q (instanceRef M_clkseed_q_5))
+              )
+            )
+            (net Mcount_M_clkseed_q4
+              (joined
+                (portRef D (instanceRef M_clkseed_q_4))
+                (portRef O (instanceRef Mcount_M_clkseed_q_xor_4__))
+              )
+            )
+            (net (rename M_clkseed_q_4_ "M_clkseed_q<4>")
+              (joined
+                (portRef I1 (instanceRef Mcount_M_clkseed_q_lut_4__))
+                (portRef Q (instanceRef M_clkseed_q_4))
+              )
+            )
+            (net Mcount_M_clkseed_q3
+              (joined
+                (portRef D (instanceRef M_clkseed_q_3))
+                (portRef O (instanceRef Mcount_M_clkseed_q_xor_3__))
+              )
+            )
+            (net (rename M_clkseed_q_3_ "M_clkseed_q<3>")
+              (joined
+                (portRef I1 (instanceRef Mcount_M_clkseed_q_lut_3__))
+                (portRef Q (instanceRef M_clkseed_q_3))
+              )
+            )
+            (net Mcount_M_clkseed_q2
+              (joined
+                (portRef D (instanceRef M_clkseed_q_2))
+                (portRef O (instanceRef Mcount_M_clkseed_q_xor_2__))
+              )
+            )
+            (net (rename M_clkseed_q_2_ "M_clkseed_q<2>")
+              (joined
+                (portRef I1 (instanceRef Mcount_M_clkseed_q_lut_2__))
+                (portRef clkSeed_2__ (instanceRef randomizer))
+                (portRef Q (instanceRef M_clkseed_q_2))
+              )
+            )
+            (net Mcount_M_clkseed_q1
+              (joined
+                (portRef D (instanceRef M_clkseed_q_1))
+                (portRef O (instanceRef Mcount_M_clkseed_q_xor_1__))
+              )
+            )
+            (net (rename M_clkseed_q_1_ "M_clkseed_q<1>")
+              (joined
+                (portRef I1 (instanceRef Mcount_M_clkseed_q_lut_1__))
+                (portRef clkSeed_1__ (instanceRef randomizer))
+                (portRef Q (instanceRef M_clkseed_q_1))
+              )
+            )
+            (net Mcount_M_clkseed_q
+              (joined
+                (portRef D (instanceRef M_clkseed_q_0))
+                (portRef O (instanceRef Mcount_M_clkseed_q_xor_0__))
+              )
+            )
+            (net (rename M_clkseed_q_0_ "M_clkseed_q<0>")
+              (joined
+                (portRef I1 (instanceRef Mcount_M_clkseed_q_lut_0__))
+                (portRef clkSeed_0__ (instanceRef randomizer))
+                (portRef Q (instanceRef M_clkseed_q_0))
               )
             )
             (net (rename Mcount_M_seed_q_cy_20_ "Mcount_M_seed_q_cy<20>")
@@ -5294,18 +5305,20 @@
             (net M_stage_q_3_1
               (joined
                 (portRef M_stage_q_3_1)
-                (portRef I0 (instanceRef &_n0063_inv1_renamed_36))
-                (portRef I0 (instanceRef &_n0063_inv1_1))
+                (portRef I0 (instanceRef &_n0064_inv1))
+                (portRef I0 (instanceRef &_n0064_inv1_1))
               )
             )
             (net (rename rowLit_1_ "rowLit<1>")
               (joined
                 (portRef (member rowLit 0))
                 (portRef (member value 0) (instanceRef rowCtr))
-                (portRef I1 (instanceRef &_n0063_inv1_renamed_36))
-                (portRef I1 (instanceRef Mram__n0077111))
-                (portRef I0 (instanceRef Mram__n007711))
-                (portRef I1 (instanceRef &_n0063_inv1_1))
+                (portRef I1 (instanceRef &_n0064_inv1))
+                (portRef I1 (instanceRef Mram__n007831))
+                (portRef I1 (instanceRef Mram__n007821))
+                (portRef I0 (instanceRef Mram__n0078111))
+                (portRef I1 (instanceRef Mram__n007811))
+                (portRef I1 (instanceRef &_n0064_inv1_1))
                 (portRef M_ctr_q_1 (instanceRef randomizer))
               )
             )
@@ -5313,23 +5326,37 @@
               (joined
                 (portRef (member rowLit 1))
                 (portRef (member value 1) (instanceRef rowCtr))
-                (portRef I2 (instanceRef &_n0063_inv1_renamed_36))
-                (portRef I0 (instanceRef Mram__n0077111))
-                (portRef I1 (instanceRef Mram__n007711))
-                (portRef I2 (instanceRef &_n0063_inv1_1))
+                (portRef I2 (instanceRef &_n0064_inv1))
+                (portRef I0 (instanceRef Mram__n007831))
+                (portRef I0 (instanceRef Mram__n007821))
+                (portRef I1 (instanceRef Mram__n0078111))
+                (portRef I0 (instanceRef Mram__n007811))
+                (portRef I2 (instanceRef &_n0064_inv1_1))
                 (portRef M_ctr_q_0 (instanceRef randomizer))
+              )
+            )
+            (net (rename &_n0078_0_ "_n0078<0>")
+              (joined
+                (portRef randnumNext (instanceRef randomizer))
+                (portRef O (instanceRef Mram__n007831))
+              )
+            )
+            (net row1
+              (joined
+                (portRef row1)
+                (portRef O (instanceRef Mram__n007821))
               )
             )
             (net row2
               (joined
                 (portRef row2)
-                (portRef O (instanceRef Mram__n0077111))
+                (portRef O (instanceRef Mram__n0078111))
               )
             )
             (net row3
               (joined
                 (portRef row3)
-                (portRef O (instanceRef Mram__n007711))
+                (portRef O (instanceRef Mram__n007811))
               )
             )
             (net N7
@@ -5414,12 +5441,6 @@
                 (portRef clk (instanceRef randomizer))
               )
             )
-            (net high1_OBUF
-              (joined
-                (portRef high1_OBUF)
-                (portRef randnumNext (instanceRef randomizer))
-              )
-            )
           )
       )
     )
@@ -5428,9 +5449,6 @@
         (view view_1
           (viewType NETLIST)
           (interface
-            (port high1
-              (direction OUTPUT)
-            )
             (port rst
               (direction INPUT)
             )
@@ -5442,6 +5460,9 @@
             )
             (port M_stage_q_3_1
               (direction INPUT)
+            )
+            (port high1
+              (direction OUTPUT)
             )
             (port high2
               (direction OUTPUT)
@@ -5461,12 +5482,6 @@
               (direction OUTPUT))
           )
           (contents
-            (instance M_mypropogater_row11
-              (viewRef view_1 (cellRef LUT2 (libraryRef UNISIMS)))
-              (property XSTLIB (boolean (true)) (owner "Xilinx"))
-              (property PK_HLUTNM (string "___XLNM___5___mymain/M_mypropogater_row11") (owner "Xilinx"))
-              (property INIT (string "1") (owner "Xilinx"))
-            )
             (instance rst_inv1_INV_0
               (viewRef view_1 (cellRef INV (libraryRef UNISIMS)))
               (property XSTLIB (boolean (true)) (owner "Xilinx"))
@@ -5478,27 +5493,6 @@
               (property NLW_UNIQUE_ID (integer 0) (owner "Xilinx"))
               (property NLW_MACRO_TAG (integer 3) (owner "Xilinx"))
               (property NLW_MACRO_ALIAS (string "propogate_9_mypropogater") (owner "Xilinx"))
-            )
-            (net (rename rowOn_0_ "rowOn<0>")
-              (joined
-                (portRef (member rowOn 1))
-                (portRef (member rowLit 1) (instanceRef mypropogater))
-                (portRef I0 (instanceRef M_mypropogater_row11))
-              )
-            )
-            (net (rename rowOn_1_ "rowOn<1>")
-              (joined
-                (portRef (member rowOn 0))
-                (portRef (member rowLit 0) (instanceRef mypropogater))
-                (portRef I1 (instanceRef M_mypropogater_row11))
-              )
-            )
-            (net high1
-              (joined
-                (portRef high1)
-                (portRef O (instanceRef M_mypropogater_row11))
-                (portRef high1_OBUF (instanceRef mypropogater))
-              )
             )
             (net rst
               (joined
@@ -5529,6 +5523,24 @@
               (joined
                 (portRef M_stage_q_3_1)
                 (portRef M_stage_q_3_1 (instanceRef mypropogater))
+              )
+            )
+            (net (rename rowOn_1_ "rowOn<1>")
+              (joined
+                (portRef (member rowOn 0))
+                (portRef (member rowLit 0) (instanceRef mypropogater))
+              )
+            )
+            (net (rename rowOn_0_ "rowOn<0>")
+              (joined
+                (portRef (member rowOn 1))
+                (portRef (member rowLit 1) (instanceRef mypropogater))
+              )
+            )
+            (net high1
+              (joined
+                (portRef high1)
+                (portRef row1 (instanceRef mypropogater))
               )
             )
             (net high2
@@ -5615,7 +5627,7 @@
               (property XSTLIB (boolean (true)) (owner "Xilinx"))
               (property INIT (string "1") (owner "Xilinx"))
             )
-            (instance (rename M_stage_q_3_1_renamed_37 "M_stage_q_3_1")
+            (instance (rename M_stage_q_3_1_renamed_36 "M_stage_q_3_1")
               (viewRef view_1 (cellRef FDS (libraryRef UNISIMS)))
               (property XSTLIB (boolean (true)) (owner "Xilinx"))
               (property INIT (string "1") (owner "Xilinx"))
@@ -5631,13 +5643,13 @@
                 (portRef C (instanceRef M_stage_q_1))
                 (portRef C (instanceRef M_stage_q_2))
                 (portRef C (instanceRef M_stage_q_3))
-                (portRef C (instanceRef M_stage_q_3_1_renamed_37))
+                (portRef C (instanceRef M_stage_q_3_1_renamed_36))
               )
             )
             (net (rename M_stage_q_2__ "M_stage_q<2>")
               (joined
                 (portRef D (instanceRef M_stage_q_3))
-                (portRef D (instanceRef M_stage_q_3_1_renamed_37))
+                (portRef D (instanceRef M_stage_q_3_1_renamed_36))
                 (portRef Q (instanceRef M_stage_q_2))
               )
             )
@@ -5648,7 +5660,7 @@
                 (portRef S (instanceRef M_stage_q_1))
                 (portRef S (instanceRef M_stage_q_2))
                 (portRef S (instanceRef M_stage_q_3))
-                (portRef S (instanceRef M_stage_q_3_1_renamed_37))
+                (portRef S (instanceRef M_stage_q_3_1_renamed_36))
               )
             )
             (net (rename M_stage_q_3__ "M_stage_q<3>")
@@ -5678,7 +5690,7 @@
             (net M_stage_q_3_1
               (joined
                 (portRef M_stage_q_3_1)
-                (portRef Q (instanceRef M_stage_q_3_1_renamed_37))
+                (portRef Q (instanceRef M_stage_q_3_1_renamed_36))
               )
             )
           )
@@ -5769,7 +5781,7 @@
               (viewRef view_1 (cellRef GND (libraryRef UNISIMS)))
               (property XSTLIB (boolean (true)) (owner "Xilinx"))
             )
-            (instance (rename rst_n_IBUF_renamed_38 "rst_n_IBUF")
+            (instance (rename rst_n_IBUF_renamed_37 "rst_n_IBUF")
               (viewRef view_1 (cellRef IBUF (libraryRef UNISIMS)))
               (property XSTLIB (boolean (true)) (owner "Xilinx"))
             )
@@ -5829,31 +5841,31 @@
               (viewRef view_1 (cellRef OBUFT (libraryRef UNISIMS)))
               (property XSTLIB (boolean (true)) (owner "Xilinx"))
             )
-            (instance (rename high1_OBUF_renamed_39 "high1_OBUF")
+            (instance (rename high1_OBUF_renamed_38 "high1_OBUF")
               (viewRef view_1 (cellRef OBUF (libraryRef UNISIMS)))
               (property XSTLIB (boolean (true)) (owner "Xilinx"))
             )
-            (instance (rename high2_OBUF_renamed_40 "high2_OBUF")
+            (instance (rename high2_OBUF_renamed_39 "high2_OBUF")
               (viewRef view_1 (cellRef OBUF (libraryRef UNISIMS)))
               (property XSTLIB (boolean (true)) (owner "Xilinx"))
             )
-            (instance (rename high3_OBUF_renamed_41 "high3_OBUF")
+            (instance (rename high3_OBUF_renamed_40 "high3_OBUF")
               (viewRef view_1 (cellRef OBUF (libraryRef UNISIMS)))
               (property XSTLIB (boolean (true)) (owner "Xilinx"))
             )
-            (instance (rename low1_OBUF_renamed_42 "low1_OBUF")
+            (instance (rename low1_OBUF_renamed_41 "low1_OBUF")
               (viewRef view_1 (cellRef OBUF (libraryRef UNISIMS)))
               (property XSTLIB (boolean (true)) (owner "Xilinx"))
             )
-            (instance (rename low2_OBUF_renamed_43 "low2_OBUF")
+            (instance (rename low2_OBUF_renamed_42 "low2_OBUF")
               (viewRef view_1 (cellRef OBUF (libraryRef UNISIMS)))
               (property XSTLIB (boolean (true)) (owner "Xilinx"))
             )
-            (instance (rename low3_OBUF_renamed_44 "low3_OBUF")
+            (instance (rename low3_OBUF_renamed_43 "low3_OBUF")
               (viewRef view_1 (cellRef OBUF (libraryRef UNISIMS)))
               (property XSTLIB (boolean (true)) (owner "Xilinx"))
             )
-            (instance (rename clk_BUFGP_renamed_45 "clk_BUFGP")
+            (instance (rename clk_BUFGP_renamed_44 "clk_BUFGP")
               (viewRef view_1 (cellRef BUFGP (libraryRef UNISIMS)))
               (property XSTLIB (boolean (true)) (owner "Xilinx"))
             )
@@ -5876,14 +5888,14 @@
             )
             (net clk_BUFGP
               (joined
-                (portRef O (instanceRef clk_BUFGP_renamed_45))
+                (portRef O (instanceRef clk_BUFGP_renamed_44))
                 (portRef clk (instanceRef reset_cond3))
                 (portRef clk (instanceRef mymain))
               )
             )
             (net rst_n_IBUF
               (joined
-                (portRef O (instanceRef rst_n_IBUF_renamed_38))
+                (portRef O (instanceRef rst_n_IBUF_renamed_37))
                 (portRef I (instanceRef M_reset_cond_in1_INV_0))
               )
             )
@@ -5925,37 +5937,37 @@
             )
             (net high1_OBUF
               (joined
-                (portRef I (instanceRef high1_OBUF_renamed_39))
+                (portRef I (instanceRef high1_OBUF_renamed_38))
                 (portRef high1 (instanceRef mymain))
               )
             )
             (net high2_OBUF
               (joined
-                (portRef I (instanceRef high2_OBUF_renamed_40))
+                (portRef I (instanceRef high2_OBUF_renamed_39))
                 (portRef high2 (instanceRef mymain))
               )
             )
             (net high3_OBUF
               (joined
-                (portRef I (instanceRef high3_OBUF_renamed_41))
+                (portRef I (instanceRef high3_OBUF_renamed_40))
                 (portRef high3 (instanceRef mymain))
               )
             )
             (net low1_OBUF
               (joined
-                (portRef I (instanceRef low1_OBUF_renamed_42))
+                (portRef I (instanceRef low1_OBUF_renamed_41))
                 (portRef low1 (instanceRef mymain))
               )
             )
             (net low2_OBUF
               (joined
-                (portRef I (instanceRef low2_OBUF_renamed_43))
+                (portRef I (instanceRef low2_OBUF_renamed_42))
                 (portRef low2 (instanceRef mymain))
               )
             )
             (net low3_OBUF
               (joined
-                (portRef I (instanceRef low3_OBUF_renamed_44))
+                (portRef I (instanceRef low3_OBUF_renamed_43))
                 (portRef low3 (instanceRef mymain))
               )
             )
@@ -6029,13 +6041,13 @@
             (net clk
               (joined
                 (portRef clk)
-                (portRef I (instanceRef clk_BUFGP_renamed_45))
+                (portRef I (instanceRef clk_BUFGP_renamed_44))
               )
             )
             (net rst_n
               (joined
                 (portRef rst_n)
-                (portRef I (instanceRef rst_n_IBUF_renamed_38))
+                (portRef I (instanceRef rst_n_IBUF_renamed_37))
               )
             )
             (net (rename led_7_ "led<7>")
@@ -6089,37 +6101,37 @@
             (net high1
               (joined
                 (portRef high1)
-                (portRef O (instanceRef high1_OBUF_renamed_39))
+                (portRef O (instanceRef high1_OBUF_renamed_38))
               )
             )
             (net high2
               (joined
                 (portRef high2)
-                (portRef O (instanceRef high2_OBUF_renamed_40))
+                (portRef O (instanceRef high2_OBUF_renamed_39))
               )
             )
             (net high3
               (joined
                 (portRef high3)
-                (portRef O (instanceRef high3_OBUF_renamed_41))
+                (portRef O (instanceRef high3_OBUF_renamed_40))
               )
             )
             (net low1
               (joined
                 (portRef low1)
-                (portRef O (instanceRef low1_OBUF_renamed_42))
+                (portRef O (instanceRef low1_OBUF_renamed_41))
               )
             )
             (net low2
               (joined
                 (portRef low2)
-                (portRef O (instanceRef low2_OBUF_renamed_43))
+                (portRef O (instanceRef low2_OBUF_renamed_42))
               )
             )
             (net low3
               (joined
                 (portRef low3)
-                (portRef O (instanceRef low3_OBUF_renamed_44))
+                (portRef O (instanceRef low3_OBUF_renamed_43))
               )
             )
             (net M_stage_q_3_1

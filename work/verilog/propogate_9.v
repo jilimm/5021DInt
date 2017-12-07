@@ -146,6 +146,33 @@ module propogate_9 (
     endcase
     
     case (M_rowCtr_value)
+      2'h1: begin
+        M_randomizer_randnumNext = 1'h0;
+        M_randomizer_randclkNext = 1'h0;
+        M_randomizer_numbregEn = 1'h0;
+        M_randomizer_clkregEn = 1'h0;
+        row1 = 1'h1;
+        row2 = 1'h0;
+        row3 = 1'h0;
+      end
+      2'h2: begin
+        M_randomizer_randnumNext = 1'h0;
+        M_randomizer_randclkNext = 1'h0;
+        M_randomizer_numbregEn = 1'h0;
+        M_randomizer_clkregEn = 1'h0;
+        row1 = 1'h0;
+        row2 = 1'h1;
+        row3 = 1'h0;
+      end
+      2'h3: begin
+        M_randomizer_randnumNext = 1'h0;
+        M_randomizer_randclkNext = 1'h0;
+        M_randomizer_numbregEn = 1'h0;
+        M_randomizer_clkregEn = 1'h0;
+        row1 = 1'h0;
+        row2 = 1'h0;
+        row3 = 1'h1;
+      end
       2'h0: begin
         M_seed_d = M_seed_q + 1'h1;
         M_clkseed_d = M_clkseed_q + 1'h1;
@@ -155,33 +182,6 @@ module propogate_9 (
         M_randomizer_clkregEn = 1'h1;
         M_randomizer_randnumrst = 1'h1;
         M_randomizer_randclkrst = 1'h1;
-        row1 = 1'h1;
-        row2 = 1'h0;
-        row3 = 1'h0;
-      end
-      2'h1: begin
-        M_randomizer_randnumNext = 1'h0;
-        M_randomizer_randclkNext = 1'h0;
-        M_randomizer_numbregEn = 1'h0;
-        M_randomizer_clkregEn = 1'h0;
-        row1 = 1'h0;
-        row2 = 1'h1;
-        row3 = 1'h0;
-      end
-      2'h2: begin
-        M_randomizer_randnumNext = 1'h0;
-        M_randomizer_randclkNext = 1'h0;
-        M_randomizer_numbregEn = 1'h0;
-        M_randomizer_clkregEn = 1'h0;
-        row1 = 1'h0;
-        row2 = 1'h0;
-        row3 = 1'h1;
-      end
-      2'h3: begin
-        M_randomizer_randnumNext = 1'h0;
-        M_randomizer_randclkNext = 1'h0;
-        M_randomizer_numbregEn = 1'h0;
-        M_randomizer_clkregEn = 1'h0;
         row1 = 1'h0;
         row2 = 1'h0;
         row3 = 1'h0;

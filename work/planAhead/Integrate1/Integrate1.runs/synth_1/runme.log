@@ -134,10 +134,10 @@ INFO:Xst:3210 - "C:/Users/Jing Yun/Desktop/50.002 Computation Structure/1D_Game 
     Found 1-bit register for signal <M_right_q>.
     Found 1-bit register for signal <M_cent_q>.
     Found 1-bit register for signal <M_left_q>.
-    Found 2-bit 4-to-1 multiplexer for signal <result> created at line 13.
+    Found 2-bit 3-to-1 multiplexer for signal <result> created at line 13.
     Summary:
 	inferred   3 D-type flip-flop(s).
-	inferred  13 Multiplexer(s).
+	inferred   7 Multiplexer(s).
 Unit <main_4> synthesized.
 
 Synthesizing Unit <button_conditioner_5>.
@@ -170,9 +170,9 @@ Synthesizing Unit <propogate_9>.
 INFO:Xst:3210 - "C:/Users/Jing Yun/Desktop/50.002 Computation Structure/1D_Game Design/502IntGitRepo/5021DInt/work/planAhead/Integrate1/Integrate1.srcs/sources_1/imports/verilog/propogate_9.v" line 30: Output port <value> of the instance <slowclk21> is unconnected or connected to loadless signal.
     Found 32-bit register for signal <M_clkseed_q>.
     Found 32-bit register for signal <M_seed_q>.
-    Found 32-bit adder for signal <M_seed_q[31]_GND_7_o_add_3_OUT> created at line 150.
-    Found 32-bit adder for signal <M_clkseed_q[31]_GND_7_o_add_4_OUT> created at line 151.
-    Found 4x3-bit Read Only RAM for signal <_n0077>
+    Found 32-bit adder for signal <M_seed_q[31]_GND_7_o_add_3_OUT> created at line 177.
+    Found 32-bit adder for signal <M_clkseed_q[31]_GND_7_o_add_4_OUT> created at line 178.
+    Found 4x4-bit Read Only RAM for signal <_n0078>
     Summary:
 	inferred   1 RAM(s).
 	inferred   2 Adder/Subtractor(s).
@@ -282,7 +282,7 @@ HDL Synthesis Report
 
 Macro Statistics
 # RAMs                                                 : 1
- 4x3-bit single-port Read Only RAM                     : 1
+ 4x4-bit single-port Read Only RAM                     : 1
 # Adders/Subtractors                                   : 11
  2-bit adder                                           : 1
  20-bit adder                                          : 3
@@ -306,9 +306,9 @@ Macro Statistics
  1-bit latch                                           : 16
 # Comparators                                          : 1
  8-bit comparator equal                                : 1
-# Multiplexers                                         : 31
- 1-bit 2-to-1 multiplexer                              : 19
- 2-bit 4-to-1 multiplexer                              : 1
+# Multiplexers                                         : 25
+ 1-bit 2-to-1 multiplexer                              : 13
+ 2-bit 3-to-1 multiplexer                              : 1
  3-bit 2-to-1 multiplexer                              : 1
  32-bit 2-to-1 multiplexer                             : 10
 # Tristates                                            : 6
@@ -351,12 +351,12 @@ Unit <counter_8> synthesized (advanced).
 Synthesizing (advanced) Unit <propogate_9>.
 The following registers are absorbed into counter <M_seed_q>: 1 register on signal <M_seed_q>.
 The following registers are absorbed into counter <M_clkseed_q>: 1 register on signal <M_clkseed_q>.
-INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram__n0077> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram__n0078> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
     -----------------------------------------------------------------------
     | ram_type           | Distributed                         |          |
     -----------------------------------------------------------------------
     | Port A                                                              |
-    |     aspect ratio   | 4-word x 3-bit                      |          |
+    |     aspect ratio   | 4-word x 4-bit                      |          |
     |     weA            | connected to signal <GND>           | high     |
     |     addrA          | connected to signal <M_rowCtr_value> |          |
     |     diA            | connected to signal <GND>           |          |
@@ -369,7 +369,7 @@ Advanced HDL Synthesis Report
 
 Macro Statistics
 # RAMs                                                 : 1
- 4x3-bit single-port distributed Read Only RAM         : 1
+ 4x4-bit single-port distributed Read Only RAM         : 1
 # Counters                                             : 11
  2-bit up counter                                      : 1
  20-bit up counter                                     : 3
@@ -382,9 +382,9 @@ Macro Statistics
  Flip-Flops                                            : 278
 # Comparators                                          : 1
  8-bit comparator equal                                : 1
-# Multiplexers                                         : 29
- 1-bit 2-to-1 multiplexer                              : 19
- 2-bit 4-to-1 multiplexer                              : 1
+# Multiplexers                                         : 23
+ 1-bit 2-to-1 multiplexer                              : 13
+ 2-bit 3-to-1 multiplexer                              : 1
  3-bit 2-to-1 multiplexer                              : 1
  32-bit 2-to-1 multiplexer                             : 8
 # Xors                                                 : 6
@@ -403,26 +403,6 @@ Optimizing unit <mojo_top_0> ...
 Optimizing unit <main_4> ...
 
 Optimizing unit <pn_gen_25> ...
-WARNING:Xst:2677 - Node <mymain/button_cond2/M_ctr_q_19> of sequential type is unconnected in block <mojo_top_0>.
-WARNING:Xst:2677 - Node <mymain/button_cond2/M_ctr_q_18> of sequential type is unconnected in block <mojo_top_0>.
-WARNING:Xst:2677 - Node <mymain/button_cond2/M_ctr_q_17> of sequential type is unconnected in block <mojo_top_0>.
-WARNING:Xst:2677 - Node <mymain/button_cond2/M_ctr_q_16> of sequential type is unconnected in block <mojo_top_0>.
-WARNING:Xst:2677 - Node <mymain/button_cond2/M_ctr_q_15> of sequential type is unconnected in block <mojo_top_0>.
-WARNING:Xst:2677 - Node <mymain/button_cond2/M_ctr_q_14> of sequential type is unconnected in block <mojo_top_0>.
-WARNING:Xst:2677 - Node <mymain/button_cond2/M_ctr_q_13> of sequential type is unconnected in block <mojo_top_0>.
-WARNING:Xst:2677 - Node <mymain/button_cond2/M_ctr_q_12> of sequential type is unconnected in block <mojo_top_0>.
-WARNING:Xst:2677 - Node <mymain/button_cond2/M_ctr_q_11> of sequential type is unconnected in block <mojo_top_0>.
-WARNING:Xst:2677 - Node <mymain/button_cond2/M_ctr_q_10> of sequential type is unconnected in block <mojo_top_0>.
-WARNING:Xst:2677 - Node <mymain/button_cond2/M_ctr_q_9> of sequential type is unconnected in block <mojo_top_0>.
-WARNING:Xst:2677 - Node <mymain/button_cond2/M_ctr_q_8> of sequential type is unconnected in block <mojo_top_0>.
-WARNING:Xst:2677 - Node <mymain/button_cond2/M_ctr_q_7> of sequential type is unconnected in block <mojo_top_0>.
-WARNING:Xst:2677 - Node <mymain/button_cond2/M_ctr_q_6> of sequential type is unconnected in block <mojo_top_0>.
-WARNING:Xst:2677 - Node <mymain/button_cond2/M_ctr_q_5> of sequential type is unconnected in block <mojo_top_0>.
-WARNING:Xst:2677 - Node <mymain/button_cond2/M_ctr_q_4> of sequential type is unconnected in block <mojo_top_0>.
-WARNING:Xst:2677 - Node <mymain/button_cond2/M_ctr_q_3> of sequential type is unconnected in block <mojo_top_0>.
-WARNING:Xst:2677 - Node <mymain/button_cond2/M_ctr_q_2> of sequential type is unconnected in block <mojo_top_0>.
-WARNING:Xst:2677 - Node <mymain/button_cond2/M_ctr_q_1> of sequential type is unconnected in block <mojo_top_0>.
-WARNING:Xst:2677 - Node <mymain/button_cond2/M_ctr_q_0> of sequential type is unconnected in block <mojo_top_0>.
 WARNING:Xst:2677 - Node <mymain/button_cond1/M_ctr_q_19> of sequential type is unconnected in block <mojo_top_0>.
 WARNING:Xst:2677 - Node <mymain/button_cond1/M_ctr_q_18> of sequential type is unconnected in block <mojo_top_0>.
 WARNING:Xst:2677 - Node <mymain/button_cond1/M_ctr_q_17> of sequential type is unconnected in block <mojo_top_0>.
@@ -443,6 +423,26 @@ WARNING:Xst:2677 - Node <mymain/button_cond1/M_ctr_q_3> of sequential type is un
 WARNING:Xst:2677 - Node <mymain/button_cond1/M_ctr_q_2> of sequential type is unconnected in block <mojo_top_0>.
 WARNING:Xst:2677 - Node <mymain/button_cond1/M_ctr_q_1> of sequential type is unconnected in block <mojo_top_0>.
 WARNING:Xst:2677 - Node <mymain/button_cond1/M_ctr_q_0> of sequential type is unconnected in block <mojo_top_0>.
+WARNING:Xst:2677 - Node <mymain/button_cond2/M_ctr_q_19> of sequential type is unconnected in block <mojo_top_0>.
+WARNING:Xst:2677 - Node <mymain/button_cond2/M_ctr_q_18> of sequential type is unconnected in block <mojo_top_0>.
+WARNING:Xst:2677 - Node <mymain/button_cond2/M_ctr_q_17> of sequential type is unconnected in block <mojo_top_0>.
+WARNING:Xst:2677 - Node <mymain/button_cond2/M_ctr_q_16> of sequential type is unconnected in block <mojo_top_0>.
+WARNING:Xst:2677 - Node <mymain/button_cond2/M_ctr_q_15> of sequential type is unconnected in block <mojo_top_0>.
+WARNING:Xst:2677 - Node <mymain/button_cond2/M_ctr_q_14> of sequential type is unconnected in block <mojo_top_0>.
+WARNING:Xst:2677 - Node <mymain/button_cond2/M_ctr_q_13> of sequential type is unconnected in block <mojo_top_0>.
+WARNING:Xst:2677 - Node <mymain/button_cond2/M_ctr_q_12> of sequential type is unconnected in block <mojo_top_0>.
+WARNING:Xst:2677 - Node <mymain/button_cond2/M_ctr_q_11> of sequential type is unconnected in block <mojo_top_0>.
+WARNING:Xst:2677 - Node <mymain/button_cond2/M_ctr_q_10> of sequential type is unconnected in block <mojo_top_0>.
+WARNING:Xst:2677 - Node <mymain/button_cond2/M_ctr_q_9> of sequential type is unconnected in block <mojo_top_0>.
+WARNING:Xst:2677 - Node <mymain/button_cond2/M_ctr_q_8> of sequential type is unconnected in block <mojo_top_0>.
+WARNING:Xst:2677 - Node <mymain/button_cond2/M_ctr_q_7> of sequential type is unconnected in block <mojo_top_0>.
+WARNING:Xst:2677 - Node <mymain/button_cond2/M_ctr_q_6> of sequential type is unconnected in block <mojo_top_0>.
+WARNING:Xst:2677 - Node <mymain/button_cond2/M_ctr_q_5> of sequential type is unconnected in block <mojo_top_0>.
+WARNING:Xst:2677 - Node <mymain/button_cond2/M_ctr_q_4> of sequential type is unconnected in block <mojo_top_0>.
+WARNING:Xst:2677 - Node <mymain/button_cond2/M_ctr_q_3> of sequential type is unconnected in block <mojo_top_0>.
+WARNING:Xst:2677 - Node <mymain/button_cond2/M_ctr_q_2> of sequential type is unconnected in block <mojo_top_0>.
+WARNING:Xst:2677 - Node <mymain/button_cond2/M_ctr_q_1> of sequential type is unconnected in block <mojo_top_0>.
+WARNING:Xst:2677 - Node <mymain/button_cond2/M_ctr_q_0> of sequential type is unconnected in block <mojo_top_0>.
 WARNING:Xst:2677 - Node <mymain/button_cond3/M_ctr_q_19> of sequential type is unconnected in block <mojo_top_0>.
 WARNING:Xst:2677 - Node <mymain/button_cond3/M_ctr_q_18> of sequential type is unconnected in block <mojo_top_0>.
 WARNING:Xst:2677 - Node <mymain/button_cond3/M_ctr_q_17> of sequential type is unconnected in block <mojo_top_0>.
@@ -472,9 +472,9 @@ WARNING:Xst:2677 - Node <mymain/button_cond2/sync/M_pipe_q_0> of sequential type
 WARNING:Xst:2677 - Node <mymain/button_cond2/sync/M_pipe_q_1> of sequential type is unconnected in block <mojo_top_0>.
 WARNING:Xst:2677 - Node <mymain/button_cond1/sync/M_pipe_q_0> of sequential type is unconnected in block <mojo_top_0>.
 WARNING:Xst:2677 - Node <mymain/button_cond1/sync/M_pipe_q_1> of sequential type is unconnected in block <mojo_top_0>.
-WARNING:Xst:2677 - Node <mymain/M_left_q_0> of sequential type is unconnected in block <mojo_top_0>.
-WARNING:Xst:2677 - Node <mymain/M_right_q_0> of sequential type is unconnected in block <mojo_top_0>.
 WARNING:Xst:2677 - Node <mymain/M_cent_q_0> of sequential type is unconnected in block <mojo_top_0>.
+WARNING:Xst:2677 - Node <mymain/M_right_q_0> of sequential type is unconnected in block <mojo_top_0>.
+WARNING:Xst:2677 - Node <mymain/M_left_q_0> of sequential type is unconnected in block <mojo_top_0>.
 WARNING:Xst:1293 - FF/Latch <mymain/mypropogater/randomizer/clk_gen/M_z_q_18> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <mymain/mypropogater/randomizer/clk_gen/M_z_q_19> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <mymain/mypropogater/randomizer/clk_gen/M_z_q_20> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
@@ -619,13 +619,6 @@ WARNING:Xst:1898 - Due to constant pushing, FF/Latch <mymain/mypropogater/random
 WARNING:Xst:1898 - Due to constant pushing, FF/Latch <mymain/mypropogater/randomizer/clk_gen/M_z_q_2> is unconnected in block <mojo_top_0>.
 WARNING:Xst:1898 - Due to constant pushing, FF/Latch <mymain/mypropogater/randomizer/clk_gen/M_y_q_2> is unconnected in block <mojo_top_0>.
 WARNING:Xst:1898 - Due to constant pushing, FF/Latch <mymain/mypropogater/randomizer/clk_gen/M_y_q_0> is unconnected in block <mojo_top_0>.
-WARNING:Xst:2677 - Node <mymain/mypropogater/M_clkseed_q_31> of sequential type is unconnected in block <mojo_top_0>.
-WARNING:Xst:2677 - Node <mymain/mypropogater/M_clkseed_q_30> of sequential type is unconnected in block <mojo_top_0>.
-WARNING:Xst:2677 - Node <mymain/mypropogater/M_clkseed_q_29> of sequential type is unconnected in block <mojo_top_0>.
-WARNING:Xst:2677 - Node <mymain/mypropogater/M_clkseed_q_28> of sequential type is unconnected in block <mojo_top_0>.
-WARNING:Xst:2677 - Node <mymain/mypropogater/M_clkseed_q_27> of sequential type is unconnected in block <mojo_top_0>.
-WARNING:Xst:2677 - Node <mymain/mypropogater/M_clkseed_q_26> of sequential type is unconnected in block <mojo_top_0>.
-WARNING:Xst:2677 - Node <mymain/mypropogater/M_clkseed_q_25> of sequential type is unconnected in block <mojo_top_0>.
 WARNING:Xst:2677 - Node <mymain/mypropogater/M_seed_q_31> of sequential type is unconnected in block <mojo_top_0>.
 WARNING:Xst:2677 - Node <mymain/mypropogater/M_seed_q_30> of sequential type is unconnected in block <mojo_top_0>.
 WARNING:Xst:2677 - Node <mymain/mypropogater/M_seed_q_29> of sequential type is unconnected in block <mojo_top_0>.
@@ -633,6 +626,13 @@ WARNING:Xst:2677 - Node <mymain/mypropogater/M_seed_q_28> of sequential type is 
 WARNING:Xst:2677 - Node <mymain/mypropogater/M_seed_q_27> of sequential type is unconnected in block <mojo_top_0>.
 WARNING:Xst:2677 - Node <mymain/mypropogater/M_seed_q_26> of sequential type is unconnected in block <mojo_top_0>.
 WARNING:Xst:2677 - Node <mymain/mypropogater/M_seed_q_25> of sequential type is unconnected in block <mojo_top_0>.
+WARNING:Xst:2677 - Node <mymain/mypropogater/M_clkseed_q_31> of sequential type is unconnected in block <mojo_top_0>.
+WARNING:Xst:2677 - Node <mymain/mypropogater/M_clkseed_q_30> of sequential type is unconnected in block <mojo_top_0>.
+WARNING:Xst:2677 - Node <mymain/mypropogater/M_clkseed_q_29> of sequential type is unconnected in block <mojo_top_0>.
+WARNING:Xst:2677 - Node <mymain/mypropogater/M_clkseed_q_28> of sequential type is unconnected in block <mojo_top_0>.
+WARNING:Xst:2677 - Node <mymain/mypropogater/M_clkseed_q_27> of sequential type is unconnected in block <mojo_top_0>.
+WARNING:Xst:2677 - Node <mymain/mypropogater/M_clkseed_q_26> of sequential type is unconnected in block <mojo_top_0>.
+WARNING:Xst:2677 - Node <mymain/mypropogater/M_clkseed_q_25> of sequential type is unconnected in block <mojo_top_0>.
 WARNING:Xst:2677 - Node <mymain/mypropogater/randomizer/numb_gen/M_y_q_30> of sequential type is unconnected in block <mojo_top_0>.
 WARNING:Xst:2677 - Node <mymain/mypropogater/randomizer/numb_gen/M_y_q_25> of sequential type is unconnected in block <mojo_top_0>.
 WARNING:Xst:2677 - Node <mymain/mypropogater/randomizer/numb_gen/M_z_q_25> of sequential type is unconnected in block <mojo_top_0>.
@@ -718,22 +718,22 @@ INFO:Xst:2261 - The FF/Latch <mymain/mypropogater/slowclk25/M_ctr_q_6> in Unit <
 INFO:Xst:2261 - The FF/Latch <mymain/mypropogater/slowclk25/M_ctr_q_7> in Unit <mojo_top_0> is equivalent to the following 3 FFs/Latches, which will be removed : <mymain/mypropogater/slowclk24/M_ctr_q_7> <mymain/mypropogater/slowclk23/M_ctr_q_7> <mymain/edge_ctr/M_ctr_q_7> 
 INFO:Xst:2261 - The FF/Latch <mymain/mypropogater/slowclk25/M_ctr_q_8> in Unit <mojo_top_0> is equivalent to the following 3 FFs/Latches, which will be removed : <mymain/mypropogater/slowclk24/M_ctr_q_8> <mymain/mypropogater/slowclk23/M_ctr_q_8> <mymain/edge_ctr/M_ctr_q_8> 
 INFO:Xst:2261 - The FF/Latch <mymain/mypropogater/slowclk25/M_ctr_q_9> in Unit <mojo_top_0> is equivalent to the following 3 FFs/Latches, which will be removed : <mymain/mypropogater/slowclk24/M_ctr_q_9> <mymain/mypropogater/slowclk23/M_ctr_q_9> <mymain/edge_ctr/M_ctr_q_9> 
-INFO:Xst:2261 - The FF/Latch <mymain/mypropogater/randomizer/numb_gen/M_y_q_20> in Unit <mojo_top_0> is equivalent to the following 4 FFs/Latches, which will be removed : <mymain/mypropogater/randomizer/numb_gen/M_y_q_19> <mymain/mypropogater/randomizer/numb_gen/M_x_q_29> <mymain/mypropogater/randomizer/numb_gen/M_x_q_10> <mymain/mypropogater/randomizer/numb_gen/M_x_q_1> 
 INFO:Xst:2261 - The FF/Latch <mymain/mypropogater/randomizer/clk_gen/M_y_q_20> in Unit <mojo_top_0> is equivalent to the following 4 FFs/Latches, which will be removed : <mymain/mypropogater/randomizer/clk_gen/M_y_q_19> <mymain/mypropogater/randomizer/clk_gen/M_x_q_29> <mymain/mypropogater/randomizer/clk_gen/M_x_q_10> <mymain/mypropogater/randomizer/clk_gen/M_x_q_1> 
+INFO:Xst:2261 - The FF/Latch <mymain/mypropogater/randomizer/numb_gen/M_y_q_20> in Unit <mojo_top_0> is equivalent to the following 4 FFs/Latches, which will be removed : <mymain/mypropogater/randomizer/numb_gen/M_y_q_19> <mymain/mypropogater/randomizer/numb_gen/M_x_q_29> <mymain/mypropogater/randomizer/numb_gen/M_x_q_10> <mymain/mypropogater/randomizer/numb_gen/M_x_q_1> 
 
 Mapping all equations...
 Building and optimizing final netlist ...
 INFO:Xst:2261 - The FF/Latch <mymain/mypropogater/randomizer/numb_gen/M_x_q_20> in Unit <mojo_top_0> is equivalent to the following FF/Latch, which will be removed : <mymain/mypropogater/randomizer/numb_gen/M_x_q_19> 
-INFO:Xst:2261 - The FF/Latch <mymain/mypropogater/randomizer/clk_gen/M_x_q_20> in Unit <mojo_top_0> is equivalent to the following FF/Latch, which will be removed : <mymain/mypropogater/randomizer/clk_gen/M_x_q_19> 
 INFO:Xst:2261 - The FF/Latch <mymain/mypropogater/randomizer/numb_gen/M_y_q_20> in Unit <mojo_top_0> is equivalent to the following FF/Latch, which will be removed : <mymain/mypropogater/randomizer/clk_gen/M_y_q_20> 
+INFO:Xst:2261 - The FF/Latch <mymain/mypropogater/randomizer/clk_gen/M_x_q_20> in Unit <mojo_top_0> is equivalent to the following FF/Latch, which will be removed : <mymain/mypropogater/randomizer/clk_gen/M_x_q_19> 
 INFO:Xst:2261 - The FF/Latch <mymain/mypropogater/randomizer/numb_gen/M_x_q_20> in Unit <mojo_top_0> is equivalent to the following FF/Latch, which will be removed : <mymain/mypropogater/randomizer/clk_gen/M_x_q_20> 
 Found area constraint ratio of 100 (+ 0) on block mojo_top_0, actual ratio is 2.
-WARNING:Xst:2677 - Node <mymain/mypropogater/M_clkseed_q_24> of sequential type is unconnected in block <mojo_top_0>.
-WARNING:Xst:2677 - Node <mymain/mypropogater/M_clkseed_q_23> of sequential type is unconnected in block <mojo_top_0>.
-WARNING:Xst:2677 - Node <mymain/mypropogater/M_clkseed_q_22> of sequential type is unconnected in block <mojo_top_0>.
 WARNING:Xst:2677 - Node <mymain/mypropogater/M_seed_q_24> of sequential type is unconnected in block <mojo_top_0>.
 WARNING:Xst:2677 - Node <mymain/mypropogater/M_seed_q_23> of sequential type is unconnected in block <mojo_top_0>.
 WARNING:Xst:2677 - Node <mymain/mypropogater/M_seed_q_22> of sequential type is unconnected in block <mojo_top_0>.
+WARNING:Xst:2677 - Node <mymain/mypropogater/M_clkseed_q_24> of sequential type is unconnected in block <mojo_top_0>.
+WARNING:Xst:2677 - Node <mymain/mypropogater/M_clkseed_q_23> of sequential type is unconnected in block <mojo_top_0>.
+WARNING:Xst:2677 - Node <mymain/mypropogater/M_clkseed_q_22> of sequential type is unconnected in block <mojo_top_0>.
 WARNING:Xst:2677 - Node <mymain/mypropogater/randomizer/numb_gen/M_w_q_24> of sequential type is unconnected in block <mojo_top_0>.
 WARNING:Xst:2677 - Node <mymain/mypropogater/randomizer/numb_gen/M_w_q_16> of sequential type is unconnected in block <mojo_top_0>.
 WARNING:Xst:2677 - Node <mymain/mypropogater/randomizer/numb_gen/M_w_q_13> of sequential type is unconnected in block <mojo_top_0>.
@@ -788,12 +788,12 @@ Partition Implementation Status
 
 Clock Information:
 ------------------
-----------------------------------------------------------------------+--------------------------------------------+-------+
-Clock Signal                                                          | Clock buffer(FF name)                      | Load  |
-----------------------------------------------------------------------+--------------------------------------------+-------+
-clk                                                                   | BUFGP                                      | 53    |
-mymain/mypropogater/chosenClk_0(mymain/mypropogater/Mmux_chosenClk1:O)| BUFG(*)(mymain/mypropogater/M_clkseed_q_21)| 46    |
-----------------------------------------------------------------------+--------------------------------------------+-------+
+----------------------------------------------------------------------+-----------------------------------------+-------+
+Clock Signal                                                          | Clock buffer(FF name)                   | Load  |
+----------------------------------------------------------------------+-----------------------------------------+-------+
+clk                                                                   | BUFGP                                   | 53    |
+mymain/mypropogater/chosenClk_0(mymain/mypropogater/Mmux_chosenClk1:O)| BUFG(*)(mymain/mypropogater/M_seed_q_21)| 46    |
+----------------------------------------------------------------------+-----------------------------------------+-------+
 (*) This 1 clock signal(s) are generated by combinatorial logic,
 and XST is not able to identify which are the primary clock signals.
 Please use the CLOCK_SIGNAL constraint to specify the clock signal(s) generated by combinatorial logic.
@@ -806,9 +806,9 @@ Timing Summary:
 ---------------
 Speed Grade: -2
 
-   Minimum period: 4.013ns (Maximum Frequency: 249.168MHz)
+   Minimum period: 4.039ns (Maximum Frequency: 247.564MHz)
    Minimum input arrival time before clock: 3.563ns
-   Maximum output required time after clock: 5.939ns
+   Maximum output required time after clock: 5.737ns
    Maximum combinational path delay: No path found
 
 =========================================================================

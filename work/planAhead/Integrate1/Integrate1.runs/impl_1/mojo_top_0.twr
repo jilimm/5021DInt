@@ -30,14 +30,14 @@ For more information, see Period Analysis in the Timing Closure User Guide (UG61
 
  451 paths analyzed, 185 endpoints analyzed, 0 failing endpoints
  0 timing errors detected. (0 setup errors, 0 hold errors, 0 component switching limit errors)
- Minimum period is   4.318ns.
+ Minimum period is   3.744ns.
 --------------------------------------------------------------------------------
-Slack:                  15.682ns (requirement - (data path - clock path skew + uncertainty))
+Slack:                  16.256ns (requirement - (data path - clock path skew + uncertainty))
   Source:               reset_cond3/M_stage_q_3 (FF)
   Destination:          mymain/mypropogater/slowclk25/M_ctr_q_25 (FF)
   Requirement:          20.000ns
-  Data Path Delay:      4.218ns (Levels of Logic = 0)
-  Clock Path Skew:      -0.065ns (0.678 - 0.743)
+  Data Path Delay:      3.641ns (Levels of Logic = 0)
+  Clock Path Skew:      -0.068ns (0.678 - 0.746)
   Source Clock:         clk_BUFGP rising at 0.000ns
   Destination Clock:    clk_BUFGP rising at 20.000ns
   Clock Uncertainty:    0.035ns
@@ -52,22 +52,22 @@ Slack:                  15.682ns (requirement - (data path - clock path skew + u
     Location             Delay type         Delay(ns)  Physical Resource
                                                        Logical Resource(s)
     -------------------------------------------------  -------------------
-    SLICE_X7Y25.DQ       Tcko                  0.430   M_reset_cond3_out
+    SLICE_X7Y26.AQ       Tcko                  0.430   M_reset_cond3_out
                                                        reset_cond3/M_stage_q_3
-    SLICE_X12Y41.SR      net (fanout=64)       3.338   M_reset_cond3_out
+    SLICE_X12Y41.SR      net (fanout=64)       2.761   M_reset_cond3_out
     SLICE_X12Y41.CLK     Tsrck                 0.450   mymain/mypropogater/M_slowclk25_value
                                                        mymain/mypropogater/slowclk25/M_ctr_q_25
     -------------------------------------------------  ---------------------------
-    Total                                      4.218ns (0.880ns logic, 3.338ns route)
-                                                       (20.9% logic, 79.1% route)
+    Total                                      3.641ns (0.880ns logic, 2.761ns route)
+                                                       (24.2% logic, 75.8% route)
 
 --------------------------------------------------------------------------------
-Slack:                  15.704ns (requirement - (data path - clock path skew + uncertainty))
+Slack:                  16.278ns (requirement - (data path - clock path skew + uncertainty))
   Source:               reset_cond3/M_stage_q_3 (FF)
   Destination:          mymain/mypropogater/slowclk25/M_ctr_q_24 (FF)
   Requirement:          20.000ns
-  Data Path Delay:      4.196ns (Levels of Logic = 0)
-  Clock Path Skew:      -0.065ns (0.678 - 0.743)
+  Data Path Delay:      3.619ns (Levels of Logic = 0)
+  Clock Path Skew:      -0.068ns (0.678 - 0.746)
   Source Clock:         clk_BUFGP rising at 0.000ns
   Destination Clock:    clk_BUFGP rising at 20.000ns
   Clock Uncertainty:    0.035ns
@@ -82,22 +82,56 @@ Slack:                  15.704ns (requirement - (data path - clock path skew + u
     Location             Delay type         Delay(ns)  Physical Resource
                                                        Logical Resource(s)
     -------------------------------------------------  -------------------
-    SLICE_X7Y25.DQ       Tcko                  0.430   M_reset_cond3_out
+    SLICE_X7Y26.AQ       Tcko                  0.430   M_reset_cond3_out
                                                        reset_cond3/M_stage_q_3
-    SLICE_X12Y41.SR      net (fanout=64)       3.338   M_reset_cond3_out
+    SLICE_X12Y41.SR      net (fanout=64)       2.761   M_reset_cond3_out
     SLICE_X12Y41.CLK     Tsrck                 0.428   mymain/mypropogater/M_slowclk25_value
                                                        mymain/mypropogater/slowclk25/M_ctr_q_24
     -------------------------------------------------  ---------------------------
-    Total                                      4.196ns (0.858ns logic, 3.338ns route)
-                                                       (20.4% logic, 79.6% route)
+    Total                                      3.619ns (0.858ns logic, 2.761ns route)
+                                                       (23.7% logic, 76.3% route)
 
 --------------------------------------------------------------------------------
-Slack:                  15.847ns (requirement - (data path - clock path skew + uncertainty))
+Slack:                  16.335ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               reset_cond3/M_stage_q_3_1 (FF)
+  Destination:          mymain/mypropogater/randomizer/clk_gen/M_w_q_2 (FF)
+  Requirement:          20.000ns
+  Data Path Delay:      3.599ns (Levels of Logic = 2)
+  Clock Path Skew:      -0.031ns (0.715 - 0.746)
+  Source Clock:         clk_BUFGP rising at 0.000ns
+  Destination Clock:    clk_BUFGP rising at 20.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: reset_cond3/M_stage_q_3_1 to mymain/mypropogater/randomizer/clk_gen/M_w_q_2
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X6Y26.DQ       Tcko                  0.476   M_stage_q_3_1
+                                                       reset_cond3/M_stage_q_3_1
+    SLICE_X7Y31.B3       net (fanout=2)        0.993   M_stage_q_3_1
+    SLICE_X7Y31.B        Tilo                  0.259   mymain/mypropogater/randomizer/numb_gen/M_w_q[20]
+                                                       mymain/mypropogater/_n0064_inv1
+    SLICE_X11Y34.C2      net (fanout=16)       1.498   mymain/mypropogater/_n0064_inv
+    SLICE_X11Y34.CLK     Tas                   0.373   mymain/mypropogater/randomizer/M_clk_gen_num[2]
+                                                       mymain/mypropogater/randomizer/clk_gen/Mmux_M_w_d231
+                                                       mymain/mypropogater/randomizer/clk_gen/M_w_q_2
+    -------------------------------------------------  ---------------------------
+    Total                                      3.599ns (1.108ns logic, 2.491ns route)
+                                                       (30.8% logic, 69.2% route)
+
+--------------------------------------------------------------------------------
+Slack:                  16.421ns (requirement - (data path - clock path skew + uncertainty))
   Source:               reset_cond3/M_stage_q_3 (FF)
   Destination:          mymain/mypropogater/slowclk25/M_ctr_q_23 (FF)
   Requirement:          20.000ns
-  Data Path Delay:      4.051ns (Levels of Logic = 0)
-  Clock Path Skew:      -0.067ns (0.676 - 0.743)
+  Data Path Delay:      3.474ns (Levels of Logic = 0)
+  Clock Path Skew:      -0.070ns (0.676 - 0.746)
   Source Clock:         clk_BUFGP rising at 0.000ns
   Destination Clock:    clk_BUFGP rising at 20.000ns
   Clock Uncertainty:    0.035ns
@@ -112,22 +146,22 @@ Slack:                  15.847ns (requirement - (data path - clock path skew + u
     Location             Delay type         Delay(ns)  Physical Resource
                                                        Logical Resource(s)
     -------------------------------------------------  -------------------
-    SLICE_X7Y25.DQ       Tcko                  0.430   M_reset_cond3_out
+    SLICE_X7Y26.AQ       Tcko                  0.430   M_reset_cond3_out
                                                        reset_cond3/M_stage_q_3
-    SLICE_X12Y40.SR      net (fanout=64)       3.151   M_reset_cond3_out
+    SLICE_X12Y40.SR      net (fanout=64)       2.574   M_reset_cond3_out
     SLICE_X12Y40.CLK     Tsrck                 0.470   mymain/mypropogater/M_slowclk23_value
                                                        mymain/mypropogater/slowclk25/M_ctr_q_23
     -------------------------------------------------  ---------------------------
-    Total                                      4.051ns (0.900ns logic, 3.151ns route)
-                                                       (22.2% logic, 77.8% route)
+    Total                                      3.474ns (0.900ns logic, 2.574ns route)
+                                                       (25.9% logic, 74.1% route)
 
 --------------------------------------------------------------------------------
-Slack:                  15.856ns (requirement - (data path - clock path skew + uncertainty))
+Slack:                  16.430ns (requirement - (data path - clock path skew + uncertainty))
   Source:               reset_cond3/M_stage_q_3 (FF)
   Destination:          mymain/mypropogater/slowclk25/M_ctr_q_22 (FF)
   Requirement:          20.000ns
-  Data Path Delay:      4.042ns (Levels of Logic = 0)
-  Clock Path Skew:      -0.067ns (0.676 - 0.743)
+  Data Path Delay:      3.465ns (Levels of Logic = 0)
+  Clock Path Skew:      -0.070ns (0.676 - 0.746)
   Source Clock:         clk_BUFGP rising at 0.000ns
   Destination Clock:    clk_BUFGP rising at 20.000ns
   Clock Uncertainty:    0.035ns
@@ -142,22 +176,22 @@ Slack:                  15.856ns (requirement - (data path - clock path skew + u
     Location             Delay type         Delay(ns)  Physical Resource
                                                        Logical Resource(s)
     -------------------------------------------------  -------------------
-    SLICE_X7Y25.DQ       Tcko                  0.430   M_reset_cond3_out
+    SLICE_X7Y26.AQ       Tcko                  0.430   M_reset_cond3_out
                                                        reset_cond3/M_stage_q_3
-    SLICE_X12Y40.SR      net (fanout=64)       3.151   M_reset_cond3_out
+    SLICE_X12Y40.SR      net (fanout=64)       2.574   M_reset_cond3_out
     SLICE_X12Y40.CLK     Tsrck                 0.461   mymain/mypropogater/M_slowclk23_value
                                                        mymain/mypropogater/slowclk25/M_ctr_q_22
     -------------------------------------------------  ---------------------------
-    Total                                      4.042ns (0.891ns logic, 3.151ns route)
-                                                       (22.0% logic, 78.0% route)
+    Total                                      3.465ns (0.891ns logic, 2.574ns route)
+                                                       (25.7% logic, 74.3% route)
 
 --------------------------------------------------------------------------------
-Slack:                  15.867ns (requirement - (data path - clock path skew + uncertainty))
+Slack:                  16.441ns (requirement - (data path - clock path skew + uncertainty))
   Source:               reset_cond3/M_stage_q_3 (FF)
   Destination:          mymain/mypropogater/slowclk25/M_ctr_q_21 (FF)
   Requirement:          20.000ns
-  Data Path Delay:      4.031ns (Levels of Logic = 0)
-  Clock Path Skew:      -0.067ns (0.676 - 0.743)
+  Data Path Delay:      3.454ns (Levels of Logic = 0)
+  Clock Path Skew:      -0.070ns (0.676 - 0.746)
   Source Clock:         clk_BUFGP rising at 0.000ns
   Destination Clock:    clk_BUFGP rising at 20.000ns
   Clock Uncertainty:    0.035ns
@@ -172,22 +206,22 @@ Slack:                  15.867ns (requirement - (data path - clock path skew + u
     Location             Delay type         Delay(ns)  Physical Resource
                                                        Logical Resource(s)
     -------------------------------------------------  -------------------
-    SLICE_X7Y25.DQ       Tcko                  0.430   M_reset_cond3_out
+    SLICE_X7Y26.AQ       Tcko                  0.430   M_reset_cond3_out
                                                        reset_cond3/M_stage_q_3
-    SLICE_X12Y40.SR      net (fanout=64)       3.151   M_reset_cond3_out
+    SLICE_X12Y40.SR      net (fanout=64)       2.574   M_reset_cond3_out
     SLICE_X12Y40.CLK     Tsrck                 0.450   mymain/mypropogater/M_slowclk23_value
                                                        mymain/mypropogater/slowclk25/M_ctr_q_21
     -------------------------------------------------  ---------------------------
-    Total                                      4.031ns (0.880ns logic, 3.151ns route)
-                                                       (21.8% logic, 78.2% route)
+    Total                                      3.454ns (0.880ns logic, 2.574ns route)
+                                                       (25.5% logic, 74.5% route)
 
 --------------------------------------------------------------------------------
-Slack:                  15.889ns (requirement - (data path - clock path skew + uncertainty))
+Slack:                  16.463ns (requirement - (data path - clock path skew + uncertainty))
   Source:               reset_cond3/M_stage_q_3 (FF)
   Destination:          mymain/mypropogater/slowclk25/M_ctr_q_20 (FF)
   Requirement:          20.000ns
-  Data Path Delay:      4.009ns (Levels of Logic = 0)
-  Clock Path Skew:      -0.067ns (0.676 - 0.743)
+  Data Path Delay:      3.432ns (Levels of Logic = 0)
+  Clock Path Skew:      -0.070ns (0.676 - 0.746)
   Source Clock:         clk_BUFGP rising at 0.000ns
   Destination Clock:    clk_BUFGP rising at 20.000ns
   Clock Uncertainty:    0.035ns
@@ -202,22 +236,22 @@ Slack:                  15.889ns (requirement - (data path - clock path skew + u
     Location             Delay type         Delay(ns)  Physical Resource
                                                        Logical Resource(s)
     -------------------------------------------------  -------------------
-    SLICE_X7Y25.DQ       Tcko                  0.430   M_reset_cond3_out
+    SLICE_X7Y26.AQ       Tcko                  0.430   M_reset_cond3_out
                                                        reset_cond3/M_stage_q_3
-    SLICE_X12Y40.SR      net (fanout=64)       3.151   M_reset_cond3_out
+    SLICE_X12Y40.SR      net (fanout=64)       2.574   M_reset_cond3_out
     SLICE_X12Y40.CLK     Tsrck                 0.428   mymain/mypropogater/M_slowclk23_value
                                                        mymain/mypropogater/slowclk25/M_ctr_q_20
     -------------------------------------------------  ---------------------------
-    Total                                      4.009ns (0.858ns logic, 3.151ns route)
-                                                       (21.4% logic, 78.6% route)
+    Total                                      3.432ns (0.858ns logic, 2.574ns route)
+                                                       (25.0% logic, 75.0% route)
 
 --------------------------------------------------------------------------------
-Slack:                  16.075ns (requirement - (data path - clock path skew + uncertainty))
+Slack:                  16.648ns (requirement - (data path - clock path skew + uncertainty))
   Source:               reset_cond3/M_stage_q_3 (FF)
   Destination:          mymain/mypropogater/slowclk25/M_ctr_q_19 (FF)
   Requirement:          20.000ns
-  Data Path Delay:      3.823ns (Levels of Logic = 0)
-  Clock Path Skew:      -0.067ns (0.676 - 0.743)
+  Data Path Delay:      3.247ns (Levels of Logic = 0)
+  Clock Path Skew:      -0.070ns (0.676 - 0.746)
   Source Clock:         clk_BUFGP rising at 0.000ns
   Destination Clock:    clk_BUFGP rising at 20.000ns
   Clock Uncertainty:    0.035ns
@@ -232,22 +266,22 @@ Slack:                  16.075ns (requirement - (data path - clock path skew + u
     Location             Delay type         Delay(ns)  Physical Resource
                                                        Logical Resource(s)
     -------------------------------------------------  -------------------
-    SLICE_X7Y25.DQ       Tcko                  0.430   M_reset_cond3_out
+    SLICE_X7Y26.AQ       Tcko                  0.430   M_reset_cond3_out
                                                        reset_cond3/M_stage_q_3
-    SLICE_X12Y39.SR      net (fanout=64)       2.923   M_reset_cond3_out
+    SLICE_X12Y39.SR      net (fanout=64)       2.347   M_reset_cond3_out
     SLICE_X12Y39.CLK     Tsrck                 0.470   mymain/mypropogater/slowclk25/M_ctr_q[19]
                                                        mymain/mypropogater/slowclk25/M_ctr_q_19
     -------------------------------------------------  ---------------------------
-    Total                                      3.823ns (0.900ns logic, 2.923ns route)
-                                                       (23.5% logic, 76.5% route)
+    Total                                      3.247ns (0.900ns logic, 2.347ns route)
+                                                       (27.7% logic, 72.3% route)
 
 --------------------------------------------------------------------------------
-Slack:                  16.084ns (requirement - (data path - clock path skew + uncertainty))
+Slack:                  16.657ns (requirement - (data path - clock path skew + uncertainty))
   Source:               reset_cond3/M_stage_q_3 (FF)
   Destination:          mymain/mypropogater/slowclk25/M_ctr_q_18 (FF)
   Requirement:          20.000ns
-  Data Path Delay:      3.814ns (Levels of Logic = 0)
-  Clock Path Skew:      -0.067ns (0.676 - 0.743)
+  Data Path Delay:      3.238ns (Levels of Logic = 0)
+  Clock Path Skew:      -0.070ns (0.676 - 0.746)
   Source Clock:         clk_BUFGP rising at 0.000ns
   Destination Clock:    clk_BUFGP rising at 20.000ns
   Clock Uncertainty:    0.035ns
@@ -262,22 +296,22 @@ Slack:                  16.084ns (requirement - (data path - clock path skew + u
     Location             Delay type         Delay(ns)  Physical Resource
                                                        Logical Resource(s)
     -------------------------------------------------  -------------------
-    SLICE_X7Y25.DQ       Tcko                  0.430   M_reset_cond3_out
+    SLICE_X7Y26.AQ       Tcko                  0.430   M_reset_cond3_out
                                                        reset_cond3/M_stage_q_3
-    SLICE_X12Y39.SR      net (fanout=64)       2.923   M_reset_cond3_out
+    SLICE_X12Y39.SR      net (fanout=64)       2.347   M_reset_cond3_out
     SLICE_X12Y39.CLK     Tsrck                 0.461   mymain/mypropogater/slowclk25/M_ctr_q[19]
                                                        mymain/mypropogater/slowclk25/M_ctr_q_18
     -------------------------------------------------  ---------------------------
-    Total                                      3.814ns (0.891ns logic, 2.923ns route)
-                                                       (23.4% logic, 76.6% route)
+    Total                                      3.238ns (0.891ns logic, 2.347ns route)
+                                                       (27.5% logic, 72.5% route)
 
 --------------------------------------------------------------------------------
-Slack:                  16.095ns (requirement - (data path - clock path skew + uncertainty))
+Slack:                  16.668ns (requirement - (data path - clock path skew + uncertainty))
   Source:               reset_cond3/M_stage_q_3 (FF)
   Destination:          mymain/mypropogater/slowclk25/M_ctr_q_17 (FF)
   Requirement:          20.000ns
-  Data Path Delay:      3.803ns (Levels of Logic = 0)
-  Clock Path Skew:      -0.067ns (0.676 - 0.743)
+  Data Path Delay:      3.227ns (Levels of Logic = 0)
+  Clock Path Skew:      -0.070ns (0.676 - 0.746)
   Source Clock:         clk_BUFGP rising at 0.000ns
   Destination Clock:    clk_BUFGP rising at 20.000ns
   Clock Uncertainty:    0.035ns
@@ -292,549 +326,22 @@ Slack:                  16.095ns (requirement - (data path - clock path skew + u
     Location             Delay type         Delay(ns)  Physical Resource
                                                        Logical Resource(s)
     -------------------------------------------------  -------------------
-    SLICE_X7Y25.DQ       Tcko                  0.430   M_reset_cond3_out
+    SLICE_X7Y26.AQ       Tcko                  0.430   M_reset_cond3_out
                                                        reset_cond3/M_stage_q_3
-    SLICE_X12Y39.SR      net (fanout=64)       2.923   M_reset_cond3_out
+    SLICE_X12Y39.SR      net (fanout=64)       2.347   M_reset_cond3_out
     SLICE_X12Y39.CLK     Tsrck                 0.450   mymain/mypropogater/slowclk25/M_ctr_q[19]
                                                        mymain/mypropogater/slowclk25/M_ctr_q_17
     -------------------------------------------------  ---------------------------
-    Total                                      3.803ns (0.880ns logic, 2.923ns route)
-                                                       (23.1% logic, 76.9% route)
+    Total                                      3.227ns (0.880ns logic, 2.347ns route)
+                                                       (27.3% logic, 72.7% route)
 
 --------------------------------------------------------------------------------
-Slack:                  16.117ns (requirement - (data path - clock path skew + uncertainty))
-  Source:               reset_cond3/M_stage_q_3 (FF)
-  Destination:          mymain/mypropogater/slowclk25/M_ctr_q_16 (FF)
-  Requirement:          20.000ns
-  Data Path Delay:      3.781ns (Levels of Logic = 0)
-  Clock Path Skew:      -0.067ns (0.676 - 0.743)
-  Source Clock:         clk_BUFGP rising at 0.000ns
-  Destination Clock:    clk_BUFGP rising at 20.000ns
-  Clock Uncertainty:    0.035ns
-
-  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
-    Total System Jitter (TSJ):  0.070ns
-    Total Input Jitter (TIJ):   0.000ns
-    Discrete Jitter (DJ):       0.000ns
-    Phase Error (PE):           0.000ns
-
-  Maximum Data Path at Slow Process Corner: reset_cond3/M_stage_q_3 to mymain/mypropogater/slowclk25/M_ctr_q_16
-    Location             Delay type         Delay(ns)  Physical Resource
-                                                       Logical Resource(s)
-    -------------------------------------------------  -------------------
-    SLICE_X7Y25.DQ       Tcko                  0.430   M_reset_cond3_out
-                                                       reset_cond3/M_stage_q_3
-    SLICE_X12Y39.SR      net (fanout=64)       2.923   M_reset_cond3_out
-    SLICE_X12Y39.CLK     Tsrck                 0.428   mymain/mypropogater/slowclk25/M_ctr_q[19]
-                                                       mymain/mypropogater/slowclk25/M_ctr_q_16
-    -------------------------------------------------  ---------------------------
-    Total                                      3.781ns (0.858ns logic, 2.923ns route)
-                                                       (22.7% logic, 77.3% route)
-
---------------------------------------------------------------------------------
-Slack:                  16.191ns (requirement - (data path - clock path skew + uncertainty))
-  Source:               reset_cond3/M_stage_q_3_1 (FF)
-  Destination:          mymain/mypropogater/randomizer/clk_gen/M_w_q_1 (FF)
-  Requirement:          20.000ns
-  Data Path Delay:      3.744ns (Levels of Logic = 2)
-  Clock Path Skew:      -0.030ns (0.713 - 0.743)
-  Source Clock:         clk_BUFGP rising at 0.000ns
-  Destination Clock:    clk_BUFGP rising at 20.000ns
-  Clock Uncertainty:    0.035ns
-
-  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
-    Total System Jitter (TSJ):  0.070ns
-    Total Input Jitter (TIJ):   0.000ns
-    Discrete Jitter (DJ):       0.000ns
-    Phase Error (PE):           0.000ns
-
-  Maximum Data Path at Slow Process Corner: reset_cond3/M_stage_q_3_1 to mymain/mypropogater/randomizer/clk_gen/M_w_q_1
-    Location             Delay type         Delay(ns)  Physical Resource
-                                                       Logical Resource(s)
-    -------------------------------------------------  -------------------
-    SLICE_X6Y25.AQ       Tcko                  0.476   M_stage_q_3_1
-                                                       reset_cond3/M_stage_q_3_1
-    SLICE_X7Y31.B1       net (fanout=2)        0.980   M_stage_q_3_1
-    SLICE_X7Y31.B        Tilo                  0.259   mymain/mypropogater/randomizer/numb_gen/M_w_q[20]
-                                                       mymain/mypropogater/_n0063_inv1
-    SLICE_X11Y35.B5      net (fanout=16)       1.656   mymain/mypropogater/M_randomizer_randnumrst
-    SLICE_X11Y35.CLK     Tas                   0.373   mymain/mypropogater/randomizer/M_clk_gen_num[2]
-                                                       mymain/mypropogater/randomizer/clk_gen/Mmux_M_w_d121
-                                                       mymain/mypropogater/randomizer/clk_gen/M_w_q_1
-    -------------------------------------------------  ---------------------------
-    Total                                      3.744ns (1.108ns logic, 2.636ns route)
-                                                       (29.6% logic, 70.4% route)
-
---------------------------------------------------------------------------------
-Slack:                  16.225ns (requirement - (data path - clock path skew + uncertainty))
-  Source:               reset_cond3/M_stage_q_3_1 (FF)
-  Destination:          mymain/mypropogater/randomizer/clk_gen/M_w_q_2 (FF)
-  Requirement:          20.000ns
-  Data Path Delay:      3.710ns (Levels of Logic = 2)
-  Clock Path Skew:      -0.030ns (0.713 - 0.743)
-  Source Clock:         clk_BUFGP rising at 0.000ns
-  Destination Clock:    clk_BUFGP rising at 20.000ns
-  Clock Uncertainty:    0.035ns
-
-  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
-    Total System Jitter (TSJ):  0.070ns
-    Total Input Jitter (TIJ):   0.000ns
-    Discrete Jitter (DJ):       0.000ns
-    Phase Error (PE):           0.000ns
-
-  Maximum Data Path at Slow Process Corner: reset_cond3/M_stage_q_3_1 to mymain/mypropogater/randomizer/clk_gen/M_w_q_2
-    Location             Delay type         Delay(ns)  Physical Resource
-                                                       Logical Resource(s)
-    -------------------------------------------------  -------------------
-    SLICE_X6Y25.AQ       Tcko                  0.476   M_stage_q_3_1
-                                                       reset_cond3/M_stage_q_3_1
-    SLICE_X7Y31.B1       net (fanout=2)        0.980   M_stage_q_3_1
-    SLICE_X7Y31.B        Tilo                  0.259   mymain/mypropogater/randomizer/numb_gen/M_w_q[20]
-                                                       mymain/mypropogater/_n0063_inv1
-    SLICE_X11Y35.C5      net (fanout=16)       1.622   mymain/mypropogater/M_randomizer_randnumrst
-    SLICE_X11Y35.CLK     Tas                   0.373   mymain/mypropogater/randomizer/M_clk_gen_num[2]
-                                                       mymain/mypropogater/randomizer/clk_gen/Mmux_M_w_d231
-                                                       mymain/mypropogater/randomizer/clk_gen/M_w_q_2
-    -------------------------------------------------  ---------------------------
-    Total                                      3.710ns (1.108ns logic, 2.602ns route)
-                                                       (29.9% logic, 70.1% route)
-
---------------------------------------------------------------------------------
-Slack:                  16.248ns (requirement - (data path - clock path skew + uncertainty))
-  Source:               reset_cond3/M_stage_q_3_1 (FF)
-  Destination:          mymain/mypropogater/randomizer/clk_gen/M_w_q_2 (FF)
-  Requirement:          20.000ns
-  Data Path Delay:      3.687ns (Levels of Logic = 1)
-  Clock Path Skew:      -0.030ns (0.713 - 0.743)
-  Source Clock:         clk_BUFGP rising at 0.000ns
-  Destination Clock:    clk_BUFGP rising at 20.000ns
-  Clock Uncertainty:    0.035ns
-
-  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
-    Total System Jitter (TSJ):  0.070ns
-    Total Input Jitter (TIJ):   0.000ns
-    Discrete Jitter (DJ):       0.000ns
-    Phase Error (PE):           0.000ns
-
-  Maximum Data Path at Slow Process Corner: reset_cond3/M_stage_q_3_1 to mymain/mypropogater/randomizer/clk_gen/M_w_q_2
-    Location             Delay type         Delay(ns)  Physical Resource
-                                                       Logical Resource(s)
-    -------------------------------------------------  -------------------
-    SLICE_X6Y25.AQ       Tcko                  0.476   M_stage_q_3_1
-                                                       reset_cond3/M_stage_q_3_1
-    SLICE_X7Y31.B1       net (fanout=2)        0.980   M_stage_q_3_1
-    SLICE_X7Y31.B        Tilo                  0.259   mymain/mypropogater/randomizer/numb_gen/M_w_q[20]
-                                                       mymain/mypropogater/_n0063_inv1
-    SLICE_X11Y35.CE      net (fanout=16)       1.564   mymain/mypropogater/M_randomizer_randnumrst
-    SLICE_X11Y35.CLK     Tceck                 0.408   mymain/mypropogater/randomizer/M_clk_gen_num[2]
-                                                       mymain/mypropogater/randomizer/clk_gen/M_w_q_2
-    -------------------------------------------------  ---------------------------
-    Total                                      3.687ns (1.143ns logic, 2.544ns route)
-                                                       (31.0% logic, 69.0% route)
-
---------------------------------------------------------------------------------
-Slack:                  16.266ns (requirement - (data path - clock path skew + uncertainty))
-  Source:               reset_cond3/M_stage_q_3_1 (FF)
-  Destination:          mymain/mypropogater/randomizer/clk_gen/M_w_q_1 (FF)
-  Requirement:          20.000ns
-  Data Path Delay:      3.669ns (Levels of Logic = 1)
-  Clock Path Skew:      -0.030ns (0.713 - 0.743)
-  Source Clock:         clk_BUFGP rising at 0.000ns
-  Destination Clock:    clk_BUFGP rising at 20.000ns
-  Clock Uncertainty:    0.035ns
-
-  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
-    Total System Jitter (TSJ):  0.070ns
-    Total Input Jitter (TIJ):   0.000ns
-    Discrete Jitter (DJ):       0.000ns
-    Phase Error (PE):           0.000ns
-
-  Maximum Data Path at Slow Process Corner: reset_cond3/M_stage_q_3_1 to mymain/mypropogater/randomizer/clk_gen/M_w_q_1
-    Location             Delay type         Delay(ns)  Physical Resource
-                                                       Logical Resource(s)
-    -------------------------------------------------  -------------------
-    SLICE_X6Y25.AQ       Tcko                  0.476   M_stage_q_3_1
-                                                       reset_cond3/M_stage_q_3_1
-    SLICE_X7Y31.B1       net (fanout=2)        0.980   M_stage_q_3_1
-    SLICE_X7Y31.B        Tilo                  0.259   mymain/mypropogater/randomizer/numb_gen/M_w_q[20]
-                                                       mymain/mypropogater/_n0063_inv1
-    SLICE_X11Y35.CE      net (fanout=16)       1.564   mymain/mypropogater/M_randomizer_randnumrst
-    SLICE_X11Y35.CLK     Tceck                 0.390   mymain/mypropogater/randomizer/M_clk_gen_num[2]
-                                                       mymain/mypropogater/randomizer/clk_gen/M_w_q_1
-    -------------------------------------------------  ---------------------------
-    Total                                      3.669ns (1.125ns logic, 2.544ns route)
-                                                       (30.7% logic, 69.3% route)
-
---------------------------------------------------------------------------------
-Slack:                  16.271ns (requirement - (data path - clock path skew + uncertainty))
-  Source:               reset_cond3/M_stage_q_3 (FF)
-  Destination:          mymain/mypropogater/slowclk25/M_ctr_q_15 (FF)
-  Requirement:          20.000ns
-  Data Path Delay:      3.629ns (Levels of Logic = 0)
-  Clock Path Skew:      -0.065ns (0.678 - 0.743)
-  Source Clock:         clk_BUFGP rising at 0.000ns
-  Destination Clock:    clk_BUFGP rising at 20.000ns
-  Clock Uncertainty:    0.035ns
-
-  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
-    Total System Jitter (TSJ):  0.070ns
-    Total Input Jitter (TIJ):   0.000ns
-    Discrete Jitter (DJ):       0.000ns
-    Phase Error (PE):           0.000ns
-
-  Maximum Data Path at Slow Process Corner: reset_cond3/M_stage_q_3 to mymain/mypropogater/slowclk25/M_ctr_q_15
-    Location             Delay type         Delay(ns)  Physical Resource
-                                                       Logical Resource(s)
-    -------------------------------------------------  -------------------
-    SLICE_X7Y25.DQ       Tcko                  0.430   M_reset_cond3_out
-                                                       reset_cond3/M_stage_q_3
-    SLICE_X12Y38.SR      net (fanout=64)       2.729   M_reset_cond3_out
-    SLICE_X12Y38.CLK     Tsrck                 0.470   mymain/mypropogater/slowclk25/M_ctr_q[15]
-                                                       mymain/mypropogater/slowclk25/M_ctr_q_15
-    -------------------------------------------------  ---------------------------
-    Total                                      3.629ns (0.900ns logic, 2.729ns route)
-                                                       (24.8% logic, 75.2% route)
-
---------------------------------------------------------------------------------
-Slack:                  16.280ns (requirement - (data path - clock path skew + uncertainty))
-  Source:               reset_cond3/M_stage_q_3 (FF)
-  Destination:          mymain/mypropogater/slowclk25/M_ctr_q_14 (FF)
-  Requirement:          20.000ns
-  Data Path Delay:      3.620ns (Levels of Logic = 0)
-  Clock Path Skew:      -0.065ns (0.678 - 0.743)
-  Source Clock:         clk_BUFGP rising at 0.000ns
-  Destination Clock:    clk_BUFGP rising at 20.000ns
-  Clock Uncertainty:    0.035ns
-
-  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
-    Total System Jitter (TSJ):  0.070ns
-    Total Input Jitter (TIJ):   0.000ns
-    Discrete Jitter (DJ):       0.000ns
-    Phase Error (PE):           0.000ns
-
-  Maximum Data Path at Slow Process Corner: reset_cond3/M_stage_q_3 to mymain/mypropogater/slowclk25/M_ctr_q_14
-    Location             Delay type         Delay(ns)  Physical Resource
-                                                       Logical Resource(s)
-    -------------------------------------------------  -------------------
-    SLICE_X7Y25.DQ       Tcko                  0.430   M_reset_cond3_out
-                                                       reset_cond3/M_stage_q_3
-    SLICE_X12Y38.SR      net (fanout=64)       2.729   M_reset_cond3_out
-    SLICE_X12Y38.CLK     Tsrck                 0.461   mymain/mypropogater/slowclk25/M_ctr_q[15]
-                                                       mymain/mypropogater/slowclk25/M_ctr_q_14
-    -------------------------------------------------  ---------------------------
-    Total                                      3.620ns (0.891ns logic, 2.729ns route)
-                                                       (24.6% logic, 75.4% route)
-
---------------------------------------------------------------------------------
-Slack:                  16.291ns (requirement - (data path - clock path skew + uncertainty))
-  Source:               reset_cond3/M_stage_q_3_1 (FF)
-  Destination:          mymain/mypropogater/randomizer/clk_gen/M_w_q_0 (FF)
-  Requirement:          20.000ns
-  Data Path Delay:      3.644ns (Levels of Logic = 1)
-  Clock Path Skew:      -0.030ns (0.713 - 0.743)
-  Source Clock:         clk_BUFGP rising at 0.000ns
-  Destination Clock:    clk_BUFGP rising at 20.000ns
-  Clock Uncertainty:    0.035ns
-
-  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
-    Total System Jitter (TSJ):  0.070ns
-    Total Input Jitter (TIJ):   0.000ns
-    Discrete Jitter (DJ):       0.000ns
-    Phase Error (PE):           0.000ns
-
-  Maximum Data Path at Slow Process Corner: reset_cond3/M_stage_q_3_1 to mymain/mypropogater/randomizer/clk_gen/M_w_q_0
-    Location             Delay type         Delay(ns)  Physical Resource
-                                                       Logical Resource(s)
-    -------------------------------------------------  -------------------
-    SLICE_X6Y25.AQ       Tcko                  0.476   M_stage_q_3_1
-                                                       reset_cond3/M_stage_q_3_1
-    SLICE_X7Y31.B1       net (fanout=2)        0.980   M_stage_q_3_1
-    SLICE_X7Y31.B        Tilo                  0.259   mymain/mypropogater/randomizer/numb_gen/M_w_q[20]
-                                                       mymain/mypropogater/_n0063_inv1
-    SLICE_X11Y35.CE      net (fanout=16)       1.564   mymain/mypropogater/M_randomizer_randnumrst
-    SLICE_X11Y35.CLK     Tceck                 0.365   mymain/mypropogater/randomizer/M_clk_gen_num[2]
-                                                       mymain/mypropogater/randomizer/clk_gen/M_w_q_0
-    -------------------------------------------------  ---------------------------
-    Total                                      3.644ns (1.100ns logic, 2.544ns route)
-                                                       (30.2% logic, 69.8% route)
-
---------------------------------------------------------------------------------
-Slack:                  16.291ns (requirement - (data path - clock path skew + uncertainty))
-  Source:               reset_cond3/M_stage_q_3 (FF)
-  Destination:          mymain/mypropogater/slowclk25/M_ctr_q_13 (FF)
-  Requirement:          20.000ns
-  Data Path Delay:      3.609ns (Levels of Logic = 0)
-  Clock Path Skew:      -0.065ns (0.678 - 0.743)
-  Source Clock:         clk_BUFGP rising at 0.000ns
-  Destination Clock:    clk_BUFGP rising at 20.000ns
-  Clock Uncertainty:    0.035ns
-
-  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
-    Total System Jitter (TSJ):  0.070ns
-    Total Input Jitter (TIJ):   0.000ns
-    Discrete Jitter (DJ):       0.000ns
-    Phase Error (PE):           0.000ns
-
-  Maximum Data Path at Slow Process Corner: reset_cond3/M_stage_q_3 to mymain/mypropogater/slowclk25/M_ctr_q_13
-    Location             Delay type         Delay(ns)  Physical Resource
-                                                       Logical Resource(s)
-    -------------------------------------------------  -------------------
-    SLICE_X7Y25.DQ       Tcko                  0.430   M_reset_cond3_out
-                                                       reset_cond3/M_stage_q_3
-    SLICE_X12Y38.SR      net (fanout=64)       2.729   M_reset_cond3_out
-    SLICE_X12Y38.CLK     Tsrck                 0.450   mymain/mypropogater/slowclk25/M_ctr_q[15]
-                                                       mymain/mypropogater/slowclk25/M_ctr_q_13
-    -------------------------------------------------  ---------------------------
-    Total                                      3.609ns (0.880ns logic, 2.729ns route)
-                                                       (24.4% logic, 75.6% route)
-
---------------------------------------------------------------------------------
-Slack:                  16.313ns (requirement - (data path - clock path skew + uncertainty))
-  Source:               reset_cond3/M_stage_q_3 (FF)
-  Destination:          mymain/mypropogater/slowclk25/M_ctr_q_12 (FF)
-  Requirement:          20.000ns
-  Data Path Delay:      3.587ns (Levels of Logic = 0)
-  Clock Path Skew:      -0.065ns (0.678 - 0.743)
-  Source Clock:         clk_BUFGP rising at 0.000ns
-  Destination Clock:    clk_BUFGP rising at 20.000ns
-  Clock Uncertainty:    0.035ns
-
-  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
-    Total System Jitter (TSJ):  0.070ns
-    Total Input Jitter (TIJ):   0.000ns
-    Discrete Jitter (DJ):       0.000ns
-    Phase Error (PE):           0.000ns
-
-  Maximum Data Path at Slow Process Corner: reset_cond3/M_stage_q_3 to mymain/mypropogater/slowclk25/M_ctr_q_12
-    Location             Delay type         Delay(ns)  Physical Resource
-                                                       Logical Resource(s)
-    -------------------------------------------------  -------------------
-    SLICE_X7Y25.DQ       Tcko                  0.430   M_reset_cond3_out
-                                                       reset_cond3/M_stage_q_3
-    SLICE_X12Y38.SR      net (fanout=64)       2.729   M_reset_cond3_out
-    SLICE_X12Y38.CLK     Tsrck                 0.428   mymain/mypropogater/slowclk25/M_ctr_q[15]
-                                                       mymain/mypropogater/slowclk25/M_ctr_q_12
-    -------------------------------------------------  ---------------------------
-    Total                                      3.587ns (0.858ns logic, 2.729ns route)
-                                                       (23.9% logic, 76.1% route)
-
---------------------------------------------------------------------------------
-Slack:                  16.354ns (requirement - (data path - clock path skew + uncertainty))
-  Source:               reset_cond3/M_stage_q_3 (FF)
-  Destination:          mymain/mypropogater/randomizer/clkreg/M_regs_q_2 (FF)
-  Requirement:          20.000ns
-  Data Path Delay:      3.581ns (Levels of Logic = 0)
-  Clock Path Skew:      -0.030ns (0.713 - 0.743)
-  Source Clock:         clk_BUFGP rising at 0.000ns
-  Destination Clock:    clk_BUFGP rising at 20.000ns
-  Clock Uncertainty:    0.035ns
-
-  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
-    Total System Jitter (TSJ):  0.070ns
-    Total Input Jitter (TIJ):   0.000ns
-    Discrete Jitter (DJ):       0.000ns
-    Phase Error (PE):           0.000ns
-
-  Maximum Data Path at Slow Process Corner: reset_cond3/M_stage_q_3 to mymain/mypropogater/randomizer/clkreg/M_regs_q_2
-    Location             Delay type         Delay(ns)  Physical Resource
-                                                       Logical Resource(s)
-    -------------------------------------------------  -------------------
-    SLICE_X7Y25.DQ       Tcko                  0.430   M_reset_cond3_out
-                                                       reset_cond3/M_stage_q_3
-    SLICE_X11Y44.SR      net (fanout=64)       2.683   M_reset_cond3_out
-    SLICE_X11Y44.CLK     Tsrck                 0.468   M_mymain_clkchoice[2]
-                                                       mymain/mypropogater/randomizer/clkreg/M_regs_q_2
-    -------------------------------------------------  ---------------------------
-    Total                                      3.581ns (0.898ns logic, 2.683ns route)
-                                                       (25.1% logic, 74.9% route)
-
---------------------------------------------------------------------------------
-Slack:                  16.384ns (requirement - (data path - clock path skew + uncertainty))
-  Source:               reset_cond3/M_stage_q_3 (FF)
-  Destination:          mymain/mypropogater/randomizer/clkreg/M_regs_q_1 (FF)
-  Requirement:          20.000ns
-  Data Path Delay:      3.551ns (Levels of Logic = 0)
-  Clock Path Skew:      -0.030ns (0.713 - 0.743)
-  Source Clock:         clk_BUFGP rising at 0.000ns
-  Destination Clock:    clk_BUFGP rising at 20.000ns
-  Clock Uncertainty:    0.035ns
-
-  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
-    Total System Jitter (TSJ):  0.070ns
-    Total Input Jitter (TIJ):   0.000ns
-    Discrete Jitter (DJ):       0.000ns
-    Phase Error (PE):           0.000ns
-
-  Maximum Data Path at Slow Process Corner: reset_cond3/M_stage_q_3 to mymain/mypropogater/randomizer/clkreg/M_regs_q_1
-    Location             Delay type         Delay(ns)  Physical Resource
-                                                       Logical Resource(s)
-    -------------------------------------------------  -------------------
-    SLICE_X7Y25.DQ       Tcko                  0.430   M_reset_cond3_out
-                                                       reset_cond3/M_stage_q_3
-    SLICE_X11Y44.SR      net (fanout=64)       2.683   M_reset_cond3_out
-    SLICE_X11Y44.CLK     Tsrck                 0.438   M_mymain_clkchoice[2]
-                                                       mymain/mypropogater/randomizer/clkreg/M_regs_q_1
-    -------------------------------------------------  ---------------------------
-    Total                                      3.551ns (0.868ns logic, 2.683ns route)
-                                                       (24.4% logic, 75.6% route)
-
---------------------------------------------------------------------------------
-Slack:                  16.409ns (requirement - (data path - clock path skew + uncertainty))
-  Source:               reset_cond3/M_stage_q_3 (FF)
-  Destination:          mymain/mypropogater/randomizer/clkreg/M_regs_q_0 (FF)
-  Requirement:          20.000ns
-  Data Path Delay:      3.526ns (Levels of Logic = 0)
-  Clock Path Skew:      -0.030ns (0.713 - 0.743)
-  Source Clock:         clk_BUFGP rising at 0.000ns
-  Destination Clock:    clk_BUFGP rising at 20.000ns
-  Clock Uncertainty:    0.035ns
-
-  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
-    Total System Jitter (TSJ):  0.070ns
-    Total Input Jitter (TIJ):   0.000ns
-    Discrete Jitter (DJ):       0.000ns
-    Phase Error (PE):           0.000ns
-
-  Maximum Data Path at Slow Process Corner: reset_cond3/M_stage_q_3 to mymain/mypropogater/randomizer/clkreg/M_regs_q_0
-    Location             Delay type         Delay(ns)  Physical Resource
-                                                       Logical Resource(s)
-    -------------------------------------------------  -------------------
-    SLICE_X7Y25.DQ       Tcko                  0.430   M_reset_cond3_out
-                                                       reset_cond3/M_stage_q_3
-    SLICE_X11Y44.SR      net (fanout=64)       2.683   M_reset_cond3_out
-    SLICE_X11Y44.CLK     Tsrck                 0.413   M_mymain_clkchoice[2]
-                                                       mymain/mypropogater/randomizer/clkreg/M_regs_q_0
-    -------------------------------------------------  ---------------------------
-    Total                                      3.526ns (0.843ns logic, 2.683ns route)
-                                                       (23.9% logic, 76.1% route)
-
---------------------------------------------------------------------------------
-Slack:                  16.467ns (requirement - (data path - clock path skew + uncertainty))
-  Source:               reset_cond3/M_stage_q_3 (FF)
-  Destination:          mymain/mypropogater/slowclk25/M_ctr_q_11 (FF)
-  Requirement:          20.000ns
-  Data Path Delay:      3.436ns (Levels of Logic = 0)
-  Clock Path Skew:      -0.062ns (0.681 - 0.743)
-  Source Clock:         clk_BUFGP rising at 0.000ns
-  Destination Clock:    clk_BUFGP rising at 20.000ns
-  Clock Uncertainty:    0.035ns
-
-  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
-    Total System Jitter (TSJ):  0.070ns
-    Total Input Jitter (TIJ):   0.000ns
-    Discrete Jitter (DJ):       0.000ns
-    Phase Error (PE):           0.000ns
-
-  Maximum Data Path at Slow Process Corner: reset_cond3/M_stage_q_3 to mymain/mypropogater/slowclk25/M_ctr_q_11
-    Location             Delay type         Delay(ns)  Physical Resource
-                                                       Logical Resource(s)
-    -------------------------------------------------  -------------------
-    SLICE_X7Y25.DQ       Tcko                  0.430   M_reset_cond3_out
-                                                       reset_cond3/M_stage_q_3
-    SLICE_X12Y37.SR      net (fanout=64)       2.536   M_reset_cond3_out
-    SLICE_X12Y37.CLK     Tsrck                 0.470   mymain/mypropogater/slowclk25/M_ctr_q[11]
-                                                       mymain/mypropogater/slowclk25/M_ctr_q_11
-    -------------------------------------------------  ---------------------------
-    Total                                      3.436ns (0.900ns logic, 2.536ns route)
-                                                       (26.2% logic, 73.8% route)
-
---------------------------------------------------------------------------------
-Slack:                  16.476ns (requirement - (data path - clock path skew + uncertainty))
-  Source:               reset_cond3/M_stage_q_3 (FF)
-  Destination:          mymain/mypropogater/slowclk25/M_ctr_q_10 (FF)
-  Requirement:          20.000ns
-  Data Path Delay:      3.427ns (Levels of Logic = 0)
-  Clock Path Skew:      -0.062ns (0.681 - 0.743)
-  Source Clock:         clk_BUFGP rising at 0.000ns
-  Destination Clock:    clk_BUFGP rising at 20.000ns
-  Clock Uncertainty:    0.035ns
-
-  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
-    Total System Jitter (TSJ):  0.070ns
-    Total Input Jitter (TIJ):   0.000ns
-    Discrete Jitter (DJ):       0.000ns
-    Phase Error (PE):           0.000ns
-
-  Maximum Data Path at Slow Process Corner: reset_cond3/M_stage_q_3 to mymain/mypropogater/slowclk25/M_ctr_q_10
-    Location             Delay type         Delay(ns)  Physical Resource
-                                                       Logical Resource(s)
-    -------------------------------------------------  -------------------
-    SLICE_X7Y25.DQ       Tcko                  0.430   M_reset_cond3_out
-                                                       reset_cond3/M_stage_q_3
-    SLICE_X12Y37.SR      net (fanout=64)       2.536   M_reset_cond3_out
-    SLICE_X12Y37.CLK     Tsrck                 0.461   mymain/mypropogater/slowclk25/M_ctr_q[11]
-                                                       mymain/mypropogater/slowclk25/M_ctr_q_10
-    -------------------------------------------------  ---------------------------
-    Total                                      3.427ns (0.891ns logic, 2.536ns route)
-                                                       (26.0% logic, 74.0% route)
-
---------------------------------------------------------------------------------
-Slack:                  16.487ns (requirement - (data path - clock path skew + uncertainty))
-  Source:               reset_cond3/M_stage_q_3 (FF)
-  Destination:          mymain/mypropogater/slowclk25/M_ctr_q_9 (FF)
-  Requirement:          20.000ns
-  Data Path Delay:      3.416ns (Levels of Logic = 0)
-  Clock Path Skew:      -0.062ns (0.681 - 0.743)
-  Source Clock:         clk_BUFGP rising at 0.000ns
-  Destination Clock:    clk_BUFGP rising at 20.000ns
-  Clock Uncertainty:    0.035ns
-
-  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
-    Total System Jitter (TSJ):  0.070ns
-    Total Input Jitter (TIJ):   0.000ns
-    Discrete Jitter (DJ):       0.000ns
-    Phase Error (PE):           0.000ns
-
-  Maximum Data Path at Slow Process Corner: reset_cond3/M_stage_q_3 to mymain/mypropogater/slowclk25/M_ctr_q_9
-    Location             Delay type         Delay(ns)  Physical Resource
-                                                       Logical Resource(s)
-    -------------------------------------------------  -------------------
-    SLICE_X7Y25.DQ       Tcko                  0.430   M_reset_cond3_out
-                                                       reset_cond3/M_stage_q_3
-    SLICE_X12Y37.SR      net (fanout=64)       2.536   M_reset_cond3_out
-    SLICE_X12Y37.CLK     Tsrck                 0.450   mymain/mypropogater/slowclk25/M_ctr_q[11]
-                                                       mymain/mypropogater/slowclk25/M_ctr_q_9
-    -------------------------------------------------  ---------------------------
-    Total                                      3.416ns (0.880ns logic, 2.536ns route)
-                                                       (25.8% logic, 74.2% route)
-
---------------------------------------------------------------------------------
-Slack:                  16.509ns (requirement - (data path - clock path skew + uncertainty))
-  Source:               reset_cond3/M_stage_q_3 (FF)
-  Destination:          mymain/mypropogater/slowclk25/M_ctr_q_8 (FF)
-  Requirement:          20.000ns
-  Data Path Delay:      3.394ns (Levels of Logic = 0)
-  Clock Path Skew:      -0.062ns (0.681 - 0.743)
-  Source Clock:         clk_BUFGP rising at 0.000ns
-  Destination Clock:    clk_BUFGP rising at 20.000ns
-  Clock Uncertainty:    0.035ns
-
-  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
-    Total System Jitter (TSJ):  0.070ns
-    Total Input Jitter (TIJ):   0.000ns
-    Discrete Jitter (DJ):       0.000ns
-    Phase Error (PE):           0.000ns
-
-  Maximum Data Path at Slow Process Corner: reset_cond3/M_stage_q_3 to mymain/mypropogater/slowclk25/M_ctr_q_8
-    Location             Delay type         Delay(ns)  Physical Resource
-                                                       Logical Resource(s)
-    -------------------------------------------------  -------------------
-    SLICE_X7Y25.DQ       Tcko                  0.430   M_reset_cond3_out
-                                                       reset_cond3/M_stage_q_3
-    SLICE_X12Y37.SR      net (fanout=64)       2.536   M_reset_cond3_out
-    SLICE_X12Y37.CLK     Tsrck                 0.428   mymain/mypropogater/slowclk25/M_ctr_q[11]
-                                                       mymain/mypropogater/slowclk25/M_ctr_q_8
-    -------------------------------------------------  ---------------------------
-    Total                                      3.394ns (0.858ns logic, 2.536ns route)
-                                                       (25.3% logic, 74.7% route)
-
---------------------------------------------------------------------------------
-Slack:                  16.634ns (requirement - (data path - clock path skew + uncertainty))
+Slack:                  16.682ns (requirement - (data path - clock path skew + uncertainty))
   Source:               reset_cond3/M_stage_q_3_1 (FF)
   Destination:          mymain/mypropogater/randomizer/clk_gen/M_w_q_19 (FF)
   Requirement:          20.000ns
-  Data Path Delay:      3.299ns (Levels of Logic = 2)
-  Clock Path Skew:      -0.032ns (0.711 - 0.743)
+  Data Path Delay:      3.252ns (Levels of Logic = 2)
+  Clock Path Skew:      -0.031ns (0.715 - 0.746)
   Source Clock:         clk_BUFGP rising at 0.000ns
   Destination Clock:    clk_BUFGP rising at 20.000ns
   Clock Uncertainty:    0.035ns
@@ -849,26 +356,465 @@ Slack:                  16.634ns (requirement - (data path - clock path skew + u
     Location             Delay type         Delay(ns)  Physical Resource
                                                        Logical Resource(s)
     -------------------------------------------------  -------------------
-    SLICE_X6Y25.AQ       Tcko                  0.476   M_stage_q_3_1
+    SLICE_X6Y26.DQ       Tcko                  0.476   M_stage_q_3_1
                                                        reset_cond3/M_stage_q_3_1
-    SLICE_X7Y31.B1       net (fanout=2)        0.980   M_stage_q_3_1
+    SLICE_X7Y31.B3       net (fanout=2)        0.993   M_stage_q_3_1
     SLICE_X7Y31.B        Tilo                  0.259   mymain/mypropogater/randomizer/numb_gen/M_w_q[20]
-                                                       mymain/mypropogater/_n0063_inv1
-    SLICE_X11Y36.A5      net (fanout=16)       1.211   mymain/mypropogater/M_randomizer_randnumrst
-    SLICE_X11Y36.CLK     Tas                   0.373   mymain/mypropogater/randomizer/clk_gen/M_w_q[20]
+                                                       mymain/mypropogater/_n0064_inv1
+    SLICE_X10Y34.C5      net (fanout=16)       1.175   mymain/mypropogater/_n0064_inv
+    SLICE_X10Y34.CLK     Tas                   0.349   mymain/mypropogater/randomizer/clk_gen/M_w_q[20]
                                                        mymain/mypropogater/randomizer/clk_gen/Mmux_M_w_d111
                                                        mymain/mypropogater/randomizer/clk_gen/M_w_q_19
     -------------------------------------------------  ---------------------------
-    Total                                      3.299ns (1.108ns logic, 2.191ns route)
-                                                       (33.6% logic, 66.4% route)
+    Total                                      3.252ns (1.084ns logic, 2.168ns route)
+                                                       (33.3% logic, 66.7% route)
 
 --------------------------------------------------------------------------------
-Slack:                  16.663ns (requirement - (data path - clock path skew + uncertainty))
+Slack:                  16.687ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               reset_cond3/M_stage_q_3_1 (FF)
+  Destination:          mymain/mypropogater/randomizer/clk_gen/M_w_q_2 (FF)
+  Requirement:          20.000ns
+  Data Path Delay:      3.247ns (Levels of Logic = 1)
+  Clock Path Skew:      -0.031ns (0.715 - 0.746)
+  Source Clock:         clk_BUFGP rising at 0.000ns
+  Destination Clock:    clk_BUFGP rising at 20.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: reset_cond3/M_stage_q_3_1 to mymain/mypropogater/randomizer/clk_gen/M_w_q_2
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X6Y26.DQ       Tcko                  0.476   M_stage_q_3_1
+                                                       reset_cond3/M_stage_q_3_1
+    SLICE_X7Y31.B3       net (fanout=2)        0.993   M_stage_q_3_1
+    SLICE_X7Y31.B        Tilo                  0.259   mymain/mypropogater/randomizer/numb_gen/M_w_q[20]
+                                                       mymain/mypropogater/_n0064_inv1
+    SLICE_X11Y34.CE      net (fanout=16)       1.111   mymain/mypropogater/_n0064_inv
+    SLICE_X11Y34.CLK     Tceck                 0.408   mymain/mypropogater/randomizer/M_clk_gen_num[2]
+                                                       mymain/mypropogater/randomizer/clk_gen/M_w_q_2
+    -------------------------------------------------  ---------------------------
+    Total                                      3.247ns (1.143ns logic, 2.104ns route)
+                                                       (35.2% logic, 64.8% route)
+
+--------------------------------------------------------------------------------
+Slack:                  16.690ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               reset_cond3/M_stage_q_3 (FF)
+  Destination:          mymain/mypropogater/slowclk25/M_ctr_q_16 (FF)
+  Requirement:          20.000ns
+  Data Path Delay:      3.205ns (Levels of Logic = 0)
+  Clock Path Skew:      -0.070ns (0.676 - 0.746)
+  Source Clock:         clk_BUFGP rising at 0.000ns
+  Destination Clock:    clk_BUFGP rising at 20.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: reset_cond3/M_stage_q_3 to mymain/mypropogater/slowclk25/M_ctr_q_16
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X7Y26.AQ       Tcko                  0.430   M_reset_cond3_out
+                                                       reset_cond3/M_stage_q_3
+    SLICE_X12Y39.SR      net (fanout=64)       2.347   M_reset_cond3_out
+    SLICE_X12Y39.CLK     Tsrck                 0.428   mymain/mypropogater/slowclk25/M_ctr_q[19]
+                                                       mymain/mypropogater/slowclk25/M_ctr_q_16
+    -------------------------------------------------  ---------------------------
+    Total                                      3.205ns (0.858ns logic, 2.347ns route)
+                                                       (26.8% logic, 73.2% route)
+
+--------------------------------------------------------------------------------
+Slack:                  16.705ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               reset_cond3/M_stage_q_3_1 (FF)
+  Destination:          mymain/mypropogater/randomizer/clk_gen/M_w_q_1 (FF)
+  Requirement:          20.000ns
+  Data Path Delay:      3.229ns (Levels of Logic = 1)
+  Clock Path Skew:      -0.031ns (0.715 - 0.746)
+  Source Clock:         clk_BUFGP rising at 0.000ns
+  Destination Clock:    clk_BUFGP rising at 20.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: reset_cond3/M_stage_q_3_1 to mymain/mypropogater/randomizer/clk_gen/M_w_q_1
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X6Y26.DQ       Tcko                  0.476   M_stage_q_3_1
+                                                       reset_cond3/M_stage_q_3_1
+    SLICE_X7Y31.B3       net (fanout=2)        0.993   M_stage_q_3_1
+    SLICE_X7Y31.B        Tilo                  0.259   mymain/mypropogater/randomizer/numb_gen/M_w_q[20]
+                                                       mymain/mypropogater/_n0064_inv1
+    SLICE_X11Y34.CE      net (fanout=16)       1.111   mymain/mypropogater/_n0064_inv
+    SLICE_X11Y34.CLK     Tceck                 0.390   mymain/mypropogater/randomizer/M_clk_gen_num[2]
+                                                       mymain/mypropogater/randomizer/clk_gen/M_w_q_1
+    -------------------------------------------------  ---------------------------
+    Total                                      3.229ns (1.125ns logic, 2.104ns route)
+                                                       (34.8% logic, 65.2% route)
+
+--------------------------------------------------------------------------------
+Slack:                  16.722ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               reset_cond3/M_stage_q_3_1 (FF)
+  Destination:          mymain/mypropogater/randomizer/clk_gen/M_w_q_1 (FF)
+  Requirement:          20.000ns
+  Data Path Delay:      3.212ns (Levels of Logic = 2)
+  Clock Path Skew:      -0.031ns (0.715 - 0.746)
+  Source Clock:         clk_BUFGP rising at 0.000ns
+  Destination Clock:    clk_BUFGP rising at 20.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: reset_cond3/M_stage_q_3_1 to mymain/mypropogater/randomizer/clk_gen/M_w_q_1
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X6Y26.DQ       Tcko                  0.476   M_stage_q_3_1
+                                                       reset_cond3/M_stage_q_3_1
+    SLICE_X7Y31.B3       net (fanout=2)        0.993   M_stage_q_3_1
+    SLICE_X7Y31.B        Tilo                  0.259   mymain/mypropogater/randomizer/numb_gen/M_w_q[20]
+                                                       mymain/mypropogater/_n0064_inv1
+    SLICE_X11Y34.B6      net (fanout=16)       1.111   mymain/mypropogater/_n0064_inv
+    SLICE_X11Y34.CLK     Tas                   0.373   mymain/mypropogater/randomizer/M_clk_gen_num[2]
+                                                       mymain/mypropogater/randomizer/clk_gen/Mmux_M_w_d121
+                                                       mymain/mypropogater/randomizer/clk_gen/M_w_q_1
+    -------------------------------------------------  ---------------------------
+    Total                                      3.212ns (1.108ns logic, 2.104ns route)
+                                                       (34.5% logic, 65.5% route)
+
+--------------------------------------------------------------------------------
+Slack:                  16.730ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               reset_cond3/M_stage_q_3_1 (FF)
+  Destination:          mymain/mypropogater/randomizer/clk_gen/M_w_q_0 (FF)
+  Requirement:          20.000ns
+  Data Path Delay:      3.204ns (Levels of Logic = 1)
+  Clock Path Skew:      -0.031ns (0.715 - 0.746)
+  Source Clock:         clk_BUFGP rising at 0.000ns
+  Destination Clock:    clk_BUFGP rising at 20.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: reset_cond3/M_stage_q_3_1 to mymain/mypropogater/randomizer/clk_gen/M_w_q_0
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X6Y26.DQ       Tcko                  0.476   M_stage_q_3_1
+                                                       reset_cond3/M_stage_q_3_1
+    SLICE_X7Y31.B3       net (fanout=2)        0.993   M_stage_q_3_1
+    SLICE_X7Y31.B        Tilo                  0.259   mymain/mypropogater/randomizer/numb_gen/M_w_q[20]
+                                                       mymain/mypropogater/_n0064_inv1
+    SLICE_X11Y34.CE      net (fanout=16)       1.111   mymain/mypropogater/_n0064_inv
+    SLICE_X11Y34.CLK     Tceck                 0.365   mymain/mypropogater/randomizer/M_clk_gen_num[2]
+                                                       mymain/mypropogater/randomizer/clk_gen/M_w_q_0
+    -------------------------------------------------  ---------------------------
+    Total                                      3.204ns (1.100ns logic, 2.104ns route)
+                                                       (34.3% logic, 65.7% route)
+
+--------------------------------------------------------------------------------
+Slack:                  16.748ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               reset_cond3/M_stage_q_3 (FF)
+  Destination:          mymain/mypropogater/randomizer/clkreg/M_regs_q_2 (FF)
+  Requirement:          20.000ns
+  Data Path Delay:      3.177ns (Levels of Logic = 0)
+  Clock Path Skew:      -0.040ns (0.706 - 0.746)
+  Source Clock:         clk_BUFGP rising at 0.000ns
+  Destination Clock:    clk_BUFGP rising at 20.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: reset_cond3/M_stage_q_3 to mymain/mypropogater/randomizer/clkreg/M_regs_q_2
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X7Y26.AQ       Tcko                  0.430   M_reset_cond3_out
+                                                       reset_cond3/M_stage_q_3
+    SLICE_X11Y41.SR      net (fanout=64)       2.309   M_reset_cond3_out
+    SLICE_X11Y41.CLK     Tsrck                 0.438   M_mymain_clkchoice[2]
+                                                       mymain/mypropogater/randomizer/clkreg/M_regs_q_2
+    -------------------------------------------------  ---------------------------
+    Total                                      3.177ns (0.868ns logic, 2.309ns route)
+                                                       (27.3% logic, 72.7% route)
+
+--------------------------------------------------------------------------------
+Slack:                  16.773ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               reset_cond3/M_stage_q_3 (FF)
+  Destination:          mymain/mypropogater/randomizer/clkreg/M_regs_q_1 (FF)
+  Requirement:          20.000ns
+  Data Path Delay:      3.152ns (Levels of Logic = 0)
+  Clock Path Skew:      -0.040ns (0.706 - 0.746)
+  Source Clock:         clk_BUFGP rising at 0.000ns
+  Destination Clock:    clk_BUFGP rising at 20.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: reset_cond3/M_stage_q_3 to mymain/mypropogater/randomizer/clkreg/M_regs_q_1
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X7Y26.AQ       Tcko                  0.430   M_reset_cond3_out
+                                                       reset_cond3/M_stage_q_3
+    SLICE_X11Y41.SR      net (fanout=64)       2.309   M_reset_cond3_out
+    SLICE_X11Y41.CLK     Tsrck                 0.413   M_mymain_clkchoice[2]
+                                                       mymain/mypropogater/randomizer/clkreg/M_regs_q_1
+    -------------------------------------------------  ---------------------------
+    Total                                      3.152ns (0.843ns logic, 2.309ns route)
+                                                       (26.7% logic, 73.3% route)
+
+--------------------------------------------------------------------------------
+Slack:                  16.776ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               reset_cond3/M_stage_q_3 (FF)
+  Destination:          mymain/mypropogater/randomizer/clkreg/M_regs_q_0 (FF)
+  Requirement:          20.000ns
+  Data Path Delay:      3.149ns (Levels of Logic = 0)
+  Clock Path Skew:      -0.040ns (0.706 - 0.746)
+  Source Clock:         clk_BUFGP rising at 0.000ns
+  Destination Clock:    clk_BUFGP rising at 20.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: reset_cond3/M_stage_q_3 to mymain/mypropogater/randomizer/clkreg/M_regs_q_0
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X7Y26.AQ       Tcko                  0.430   M_reset_cond3_out
+                                                       reset_cond3/M_stage_q_3
+    SLICE_X11Y41.SR      net (fanout=64)       2.309   M_reset_cond3_out
+    SLICE_X11Y41.CLK     Tsrck                 0.410   M_mymain_clkchoice[2]
+                                                       mymain/mypropogater/randomizer/clkreg/M_regs_q_0
+    -------------------------------------------------  ---------------------------
+    Total                                      3.149ns (0.840ns logic, 2.309ns route)
+                                                       (26.7% logic, 73.3% route)
+
+--------------------------------------------------------------------------------
+Slack:                  16.823ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               reset_cond3/M_stage_q_3_1 (FF)
+  Destination:          mymain/mypropogater/randomizer/clk_gen/M_w_q_20 (FF)
+  Requirement:          20.000ns
+  Data Path Delay:      3.111ns (Levels of Logic = 1)
+  Clock Path Skew:      -0.031ns (0.715 - 0.746)
+  Source Clock:         clk_BUFGP rising at 0.000ns
+  Destination Clock:    clk_BUFGP rising at 20.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: reset_cond3/M_stage_q_3_1 to mymain/mypropogater/randomizer/clk_gen/M_w_q_20
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X6Y26.DQ       Tcko                  0.476   M_stage_q_3_1
+                                                       reset_cond3/M_stage_q_3_1
+    SLICE_X7Y31.B3       net (fanout=2)        0.993   M_stage_q_3_1
+    SLICE_X7Y31.B        Tilo                  0.259   mymain/mypropogater/randomizer/numb_gen/M_w_q[20]
+                                                       mymain/mypropogater/_n0064_inv1
+    SLICE_X10Y34.CE      net (fanout=16)       1.092   mymain/mypropogater/_n0064_inv
+    SLICE_X10Y34.CLK     Tceck                 0.291   mymain/mypropogater/randomizer/clk_gen/M_w_q[20]
+                                                       mymain/mypropogater/randomizer/clk_gen/M_w_q_20
+    -------------------------------------------------  ---------------------------
+    Total                                      3.111ns (1.026ns logic, 2.085ns route)
+                                                       (33.0% logic, 67.0% route)
+
+--------------------------------------------------------------------------------
+Slack:                  16.825ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               reset_cond3/M_stage_q_3_1 (FF)
+  Destination:          mymain/mypropogater/randomizer/clk_gen/M_w_q_19 (FF)
+  Requirement:          20.000ns
+  Data Path Delay:      3.109ns (Levels of Logic = 1)
+  Clock Path Skew:      -0.031ns (0.715 - 0.746)
+  Source Clock:         clk_BUFGP rising at 0.000ns
+  Destination Clock:    clk_BUFGP rising at 20.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: reset_cond3/M_stage_q_3_1 to mymain/mypropogater/randomizer/clk_gen/M_w_q_19
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X6Y26.DQ       Tcko                  0.476   M_stage_q_3_1
+                                                       reset_cond3/M_stage_q_3_1
+    SLICE_X7Y31.B3       net (fanout=2)        0.993   M_stage_q_3_1
+    SLICE_X7Y31.B        Tilo                  0.259   mymain/mypropogater/randomizer/numb_gen/M_w_q[20]
+                                                       mymain/mypropogater/_n0064_inv1
+    SLICE_X10Y34.CE      net (fanout=16)       1.092   mymain/mypropogater/_n0064_inv
+    SLICE_X10Y34.CLK     Tceck                 0.289   mymain/mypropogater/randomizer/clk_gen/M_w_q[20]
+                                                       mymain/mypropogater/randomizer/clk_gen/M_w_q_19
+    -------------------------------------------------  ---------------------------
+    Total                                      3.109ns (1.024ns logic, 2.085ns route)
+                                                       (32.9% logic, 67.1% route)
+
+--------------------------------------------------------------------------------
+Slack:                  16.844ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               reset_cond3/M_stage_q_3 (FF)
+  Destination:          mymain/mypropogater/slowclk25/M_ctr_q_15 (FF)
+  Requirement:          20.000ns
+  Data Path Delay:      3.053ns (Levels of Logic = 0)
+  Clock Path Skew:      -0.068ns (0.678 - 0.746)
+  Source Clock:         clk_BUFGP rising at 0.000ns
+  Destination Clock:    clk_BUFGP rising at 20.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: reset_cond3/M_stage_q_3 to mymain/mypropogater/slowclk25/M_ctr_q_15
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X7Y26.AQ       Tcko                  0.430   M_reset_cond3_out
+                                                       reset_cond3/M_stage_q_3
+    SLICE_X12Y38.SR      net (fanout=64)       2.153   M_reset_cond3_out
+    SLICE_X12Y38.CLK     Tsrck                 0.470   mymain/mypropogater/slowclk25/M_ctr_q[15]
+                                                       mymain/mypropogater/slowclk25/M_ctr_q_15
+    -------------------------------------------------  ---------------------------
+    Total                                      3.053ns (0.900ns logic, 2.153ns route)
+                                                       (29.5% logic, 70.5% route)
+
+--------------------------------------------------------------------------------
+Slack:                  16.853ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               reset_cond3/M_stage_q_3 (FF)
+  Destination:          mymain/mypropogater/slowclk25/M_ctr_q_14 (FF)
+  Requirement:          20.000ns
+  Data Path Delay:      3.044ns (Levels of Logic = 0)
+  Clock Path Skew:      -0.068ns (0.678 - 0.746)
+  Source Clock:         clk_BUFGP rising at 0.000ns
+  Destination Clock:    clk_BUFGP rising at 20.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: reset_cond3/M_stage_q_3 to mymain/mypropogater/slowclk25/M_ctr_q_14
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X7Y26.AQ       Tcko                  0.430   M_reset_cond3_out
+                                                       reset_cond3/M_stage_q_3
+    SLICE_X12Y38.SR      net (fanout=64)       2.153   M_reset_cond3_out
+    SLICE_X12Y38.CLK     Tsrck                 0.461   mymain/mypropogater/slowclk25/M_ctr_q[15]
+                                                       mymain/mypropogater/slowclk25/M_ctr_q_14
+    -------------------------------------------------  ---------------------------
+    Total                                      3.044ns (0.891ns logic, 2.153ns route)
+                                                       (29.3% logic, 70.7% route)
+
+--------------------------------------------------------------------------------
+Slack:                  16.864ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               reset_cond3/M_stage_q_3 (FF)
+  Destination:          mymain/mypropogater/slowclk25/M_ctr_q_13 (FF)
+  Requirement:          20.000ns
+  Data Path Delay:      3.033ns (Levels of Logic = 0)
+  Clock Path Skew:      -0.068ns (0.678 - 0.746)
+  Source Clock:         clk_BUFGP rising at 0.000ns
+  Destination Clock:    clk_BUFGP rising at 20.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: reset_cond3/M_stage_q_3 to mymain/mypropogater/slowclk25/M_ctr_q_13
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X7Y26.AQ       Tcko                  0.430   M_reset_cond3_out
+                                                       reset_cond3/M_stage_q_3
+    SLICE_X12Y38.SR      net (fanout=64)       2.153   M_reset_cond3_out
+    SLICE_X12Y38.CLK     Tsrck                 0.450   mymain/mypropogater/slowclk25/M_ctr_q[15]
+                                                       mymain/mypropogater/slowclk25/M_ctr_q_13
+    -------------------------------------------------  ---------------------------
+    Total                                      3.033ns (0.880ns logic, 2.153ns route)
+                                                       (29.0% logic, 71.0% route)
+
+--------------------------------------------------------------------------------
+Slack:                  16.886ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               reset_cond3/M_stage_q_3 (FF)
+  Destination:          mymain/mypropogater/slowclk25/M_ctr_q_12 (FF)
+  Requirement:          20.000ns
+  Data Path Delay:      3.011ns (Levels of Logic = 0)
+  Clock Path Skew:      -0.068ns (0.678 - 0.746)
+  Source Clock:         clk_BUFGP rising at 0.000ns
+  Destination Clock:    clk_BUFGP rising at 20.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: reset_cond3/M_stage_q_3 to mymain/mypropogater/slowclk25/M_ctr_q_12
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X7Y26.AQ       Tcko                  0.430   M_reset_cond3_out
+                                                       reset_cond3/M_stage_q_3
+    SLICE_X12Y38.SR      net (fanout=64)       2.153   M_reset_cond3_out
+    SLICE_X12Y38.CLK     Tsrck                 0.428   mymain/mypropogater/slowclk25/M_ctr_q[15]
+                                                       mymain/mypropogater/slowclk25/M_ctr_q_12
+    -------------------------------------------------  ---------------------------
+    Total                                      3.011ns (0.858ns logic, 2.153ns route)
+                                                       (28.5% logic, 71.5% route)
+
+--------------------------------------------------------------------------------
+Slack:                  17.006ns (requirement - (data path - clock path skew + uncertainty))
   Source:               reset_cond3/M_stage_q_3 (FF)
   Destination:          mymain/mypropogater/slowclk25/M_ctr_q_7 (FF)
   Requirement:          20.000ns
-  Data Path Delay:      3.242ns (Levels of Logic = 0)
-  Clock Path Skew:      -0.060ns (0.683 - 0.743)
+  Data Path Delay:      2.896ns (Levels of Logic = 0)
+  Clock Path Skew:      -0.063ns (0.683 - 0.746)
   Source Clock:         clk_BUFGP rising at 0.000ns
   Destination Clock:    clk_BUFGP rising at 20.000ns
   Clock Uncertainty:    0.035ns
@@ -883,22 +829,22 @@ Slack:                  16.663ns (requirement - (data path - clock path skew + u
     Location             Delay type         Delay(ns)  Physical Resource
                                                        Logical Resource(s)
     -------------------------------------------------  -------------------
-    SLICE_X7Y25.DQ       Tcko                  0.430   M_reset_cond3_out
+    SLICE_X7Y26.AQ       Tcko                  0.430   M_reset_cond3_out
                                                        reset_cond3/M_stage_q_3
-    SLICE_X12Y36.SR      net (fanout=64)       2.342   M_reset_cond3_out
+    SLICE_X12Y36.SR      net (fanout=64)       1.996   M_reset_cond3_out
     SLICE_X12Y36.CLK     Tsrck                 0.470   mymain/mypropogater/slowclk25/M_ctr_q[7]
                                                        mymain/mypropogater/slowclk25/M_ctr_q_7
     -------------------------------------------------  ---------------------------
-    Total                                      3.242ns (0.900ns logic, 2.342ns route)
-                                                       (27.8% logic, 72.2% route)
+    Total                                      2.896ns (0.900ns logic, 1.996ns route)
+                                                       (31.1% logic, 68.9% route)
 
 --------------------------------------------------------------------------------
-Slack:                  16.672ns (requirement - (data path - clock path skew + uncertainty))
+Slack:                  17.015ns (requirement - (data path - clock path skew + uncertainty))
   Source:               reset_cond3/M_stage_q_3 (FF)
   Destination:          mymain/mypropogater/slowclk25/M_ctr_q_6 (FF)
   Requirement:          20.000ns
-  Data Path Delay:      3.233ns (Levels of Logic = 0)
-  Clock Path Skew:      -0.060ns (0.683 - 0.743)
+  Data Path Delay:      2.887ns (Levels of Logic = 0)
+  Clock Path Skew:      -0.063ns (0.683 - 0.746)
   Source Clock:         clk_BUFGP rising at 0.000ns
   Destination Clock:    clk_BUFGP rising at 20.000ns
   Clock Uncertainty:    0.035ns
@@ -913,22 +859,22 @@ Slack:                  16.672ns (requirement - (data path - clock path skew + u
     Location             Delay type         Delay(ns)  Physical Resource
                                                        Logical Resource(s)
     -------------------------------------------------  -------------------
-    SLICE_X7Y25.DQ       Tcko                  0.430   M_reset_cond3_out
+    SLICE_X7Y26.AQ       Tcko                  0.430   M_reset_cond3_out
                                                        reset_cond3/M_stage_q_3
-    SLICE_X12Y36.SR      net (fanout=64)       2.342   M_reset_cond3_out
+    SLICE_X12Y36.SR      net (fanout=64)       1.996   M_reset_cond3_out
     SLICE_X12Y36.CLK     Tsrck                 0.461   mymain/mypropogater/slowclk25/M_ctr_q[7]
                                                        mymain/mypropogater/slowclk25/M_ctr_q_6
     -------------------------------------------------  ---------------------------
-    Total                                      3.233ns (0.891ns logic, 2.342ns route)
-                                                       (27.6% logic, 72.4% route)
+    Total                                      2.887ns (0.891ns logic, 1.996ns route)
+                                                       (30.9% logic, 69.1% route)
 
 --------------------------------------------------------------------------------
-Slack:                  16.683ns (requirement - (data path - clock path skew + uncertainty))
+Slack:                  17.026ns (requirement - (data path - clock path skew + uncertainty))
   Source:               reset_cond3/M_stage_q_3 (FF)
   Destination:          mymain/mypropogater/slowclk25/M_ctr_q_5 (FF)
   Requirement:          20.000ns
-  Data Path Delay:      3.222ns (Levels of Logic = 0)
-  Clock Path Skew:      -0.060ns (0.683 - 0.743)
+  Data Path Delay:      2.876ns (Levels of Logic = 0)
+  Clock Path Skew:      -0.063ns (0.683 - 0.746)
   Source Clock:         clk_BUFGP rising at 0.000ns
   Destination Clock:    clk_BUFGP rising at 20.000ns
   Clock Uncertainty:    0.035ns
@@ -943,14 +889,74 @@ Slack:                  16.683ns (requirement - (data path - clock path skew + u
     Location             Delay type         Delay(ns)  Physical Resource
                                                        Logical Resource(s)
     -------------------------------------------------  -------------------
-    SLICE_X7Y25.DQ       Tcko                  0.430   M_reset_cond3_out
+    SLICE_X7Y26.AQ       Tcko                  0.430   M_reset_cond3_out
                                                        reset_cond3/M_stage_q_3
-    SLICE_X12Y36.SR      net (fanout=64)       2.342   M_reset_cond3_out
+    SLICE_X12Y36.SR      net (fanout=64)       1.996   M_reset_cond3_out
     SLICE_X12Y36.CLK     Tsrck                 0.450   mymain/mypropogater/slowclk25/M_ctr_q[7]
                                                        mymain/mypropogater/slowclk25/M_ctr_q_5
     -------------------------------------------------  ---------------------------
-    Total                                      3.222ns (0.880ns logic, 2.342ns route)
-                                                       (27.3% logic, 72.7% route)
+    Total                                      2.876ns (0.880ns logic, 1.996ns route)
+                                                       (30.6% logic, 69.4% route)
+
+--------------------------------------------------------------------------------
+Slack:                  17.041ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               reset_cond3/M_stage_q_3 (FF)
+  Destination:          mymain/mypropogater/slowclk25/M_ctr_q_11 (FF)
+  Requirement:          20.000ns
+  Data Path Delay:      2.859ns (Levels of Logic = 0)
+  Clock Path Skew:      -0.065ns (0.681 - 0.746)
+  Source Clock:         clk_BUFGP rising at 0.000ns
+  Destination Clock:    clk_BUFGP rising at 20.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: reset_cond3/M_stage_q_3 to mymain/mypropogater/slowclk25/M_ctr_q_11
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X7Y26.AQ       Tcko                  0.430   M_reset_cond3_out
+                                                       reset_cond3/M_stage_q_3
+    SLICE_X12Y37.SR      net (fanout=64)       1.959   M_reset_cond3_out
+    SLICE_X12Y37.CLK     Tsrck                 0.470   mymain/mypropogater/slowclk25/M_ctr_q[11]
+                                                       mymain/mypropogater/slowclk25/M_ctr_q_11
+    -------------------------------------------------  ---------------------------
+    Total                                      2.859ns (0.900ns logic, 1.959ns route)
+                                                       (31.5% logic, 68.5% route)
+
+--------------------------------------------------------------------------------
+Slack:                  17.048ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               reset_cond3/M_stage_q_3 (FF)
+  Destination:          mymain/mypropogater/slowclk25/M_ctr_q_4 (FF)
+  Requirement:          20.000ns
+  Data Path Delay:      2.854ns (Levels of Logic = 0)
+  Clock Path Skew:      -0.063ns (0.683 - 0.746)
+  Source Clock:         clk_BUFGP rising at 0.000ns
+  Destination Clock:    clk_BUFGP rising at 20.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: reset_cond3/M_stage_q_3 to mymain/mypropogater/slowclk25/M_ctr_q_4
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X7Y26.AQ       Tcko                  0.430   M_reset_cond3_out
+                                                       reset_cond3/M_stage_q_3
+    SLICE_X12Y36.SR      net (fanout=64)       1.996   M_reset_cond3_out
+    SLICE_X12Y36.CLK     Tsrck                 0.428   mymain/mypropogater/slowclk25/M_ctr_q[7]
+                                                       mymain/mypropogater/slowclk25/M_ctr_q_4
+    -------------------------------------------------  ---------------------------
+    Total                                      2.854ns (0.858ns logic, 1.996ns route)
+                                                       (30.1% logic, 69.9% route)
 
 --------------------------------------------------------------------------------
 
@@ -1172,28 +1178,28 @@ Slack: 19.520ns (period - min period limit)
   Location pin: SLICE_X12Y41.CLK
   Clock network: clk_BUFGP
 --------------------------------------------------------------------------------
-Slack: 19.520ns (period - min period limit)
+Slack: 19.525ns (period - min period limit)
   Period: 20.000ns
-  Min period limit: 0.480ns (2083.333MHz) (Tcp)
-  Physical resource: mymain/mypropogater/randomizer/M_x_q_20/CLK
-  Logical resource: mymain/mypropogater/randomizer/numb_gen/M_x_q_16/CK
-  Location pin: SLICE_X8Y31.CLK
-  Clock network: clk_BUFGP
---------------------------------------------------------------------------------
-Slack: 19.520ns (period - min period limit)
-  Period: 20.000ns
-  Min period limit: 0.480ns (2083.333MHz) (Tcp)
-  Physical resource: mymain/mypropogater/randomizer/M_x_q_20/CLK
-  Logical resource: mymain/mypropogater/randomizer/numb_gen/M_x_q_20/CK
-  Location pin: SLICE_X8Y31.CLK
+  Min period limit: 0.475ns (2105.263MHz) (Tcp)
+  Physical resource: M_stage_q_3_1/CLK
+  Logical resource: reset_cond3/M_stage_q_0/CK
+  Location pin: SLICE_X6Y26.CLK
   Clock network: clk_BUFGP
 --------------------------------------------------------------------------------
 Slack: 19.525ns (period - min period limit)
   Period: 20.000ns
   Min period limit: 0.475ns (2105.263MHz) (Tcp)
-  Physical resource: reset_cond3/M_stage_q[2]/CLK
-  Logical resource: reset_cond3/M_stage_q_0/CK
-  Location pin: SLICE_X6Y24.CLK
+  Physical resource: M_stage_q_3_1/CLK
+  Logical resource: reset_cond3/M_stage_q_1/CK
+  Location pin: SLICE_X6Y26.CLK
+  Clock network: clk_BUFGP
+--------------------------------------------------------------------------------
+Slack: 19.525ns (period - min period limit)
+  Period: 20.000ns
+  Min period limit: 0.475ns (2105.263MHz) (Tcp)
+  Physical resource: M_stage_q_3_1/CLK
+  Logical resource: reset_cond3/M_stage_q_2/CK
+  Location pin: SLICE_X6Y26.CLK
   Clock network: clk_BUFGP
 --------------------------------------------------------------------------------
 
@@ -1210,7 +1216,7 @@ Clock to Setup on destination clock clk
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------+---------+---------+---------+---------+
-clk            |    4.318|         |         |         |
+clk            |    3.744|         |         |         |
 ---------------+---------+---------+---------+---------+
 
 
@@ -1219,16 +1225,16 @@ Timing summary:
 
 Timing errors: 0  Score: 0  (Setup/Max: 0, Hold: 0)
 
-Constraints cover 451 paths, 0 nets, and 125 connections
+Constraints cover 451 paths, 0 nets, and 123 connections
 
 Design statistics:
-   Minimum period:   4.318ns{1}   (Maximum frequency: 231.589MHz)
+   Minimum period:   3.744ns{1}   (Maximum frequency: 267.094MHz)
 
 
 ------------------------------------Footnotes-----------------------------------
 1)  The minimum period statistic assumes all single cycle delays.
 
-Analysis completed Thu Dec 07 10:51:57 2017 
+Analysis completed Thu Dec 07 11:02:10 2017 
 --------------------------------------------------------------------------------
 
 Trace Settings:

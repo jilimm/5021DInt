@@ -1,8 +1,8 @@
 global RowNumb{
-  const ROW1 = 2b00;
-  const ROW2= 2b01;
-  const ROW3= 2b10;
-  const ROW4 = 2b11; 
+  const ROW4 = 2b00;
+  const ROW1= 2b01;
+  const ROW2= 2b10;
+  const ROW3 = 2b11; 
 }
 
 global ClkNumb{
@@ -116,14 +116,10 @@ module propogate (
     case (rowCtr.value){
     //when the corresponding row is 'active' make the entire row active
       RowNumb.ROW1:
-          seed.d = seed.q + 1;
-          clkseed.d = clkseed.q + 1;
-          randomizer.randnumNext = 1; //generate random number seq
-          randomizer.randclkNext = 1; //generate random clk number
-          randomizer.numbregEn = 1; //write enable register to rmb new value
-          randomizer.clkregEn = 1;
-          randomizer.randnumrst = 1; //reset so you can generate new numb later
-          randomizer.randclkrst = 1; 
+          randomizer.randnumNext = 0; //generate random number seq
+          randomizer.randclkNext = 0; //generate random clk number
+          randomizer.numbregEn = 0; //write enable register to rmb new value
+          randomizer.clkregEn = 0;
           row1=1;
           row2=0;
           row3=0;
@@ -150,10 +146,17 @@ module propogate (
         
         RowNumb.ROW4:
       //no rows light up (pause to give user time to react) 
-        randomizer.randnumNext = 0; //generate random number seq
-          randomizer.randclkNext = 0; //generate random clk number
-          randomizer.numbregEn = 0; //write enable register to rmb new value
-          randomizer.clkregEn = 0;
+        
+        
+        
+        seed.d = seed.q + 1;
+          clkseed.d = clkseed.q + 1;
+          randomizer.randnumNext = 1; //generate random number seq
+          randomizer.randclkNext = 1; //generate random clk number
+          randomizer.numbregEn = 1; //write enable register to rmb new value
+          randomizer.clkregEn = 1;
+          randomizer.randnumrst = 1; //reset so you can generate new numb later
+          randomizer.randclkrst = 1; 
         row1=0;
         row2=0; //change to all 0 after debugging
         row3=0;
