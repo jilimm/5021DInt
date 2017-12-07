@@ -4,7 +4,7 @@
    This is a temporary file and any changes made to it will be destroyed.
 */
 
-module main_4 (
+module main_5 (
     input clk,
     input rst,
     input left2,
@@ -17,38 +17,34 @@ module main_4 (
     output reg low1,
     output reg low2,
     output reg low3,
-    output reg butt1,
-    output reg butt2,
-    output reg butt3,
-    output reg [2:0] rowOn,
-    output reg [2:0] clkchoice
+    output reg [2:0] rowOn
   );
   
   
   
   wire [1-1:0] M_button_cond1_out;
   reg [1-1:0] M_button_cond1_in;
-  button_conditioner_5 button_cond1 (
+  button_conditioner_7 button_cond1 (
     .clk(clk),
     .in(M_button_cond1_in),
     .out(M_button_cond1_out)
   );
   wire [1-1:0] M_button_cond2_out;
   reg [1-1:0] M_button_cond2_in;
-  button_conditioner_5 button_cond2 (
+  button_conditioner_7 button_cond2 (
     .clk(clk),
     .in(M_button_cond2_in),
     .out(M_button_cond2_out)
   );
   wire [1-1:0] M_button_cond3_out;
   reg [1-1:0] M_button_cond3_in;
-  button_conditioner_5 button_cond3 (
+  button_conditioner_7 button_cond3 (
     .clk(clk),
     .in(M_button_cond3_in),
     .out(M_button_cond3_out)
   );
   wire [1-1:0] M_edge_ctr_value;
-  counter_8 edge_ctr (
+  counter_10 edge_ctr (
     .clk(clk),
     .rst(rst),
     .value(M_edge_ctr_value)
@@ -62,7 +58,7 @@ module main_4 (
   wire [1-1:0] M_mypropogater_gnd2;
   wire [1-1:0] M_mypropogater_gnd3;
   wire [3-1:0] M_mypropogater_clkChoice;
-  propogate_9 mypropogater (
+  propogate_11 mypropogater (
     .clk(clk),
     .rst(rst),
     .rowLit(M_mypropogater_rowLit),
@@ -78,21 +74,21 @@ module main_4 (
   
   wire [1-1:0] M_edge_detector1_out;
   reg [1-1:0] M_edge_detector1_in;
-  edge_detector_10 edge_detector1 (
+  edge_detector_12 edge_detector1 (
     .clk(M_edge_ctr_value),
     .in(M_edge_detector1_in),
     .out(M_edge_detector1_out)
   );
   wire [1-1:0] M_edge_detector2_out;
   reg [1-1:0] M_edge_detector2_in;
-  edge_detector_10 edge_detector2 (
+  edge_detector_12 edge_detector2 (
     .clk(M_edge_ctr_value),
     .in(M_edge_detector2_in),
     .out(M_edge_detector2_out)
   );
   wire [1-1:0] M_edge_detector3_out;
   reg [1-1:0] M_edge_detector3_in;
-  edge_detector_10 edge_detector3 (
+  edge_detector_12 edge_detector3 (
     .clk(M_edge_ctr_value),
     .in(M_edge_detector3_in),
     .out(M_edge_detector3_out)
@@ -108,7 +104,7 @@ module main_4 (
   reg [8-1:0] M_myalu_a;
   reg [8-1:0] M_myalu_b;
   reg [6-1:0] M_myalu_alufn;
-  alu_13 myalu (
+  alu_15 myalu (
     .a(M_myalu_a),
     .b(M_myalu_b),
     .alufn(M_myalu_alufn),
@@ -127,16 +123,12 @@ module main_4 (
     M_myalu_a = 8'h00;
     M_myalu_b = 8'h00;
     rowOn = M_mypropogater_rowLit;
-    butt1 = M_left_q;
-    butt2 = M_cent_q;
-    butt3 = M_right_q;
     high1 = M_mypropogater_row1;
     high2 = M_mypropogater_row2;
     high3 = M_mypropogater_row3;
     low1 = M_mypropogater_gnd1;
     low2 = M_mypropogater_gnd2;
     low3 = M_mypropogater_gnd3;
-    clkchoice = M_mypropogater_clkChoice;
     M_button_cond1_in = left2;
     M_edge_detector1_in = M_button_cond1_out;
     M_button_cond2_in = center1;

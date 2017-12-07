@@ -1,24 +1,36 @@
 module state (
     input clk,  // clock
     input rst,  // reset
+    input leftBtn,
+    input centBtn,
+    input rightBtn,
+    output row1,
+    output row2,
+    output row3,
+    output gnd1,
+    output gnd2,
+    output gnd3,
+    output totalScore
     
-    input bishi[3], //bishibashi buttons*3
 
     //output //led matrix
-    output totalScore//score
+   // output totalScore//score
 
   ) {
 
   .clk(clk) {
     .rst(rst) {
 
-    fsm state(#INIT(HALT)) = {MAIN,SUMUP,HALT}; // MAIN = random + propagate + compare the button and the result, sumup = add to score, halt = pause game
+    fsm state(#INIT(HALT)) = {MAIN,HALT}; // MAIN = random + propagate + compare the button and the result, sumup = add to score, halt = pause game
+      main mainState;
+      bcounter bttnpress;
+ //     dff scoreSum[8];
   //  multi_seven_seg seg;
     }
     
   }
-  alu myalu;
-  main mainState;
+//  alu myalu;
+  
 //  bintoAscii translater;
   sig score[8];
   sig out[8];
@@ -30,14 +42,45 @@ module state (
   always {
     score = 0;
     result = 8d0;
+    mainState.left2 = leftBtn;
+    mainState.right0 = rightBtn;
+    mainState.center1 = centBtn;
+    bttnpress.button = leftBtn;
+    bttnpress.button2 = centBtn;
+    bttnpress.button3 = rightBtn;
+    
+    row1=0;
+    row2=0;
+    row3=0;
+    gnd1=1;
+    gnd2=1;
+    gnd3=1; //put ground to high to deactivate the columns
+    totalScore = bttnpress.bttnPress;
     case (state.q){
       state.MAIN:
-        mainout = mainState.result //store the result of MAIN
+      
+        //in the main state the LEDs are controlled by the main state;
+         gnd1 = mainState.low1;
+         gnd2 = mainState.low2;
+         gnd3 = mainState.low3;
+    
+         row1 = mainState.high1;
+         row2 = mainState.high2;
+         row3 = mainState.high3;
+        
+        
+      /*
+        scoreSum.d = mainState.result + scoreSum.q;
+        mainout = mainState.result; //store the result of MAIN
+        
+        /*
         if (mainout==0) {state.d=state.HALT;}
         else{state.d=state.SUMUP;}
+        */
       
         
-      state.SUMUP:
+   //   state.SUMUP:
+      /*
         myalu.alufn = 6b000000;        
         myalu.a= score;
         myalu.b= mainout;
@@ -54,8 +97,10 @@ module state (
         seg.values[0]=translater.ascii[0];
         score = out;
         state.d = state.MAIN;
+           */
 
       state.HALT:
+      /*
         myalu.alufn =6b110111;
         myalu.a = score;
         myalu.b = highscore;
@@ -63,6 +108,7 @@ module state (
         z=myalu.z;
         v=myalu.v;
         n=myalu.n;
+        //if at any point result of the main is >0, then halt the lil fucker
         if (out != 8b1){ highscore = score;}
         result = highscore[0]+highscore[1]*2+highscore[2]*4+highscore[3]*8+highscore[4]*16+highscore[5]*32+highscore[6]*64+highscore[7]*128;
         seg.values[3]=10;
@@ -70,7 +116,19 @@ module state (
         seg.values[2]=translater.ascii[2];
         seg.values[1]=translater.ascii[1];
         seg.values[0]=translater.ascii[0];
-        if (bishi[0]|bishi[1]|bishi[2]) { state.d = state.MAIN;}
+        */
+        
+    row1=0;
+    row2=0;
+    row3=0;
+    gnd1=1;
+    gnd2=1;
+    gnd3=1;
+        if (bttnpress.bttnPress==1) { 
+          //if i detect a button press i go to main state and start the game
+          state.d = state.MAIN;
+          }
 
   }
+}
 }

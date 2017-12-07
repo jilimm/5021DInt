@@ -4,7 +4,7 @@ module bcounter (
     input button,    // button input
     input button2,
     input button3,
-    output count[8]  // press counter
+    output bttnPress[8]  // press counter
   ) {
   
   .clk(clk) {
@@ -38,7 +38,7 @@ module bcounter (
     edge_detector2.in = button_cond2.out; // input to the edge_detector
     button_cond3.in = button3;            // raw button input
     edge_detector3.in = button_cond3.out; // input to the edge_detector
-    count = ctr.q;                      // output the counter
+    bttnPress = ctr.q;                      // output the counter
     
     if(edge_detector.out){
        left.d = 1;

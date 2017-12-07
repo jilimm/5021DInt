@@ -32,7 +32,8 @@ module mojo_top (
     reset_conditioner reset_cond3;
     .rst(rst){
      // bcounter counter;        // button press counter
-      main mymain;
+     // main mymain;
+      state myState;
     }
   }
   
@@ -48,17 +49,22 @@ module mojo_top (
     spi_channel = bzzzz;      // not using flags
     avr_rx = bz;              // not using serial port
     
+    myState.leftBtn = !button;
+    myState.centBtn = !button2;
+    myState.rightBtn = !button3;
+    /*
     mymain.left2 = !button; // make button active high 
     mymain.center1 = !button2; 
-    mymain.right0 = !button3; 
+    mymain.right0 = !button3;
+    */ 
     //make lights go light up
-    high1 = mymain.high1;
-    high2 = mymain.high2;
-    high3 = mymain.high3;
-    low1 = mymain.low1;
-    low2 = mymain.low2;
-    low3 = mymain.low3;
+    high1 = myState.row1; //mymain.high1;
+    high2 = myState.row2; //mymain.high2;
+    high3 = myState.row3;//mymain.high3;
+    low1 = myState.gnd1; //mymain.low1;
+    low2 = myState.gnd2; //mymain.low2;
+    low3 = myState.gnd3; //mymain.low3;
     
-    led = mymain.result;      // display results on the mojo LED
+    led = myState.totalScore; //mymain.result;      // display results on the mojo LED
   }
 }

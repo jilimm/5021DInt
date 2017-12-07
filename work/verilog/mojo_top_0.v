@@ -53,39 +53,29 @@ module mojo_top_0 (
     .in(M_reset_cond3_in),
     .out(M_reset_cond3_out)
   );
-  wire [2-1:0] M_mymain_result;
-  wire [1-1:0] M_mymain_high1;
-  wire [1-1:0] M_mymain_high2;
-  wire [1-1:0] M_mymain_high3;
-  wire [1-1:0] M_mymain_low1;
-  wire [1-1:0] M_mymain_low2;
-  wire [1-1:0] M_mymain_low3;
-  wire [1-1:0] M_mymain_butt1;
-  wire [1-1:0] M_mymain_butt2;
-  wire [1-1:0] M_mymain_butt3;
-  wire [3-1:0] M_mymain_rowOn;
-  wire [3-1:0] M_mymain_clkchoice;
-  reg [1-1:0] M_mymain_left2;
-  reg [1-1:0] M_mymain_center1;
-  reg [1-1:0] M_mymain_right0;
-  main_4 mymain (
+  wire [1-1:0] M_myState_row1;
+  wire [1-1:0] M_myState_row2;
+  wire [1-1:0] M_myState_row3;
+  wire [1-1:0] M_myState_gnd1;
+  wire [1-1:0] M_myState_gnd2;
+  wire [1-1:0] M_myState_gnd3;
+  wire [1-1:0] M_myState_totalScore;
+  reg [1-1:0] M_myState_leftBtn;
+  reg [1-1:0] M_myState_centBtn;
+  reg [1-1:0] M_myState_rightBtn;
+  state_4 myState (
     .clk(clk),
     .rst(rst),
-    .left2(M_mymain_left2),
-    .center1(M_mymain_center1),
-    .right0(M_mymain_right0),
-    .result(M_mymain_result),
-    .high1(M_mymain_high1),
-    .high2(M_mymain_high2),
-    .high3(M_mymain_high3),
-    .low1(M_mymain_low1),
-    .low2(M_mymain_low2),
-    .low3(M_mymain_low3),
-    .butt1(M_mymain_butt1),
-    .butt2(M_mymain_butt2),
-    .butt3(M_mymain_butt3),
-    .rowOn(M_mymain_rowOn),
-    .clkchoice(M_mymain_clkchoice)
+    .leftBtn(M_myState_leftBtn),
+    .centBtn(M_myState_centBtn),
+    .rightBtn(M_myState_rightBtn),
+    .row1(M_myState_row1),
+    .row2(M_myState_row2),
+    .row3(M_myState_row3),
+    .gnd1(M_myState_gnd1),
+    .gnd2(M_myState_gnd2),
+    .gnd3(M_myState_gnd3),
+    .totalScore(M_myState_totalScore)
   );
   
   always @* begin
@@ -98,17 +88,15 @@ module mojo_top_0 (
     spi_miso = 1'bz;
     spi_channel = 4'bzzzz;
     avr_rx = 1'bz;
-    M_mymain_left2 = !button;
-    M_mymain_center1 = !button2;
-    M_mymain_right0 = !button3;
-    high1 = M_mymain_high1;
-    high2 = M_mymain_high2;
-    high3 = M_mymain_high3;
-    low1 = M_mymain_low1;
-    low2 = M_mymain_low2;
-    low3 = M_mymain_low3;
-    led[0+2-:3] = M_mymain_rowOn;
-    led[5+2-:3] = M_mymain_clkchoice;
-    led[3+1-:2] = 2'h0;
+    M_myState_leftBtn = !button;
+    M_myState_centBtn = !button2;
+    M_myState_rightBtn = !button3;
+    high1 = M_myState_row1;
+    high2 = M_myState_row2;
+    high3 = M_myState_row3;
+    low1 = M_myState_gnd1;
+    low2 = M_myState_gnd2;
+    low3 = M_myState_gnd3;
+    led = M_myState_totalScore;
   end
 endmodule

@@ -4,7 +4,7 @@
    This is a temporary file and any changes made to it will be destroyed.
 */
 
-module propogate_9 (
+module propogate_11 (
     input clk,
     input rst,
     output reg [1:0] rowLit,
@@ -26,32 +26,26 @@ module propogate_9 (
   
   reg [2:0] clkSel;
   
-  wire [1-1:0] M_slowclk21_value;
-  counter_17 slowclk21 (
-    .clk(clk),
-    .rst(rst),
-    .value(M_slowclk21_value)
-  );
   wire [1-1:0] M_slowclk22_value;
-  counter_8 slowclk22 (
+  counter_10 slowclk22 (
     .clk(clk),
     .rst(rst),
     .value(M_slowclk22_value)
   );
   wire [1-1:0] M_slowclk23_value;
-  counter_18 slowclk23 (
+  counter_26 slowclk23 (
     .clk(clk),
     .rst(rst),
     .value(M_slowclk23_value)
   );
   wire [1-1:0] M_slowclk24_value;
-  counter_19 slowclk24 (
+  counter_27 slowclk24 (
     .clk(clk),
     .rst(rst),
     .value(M_slowclk24_value)
   );
   wire [1-1:0] M_slowclk25_value;
-  counter_20 slowclk25 (
+  counter_28 slowclk25 (
     .clk(clk),
     .rst(rst),
     .value(M_slowclk25_value)
@@ -66,7 +60,7 @@ module propogate_9 (
   reg [1-1:0] M_randomizer_randclkrst;
   reg [1-1:0] M_randomizer_numbregEn;
   reg [1-1:0] M_randomizer_clkregEn;
-  randomizer_21 randomizer (
+  randomizer_29 randomizer (
     .clk(clk),
     .rst(rst),
     .numSeed(M_randomizer_numSeed),
@@ -82,7 +76,7 @@ module propogate_9 (
   );
   
   wire [2-1:0] M_rowCtr_value;
-  counter_22 rowCtr (
+  counter_30 rowCtr (
     .clk(chosenClk),
     .rst(rst),
     .value(M_rowCtr_value)
