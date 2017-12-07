@@ -24,27 +24,27 @@ module main_5 (
   
   wire [1-1:0] M_button_cond1_out;
   reg [1-1:0] M_button_cond1_in;
-  button_conditioner_7 button_cond1 (
+  button_conditioner_8 button_cond1 (
     .clk(clk),
     .in(M_button_cond1_in),
     .out(M_button_cond1_out)
   );
   wire [1-1:0] M_button_cond2_out;
   reg [1-1:0] M_button_cond2_in;
-  button_conditioner_7 button_cond2 (
+  button_conditioner_8 button_cond2 (
     .clk(clk),
     .in(M_button_cond2_in),
     .out(M_button_cond2_out)
   );
   wire [1-1:0] M_button_cond3_out;
   reg [1-1:0] M_button_cond3_in;
-  button_conditioner_7 button_cond3 (
+  button_conditioner_8 button_cond3 (
     .clk(clk),
     .in(M_button_cond3_in),
     .out(M_button_cond3_out)
   );
   wire [1-1:0] M_edge_ctr_value;
-  counter_10 edge_ctr (
+  counter_11 edge_ctr (
     .clk(clk),
     .rst(rst),
     .value(M_edge_ctr_value)
@@ -58,7 +58,7 @@ module main_5 (
   wire [1-1:0] M_mypropogater_gnd2;
   wire [1-1:0] M_mypropogater_gnd3;
   wire [3-1:0] M_mypropogater_clkChoice;
-  propogate_11 mypropogater (
+  propogate_12 mypropogater (
     .clk(clk),
     .rst(rst),
     .rowLit(M_mypropogater_rowLit),
@@ -74,21 +74,21 @@ module main_5 (
   
   wire [1-1:0] M_edge_detector1_out;
   reg [1-1:0] M_edge_detector1_in;
-  edge_detector_12 edge_detector1 (
+  edge_detector_13 edge_detector1 (
     .clk(M_edge_ctr_value),
     .in(M_edge_detector1_in),
     .out(M_edge_detector1_out)
   );
   wire [1-1:0] M_edge_detector2_out;
   reg [1-1:0] M_edge_detector2_in;
-  edge_detector_12 edge_detector2 (
+  edge_detector_13 edge_detector2 (
     .clk(M_edge_ctr_value),
     .in(M_edge_detector2_in),
     .out(M_edge_detector2_out)
   );
   wire [1-1:0] M_edge_detector3_out;
   reg [1-1:0] M_edge_detector3_in;
-  edge_detector_12 edge_detector3 (
+  edge_detector_13 edge_detector3 (
     .clk(M_edge_ctr_value),
     .in(M_edge_detector3_in),
     .out(M_edge_detector3_out)
@@ -104,7 +104,7 @@ module main_5 (
   reg [8-1:0] M_myalu_a;
   reg [8-1:0] M_myalu_b;
   reg [6-1:0] M_myalu_alufn;
-  alu_15 myalu (
+  alu_7 myalu (
     .a(M_myalu_a),
     .b(M_myalu_b),
     .alufn(M_myalu_alufn),

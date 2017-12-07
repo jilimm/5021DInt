@@ -25,7 +25,8 @@ module mojo_top_0 (
     output reg high3,
     output reg low1,
     output reg low2,
-    output reg low3
+    output reg low3,
+    output reg [23:0] io_led
   );
   
   
@@ -59,7 +60,8 @@ module mojo_top_0 (
   wire [1-1:0] M_myState_gnd1;
   wire [1-1:0] M_myState_gnd2;
   wire [1-1:0] M_myState_gnd3;
-  wire [1-1:0] M_myState_totalScore;
+  wire [8-1:0] M_myState_totalScore;
+  wire [2-1:0] M_myState_result;
   reg [1-1:0] M_myState_leftBtn;
   reg [1-1:0] M_myState_centBtn;
   reg [1-1:0] M_myState_rightBtn;
@@ -75,7 +77,8 @@ module mojo_top_0 (
     .gnd1(M_myState_gnd1),
     .gnd2(M_myState_gnd2),
     .gnd3(M_myState_gnd3),
-    .totalScore(M_myState_totalScore)
+    .totalScore(M_myState_totalScore),
+    .result(M_myState_result)
   );
   
   always @* begin
@@ -97,6 +100,9 @@ module mojo_top_0 (
     low1 = M_myState_gnd1;
     low2 = M_myState_gnd2;
     low3 = M_myState_gnd3;
+    io_led[0+7-:8] = M_myState_result;
+    io_led[8+7-:8] = 8'h00;
+    io_led[16+7-:8] = 8'h00;
     led = M_myState_totalScore;
   end
 endmodule

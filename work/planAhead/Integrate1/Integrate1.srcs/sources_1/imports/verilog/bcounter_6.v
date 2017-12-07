@@ -17,28 +17,28 @@ module bcounter_6 (
   
   wire [1-1:0] M_button_cond_out;
   reg [1-1:0] M_button_cond_in;
-  button_conditioner_7 button_cond (
+  button_conditioner_8 button_cond (
     .clk(clk),
     .in(M_button_cond_in),
     .out(M_button_cond_out)
   );
   wire [1-1:0] M_button_cond2_out;
   reg [1-1:0] M_button_cond2_in;
-  button_conditioner_7 button_cond2 (
+  button_conditioner_8 button_cond2 (
     .clk(clk),
     .in(M_button_cond2_in),
     .out(M_button_cond2_out)
   );
   wire [1-1:0] M_button_cond3_out;
   reg [1-1:0] M_button_cond3_in;
-  button_conditioner_7 button_cond3 (
+  button_conditioner_8 button_cond3 (
     .clk(clk),
     .in(M_button_cond3_in),
     .out(M_button_cond3_out)
   );
   reg [7:0] M_ctr_d, M_ctr_q = 1'h0;
   wire [1-1:0] M_edge_ctr_value;
-  counter_10 edge_ctr (
+  counter_11 edge_ctr (
     .clk(clk),
     .rst(rst),
     .value(M_edge_ctr_value)
@@ -49,21 +49,21 @@ module bcounter_6 (
   
   wire [1-1:0] M_edge_detector_out;
   reg [1-1:0] M_edge_detector_in;
-  edge_detector_12 edge_detector (
+  edge_detector_13 edge_detector (
     .clk(M_edge_ctr_value),
     .in(M_edge_detector_in),
     .out(M_edge_detector_out)
   );
   wire [1-1:0] M_edge_detector2_out;
   reg [1-1:0] M_edge_detector2_in;
-  edge_detector_12 edge_detector2 (
+  edge_detector_13 edge_detector2 (
     .clk(M_edge_ctr_value),
     .in(M_edge_detector2_in),
     .out(M_edge_detector2_out)
   );
   wire [1-1:0] M_edge_detector3_out;
   reg [1-1:0] M_edge_detector3_in;
-  edge_detector_12 edge_detector3 (
+  edge_detector_13 edge_detector3 (
     .clk(M_edge_ctr_value),
     .in(M_edge_detector3_in),
     .out(M_edge_detector3_out)

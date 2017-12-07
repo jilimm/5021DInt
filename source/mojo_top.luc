@@ -19,7 +19,8 @@ module mojo_top (
     output high3,
     output low1,
     output low2,
-    output low3
+    output low3,
+    output io_led[3][8]
   ) {
   
   sig rst;                  // reset signal
@@ -65,7 +66,11 @@ module mojo_top (
     low2 = myState.gnd2; //mymain.low2;
     low3 = myState.gnd3; //mymain.low3;
     
-    led[1:0] = myState.result; //to check the result of each round      // display results on the mojo LED
-    led[7:2] = myState.totalScore; //for total score of all rounds
+    io_led[0] = myState.result;
+    io_led[1] = 8b0;
+    io_led[2] = 8b0;
+    led = myState.totalScore;
+   // led[1:0] = myState.result; //to check the result of each round      // display results on the mojo LED
+   // led[7:2] =  //for total score of all rounds
   }
 }

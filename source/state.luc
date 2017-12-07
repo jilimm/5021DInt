@@ -11,7 +11,7 @@ module state (
     output gnd1,
     output gnd2,
     output gnd3,
-    output totalScore[6],
+    output totalScore[8],
     output result[2]
     
 
@@ -34,18 +34,20 @@ module state (
   alu myalu;
   
 //  bintoAscii translater;
-  sig currentRow[3];
-  sig score[2];
-  sig out[8];
-  sig rowResult[2];
-  sig highscore[8];
-  sig z;
-  sig v;
-  sig n;
+  sig currentRow[3]; //what row is being lighted up now?     
+  sig rowResult[2]; //what is the score of each round?
+ // sig score[8];     //score of the user throughout the game
+  sig highscore[8]; //current High Score
+//  sig out[8];   
+      
   always {
-    score = 0;
     result = 8d0;
     rowResult=2b00; //rowResult is assumed to be 0 unless specified otherwise
+    
+    //setting up my register so I can rmb values
+    scoreSum.d = scoreSum.q; 
+    totalScore = scoreSum.q; //total score is the out put of score sum dff
+    
     //setting up inpts of main state and button press
     mainState.left2 = leftBtn;
     mainState.right0 = rightBtn;
@@ -53,6 +55,12 @@ module state (
     bttnpress.button = leftBtn;
     bttnpress.button2 = centBtn;
     bttnpress.button3 = rightBtn;
+    
+    //setting up alu
+    myalu.a=0;
+    myalu.b=0;
+    myalu.alufn=0;
+    
     
     //******connect main state output of row On to current row
     currentRow = mainState.rowOn;
@@ -81,15 +89,19 @@ module state (
         if (currentRow==RowNumb.ROW2 && mainState.result==2b01){
           rowResult = 2b01;  
           state.d = state.SUMUP;
-            
-            
         }
         else if (currentRow==RowNumb.ROW3 && mainState.result==2b10){
           rowResult = 2b10;  
-          state.d = state.SUMUP;
-            
-          }
+          state.d = state.SUMUP;  
+         }
+        
+        else if (currentRow==RowNumb.ROW3 && mainState.result==2b00){
+          rowResult = 2b00;
+          state.d = state.SUMUP; //miss everything dont add anything
+         }
+        //THIS CODE STOPS THE GAME IF YOU GET SHIT WRONG
           /*
+        
         else if (currentRow==RowNumb.ROW4 && mainState.result==2b00){
              rowResult==2b00;
             state.d =state.HALT; //got it wrong or missed everything //GAME OVER
@@ -98,16 +110,17 @@ module state (
         
               
         state.SUMUP:
+      //add score of this round to the score of your game
         myalu.alufn = 6b000000;        
         myalu.a= rowResult;
-        myalu.b= mainout;
-
-        out = myalu.alu;
-        z=myalu.z;
-        v=myalu.v;
-        n=myalu.n;
-        result = out[0]+out[1]*2+out[2]*4+out[3]*8+out[4]*16+out[5]*32+out[6]*64+out[7]*128;
+        myalu.b= scoreSum.q;
+        scoreSum.d = myalu.alu; //write the new score into the dff so i can store it
+        
+        
+        //this code converts the score to something that can be outputted in seven seg LED
+        /*
         seg.values[3]=11;
+        result = out[0]+out[1]*2+out[2]*4+out[3]*8+out[4]*16+out[5]*32+out[6]*64+out[7]*128;
         translater.num = result;
         seg.values[2]=translater.ascii[2];
         seg.values[1]=translater.ascii[1];
