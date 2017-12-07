@@ -146,9 +146,6 @@ module propogate (
         
         RowNumb.ROW4:
       //no rows light up (pause to give user time to react) 
-        
-        
-        
         seed.d = seed.q + 1;
           clkseed.d = clkseed.q + 1;
           randomizer.randnumNext = 1; //generate random number seq

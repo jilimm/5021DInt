@@ -59,7 +59,7 @@ module mojo_top (
     low2 = mymain.low2;
     low3 = mymain.low3;
     
-    led[2:0] = mymain.rowOn;      // connect the counter to the LEDs
+    led[1:0] = mymain.result;      // connect the counter to the LEDs
     led[7:5] = mymain.clkchoice;
     led[4:3] = 2b0;
   }
