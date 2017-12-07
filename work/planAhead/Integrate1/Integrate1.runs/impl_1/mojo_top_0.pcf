@@ -1,5 +1,5 @@
 //! **************************************************************************
-// Written by: Map P.20131013 on Fri Dec 08 05:08:05 2017
+// Written by: Map P.20131013 on Fri Dec 08 05:13:30 2017
 //! **************************************************************************
 
 SCHEMATIC START;
@@ -36,7 +36,10 @@ COMP "avr_tx" LOCATE = SITE "P55" LEVEL 1;
 COMP "button" LOCATE = SITE "P58" LEVEL 1;
 COMP "spi_ss" LOCATE = SITE "P48" LEVEL 1;
 COMP "spi_mosi" LOCATE = SITE "P44" LEVEL 1;
-TIMEGRP clk = BEL "myState/M_state_q" BEL "myState/mainState/score/M_regs_q_0"
+TIMEGRP clk = BEL "myState/M_state_q" BEL "myState/M_state_q_1" BEL
+        "myState/scoreSum/M_regs_q_4" BEL "myState/scoreSum/M_regs_q_3" BEL
+        "myState/scoreSum/M_regs_q_2" BEL "myState/scoreSum/M_regs_q_1" BEL
+        "myState/scoreSum/M_regs_q_0" BEL "myState/mainState/score/M_regs_q_0"
         BEL "myState/mainState/score/M_regs_q_1" BEL
         "myState/mainState/mypropogater/slowclk25/M_ctr_q_0" BEL
         "myState/mainState/mypropogater/slowclk25/M_ctr_q_1" BEL
@@ -113,7 +116,7 @@ TIMEGRP clk = BEL "myState/M_state_q" BEL "myState/mainState/score/M_regs_q_0"
         "myState/mainState/mypropogater/randomizer/clk_gen/M_z_q_13" BEL
         "myState/mainState/mypropogater/randomizer/clk_gen/M_z_q_5" BEL
         "myState/mainState/mypropogater/randomizer/clk_gen/M_w_q_21" BEL
-        "myState/bttnpress/M_ctr_q_0" BEL
+        "myState/bttnpress/M_ctr_q_0" BEL "myState/bttnpress/M_ctr_q_0_1" BEL
         "myState/bttnpress/edge_ctr/M_ctr_q_22" BEL
         "myState/bttnpress/edge_ctr/M_ctr_q_21" BEL
         "myState/bttnpress/edge_ctr/M_ctr_q_20" BEL
@@ -188,14 +191,14 @@ TIMEGRP clk = BEL "myState/M_state_q" BEL "myState/mainState/score/M_regs_q_0"
         "clk_BUFGP/BUFG" BEL "reset_cond3/M_stage_q_3" BEL
         "reset_cond3/M_stage_q_2" BEL "reset_cond3/M_stage_q_1" BEL
         "reset_cond3/M_stage_q_0" BEL "reset_cond3/M_stage_q_3_1" BEL
-        "seg/ctr/M_ctr_q_2" BEL "seg/ctr/M_ctr_q_0" BEL "seg/ctr/M_ctr_q_1"
-        BEL "seg/ctr/M_ctr_q_5" BEL "seg/ctr/M_ctr_q_3" BEL
-        "seg/ctr/M_ctr_q_4" BEL "seg/ctr/M_ctr_q_6" BEL "seg/ctr/M_ctr_q_7"
-        BEL "seg/ctr/M_ctr_q_10" BEL "seg/ctr/M_ctr_q_8" BEL
-        "seg/ctr/M_ctr_q_9" BEL "seg/ctr/M_ctr_q_11" BEL "seg/ctr/M_ctr_q_12"
-        BEL "seg/ctr/M_ctr_q_15" BEL "seg/ctr/M_ctr_q_13" BEL
-        "seg/ctr/M_ctr_q_14" BEL "seg/ctr/M_ctr_q_17" BEL
-        "seg/ctr/M_ctr_q_16";
+        "reset_cond3/M_stage_q_3_2" BEL "seg/ctr/M_ctr_q_2" BEL
+        "seg/ctr/M_ctr_q_0" BEL "seg/ctr/M_ctr_q_1" BEL "seg/ctr/M_ctr_q_5"
+        BEL "seg/ctr/M_ctr_q_3" BEL "seg/ctr/M_ctr_q_4" BEL
+        "seg/ctr/M_ctr_q_6" BEL "seg/ctr/M_ctr_q_7" BEL "seg/ctr/M_ctr_q_10"
+        BEL "seg/ctr/M_ctr_q_8" BEL "seg/ctr/M_ctr_q_9" BEL
+        "seg/ctr/M_ctr_q_11" BEL "seg/ctr/M_ctr_q_12" BEL "seg/ctr/M_ctr_q_15"
+        BEL "seg/ctr/M_ctr_q_13" BEL "seg/ctr/M_ctr_q_14" BEL
+        "seg/ctr/M_ctr_q_17" BEL "seg/ctr/M_ctr_q_16";
 TS_clk = PERIOD TIMEGRP "clk" 50 MHz HIGH 50%;
 SCHEMATIC END;
 

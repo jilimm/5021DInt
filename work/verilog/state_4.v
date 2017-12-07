@@ -71,7 +71,7 @@ module state_4 (
   wire [1-1:0] M_mainState_low1;
   wire [1-1:0] M_mainState_low2;
   wire [1-1:0] M_mainState_low3;
-  wire [2-1:0] M_mainState_rowOn;
+  wire [4-1:0] M_mainState_rowOn;
   reg [1-1:0] M_mainState_rst;
   reg [1-1:0] M_mainState_left2;
   reg [1-1:0] M_mainState_center1;

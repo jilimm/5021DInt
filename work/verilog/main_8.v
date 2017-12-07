@@ -24,7 +24,7 @@ module main_8 (
     output reg low1,
     output reg low2,
     output reg low3,
-    output reg [1:0] rowOn
+    output reg [3:0] rowOn
   );
   
   
@@ -144,8 +144,6 @@ module main_8 (
     .n(M_myalu_n),
     .alu(M_myalu_alu)
   );
-  
-  reg [1:0] result1;
   
   always @* begin
     M_cent_d = M_cent_q;
