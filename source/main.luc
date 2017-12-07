@@ -72,7 +72,7 @@ module main (
     //instantiate
     //setting up output
     result = score.out;
-    score.data = 2b11;
+    score.data = 2b00;
     
     //connect my register input to the
    
@@ -116,25 +116,25 @@ module main (
                   score.en=1;
                   }
               else{
-                score.data = 2b11;
+                score.data = 2b00;
                 score.en=1;
                   }
       
       //will default to 10 when goes to row 3
     }
       else if (mypropogater.rowLit==RowNumb.ROW3){
-              if (score.out==2b11 && myalu.alu[0]){
+              if (score.out==2b00 && myalu.alu[0]){
                   score.en=1;
                   score.data=2b10;
                 }
               else{
                   score.en=0;
-                  score.data=2b11;
+                  score.data=2b00;
               }
     }
       
       else{
-              result1 = 2b11; //person gets 0 points // when its not at row 2 or 3 i dont write into my register at all who gives a fuck?
+              result1 = 2b00; //person gets 0 points // when its not at row 2 or 3 i dont write into my register at all who gives a fuck?
                left.d=0;
                right.d=0;
                cent.d=0;
