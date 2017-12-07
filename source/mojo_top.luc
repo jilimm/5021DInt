@@ -95,10 +95,8 @@ module mojo_top (
     seg.values[2] = myState.scoreDisplay[2];
     seg.values[3] = myState.scoreDisplay[3];
     
-    led[0] = myState.startbutt; //bttn press
-    led[2] = myState.test2; //at halt
-    led[1] = myState.test1; //at main
-    led[7:3] = myState.totalScore[5:0];
+    led[1:0] = myState.rowresult;
+    led[7:2] = myState.totalScore[6:0];
     io_led[0] = myState.buttonCounter;
     io_led[1] = myState.buttonReg;
     io_led[2] = 8b0;

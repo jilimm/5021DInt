@@ -158,10 +158,8 @@ module mojo_top_0 (
     M_seg_values[4+3-:4] = M_myState_scoreDisplay[1+0-:1];
     M_seg_values[8+3-:4] = M_myState_scoreDisplay[2+0-:1];
     M_seg_values[12+3-:4] = M_myState_scoreDisplay[3+0-:1];
-    led[0+0-:1] = M_myState_startbutt;
-    led[2+0-:1] = M_myState_test2;
-    led[1+0-:1] = M_myState_test1;
-    led[3+4-:5] = M_myState_totalScore[0+5-:6];
+    led[0+1-:2] = M_myState_rowresult;
+    led[2+5-:6] = M_myState_totalScore[0+6-:7];
     io_led[0+7-:8] = M_myState_buttonCounter;
     io_led[8+7-:8] = M_myState_buttonReg;
     io_led[16+7-:8] = 8'h00;

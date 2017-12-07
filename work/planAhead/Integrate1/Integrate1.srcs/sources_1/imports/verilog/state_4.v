@@ -141,11 +141,14 @@ module state_4 (
   
   reg anybttnStart;
   
+  reg fromMain;
+  
   always @* begin
     M_state_d = M_state_q;
     
     test1 = 1'h0;
     test2 = 1'h0;
+    fromMain = 1'h0;
     buttonCounter = M_btnCounter_count;
     buttonReg = M_btnReg_out;
     startbutt = 1'h0;
@@ -211,9 +214,12 @@ module state_4 (
           M_myalu_b = M_scoreSum_out;
           M_scoreSum_data = M_myalu_alu;
           M_scoreSum_en = 1'h1;
-        end
-        if (M_mainState_result == 2'h0 && M_mainState_rowOn == 4'ha) begin
+          fromMain = 1'h1;
           M_state_d = HALT_state;
+        end else begin
+          if (M_mainState_result == 2'h0 && M_mainState_rowOn == 4'ha) begin
+            M_state_d = HALT_state;
+          end
         end
         result = M_scoreSum_out[0+0-:1] + M_scoreSum_out[1+0-:1] * 2'h2 + M_scoreSum_out[2+0-:1] * 3'h4 + M_scoreSum_out[3+0-:1] * 4'h8 + M_scoreSum_out[4+0-:1] * 5'h10 + M_scoreSum_out[5+0-:1] * 6'h20 + M_scoreSum_out[6+0-:1] * 7'h40 + M_scoreSum_out[7+0-:1] * 8'h80;
         M_translater_num = result;
@@ -223,6 +229,7 @@ module state_4 (
         scoreDisplay[0+0-:1] = M_translater_ascii[0+0-:1];
       end
       HALT_state: begin
+        M_scoreSum_en = 1'h0;
         test2 = 1'h1;
         M_btnCounter_button = leftBtn;
         M_btnCounter_button2 = rightBtn;
@@ -241,12 +248,14 @@ module state_4 (
         gnd1 = 1'h1;
         gnd2 = 1'h1;
         gnd3 = 1'h1;
+        if (fromMain == 1'h1) begin
+          M_state_d = MAIN_state;
+        end
         if (M_btnReg_out < M_btnCounter_count) begin
           anybttnStart = 1'h1;
         end else begin
           anybttnStart = 1'h0;
         end
-        M_scoreSum_en = 1'h0;
         if (anybttnStart == 1'h1) begin
           M_mainState_rst = 1'h1;
           M_btnReg_data = M_btnCounter_count;

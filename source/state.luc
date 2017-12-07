@@ -17,14 +17,14 @@ module state (
     output gnd1,
     output gnd2,
     output gnd3,
-    output totalScore[8],
-    output rowresult[2],
-    output startbutt,
+    output totalScore[8], //totalScore of the player
+    output rowresult[2], //display result after 1 round of propogation
+    output startbutt, //press any button to start game
     output scoreDisplay[4], //display to the seven seg
-    output test1,
-    output test2,
-    output buttonCounter[8],
-    output buttonReg[8]
+    output test1, //at main state
+    output test2, // at halt state
+    output buttonCounter[8], //counts number of button presses
+    output buttonReg[8] //counts previous number of button press
   ) {
 
   .clk(clk) {
@@ -44,20 +44,21 @@ module state (
   binToAscii translater;
   sig result;
   sig anybttnStart;
+  sig fromMain;
     
 
   always {
   //  rowResult=2b00; //rowResult is assumed to be 0 unless specified otherwise
     test1=0;
     test2=0;
-    
+    fromMain=0;
     buttonCounter = btnCounter.count;
     buttonReg = btnReg.out;
     //instantiate
     startbutt=0;
     
     totalScore = scoreSum.out;
-    scoreSum.data = 8b0; //am i always re-setting my register???????
+    scoreSum.data = 8b0; 
     scoreSum.en=0;
     
     mainState.rst = rst;
@@ -82,7 +83,7 @@ module state (
     myalu.b=0;
     myalu.alufn=0;
     
-    //instantiating outputs of state
+    //instantiating outputs of LED matrix
     row1=0; 
     row2=0;
     row3=0;
@@ -96,7 +97,6 @@ module state (
     gnd1=1;
     gnd2=1;
     gnd3=1; //put ground to high to deactivate the columns
-    
 
     //setting up my seven_seg output
     //****CURRENTLY DISPLAYS CURRENT SCORE
@@ -108,8 +108,10 @@ module state (
     scoreDisplay[0]=0;
     
     case (state.q){
+    //main state starts propogation
       state.MAIN:
       test1=1;
+        
         //dont count button press in main state
          btnCounter.button = 0;
           btnCounter.button2 = 0;
@@ -138,13 +140,15 @@ module state (
         
         if (mainState.result!=0 && mainState.rowOn==RowNumb.ROW11){ //you have a result
             myalu.alufn = Inst.ADD;
-            myalu.a= mainState.result; //this is provided the mainstate clock has stopped
-            myalu.b= scoreSum.out; //user's total score so far
-            scoreSum.data = myalu.alu; //cnt new score into register input
-            scoreSum.en =1;
+            myalu.a= mainState.result; //points gained from 1 propogation cycle
+            myalu.b= scoreSum.out; //current score of user
+            scoreSum.data = myalu.alu; //connect new score into register input
+            scoreSum.en =1; //write enable score register to store this new data
+            fromMain=1;
+            state.d = state.HALT; //halting works fine but doesnt work if its main
           //continue to main state (works without if loop below)
         } 
-        if (mainState.result==2b0 && mainState.rowOn==RowNumb.ROW11){//you missed the sequence or you entered it wrongly 
+        else if (mainState.result==2b0 && mainState.rowOn==RowNumb.ROW11){//you missed the sequence or you entered it wrongly 
             state.d = state.HALT;
           }
        
@@ -157,6 +161,7 @@ module state (
         
         
         state.HALT:
+      scoreSum.en=0; //dont write into my register
       test2=1;
        btnCounter.button = leftBtn;
        btnCounter.button2 = rightBtn;
@@ -177,6 +182,15 @@ module state (
       gnd2=1;
       gnd3=1;
         //check register (previous number of button presses) with the current number of button presses 
+        /*  
+        if (fromMain==1){
+           state.d = state.MAIN;
+
+          }
+        */
+        if (fromMain==1){
+            state.d = state.MAIN;
+          }
          if (btnReg.out < btnCounter.count){
             anybttnStart=1; //more buttons have been pressed
         }
@@ -184,7 +198,7 @@ module state (
             anybttnStart=0;
         }
         //scoreSum.data=scoreSum.out;
-        scoreSum.en=0; //dont write into my register
+        
         if (anybttnStart==1) { //buttonpress is remembered :(
             mainState.rst=1;
             btnReg.data = btnCounter.count;
