@@ -17,35 +17,17 @@ module main_7 (
     output reg low1,
     output reg low2,
     output reg low3,
-    output reg [1:0] rowOn
+    output reg [1:0] rowOn,
+    input mainState
   );
   
   
   
-  wire [1-1:0] M_button_cond1_out;
-  reg [1-1:0] M_button_cond1_in;
-  button_conditioner_9 button_cond1 (
-    .clk(clk),
-    .in(M_button_cond1_in),
-    .out(M_button_cond1_out)
-  );
-  wire [1-1:0] M_button_cond2_out;
-  reg [1-1:0] M_button_cond2_in;
-  button_conditioner_9 button_cond2 (
-    .clk(clk),
-    .in(M_button_cond2_in),
-    .out(M_button_cond2_out)
-  );
-  wire [1-1:0] M_button_cond3_out;
-  reg [1-1:0] M_button_cond3_in;
-  button_conditioner_9 button_cond3 (
-    .clk(clk),
-    .in(M_button_cond3_in),
-    .out(M_button_cond3_out)
-  );
+  reg mainControl;
+  
   wire [1-1:0] M_edge_ctr_value;
-  counter_12 edge_ctr (
-    .clk(clk),
+  counter_15 edge_ctr (
+    .clk(mainControl),
     .rst(rst),
     .value(M_edge_ctr_value)
   );
@@ -58,9 +40,11 @@ module main_7 (
   wire [1-1:0] M_mypropogater_gnd2;
   wire [1-1:0] M_mypropogater_gnd3;
   wire [3-1:0] M_mypropogater_clkChoice;
-  propogate_20 mypropogater (
-    .clk(clk),
+  reg [1-1:0] M_mypropogater_propState;
+  propogate_17 mypropogater (
+    .clk(mainControl),
     .rst(rst),
+    .propState(M_mypropogater_propState),
     .rowLit(M_mypropogater_rowLit),
     .numSeq(M_mypropogater_numSeq),
     .row1(M_mypropogater_row1),
@@ -71,41 +55,62 @@ module main_7 (
     .gnd3(M_mypropogater_gnd3),
     .clkChoice(M_mypropogater_clkChoice)
   );
+  reg [0:0] M_left_d, M_left_q = 1'h0;
+  reg [0:0] M_right_d, M_right_q = 1'h0;
+  reg [0:0] M_cent_d, M_cent_q = 1'h0;
   
+  wire [1-1:0] M_button_cond1_out;
+  reg [1-1:0] M_button_cond1_in;
+  button_conditioner_9 button_cond1 (
+    .clk(M_edge_ctr_value),
+    .in(M_button_cond1_in),
+    .out(M_button_cond1_out)
+  );
+  wire [1-1:0] M_button_cond2_out;
+  reg [1-1:0] M_button_cond2_in;
+  button_conditioner_9 button_cond2 (
+    .clk(M_edge_ctr_value),
+    .in(M_button_cond2_in),
+    .out(M_button_cond2_out)
+  );
+  wire [1-1:0] M_button_cond3_out;
+  reg [1-1:0] M_button_cond3_in;
+  button_conditioner_9 button_cond3 (
+    .clk(M_edge_ctr_value),
+    .in(M_button_cond3_in),
+    .out(M_button_cond3_out)
+  );
   wire [1-1:0] M_edge_detector1_out;
   reg [1-1:0] M_edge_detector1_in;
-  edge_detector_13 edge_detector1 (
+  edge_detector_12 edge_detector1 (
     .clk(M_edge_ctr_value),
     .in(M_edge_detector1_in),
     .out(M_edge_detector1_out)
   );
   wire [1-1:0] M_edge_detector2_out;
   reg [1-1:0] M_edge_detector2_in;
-  edge_detector_13 edge_detector2 (
+  edge_detector_12 edge_detector2 (
     .clk(M_edge_ctr_value),
     .in(M_edge_detector2_in),
     .out(M_edge_detector2_out)
   );
   wire [1-1:0] M_edge_detector3_out;
   reg [1-1:0] M_edge_detector3_in;
-  edge_detector_13 edge_detector3 (
+  edge_detector_12 edge_detector3 (
     .clk(M_edge_ctr_value),
     .in(M_edge_detector3_in),
     .out(M_edge_detector3_out)
   );
-  wire [2-1:0] M_resultreg_out;
-  reg [1-1:0] M_resultreg_en;
-  reg [2-1:0] M_resultreg_data;
-  reg2bit_24 resultreg (
+  wire [2-1:0] M_score_out;
+  reg [1-1:0] M_score_en;
+  reg [2-1:0] M_score_data;
+  reg2bit_24 score (
     .clk(M_edge_ctr_value),
     .rst(rst),
-    .en(M_resultreg_en),
-    .data(M_resultreg_data),
-    .out(M_resultreg_out)
+    .en(M_score_en),
+    .data(M_score_data),
+    .out(M_score_out)
   );
-  reg [0:0] M_left_d, M_left_q = 1'h0;
-  reg [0:0] M_right_d, M_right_q = 1'h0;
-  reg [0:0] M_cent_d, M_cent_q = 1'h0;
   
   wire [1-1:0] M_myalu_z;
   wire [1-1:0] M_myalu_v;
@@ -129,13 +134,16 @@ module main_7 (
     M_left_d = M_left_q;
     M_right_d = M_right_q;
     
+    mainControl = clk && mainState;
     M_myalu_alufn = 6'h00;
     M_myalu_a = 8'h00;
     M_myalu_b = 8'h00;
     result = 2'h0;
     rowOn = M_mypropogater_rowLit;
-    result = M_resultreg_out;
-    M_resultreg_data = 2'h0;
+    M_mypropogater_propState = 1'h1;
+    result = M_score_out;
+    M_score_data = 2'h0;
+    M_score_en = 1'h1;
     high1 = M_mypropogater_row1;
     high2 = M_mypropogater_row2;
     high3 = M_mypropogater_row3;
@@ -162,33 +170,41 @@ module main_7 (
     M_myalu_a[1+0-:1] = M_cent_q;
     M_myalu_a[0+0-:1] = M_right_q;
     M_myalu_b[0+2-:3] = M_mypropogater_numSeq;
-    if (M_mypropogater_rowLit == 2'h2) begin
-      if (M_myalu_alu[0+0-:1]) begin
-        M_resultreg_data = 2'h1;
-        M_resultreg_en = 1'h1;
+    if (M_left_q == 1'h0 && M_right_q == 1'h0 && M_cent_q == 1'h0) begin
+      if (M_mypropogater_rowLit == 2'h3) begin
+        M_score_data = 2'h3;
+        M_score_en = 1'h1;
+        M_mypropogater_propState = 1'h0;
       end else begin
-        M_resultreg_data = 2'h0;
-        M_resultreg_en = 1'h1;
+        M_score_data = 2'h0;
+        M_score_en = 1'h1;
       end
     end else begin
-      if (M_mypropogater_rowLit == 2'h3) begin
-        if (M_resultreg_out == 2'h0 && M_myalu_alu[0+0-:1]) begin
-          M_resultreg_en = 1'h1;
-          M_resultreg_data = 2'h2;
+      if (M_myalu_alu[0+0-:1]) begin
+        if (M_mypropogater_rowLit == 2'h1) begin
+          M_score_data = 2'h1;
+          M_score_en = 1'h1;
         end else begin
-          M_resultreg_en = 1'h0;
+          if (M_mypropogater_rowLit == 2'h2) begin
+            M_score_data = 2'h2;
+            M_score_en = 1'h1;
+          end else begin
+            M_score_data = 2'h3;
+            M_score_en = 1'h1;
+          end
         end
       end else begin
-        M_resultreg_data = 2'h0;
-        M_left_d = 1'h0;
-        M_right_d = 1'h0;
-        M_cent_d = 1'h0;
-        M_resultreg_en = 1'h1;
+        M_score_data = 2'h3;
+        M_score_en = 1'h1;
       end
+      M_mypropogater_propState = 1'h0;
+      M_left_d = 1'h0;
+      M_right_d = 1'h0;
+      M_cent_d = 1'h0;
     end
   end
   
-  always @(posedge M_edge_ctr_value) begin
+  always @(posedge mainControl) begin
     if (rst == 1'b1) begin
       M_left_q <= 1'h0;
       M_right_q <= 1'h0;

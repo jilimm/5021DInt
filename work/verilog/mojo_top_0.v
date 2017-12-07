@@ -62,6 +62,12 @@ module mojo_top_0 (
   wire [1-1:0] M_myState_gnd3;
   wire [8-1:0] M_myState_totalScore;
   wire [2-1:0] M_myState_result;
+  wire [1-1:0] M_myState_startbutt;
+  wire [1-1:0] M_myState_main;
+  wire [1-1:0] M_myState_halt;
+  wire [1-1:0] M_myState_main1;
+  wire [1-1:0] M_myState_main2;
+  wire [1-1:0] M_myState_main3;
   reg [1-1:0] M_myState_leftBtn;
   reg [1-1:0] M_myState_centBtn;
   reg [1-1:0] M_myState_rightBtn;
@@ -78,7 +84,13 @@ module mojo_top_0 (
     .gnd2(M_myState_gnd2),
     .gnd3(M_myState_gnd3),
     .totalScore(M_myState_totalScore),
-    .result(M_myState_result)
+    .result(M_myState_result),
+    .startbutt(M_myState_startbutt),
+    .main(M_myState_main),
+    .halt(M_myState_halt),
+    .main1(M_myState_main1),
+    .main2(M_myState_main2),
+    .main3(M_myState_main3)
   );
   
   always @* begin
@@ -100,10 +112,16 @@ module mojo_top_0 (
     low1 = M_myState_gnd1;
     low2 = M_myState_gnd2;
     low3 = M_myState_gnd3;
-    led = M_myState_totalScore;
+    led = M_myState_startbutt;
     io_led[16+0+0-:1] = M_myState_result[0+0-:1];
     io_led[16+1+0-:1] = M_myState_result[1+0-:1];
     io_led[16+2+5-:6] = 6'h00;
+    led[0+0-:1] = M_myState_main;
+    led[1+0-:1] = M_myState_main1;
+    led[2+0-:1] = M_myState_main2;
+    led[3+0-:1] = M_myState_main3;
+    led[4+0-:1] = M_myState_halt;
+    led[7+0-:1] = M_myState_startbutt;
     io_led[8+0+7-:8] = 8'h00;
     io_led[0+0+7-:8] = 8'h00;
   end

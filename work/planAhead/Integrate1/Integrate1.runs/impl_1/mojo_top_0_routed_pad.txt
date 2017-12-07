@@ -1,7 +1,7 @@
 Release 14.7 - par P.20131013 (nt64)
 Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
-Thu Dec 07 19:22:25 2017
+Fri Dec 08 00:04:21 2017
 
 
 INFO: The IO information is provided in three file formats as part of the Place and Route (PAR) process.  These formats are:
@@ -114,10 +114,10 @@ Pinout by Pin Number:
 |P92       |io_led[20] |IOB      |IO_L41N_GCLK8_1           |OUTPUT   |LVCMOS25*  |1             |12        |SLOW     |           |         |       |UNLOCATED |NO         |NONE            |
 |P93       |io_led[13] |IOB      |IO_L41P_GCLK9_IRDY1_1     |OUTPUT   |LVCMOS25*  |1             |12        |SLOW     |           |         |       |UNLOCATED |NO         |NONE            |
 |P94       |io_led[21] |IOB      |IO_L40N_GCLK10_1          |OUTPUT   |LVCMOS25*  |1             |12        |SLOW     |           |         |       |UNLOCATED |NO         |NONE            |
-|P95       |io_led[17] |IOB      |IO_L40P_GCLK11_1          |OUTPUT   |LVCMOS25*  |1             |12        |SLOW     |           |         |       |UNLOCATED |NO         |NONE            |
+|P95       |io_led[14] |IOB      |IO_L40P_GCLK11_1          |OUTPUT   |LVCMOS25*  |1             |12        |SLOW     |           |         |       |UNLOCATED |NO         |NONE            |
 |P96       |           |         |GND                       |         |           |              |          |         |           |         |       |          |           |                |
-|P97       |io_led[14] |IOB      |IO_L34N_1                 |OUTPUT   |LVCMOS25*  |1             |12        |SLOW     |           |         |       |UNLOCATED |NO         |NONE            |
-|P98       |io_led[16] |IOB      |IO_L34P_1                 |OUTPUT   |LVCMOS25*  |1             |12        |SLOW     |           |         |       |UNLOCATED |NO         |NONE            |
+|P97       |io_led[17] |IOB      |IO_L34N_1                 |OUTPUT   |LVCMOS25*  |1             |12        |SLOW     |           |         |       |UNLOCATED |YES        |NONE            |
+|P98       |io_led[16] |IOB      |IO_L34P_1                 |OUTPUT   |LVCMOS25*  |1             |12        |SLOW     |           |         |       |UNLOCATED |YES        |NONE            |
 |P99       |io_led[23] |IOB      |IO_L33N_1                 |OUTPUT   |LVCMOS25*  |1             |12        |SLOW     |           |         |       |UNLOCATED |NO         |NONE            |
 |P100      |io_led[15] |IOB      |IO_L33P_1                 |OUTPUT   |LVCMOS25*  |1             |12        |SLOW     |           |         |       |UNLOCATED |NO         |NONE            |
 |P101      |io_led[22] |IOB      |IO_L32N_1                 |OUTPUT   |LVCMOS25*  |1             |12        |SLOW     |           |         |       |UNLOCATED |NO         |NONE            |

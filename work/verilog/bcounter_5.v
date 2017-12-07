@@ -10,7 +10,7 @@ module bcounter_5 (
     input button,
     input button2,
     input button3,
-    output reg [7:0] bttnPress
+    output reg bttnPress
   );
   
   
@@ -36,9 +36,30 @@ module bcounter_5 (
     .in(M_button_cond3_in),
     .out(M_button_cond3_out)
   );
-  reg [7:0] M_ctr_d, M_ctr_q = 1'h0;
+  wire [1-1:0] M_edge_detector_out;
+  reg [1-1:0] M_edge_detector_in;
+  edge_detector_12 edge_detector (
+    .clk(clk),
+    .in(M_edge_detector_in),
+    .out(M_edge_detector_out)
+  );
+  wire [1-1:0] M_edge_detector2_out;
+  reg [1-1:0] M_edge_detector2_in;
+  edge_detector_12 edge_detector2 (
+    .clk(clk),
+    .in(M_edge_detector2_in),
+    .out(M_edge_detector2_out)
+  );
+  wire [1-1:0] M_edge_detector3_out;
+  reg [1-1:0] M_edge_detector3_in;
+  edge_detector_12 edge_detector3 (
+    .clk(clk),
+    .in(M_edge_detector3_in),
+    .out(M_edge_detector3_out)
+  );
+  reg [0:0] M_ctr_d, M_ctr_q = 1'h0;
   wire [1-1:0] M_edge_ctr_value;
-  counter_12 edge_ctr (
+  counter_15 edge_ctr (
     .clk(clk),
     .rst(rst),
     .value(M_edge_ctr_value)
@@ -47,27 +68,6 @@ module bcounter_5 (
   reg [0:0] M_right_d, M_right_q = 1'h0;
   reg [0:0] M_cent_d, M_cent_q = 1'h0;
   
-  wire [1-1:0] M_edge_detector_out;
-  reg [1-1:0] M_edge_detector_in;
-  edge_detector_13 edge_detector (
-    .clk(M_edge_ctr_value),
-    .in(M_edge_detector_in),
-    .out(M_edge_detector_out)
-  );
-  wire [1-1:0] M_edge_detector2_out;
-  reg [1-1:0] M_edge_detector2_in;
-  edge_detector_13 edge_detector2 (
-    .clk(M_edge_ctr_value),
-    .in(M_edge_detector2_in),
-    .out(M_edge_detector2_out)
-  );
-  wire [1-1:0] M_edge_detector3_out;
-  reg [1-1:0] M_edge_detector3_in;
-  edge_detector_13 edge_detector3 (
-    .clk(M_edge_ctr_value),
-    .in(M_edge_detector3_in),
-    .out(M_edge_detector3_out)
-  );
   
   always @* begin
     M_cent_d = M_cent_q;

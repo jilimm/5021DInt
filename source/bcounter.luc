@@ -5,7 +5,7 @@ module bcounter (
     input button,    // button input
     input button2,
     input button3,
-    output bttnPress[8]  // press counter
+    output bttnPress  // press counter
   ) {
   
   .clk(clk) {
@@ -13,9 +13,12 @@ module bcounter (
     button_conditioner button_cond;     // button input conditioner
     button_conditioner button_cond2;     // button input reset_conditioner
     button_conditioner button_cond3;     // button input conditioner
+    edge_detector edge_detector(#RISE(1), #FALL(0)); // detect rising edges
+    edge_detector edge_detector2(#RISE(1), #FALL(0)); // detect rising edges
+    edge_detector edge_detector3(#RISE(1), #FALL(0)); // detect rising edges
     // dff clk_ctr[24];
     .rst(rst) {
-      dff ctr[8]; // our lovely counter
+      dff ctr[1]; // our lovely counter
       //prev was 1000 log2(1000) is 10, 10bits for 1 secs
       counter edge_ctr(#SIZE(1),#DIV(22)); //detect edge every ~0.16sec
       dff left[1];
@@ -24,9 +27,7 @@ module bcounter (
     }
   }
   .clk(edge_ctr.value){
-    edge_detector edge_detector(#RISE(1), #FALL(0)); // detect rising edges
-    edge_detector edge_detector2(#RISE(1), #FALL(0)); // detect rising edges
-    edge_detector edge_detector3(#RISE(1), #FALL(0)); // detect rising edges
+    
     .rst(rst) {
     }
   }
@@ -39,6 +40,7 @@ module bcounter (
     edge_detector2.in = button_cond2.out; // input to the edge_detector
     button_cond3.in = button3;            // raw button input
     edge_detector3.in = button_cond3.out; // input to the edge_detector
+    
     bttnPress = ctr.q;                      // output the counter
     
     if(edge_detector.out){

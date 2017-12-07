@@ -17,17 +17,22 @@ module state_4 (
     output reg gnd2,
     output reg gnd3,
     output reg [7:0] totalScore,
-    output reg [1:0] result
+    output reg [1:0] result,
+    output reg startbutt,
+    output reg main,
+    output reg halt,
+    output reg main1,
+    output reg main2,
+    output reg main3
   );
   
   
   
-  localparam MAIN_state = 2'd0;
-  localparam SUMUP_state = 2'd1;
-  localparam HALT_state = 2'd2;
+  localparam MAIN_state = 1'd0;
+  localparam HALT_state = 1'd1;
   
-  reg [1:0] M_state_d, M_state_q = HALT_state;
-  wire [8-1:0] M_bttnpress_bttnPress;
+  reg M_state_d, M_state_q = HALT_state;
+  wire [1-1:0] M_bttnpress_bttnPress;
   reg [1-1:0] M_bttnpress_button;
   reg [1-1:0] M_bttnpress_button2;
   reg [1-1:0] M_bttnpress_button3;
@@ -57,16 +62,17 @@ module state_4 (
   wire [1-1:0] M_mainState_low2;
   wire [1-1:0] M_mainState_low3;
   wire [2-1:0] M_mainState_rowOn;
-  reg [1-1:0] M_mainState_rst;
   reg [1-1:0] M_mainState_left2;
   reg [1-1:0] M_mainState_center1;
   reg [1-1:0] M_mainState_right0;
+  reg [1-1:0] M_mainState_mainState;
   main_7 mainState (
     .clk(clk),
-    .rst(M_mainState_rst),
+    .rst(rst),
     .left2(M_mainState_left2),
     .center1(M_mainState_center1),
     .right0(M_mainState_right0),
+    .mainState(M_mainState_mainState),
     .result(M_mainState_result),
     .high1(M_mainState_high1),
     .high2(M_mainState_high2),
@@ -76,6 +82,7 @@ module state_4 (
     .low3(M_mainState_low3),
     .rowOn(M_mainState_rowOn)
   );
+  reg [0:0] M_startPress_d, M_startPress_q = 1'h0;
   
   wire [1-1:0] M_myalu_z;
   wire [1-1:0] M_myalu_v;
@@ -94,15 +101,17 @@ module state_4 (
     .alu(M_myalu_alu)
   );
   
-  reg [1:0] rowResult;
-  
-  reg [7:0] highscore;
-  
   always @* begin
     M_state_d = M_state_q;
+    M_startPress_d = M_startPress_q;
     
-    M_mainState_rst = rst;
+    main = 1'h0;
+    main1 = 1'h0;
+    main2 = 1'h0;
+    main3 = 1'h0;
+    halt = 1'h0;
     totalScore = M_scoreSum_out;
+    M_mainState_mainState = 1'h0;
     M_scoreSum_data = 8'h00;
     M_scoreSum_en = 1'h0;
     result = M_mainState_result;
@@ -112,6 +121,8 @@ module state_4 (
     M_bttnpress_button = leftBtn;
     M_bttnpress_button2 = centBtn;
     M_bttnpress_button3 = rightBtn;
+    startbutt = M_startPress_q;
+    M_startPress_d = M_bttnpress_bttnPress;
     M_myalu_a = 1'h0;
     M_myalu_b = 1'h0;
     M_myalu_alufn = 1'h0;
@@ -124,38 +135,73 @@ module state_4 (
     
     case (M_state_q)
       MAIN_state: begin
+        main = 1'h1;
+        main1 = 1'h0;
+        main2 = 1'h0;
+        main3 = 1'h0;
+        halt = 1'h0;
+        M_mainState_mainState = 1'h1;
         gnd1 = M_mainState_low1;
         gnd2 = M_mainState_low2;
         gnd3 = M_mainState_low3;
         row1 = M_mainState_high1;
         row2 = M_mainState_high2;
         row3 = M_mainState_high3;
-        M_scoreSum_en = 1'h0;
-        if (M_mainState_result != 1'h0 && M_mainState_rowOn == 2'h3) begin
-          M_state_d = SUMUP_state;
+        if (M_mainState_result == 2'h3) begin
+          main1 = 1'h1;
+          main = 1'h0;
+          main2 = 1'h0;
+          main3 = 1'h0;
+          halt = 1'h0;
+          M_state_d = HALT_state;
         end else begin
-          M_state_d = MAIN_state;
+          if (M_mainState_result == 2'h1) begin
+            main2 = 1'h1;
+            main = 1'h0;
+            main1 = 1'h0;
+            main3 = 1'h0;
+            halt = 1'h0;
+            M_myalu_alufn = 6'h00;
+            M_myalu_a = 2'h1;
+            M_myalu_b = M_scoreSum_out;
+            M_scoreSum_data = M_myalu_alu;
+            M_scoreSum_en = 1'h1;
+          end else begin
+            if (M_mainState_result == 2'h2) begin
+              main3 = 1'h1;
+              main = 1'h0;
+              main1 = 1'h0;
+              main2 = 1'h0;
+              halt = 1'h0;
+              M_myalu_alufn = 6'h00;
+              M_myalu_a = 2'h2;
+              M_myalu_b = M_scoreSum_out;
+              M_scoreSum_data = M_myalu_alu;
+              M_scoreSum_en = 1'h1;
+            end
+          end
         end
       end
-      SUMUP_state: begin
-        M_myalu_alufn = 6'h00;
-        M_myalu_a = M_mainState_result;
-        M_myalu_b = M_scoreSum_out;
-        M_scoreSum_data = M_myalu_alu;
-        M_scoreSum_en = 1'h1;
-        M_state_d = MAIN_state;
-      end
       HALT_state: begin
+        M_mainState_mainState = 1'h0;
+        halt = 1'h1;
+        main = 1'h0;
+        main1 = 1'h0;
+        main2 = 1'h0;
+        main3 = 1'h0;
         row1 = 1'h0;
         row2 = 1'h0;
         row3 = 1'h0;
-        gnd1 = 1'h0;
-        gnd2 = 1'h0;
-        gnd3 = 1'h0;
+        gnd1 = 1'h1;
+        gnd2 = 1'h1;
+        gnd3 = 1'h1;
         M_scoreSum_en = 1'h0;
-        if (M_bttnpress_bttnPress == 1'h1) begin
-          M_mainState_rst = 1'h1;
+        if (M_startPress_q == 1'h1) begin
+          M_mainState_mainState = 1'h1;
           M_state_d = MAIN_state;
+          M_scoreSum_data = 2'h0;
+          M_scoreSum_en = 1'h1;
+          M_startPress_d = 1'h0;
         end
       end
     endcase
@@ -163,8 +209,10 @@ module state_4 (
   
   always @(posedge clk) begin
     if (rst == 1'b1) begin
-      M_state_q <= 2'h2;
+      M_startPress_q <= 1'h0;
+      M_state_q <= 1'h1;
     end else begin
+      M_startPress_q <= M_startPress_d;
       M_state_q <= M_state_d;
     end
   end

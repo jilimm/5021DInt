@@ -28,18 +28,18 @@ INFO:Timing:3339 - The clock-to-out numbers in this timing report are based on
 Timing constraint: TS_clk = PERIOD TIMEGRP "clk" 50 MHz HIGH 50%;
 For more information, see Period Analysis in the Timing Closure User Guide (UG612).
 
- 3089 paths analyzed, 719 endpoints analyzed, 0 failing endpoints
+ 4375 paths analyzed, 1368 endpoints analyzed, 0 failing endpoints
  0 timing errors detected. (0 setup errors, 0 hold errors, 0 component switching limit errors)
- Minimum period is   5.248ns.
+ Minimum period is  18.819ns.
 --------------------------------------------------------------------------------
-Slack:                  14.752ns (requirement - (data path - clock path skew + uncertainty))
-  Source:               myState/M_state_q_FSM_FFd2 (FF)
-  Destination:          myState/scoreSum/M_regs_q_6 (FF)
+Slack:                  1.181ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               reset_cond3/M_stage_q_3 (FF)
+  Destination:          myState/mainState/edge_ctr/M_ctr_q_15 (FF)
   Requirement:          20.000ns
-  Data Path Delay:      5.250ns (Levels of Logic = 2)
-  Clock Path Skew:      0.037ns (0.682 - 0.645)
-  Source Clock:         clk_BUFGP rising at 0.000ns
-  Destination Clock:    clk_BUFGP rising at 20.000ns
+  Data Path Delay:      22.719ns (Levels of Logic = 0)
+  Clock Path Skew:      3.935ns (6.520 - 2.585)
+  Source Clock:         clk_IBUF_BUFG rising at 0.000ns
+  Destination Clock:    myState/mainState/mainControl_BUFG rising at 20.000ns
   Clock Uncertainty:    0.035ns
 
   Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
@@ -48,33 +48,28 @@ Slack:                  14.752ns (requirement - (data path - clock path skew + u
     Discrete Jitter (DJ):       0.000ns
     Phase Error (PE):           0.000ns
 
-  Maximum Data Path at Slow Process Corner: myState/M_state_q_FSM_FFd2 to myState/scoreSum/M_regs_q_6
+  Maximum Data Path at Slow Process Corner: reset_cond3/M_stage_q_3 to myState/mainState/edge_ctr/M_ctr_q_15
     Location             Delay type         Delay(ns)  Physical Resource
                                                        Logical Resource(s)
     -------------------------------------------------  -------------------
-    SLICE_X10Y37.BQ      Tcko                  0.476   myState/M_state_q_FSM_FFd2_1
-                                                       myState/M_state_q_FSM_FFd2
-    SLICE_X10Y53.A2      net (fanout=66)       3.114   myState/M_state_q_FSM_FFd2
-    SLICE_X10Y53.CMUX    Topac                 0.636   myState/M_myalu_alu[7]
-                                                       myState/Mmux_M_myalu_b51
-                                                       myState/myalu/Madd_n0127[8:0]_Madd_xor<7>
-    SLICE_X11Y53.D1      net (fanout=1)        0.760   myState/M_myalu_alu[6]
-    SLICE_X11Y53.CLK     Tas                   0.264   high2_OBUF
-                                                       myState/Mmux_M_scoreSum_data71
-                                                       myState/scoreSum/M_regs_q_6
+    SLICE_X5Y9.AMUX      Tshcko                0.518   reset_cond3/M_stage_q[2]
+                                                       reset_cond3/M_stage_q_3
+    SLICE_X12Y31.SR      net (fanout=77)      21.731   M_reset_cond3_out
+    SLICE_X12Y31.CLK     Tsrck                 0.470   myState/mainState/edge_ctr/M_ctr_q[15]
+                                                       myState/mainState/edge_ctr/M_ctr_q_15
     -------------------------------------------------  ---------------------------
-    Total                                      5.250ns (1.376ns logic, 3.874ns route)
-                                                       (26.2% logic, 73.8% route)
+    Total                                     22.719ns (0.988ns logic, 21.731ns route)
+                                                       (4.3% logic, 95.7% route)
 
 --------------------------------------------------------------------------------
-Slack:                  14.908ns (requirement - (data path - clock path skew + uncertainty))
-  Source:               myState/M_state_q_FSM_FFd2 (FF)
-  Destination:          myState/scoreSum/M_regs_q_5 (FF)
+Slack:                  1.190ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               reset_cond3/M_stage_q_3 (FF)
+  Destination:          myState/mainState/edge_ctr/M_ctr_q_14 (FF)
   Requirement:          20.000ns
-  Data Path Delay:      5.099ns (Levels of Logic = 2)
-  Clock Path Skew:      0.042ns (0.687 - 0.645)
-  Source Clock:         clk_BUFGP rising at 0.000ns
-  Destination Clock:    clk_BUFGP rising at 20.000ns
+  Data Path Delay:      22.710ns (Levels of Logic = 0)
+  Clock Path Skew:      3.935ns (6.520 - 2.585)
+  Source Clock:         clk_IBUF_BUFG rising at 0.000ns
+  Destination Clock:    myState/mainState/mainControl_BUFG rising at 20.000ns
   Clock Uncertainty:    0.035ns
 
   Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
@@ -83,33 +78,28 @@ Slack:                  14.908ns (requirement - (data path - clock path skew + u
     Discrete Jitter (DJ):       0.000ns
     Phase Error (PE):           0.000ns
 
-  Maximum Data Path at Slow Process Corner: myState/M_state_q_FSM_FFd2 to myState/scoreSum/M_regs_q_5
+  Maximum Data Path at Slow Process Corner: reset_cond3/M_stage_q_3 to myState/mainState/edge_ctr/M_ctr_q_14
     Location             Delay type         Delay(ns)  Physical Resource
                                                        Logical Resource(s)
     -------------------------------------------------  -------------------
-    SLICE_X10Y37.BQ      Tcko                  0.476   myState/M_state_q_FSM_FFd2_1
-                                                       myState/M_state_q_FSM_FFd2
-    SLICE_X10Y53.A2      net (fanout=66)       3.114   myState/M_state_q_FSM_FFd2
-    SLICE_X10Y53.BMUX    Topab                 0.519   myState/M_myalu_alu[7]
-                                                       myState/Mmux_M_myalu_b51
-                                                       myState/myalu/Madd_n0127[8:0]_Madd_xor<7>
-    SLICE_X10Y51.B3      net (fanout=1)        0.641   myState/M_myalu_alu[5]
-    SLICE_X10Y51.CLK     Tas                   0.349   M_regs_q_5
-                                                       myState/Mmux_M_scoreSum_data61
-                                                       myState/scoreSum/M_regs_q_5
+    SLICE_X5Y9.AMUX      Tshcko                0.518   reset_cond3/M_stage_q[2]
+                                                       reset_cond3/M_stage_q_3
+    SLICE_X12Y31.SR      net (fanout=77)      21.731   M_reset_cond3_out
+    SLICE_X12Y31.CLK     Tsrck                 0.461   myState/mainState/edge_ctr/M_ctr_q[15]
+                                                       myState/mainState/edge_ctr/M_ctr_q_14
     -------------------------------------------------  ---------------------------
-    Total                                      5.099ns (1.344ns logic, 3.755ns route)
-                                                       (26.4% logic, 73.6% route)
+    Total                                     22.710ns (0.979ns logic, 21.731ns route)
+                                                       (4.3% logic, 95.7% route)
 
 --------------------------------------------------------------------------------
-Slack:                  14.915ns (requirement - (data path - clock path skew + uncertainty))
-  Source:               myState/M_state_q_FSM_FFd2 (FF)
-  Destination:          myState/scoreSum/M_regs_q_6 (FF)
+Slack:                  1.201ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               reset_cond3/M_stage_q_3 (FF)
+  Destination:          myState/mainState/edge_ctr/M_ctr_q_13 (FF)
   Requirement:          20.000ns
-  Data Path Delay:      5.087ns (Levels of Logic = 3)
-  Clock Path Skew:      0.037ns (0.682 - 0.645)
-  Source Clock:         clk_BUFGP rising at 0.000ns
-  Destination Clock:    clk_BUFGP rising at 20.000ns
+  Data Path Delay:      22.699ns (Levels of Logic = 0)
+  Clock Path Skew:      3.935ns (6.520 - 2.585)
+  Source Clock:         clk_IBUF_BUFG rising at 0.000ns
+  Destination Clock:    myState/mainState/mainControl_BUFG rising at 20.000ns
   Clock Uncertainty:    0.035ns
 
   Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
@@ -118,36 +108,28 @@ Slack:                  14.915ns (requirement - (data path - clock path skew + u
     Discrete Jitter (DJ):       0.000ns
     Phase Error (PE):           0.000ns
 
-  Maximum Data Path at Slow Process Corner: myState/M_state_q_FSM_FFd2 to myState/scoreSum/M_regs_q_6
+  Maximum Data Path at Slow Process Corner: reset_cond3/M_stage_q_3 to myState/mainState/edge_ctr/M_ctr_q_13
     Location             Delay type         Delay(ns)  Physical Resource
                                                        Logical Resource(s)
     -------------------------------------------------  -------------------
-    SLICE_X10Y37.BQ      Tcko                  0.476   myState/M_state_q_FSM_FFd2_1
-                                                       myState/M_state_q_FSM_FFd2
-    SLICE_X10Y52.C4      net (fanout=66)       2.970   myState/M_state_q_FSM_FFd2
-    SLICE_X10Y52.COUT    Topcyc                0.325   myState/myalu/Madd_n0127[8:0]_Madd_cy[3]
-                                                       myState/Mmux_M_myalu_b31
-                                                       myState/myalu/Madd_n0127[8:0]_Madd_cy<3>
-    SLICE_X10Y53.CIN     net (fanout=1)        0.003   myState/myalu/Madd_n0127[8:0]_Madd_cy[3]
-    SLICE_X10Y53.CMUX    Tcinc                 0.289   myState/M_myalu_alu[7]
-                                                       myState/myalu/Madd_n0127[8:0]_Madd_xor<7>
-    SLICE_X11Y53.D1      net (fanout=1)        0.760   myState/M_myalu_alu[6]
-    SLICE_X11Y53.CLK     Tas                   0.264   high2_OBUF
-                                                       myState/Mmux_M_scoreSum_data71
-                                                       myState/scoreSum/M_regs_q_6
+    SLICE_X5Y9.AMUX      Tshcko                0.518   reset_cond3/M_stage_q[2]
+                                                       reset_cond3/M_stage_q_3
+    SLICE_X12Y31.SR      net (fanout=77)      21.731   M_reset_cond3_out
+    SLICE_X12Y31.CLK     Tsrck                 0.450   myState/mainState/edge_ctr/M_ctr_q[15]
+                                                       myState/mainState/edge_ctr/M_ctr_q_13
     -------------------------------------------------  ---------------------------
-    Total                                      5.087ns (1.354ns logic, 3.733ns route)
-                                                       (26.6% logic, 73.4% route)
+    Total                                     22.699ns (0.968ns logic, 21.731ns route)
+                                                       (4.3% logic, 95.7% route)
 
 --------------------------------------------------------------------------------
-Slack:                  14.917ns (requirement - (data path - clock path skew + uncertainty))
-  Source:               myState/M_state_q_FSM_FFd2 (FF)
-  Destination:          myState/scoreSum/M_regs_q_7 (FF)
+Slack:                  1.223ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               reset_cond3/M_stage_q_3 (FF)
+  Destination:          myState/mainState/edge_ctr/M_ctr_q_12 (FF)
   Requirement:          20.000ns
-  Data Path Delay:      5.088ns (Levels of Logic = 2)
-  Clock Path Skew:      0.040ns (0.685 - 0.645)
-  Source Clock:         clk_BUFGP rising at 0.000ns
-  Destination Clock:    clk_BUFGP rising at 20.000ns
+  Data Path Delay:      22.677ns (Levels of Logic = 0)
+  Clock Path Skew:      3.935ns (6.520 - 2.585)
+  Source Clock:         clk_IBUF_BUFG rising at 0.000ns
+  Destination Clock:    myState/mainState/mainControl_BUFG rising at 20.000ns
   Clock Uncertainty:    0.035ns
 
   Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
@@ -156,33 +138,28 @@ Slack:                  14.917ns (requirement - (data path - clock path skew + u
     Discrete Jitter (DJ):       0.000ns
     Phase Error (PE):           0.000ns
 
-  Maximum Data Path at Slow Process Corner: myState/M_state_q_FSM_FFd2 to myState/scoreSum/M_regs_q_7
+  Maximum Data Path at Slow Process Corner: reset_cond3/M_stage_q_3 to myState/mainState/edge_ctr/M_ctr_q_12
     Location             Delay type         Delay(ns)  Physical Resource
                                                        Logical Resource(s)
     -------------------------------------------------  -------------------
-    SLICE_X10Y37.BQ      Tcko                  0.476   myState/M_state_q_FSM_FFd2_1
-                                                       myState/M_state_q_FSM_FFd2
-    SLICE_X10Y53.A2      net (fanout=66)       3.114   myState/M_state_q_FSM_FFd2
-    SLICE_X10Y53.DMUX    Topad                 0.667   myState/M_myalu_alu[7]
-                                                       myState/Mmux_M_myalu_b51
-                                                       myState/myalu/Madd_n0127[8:0]_Madd_xor<7>
-    SLICE_X11Y52.A3      net (fanout=1)        0.567   myState/M_myalu_alu[7]
-    SLICE_X11Y52.CLK     Tas                   0.264   M_regs_q_3
-                                                       myState/Mmux_M_scoreSum_data81
-                                                       myState/scoreSum/M_regs_q_7
+    SLICE_X5Y9.AMUX      Tshcko                0.518   reset_cond3/M_stage_q[2]
+                                                       reset_cond3/M_stage_q_3
+    SLICE_X12Y31.SR      net (fanout=77)      21.731   M_reset_cond3_out
+    SLICE_X12Y31.CLK     Tsrck                 0.428   myState/mainState/edge_ctr/M_ctr_q[15]
+                                                       myState/mainState/edge_ctr/M_ctr_q_12
     -------------------------------------------------  ---------------------------
-    Total                                      5.088ns (1.407ns logic, 3.681ns route)
-                                                       (27.7% logic, 72.3% route)
+    Total                                     22.677ns (0.946ns logic, 21.731ns route)
+                                                       (4.2% logic, 95.8% route)
 
 --------------------------------------------------------------------------------
-Slack:                  14.920ns (requirement - (data path - clock path skew + uncertainty))
-  Source:               myState/M_state_q_FSM_FFd2 (FF)
-  Destination:          myState/scoreSum/M_regs_q_6 (FF)
+Slack:                  1.676ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               reset_cond3/M_stage_q_3 (FF)
+  Destination:          myState/mainState/mypropogater/slowclk24/M_ctr_q_1 (FF)
   Requirement:          20.000ns
-  Data Path Delay:      5.082ns (Levels of Logic = 3)
-  Clock Path Skew:      0.037ns (0.682 - 0.645)
-  Source Clock:         clk_BUFGP rising at 0.000ns
-  Destination Clock:    clk_BUFGP rising at 20.000ns
+  Data Path Delay:      22.310ns (Levels of Logic = 0)
+  Clock Path Skew:      4.021ns (6.606 - 2.585)
+  Source Clock:         clk_IBUF_BUFG rising at 0.000ns
+  Destination Clock:    myState/mainState/mainControl_BUFG rising at 20.000ns
   Clock Uncertainty:    0.035ns
 
   Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
@@ -191,36 +168,28 @@ Slack:                  14.920ns (requirement - (data path - clock path skew + u
     Discrete Jitter (DJ):       0.000ns
     Phase Error (PE):           0.000ns
 
-  Maximum Data Path at Slow Process Corner: myState/M_state_q_FSM_FFd2 to myState/scoreSum/M_regs_q_6
+  Maximum Data Path at Slow Process Corner: reset_cond3/M_stage_q_3 to myState/mainState/mypropogater/slowclk24/M_ctr_q_1
     Location             Delay type         Delay(ns)  Physical Resource
                                                        Logical Resource(s)
     -------------------------------------------------  -------------------
-    SLICE_X10Y37.BQ      Tcko                  0.476   myState/M_state_q_FSM_FFd2_1
-                                                       myState/M_state_q_FSM_FFd2
-    SLICE_X10Y52.A5      net (fanout=66)       2.795   myState/M_state_q_FSM_FFd2
-    SLICE_X10Y52.COUT    Topcya                0.495   myState/myalu/Madd_n0127[8:0]_Madd_cy[3]
-                                                       myState/Mmux_M_myalu_a11
-                                                       myState/myalu/Madd_n0127[8:0]_Madd_cy<3>
-    SLICE_X10Y53.CIN     net (fanout=1)        0.003   myState/myalu/Madd_n0127[8:0]_Madd_cy[3]
-    SLICE_X10Y53.CMUX    Tcinc                 0.289   myState/M_myalu_alu[7]
-                                                       myState/myalu/Madd_n0127[8:0]_Madd_xor<7>
-    SLICE_X11Y53.D1      net (fanout=1)        0.760   myState/M_myalu_alu[6]
-    SLICE_X11Y53.CLK     Tas                   0.264   high2_OBUF
-                                                       myState/Mmux_M_scoreSum_data71
-                                                       myState/scoreSum/M_regs_q_6
+    SLICE_X5Y9.AMUX      Tshcko                0.518   reset_cond3/M_stage_q[2]
+                                                       reset_cond3/M_stage_q_3
+    SLICE_X10Y12.SR      net (fanout=77)      21.363   M_reset_cond3_out
+    SLICE_X10Y12.CLK     Tsrck                 0.429   myState/mainState/mypropogater/slowclk24/M_ctr_q[3]
+                                                       myState/mainState/mypropogater/slowclk24/M_ctr_q_1
     -------------------------------------------------  ---------------------------
-    Total                                      5.082ns (1.524ns logic, 3.558ns route)
-                                                       (30.0% logic, 70.0% route)
+    Total                                     22.310ns (0.947ns logic, 21.363ns route)
+                                                       (4.2% logic, 95.8% route)
 
 --------------------------------------------------------------------------------
-Slack:                  14.930ns (requirement - (data path - clock path skew + uncertainty))
-  Source:               myState/M_state_q_FSM_FFd2 (FF)
-  Destination:          myState/scoreSum/M_regs_q_6 (FF)
+Slack:                  1.687ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               reset_cond3/M_stage_q_3 (FF)
+  Destination:          myState/mainState/mypropogater/slowclk24/M_ctr_q_0 (FF)
   Requirement:          20.000ns
-  Data Path Delay:      5.072ns (Levels of Logic = 3)
-  Clock Path Skew:      0.037ns (0.682 - 0.645)
-  Source Clock:         clk_BUFGP rising at 0.000ns
-  Destination Clock:    clk_BUFGP rising at 20.000ns
+  Data Path Delay:      22.299ns (Levels of Logic = 0)
+  Clock Path Skew:      4.021ns (6.606 - 2.585)
+  Source Clock:         clk_IBUF_BUFG rising at 0.000ns
+  Destination Clock:    myState/mainState/mainControl_BUFG rising at 20.000ns
   Clock Uncertainty:    0.035ns
 
   Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
@@ -229,36 +198,28 @@ Slack:                  14.930ns (requirement - (data path - clock path skew + u
     Discrete Jitter (DJ):       0.000ns
     Phase Error (PE):           0.000ns
 
-  Maximum Data Path at Slow Process Corner: myState/M_state_q_FSM_FFd2 to myState/scoreSum/M_regs_q_6
+  Maximum Data Path at Slow Process Corner: reset_cond3/M_stage_q_3 to myState/mainState/mypropogater/slowclk24/M_ctr_q_0
     Location             Delay type         Delay(ns)  Physical Resource
                                                        Logical Resource(s)
     -------------------------------------------------  -------------------
-    SLICE_X10Y37.BQ      Tcko                  0.476   myState/M_state_q_FSM_FFd2_1
-                                                       myState/M_state_q_FSM_FFd2
-    SLICE_X10Y52.B5      net (fanout=66)       2.832   myState/M_state_q_FSM_FFd2
-    SLICE_X10Y52.COUT    Topcyb                0.448   myState/myalu/Madd_n0127[8:0]_Madd_cy[3]
-                                                       myState/myalu/Madd_n0127[8:0]_Madd_lut<1>
-                                                       myState/myalu/Madd_n0127[8:0]_Madd_cy<3>
-    SLICE_X10Y53.CIN     net (fanout=1)        0.003   myState/myalu/Madd_n0127[8:0]_Madd_cy[3]
-    SLICE_X10Y53.CMUX    Tcinc                 0.289   myState/M_myalu_alu[7]
-                                                       myState/myalu/Madd_n0127[8:0]_Madd_xor<7>
-    SLICE_X11Y53.D1      net (fanout=1)        0.760   myState/M_myalu_alu[6]
-    SLICE_X11Y53.CLK     Tas                   0.264   high2_OBUF
-                                                       myState/Mmux_M_scoreSum_data71
-                                                       myState/scoreSum/M_regs_q_6
+    SLICE_X5Y9.AMUX      Tshcko                0.518   reset_cond3/M_stage_q[2]
+                                                       reset_cond3/M_stage_q_3
+    SLICE_X10Y12.SR      net (fanout=77)      21.363   M_reset_cond3_out
+    SLICE_X10Y12.CLK     Tsrck                 0.418   myState/mainState/mypropogater/slowclk24/M_ctr_q[3]
+                                                       myState/mainState/mypropogater/slowclk24/M_ctr_q_0
     -------------------------------------------------  ---------------------------
-    Total                                      5.072ns (1.477ns logic, 3.595ns route)
-                                                       (29.1% logic, 70.9% route)
+    Total                                     22.299ns (0.936ns logic, 21.363ns route)
+                                                       (4.2% logic, 95.8% route)
 
 --------------------------------------------------------------------------------
-Slack:                  14.943ns (requirement - (data path - clock path skew + uncertainty))
-  Source:               myState/M_state_q_FSM_FFd2 (FF)
-  Destination:          myState/scoreSum/M_regs_q_6 (FF)
+Slack:                  1.710ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               reset_cond3/M_stage_q_3 (FF)
+  Destination:          myState/mainState/mypropogater/slowclk24/M_ctr_q_2 (FF)
   Requirement:          20.000ns
-  Data Path Delay:      5.059ns (Levels of Logic = 3)
-  Clock Path Skew:      0.037ns (0.682 - 0.645)
-  Source Clock:         clk_BUFGP rising at 0.000ns
-  Destination Clock:    clk_BUFGP rising at 20.000ns
+  Data Path Delay:      22.276ns (Levels of Logic = 0)
+  Clock Path Skew:      4.021ns (6.606 - 2.585)
+  Source Clock:         clk_IBUF_BUFG rising at 0.000ns
+  Destination Clock:    myState/mainState/mainControl_BUFG rising at 20.000ns
   Clock Uncertainty:    0.035ns
 
   Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
@@ -267,36 +228,28 @@ Slack:                  14.943ns (requirement - (data path - clock path skew + u
     Discrete Jitter (DJ):       0.000ns
     Phase Error (PE):           0.000ns
 
-  Maximum Data Path at Slow Process Corner: myState/M_state_q_FSM_FFd2 to myState/scoreSum/M_regs_q_6
+  Maximum Data Path at Slow Process Corner: reset_cond3/M_stage_q_3 to myState/mainState/mypropogater/slowclk24/M_ctr_q_2
     Location             Delay type         Delay(ns)  Physical Resource
                                                        Logical Resource(s)
     -------------------------------------------------  -------------------
-    SLICE_X10Y37.BQ      Tcko                  0.476   myState/M_state_q_FSM_FFd2_1
-                                                       myState/M_state_q_FSM_FFd2
-    SLICE_X10Y52.A5      net (fanout=66)       2.795   myState/M_state_q_FSM_FFd2
-    SLICE_X10Y52.COUT    Topcya                0.472   myState/myalu/Madd_n0127[8:0]_Madd_cy[3]
-                                                       myState/myalu/Madd_n0127[8:0]_Madd_lut<0>
-                                                       myState/myalu/Madd_n0127[8:0]_Madd_cy<3>
-    SLICE_X10Y53.CIN     net (fanout=1)        0.003   myState/myalu/Madd_n0127[8:0]_Madd_cy[3]
-    SLICE_X10Y53.CMUX    Tcinc                 0.289   myState/M_myalu_alu[7]
-                                                       myState/myalu/Madd_n0127[8:0]_Madd_xor<7>
-    SLICE_X11Y53.D1      net (fanout=1)        0.760   myState/M_myalu_alu[6]
-    SLICE_X11Y53.CLK     Tas                   0.264   high2_OBUF
-                                                       myState/Mmux_M_scoreSum_data71
-                                                       myState/scoreSum/M_regs_q_6
+    SLICE_X5Y9.AMUX      Tshcko                0.518   reset_cond3/M_stage_q[2]
+                                                       reset_cond3/M_stage_q_3
+    SLICE_X10Y12.SR      net (fanout=77)      21.363   M_reset_cond3_out
+    SLICE_X10Y12.CLK     Tsrck                 0.395   myState/mainState/mypropogater/slowclk24/M_ctr_q[3]
+                                                       myState/mainState/mypropogater/slowclk24/M_ctr_q_2
     -------------------------------------------------  ---------------------------
-    Total                                      5.059ns (1.501ns logic, 3.558ns route)
-                                                       (29.7% logic, 70.3% route)
+    Total                                     22.276ns (0.913ns logic, 21.363ns route)
+                                                       (4.1% logic, 95.9% route)
 
 --------------------------------------------------------------------------------
-Slack:                  14.966ns (requirement - (data path - clock path skew + uncertainty))
-  Source:               myState/M_state_q_FSM_FFd2 (FF)
-  Destination:          myState/scoreSum/M_regs_q_5 (FF)
+Slack:                  1.724ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               reset_cond3/M_stage_q_3 (FF)
+  Destination:          myState/mainState/mypropogater/slowclk24/M_ctr_q_3 (FF)
   Requirement:          20.000ns
-  Data Path Delay:      5.041ns (Levels of Logic = 3)
-  Clock Path Skew:      0.042ns (0.687 - 0.645)
-  Source Clock:         clk_BUFGP rising at 0.000ns
-  Destination Clock:    clk_BUFGP rising at 20.000ns
+  Data Path Delay:      22.262ns (Levels of Logic = 0)
+  Clock Path Skew:      4.021ns (6.606 - 2.585)
+  Source Clock:         clk_IBUF_BUFG rising at 0.000ns
+  Destination Clock:    myState/mainState/mainControl_BUFG rising at 20.000ns
   Clock Uncertainty:    0.035ns
 
   Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
@@ -305,36 +258,28 @@ Slack:                  14.966ns (requirement - (data path - clock path skew + u
     Discrete Jitter (DJ):       0.000ns
     Phase Error (PE):           0.000ns
 
-  Maximum Data Path at Slow Process Corner: myState/M_state_q_FSM_FFd2 to myState/scoreSum/M_regs_q_5
+  Maximum Data Path at Slow Process Corner: reset_cond3/M_stage_q_3 to myState/mainState/mypropogater/slowclk24/M_ctr_q_3
     Location             Delay type         Delay(ns)  Physical Resource
                                                        Logical Resource(s)
     -------------------------------------------------  -------------------
-    SLICE_X10Y37.BQ      Tcko                  0.476   myState/M_state_q_FSM_FFd2_1
-                                                       myState/M_state_q_FSM_FFd2
-    SLICE_X10Y52.C4      net (fanout=66)       2.970   myState/M_state_q_FSM_FFd2
-    SLICE_X10Y52.COUT    Topcyc                0.325   myState/myalu/Madd_n0127[8:0]_Madd_cy[3]
-                                                       myState/Mmux_M_myalu_b31
-                                                       myState/myalu/Madd_n0127[8:0]_Madd_cy<3>
-    SLICE_X10Y53.CIN     net (fanout=1)        0.003   myState/myalu/Madd_n0127[8:0]_Madd_cy[3]
-    SLICE_X10Y53.BMUX    Tcinb                 0.277   myState/M_myalu_alu[7]
-                                                       myState/myalu/Madd_n0127[8:0]_Madd_xor<7>
-    SLICE_X10Y51.B3      net (fanout=1)        0.641   myState/M_myalu_alu[5]
-    SLICE_X10Y51.CLK     Tas                   0.349   M_regs_q_5
-                                                       myState/Mmux_M_scoreSum_data61
-                                                       myState/scoreSum/M_regs_q_5
+    SLICE_X5Y9.AMUX      Tshcko                0.518   reset_cond3/M_stage_q[2]
+                                                       reset_cond3/M_stage_q_3
+    SLICE_X10Y12.SR      net (fanout=77)      21.363   M_reset_cond3_out
+    SLICE_X10Y12.CLK     Tsrck                 0.381   myState/mainState/mypropogater/slowclk24/M_ctr_q[3]
+                                                       myState/mainState/mypropogater/slowclk24/M_ctr_q_3
     -------------------------------------------------  ---------------------------
-    Total                                      5.041ns (1.427ns logic, 3.614ns route)
-                                                       (28.3% logic, 71.7% route)
+    Total                                     22.262ns (0.899ns logic, 21.363ns route)
+                                                       (4.0% logic, 96.0% route)
 
 --------------------------------------------------------------------------------
-Slack:                  14.967ns (requirement - (data path - clock path skew + uncertainty))
-  Source:               myState/M_state_q_FSM_FFd2 (FF)
-  Destination:          myState/scoreSum/M_regs_q_6 (FF)
+Slack:                  1.975ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               reset_cond3/M_stage_q_3 (FF)
+  Destination:          myState/mainState/mypropogater/slowclk22/M_ctr_q_13 (FF)
   Requirement:          20.000ns
-  Data Path Delay:      5.035ns (Levels of Logic = 3)
-  Clock Path Skew:      0.037ns (0.682 - 0.645)
-  Source Clock:         clk_BUFGP rising at 0.000ns
-  Destination Clock:    clk_BUFGP rising at 20.000ns
+  Data Path Delay:      21.951ns (Levels of Logic = 0)
+  Clock Path Skew:      3.961ns (6.546 - 2.585)
+  Source Clock:         clk_IBUF_BUFG rising at 0.000ns
+  Destination Clock:    myState/mainState/mainControl_BUFG rising at 20.000ns
   Clock Uncertainty:    0.035ns
 
   Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
@@ -343,36 +288,28 @@ Slack:                  14.967ns (requirement - (data path - clock path skew + u
     Discrete Jitter (DJ):       0.000ns
     Phase Error (PE):           0.000ns
 
-  Maximum Data Path at Slow Process Corner: myState/M_state_q_FSM_FFd2 to myState/scoreSum/M_regs_q_6
+  Maximum Data Path at Slow Process Corner: reset_cond3/M_stage_q_3 to myState/mainState/mypropogater/slowclk22/M_ctr_q_13
     Location             Delay type         Delay(ns)  Physical Resource
                                                        Logical Resource(s)
     -------------------------------------------------  -------------------
-    SLICE_X10Y37.BQ      Tcko                  0.476   myState/M_state_q_FSM_FFd2_1
-                                                       myState/M_state_q_FSM_FFd2
-    SLICE_X10Y52.B5      net (fanout=66)       2.832   myState/M_state_q_FSM_FFd2
-    SLICE_X10Y52.COUT    Topcyb                0.411   myState/myalu/Madd_n0127[8:0]_Madd_cy[3]
-                                                       myState/Mmux_M_myalu_a21
-                                                       myState/myalu/Madd_n0127[8:0]_Madd_cy<3>
-    SLICE_X10Y53.CIN     net (fanout=1)        0.003   myState/myalu/Madd_n0127[8:0]_Madd_cy[3]
-    SLICE_X10Y53.CMUX    Tcinc                 0.289   myState/M_myalu_alu[7]
-                                                       myState/myalu/Madd_n0127[8:0]_Madd_xor<7>
-    SLICE_X11Y53.D1      net (fanout=1)        0.760   myState/M_myalu_alu[6]
-    SLICE_X11Y53.CLK     Tas                   0.264   high2_OBUF
-                                                       myState/Mmux_M_scoreSum_data71
-                                                       myState/scoreSum/M_regs_q_6
+    SLICE_X5Y9.AMUX      Tshcko                0.518   reset_cond3/M_stage_q[2]
+                                                       reset_cond3/M_stage_q_3
+    SLICE_X6Y22.SR       net (fanout=77)      21.004   M_reset_cond3_out
+    SLICE_X6Y22.CLK      Tsrck                 0.429   myState/mainState/mypropogater/slowclk22/M_ctr_q[15]
+                                                       myState/mainState/mypropogater/slowclk22/M_ctr_q_13
     -------------------------------------------------  ---------------------------
-    Total                                      5.035ns (1.440ns logic, 3.595ns route)
-                                                       (28.6% logic, 71.4% route)
+    Total                                     21.951ns (0.947ns logic, 21.004ns route)
+                                                       (4.3% logic, 95.7% route)
 
 --------------------------------------------------------------------------------
-Slack:                  14.971ns (requirement - (data path - clock path skew + uncertainty))
-  Source:               myState/M_state_q_FSM_FFd2 (FF)
-  Destination:          myState/scoreSum/M_regs_q_5 (FF)
+Slack:                  1.986ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               reset_cond3/M_stage_q_3 (FF)
+  Destination:          myState/mainState/mypropogater/slowclk22/M_ctr_q_12 (FF)
   Requirement:          20.000ns
-  Data Path Delay:      5.036ns (Levels of Logic = 3)
-  Clock Path Skew:      0.042ns (0.687 - 0.645)
-  Source Clock:         clk_BUFGP rising at 0.000ns
-  Destination Clock:    clk_BUFGP rising at 20.000ns
+  Data Path Delay:      21.940ns (Levels of Logic = 0)
+  Clock Path Skew:      3.961ns (6.546 - 2.585)
+  Source Clock:         clk_IBUF_BUFG rising at 0.000ns
+  Destination Clock:    myState/mainState/mainControl_BUFG rising at 20.000ns
   Clock Uncertainty:    0.035ns
 
   Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
@@ -381,36 +318,28 @@ Slack:                  14.971ns (requirement - (data path - clock path skew + u
     Discrete Jitter (DJ):       0.000ns
     Phase Error (PE):           0.000ns
 
-  Maximum Data Path at Slow Process Corner: myState/M_state_q_FSM_FFd2 to myState/scoreSum/M_regs_q_5
+  Maximum Data Path at Slow Process Corner: reset_cond3/M_stage_q_3 to myState/mainState/mypropogater/slowclk22/M_ctr_q_12
     Location             Delay type         Delay(ns)  Physical Resource
                                                        Logical Resource(s)
     -------------------------------------------------  -------------------
-    SLICE_X10Y37.BQ      Tcko                  0.476   myState/M_state_q_FSM_FFd2_1
-                                                       myState/M_state_q_FSM_FFd2
-    SLICE_X10Y52.A5      net (fanout=66)       2.795   myState/M_state_q_FSM_FFd2
-    SLICE_X10Y52.COUT    Topcya                0.495   myState/myalu/Madd_n0127[8:0]_Madd_cy[3]
-                                                       myState/Mmux_M_myalu_a11
-                                                       myState/myalu/Madd_n0127[8:0]_Madd_cy<3>
-    SLICE_X10Y53.CIN     net (fanout=1)        0.003   myState/myalu/Madd_n0127[8:0]_Madd_cy[3]
-    SLICE_X10Y53.BMUX    Tcinb                 0.277   myState/M_myalu_alu[7]
-                                                       myState/myalu/Madd_n0127[8:0]_Madd_xor<7>
-    SLICE_X10Y51.B3      net (fanout=1)        0.641   myState/M_myalu_alu[5]
-    SLICE_X10Y51.CLK     Tas                   0.349   M_regs_q_5
-                                                       myState/Mmux_M_scoreSum_data61
-                                                       myState/scoreSum/M_regs_q_5
+    SLICE_X5Y9.AMUX      Tshcko                0.518   reset_cond3/M_stage_q[2]
+                                                       reset_cond3/M_stage_q_3
+    SLICE_X6Y22.SR       net (fanout=77)      21.004   M_reset_cond3_out
+    SLICE_X6Y22.CLK      Tsrck                 0.418   myState/mainState/mypropogater/slowclk22/M_ctr_q[15]
+                                                       myState/mainState/mypropogater/slowclk22/M_ctr_q_12
     -------------------------------------------------  ---------------------------
-    Total                                      5.036ns (1.597ns logic, 3.439ns route)
-                                                       (31.7% logic, 68.3% route)
+    Total                                     21.940ns (0.936ns logic, 21.004ns route)
+                                                       (4.3% logic, 95.7% route)
 
 --------------------------------------------------------------------------------
-Slack:                  14.981ns (requirement - (data path - clock path skew + uncertainty))
-  Source:               myState/M_state_q_FSM_FFd2 (FF)
-  Destination:          myState/scoreSum/M_regs_q_5 (FF)
+Slack:                  2.009ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               reset_cond3/M_stage_q_3 (FF)
+  Destination:          myState/mainState/mypropogater/slowclk22/M_ctr_q_14 (FF)
   Requirement:          20.000ns
-  Data Path Delay:      5.026ns (Levels of Logic = 3)
-  Clock Path Skew:      0.042ns (0.687 - 0.645)
-  Source Clock:         clk_BUFGP rising at 0.000ns
-  Destination Clock:    clk_BUFGP rising at 20.000ns
+  Data Path Delay:      21.917ns (Levels of Logic = 0)
+  Clock Path Skew:      3.961ns (6.546 - 2.585)
+  Source Clock:         clk_IBUF_BUFG rising at 0.000ns
+  Destination Clock:    myState/mainState/mainControl_BUFG rising at 20.000ns
   Clock Uncertainty:    0.035ns
 
   Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
@@ -419,36 +348,28 @@ Slack:                  14.981ns (requirement - (data path - clock path skew + u
     Discrete Jitter (DJ):       0.000ns
     Phase Error (PE):           0.000ns
 
-  Maximum Data Path at Slow Process Corner: myState/M_state_q_FSM_FFd2 to myState/scoreSum/M_regs_q_5
+  Maximum Data Path at Slow Process Corner: reset_cond3/M_stage_q_3 to myState/mainState/mypropogater/slowclk22/M_ctr_q_14
     Location             Delay type         Delay(ns)  Physical Resource
                                                        Logical Resource(s)
     -------------------------------------------------  -------------------
-    SLICE_X10Y37.BQ      Tcko                  0.476   myState/M_state_q_FSM_FFd2_1
-                                                       myState/M_state_q_FSM_FFd2
-    SLICE_X10Y52.B5      net (fanout=66)       2.832   myState/M_state_q_FSM_FFd2
-    SLICE_X10Y52.COUT    Topcyb                0.448   myState/myalu/Madd_n0127[8:0]_Madd_cy[3]
-                                                       myState/myalu/Madd_n0127[8:0]_Madd_lut<1>
-                                                       myState/myalu/Madd_n0127[8:0]_Madd_cy<3>
-    SLICE_X10Y53.CIN     net (fanout=1)        0.003   myState/myalu/Madd_n0127[8:0]_Madd_cy[3]
-    SLICE_X10Y53.BMUX    Tcinb                 0.277   myState/M_myalu_alu[7]
-                                                       myState/myalu/Madd_n0127[8:0]_Madd_xor<7>
-    SLICE_X10Y51.B3      net (fanout=1)        0.641   myState/M_myalu_alu[5]
-    SLICE_X10Y51.CLK     Tas                   0.349   M_regs_q_5
-                                                       myState/Mmux_M_scoreSum_data61
-                                                       myState/scoreSum/M_regs_q_5
+    SLICE_X5Y9.AMUX      Tshcko                0.518   reset_cond3/M_stage_q[2]
+                                                       reset_cond3/M_stage_q_3
+    SLICE_X6Y22.SR       net (fanout=77)      21.004   M_reset_cond3_out
+    SLICE_X6Y22.CLK      Tsrck                 0.395   myState/mainState/mypropogater/slowclk22/M_ctr_q[15]
+                                                       myState/mainState/mypropogater/slowclk22/M_ctr_q_14
     -------------------------------------------------  ---------------------------
-    Total                                      5.026ns (1.550ns logic, 3.476ns route)
-                                                       (30.8% logic, 69.2% route)
+    Total                                     21.917ns (0.913ns logic, 21.004ns route)
+                                                       (4.2% logic, 95.8% route)
 
 --------------------------------------------------------------------------------
-Slack:                  14.994ns (requirement - (data path - clock path skew + uncertainty))
-  Source:               myState/M_state_q_FSM_FFd2 (FF)
-  Destination:          myState/scoreSum/M_regs_q_5 (FF)
+Slack:                  2.023ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               reset_cond3/M_stage_q_3 (FF)
+  Destination:          myState/mainState/mypropogater/slowclk22/M_ctr_q_15 (FF)
   Requirement:          20.000ns
-  Data Path Delay:      5.013ns (Levels of Logic = 3)
-  Clock Path Skew:      0.042ns (0.687 - 0.645)
-  Source Clock:         clk_BUFGP rising at 0.000ns
-  Destination Clock:    clk_BUFGP rising at 20.000ns
+  Data Path Delay:      21.903ns (Levels of Logic = 0)
+  Clock Path Skew:      3.961ns (6.546 - 2.585)
+  Source Clock:         clk_IBUF_BUFG rising at 0.000ns
+  Destination Clock:    myState/mainState/mainControl_BUFG rising at 20.000ns
   Clock Uncertainty:    0.035ns
 
   Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
@@ -457,36 +378,28 @@ Slack:                  14.994ns (requirement - (data path - clock path skew + u
     Discrete Jitter (DJ):       0.000ns
     Phase Error (PE):           0.000ns
 
-  Maximum Data Path at Slow Process Corner: myState/M_state_q_FSM_FFd2 to myState/scoreSum/M_regs_q_5
+  Maximum Data Path at Slow Process Corner: reset_cond3/M_stage_q_3 to myState/mainState/mypropogater/slowclk22/M_ctr_q_15
     Location             Delay type         Delay(ns)  Physical Resource
                                                        Logical Resource(s)
     -------------------------------------------------  -------------------
-    SLICE_X10Y37.BQ      Tcko                  0.476   myState/M_state_q_FSM_FFd2_1
-                                                       myState/M_state_q_FSM_FFd2
-    SLICE_X10Y52.A5      net (fanout=66)       2.795   myState/M_state_q_FSM_FFd2
-    SLICE_X10Y52.COUT    Topcya                0.472   myState/myalu/Madd_n0127[8:0]_Madd_cy[3]
-                                                       myState/myalu/Madd_n0127[8:0]_Madd_lut<0>
-                                                       myState/myalu/Madd_n0127[8:0]_Madd_cy<3>
-    SLICE_X10Y53.CIN     net (fanout=1)        0.003   myState/myalu/Madd_n0127[8:0]_Madd_cy[3]
-    SLICE_X10Y53.BMUX    Tcinb                 0.277   myState/M_myalu_alu[7]
-                                                       myState/myalu/Madd_n0127[8:0]_Madd_xor<7>
-    SLICE_X10Y51.B3      net (fanout=1)        0.641   myState/M_myalu_alu[5]
-    SLICE_X10Y51.CLK     Tas                   0.349   M_regs_q_5
-                                                       myState/Mmux_M_scoreSum_data61
-                                                       myState/scoreSum/M_regs_q_5
+    SLICE_X5Y9.AMUX      Tshcko                0.518   reset_cond3/M_stage_q[2]
+                                                       reset_cond3/M_stage_q_3
+    SLICE_X6Y22.SR       net (fanout=77)      21.004   M_reset_cond3_out
+    SLICE_X6Y22.CLK      Tsrck                 0.381   myState/mainState/mypropogater/slowclk22/M_ctr_q[15]
+                                                       myState/mainState/mypropogater/slowclk22/M_ctr_q_15
     -------------------------------------------------  ---------------------------
-    Total                                      5.013ns (1.574ns logic, 3.439ns route)
-                                                       (31.4% logic, 68.6% route)
+    Total                                     21.903ns (0.899ns logic, 21.004ns route)
+                                                       (4.1% logic, 95.9% route)
 
 --------------------------------------------------------------------------------
-Slack:                  15.018ns (requirement - (data path - clock path skew + uncertainty))
-  Source:               myState/M_state_q_FSM_FFd2 (FF)
-  Destination:          myState/scoreSum/M_regs_q_5 (FF)
+Slack:                  2.154ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               reset_cond3/M_stage_q_3 (FF)
+  Destination:          myState/mainState/mypropogater/slowclk24/M_ctr_q_5 (FF)
   Requirement:          20.000ns
-  Data Path Delay:      4.989ns (Levels of Logic = 3)
-  Clock Path Skew:      0.042ns (0.687 - 0.645)
-  Source Clock:         clk_BUFGP rising at 0.000ns
-  Destination Clock:    clk_BUFGP rising at 20.000ns
+  Data Path Delay:      21.834ns (Levels of Logic = 0)
+  Clock Path Skew:      4.023ns (6.608 - 2.585)
+  Source Clock:         clk_IBUF_BUFG rising at 0.000ns
+  Destination Clock:    myState/mainState/mainControl_BUFG rising at 20.000ns
   Clock Uncertainty:    0.035ns
 
   Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
@@ -495,36 +408,28 @@ Slack:                  15.018ns (requirement - (data path - clock path skew + u
     Discrete Jitter (DJ):       0.000ns
     Phase Error (PE):           0.000ns
 
-  Maximum Data Path at Slow Process Corner: myState/M_state_q_FSM_FFd2 to myState/scoreSum/M_regs_q_5
+  Maximum Data Path at Slow Process Corner: reset_cond3/M_stage_q_3 to myState/mainState/mypropogater/slowclk24/M_ctr_q_5
     Location             Delay type         Delay(ns)  Physical Resource
                                                        Logical Resource(s)
     -------------------------------------------------  -------------------
-    SLICE_X10Y37.BQ      Tcko                  0.476   myState/M_state_q_FSM_FFd2_1
-                                                       myState/M_state_q_FSM_FFd2
-    SLICE_X10Y52.B5      net (fanout=66)       2.832   myState/M_state_q_FSM_FFd2
-    SLICE_X10Y52.COUT    Topcyb                0.411   myState/myalu/Madd_n0127[8:0]_Madd_cy[3]
-                                                       myState/Mmux_M_myalu_a21
-                                                       myState/myalu/Madd_n0127[8:0]_Madd_cy<3>
-    SLICE_X10Y53.CIN     net (fanout=1)        0.003   myState/myalu/Madd_n0127[8:0]_Madd_cy[3]
-    SLICE_X10Y53.BMUX    Tcinb                 0.277   myState/M_myalu_alu[7]
-                                                       myState/myalu/Madd_n0127[8:0]_Madd_xor<7>
-    SLICE_X10Y51.B3      net (fanout=1)        0.641   myState/M_myalu_alu[5]
-    SLICE_X10Y51.CLK     Tas                   0.349   M_regs_q_5
-                                                       myState/Mmux_M_scoreSum_data61
-                                                       myState/scoreSum/M_regs_q_5
+    SLICE_X5Y9.AMUX      Tshcko                0.518   reset_cond3/M_stage_q[2]
+                                                       reset_cond3/M_stage_q_3
+    SLICE_X10Y13.SR      net (fanout=77)      20.887   M_reset_cond3_out
+    SLICE_X10Y13.CLK     Tsrck                 0.429   myState/mainState/mypropogater/slowclk24/M_ctr_q[7]
+                                                       myState/mainState/mypropogater/slowclk24/M_ctr_q_5
     -------------------------------------------------  ---------------------------
-    Total                                      4.989ns (1.513ns logic, 3.476ns route)
-                                                       (30.3% logic, 69.7% route)
+    Total                                     21.834ns (0.947ns logic, 20.887ns route)
+                                                       (4.3% logic, 95.7% route)
 
 --------------------------------------------------------------------------------
-Slack:                  15.038ns (requirement - (data path - clock path skew + uncertainty))
-  Source:               myState/M_state_q_FSM_FFd2 (FF)
-  Destination:          myState/scoreSum/M_regs_q_6 (FF)
+Slack:                  2.165ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               reset_cond3/M_stage_q_3 (FF)
+  Destination:          myState/mainState/mypropogater/slowclk24/M_ctr_q_4 (FF)
   Requirement:          20.000ns
-  Data Path Delay:      4.964ns (Levels of Logic = 2)
-  Clock Path Skew:      0.037ns (0.682 - 0.645)
-  Source Clock:         clk_BUFGP rising at 0.000ns
-  Destination Clock:    clk_BUFGP rising at 20.000ns
+  Data Path Delay:      21.823ns (Levels of Logic = 0)
+  Clock Path Skew:      4.023ns (6.608 - 2.585)
+  Source Clock:         clk_IBUF_BUFG rising at 0.000ns
+  Destination Clock:    myState/mainState/mainControl_BUFG rising at 20.000ns
   Clock Uncertainty:    0.035ns
 
   Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
@@ -533,33 +438,28 @@ Slack:                  15.038ns (requirement - (data path - clock path skew + u
     Discrete Jitter (DJ):       0.000ns
     Phase Error (PE):           0.000ns
 
-  Maximum Data Path at Slow Process Corner: myState/M_state_q_FSM_FFd2 to myState/scoreSum/M_regs_q_6
+  Maximum Data Path at Slow Process Corner: reset_cond3/M_stage_q_3 to myState/mainState/mypropogater/slowclk24/M_ctr_q_4
     Location             Delay type         Delay(ns)  Physical Resource
                                                        Logical Resource(s)
     -------------------------------------------------  -------------------
-    SLICE_X10Y37.BQ      Tcko                  0.476   myState/M_state_q_FSM_FFd2_1
-                                                       myState/M_state_q_FSM_FFd2
-    SLICE_X10Y53.B5      net (fanout=66)       2.851   myState/M_state_q_FSM_FFd2
-    SLICE_X10Y53.CMUX    Topbc                 0.613   myState/M_myalu_alu[7]
-                                                       myState/Mmux_M_myalu_b61
-                                                       myState/myalu/Madd_n0127[8:0]_Madd_xor<7>
-    SLICE_X11Y53.D1      net (fanout=1)        0.760   myState/M_myalu_alu[6]
-    SLICE_X11Y53.CLK     Tas                   0.264   high2_OBUF
-                                                       myState/Mmux_M_scoreSum_data71
-                                                       myState/scoreSum/M_regs_q_6
+    SLICE_X5Y9.AMUX      Tshcko                0.518   reset_cond3/M_stage_q[2]
+                                                       reset_cond3/M_stage_q_3
+    SLICE_X10Y13.SR      net (fanout=77)      20.887   M_reset_cond3_out
+    SLICE_X10Y13.CLK     Tsrck                 0.418   myState/mainState/mypropogater/slowclk24/M_ctr_q[7]
+                                                       myState/mainState/mypropogater/slowclk24/M_ctr_q_4
     -------------------------------------------------  ---------------------------
-    Total                                      4.964ns (1.353ns logic, 3.611ns route)
-                                                       (27.3% logic, 72.7% route)
+    Total                                     21.823ns (0.936ns logic, 20.887ns route)
+                                                       (4.3% logic, 95.7% route)
 
 --------------------------------------------------------------------------------
-Slack:                  15.039ns (requirement - (data path - clock path skew + uncertainty))
-  Source:               myState/M_state_q_FSM_FFd2 (FF)
-  Destination:          myState/scoreSum/M_regs_q_6 (FF)
+Slack:                  2.188ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               reset_cond3/M_stage_q_3 (FF)
+  Destination:          myState/mainState/mypropogater/slowclk24/M_ctr_q_6 (FF)
   Requirement:          20.000ns
-  Data Path Delay:      4.963ns (Levels of Logic = 3)
-  Clock Path Skew:      0.037ns (0.682 - 0.645)
-  Source Clock:         clk_BUFGP rising at 0.000ns
-  Destination Clock:    clk_BUFGP rising at 20.000ns
+  Data Path Delay:      21.800ns (Levels of Logic = 0)
+  Clock Path Skew:      4.023ns (6.608 - 2.585)
+  Source Clock:         clk_IBUF_BUFG rising at 0.000ns
+  Destination Clock:    myState/mainState/mainControl_BUFG rising at 20.000ns
   Clock Uncertainty:    0.035ns
 
   Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
@@ -568,36 +468,28 @@ Slack:                  15.039ns (requirement - (data path - clock path skew + u
     Discrete Jitter (DJ):       0.000ns
     Phase Error (PE):           0.000ns
 
-  Maximum Data Path at Slow Process Corner: myState/M_state_q_FSM_FFd2 to myState/scoreSum/M_regs_q_6
+  Maximum Data Path at Slow Process Corner: reset_cond3/M_stage_q_3 to myState/mainState/mypropogater/slowclk24/M_ctr_q_6
     Location             Delay type         Delay(ns)  Physical Resource
                                                        Logical Resource(s)
     -------------------------------------------------  -------------------
-    SLICE_X10Y37.BQ      Tcko                  0.476   myState/M_state_q_FSM_FFd2_1
-                                                       myState/M_state_q_FSM_FFd2
-    SLICE_X10Y52.D4      net (fanout=66)       2.881   myState/M_state_q_FSM_FFd2
-    SLICE_X10Y52.COUT    Topcyd                0.290   myState/myalu/Madd_n0127[8:0]_Madd_cy[3]
-                                                       myState/Mmux_M_myalu_b41
-                                                       myState/myalu/Madd_n0127[8:0]_Madd_cy<3>
-    SLICE_X10Y53.CIN     net (fanout=1)        0.003   myState/myalu/Madd_n0127[8:0]_Madd_cy[3]
-    SLICE_X10Y53.CMUX    Tcinc                 0.289   myState/M_myalu_alu[7]
-                                                       myState/myalu/Madd_n0127[8:0]_Madd_xor<7>
-    SLICE_X11Y53.D1      net (fanout=1)        0.760   myState/M_myalu_alu[6]
-    SLICE_X11Y53.CLK     Tas                   0.264   high2_OBUF
-                                                       myState/Mmux_M_scoreSum_data71
-                                                       myState/scoreSum/M_regs_q_6
+    SLICE_X5Y9.AMUX      Tshcko                0.518   reset_cond3/M_stage_q[2]
+                                                       reset_cond3/M_stage_q_3
+    SLICE_X10Y13.SR      net (fanout=77)      20.887   M_reset_cond3_out
+    SLICE_X10Y13.CLK     Tsrck                 0.395   myState/mainState/mypropogater/slowclk24/M_ctr_q[7]
+                                                       myState/mainState/mypropogater/slowclk24/M_ctr_q_6
     -------------------------------------------------  ---------------------------
-    Total                                      4.963ns (1.319ns logic, 3.644ns route)
-                                                       (26.6% logic, 73.4% route)
+    Total                                     21.800ns (0.913ns logic, 20.887ns route)
+                                                       (4.2% logic, 95.8% route)
 
 --------------------------------------------------------------------------------
-Slack:                  15.044ns (requirement - (data path - clock path skew + uncertainty))
-  Source:               myState/M_state_q_FSM_FFd2 (FF)
-  Destination:          myState/scoreSum/M_regs_q_6 (FF)
+Slack:                  2.202ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               reset_cond3/M_stage_q_3 (FF)
+  Destination:          myState/mainState/mypropogater/slowclk24/M_ctr_q_7 (FF)
   Requirement:          20.000ns
-  Data Path Delay:      4.958ns (Levels of Logic = 2)
-  Clock Path Skew:      0.037ns (0.682 - 0.645)
-  Source Clock:         clk_BUFGP rising at 0.000ns
-  Destination Clock:    clk_BUFGP rising at 20.000ns
+  Data Path Delay:      21.786ns (Levels of Logic = 0)
+  Clock Path Skew:      4.023ns (6.608 - 2.585)
+  Source Clock:         clk_IBUF_BUFG rising at 0.000ns
+  Destination Clock:    myState/mainState/mainControl_BUFG rising at 20.000ns
   Clock Uncertainty:    0.035ns
 
   Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
@@ -606,33 +498,28 @@ Slack:                  15.044ns (requirement - (data path - clock path skew + u
     Discrete Jitter (DJ):       0.000ns
     Phase Error (PE):           0.000ns
 
-  Maximum Data Path at Slow Process Corner: myState/M_state_q_FSM_FFd2 to myState/scoreSum/M_regs_q_6
+  Maximum Data Path at Slow Process Corner: reset_cond3/M_stage_q_3 to myState/mainState/mypropogater/slowclk24/M_ctr_q_7
     Location             Delay type         Delay(ns)  Physical Resource
                                                        Logical Resource(s)
     -------------------------------------------------  -------------------
-    SLICE_X10Y37.BQ      Tcko                  0.476   myState/M_state_q_FSM_FFd2_1
-                                                       myState/M_state_q_FSM_FFd2
-    SLICE_X10Y53.C4      net (fanout=66)       2.989   myState/M_state_q_FSM_FFd2
-    SLICE_X10Y53.CMUX    Topcc                 0.469   myState/M_myalu_alu[7]
-                                                       myState/Mmux_M_myalu_b71
-                                                       myState/myalu/Madd_n0127[8:0]_Madd_xor<7>
-    SLICE_X11Y53.D1      net (fanout=1)        0.760   myState/M_myalu_alu[6]
-    SLICE_X11Y53.CLK     Tas                   0.264   high2_OBUF
-                                                       myState/Mmux_M_scoreSum_data71
-                                                       myState/scoreSum/M_regs_q_6
+    SLICE_X5Y9.AMUX      Tshcko                0.518   reset_cond3/M_stage_q[2]
+                                                       reset_cond3/M_stage_q_3
+    SLICE_X10Y13.SR      net (fanout=77)      20.887   M_reset_cond3_out
+    SLICE_X10Y13.CLK     Tsrck                 0.381   myState/mainState/mypropogater/slowclk24/M_ctr_q[7]
+                                                       myState/mainState/mypropogater/slowclk24/M_ctr_q_7
     -------------------------------------------------  ---------------------------
-    Total                                      4.958ns (1.209ns logic, 3.749ns route)
-                                                       (24.4% logic, 75.6% route)
+    Total                                     21.786ns (0.899ns logic, 20.887ns route)
+                                                       (4.1% logic, 95.9% route)
 
 --------------------------------------------------------------------------------
-Slack:                  15.090ns (requirement - (data path - clock path skew + uncertainty))
-  Source:               myState/M_state_q_FSM_FFd2 (FF)
-  Destination:          myState/scoreSum/M_regs_q_5 (FF)
+Slack:                  2.631ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               reset_cond3/M_stage_q_3 (FF)
+  Destination:          myState/mainState/mypropogater/slowclk24/M_ctr_q_9 (FF)
   Requirement:          20.000ns
-  Data Path Delay:      4.917ns (Levels of Logic = 3)
-  Clock Path Skew:      0.042ns (0.687 - 0.645)
-  Source Clock:         clk_BUFGP rising at 0.000ns
-  Destination Clock:    clk_BUFGP rising at 20.000ns
+  Data Path Delay:      21.358ns (Levels of Logic = 0)
+  Clock Path Skew:      4.024ns (6.609 - 2.585)
+  Source Clock:         clk_IBUF_BUFG rising at 0.000ns
+  Destination Clock:    myState/mainState/mainControl_BUFG rising at 20.000ns
   Clock Uncertainty:    0.035ns
 
   Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
@@ -641,36 +528,28 @@ Slack:                  15.090ns (requirement - (data path - clock path skew + u
     Discrete Jitter (DJ):       0.000ns
     Phase Error (PE):           0.000ns
 
-  Maximum Data Path at Slow Process Corner: myState/M_state_q_FSM_FFd2 to myState/scoreSum/M_regs_q_5
+  Maximum Data Path at Slow Process Corner: reset_cond3/M_stage_q_3 to myState/mainState/mypropogater/slowclk24/M_ctr_q_9
     Location             Delay type         Delay(ns)  Physical Resource
                                                        Logical Resource(s)
     -------------------------------------------------  -------------------
-    SLICE_X10Y37.BQ      Tcko                  0.476   myState/M_state_q_FSM_FFd2_1
-                                                       myState/M_state_q_FSM_FFd2
-    SLICE_X10Y52.D4      net (fanout=66)       2.881   myState/M_state_q_FSM_FFd2
-    SLICE_X10Y52.COUT    Topcyd                0.290   myState/myalu/Madd_n0127[8:0]_Madd_cy[3]
-                                                       myState/Mmux_M_myalu_b41
-                                                       myState/myalu/Madd_n0127[8:0]_Madd_cy<3>
-    SLICE_X10Y53.CIN     net (fanout=1)        0.003   myState/myalu/Madd_n0127[8:0]_Madd_cy[3]
-    SLICE_X10Y53.BMUX    Tcinb                 0.277   myState/M_myalu_alu[7]
-                                                       myState/myalu/Madd_n0127[8:0]_Madd_xor<7>
-    SLICE_X10Y51.B3      net (fanout=1)        0.641   myState/M_myalu_alu[5]
-    SLICE_X10Y51.CLK     Tas                   0.349   M_regs_q_5
-                                                       myState/Mmux_M_scoreSum_data61
-                                                       myState/scoreSum/M_regs_q_5
+    SLICE_X5Y9.AMUX      Tshcko                0.518   reset_cond3/M_stage_q[2]
+                                                       reset_cond3/M_stage_q_3
+    SLICE_X10Y14.SR      net (fanout=77)      20.411   M_reset_cond3_out
+    SLICE_X10Y14.CLK     Tsrck                 0.429   myState/mainState/mypropogater/slowclk24/M_ctr_q[11]
+                                                       myState/mainState/mypropogater/slowclk24/M_ctr_q_9
     -------------------------------------------------  ---------------------------
-    Total                                      4.917ns (1.392ns logic, 3.525ns route)
-                                                       (28.3% logic, 71.7% route)
+    Total                                     21.358ns (0.947ns logic, 20.411ns route)
+                                                       (4.4% logic, 95.6% route)
 
 --------------------------------------------------------------------------------
-Slack:                  15.093ns (requirement - (data path - clock path skew + uncertainty))
-  Source:               myState/M_state_q_FSM_FFd2 (FF)
-  Destination:          myState/scoreSum/M_regs_q_4 (FF)
+Slack:                  2.642ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               reset_cond3/M_stage_q_3 (FF)
+  Destination:          myState/mainState/mypropogater/slowclk24/M_ctr_q_8 (FF)
   Requirement:          20.000ns
-  Data Path Delay:      4.914ns (Levels of Logic = 2)
-  Clock Path Skew:      0.042ns (0.687 - 0.645)
-  Source Clock:         clk_BUFGP rising at 0.000ns
-  Destination Clock:    clk_BUFGP rising at 20.000ns
+  Data Path Delay:      21.347ns (Levels of Logic = 0)
+  Clock Path Skew:      4.024ns (6.609 - 2.585)
+  Source Clock:         clk_IBUF_BUFG rising at 0.000ns
+  Destination Clock:    myState/mainState/mainControl_BUFG rising at 20.000ns
   Clock Uncertainty:    0.035ns
 
   Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
@@ -679,33 +558,28 @@ Slack:                  15.093ns (requirement - (data path - clock path skew + u
     Discrete Jitter (DJ):       0.000ns
     Phase Error (PE):           0.000ns
 
-  Maximum Data Path at Slow Process Corner: myState/M_state_q_FSM_FFd2 to myState/scoreSum/M_regs_q_4
+  Maximum Data Path at Slow Process Corner: reset_cond3/M_stage_q_3 to myState/mainState/mypropogater/slowclk24/M_ctr_q_8
     Location             Delay type         Delay(ns)  Physical Resource
                                                        Logical Resource(s)
     -------------------------------------------------  -------------------
-    SLICE_X10Y37.BQ      Tcko                  0.476   myState/M_state_q_FSM_FFd2_1
-                                                       myState/M_state_q_FSM_FFd2
-    SLICE_X10Y53.A2      net (fanout=66)       3.114   myState/M_state_q_FSM_FFd2
-    SLICE_X10Y53.AMUX    Topaa                 0.449   myState/M_myalu_alu[7]
-                                                       myState/Mmux_M_myalu_b51
-                                                       myState/myalu/Madd_n0127[8:0]_Madd_xor<7>
-    SLICE_X10Y51.A4      net (fanout=1)        0.526   myState/M_myalu_alu[4]
-    SLICE_X10Y51.CLK     Tas                   0.349   M_regs_q_5
-                                                       myState/Mmux_M_scoreSum_data51
-                                                       myState/scoreSum/M_regs_q_4
+    SLICE_X5Y9.AMUX      Tshcko                0.518   reset_cond3/M_stage_q[2]
+                                                       reset_cond3/M_stage_q_3
+    SLICE_X10Y14.SR      net (fanout=77)      20.411   M_reset_cond3_out
+    SLICE_X10Y14.CLK     Tsrck                 0.418   myState/mainState/mypropogater/slowclk24/M_ctr_q[11]
+                                                       myState/mainState/mypropogater/slowclk24/M_ctr_q_8
     -------------------------------------------------  ---------------------------
-    Total                                      4.914ns (1.274ns logic, 3.640ns route)
-                                                       (25.9% logic, 74.1% route)
+    Total                                     21.347ns (0.936ns logic, 20.411ns route)
+                                                       (4.4% logic, 95.6% route)
 
 --------------------------------------------------------------------------------
-Slack:                  15.111ns (requirement - (data path - clock path skew + uncertainty))
-  Source:               myState/M_state_q_FSM_FFd2 (FF)
-  Destination:          myState/scoreSum/M_regs_q_7 (FF)
+Slack:                  2.665ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               reset_cond3/M_stage_q_3 (FF)
+  Destination:          myState/mainState/mypropogater/slowclk24/M_ctr_q_10 (FF)
   Requirement:          20.000ns
-  Data Path Delay:      4.894ns (Levels of Logic = 3)
-  Clock Path Skew:      0.040ns (0.685 - 0.645)
-  Source Clock:         clk_BUFGP rising at 0.000ns
-  Destination Clock:    clk_BUFGP rising at 20.000ns
+  Data Path Delay:      21.324ns (Levels of Logic = 0)
+  Clock Path Skew:      4.024ns (6.609 - 2.585)
+  Source Clock:         clk_IBUF_BUFG rising at 0.000ns
+  Destination Clock:    myState/mainState/mainControl_BUFG rising at 20.000ns
   Clock Uncertainty:    0.035ns
 
   Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
@@ -714,36 +588,28 @@ Slack:                  15.111ns (requirement - (data path - clock path skew + u
     Discrete Jitter (DJ):       0.000ns
     Phase Error (PE):           0.000ns
 
-  Maximum Data Path at Slow Process Corner: myState/M_state_q_FSM_FFd2 to myState/scoreSum/M_regs_q_7
+  Maximum Data Path at Slow Process Corner: reset_cond3/M_stage_q_3 to myState/mainState/mypropogater/slowclk24/M_ctr_q_10
     Location             Delay type         Delay(ns)  Physical Resource
                                                        Logical Resource(s)
     -------------------------------------------------  -------------------
-    SLICE_X10Y37.BQ      Tcko                  0.476   myState/M_state_q_FSM_FFd2_1
-                                                       myState/M_state_q_FSM_FFd2
-    SLICE_X10Y52.C4      net (fanout=66)       2.970   myState/M_state_q_FSM_FFd2
-    SLICE_X10Y52.COUT    Topcyc                0.325   myState/myalu/Madd_n0127[8:0]_Madd_cy[3]
-                                                       myState/Mmux_M_myalu_b31
-                                                       myState/myalu/Madd_n0127[8:0]_Madd_cy<3>
-    SLICE_X10Y53.CIN     net (fanout=1)        0.003   myState/myalu/Madd_n0127[8:0]_Madd_cy[3]
-    SLICE_X10Y53.DMUX    Tcind                 0.289   myState/M_myalu_alu[7]
-                                                       myState/myalu/Madd_n0127[8:0]_Madd_xor<7>
-    SLICE_X11Y52.A3      net (fanout=1)        0.567   myState/M_myalu_alu[7]
-    SLICE_X11Y52.CLK     Tas                   0.264   M_regs_q_3
-                                                       myState/Mmux_M_scoreSum_data81
-                                                       myState/scoreSum/M_regs_q_7
+    SLICE_X5Y9.AMUX      Tshcko                0.518   reset_cond3/M_stage_q[2]
+                                                       reset_cond3/M_stage_q_3
+    SLICE_X10Y14.SR      net (fanout=77)      20.411   M_reset_cond3_out
+    SLICE_X10Y14.CLK     Tsrck                 0.395   myState/mainState/mypropogater/slowclk24/M_ctr_q[11]
+                                                       myState/mainState/mypropogater/slowclk24/M_ctr_q_10
     -------------------------------------------------  ---------------------------
-    Total                                      4.894ns (1.354ns logic, 3.540ns route)
-                                                       (27.7% logic, 72.3% route)
+    Total                                     21.324ns (0.913ns logic, 20.411ns route)
+                                                       (4.3% logic, 95.7% route)
 
 --------------------------------------------------------------------------------
-Slack:                  15.116ns (requirement - (data path - clock path skew + uncertainty))
-  Source:               myState/M_state_q_FSM_FFd2 (FF)
-  Destination:          myState/scoreSum/M_regs_q_7 (FF)
+Slack:                  2.679ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               reset_cond3/M_stage_q_3 (FF)
+  Destination:          myState/mainState/mypropogater/slowclk24/M_ctr_q_11 (FF)
   Requirement:          20.000ns
-  Data Path Delay:      4.889ns (Levels of Logic = 3)
-  Clock Path Skew:      0.040ns (0.685 - 0.645)
-  Source Clock:         clk_BUFGP rising at 0.000ns
-  Destination Clock:    clk_BUFGP rising at 20.000ns
+  Data Path Delay:      21.310ns (Levels of Logic = 0)
+  Clock Path Skew:      4.024ns (6.609 - 2.585)
+  Source Clock:         clk_IBUF_BUFG rising at 0.000ns
+  Destination Clock:    myState/mainState/mainControl_BUFG rising at 20.000ns
   Clock Uncertainty:    0.035ns
 
   Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
@@ -752,36 +618,28 @@ Slack:                  15.116ns (requirement - (data path - clock path skew + u
     Discrete Jitter (DJ):       0.000ns
     Phase Error (PE):           0.000ns
 
-  Maximum Data Path at Slow Process Corner: myState/M_state_q_FSM_FFd2 to myState/scoreSum/M_regs_q_7
+  Maximum Data Path at Slow Process Corner: reset_cond3/M_stage_q_3 to myState/mainState/mypropogater/slowclk24/M_ctr_q_11
     Location             Delay type         Delay(ns)  Physical Resource
                                                        Logical Resource(s)
     -------------------------------------------------  -------------------
-    SLICE_X10Y37.BQ      Tcko                  0.476   myState/M_state_q_FSM_FFd2_1
-                                                       myState/M_state_q_FSM_FFd2
-    SLICE_X10Y52.A5      net (fanout=66)       2.795   myState/M_state_q_FSM_FFd2
-    SLICE_X10Y52.COUT    Topcya                0.495   myState/myalu/Madd_n0127[8:0]_Madd_cy[3]
-                                                       myState/Mmux_M_myalu_a11
-                                                       myState/myalu/Madd_n0127[8:0]_Madd_cy<3>
-    SLICE_X10Y53.CIN     net (fanout=1)        0.003   myState/myalu/Madd_n0127[8:0]_Madd_cy[3]
-    SLICE_X10Y53.DMUX    Tcind                 0.289   myState/M_myalu_alu[7]
-                                                       myState/myalu/Madd_n0127[8:0]_Madd_xor<7>
-    SLICE_X11Y52.A3      net (fanout=1)        0.567   myState/M_myalu_alu[7]
-    SLICE_X11Y52.CLK     Tas                   0.264   M_regs_q_3
-                                                       myState/Mmux_M_scoreSum_data81
-                                                       myState/scoreSum/M_regs_q_7
+    SLICE_X5Y9.AMUX      Tshcko                0.518   reset_cond3/M_stage_q[2]
+                                                       reset_cond3/M_stage_q_3
+    SLICE_X10Y14.SR      net (fanout=77)      20.411   M_reset_cond3_out
+    SLICE_X10Y14.CLK     Tsrck                 0.381   myState/mainState/mypropogater/slowclk24/M_ctr_q[11]
+                                                       myState/mainState/mypropogater/slowclk24/M_ctr_q_11
     -------------------------------------------------  ---------------------------
-    Total                                      4.889ns (1.524ns logic, 3.365ns route)
-                                                       (31.2% logic, 68.8% route)
+    Total                                     21.310ns (0.899ns logic, 20.411ns route)
+                                                       (4.2% logic, 95.8% route)
 
 --------------------------------------------------------------------------------
-Slack:                  15.126ns (requirement - (data path - clock path skew + uncertainty))
-  Source:               myState/M_state_q_FSM_FFd2 (FF)
-  Destination:          myState/scoreSum/M_regs_q_7 (FF)
+Slack:                  2.892ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               reset_cond3/M_stage_q_3 (FF)
+  Destination:          myState/mainState/mypropogater/slowclk25/M_ctr_q_3 (FF)
   Requirement:          20.000ns
-  Data Path Delay:      4.879ns (Levels of Logic = 3)
-  Clock Path Skew:      0.040ns (0.685 - 0.645)
-  Source Clock:         clk_BUFGP rising at 0.000ns
-  Destination Clock:    clk_BUFGP rising at 20.000ns
+  Data Path Delay:      21.095ns (Levels of Logic = 0)
+  Clock Path Skew:      4.022ns (6.607 - 2.585)
+  Source Clock:         clk_IBUF_BUFG rising at 0.000ns
+  Destination Clock:    myState/mainState/mainControl_BUFG rising at 20.000ns
   Clock Uncertainty:    0.035ns
 
   Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
@@ -790,36 +648,28 @@ Slack:                  15.126ns (requirement - (data path - clock path skew + u
     Discrete Jitter (DJ):       0.000ns
     Phase Error (PE):           0.000ns
 
-  Maximum Data Path at Slow Process Corner: myState/M_state_q_FSM_FFd2 to myState/scoreSum/M_regs_q_7
+  Maximum Data Path at Slow Process Corner: reset_cond3/M_stage_q_3 to myState/mainState/mypropogater/slowclk25/M_ctr_q_3
     Location             Delay type         Delay(ns)  Physical Resource
                                                        Logical Resource(s)
     -------------------------------------------------  -------------------
-    SLICE_X10Y37.BQ      Tcko                  0.476   myState/M_state_q_FSM_FFd2_1
-                                                       myState/M_state_q_FSM_FFd2
-    SLICE_X10Y52.B5      net (fanout=66)       2.832   myState/M_state_q_FSM_FFd2
-    SLICE_X10Y52.COUT    Topcyb                0.448   myState/myalu/Madd_n0127[8:0]_Madd_cy[3]
-                                                       myState/myalu/Madd_n0127[8:0]_Madd_lut<1>
-                                                       myState/myalu/Madd_n0127[8:0]_Madd_cy<3>
-    SLICE_X10Y53.CIN     net (fanout=1)        0.003   myState/myalu/Madd_n0127[8:0]_Madd_cy[3]
-    SLICE_X10Y53.DMUX    Tcind                 0.289   myState/M_myalu_alu[7]
-                                                       myState/myalu/Madd_n0127[8:0]_Madd_xor<7>
-    SLICE_X11Y52.A3      net (fanout=1)        0.567   myState/M_myalu_alu[7]
-    SLICE_X11Y52.CLK     Tas                   0.264   M_regs_q_3
-                                                       myState/Mmux_M_scoreSum_data81
-                                                       myState/scoreSum/M_regs_q_7
+    SLICE_X5Y9.AMUX      Tshcko                0.518   reset_cond3/M_stage_q[2]
+                                                       reset_cond3/M_stage_q_3
+    SLICE_X8Y12.SR       net (fanout=77)      20.107   M_reset_cond3_out
+    SLICE_X8Y12.CLK      Tsrck                 0.470   myState/mainState/mypropogater/slowclk25/M_ctr_q[3]
+                                                       myState/mainState/mypropogater/slowclk25/M_ctr_q_3
     -------------------------------------------------  ---------------------------
-    Total                                      4.879ns (1.477ns logic, 3.402ns route)
-                                                       (30.3% logic, 69.7% route)
+    Total                                     21.095ns (0.988ns logic, 20.107ns route)
+                                                       (4.7% logic, 95.3% route)
 
 --------------------------------------------------------------------------------
-Slack:                  15.139ns (requirement - (data path - clock path skew + uncertainty))
-  Source:               myState/M_state_q_FSM_FFd2 (FF)
-  Destination:          myState/scoreSum/M_regs_q_7 (FF)
+Slack:                  2.901ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               reset_cond3/M_stage_q_3 (FF)
+  Destination:          myState/mainState/mypropogater/slowclk25/M_ctr_q_2 (FF)
   Requirement:          20.000ns
-  Data Path Delay:      4.866ns (Levels of Logic = 3)
-  Clock Path Skew:      0.040ns (0.685 - 0.645)
-  Source Clock:         clk_BUFGP rising at 0.000ns
-  Destination Clock:    clk_BUFGP rising at 20.000ns
+  Data Path Delay:      21.086ns (Levels of Logic = 0)
+  Clock Path Skew:      4.022ns (6.607 - 2.585)
+  Source Clock:         clk_IBUF_BUFG rising at 0.000ns
+  Destination Clock:    myState/mainState/mainControl_BUFG rising at 20.000ns
   Clock Uncertainty:    0.035ns
 
   Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
@@ -828,36 +678,28 @@ Slack:                  15.139ns (requirement - (data path - clock path skew + u
     Discrete Jitter (DJ):       0.000ns
     Phase Error (PE):           0.000ns
 
-  Maximum Data Path at Slow Process Corner: myState/M_state_q_FSM_FFd2 to myState/scoreSum/M_regs_q_7
+  Maximum Data Path at Slow Process Corner: reset_cond3/M_stage_q_3 to myState/mainState/mypropogater/slowclk25/M_ctr_q_2
     Location             Delay type         Delay(ns)  Physical Resource
                                                        Logical Resource(s)
     -------------------------------------------------  -------------------
-    SLICE_X10Y37.BQ      Tcko                  0.476   myState/M_state_q_FSM_FFd2_1
-                                                       myState/M_state_q_FSM_FFd2
-    SLICE_X10Y52.A5      net (fanout=66)       2.795   myState/M_state_q_FSM_FFd2
-    SLICE_X10Y52.COUT    Topcya                0.472   myState/myalu/Madd_n0127[8:0]_Madd_cy[3]
-                                                       myState/myalu/Madd_n0127[8:0]_Madd_lut<0>
-                                                       myState/myalu/Madd_n0127[8:0]_Madd_cy<3>
-    SLICE_X10Y53.CIN     net (fanout=1)        0.003   myState/myalu/Madd_n0127[8:0]_Madd_cy[3]
-    SLICE_X10Y53.DMUX    Tcind                 0.289   myState/M_myalu_alu[7]
-                                                       myState/myalu/Madd_n0127[8:0]_Madd_xor<7>
-    SLICE_X11Y52.A3      net (fanout=1)        0.567   myState/M_myalu_alu[7]
-    SLICE_X11Y52.CLK     Tas                   0.264   M_regs_q_3
-                                                       myState/Mmux_M_scoreSum_data81
-                                                       myState/scoreSum/M_regs_q_7
+    SLICE_X5Y9.AMUX      Tshcko                0.518   reset_cond3/M_stage_q[2]
+                                                       reset_cond3/M_stage_q_3
+    SLICE_X8Y12.SR       net (fanout=77)      20.107   M_reset_cond3_out
+    SLICE_X8Y12.CLK      Tsrck                 0.461   myState/mainState/mypropogater/slowclk25/M_ctr_q[3]
+                                                       myState/mainState/mypropogater/slowclk25/M_ctr_q_2
     -------------------------------------------------  ---------------------------
-    Total                                      4.866ns (1.501ns logic, 3.365ns route)
-                                                       (30.8% logic, 69.2% route)
+    Total                                     21.086ns (0.979ns logic, 20.107ns route)
+                                                       (4.6% logic, 95.4% route)
 
 --------------------------------------------------------------------------------
-Slack:                  15.148ns (requirement - (data path - clock path skew + uncertainty))
-  Source:               myState/M_state_q_FSM_FFd2 (FF)
-  Destination:          myState/scoreSum/M_regs_q_4 (FF)
+Slack:                  2.912ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               reset_cond3/M_stage_q_3 (FF)
+  Destination:          myState/mainState/mypropogater/slowclk25/M_ctr_q_1 (FF)
   Requirement:          20.000ns
-  Data Path Delay:      4.859ns (Levels of Logic = 3)
-  Clock Path Skew:      0.042ns (0.687 - 0.645)
-  Source Clock:         clk_BUFGP rising at 0.000ns
-  Destination Clock:    clk_BUFGP rising at 20.000ns
+  Data Path Delay:      21.075ns (Levels of Logic = 0)
+  Clock Path Skew:      4.022ns (6.607 - 2.585)
+  Source Clock:         clk_IBUF_BUFG rising at 0.000ns
+  Destination Clock:    myState/mainState/mainControl_BUFG rising at 20.000ns
   Clock Uncertainty:    0.035ns
 
   Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
@@ -866,36 +708,28 @@ Slack:                  15.148ns (requirement - (data path - clock path skew + u
     Discrete Jitter (DJ):       0.000ns
     Phase Error (PE):           0.000ns
 
-  Maximum Data Path at Slow Process Corner: myState/M_state_q_FSM_FFd2 to myState/scoreSum/M_regs_q_4
+  Maximum Data Path at Slow Process Corner: reset_cond3/M_stage_q_3 to myState/mainState/mypropogater/slowclk25/M_ctr_q_1
     Location             Delay type         Delay(ns)  Physical Resource
                                                        Logical Resource(s)
     -------------------------------------------------  -------------------
-    SLICE_X10Y37.BQ      Tcko                  0.476   myState/M_state_q_FSM_FFd2_1
-                                                       myState/M_state_q_FSM_FFd2
-    SLICE_X10Y52.C4      net (fanout=66)       2.970   myState/M_state_q_FSM_FFd2
-    SLICE_X10Y52.COUT    Topcyc                0.325   myState/myalu/Madd_n0127[8:0]_Madd_cy[3]
-                                                       myState/Mmux_M_myalu_b31
-                                                       myState/myalu/Madd_n0127[8:0]_Madd_cy<3>
-    SLICE_X10Y53.CIN     net (fanout=1)        0.003   myState/myalu/Madd_n0127[8:0]_Madd_cy[3]
-    SLICE_X10Y53.AMUX    Tcina                 0.210   myState/M_myalu_alu[7]
-                                                       myState/myalu/Madd_n0127[8:0]_Madd_xor<7>
-    SLICE_X10Y51.A4      net (fanout=1)        0.526   myState/M_myalu_alu[4]
-    SLICE_X10Y51.CLK     Tas                   0.349   M_regs_q_5
-                                                       myState/Mmux_M_scoreSum_data51
-                                                       myState/scoreSum/M_regs_q_4
+    SLICE_X5Y9.AMUX      Tshcko                0.518   reset_cond3/M_stage_q[2]
+                                                       reset_cond3/M_stage_q_3
+    SLICE_X8Y12.SR       net (fanout=77)      20.107   M_reset_cond3_out
+    SLICE_X8Y12.CLK      Tsrck                 0.450   myState/mainState/mypropogater/slowclk25/M_ctr_q[3]
+                                                       myState/mainState/mypropogater/slowclk25/M_ctr_q_1
     -------------------------------------------------  ---------------------------
-    Total                                      4.859ns (1.360ns logic, 3.499ns route)
-                                                       (28.0% logic, 72.0% route)
+    Total                                     21.075ns (0.968ns logic, 20.107ns route)
+                                                       (4.6% logic, 95.4% route)
 
 --------------------------------------------------------------------------------
-Slack:                  15.153ns (requirement - (data path - clock path skew + uncertainty))
-  Source:               myState/M_state_q_FSM_FFd2 (FF)
-  Destination:          myState/scoreSum/M_regs_q_4 (FF)
+Slack:                  2.934ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               reset_cond3/M_stage_q_3 (FF)
+  Destination:          myState/mainState/mypropogater/slowclk25/M_ctr_q_0 (FF)
   Requirement:          20.000ns
-  Data Path Delay:      4.854ns (Levels of Logic = 3)
-  Clock Path Skew:      0.042ns (0.687 - 0.645)
-  Source Clock:         clk_BUFGP rising at 0.000ns
-  Destination Clock:    clk_BUFGP rising at 20.000ns
+  Data Path Delay:      21.053ns (Levels of Logic = 0)
+  Clock Path Skew:      4.022ns (6.607 - 2.585)
+  Source Clock:         clk_IBUF_BUFG rising at 0.000ns
+  Destination Clock:    myState/mainState/mainControl_BUFG rising at 20.000ns
   Clock Uncertainty:    0.035ns
 
   Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
@@ -904,36 +738,28 @@ Slack:                  15.153ns (requirement - (data path - clock path skew + u
     Discrete Jitter (DJ):       0.000ns
     Phase Error (PE):           0.000ns
 
-  Maximum Data Path at Slow Process Corner: myState/M_state_q_FSM_FFd2 to myState/scoreSum/M_regs_q_4
+  Maximum Data Path at Slow Process Corner: reset_cond3/M_stage_q_3 to myState/mainState/mypropogater/slowclk25/M_ctr_q_0
     Location             Delay type         Delay(ns)  Physical Resource
                                                        Logical Resource(s)
     -------------------------------------------------  -------------------
-    SLICE_X10Y37.BQ      Tcko                  0.476   myState/M_state_q_FSM_FFd2_1
-                                                       myState/M_state_q_FSM_FFd2
-    SLICE_X10Y52.A5      net (fanout=66)       2.795   myState/M_state_q_FSM_FFd2
-    SLICE_X10Y52.COUT    Topcya                0.495   myState/myalu/Madd_n0127[8:0]_Madd_cy[3]
-                                                       myState/Mmux_M_myalu_a11
-                                                       myState/myalu/Madd_n0127[8:0]_Madd_cy<3>
-    SLICE_X10Y53.CIN     net (fanout=1)        0.003   myState/myalu/Madd_n0127[8:0]_Madd_cy[3]
-    SLICE_X10Y53.AMUX    Tcina                 0.210   myState/M_myalu_alu[7]
-                                                       myState/myalu/Madd_n0127[8:0]_Madd_xor<7>
-    SLICE_X10Y51.A4      net (fanout=1)        0.526   myState/M_myalu_alu[4]
-    SLICE_X10Y51.CLK     Tas                   0.349   M_regs_q_5
-                                                       myState/Mmux_M_scoreSum_data51
-                                                       myState/scoreSum/M_regs_q_4
+    SLICE_X5Y9.AMUX      Tshcko                0.518   reset_cond3/M_stage_q[2]
+                                                       reset_cond3/M_stage_q_3
+    SLICE_X8Y12.SR       net (fanout=77)      20.107   M_reset_cond3_out
+    SLICE_X8Y12.CLK      Tsrck                 0.428   myState/mainState/mypropogater/slowclk25/M_ctr_q[3]
+                                                       myState/mainState/mypropogater/slowclk25/M_ctr_q_0
     -------------------------------------------------  ---------------------------
-    Total                                      4.854ns (1.530ns logic, 3.324ns route)
-                                                       (31.5% logic, 68.5% route)
+    Total                                     21.053ns (0.946ns logic, 20.107ns route)
+                                                       (4.5% logic, 95.5% route)
 
 --------------------------------------------------------------------------------
-Slack:                  15.163ns (requirement - (data path - clock path skew + uncertainty))
-  Source:               myState/M_state_q_FSM_FFd2 (FF)
-  Destination:          myState/scoreSum/M_regs_q_7 (FF)
+Slack:                  3.220ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               reset_cond3/M_stage_q_3 (FF)
+  Destination:          myState/mainState/mypropogater/slowclk24/M_ctr_q_17 (FF)
   Requirement:          20.000ns
-  Data Path Delay:      4.842ns (Levels of Logic = 3)
-  Clock Path Skew:      0.040ns (0.685 - 0.645)
-  Source Clock:         clk_BUFGP rising at 0.000ns
-  Destination Clock:    clk_BUFGP rising at 20.000ns
+  Data Path Delay:      20.708ns (Levels of Logic = 0)
+  Clock Path Skew:      3.963ns (6.548 - 2.585)
+  Source Clock:         clk_IBUF_BUFG rising at 0.000ns
+  Destination Clock:    myState/mainState/mainControl_BUFG rising at 20.000ns
   Clock Uncertainty:    0.035ns
 
   Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
@@ -942,36 +768,28 @@ Slack:                  15.163ns (requirement - (data path - clock path skew + u
     Discrete Jitter (DJ):       0.000ns
     Phase Error (PE):           0.000ns
 
-  Maximum Data Path at Slow Process Corner: myState/M_state_q_FSM_FFd2 to myState/scoreSum/M_regs_q_7
+  Maximum Data Path at Slow Process Corner: reset_cond3/M_stage_q_3 to myState/mainState/mypropogater/slowclk24/M_ctr_q_17
     Location             Delay type         Delay(ns)  Physical Resource
                                                        Logical Resource(s)
     -------------------------------------------------  -------------------
-    SLICE_X10Y37.BQ      Tcko                  0.476   myState/M_state_q_FSM_FFd2_1
-                                                       myState/M_state_q_FSM_FFd2
-    SLICE_X10Y52.B5      net (fanout=66)       2.832   myState/M_state_q_FSM_FFd2
-    SLICE_X10Y52.COUT    Topcyb                0.411   myState/myalu/Madd_n0127[8:0]_Madd_cy[3]
-                                                       myState/Mmux_M_myalu_a21
-                                                       myState/myalu/Madd_n0127[8:0]_Madd_cy<3>
-    SLICE_X10Y53.CIN     net (fanout=1)        0.003   myState/myalu/Madd_n0127[8:0]_Madd_cy[3]
-    SLICE_X10Y53.DMUX    Tcind                 0.289   myState/M_myalu_alu[7]
-                                                       myState/myalu/Madd_n0127[8:0]_Madd_xor<7>
-    SLICE_X11Y52.A3      net (fanout=1)        0.567   myState/M_myalu_alu[7]
-    SLICE_X11Y52.CLK     Tas                   0.264   M_regs_q_3
-                                                       myState/Mmux_M_scoreSum_data81
-                                                       myState/scoreSum/M_regs_q_7
+    SLICE_X5Y9.AMUX      Tshcko                0.518   reset_cond3/M_stage_q[2]
+                                                       reset_cond3/M_stage_q_3
+    SLICE_X10Y16.SR      net (fanout=77)      19.761   M_reset_cond3_out
+    SLICE_X10Y16.CLK     Tsrck                 0.429   myState/mainState/mypropogater/slowclk24/M_ctr_q[19]
+                                                       myState/mainState/mypropogater/slowclk24/M_ctr_q_17
     -------------------------------------------------  ---------------------------
-    Total                                      4.842ns (1.440ns logic, 3.402ns route)
-                                                       (29.7% logic, 70.3% route)
+    Total                                     20.708ns (0.947ns logic, 19.761ns route)
+                                                       (4.6% logic, 95.4% route)
 
 --------------------------------------------------------------------------------
-Slack:                  15.163ns (requirement - (data path - clock path skew + uncertainty))
-  Source:               myState/M_state_q_FSM_FFd2 (FF)
-  Destination:          myState/scoreSum/M_regs_q_4 (FF)
+Slack:                  3.231ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               reset_cond3/M_stage_q_3 (FF)
+  Destination:          myState/mainState/mypropogater/slowclk24/M_ctr_q_16 (FF)
   Requirement:          20.000ns
-  Data Path Delay:      4.844ns (Levels of Logic = 3)
-  Clock Path Skew:      0.042ns (0.687 - 0.645)
-  Source Clock:         clk_BUFGP rising at 0.000ns
-  Destination Clock:    clk_BUFGP rising at 20.000ns
+  Data Path Delay:      20.697ns (Levels of Logic = 0)
+  Clock Path Skew:      3.963ns (6.548 - 2.585)
+  Source Clock:         clk_IBUF_BUFG rising at 0.000ns
+  Destination Clock:    myState/mainState/mainControl_BUFG rising at 20.000ns
   Clock Uncertainty:    0.035ns
 
   Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
@@ -980,36 +798,28 @@ Slack:                  15.163ns (requirement - (data path - clock path skew + u
     Discrete Jitter (DJ):       0.000ns
     Phase Error (PE):           0.000ns
 
-  Maximum Data Path at Slow Process Corner: myState/M_state_q_FSM_FFd2 to myState/scoreSum/M_regs_q_4
+  Maximum Data Path at Slow Process Corner: reset_cond3/M_stage_q_3 to myState/mainState/mypropogater/slowclk24/M_ctr_q_16
     Location             Delay type         Delay(ns)  Physical Resource
                                                        Logical Resource(s)
     -------------------------------------------------  -------------------
-    SLICE_X10Y37.BQ      Tcko                  0.476   myState/M_state_q_FSM_FFd2_1
-                                                       myState/M_state_q_FSM_FFd2
-    SLICE_X10Y52.B5      net (fanout=66)       2.832   myState/M_state_q_FSM_FFd2
-    SLICE_X10Y52.COUT    Topcyb                0.448   myState/myalu/Madd_n0127[8:0]_Madd_cy[3]
-                                                       myState/myalu/Madd_n0127[8:0]_Madd_lut<1>
-                                                       myState/myalu/Madd_n0127[8:0]_Madd_cy<3>
-    SLICE_X10Y53.CIN     net (fanout=1)        0.003   myState/myalu/Madd_n0127[8:0]_Madd_cy[3]
-    SLICE_X10Y53.AMUX    Tcina                 0.210   myState/M_myalu_alu[7]
-                                                       myState/myalu/Madd_n0127[8:0]_Madd_xor<7>
-    SLICE_X10Y51.A4      net (fanout=1)        0.526   myState/M_myalu_alu[4]
-    SLICE_X10Y51.CLK     Tas                   0.349   M_regs_q_5
-                                                       myState/Mmux_M_scoreSum_data51
-                                                       myState/scoreSum/M_regs_q_4
+    SLICE_X5Y9.AMUX      Tshcko                0.518   reset_cond3/M_stage_q[2]
+                                                       reset_cond3/M_stage_q_3
+    SLICE_X10Y16.SR      net (fanout=77)      19.761   M_reset_cond3_out
+    SLICE_X10Y16.CLK     Tsrck                 0.418   myState/mainState/mypropogater/slowclk24/M_ctr_q[19]
+                                                       myState/mainState/mypropogater/slowclk24/M_ctr_q_16
     -------------------------------------------------  ---------------------------
-    Total                                      4.844ns (1.483ns logic, 3.361ns route)
-                                                       (30.6% logic, 69.4% route)
+    Total                                     20.697ns (0.936ns logic, 19.761ns route)
+                                                       (4.5% logic, 95.5% route)
 
 --------------------------------------------------------------------------------
-Slack:                  15.176ns (requirement - (data path - clock path skew + uncertainty))
-  Source:               myState/M_state_q_FSM_FFd2 (FF)
-  Destination:          myState/scoreSum/M_regs_q_4 (FF)
+Slack:                  3.254ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               reset_cond3/M_stage_q_3 (FF)
+  Destination:          myState/mainState/mypropogater/slowclk24/M_ctr_q_18 (FF)
   Requirement:          20.000ns
-  Data Path Delay:      4.831ns (Levels of Logic = 3)
-  Clock Path Skew:      0.042ns (0.687 - 0.645)
-  Source Clock:         clk_BUFGP rising at 0.000ns
-  Destination Clock:    clk_BUFGP rising at 20.000ns
+  Data Path Delay:      20.674ns (Levels of Logic = 0)
+  Clock Path Skew:      3.963ns (6.548 - 2.585)
+  Source Clock:         clk_IBUF_BUFG rising at 0.000ns
+  Destination Clock:    myState/mainState/mainControl_BUFG rising at 20.000ns
   Clock Uncertainty:    0.035ns
 
   Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
@@ -1018,36 +828,28 @@ Slack:                  15.176ns (requirement - (data path - clock path skew + u
     Discrete Jitter (DJ):       0.000ns
     Phase Error (PE):           0.000ns
 
-  Maximum Data Path at Slow Process Corner: myState/M_state_q_FSM_FFd2 to myState/scoreSum/M_regs_q_4
+  Maximum Data Path at Slow Process Corner: reset_cond3/M_stage_q_3 to myState/mainState/mypropogater/slowclk24/M_ctr_q_18
     Location             Delay type         Delay(ns)  Physical Resource
                                                        Logical Resource(s)
     -------------------------------------------------  -------------------
-    SLICE_X10Y37.BQ      Tcko                  0.476   myState/M_state_q_FSM_FFd2_1
-                                                       myState/M_state_q_FSM_FFd2
-    SLICE_X10Y52.A5      net (fanout=66)       2.795   myState/M_state_q_FSM_FFd2
-    SLICE_X10Y52.COUT    Topcya                0.472   myState/myalu/Madd_n0127[8:0]_Madd_cy[3]
-                                                       myState/myalu/Madd_n0127[8:0]_Madd_lut<0>
-                                                       myState/myalu/Madd_n0127[8:0]_Madd_cy<3>
-    SLICE_X10Y53.CIN     net (fanout=1)        0.003   myState/myalu/Madd_n0127[8:0]_Madd_cy[3]
-    SLICE_X10Y53.AMUX    Tcina                 0.210   myState/M_myalu_alu[7]
-                                                       myState/myalu/Madd_n0127[8:0]_Madd_xor<7>
-    SLICE_X10Y51.A4      net (fanout=1)        0.526   myState/M_myalu_alu[4]
-    SLICE_X10Y51.CLK     Tas                   0.349   M_regs_q_5
-                                                       myState/Mmux_M_scoreSum_data51
-                                                       myState/scoreSum/M_regs_q_4
+    SLICE_X5Y9.AMUX      Tshcko                0.518   reset_cond3/M_stage_q[2]
+                                                       reset_cond3/M_stage_q_3
+    SLICE_X10Y16.SR      net (fanout=77)      19.761   M_reset_cond3_out
+    SLICE_X10Y16.CLK     Tsrck                 0.395   myState/mainState/mypropogater/slowclk24/M_ctr_q[19]
+                                                       myState/mainState/mypropogater/slowclk24/M_ctr_q_18
     -------------------------------------------------  ---------------------------
-    Total                                      4.831ns (1.507ns logic, 3.324ns route)
-                                                       (31.2% logic, 68.8% route)
+    Total                                     20.674ns (0.913ns logic, 19.761ns route)
+                                                       (4.4% logic, 95.6% route)
 
 --------------------------------------------------------------------------------
-Slack:                  15.200ns (requirement - (data path - clock path skew + uncertainty))
-  Source:               myState/M_state_q_FSM_FFd2 (FF)
-  Destination:          myState/scoreSum/M_regs_q_4 (FF)
+Slack:                  3.268ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               reset_cond3/M_stage_q_3 (FF)
+  Destination:          myState/mainState/mypropogater/slowclk24/M_ctr_q_19 (FF)
   Requirement:          20.000ns
-  Data Path Delay:      4.807ns (Levels of Logic = 3)
-  Clock Path Skew:      0.042ns (0.687 - 0.645)
-  Source Clock:         clk_BUFGP rising at 0.000ns
-  Destination Clock:    clk_BUFGP rising at 20.000ns
+  Data Path Delay:      20.660ns (Levels of Logic = 0)
+  Clock Path Skew:      3.963ns (6.548 - 2.585)
+  Source Clock:         clk_IBUF_BUFG rising at 0.000ns
+  Destination Clock:    myState/mainState/mainControl_BUFG rising at 20.000ns
   Clock Uncertainty:    0.035ns
 
   Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
@@ -1056,36 +858,28 @@ Slack:                  15.200ns (requirement - (data path - clock path skew + u
     Discrete Jitter (DJ):       0.000ns
     Phase Error (PE):           0.000ns
 
-  Maximum Data Path at Slow Process Corner: myState/M_state_q_FSM_FFd2 to myState/scoreSum/M_regs_q_4
+  Maximum Data Path at Slow Process Corner: reset_cond3/M_stage_q_3 to myState/mainState/mypropogater/slowclk24/M_ctr_q_19
     Location             Delay type         Delay(ns)  Physical Resource
                                                        Logical Resource(s)
     -------------------------------------------------  -------------------
-    SLICE_X10Y37.BQ      Tcko                  0.476   myState/M_state_q_FSM_FFd2_1
-                                                       myState/M_state_q_FSM_FFd2
-    SLICE_X10Y52.B5      net (fanout=66)       2.832   myState/M_state_q_FSM_FFd2
-    SLICE_X10Y52.COUT    Topcyb                0.411   myState/myalu/Madd_n0127[8:0]_Madd_cy[3]
-                                                       myState/Mmux_M_myalu_a21
-                                                       myState/myalu/Madd_n0127[8:0]_Madd_cy<3>
-    SLICE_X10Y53.CIN     net (fanout=1)        0.003   myState/myalu/Madd_n0127[8:0]_Madd_cy[3]
-    SLICE_X10Y53.AMUX    Tcina                 0.210   myState/M_myalu_alu[7]
-                                                       myState/myalu/Madd_n0127[8:0]_Madd_xor<7>
-    SLICE_X10Y51.A4      net (fanout=1)        0.526   myState/M_myalu_alu[4]
-    SLICE_X10Y51.CLK     Tas                   0.349   M_regs_q_5
-                                                       myState/Mmux_M_scoreSum_data51
-                                                       myState/scoreSum/M_regs_q_4
+    SLICE_X5Y9.AMUX      Tshcko                0.518   reset_cond3/M_stage_q[2]
+                                                       reset_cond3/M_stage_q_3
+    SLICE_X10Y16.SR      net (fanout=77)      19.761   M_reset_cond3_out
+    SLICE_X10Y16.CLK     Tsrck                 0.381   myState/mainState/mypropogater/slowclk24/M_ctr_q[19]
+                                                       myState/mainState/mypropogater/slowclk24/M_ctr_q_19
     -------------------------------------------------  ---------------------------
-    Total                                      4.807ns (1.446ns logic, 3.361ns route)
-                                                       (30.1% logic, 69.9% route)
+    Total                                     20.660ns (0.899ns logic, 19.761ns route)
+                                                       (4.4% logic, 95.6% route)
 
 --------------------------------------------------------------------------------
-Slack:                  15.203ns (requirement - (data path - clock path skew + uncertainty))
-  Source:               myState/M_state_q_FSM_FFd2 (FF)
-  Destination:          myState/scoreSum/M_regs_q_7 (FF)
+Slack:                  3.335ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               reset_cond3/M_stage_q_3 (FF)
+  Destination:          myState/mainState/mypropogater/slowclk24/M_ctr_q_21 (FF)
   Requirement:          20.000ns
-  Data Path Delay:      4.802ns (Levels of Logic = 2)
-  Clock Path Skew:      0.040ns (0.685 - 0.645)
-  Source Clock:         clk_BUFGP rising at 0.000ns
-  Destination Clock:    clk_BUFGP rising at 20.000ns
+  Data Path Delay:      20.592ns (Levels of Logic = 0)
+  Clock Path Skew:      3.962ns (6.547 - 2.585)
+  Source Clock:         clk_IBUF_BUFG rising at 0.000ns
+  Destination Clock:    myState/mainState/mainControl_BUFG rising at 20.000ns
   Clock Uncertainty:    0.035ns
 
   Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
@@ -1094,33 +888,28 @@ Slack:                  15.203ns (requirement - (data path - clock path skew + u
     Discrete Jitter (DJ):       0.000ns
     Phase Error (PE):           0.000ns
 
-  Maximum Data Path at Slow Process Corner: myState/M_state_q_FSM_FFd2 to myState/scoreSum/M_regs_q_7
+  Maximum Data Path at Slow Process Corner: reset_cond3/M_stage_q_3 to myState/mainState/mypropogater/slowclk24/M_ctr_q_21
     Location             Delay type         Delay(ns)  Physical Resource
                                                        Logical Resource(s)
     -------------------------------------------------  -------------------
-    SLICE_X10Y37.BQ      Tcko                  0.476   myState/M_state_q_FSM_FFd2_1
-                                                       myState/M_state_q_FSM_FFd2
-    SLICE_X10Y53.B5      net (fanout=66)       2.851   myState/M_state_q_FSM_FFd2
-    SLICE_X10Y53.DMUX    Topbd                 0.644   myState/M_myalu_alu[7]
-                                                       myState/Mmux_M_myalu_b61
-                                                       myState/myalu/Madd_n0127[8:0]_Madd_xor<7>
-    SLICE_X11Y52.A3      net (fanout=1)        0.567   myState/M_myalu_alu[7]
-    SLICE_X11Y52.CLK     Tas                   0.264   M_regs_q_3
-                                                       myState/Mmux_M_scoreSum_data81
-                                                       myState/scoreSum/M_regs_q_7
+    SLICE_X5Y9.AMUX      Tshcko                0.518   reset_cond3/M_stage_q[2]
+                                                       reset_cond3/M_stage_q_3
+    SLICE_X10Y17.SR      net (fanout=77)      19.645   M_reset_cond3_out
+    SLICE_X10Y17.CLK     Tsrck                 0.429   myState/mainState/mypropogater/slowclk24/M_ctr_q[23]
+                                                       myState/mainState/mypropogater/slowclk24/M_ctr_q_21
     -------------------------------------------------  ---------------------------
-    Total                                      4.802ns (1.384ns logic, 3.418ns route)
-                                                       (28.8% logic, 71.2% route)
+    Total                                     20.592ns (0.947ns logic, 19.645ns route)
+                                                       (4.6% logic, 95.4% route)
 
 --------------------------------------------------------------------------------
-Slack:                  15.216ns (requirement - (data path - clock path skew + uncertainty))
-  Source:               myState/M_state_q_FSM_FFd2 (FF)
-  Destination:          myState/scoreSum/M_regs_q_7 (FF)
+Slack:                  3.346ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               reset_cond3/M_stage_q_3 (FF)
+  Destination:          myState/mainState/mypropogater/slowclk24/M_ctr_q_20 (FF)
   Requirement:          20.000ns
-  Data Path Delay:      4.789ns (Levels of Logic = 2)
-  Clock Path Skew:      0.040ns (0.685 - 0.645)
-  Source Clock:         clk_BUFGP rising at 0.000ns
-  Destination Clock:    clk_BUFGP rising at 20.000ns
+  Data Path Delay:      20.581ns (Levels of Logic = 0)
+  Clock Path Skew:      3.962ns (6.547 - 2.585)
+  Source Clock:         clk_IBUF_BUFG rising at 0.000ns
+  Destination Clock:    myState/mainState/mainControl_BUFG rising at 20.000ns
   Clock Uncertainty:    0.035ns
 
   Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
@@ -1129,23 +918,18 @@ Slack:                  15.216ns (requirement - (data path - clock path skew + u
     Discrete Jitter (DJ):       0.000ns
     Phase Error (PE):           0.000ns
 
-  Maximum Data Path at Slow Process Corner: myState/M_state_q_FSM_FFd2 to myState/scoreSum/M_regs_q_7
+  Maximum Data Path at Slow Process Corner: reset_cond3/M_stage_q_3 to myState/mainState/mypropogater/slowclk24/M_ctr_q_20
     Location             Delay type         Delay(ns)  Physical Resource
                                                        Logical Resource(s)
     -------------------------------------------------  -------------------
-    SLICE_X10Y37.BQ      Tcko                  0.476   myState/M_state_q_FSM_FFd2_1
-                                                       myState/M_state_q_FSM_FFd2
-    SLICE_X10Y53.C4      net (fanout=66)       2.989   myState/M_state_q_FSM_FFd2
-    SLICE_X10Y53.DMUX    Topcd                 0.493   myState/M_myalu_alu[7]
-                                                       myState/Mmux_M_myalu_b71
-                                                       myState/myalu/Madd_n0127[8:0]_Madd_xor<7>
-    SLICE_X11Y52.A3      net (fanout=1)        0.567   myState/M_myalu_alu[7]
-    SLICE_X11Y52.CLK     Tas                   0.264   M_regs_q_3
-                                                       myState/Mmux_M_scoreSum_data81
-                                                       myState/scoreSum/M_regs_q_7
+    SLICE_X5Y9.AMUX      Tshcko                0.518   reset_cond3/M_stage_q[2]
+                                                       reset_cond3/M_stage_q_3
+    SLICE_X10Y17.SR      net (fanout=77)      19.645   M_reset_cond3_out
+    SLICE_X10Y17.CLK     Tsrck                 0.418   myState/mainState/mypropogater/slowclk24/M_ctr_q[23]
+                                                       myState/mainState/mypropogater/slowclk24/M_ctr_q_20
     -------------------------------------------------  ---------------------------
-    Total                                      4.789ns (1.233ns logic, 3.556ns route)
-                                                       (25.7% logic, 74.3% route)
+    Total                                     20.581ns (0.936ns logic, 19.645ns route)
+                                                       (4.5% logic, 95.5% route)
 
 --------------------------------------------------------------------------------
 
@@ -1154,242 +938,242 @@ Component Switching Limit Checks: TS_clk = PERIOD TIMEGRP "clk" 50 MHz HIGH 50%;
 Slack: 17.334ns (period - min period limit)
   Period: 20.000ns
   Min period limit: 2.666ns (375.094MHz) (Tbcper_I)
-  Physical resource: clk_BUFGP/BUFG/I0
-  Logical resource: clk_BUFGP/BUFG/I0
+  Physical resource: myState/mainState/mainControl_BUFG/I0
+  Logical resource: myState/mainState/mainControl_BUFG/I0
+  Location pin: BUFGMUX_X3Y13.I0
+  Clock network: myState/mainState/mainControl
+--------------------------------------------------------------------------------
+Slack: 17.334ns (period - min period limit)
+  Period: 20.000ns
+  Min period limit: 2.666ns (375.094MHz) (Tbcper_I)
+  Physical resource: clk_IBUF_BUFG/I0
+  Logical resource: clk_IBUF_BUFG/I0
   Location pin: BUFGMUX_X2Y11.I0
-  Clock network: clk_BUFGP/IBUFG
+  Clock network: clk_IBUF
 --------------------------------------------------------------------------------
 Slack: 18.601ns (period - min period limit)
   Period: 20.000ns
   Min period limit: 1.399ns (714.796MHz) (Tcp)
   Physical resource: myState/bttnpress/button_cond/M_sync_out/CLK
   Logical resource: myState/bttnpress/button_cond2/sync/Mshreg_M_pipe_q_1/CLK
-  Location pin: SLICE_X16Y13.CLK
-  Clock network: clk_BUFGP
+  Location pin: SLICE_X12Y9.CLK
+  Clock network: clk_IBUF_BUFG
 --------------------------------------------------------------------------------
 Slack: 18.601ns (period - min period limit)
   Period: 20.000ns
   Min period limit: 1.399ns (714.796MHz) (Tcp)
   Physical resource: myState/bttnpress/button_cond/M_sync_out/CLK
   Logical resource: myState/bttnpress/button_cond3/sync/Mshreg_M_pipe_q_1/CLK
-  Location pin: SLICE_X16Y13.CLK
-  Clock network: clk_BUFGP
+  Location pin: SLICE_X12Y9.CLK
+  Clock network: clk_IBUF_BUFG
 --------------------------------------------------------------------------------
 Slack: 18.601ns (period - min period limit)
   Period: 20.000ns
   Min period limit: 1.399ns (714.796MHz) (Tcp)
   Physical resource: myState/bttnpress/button_cond/M_sync_out/CLK
   Logical resource: myState/bttnpress/button_cond/sync/Mshreg_M_pipe_q_1/CLK
-  Location pin: SLICE_X16Y13.CLK
-  Clock network: clk_BUFGP
+  Location pin: SLICE_X12Y9.CLK
+  Clock network: clk_IBUF_BUFG
 --------------------------------------------------------------------------------
 Slack: 19.520ns (period - min period limit)
   Period: 20.000ns
   Min period limit: 0.480ns (2083.333MHz) (Tcp)
-  Physical resource: myState/M_ctr_q_3/CLK
+  Physical resource: myState/mainState/mypropogater/slowclk23/M_ctr_q[3]/CLK
+  Logical resource: myState/mainState/mypropogater/slowclk23/M_ctr_q_0/CK
+  Location pin: SLICE_X8Y22.CLK
+  Clock network: myState/mainState/mainControl_BUFG
+--------------------------------------------------------------------------------
+Slack: 19.520ns (period - min period limit)
+  Period: 20.000ns
+  Min period limit: 0.480ns (2083.333MHz) (Tcp)
+  Physical resource: myState/mainState/mypropogater/slowclk23/M_ctr_q[3]/CLK
+  Logical resource: myState/mainState/mypropogater/slowclk23/M_ctr_q_1/CK
+  Location pin: SLICE_X8Y22.CLK
+  Clock network: myState/mainState/mainControl_BUFG
+--------------------------------------------------------------------------------
+Slack: 19.520ns (period - min period limit)
+  Period: 20.000ns
+  Min period limit: 0.480ns (2083.333MHz) (Tcp)
+  Physical resource: myState/mainState/mypropogater/slowclk23/M_ctr_q[3]/CLK
+  Logical resource: myState/mainState/mypropogater/slowclk23/M_ctr_q_2/CK
+  Location pin: SLICE_X8Y22.CLK
+  Clock network: myState/mainState/mainControl_BUFG
+--------------------------------------------------------------------------------
+Slack: 19.520ns (period - min period limit)
+  Period: 20.000ns
+  Min period limit: 0.480ns (2083.333MHz) (Tcp)
+  Physical resource: myState/mainState/mypropogater/slowclk23/M_ctr_q[3]/CLK
+  Logical resource: myState/mainState/mypropogater/slowclk23/M_ctr_q_3/CK
+  Location pin: SLICE_X8Y22.CLK
+  Clock network: myState/mainState/mainControl_BUFG
+--------------------------------------------------------------------------------
+Slack: 19.520ns (period - min period limit)
+  Period: 20.000ns
+  Min period limit: 0.480ns (2083.333MHz) (Tcp)
+  Physical resource: myState/mainState/mypropogater/slowclk23/M_ctr_q[7]/CLK
+  Logical resource: myState/mainState/mypropogater/slowclk23/M_ctr_q_4/CK
+  Location pin: SLICE_X8Y23.CLK
+  Clock network: myState/mainState/mainControl_BUFG
+--------------------------------------------------------------------------------
+Slack: 19.520ns (period - min period limit)
+  Period: 20.000ns
+  Min period limit: 0.480ns (2083.333MHz) (Tcp)
+  Physical resource: myState/mainState/mypropogater/slowclk23/M_ctr_q[7]/CLK
+  Logical resource: myState/mainState/mypropogater/slowclk23/M_ctr_q_5/CK
+  Location pin: SLICE_X8Y23.CLK
+  Clock network: myState/mainState/mainControl_BUFG
+--------------------------------------------------------------------------------
+Slack: 19.520ns (period - min period limit)
+  Period: 20.000ns
+  Min period limit: 0.480ns (2083.333MHz) (Tcp)
+  Physical resource: myState/mainState/mypropogater/slowclk23/M_ctr_q[7]/CLK
+  Logical resource: myState/mainState/mypropogater/slowclk23/M_ctr_q_6/CK
+  Location pin: SLICE_X8Y23.CLK
+  Clock network: myState/mainState/mainControl_BUFG
+--------------------------------------------------------------------------------
+Slack: 19.520ns (period - min period limit)
+  Period: 20.000ns
+  Min period limit: 0.480ns (2083.333MHz) (Tcp)
+  Physical resource: myState/mainState/mypropogater/slowclk23/M_ctr_q[7]/CLK
+  Logical resource: myState/mainState/mypropogater/slowclk23/M_ctr_q_7/CK
+  Location pin: SLICE_X8Y23.CLK
+  Clock network: myState/mainState/mainControl_BUFG
+--------------------------------------------------------------------------------
+Slack: 19.520ns (period - min period limit)
+  Period: 20.000ns
+  Min period limit: 0.480ns (2083.333MHz) (Tcp)
+  Physical resource: myState/mainState/mypropogater/slowclk23/M_ctr_q[11]/CLK
+  Logical resource: myState/mainState/mypropogater/slowclk23/M_ctr_q_8/CK
+  Location pin: SLICE_X8Y24.CLK
+  Clock network: myState/mainState/mainControl_BUFG
+--------------------------------------------------------------------------------
+Slack: 19.520ns (period - min period limit)
+  Period: 20.000ns
+  Min period limit: 0.480ns (2083.333MHz) (Tcp)
+  Physical resource: myState/mainState/mypropogater/slowclk23/M_ctr_q[11]/CLK
+  Logical resource: myState/mainState/mypropogater/slowclk23/M_ctr_q_9/CK
+  Location pin: SLICE_X8Y24.CLK
+  Clock network: myState/mainState/mainControl_BUFG
+--------------------------------------------------------------------------------
+Slack: 19.520ns (period - min period limit)
+  Period: 20.000ns
+  Min period limit: 0.480ns (2083.333MHz) (Tcp)
+  Physical resource: myState/mainState/mypropogater/slowclk23/M_ctr_q[11]/CLK
+  Logical resource: myState/mainState/mypropogater/slowclk23/M_ctr_q_10/CK
+  Location pin: SLICE_X8Y24.CLK
+  Clock network: myState/mainState/mainControl_BUFG
+--------------------------------------------------------------------------------
+Slack: 19.520ns (period - min period limit)
+  Period: 20.000ns
+  Min period limit: 0.480ns (2083.333MHz) (Tcp)
+  Physical resource: myState/mainState/mypropogater/slowclk23/M_ctr_q[11]/CLK
+  Logical resource: myState/mainState/mypropogater/slowclk23/M_ctr_q_11/CK
+  Location pin: SLICE_X8Y24.CLK
+  Clock network: myState/mainState/mainControl_BUFG
+--------------------------------------------------------------------------------
+Slack: 19.520ns (period - min period limit)
+  Period: 20.000ns
+  Min period limit: 0.480ns (2083.333MHz) (Tcp)
+  Physical resource: myState/mainState/mypropogater/slowclk23/M_ctr_q[15]/CLK
+  Logical resource: myState/mainState/mypropogater/slowclk23/M_ctr_q_12/CK
+  Location pin: SLICE_X8Y25.CLK
+  Clock network: myState/mainState/mainControl_BUFG
+--------------------------------------------------------------------------------
+Slack: 19.520ns (period - min period limit)
+  Period: 20.000ns
+  Min period limit: 0.480ns (2083.333MHz) (Tcp)
+  Physical resource: myState/mainState/mypropogater/slowclk23/M_ctr_q[15]/CLK
+  Logical resource: myState/mainState/mypropogater/slowclk23/M_ctr_q_13/CK
+  Location pin: SLICE_X8Y25.CLK
+  Clock network: myState/mainState/mainControl_BUFG
+--------------------------------------------------------------------------------
+Slack: 19.520ns (period - min period limit)
+  Period: 20.000ns
+  Min period limit: 0.480ns (2083.333MHz) (Tcp)
+  Physical resource: myState/mainState/mypropogater/slowclk23/M_ctr_q[15]/CLK
+  Logical resource: myState/mainState/mypropogater/slowclk23/M_ctr_q_14/CK
+  Location pin: SLICE_X8Y25.CLK
+  Clock network: myState/mainState/mainControl_BUFG
+--------------------------------------------------------------------------------
+Slack: 19.520ns (period - min period limit)
+  Period: 20.000ns
+  Min period limit: 0.480ns (2083.333MHz) (Tcp)
+  Physical resource: myState/mainState/mypropogater/slowclk23/M_ctr_q[15]/CLK
+  Logical resource: myState/mainState/mypropogater/slowclk23/M_ctr_q_15/CK
+  Location pin: SLICE_X8Y25.CLK
+  Clock network: myState/mainState/mainControl_BUFG
+--------------------------------------------------------------------------------
+Slack: 19.520ns (period - min period limit)
+  Period: 20.000ns
+  Min period limit: 0.480ns (2083.333MHz) (Tcp)
+  Physical resource: myState/mainState/mypropogater/slowclk23/M_ctr_q[19]/CLK
+  Logical resource: myState/mainState/mypropogater/slowclk23/M_ctr_q_16/CK
+  Location pin: SLICE_X8Y26.CLK
+  Clock network: myState/mainState/mainControl_BUFG
+--------------------------------------------------------------------------------
+Slack: 19.520ns (period - min period limit)
+  Period: 20.000ns
+  Min period limit: 0.480ns (2083.333MHz) (Tcp)
+  Physical resource: myState/mainState/mypropogater/slowclk23/M_ctr_q[19]/CLK
+  Logical resource: myState/mainState/mypropogater/slowclk23/M_ctr_q_17/CK
+  Location pin: SLICE_X8Y26.CLK
+  Clock network: myState/mainState/mainControl_BUFG
+--------------------------------------------------------------------------------
+Slack: 19.520ns (period - min period limit)
+  Period: 20.000ns
+  Min period limit: 0.480ns (2083.333MHz) (Tcp)
+  Physical resource: myState/mainState/mypropogater/slowclk23/M_ctr_q[19]/CLK
+  Logical resource: myState/mainState/mypropogater/slowclk23/M_ctr_q_18/CK
+  Location pin: SLICE_X8Y26.CLK
+  Clock network: myState/mainState/mainControl_BUFG
+--------------------------------------------------------------------------------
+Slack: 19.520ns (period - min period limit)
+  Period: 20.000ns
+  Min period limit: 0.480ns (2083.333MHz) (Tcp)
+  Physical resource: myState/mainState/mypropogater/slowclk23/M_ctr_q[19]/CLK
+  Logical resource: myState/mainState/mypropogater/slowclk23/M_ctr_q_19/CK
+  Location pin: SLICE_X8Y26.CLK
+  Clock network: myState/mainState/mainControl_BUFG
+--------------------------------------------------------------------------------
+Slack: 19.520ns (period - min period limit)
+  Period: 20.000ns
+  Min period limit: 0.480ns (2083.333MHz) (Tcp)
+  Physical resource: myState/mainState/mypropogater/M_slowclk23_value/CLK
+  Logical resource: myState/mainState/mypropogater/slowclk23/M_ctr_q_20/CK
+  Location pin: SLICE_X8Y27.CLK
+  Clock network: myState/mainState/mainControl_BUFG
+--------------------------------------------------------------------------------
+Slack: 19.520ns (period - min period limit)
+  Period: 20.000ns
+  Min period limit: 0.480ns (2083.333MHz) (Tcp)
+  Physical resource: myState/mainState/mypropogater/M_slowclk23_value/CLK
+  Logical resource: myState/mainState/mypropogater/slowclk23/M_ctr_q_21/CK
+  Location pin: SLICE_X8Y27.CLK
+  Clock network: myState/mainState/mainControl_BUFG
+--------------------------------------------------------------------------------
+Slack: 19.520ns (period - min period limit)
+  Period: 20.000ns
+  Min period limit: 0.480ns (2083.333MHz) (Tcp)
+  Physical resource: myState/mainState/mypropogater/M_slowclk23_value/CLK
+  Logical resource: myState/mainState/mypropogater/slowclk23/M_ctr_q_22/CK
+  Location pin: SLICE_X8Y27.CLK
+  Clock network: myState/mainState/mainControl_BUFG
+--------------------------------------------------------------------------------
+Slack: 19.520ns (period - min period limit)
+  Period: 20.000ns
+  Min period limit: 0.480ns (2083.333MHz) (Tcp)
+  Physical resource: myState/mainState/mypropogater/M_slowclk23_value/CLK
+  Logical resource: myState/mainState/mypropogater/slowclk23/M_ctr_q_23/CK
+  Location pin: SLICE_X8Y27.CLK
+  Clock network: myState/mainState/mainControl_BUFG
+--------------------------------------------------------------------------------
+Slack: 19.520ns (period - min period limit)
+  Period: 20.000ns
+  Min period limit: 0.480ns (2083.333MHz) (Tcp)
+  Physical resource: myState/bttnpress/button_cond/M_ctr_q[3]/CLK
   Logical resource: myState/bttnpress/button_cond/M_ctr_q_1/CK
-  Location pin: SLICE_X20Y15.CLK
-  Clock network: clk_BUFGP
---------------------------------------------------------------------------------
-Slack: 19.520ns (period - min period limit)
-  Period: 20.000ns
-  Min period limit: 0.480ns (2083.333MHz) (Tcp)
-  Physical resource: myState/M_ctr_q_3/CLK
-  Logical resource: myState/bttnpress/button_cond/M_ctr_q_2/CK
-  Location pin: SLICE_X20Y15.CLK
-  Clock network: clk_BUFGP
---------------------------------------------------------------------------------
-Slack: 19.520ns (period - min period limit)
-  Period: 20.000ns
-  Min period limit: 0.480ns (2083.333MHz) (Tcp)
-  Physical resource: myState/M_ctr_q_3/CLK
-  Logical resource: myState/bttnpress/button_cond/M_ctr_q_3/CK
-  Location pin: SLICE_X20Y15.CLK
-  Clock network: clk_BUFGP
---------------------------------------------------------------------------------
-Slack: 19.520ns (period - min period limit)
-  Period: 20.000ns
-  Min period limit: 0.480ns (2083.333MHz) (Tcp)
-  Physical resource: myState/M_ctr_q_7/CLK
-  Logical resource: myState/bttnpress/button_cond/M_ctr_q_4/CK
-  Location pin: SLICE_X20Y16.CLK
-  Clock network: clk_BUFGP
---------------------------------------------------------------------------------
-Slack: 19.520ns (period - min period limit)
-  Period: 20.000ns
-  Min period limit: 0.480ns (2083.333MHz) (Tcp)
-  Physical resource: myState/M_ctr_q_7/CLK
-  Logical resource: myState/bttnpress/button_cond/M_ctr_q_5/CK
-  Location pin: SLICE_X20Y16.CLK
-  Clock network: clk_BUFGP
---------------------------------------------------------------------------------
-Slack: 19.520ns (period - min period limit)
-  Period: 20.000ns
-  Min period limit: 0.480ns (2083.333MHz) (Tcp)
-  Physical resource: myState/M_ctr_q_7/CLK
-  Logical resource: myState/bttnpress/button_cond/M_ctr_q_6/CK
-  Location pin: SLICE_X20Y16.CLK
-  Clock network: clk_BUFGP
---------------------------------------------------------------------------------
-Slack: 19.520ns (period - min period limit)
-  Period: 20.000ns
-  Min period limit: 0.480ns (2083.333MHz) (Tcp)
-  Physical resource: myState/M_ctr_q_7/CLK
-  Logical resource: myState/bttnpress/button_cond/M_ctr_q_7/CK
-  Location pin: SLICE_X20Y16.CLK
-  Clock network: clk_BUFGP
---------------------------------------------------------------------------------
-Slack: 19.520ns (period - min period limit)
-  Period: 20.000ns
-  Min period limit: 0.480ns (2083.333MHz) (Tcp)
-  Physical resource: myState/M_ctr_q_11/CLK
-  Logical resource: myState/bttnpress/button_cond/M_ctr_q_8/CK
-  Location pin: SLICE_X20Y17.CLK
-  Clock network: clk_BUFGP
---------------------------------------------------------------------------------
-Slack: 19.520ns (period - min period limit)
-  Period: 20.000ns
-  Min period limit: 0.480ns (2083.333MHz) (Tcp)
-  Physical resource: myState/M_ctr_q_11/CLK
-  Logical resource: myState/bttnpress/button_cond/M_ctr_q_9/CK
-  Location pin: SLICE_X20Y17.CLK
-  Clock network: clk_BUFGP
---------------------------------------------------------------------------------
-Slack: 19.520ns (period - min period limit)
-  Period: 20.000ns
-  Min period limit: 0.480ns (2083.333MHz) (Tcp)
-  Physical resource: myState/M_ctr_q_11/CLK
-  Logical resource: myState/bttnpress/button_cond/M_ctr_q_10/CK
-  Location pin: SLICE_X20Y17.CLK
-  Clock network: clk_BUFGP
---------------------------------------------------------------------------------
-Slack: 19.520ns (period - min period limit)
-  Period: 20.000ns
-  Min period limit: 0.480ns (2083.333MHz) (Tcp)
-  Physical resource: myState/M_ctr_q_11/CLK
-  Logical resource: myState/bttnpress/button_cond/M_ctr_q_11/CK
-  Location pin: SLICE_X20Y17.CLK
-  Clock network: clk_BUFGP
---------------------------------------------------------------------------------
-Slack: 19.520ns (period - min period limit)
-  Period: 20.000ns
-  Min period limit: 0.480ns (2083.333MHz) (Tcp)
-  Physical resource: myState/M_ctr_q_15/CLK
-  Logical resource: myState/bttnpress/button_cond/M_ctr_q_12/CK
-  Location pin: SLICE_X20Y18.CLK
-  Clock network: clk_BUFGP
---------------------------------------------------------------------------------
-Slack: 19.520ns (period - min period limit)
-  Period: 20.000ns
-  Min period limit: 0.480ns (2083.333MHz) (Tcp)
-  Physical resource: myState/M_ctr_q_15/CLK
-  Logical resource: myState/bttnpress/button_cond/M_ctr_q_13/CK
-  Location pin: SLICE_X20Y18.CLK
-  Clock network: clk_BUFGP
---------------------------------------------------------------------------------
-Slack: 19.520ns (period - min period limit)
-  Period: 20.000ns
-  Min period limit: 0.480ns (2083.333MHz) (Tcp)
-  Physical resource: myState/M_ctr_q_15/CLK
-  Logical resource: myState/bttnpress/button_cond/M_ctr_q_14/CK
-  Location pin: SLICE_X20Y18.CLK
-  Clock network: clk_BUFGP
---------------------------------------------------------------------------------
-Slack: 19.520ns (period - min period limit)
-  Period: 20.000ns
-  Min period limit: 0.480ns (2083.333MHz) (Tcp)
-  Physical resource: myState/M_ctr_q_15/CLK
-  Logical resource: myState/bttnpress/button_cond/M_ctr_q_15/CK
-  Location pin: SLICE_X20Y18.CLK
-  Clock network: clk_BUFGP
---------------------------------------------------------------------------------
-Slack: 19.520ns (period - min period limit)
-  Period: 20.000ns
-  Min period limit: 0.480ns (2083.333MHz) (Tcp)
-  Physical resource: myState/M_ctr_q_19/CLK
-  Logical resource: myState/bttnpress/button_cond/M_ctr_q_16/CK
-  Location pin: SLICE_X20Y19.CLK
-  Clock network: clk_BUFGP
---------------------------------------------------------------------------------
-Slack: 19.520ns (period - min period limit)
-  Period: 20.000ns
-  Min period limit: 0.480ns (2083.333MHz) (Tcp)
-  Physical resource: myState/M_ctr_q_19/CLK
-  Logical resource: myState/bttnpress/button_cond/M_ctr_q_17/CK
-  Location pin: SLICE_X20Y19.CLK
-  Clock network: clk_BUFGP
---------------------------------------------------------------------------------
-Slack: 19.520ns (period - min period limit)
-  Period: 20.000ns
-  Min period limit: 0.480ns (2083.333MHz) (Tcp)
-  Physical resource: myState/M_ctr_q_19/CLK
-  Logical resource: myState/bttnpress/button_cond/M_ctr_q_18/CK
-  Location pin: SLICE_X20Y19.CLK
-  Clock network: clk_BUFGP
---------------------------------------------------------------------------------
-Slack: 19.520ns (period - min period limit)
-  Period: 20.000ns
-  Min period limit: 0.480ns (2083.333MHz) (Tcp)
-  Physical resource: myState/M_ctr_q_19/CLK
-  Logical resource: myState/bttnpress/button_cond/M_ctr_q_19/CK
-  Location pin: SLICE_X20Y19.CLK
-  Clock network: clk_BUFGP
---------------------------------------------------------------------------------
-Slack: 19.520ns (period - min period limit)
-  Period: 20.000ns
-  Min period limit: 0.480ns (2083.333MHz) (Tcp)
-  Physical resource: myState/M_ctr_q_3_0/CLK
-  Logical resource: myState/bttnpress/button_cond2/M_ctr_q_1/CK
-  Location pin: SLICE_X12Y14.CLK
-  Clock network: clk_BUFGP
---------------------------------------------------------------------------------
-Slack: 19.520ns (period - min period limit)
-  Period: 20.000ns
-  Min period limit: 0.480ns (2083.333MHz) (Tcp)
-  Physical resource: myState/M_ctr_q_3_0/CLK
-  Logical resource: myState/bttnpress/button_cond2/M_ctr_q_2/CK
-  Location pin: SLICE_X12Y14.CLK
-  Clock network: clk_BUFGP
---------------------------------------------------------------------------------
-Slack: 19.520ns (period - min period limit)
-  Period: 20.000ns
-  Min period limit: 0.480ns (2083.333MHz) (Tcp)
-  Physical resource: myState/M_ctr_q_3_0/CLK
-  Logical resource: myState/bttnpress/button_cond2/M_ctr_q_3/CK
-  Location pin: SLICE_X12Y14.CLK
-  Clock network: clk_BUFGP
---------------------------------------------------------------------------------
-Slack: 19.520ns (period - min period limit)
-  Period: 20.000ns
-  Min period limit: 0.480ns (2083.333MHz) (Tcp)
-  Physical resource: myState/M_ctr_q_7_0/CLK
-  Logical resource: myState/bttnpress/button_cond2/M_ctr_q_4/CK
-  Location pin: SLICE_X12Y15.CLK
-  Clock network: clk_BUFGP
---------------------------------------------------------------------------------
-Slack: 19.520ns (period - min period limit)
-  Period: 20.000ns
-  Min period limit: 0.480ns (2083.333MHz) (Tcp)
-  Physical resource: myState/M_ctr_q_7_0/CLK
-  Logical resource: myState/bttnpress/button_cond2/M_ctr_q_5/CK
-  Location pin: SLICE_X12Y15.CLK
-  Clock network: clk_BUFGP
---------------------------------------------------------------------------------
-Slack: 19.520ns (period - min period limit)
-  Period: 20.000ns
-  Min period limit: 0.480ns (2083.333MHz) (Tcp)
-  Physical resource: myState/M_ctr_q_7_0/CLK
-  Logical resource: myState/bttnpress/button_cond2/M_ctr_q_6/CK
-  Location pin: SLICE_X12Y15.CLK
-  Clock network: clk_BUFGP
---------------------------------------------------------------------------------
-Slack: 19.520ns (period - min period limit)
-  Period: 20.000ns
-  Min period limit: 0.480ns (2083.333MHz) (Tcp)
-  Physical resource: myState/M_ctr_q_7_0/CLK
-  Logical resource: myState/bttnpress/button_cond2/M_ctr_q_7/CK
-  Location pin: SLICE_X12Y15.CLK
-  Clock network: clk_BUFGP
+  Location pin: SLICE_X16Y11.CLK
+  Clock network: clk_IBUF_BUFG
 --------------------------------------------------------------------------------
 
 
@@ -1405,7 +1189,7 @@ Clock to Setup on destination clock clk
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------+---------+---------+---------+---------+
-clk            |    5.248|         |         |         |
+clk            |   18.819|         |         |         |
 ---------------+---------+---------+---------+---------+
 
 
@@ -1414,23 +1198,23 @@ Timing summary:
 
 Timing errors: 0  Score: 0  (Setup/Max: 0, Hold: 0)
 
-Constraints cover 3089 paths, 0 nets, and 634 connections
+Constraints cover 4375 paths, 0 nets, and 899 connections
 
 Design statistics:
-   Minimum period:   5.248ns{1}   (Maximum frequency: 190.549MHz)
+   Minimum period:  18.819ns{1}   (Maximum frequency:  53.138MHz)
 
 
 ------------------------------------Footnotes-----------------------------------
 1)  The minimum period statistic assumes all single cycle delays.
 
-Analysis completed Thu Dec 07 19:22:29 2017 
+Analysis completed Fri Dec 08 00:04:25 2017 
 --------------------------------------------------------------------------------
 
 Trace Settings:
 -------------------------
 Trace Settings 
 
-Peak Memory Usage: 276 MB
+Peak Memory Usage: 278 MB
 
 
 
