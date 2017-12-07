@@ -28,6 +28,7 @@ module state (
       bcounter bttnpress;
       reg8bit scoreSum; //use an 8bit register to store the toal score of the game // i cannot use dff becuase it mojo clk constantly resets it //try connecting register to the propagtor clock cycle
   //  multi_seven_seg seg;
+      
     }
     main mainState;
     
@@ -38,18 +39,17 @@ module state (
   sig rowResult[2]; //what is the score of each round?
  // sig score[8];     //score of the user throughout the game
   sig highscore[8]; //current High Score
+//  sig scoreSum[8]; //what is my culmulative score?
 //  sig out[8];   
       
   always {
   //  rowResult=2b00; //rowResult is assumed to be 0 unless specified otherwise
-    
-    //result = mainState.result;
     totalScore = scoreSum.out;
-    scoreSum.data=8b0; //by default ground the data
-    scoreSum.en=0; //by default dont write into register
+    scoreSum.data = 8b0; //am i always re-setting my register???????
+    scoreSum.en=0;
     
-    result = mainState.result;
     mainState.rst = rst;
+    result = mainState.result;
     //setting up inpts of main state and button press
     mainState.left2 = leftBtn;
     mainState.right0 = rightBtn;
@@ -85,6 +85,8 @@ module state (
          row2 = mainState.high2;
          row3 = mainState.high3;
         
+        scoreSum.en=0; //dont write into my register
+        
        
         
         // scoreSum.en=0;
@@ -101,7 +103,7 @@ module state (
         if (mainState.result!=0 && mainState.rowOn==RowNumb.ROW4){
             state.d = state.SUMUP;
         }
-        else if(mainState.result==0 && mainState.rowOn==RowNumb.ROW4) {
+        else{ 
             state.d = state.MAIN;
         }        
               
@@ -112,7 +114,8 @@ module state (
         myalu.b= scoreSum.out; //user's total score so far
         scoreSum.en =1;
         scoreSum.data = myalu.alu; //cnt new score into register input
-        state.d = state.HALT; //*****FOR DEBUGGING I SHOULD GO BACK TO MAIN *****//
+        state.d = state.HALT; //*****TO DEBUG: GO TO HALT *****//
+        
         //write enable the register so you can store the new score
       //  state.d = state.MAIN;
         
@@ -154,10 +157,11 @@ module state (
     gnd2=1;
     gnd3=1;
         //scoreSum.data=scoreSum.out;
-        scoreSum.en=0;
+        scoreSum.en=0; //dont write into my register
         if (bttnpress.bttnPress==1) { 
+          mainState.rst=1;
           //if i detect a button press i go to main state and start the game
-          mainState.rst=1; //reset my main sate before i re start the game //****DOESNT REALLY WORK***//
+          //mainState.rst=1; //reset my main sate before i re start the game //****DOESNT REALLY WORK***//
           state.d = state.MAIN;
           }
 

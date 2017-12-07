@@ -104,8 +104,8 @@ module state_4 (
     totalScore = M_scoreSum_out;
     M_scoreSum_data = 8'h00;
     M_scoreSum_en = 1'h0;
-    result = M_mainState_result;
     M_mainState_rst = rst;
+    result = M_mainState_result;
     M_mainState_left2 = leftBtn;
     M_mainState_right0 = rightBtn;
     M_mainState_center1 = centBtn;
@@ -130,12 +130,11 @@ module state_4 (
         row1 = M_mainState_high1;
         row2 = M_mainState_high2;
         row3 = M_mainState_high3;
+        M_scoreSum_en = 1'h0;
         if (M_mainState_result != 1'h0 && M_mainState_rowOn == 2'h0) begin
           M_state_d = SUMUP_state;
         end else begin
-          if (M_mainState_result == 1'h0 && M_mainState_rowOn == 2'h0) begin
-            M_state_d = MAIN_state;
-          end
+          M_state_d = MAIN_state;
         end
       end
       SUMUP_state: begin
