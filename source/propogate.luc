@@ -6,11 +6,14 @@ global RowNumb{
 }
 
 global ClkNumb{
-  const SLOWCLK21 = 3b000;
+  const SLOWCLK221 = 3b000;
   const SLOWCLK22= 3b001;
   const SLOWCLK23= 3b010;
   const SLOWCLK24= 3b011;
   const SLOWCLK25 = 3b100;
+  const SLOWCLK231 = 3b101;
+  const SLOWCLK241 = 3b110;
+  const SLOWCLK232 = 3b111;
 }
 
 module propogate (
@@ -27,7 +30,8 @@ module propogate (
     output row3,
     output gnd1,
     output gnd2,
-    output gnd3
+    output gnd3,
+    output clkChoice[3]
   ) {
 
   sig chosenClk; 
@@ -51,16 +55,12 @@ module propogate (
         counter rowCtr(#SIZE(2)); //ctr will go from 00 to 11 this will be the number of row that is lit
         dff seed[32] (#INIT(32d1)); //seed to start numb_gen
         dff clkseed[32] (#INIT(32d3)); // seed to start clk_gen seed chosen is diff from seed1 to ensure randomness
-        dff numb_gen1[3] (#INIT(3b001)); //if numb_gen gives me 000, I will use this counter number
   }
-  }
+ }
  
    
   always {
-      
-    //setting up the randomiszer
-    numb_gen1.d = numb_gen1.q + 1;
-    
+
     //initializin randomizer
     randomizer.numSeed = seed.q;
     randomizer.clkSeed = clkseed.q;
@@ -71,20 +71,15 @@ module propogate (
     randomizer.randnumrst=rst;
     randomizer.randclkrst = rst;
     if (randomizer.ranNum==3b000){
-            randNum = numb_gen1.q;
-        }
+            randNum = 3b101;
+    }
     else{
           randNum = randomizer.ranNum;
     }
     
-    if (randomizer.ranClk==3b101|randomizer.ranClk==3b110|randomizer.ranClk==3b111){
-              clkSel = ClkNumb.SLOWCLK23;
-    }
-    else{
-        clkSel = randomizer.ranClk;
-    }
+    clkSel = randomizer.ranClk;
     
-    
+    clkChoice = clkSel;
   //instantiate outputs 
    rowLit = rowCtr.value;
   //  numSeq = num;
@@ -99,8 +94,8 @@ module propogate (
     
       
    case (clkSel){
-      ClkNumb.SLOWCLK21:
-       chosenClk= slowclk21.value;
+      ClkNumb.SLOWCLK221:
+       chosenClk= slowclk22.value;
       ClkNumb.SLOWCLK22:
       chosenClk = slowclk22.value;
       ClkNumb.SLOWCLK23:
@@ -109,13 +104,18 @@ module propogate (
       chosenClk= slowclk24.value;
       ClkNumb.SLOWCLK25:
       chosenClk = slowclk25.value;
+      ClkNumb.SLOWCLK231:
+      chosenClk = slowclk23.value;
+      ClkNumb.SLOWCLK232:
+      chosenClk = slowclk23.value;
+      ClkNumb.SLOWCLK241:
+      chosenClk = slowclk24.value;
     }
     
    
     case (rowCtr.value){
     //when the corresponding row is 'active' make the entire row active
       RowNumb.ROW1:
-          numb_gen1.d = numb_gen1.q + 1;
           seed.d = seed.q + 1;
           clkseed.d = clkseed.q + 1;
           randomizer.randnumNext = 1; //generate random number seq

@@ -14,7 +14,8 @@ module propogate_9 (
     output reg row3,
     output reg gnd1,
     output reg gnd2,
-    output reg gnd3
+    output reg gnd3,
+    output reg [2:0] clkChoice
   );
   
   
@@ -88,14 +89,11 @@ module propogate_9 (
   );
   reg [31:0] M_seed_d, M_seed_q = 32'h00000001;
   reg [31:0] M_clkseed_d, M_clkseed_q = 32'h00000003;
-  reg [2:0] M_numb_gen1_d, M_numb_gen1_q = 3'h1;
   
   always @* begin
-    M_numb_gen1_d = M_numb_gen1_q;
     M_seed_d = M_seed_q;
     M_clkseed_d = M_clkseed_q;
     
-    M_numb_gen1_d = M_numb_gen1_q + 1'h1;
     M_randomizer_numSeed = M_seed_q;
     M_randomizer_clkSeed = M_clkseed_q;
     M_randomizer_randnumNext = 1'h0;
@@ -105,15 +103,12 @@ module propogate_9 (
     M_randomizer_randnumrst = rst;
     M_randomizer_randclkrst = rst;
     if (M_randomizer_ranNum == 3'h0) begin
-      randNum = M_numb_gen1_q;
+      randNum = 3'h5;
     end else begin
       randNum = M_randomizer_ranNum;
     end
-    if (M_randomizer_ranClk == 3'h5 | M_randomizer_ranClk == 3'h6 | M_randomizer_ranClk == 3'h7) begin
-      clkSel = 3'h2;
-    end else begin
-      clkSel = M_randomizer_ranClk;
-    end
+    clkSel = M_randomizer_ranClk;
+    clkChoice = clkSel;
     rowLit = M_rowCtr_value;
     row1 = 1'h0;
     row2 = 1'h0;
@@ -125,7 +120,7 @@ module propogate_9 (
     
     case (clkSel)
       3'h0: begin
-        chosenClk = M_slowclk21_value;
+        chosenClk = M_slowclk22_value;
       end
       3'h1: begin
         chosenClk = M_slowclk22_value;
@@ -139,11 +134,19 @@ module propogate_9 (
       3'h4: begin
         chosenClk = M_slowclk25_value;
       end
+      3'h5: begin
+        chosenClk = M_slowclk23_value;
+      end
+      3'h7: begin
+        chosenClk = M_slowclk23_value;
+      end
+      3'h6: begin
+        chosenClk = M_slowclk24_value;
+      end
     endcase
     
     case (M_rowCtr_value)
       2'h0: begin
-        M_numb_gen1_d = M_numb_gen1_q + 1'h1;
         M_seed_d = M_seed_q + 1'h1;
         M_clkseed_d = M_clkseed_q + 1'h1;
         M_randomizer_randnumNext = 1'h1;
@@ -190,11 +193,9 @@ module propogate_9 (
     if (rst == 1'b1) begin
       M_seed_q <= 32'h00000001;
       M_clkseed_q <= 32'h00000003;
-      M_numb_gen1_q <= 3'h1;
     end else begin
       M_seed_q <= M_seed_d;
       M_clkseed_q <= M_clkseed_d;
-      M_numb_gen1_q <= M_numb_gen1_d;
     end
   end
   

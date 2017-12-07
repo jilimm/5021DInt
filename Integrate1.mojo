@@ -4,11 +4,11 @@
     <src>alu.luc</src>
     <src>main.luc</src>
     <src>register.luc</src>
-    <src>randomizer.luc</src>
-    <src top="true">mojo_top.luc</src>
     <src>propogate.luc</src>
-    <ucf lib="true">mojo.ucf</ucf>
+    <src top="true">mojo_top.luc</src>
+    <src>randomizer.luc</src>
     <ucf>custom.ucf</ucf>
+    <ucf lib="true">mojo.ucf</ucf>
     <component>pn_gen.luc</component>
     <component>reset_conditioner.luc</component>
     <component>pipeline.luc</component>

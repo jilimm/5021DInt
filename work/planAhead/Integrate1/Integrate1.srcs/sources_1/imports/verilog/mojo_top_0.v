@@ -64,6 +64,7 @@ module mojo_top_0 (
   wire [1-1:0] M_mymain_butt2;
   wire [1-1:0] M_mymain_butt3;
   wire [3-1:0] M_mymain_rowOn;
+  wire [3-1:0] M_mymain_clkchoice;
   reg [1-1:0] M_mymain_left2;
   reg [1-1:0] M_mymain_center1;
   reg [1-1:0] M_mymain_right0;
@@ -83,7 +84,8 @@ module mojo_top_0 (
     .butt1(M_mymain_butt1),
     .butt2(M_mymain_butt2),
     .butt3(M_mymain_butt3),
-    .rowOn(M_mymain_rowOn)
+    .rowOn(M_mymain_rowOn),
+    .clkchoice(M_mymain_clkchoice)
   );
   
   always @* begin
@@ -105,10 +107,8 @@ module mojo_top_0 (
     low1 = M_mymain_low1;
     low2 = M_mymain_low2;
     low3 = M_mymain_low3;
-    led[0+1-:2] = M_mymain_result;
-    led[7+0-:1] = M_mymain_butt1;
-    led[6+0-:1] = M_mymain_butt2;
-    led[5+0-:1] = M_mymain_butt3;
-    led[2+2-:3] = 1'h0;
+    led[0+2-:3] = M_mymain_rowOn;
+    led[5+2-:3] = M_mymain_clkchoice;
+    led[3+1-:2] = 2'h0;
   end
 endmodule

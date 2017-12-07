@@ -20,7 +20,8 @@ module main_4 (
     output reg butt1,
     output reg butt2,
     output reg butt3,
-    output reg [2:0] rowOn
+    output reg [2:0] rowOn,
+    output reg [2:0] clkchoice
   );
   
   
@@ -60,6 +61,7 @@ module main_4 (
   wire [1-1:0] M_mypropogater_gnd1;
   wire [1-1:0] M_mypropogater_gnd2;
   wire [1-1:0] M_mypropogater_gnd3;
+  wire [3-1:0] M_mypropogater_clkChoice;
   propogate_9 mypropogater (
     .clk(clk),
     .rst(rst),
@@ -70,7 +72,8 @@ module main_4 (
     .row3(M_mypropogater_row3),
     .gnd1(M_mypropogater_gnd1),
     .gnd2(M_mypropogater_gnd2),
-    .gnd3(M_mypropogater_gnd3)
+    .gnd3(M_mypropogater_gnd3),
+    .clkChoice(M_mypropogater_clkChoice)
   );
   
   wire [1-1:0] M_edge_detector1_out;
@@ -133,6 +136,7 @@ module main_4 (
     low1 = M_mypropogater_gnd1;
     low2 = M_mypropogater_gnd2;
     low3 = M_mypropogater_gnd3;
+    clkchoice = M_mypropogater_clkChoice;
     M_button_cond1_in = left2;
     M_edge_detector1_in = M_button_cond1_out;
     M_button_cond2_in = center1;

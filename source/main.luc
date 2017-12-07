@@ -15,7 +15,8 @@ module main (
     output butt1,
     output butt2,
     output butt3,
-    output rowOn[3]
+    output rowOn[3],
+    output clkchoice[3]
   ) {
   
   .clk(clk) {
@@ -65,7 +66,7 @@ module main (
     low2 = mypropogater.gnd2;
     low3 = mypropogater.gnd3;
        
-    
+    clkchoice = mypropogater.clkChoice;
     //propagate should have a dff counter somewhere where i can refer to.
     button_cond1.in = left2;            // raw button input
     edge_detector1.in = button_cond1.out; // input to the edge_detector

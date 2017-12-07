@@ -3,7 +3,7 @@ Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 --> 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.05 secs
+Total CPU time to Xst completion: 0.08 secs
  
 --> Reading design: mojo_top_0.prj
 
@@ -107,6 +107,7 @@ Elaborating module <counter_8>.
 Elaborating module <propogate_9>.
 
 Elaborating module <counter_17>.
+WARNING:HDLCompiler:1127 - "C:/Users/Jing Yun/Desktop/50.002 Computation Structure/1D_Game Design/502IntGitRepo/5021DInt/work/planAhead/Integrate1/Integrate1.srcs/sources_1/imports/verilog/propogate_9.v" Line 33: Assignment to M_slowclk21_value ignored, since the identifier is never used
 
 Elaborating module <counter_18>.
 
@@ -125,10 +126,14 @@ Elaborating module <counter_22>.
 Elaborating module <edge_detector_10>.
 
 Elaborating module <alu_13>.
-WARNING:HDLCompiler:1127 - "C:/Users/Jing Yun/Desktop/50.002 Computation Structure/1D_Game Design/502IntGitRepo/5021DInt/work/planAhead/Integrate1/Integrate1.srcs/sources_1/imports/verilog/main_4.v" Line 112: Assignment to M_myalu_z ignored, since the identifier is never used
-WARNING:HDLCompiler:1127 - "C:/Users/Jing Yun/Desktop/50.002 Computation Structure/1D_Game Design/502IntGitRepo/5021DInt/work/planAhead/Integrate1/Integrate1.srcs/sources_1/imports/verilog/main_4.v" Line 113: Assignment to M_myalu_v ignored, since the identifier is never used
-WARNING:HDLCompiler:1127 - "C:/Users/Jing Yun/Desktop/50.002 Computation Structure/1D_Game Design/502IntGitRepo/5021DInt/work/planAhead/Integrate1/Integrate1.srcs/sources_1/imports/verilog/main_4.v" Line 114: Assignment to M_myalu_n ignored, since the identifier is never used
-WARNING:HDLCompiler:1127 - "C:/Users/Jing Yun/Desktop/50.002 Computation Structure/1D_Game Design/502IntGitRepo/5021DInt/work/planAhead/Integrate1/Integrate1.srcs/sources_1/imports/verilog/mojo_top_0.v" Line 86: Assignment to M_mymain_rowOn ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "C:/Users/Jing Yun/Desktop/50.002 Computation Structure/1D_Game Design/502IntGitRepo/5021DInt/work/planAhead/Integrate1/Integrate1.srcs/sources_1/imports/verilog/main_4.v" Line 115: Assignment to M_myalu_z ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "C:/Users/Jing Yun/Desktop/50.002 Computation Structure/1D_Game Design/502IntGitRepo/5021DInt/work/planAhead/Integrate1/Integrate1.srcs/sources_1/imports/verilog/main_4.v" Line 116: Assignment to M_myalu_v ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "C:/Users/Jing Yun/Desktop/50.002 Computation Structure/1D_Game Design/502IntGitRepo/5021DInt/work/planAhead/Integrate1/Integrate1.srcs/sources_1/imports/verilog/main_4.v" Line 117: Assignment to M_myalu_n ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "C:/Users/Jing Yun/Desktop/50.002 Computation Structure/1D_Game Design/502IntGitRepo/5021DInt/work/planAhead/Integrate1/Integrate1.srcs/sources_1/imports/verilog/mojo_top_0.v" Line 77: Assignment to M_mymain_result ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "C:/Users/Jing Yun/Desktop/50.002 Computation Structure/1D_Game Design/502IntGitRepo/5021DInt/work/planAhead/Integrate1/Integrate1.srcs/sources_1/imports/verilog/mojo_top_0.v" Line 84: Assignment to M_mymain_butt1 ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "C:/Users/Jing Yun/Desktop/50.002 Computation Structure/1D_Game Design/502IntGitRepo/5021DInt/work/planAhead/Integrate1/Integrate1.srcs/sources_1/imports/verilog/mojo_top_0.v" Line 85: Assignment to M_mymain_butt2 ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "C:/Users/Jing Yun/Desktop/50.002 Computation Structure/1D_Game Design/502IntGitRepo/5021DInt/work/planAhead/Integrate1/Integrate1.srcs/sources_1/imports/verilog/mojo_top_0.v" Line 86: Assignment to M_mymain_butt3 ignored, since the identifier is never used
+WARNING:Xst:2972 - "C:/Users/Jing Yun/Desktop/50.002 Computation Structure/1D_Game Design/502IntGitRepo/5021DInt/work/planAhead/Integrate1/Integrate1.srcs/sources_1/imports/verilog/propogate_9.v" line 30. All outputs of instance <slowclk21> of block <counter_17> are unconnected in block <propogate_9>. Underlying logic will be removed.
 WARNING:Xst:2972 - "C:/Users/Jing Yun/Desktop/50.002 Computation Structure/1D_Game Design/502IntGitRepo/5021DInt/work/planAhead/Integrate1/Integrate1.srcs/sources_1/imports/verilog/mojo_top_0.v" line 37. All outputs of instance <reset_cond> of block <reset_conditioner_1> are unconnected in block <mojo_top_0>. Underlying logic will be removed.
 WARNING:Xst:2972 - "C:/Users/Jing Yun/Desktop/50.002 Computation Structure/1D_Game Design/502IntGitRepo/5021DInt/work/planAhead/Integrate1/Integrate1.srcs/sources_1/imports/verilog/mojo_top_0.v" line 44. All outputs of instance <reset_cond2> of block <reset_conditioner_1> are unconnected in block <mojo_top_0>. Underlying logic will be removed.
 
@@ -146,13 +151,16 @@ WARNING:Xst:647 - Input <avr_tx> is never used. This port will be preserved and 
 WARNING:Xst:647 - Input <avr_rx_busy> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 INFO:Xst:3210 - "C:/Users/Jing Yun/Desktop/50.002 Computation Structure/1D_Game Design/502IntGitRepo/5021DInt/work/planAhead/Integrate1/Integrate1.srcs/sources_1/imports/verilog/mojo_top_0.v" line 37: Output port <out> of the instance <reset_cond> is unconnected or connected to loadless signal.
 INFO:Xst:3210 - "C:/Users/Jing Yun/Desktop/50.002 Computation Structure/1D_Game Design/502IntGitRepo/5021DInt/work/planAhead/Integrate1/Integrate1.srcs/sources_1/imports/verilog/mojo_top_0.v" line 44: Output port <out> of the instance <reset_cond2> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "C:/Users/Jing Yun/Desktop/50.002 Computation Structure/1D_Game Design/502IntGitRepo/5021DInt/work/planAhead/Integrate1/Integrate1.srcs/sources_1/imports/verilog/mojo_top_0.v" line 70: Output port <rowOn> of the instance <mymain> is unconnected or connected to loadless signal.
-    Found 1-bit tristate buffer for signal <spi_miso> created at line 89
-    Found 1-bit tristate buffer for signal <spi_channel<3>> created at line 89
-    Found 1-bit tristate buffer for signal <spi_channel<2>> created at line 89
-    Found 1-bit tristate buffer for signal <spi_channel<1>> created at line 89
-    Found 1-bit tristate buffer for signal <spi_channel<0>> created at line 89
-    Found 1-bit tristate buffer for signal <avr_rx> created at line 89
+INFO:Xst:3210 - "C:/Users/Jing Yun/Desktop/50.002 Computation Structure/1D_Game Design/502IntGitRepo/5021DInt/work/planAhead/Integrate1/Integrate1.srcs/sources_1/imports/verilog/mojo_top_0.v" line 71: Output port <result> of the instance <mymain> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:/Users/Jing Yun/Desktop/50.002 Computation Structure/1D_Game Design/502IntGitRepo/5021DInt/work/planAhead/Integrate1/Integrate1.srcs/sources_1/imports/verilog/mojo_top_0.v" line 71: Output port <butt1> of the instance <mymain> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:/Users/Jing Yun/Desktop/50.002 Computation Structure/1D_Game Design/502IntGitRepo/5021DInt/work/planAhead/Integrate1/Integrate1.srcs/sources_1/imports/verilog/mojo_top_0.v" line 71: Output port <butt2> of the instance <mymain> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:/Users/Jing Yun/Desktop/50.002 Computation Structure/1D_Game Design/502IntGitRepo/5021DInt/work/planAhead/Integrate1/Integrate1.srcs/sources_1/imports/verilog/mojo_top_0.v" line 71: Output port <butt3> of the instance <mymain> is unconnected or connected to loadless signal.
+    Found 1-bit tristate buffer for signal <spi_miso> created at line 91
+    Found 1-bit tristate buffer for signal <spi_channel<3>> created at line 91
+    Found 1-bit tristate buffer for signal <spi_channel<2>> created at line 91
+    Found 1-bit tristate buffer for signal <spi_channel<1>> created at line 91
+    Found 1-bit tristate buffer for signal <spi_channel<0>> created at line 91
+    Found 1-bit tristate buffer for signal <avr_rx> created at line 91
     Summary:
 	inferred   6 Tristate(s).
 Unit <mojo_top_0> synthesized.
@@ -166,9 +174,9 @@ Unit <reset_conditioner_1> synthesized.
 
 Synthesizing Unit <main_4>.
     Related source file is "C:/Users/Jing Yun/Desktop/50.002 Computation Structure/1D_Game Design/502IntGitRepo/5021DInt/work/planAhead/Integrate1/Integrate1.srcs/sources_1/imports/verilog/main_4.v".
-INFO:Xst:3210 - "C:/Users/Jing Yun/Desktop/50.002 Computation Structure/1D_Game Design/502IntGitRepo/5021DInt/work/planAhead/Integrate1/Integrate1.srcs/sources_1/imports/verilog/main_4.v" line 108: Output port <z> of the instance <myalu> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "C:/Users/Jing Yun/Desktop/50.002 Computation Structure/1D_Game Design/502IntGitRepo/5021DInt/work/planAhead/Integrate1/Integrate1.srcs/sources_1/imports/verilog/main_4.v" line 108: Output port <v> of the instance <myalu> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "C:/Users/Jing Yun/Desktop/50.002 Computation Structure/1D_Game Design/502IntGitRepo/5021DInt/work/planAhead/Integrate1/Integrate1.srcs/sources_1/imports/verilog/main_4.v" line 108: Output port <n> of the instance <myalu> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:/Users/Jing Yun/Desktop/50.002 Computation Structure/1D_Game Design/502IntGitRepo/5021DInt/work/planAhead/Integrate1/Integrate1.srcs/sources_1/imports/verilog/main_4.v" line 111: Output port <z> of the instance <myalu> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:/Users/Jing Yun/Desktop/50.002 Computation Structure/1D_Game Design/502IntGitRepo/5021DInt/work/planAhead/Integrate1/Integrate1.srcs/sources_1/imports/verilog/main_4.v" line 111: Output port <v> of the instance <myalu> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:/Users/Jing Yun/Desktop/50.002 Computation Structure/1D_Game Design/502IntGitRepo/5021DInt/work/planAhead/Integrate1/Integrate1.srcs/sources_1/imports/verilog/main_4.v" line 111: Output port <n> of the instance <myalu> is unconnected or connected to loadless signal.
     Found 1-bit register for signal <M_right_q>.
     Found 1-bit register for signal <M_cent_q>.
     Found 1-bit register for signal <M_left_q>.
@@ -205,31 +213,18 @@ Unit <counter_8> synthesized.
 
 Synthesizing Unit <propogate_9>.
     Related source file is "C:/Users/Jing Yun/Desktop/50.002 Computation Structure/1D_Game Design/502IntGitRepo/5021DInt/work/planAhead/Integrate1/Integrate1.srcs/sources_1/imports/verilog/propogate_9.v".
-    Found 32-bit register for signal <M_seed_q>.
+INFO:Xst:3210 - "C:/Users/Jing Yun/Desktop/50.002 Computation Structure/1D_Game Design/502IntGitRepo/5021DInt/work/planAhead/Integrate1/Integrate1.srcs/sources_1/imports/verilog/propogate_9.v" line 30: Output port <value> of the instance <slowclk21> is unconnected or connected to loadless signal.
     Found 32-bit register for signal <M_clkseed_q>.
-    Found 3-bit register for signal <M_numb_gen1_q>.
-    Found 3-bit adder for signal <M_numb_gen1_d> created at line 98.
-    Found 32-bit adder for signal <M_seed_q[31]_GND_7_o_add_9_OUT> created at line 147.
-    Found 32-bit adder for signal <M_clkseed_q[31]_GND_7_o_add_10_OUT> created at line 148.
-    Found 4x3-bit Read Only RAM for signal <_n0093>
-    Found 1-bit 5-to-1 multiplexer for signal <M_randomizer_ranClk[2]_chosenClk_Mux_27_o> created at line 126.
-WARNING:Xst:737 - Found 1-bit latch for signal <chosenClk>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+    Found 32-bit register for signal <M_seed_q>.
+    Found 32-bit adder for signal <M_seed_q[31]_GND_7_o_add_3_OUT> created at line 150.
+    Found 32-bit adder for signal <M_clkseed_q[31]_GND_7_o_add_4_OUT> created at line 151.
+    Found 4x3-bit Read Only RAM for signal <_n0077>
     Summary:
 	inferred   1 RAM(s).
-	inferred   3 Adder/Subtractor(s).
-	inferred  67 D-type flip-flop(s).
-	inferred   1 Latch(s).
-	inferred   9 Multiplexer(s).
+	inferred   2 Adder/Subtractor(s).
+	inferred  64 D-type flip-flop(s).
+	inferred  10 Multiplexer(s).
 Unit <propogate_9> synthesized.
-
-Synthesizing Unit <counter_17>.
-    Related source file is "C:/Users/Jing Yun/Desktop/50.002 Computation Structure/1D_Game Design/502IntGitRepo/5021DInt/work/planAhead/Integrate1/Integrate1.srcs/sources_1/imports/verilog/counter_17.v".
-    Found 22-bit register for signal <M_ctr_q>.
-    Found 22-bit adder for signal <M_ctr_d> created at line 35.
-    Summary:
-	inferred   1 Adder/Subtractor(s).
-	inferred  22 D-type flip-flop(s).
-Unit <counter_17> synthesized.
 
 Synthesizing Unit <counter_18>.
     Related source file is "C:/Users/Jing Yun/Desktop/50.002 Computation Structure/1D_Game Design/502IntGitRepo/5021DInt/work/planAhead/Integrate1/Integrate1.srcs/sources_1/imports/verilog/counter_18.v".
@@ -300,11 +295,11 @@ Unit <edge_detector_10> synthesized.
 
 Synthesizing Unit <alu_13>.
     Related source file is "C:/Users/Jing Yun/Desktop/50.002 Computation Structure/1D_Game Design/502IntGitRepo/5021DInt/work/planAhead/Integrate1/Integrate1.srcs/sources_1/imports/verilog/alu_13.v".
-    Found 9-bit subtractor for signal <GND_18_o_GND_18_o_sub_4_OUT> created at line 45.
+    Found 9-bit subtractor for signal <GND_17_o_GND_17_o_sub_4_OUT> created at line 45.
     Found 9-bit adder for signal <n0127[8:0]> created at line 37.
     Found 8x8-bit multiplier for signal <a[7]_b[7]_MuLt_0_OUT> created at line 34.
-    Found 16-bit shifter logical left for signal <GND_18_o_b[2]_shift_left_5_OUT> created at line 53
-    Found 16-bit shifter logical right for signal <GND_18_o_b[2]_shift_right_6_OUT> created at line 56
+    Found 16-bit shifter logical left for signal <GND_17_o_b[2]_shift_left_5_OUT> created at line 53
+    Found 16-bit shifter logical right for signal <GND_17_o_b[2]_shift_right_6_OUT> created at line 56
     Found 16-bit shifter arithmetic right for signal <a[7]_b[2]_shift_right_7_OUT> created at line 59
 WARNING:Xst:737 - Found 1-bit latch for signal <alu1<14>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
 WARNING:Xst:737 - Found 1-bit latch for signal <alu1<13>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
@@ -334,37 +329,33 @@ HDL Synthesis Report
 Macro Statistics
 # RAMs                                                 : 1
  4x3-bit single-port Read Only RAM                     : 1
-# Adders/Subtractors                                   : 13
+# Adders/Subtractors                                   : 11
  2-bit adder                                           : 1
  20-bit adder                                          : 3
- 22-bit adder                                          : 1
  23-bit adder                                          : 2
  24-bit adder                                          : 1
  25-bit adder                                          : 1
  26-bit adder                                          : 1
- 3-bit adder                                           : 1
  32-bit adder                                          : 2
-# Registers                                            : 33
+# Registers                                            : 31
  1-bit register                                        : 6
  2-bit register                                        : 4
  20-bit register                                       : 3
- 22-bit register                                       : 1
  23-bit register                                       : 2
  24-bit register                                       : 1
  25-bit register                                       : 1
  26-bit register                                       : 1
- 3-bit register                                        : 3
+ 3-bit register                                        : 2
  32-bit register                                       : 10
  4-bit register                                        : 1
-# Latches                                              : 17
- 1-bit latch                                           : 17
+# Latches                                              : 16
+ 1-bit latch                                           : 16
 # Comparators                                          : 1
  8-bit comparator equal                                : 1
-# Multiplexers                                         : 30
- 1-bit 2-to-1 multiplexer                              : 16
- 1-bit 5-to-1 multiplexer                              : 1
+# Multiplexers                                         : 31
+ 1-bit 2-to-1 multiplexer                              : 19
  2-bit 4-to-1 multiplexer                              : 1
- 3-bit 2-to-1 multiplexer                              : 2
+ 3-bit 2-to-1 multiplexer                              : 1
  32-bit 2-to-1 multiplexer                             : 10
 # Tristates                                            : 6
  1-bit tristate buffer                                 : 6
@@ -382,10 +373,6 @@ Macro Statistics
 Synthesizing (advanced) Unit <button_conditioner_5>.
 The following registers are absorbed into counter <M_ctr_q>: 1 register on signal <M_ctr_q>.
 Unit <button_conditioner_5> synthesized (advanced).
-
-Synthesizing (advanced) Unit <counter_17>.
-The following registers are absorbed into counter <M_ctr_q>: 1 register on signal <M_ctr_q>.
-Unit <counter_17> synthesized (advanced).
 
 Synthesizing (advanced) Unit <counter_18>.
 The following registers are absorbed into counter <M_ctr_q>: 1 register on signal <M_ctr_q>.
@@ -408,10 +395,9 @@ The following registers are absorbed into counter <M_ctr_q>: 1 register on signa
 Unit <counter_8> synthesized (advanced).
 
 Synthesizing (advanced) Unit <propogate_9>.
-The following registers are absorbed into counter <M_numb_gen1_q>: 1 register on signal <M_numb_gen1_q>.
-The following registers are absorbed into counter <M_clkseed_q>: 1 register on signal <M_clkseed_q>.
 The following registers are absorbed into counter <M_seed_q>: 1 register on signal <M_seed_q>.
-INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram__n0093> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+The following registers are absorbed into counter <M_clkseed_q>: 1 register on signal <M_clkseed_q>.
+INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram__n0077> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
     -----------------------------------------------------------------------
     | ram_type           | Distributed                         |          |
     -----------------------------------------------------------------------
@@ -430,23 +416,20 @@ Advanced HDL Synthesis Report
 Macro Statistics
 # RAMs                                                 : 1
  4x3-bit single-port distributed Read Only RAM         : 1
-# Counters                                             : 13
+# Counters                                             : 11
  2-bit up counter                                      : 1
  20-bit up counter                                     : 3
- 22-bit up counter                                     : 1
  23-bit up counter                                     : 2
  24-bit up counter                                     : 1
  25-bit up counter                                     : 1
  26-bit up counter                                     : 1
- 3-bit up counter                                      : 1
  32-bit up counter                                     : 2
 # Registers                                            : 278
  Flip-Flops                                            : 278
 # Comparators                                          : 1
  8-bit comparator equal                                : 1
-# Multiplexers                                         : 27
- 1-bit 2-to-1 multiplexer                              : 16
- 1-bit 5-to-1 multiplexer                              : 1
+# Multiplexers                                         : 29
+ 1-bit 2-to-1 multiplexer                              : 19
  2-bit 4-to-1 multiplexer                              : 1
  3-bit 2-to-1 multiplexer                              : 1
  32-bit 2-to-1 multiplexer                             : 8
@@ -464,10 +447,80 @@ INFO:Xst:2146 - In block <main_4>, Counter <edge_ctr/M_ctr_q> <mypropogater/slow
 Optimizing unit <mojo_top_0> ...
 
 Optimizing unit <main_4> ...
-WARNING:Xst:1294 - Latch <mypropogater/chosenClk> is equivalent to a wire in block <main_4>.
-WARNING:Xst:1294 - Latch <mypropogater/chosenClk> is equivalent to a wire in block <main_4>.
 
 Optimizing unit <pn_gen_25> ...
+WARNING:Xst:2677 - Node <mymain/button_cond2/M_ctr_q_19> of sequential type is unconnected in block <mojo_top_0>.
+WARNING:Xst:2677 - Node <mymain/button_cond2/M_ctr_q_18> of sequential type is unconnected in block <mojo_top_0>.
+WARNING:Xst:2677 - Node <mymain/button_cond2/M_ctr_q_17> of sequential type is unconnected in block <mojo_top_0>.
+WARNING:Xst:2677 - Node <mymain/button_cond2/M_ctr_q_16> of sequential type is unconnected in block <mojo_top_0>.
+WARNING:Xst:2677 - Node <mymain/button_cond2/M_ctr_q_15> of sequential type is unconnected in block <mojo_top_0>.
+WARNING:Xst:2677 - Node <mymain/button_cond2/M_ctr_q_14> of sequential type is unconnected in block <mojo_top_0>.
+WARNING:Xst:2677 - Node <mymain/button_cond2/M_ctr_q_13> of sequential type is unconnected in block <mojo_top_0>.
+WARNING:Xst:2677 - Node <mymain/button_cond2/M_ctr_q_12> of sequential type is unconnected in block <mojo_top_0>.
+WARNING:Xst:2677 - Node <mymain/button_cond2/M_ctr_q_11> of sequential type is unconnected in block <mojo_top_0>.
+WARNING:Xst:2677 - Node <mymain/button_cond2/M_ctr_q_10> of sequential type is unconnected in block <mojo_top_0>.
+WARNING:Xst:2677 - Node <mymain/button_cond2/M_ctr_q_9> of sequential type is unconnected in block <mojo_top_0>.
+WARNING:Xst:2677 - Node <mymain/button_cond2/M_ctr_q_8> of sequential type is unconnected in block <mojo_top_0>.
+WARNING:Xst:2677 - Node <mymain/button_cond2/M_ctr_q_7> of sequential type is unconnected in block <mojo_top_0>.
+WARNING:Xst:2677 - Node <mymain/button_cond2/M_ctr_q_6> of sequential type is unconnected in block <mojo_top_0>.
+WARNING:Xst:2677 - Node <mymain/button_cond2/M_ctr_q_5> of sequential type is unconnected in block <mojo_top_0>.
+WARNING:Xst:2677 - Node <mymain/button_cond2/M_ctr_q_4> of sequential type is unconnected in block <mojo_top_0>.
+WARNING:Xst:2677 - Node <mymain/button_cond2/M_ctr_q_3> of sequential type is unconnected in block <mojo_top_0>.
+WARNING:Xst:2677 - Node <mymain/button_cond2/M_ctr_q_2> of sequential type is unconnected in block <mojo_top_0>.
+WARNING:Xst:2677 - Node <mymain/button_cond2/M_ctr_q_1> of sequential type is unconnected in block <mojo_top_0>.
+WARNING:Xst:2677 - Node <mymain/button_cond2/M_ctr_q_0> of sequential type is unconnected in block <mojo_top_0>.
+WARNING:Xst:2677 - Node <mymain/button_cond1/M_ctr_q_19> of sequential type is unconnected in block <mojo_top_0>.
+WARNING:Xst:2677 - Node <mymain/button_cond1/M_ctr_q_18> of sequential type is unconnected in block <mojo_top_0>.
+WARNING:Xst:2677 - Node <mymain/button_cond1/M_ctr_q_17> of sequential type is unconnected in block <mojo_top_0>.
+WARNING:Xst:2677 - Node <mymain/button_cond1/M_ctr_q_16> of sequential type is unconnected in block <mojo_top_0>.
+WARNING:Xst:2677 - Node <mymain/button_cond1/M_ctr_q_15> of sequential type is unconnected in block <mojo_top_0>.
+WARNING:Xst:2677 - Node <mymain/button_cond1/M_ctr_q_14> of sequential type is unconnected in block <mojo_top_0>.
+WARNING:Xst:2677 - Node <mymain/button_cond1/M_ctr_q_13> of sequential type is unconnected in block <mojo_top_0>.
+WARNING:Xst:2677 - Node <mymain/button_cond1/M_ctr_q_12> of sequential type is unconnected in block <mojo_top_0>.
+WARNING:Xst:2677 - Node <mymain/button_cond1/M_ctr_q_11> of sequential type is unconnected in block <mojo_top_0>.
+WARNING:Xst:2677 - Node <mymain/button_cond1/M_ctr_q_10> of sequential type is unconnected in block <mojo_top_0>.
+WARNING:Xst:2677 - Node <mymain/button_cond1/M_ctr_q_9> of sequential type is unconnected in block <mojo_top_0>.
+WARNING:Xst:2677 - Node <mymain/button_cond1/M_ctr_q_8> of sequential type is unconnected in block <mojo_top_0>.
+WARNING:Xst:2677 - Node <mymain/button_cond1/M_ctr_q_7> of sequential type is unconnected in block <mojo_top_0>.
+WARNING:Xst:2677 - Node <mymain/button_cond1/M_ctr_q_6> of sequential type is unconnected in block <mojo_top_0>.
+WARNING:Xst:2677 - Node <mymain/button_cond1/M_ctr_q_5> of sequential type is unconnected in block <mojo_top_0>.
+WARNING:Xst:2677 - Node <mymain/button_cond1/M_ctr_q_4> of sequential type is unconnected in block <mojo_top_0>.
+WARNING:Xst:2677 - Node <mymain/button_cond1/M_ctr_q_3> of sequential type is unconnected in block <mojo_top_0>.
+WARNING:Xst:2677 - Node <mymain/button_cond1/M_ctr_q_2> of sequential type is unconnected in block <mojo_top_0>.
+WARNING:Xst:2677 - Node <mymain/button_cond1/M_ctr_q_1> of sequential type is unconnected in block <mojo_top_0>.
+WARNING:Xst:2677 - Node <mymain/button_cond1/M_ctr_q_0> of sequential type is unconnected in block <mojo_top_0>.
+WARNING:Xst:2677 - Node <mymain/button_cond3/M_ctr_q_19> of sequential type is unconnected in block <mojo_top_0>.
+WARNING:Xst:2677 - Node <mymain/button_cond3/M_ctr_q_18> of sequential type is unconnected in block <mojo_top_0>.
+WARNING:Xst:2677 - Node <mymain/button_cond3/M_ctr_q_17> of sequential type is unconnected in block <mojo_top_0>.
+WARNING:Xst:2677 - Node <mymain/button_cond3/M_ctr_q_16> of sequential type is unconnected in block <mojo_top_0>.
+WARNING:Xst:2677 - Node <mymain/button_cond3/M_ctr_q_15> of sequential type is unconnected in block <mojo_top_0>.
+WARNING:Xst:2677 - Node <mymain/button_cond3/M_ctr_q_14> of sequential type is unconnected in block <mojo_top_0>.
+WARNING:Xst:2677 - Node <mymain/button_cond3/M_ctr_q_13> of sequential type is unconnected in block <mojo_top_0>.
+WARNING:Xst:2677 - Node <mymain/button_cond3/M_ctr_q_12> of sequential type is unconnected in block <mojo_top_0>.
+WARNING:Xst:2677 - Node <mymain/button_cond3/M_ctr_q_11> of sequential type is unconnected in block <mojo_top_0>.
+WARNING:Xst:2677 - Node <mymain/button_cond3/M_ctr_q_10> of sequential type is unconnected in block <mojo_top_0>.
+WARNING:Xst:2677 - Node <mymain/button_cond3/M_ctr_q_9> of sequential type is unconnected in block <mojo_top_0>.
+WARNING:Xst:2677 - Node <mymain/button_cond3/M_ctr_q_8> of sequential type is unconnected in block <mojo_top_0>.
+WARNING:Xst:2677 - Node <mymain/button_cond3/M_ctr_q_7> of sequential type is unconnected in block <mojo_top_0>.
+WARNING:Xst:2677 - Node <mymain/button_cond3/M_ctr_q_6> of sequential type is unconnected in block <mojo_top_0>.
+WARNING:Xst:2677 - Node <mymain/button_cond3/M_ctr_q_5> of sequential type is unconnected in block <mojo_top_0>.
+WARNING:Xst:2677 - Node <mymain/button_cond3/M_ctr_q_4> of sequential type is unconnected in block <mojo_top_0>.
+WARNING:Xst:2677 - Node <mymain/button_cond3/M_ctr_q_3> of sequential type is unconnected in block <mojo_top_0>.
+WARNING:Xst:2677 - Node <mymain/button_cond3/M_ctr_q_2> of sequential type is unconnected in block <mojo_top_0>.
+WARNING:Xst:2677 - Node <mymain/button_cond3/M_ctr_q_1> of sequential type is unconnected in block <mojo_top_0>.
+WARNING:Xst:2677 - Node <mymain/button_cond3/M_ctr_q_0> of sequential type is unconnected in block <mojo_top_0>.
+WARNING:Xst:2677 - Node <mymain/edge_detector1/M_last_q> of sequential type is unconnected in block <mojo_top_0>.
+WARNING:Xst:2677 - Node <mymain/edge_detector2/M_last_q> of sequential type is unconnected in block <mojo_top_0>.
+WARNING:Xst:2677 - Node <mymain/edge_detector3/M_last_q> of sequential type is unconnected in block <mojo_top_0>.
+WARNING:Xst:2677 - Node <mymain/button_cond3/sync/M_pipe_q_0> of sequential type is unconnected in block <mojo_top_0>.
+WARNING:Xst:2677 - Node <mymain/button_cond3/sync/M_pipe_q_1> of sequential type is unconnected in block <mojo_top_0>.
+WARNING:Xst:2677 - Node <mymain/button_cond2/sync/M_pipe_q_0> of sequential type is unconnected in block <mojo_top_0>.
+WARNING:Xst:2677 - Node <mymain/button_cond2/sync/M_pipe_q_1> of sequential type is unconnected in block <mojo_top_0>.
+WARNING:Xst:2677 - Node <mymain/button_cond1/sync/M_pipe_q_0> of sequential type is unconnected in block <mojo_top_0>.
+WARNING:Xst:2677 - Node <mymain/button_cond1/sync/M_pipe_q_1> of sequential type is unconnected in block <mojo_top_0>.
+WARNING:Xst:2677 - Node <mymain/M_left_q_0> of sequential type is unconnected in block <mojo_top_0>.
+WARNING:Xst:2677 - Node <mymain/M_right_q_0> of sequential type is unconnected in block <mojo_top_0>.
+WARNING:Xst:2677 - Node <mymain/M_cent_q_0> of sequential type is unconnected in block <mojo_top_0>.
 WARNING:Xst:1293 - FF/Latch <mymain/mypropogater/randomizer/clk_gen/M_z_q_18> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <mymain/mypropogater/randomizer/clk_gen/M_z_q_19> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <mymain/mypropogater/randomizer/clk_gen/M_z_q_20> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
@@ -686,31 +739,31 @@ WARNING:Xst:2677 - Node <mymain/mypropogater/randomizer/clk_gen/M_x_q_25> of seq
 WARNING:Xst:2677 - Node <mymain/mypropogater/randomizer/clk_gen/M_x_q_22> of sequential type is unconnected in block <mojo_top_0>.
 WARNING:Xst:2677 - Node <mymain/mypropogater/randomizer/clk_gen/M_x_q_11> of sequential type is unconnected in block <mojo_top_0>.
 WARNING:Xst:2677 - Node <mymain/mypropogater/randomizer/clk_gen/M_x_q_6> of sequential type is unconnected in block <mojo_top_0>.
-INFO:Xst:2261 - The FF/Latch <mymain/mypropogater/slowclk25/M_ctr_q_10> in Unit <mojo_top_0> is equivalent to the following 4 FFs/Latches, which will be removed : <mymain/mypropogater/slowclk24/M_ctr_q_10> <mymain/mypropogater/slowclk21/M_ctr_q_10> <mymain/mypropogater/slowclk23/M_ctr_q_10> <mymain/edge_ctr/M_ctr_q_10> 
-INFO:Xst:2261 - The FF/Latch <mymain/mypropogater/slowclk25/M_ctr_q_11> in Unit <mojo_top_0> is equivalent to the following 4 FFs/Latches, which will be removed : <mymain/mypropogater/slowclk24/M_ctr_q_11> <mymain/mypropogater/slowclk21/M_ctr_q_11> <mymain/mypropogater/slowclk23/M_ctr_q_11> <mymain/edge_ctr/M_ctr_q_11> 
-INFO:Xst:2261 - The FF/Latch <mymain/mypropogater/slowclk25/M_ctr_q_12> in Unit <mojo_top_0> is equivalent to the following 4 FFs/Latches, which will be removed : <mymain/mypropogater/slowclk24/M_ctr_q_12> <mymain/mypropogater/slowclk21/M_ctr_q_12> <mymain/mypropogater/slowclk23/M_ctr_q_12> <mymain/edge_ctr/M_ctr_q_12> 
-INFO:Xst:2261 - The FF/Latch <mymain/mypropogater/slowclk25/M_ctr_q_13> in Unit <mojo_top_0> is equivalent to the following 4 FFs/Latches, which will be removed : <mymain/mypropogater/slowclk24/M_ctr_q_13> <mymain/mypropogater/slowclk21/M_ctr_q_13> <mymain/mypropogater/slowclk23/M_ctr_q_13> <mymain/edge_ctr/M_ctr_q_13> 
-INFO:Xst:2261 - The FF/Latch <mymain/mypropogater/slowclk25/M_ctr_q_14> in Unit <mojo_top_0> is equivalent to the following 4 FFs/Latches, which will be removed : <mymain/mypropogater/slowclk24/M_ctr_q_14> <mymain/mypropogater/slowclk21/M_ctr_q_14> <mymain/mypropogater/slowclk23/M_ctr_q_14> <mymain/edge_ctr/M_ctr_q_14> 
-INFO:Xst:2261 - The FF/Latch <mymain/mypropogater/slowclk25/M_ctr_q_20> in Unit <mojo_top_0> is equivalent to the following 4 FFs/Latches, which will be removed : <mymain/mypropogater/slowclk24/M_ctr_q_20> <mymain/mypropogater/slowclk21/M_ctr_q_20> <mymain/mypropogater/slowclk23/M_ctr_q_20> <mymain/edge_ctr/M_ctr_q_20> 
-INFO:Xst:2261 - The FF/Latch <mymain/mypropogater/slowclk25/M_ctr_q_15> in Unit <mojo_top_0> is equivalent to the following 4 FFs/Latches, which will be removed : <mymain/mypropogater/slowclk24/M_ctr_q_15> <mymain/mypropogater/slowclk21/M_ctr_q_15> <mymain/mypropogater/slowclk23/M_ctr_q_15> <mymain/edge_ctr/M_ctr_q_15> 
-INFO:Xst:2261 - The FF/Latch <mymain/mypropogater/slowclk25/M_ctr_q_21> in Unit <mojo_top_0> is equivalent to the following 4 FFs/Latches, which will be removed : <mymain/mypropogater/slowclk24/M_ctr_q_21> <mymain/mypropogater/slowclk21/M_ctr_q_21> <mymain/mypropogater/slowclk23/M_ctr_q_21> <mymain/edge_ctr/M_ctr_q_21> 
-INFO:Xst:2261 - The FF/Latch <mymain/mypropogater/slowclk25/M_ctr_q_16> in Unit <mojo_top_0> is equivalent to the following 4 FFs/Latches, which will be removed : <mymain/mypropogater/slowclk24/M_ctr_q_16> <mymain/mypropogater/slowclk21/M_ctr_q_16> <mymain/mypropogater/slowclk23/M_ctr_q_16> <mymain/edge_ctr/M_ctr_q_16> 
+INFO:Xst:2261 - The FF/Latch <mymain/mypropogater/slowclk25/M_ctr_q_10> in Unit <mojo_top_0> is equivalent to the following 3 FFs/Latches, which will be removed : <mymain/mypropogater/slowclk24/M_ctr_q_10> <mymain/mypropogater/slowclk23/M_ctr_q_10> <mymain/edge_ctr/M_ctr_q_10> 
+INFO:Xst:2261 - The FF/Latch <mymain/mypropogater/slowclk25/M_ctr_q_11> in Unit <mojo_top_0> is equivalent to the following 3 FFs/Latches, which will be removed : <mymain/mypropogater/slowclk24/M_ctr_q_11> <mymain/mypropogater/slowclk23/M_ctr_q_11> <mymain/edge_ctr/M_ctr_q_11> 
+INFO:Xst:2261 - The FF/Latch <mymain/mypropogater/slowclk25/M_ctr_q_12> in Unit <mojo_top_0> is equivalent to the following 3 FFs/Latches, which will be removed : <mymain/mypropogater/slowclk24/M_ctr_q_12> <mymain/mypropogater/slowclk23/M_ctr_q_12> <mymain/edge_ctr/M_ctr_q_12> 
+INFO:Xst:2261 - The FF/Latch <mymain/mypropogater/slowclk25/M_ctr_q_13> in Unit <mojo_top_0> is equivalent to the following 3 FFs/Latches, which will be removed : <mymain/mypropogater/slowclk24/M_ctr_q_13> <mymain/mypropogater/slowclk23/M_ctr_q_13> <mymain/edge_ctr/M_ctr_q_13> 
+INFO:Xst:2261 - The FF/Latch <mymain/mypropogater/slowclk25/M_ctr_q_14> in Unit <mojo_top_0> is equivalent to the following 3 FFs/Latches, which will be removed : <mymain/mypropogater/slowclk24/M_ctr_q_14> <mymain/mypropogater/slowclk23/M_ctr_q_14> <mymain/edge_ctr/M_ctr_q_14> 
+INFO:Xst:2261 - The FF/Latch <mymain/mypropogater/slowclk25/M_ctr_q_20> in Unit <mojo_top_0> is equivalent to the following 3 FFs/Latches, which will be removed : <mymain/mypropogater/slowclk24/M_ctr_q_20> <mymain/mypropogater/slowclk23/M_ctr_q_20> <mymain/edge_ctr/M_ctr_q_20> 
+INFO:Xst:2261 - The FF/Latch <mymain/mypropogater/slowclk25/M_ctr_q_15> in Unit <mojo_top_0> is equivalent to the following 3 FFs/Latches, which will be removed : <mymain/mypropogater/slowclk24/M_ctr_q_15> <mymain/mypropogater/slowclk23/M_ctr_q_15> <mymain/edge_ctr/M_ctr_q_15> 
+INFO:Xst:2261 - The FF/Latch <mymain/mypropogater/slowclk25/M_ctr_q_21> in Unit <mojo_top_0> is equivalent to the following 3 FFs/Latches, which will be removed : <mymain/mypropogater/slowclk24/M_ctr_q_21> <mymain/mypropogater/slowclk23/M_ctr_q_21> <mymain/edge_ctr/M_ctr_q_21> 
+INFO:Xst:2261 - The FF/Latch <mymain/mypropogater/slowclk25/M_ctr_q_16> in Unit <mojo_top_0> is equivalent to the following 3 FFs/Latches, which will be removed : <mymain/mypropogater/slowclk24/M_ctr_q_16> <mymain/mypropogater/slowclk23/M_ctr_q_16> <mymain/edge_ctr/M_ctr_q_16> 
 INFO:Xst:2261 - The FF/Latch <mymain/mypropogater/slowclk25/M_ctr_q_22> in Unit <mojo_top_0> is equivalent to the following 3 FFs/Latches, which will be removed : <mymain/mypropogater/slowclk24/M_ctr_q_22> <mymain/mypropogater/slowclk23/M_ctr_q_22> <mymain/edge_ctr/M_ctr_q_22> 
-INFO:Xst:2261 - The FF/Latch <mymain/mypropogater/slowclk25/M_ctr_q_17> in Unit <mojo_top_0> is equivalent to the following 4 FFs/Latches, which will be removed : <mymain/mypropogater/slowclk24/M_ctr_q_17> <mymain/mypropogater/slowclk21/M_ctr_q_17> <mymain/mypropogater/slowclk23/M_ctr_q_17> <mymain/edge_ctr/M_ctr_q_17> 
+INFO:Xst:2261 - The FF/Latch <mymain/mypropogater/slowclk25/M_ctr_q_17> in Unit <mojo_top_0> is equivalent to the following 3 FFs/Latches, which will be removed : <mymain/mypropogater/slowclk24/M_ctr_q_17> <mymain/mypropogater/slowclk23/M_ctr_q_17> <mymain/edge_ctr/M_ctr_q_17> 
 INFO:Xst:2261 - The FF/Latch <mymain/mypropogater/slowclk25/M_ctr_q_23> in Unit <mojo_top_0> is equivalent to the following 2 FFs/Latches, which will be removed : <mymain/mypropogater/slowclk24/M_ctr_q_23> <mymain/mypropogater/slowclk23/M_ctr_q_23> 
-INFO:Xst:2261 - The FF/Latch <mymain/mypropogater/slowclk25/M_ctr_q_18> in Unit <mojo_top_0> is equivalent to the following 4 FFs/Latches, which will be removed : <mymain/mypropogater/slowclk24/M_ctr_q_18> <mymain/mypropogater/slowclk21/M_ctr_q_18> <mymain/mypropogater/slowclk23/M_ctr_q_18> <mymain/edge_ctr/M_ctr_q_18> 
+INFO:Xst:2261 - The FF/Latch <mymain/mypropogater/slowclk25/M_ctr_q_18> in Unit <mojo_top_0> is equivalent to the following 3 FFs/Latches, which will be removed : <mymain/mypropogater/slowclk24/M_ctr_q_18> <mymain/mypropogater/slowclk23/M_ctr_q_18> <mymain/edge_ctr/M_ctr_q_18> 
 INFO:Xst:2261 - The FF/Latch <mymain/mypropogater/slowclk25/M_ctr_q_24> in Unit <mojo_top_0> is equivalent to the following FF/Latch, which will be removed : <mymain/mypropogater/slowclk24/M_ctr_q_24> 
-INFO:Xst:2261 - The FF/Latch <mymain/mypropogater/slowclk25/M_ctr_q_19> in Unit <mojo_top_0> is equivalent to the following 4 FFs/Latches, which will be removed : <mymain/mypropogater/slowclk24/M_ctr_q_19> <mymain/mypropogater/slowclk21/M_ctr_q_19> <mymain/mypropogater/slowclk23/M_ctr_q_19> <mymain/edge_ctr/M_ctr_q_19> 
-INFO:Xst:2261 - The FF/Latch <mymain/mypropogater/slowclk25/M_ctr_q_0> in Unit <mojo_top_0> is equivalent to the following 4 FFs/Latches, which will be removed : <mymain/mypropogater/slowclk24/M_ctr_q_0> <mymain/mypropogater/slowclk21/M_ctr_q_0> <mymain/mypropogater/slowclk23/M_ctr_q_0> <mymain/edge_ctr/M_ctr_q_0> 
-INFO:Xst:2261 - The FF/Latch <mymain/mypropogater/slowclk25/M_ctr_q_1> in Unit <mojo_top_0> is equivalent to the following 4 FFs/Latches, which will be removed : <mymain/mypropogater/slowclk24/M_ctr_q_1> <mymain/mypropogater/slowclk21/M_ctr_q_1> <mymain/mypropogater/slowclk23/M_ctr_q_1> <mymain/edge_ctr/M_ctr_q_1> 
-INFO:Xst:2261 - The FF/Latch <mymain/mypropogater/slowclk25/M_ctr_q_2> in Unit <mojo_top_0> is equivalent to the following 4 FFs/Latches, which will be removed : <mymain/mypropogater/slowclk24/M_ctr_q_2> <mymain/mypropogater/slowclk21/M_ctr_q_2> <mymain/mypropogater/slowclk23/M_ctr_q_2> <mymain/edge_ctr/M_ctr_q_2> 
-INFO:Xst:2261 - The FF/Latch <mymain/mypropogater/slowclk25/M_ctr_q_3> in Unit <mojo_top_0> is equivalent to the following 4 FFs/Latches, which will be removed : <mymain/mypropogater/slowclk24/M_ctr_q_3> <mymain/mypropogater/slowclk21/M_ctr_q_3> <mymain/mypropogater/slowclk23/M_ctr_q_3> <mymain/edge_ctr/M_ctr_q_3> 
-INFO:Xst:2261 - The FF/Latch <mymain/mypropogater/slowclk25/M_ctr_q_4> in Unit <mojo_top_0> is equivalent to the following 4 FFs/Latches, which will be removed : <mymain/mypropogater/slowclk24/M_ctr_q_4> <mymain/mypropogater/slowclk21/M_ctr_q_4> <mymain/mypropogater/slowclk23/M_ctr_q_4> <mymain/edge_ctr/M_ctr_q_4> 
-INFO:Xst:2261 - The FF/Latch <mymain/mypropogater/slowclk25/M_ctr_q_5> in Unit <mojo_top_0> is equivalent to the following 4 FFs/Latches, which will be removed : <mymain/mypropogater/slowclk24/M_ctr_q_5> <mymain/mypropogater/slowclk21/M_ctr_q_5> <mymain/mypropogater/slowclk23/M_ctr_q_5> <mymain/edge_ctr/M_ctr_q_5> 
-INFO:Xst:2261 - The FF/Latch <mymain/mypropogater/slowclk25/M_ctr_q_6> in Unit <mojo_top_0> is equivalent to the following 4 FFs/Latches, which will be removed : <mymain/mypropogater/slowclk24/M_ctr_q_6> <mymain/mypropogater/slowclk21/M_ctr_q_6> <mymain/mypropogater/slowclk23/M_ctr_q_6> <mymain/edge_ctr/M_ctr_q_6> 
-INFO:Xst:2261 - The FF/Latch <mymain/mypropogater/slowclk25/M_ctr_q_7> in Unit <mojo_top_0> is equivalent to the following 4 FFs/Latches, which will be removed : <mymain/mypropogater/slowclk24/M_ctr_q_7> <mymain/mypropogater/slowclk21/M_ctr_q_7> <mymain/mypropogater/slowclk23/M_ctr_q_7> <mymain/edge_ctr/M_ctr_q_7> 
-INFO:Xst:2261 - The FF/Latch <mymain/mypropogater/slowclk25/M_ctr_q_8> in Unit <mojo_top_0> is equivalent to the following 4 FFs/Latches, which will be removed : <mymain/mypropogater/slowclk24/M_ctr_q_8> <mymain/mypropogater/slowclk21/M_ctr_q_8> <mymain/mypropogater/slowclk23/M_ctr_q_8> <mymain/edge_ctr/M_ctr_q_8> 
-INFO:Xst:2261 - The FF/Latch <mymain/mypropogater/slowclk25/M_ctr_q_9> in Unit <mojo_top_0> is equivalent to the following 4 FFs/Latches, which will be removed : <mymain/mypropogater/slowclk24/M_ctr_q_9> <mymain/mypropogater/slowclk21/M_ctr_q_9> <mymain/mypropogater/slowclk23/M_ctr_q_9> <mymain/edge_ctr/M_ctr_q_9> 
+INFO:Xst:2261 - The FF/Latch <mymain/mypropogater/slowclk25/M_ctr_q_19> in Unit <mojo_top_0> is equivalent to the following 3 FFs/Latches, which will be removed : <mymain/mypropogater/slowclk24/M_ctr_q_19> <mymain/mypropogater/slowclk23/M_ctr_q_19> <mymain/edge_ctr/M_ctr_q_19> 
+INFO:Xst:2261 - The FF/Latch <mymain/mypropogater/slowclk25/M_ctr_q_0> in Unit <mojo_top_0> is equivalent to the following 3 FFs/Latches, which will be removed : <mymain/mypropogater/slowclk24/M_ctr_q_0> <mymain/mypropogater/slowclk23/M_ctr_q_0> <mymain/edge_ctr/M_ctr_q_0> 
+INFO:Xst:2261 - The FF/Latch <mymain/mypropogater/slowclk25/M_ctr_q_1> in Unit <mojo_top_0> is equivalent to the following 3 FFs/Latches, which will be removed : <mymain/mypropogater/slowclk24/M_ctr_q_1> <mymain/mypropogater/slowclk23/M_ctr_q_1> <mymain/edge_ctr/M_ctr_q_1> 
+INFO:Xst:2261 - The FF/Latch <mymain/mypropogater/slowclk25/M_ctr_q_2> in Unit <mojo_top_0> is equivalent to the following 3 FFs/Latches, which will be removed : <mymain/mypropogater/slowclk24/M_ctr_q_2> <mymain/mypropogater/slowclk23/M_ctr_q_2> <mymain/edge_ctr/M_ctr_q_2> 
+INFO:Xst:2261 - The FF/Latch <mymain/mypropogater/slowclk25/M_ctr_q_3> in Unit <mojo_top_0> is equivalent to the following 3 FFs/Latches, which will be removed : <mymain/mypropogater/slowclk24/M_ctr_q_3> <mymain/mypropogater/slowclk23/M_ctr_q_3> <mymain/edge_ctr/M_ctr_q_3> 
+INFO:Xst:2261 - The FF/Latch <mymain/mypropogater/slowclk25/M_ctr_q_4> in Unit <mojo_top_0> is equivalent to the following 3 FFs/Latches, which will be removed : <mymain/mypropogater/slowclk24/M_ctr_q_4> <mymain/mypropogater/slowclk23/M_ctr_q_4> <mymain/edge_ctr/M_ctr_q_4> 
+INFO:Xst:2261 - The FF/Latch <mymain/mypropogater/slowclk25/M_ctr_q_5> in Unit <mojo_top_0> is equivalent to the following 3 FFs/Latches, which will be removed : <mymain/mypropogater/slowclk24/M_ctr_q_5> <mymain/mypropogater/slowclk23/M_ctr_q_5> <mymain/edge_ctr/M_ctr_q_5> 
+INFO:Xst:2261 - The FF/Latch <mymain/mypropogater/slowclk25/M_ctr_q_6> in Unit <mojo_top_0> is equivalent to the following 3 FFs/Latches, which will be removed : <mymain/mypropogater/slowclk24/M_ctr_q_6> <mymain/mypropogater/slowclk23/M_ctr_q_6> <mymain/edge_ctr/M_ctr_q_6> 
+INFO:Xst:2261 - The FF/Latch <mymain/mypropogater/slowclk25/M_ctr_q_7> in Unit <mojo_top_0> is equivalent to the following 3 FFs/Latches, which will be removed : <mymain/mypropogater/slowclk24/M_ctr_q_7> <mymain/mypropogater/slowclk23/M_ctr_q_7> <mymain/edge_ctr/M_ctr_q_7> 
+INFO:Xst:2261 - The FF/Latch <mymain/mypropogater/slowclk25/M_ctr_q_8> in Unit <mojo_top_0> is equivalent to the following 3 FFs/Latches, which will be removed : <mymain/mypropogater/slowclk24/M_ctr_q_8> <mymain/mypropogater/slowclk23/M_ctr_q_8> <mymain/edge_ctr/M_ctr_q_8> 
+INFO:Xst:2261 - The FF/Latch <mymain/mypropogater/slowclk25/M_ctr_q_9> in Unit <mojo_top_0> is equivalent to the following 3 FFs/Latches, which will be removed : <mymain/mypropogater/slowclk24/M_ctr_q_9> <mymain/mypropogater/slowclk23/M_ctr_q_9> <mymain/edge_ctr/M_ctr_q_9> 
 INFO:Xst:2261 - The FF/Latch <mymain/mypropogater/randomizer/numb_gen/M_y_q_20> in Unit <mojo_top_0> is equivalent to the following 4 FFs/Latches, which will be removed : <mymain/mypropogater/randomizer/numb_gen/M_y_q_19> <mymain/mypropogater/randomizer/numb_gen/M_x_q_29> <mymain/mypropogater/randomizer/numb_gen/M_x_q_10> <mymain/mypropogater/randomizer/numb_gen/M_x_q_1> 
 INFO:Xst:2261 - The FF/Latch <mymain/mypropogater/randomizer/clk_gen/M_y_q_20> in Unit <mojo_top_0> is equivalent to the following 4 FFs/Latches, which will be removed : <mymain/mypropogater/randomizer/clk_gen/M_y_q_19> <mymain/mypropogater/randomizer/clk_gen/M_x_q_29> <mymain/mypropogater/randomizer/clk_gen/M_x_q_10> <mymain/mypropogater/randomizer/clk_gen/M_x_q_1> 
 
@@ -720,7 +773,7 @@ INFO:Xst:2261 - The FF/Latch <mymain/mypropogater/randomizer/numb_gen/M_x_q_20> 
 INFO:Xst:2261 - The FF/Latch <mymain/mypropogater/randomizer/clk_gen/M_x_q_20> in Unit <mojo_top_0> is equivalent to the following FF/Latch, which will be removed : <mymain/mypropogater/randomizer/clk_gen/M_x_q_19> 
 INFO:Xst:2261 - The FF/Latch <mymain/mypropogater/randomizer/numb_gen/M_y_q_20> in Unit <mojo_top_0> is equivalent to the following FF/Latch, which will be removed : <mymain/mypropogater/randomizer/clk_gen/M_y_q_20> 
 INFO:Xst:2261 - The FF/Latch <mymain/mypropogater/randomizer/numb_gen/M_x_q_20> in Unit <mojo_top_0> is equivalent to the following FF/Latch, which will be removed : <mymain/mypropogater/randomizer/clk_gen/M_x_q_20> 
-Found area constraint ratio of 100 (+ 0) on block mojo_top_0, actual ratio is 4.
+Found area constraint ratio of 100 (+ 0) on block mojo_top_0, actual ratio is 2.
 WARNING:Xst:2677 - Node <mymain/mypropogater/M_clkseed_q_24> of sequential type is unconnected in block <mojo_top_0>.
 WARNING:Xst:2677 - Node <mymain/mypropogater/M_clkseed_q_23> of sequential type is unconnected in block <mojo_top_0>.
 WARNING:Xst:2677 - Node <mymain/mypropogater/M_clkseed_q_22> of sequential type is unconnected in block <mojo_top_0>.
@@ -755,20 +808,12 @@ FlipFlop reset_cond3/M_stage_q_3 has been replicated 1 time(s)
 
 Final Macro Processing ...
 
-Processing Unit <mojo_top_0> :
-	Found 2-bit shift register for signal <mymain/button_cond3/sync/M_pipe_q_1>.
-	Found 2-bit shift register for signal <mymain/button_cond2/sync/M_pipe_q_1>.
-	Found 2-bit shift register for signal <mymain/button_cond1/sync/M_pipe_q_1>.
-Unit <mojo_top_0> processed.
-
 =========================================================================
 Final Register Report
 
 Macro Statistics
-# Registers                                            : 168
- Flip-Flops                                            : 168
-# Shift Registers                                      : 3
- 2-bit shift register                                  : 3
+# Registers                                            : 99
+ Flip-Flops                                            : 99
 
 =========================================================================
 
@@ -791,32 +836,30 @@ Top Level Output File Name         : mojo_top_0.ngc
 
 Primitive and Black Box Usage:
 ------------------------------
-# BELS                             : 471
-#      GND                         : 10
-#      INV                         : 13
-#      LUT1                        : 82
-#      LUT2                        : 8
-#      LUT3                        : 46
-#      LUT4                        : 10
-#      LUT5                        : 19
-#      LUT6                        : 19
-#      MUXCY                       : 124
+# BELS                             : 245
+#      GND                         : 4
+#      INV                         : 5
+#      LUT1                        : 25
+#      LUT2                        : 4
+#      LUT3                        : 48
+#      LUT4                        : 4
+#      LUT5                        : 8
+#      LUT6                        : 6
+#      MUXCY                       : 67
 #      MUXF7                       : 1
-#      VCC                         : 9
-#      XORCY                       : 130
-# FlipFlops/Latches                : 171
-#      FD                          : 15
-#      FDE                         : 57
-#      FDR                         : 31
-#      FDRE                        : 63
+#      VCC                         : 3
+#      XORCY                       : 70
+# FlipFlops/Latches                : 99
+#      FD                          : 6
+#      FDE                         : 54
+#      FDR                         : 28
+#      FDRE                        : 6
 #      FDS                         : 5
-# Shift Registers                  : 3
-#      SRLC16E                     : 3
 # Clock Buffers                    : 2
 #      BUFG                        : 1
 #      BUFGP                       : 1
-# IO Buffers                       : 24
-#      IBUF                        : 4
+# IO Buffers                       : 21
+#      IBUF                        : 1
 #      OBUF                        : 14
 #      OBUFT                       : 6
 
@@ -827,22 +870,20 @@ Selected Device : 6slx9tqg144-2
 
 
 Slice Logic Utilization: 
- Number of Slice Registers:             171  out of  11440     1%  
- Number of Slice LUTs:                  200  out of   5720     3%  
-    Number used as Logic:               197  out of   5720     3%  
-    Number used as Memory:                3  out of   1440     0%  
-       Number used as SRL:                3
+ Number of Slice Registers:              99  out of  11440     0%  
+ Number of Slice LUTs:                  100  out of   5720     1%  
+    Number used as Logic:               100  out of   5720     1%  
 
 Slice Logic Distribution: 
- Number of LUT Flip Flop pairs used:    215
-   Number with an unused Flip Flop:      44  out of    215    20%  
-   Number with an unused LUT:            15  out of    215     6%  
-   Number of fully used LUT-FF pairs:   156  out of    215    72%  
-   Number of unique control sets:        24
+ Number of LUT Flip Flop pairs used:    112
+   Number with an unused Flip Flop:      13  out of    112    11%  
+   Number with an unused LUT:            12  out of    112    10%  
+   Number of fully used LUT-FF pairs:    87  out of    112    77%  
+   Number of unique control sets:        11
 
 IO Utilization: 
  Number of IOs:                          31
- Number of bonded IOBs:                  25  out of    102    24%  
+ Number of bonded IOBs:                  22  out of    102    21%  
 
 Specific Feature Utilization:
  Number of BUFG/BUFGCTRLs:                2  out of     16    12%  
@@ -865,17 +906,15 @@ NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
 
 Clock Information:
 ------------------
--------------------------------------------------------------------------------------------------------+--------------------------------------------+-------+
-Clock Signal                                                                                           | Clock buffer(FF name)                      | Load  |
--------------------------------------------------------------------------------------------------------+--------------------------------------------+-------+
-clk                                                                                                    | BUFGP                                      | 119   |
-mymain/mypropogater/slowclk25/M_ctr_q_22                                                               | NONE(mymain/M_left_q_0)                    | 6     |
-mymain/mypropogater/chosenClk_0(mymain/mypropogater/Mmux_M_randomizer_ranClk[2]_chosenClk_Mux_27_o22:O)| BUFG(*)(mymain/mypropogater/M_clkseed_q_21)| 49    |
--------------------------------------------------------------------------------------------------------+--------------------------------------------+-------+
+----------------------------------------------------------------------+--------------------------------------------+-------+
+Clock Signal                                                          | Clock buffer(FF name)                      | Load  |
+----------------------------------------------------------------------+--------------------------------------------+-------+
+clk                                                                   | BUFGP                                      | 53    |
+mymain/mypropogater/chosenClk_0(mymain/mypropogater/Mmux_chosenClk1:O)| BUFG(*)(mymain/mypropogater/M_clkseed_q_21)| 46    |
+----------------------------------------------------------------------+--------------------------------------------+-------+
 (*) This 1 clock signal(s) are generated by combinatorial logic,
 and XST is not able to identify which are the primary clock signals.
 Please use the CLOCK_SIGNAL constraint to specify the clock signal(s) generated by combinatorial logic.
-INFO:Xst:2169 - HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
 
 Asynchronous Control Signals Information:
 ----------------------------------------
@@ -885,9 +924,9 @@ Timing Summary:
 ---------------
 Speed Grade: -2
 
-   Minimum period: 4.751ns (Maximum Frequency: 210.482MHz)
+   Minimum period: 4.013ns (Maximum Frequency: 249.168MHz)
    Minimum input arrival time before clock: 3.563ns
-   Maximum output required time after clock: 6.833ns
+   Maximum output required time after clock: 5.939ns
    Maximum combinational path delay: No path found
 
 Timing Details:
@@ -896,58 +935,38 @@ All values displayed in nanoseconds (ns)
 
 =========================================================================
 Timing constraint: Default period analysis for Clock 'clk'
-  Clock period: 4.751ns (frequency: 210.482MHz)
-  Total number of paths / destination ports: 2344 / 271
+  Clock period: 3.662ns (frequency: 273.048MHz)
+  Total number of paths / destination ports: 451 / 94
 -------------------------------------------------------------------------
-Delay:               4.751ns (Levels of Logic = 3)
-  Source:            mymain/button_cond1/M_ctr_q_3 (FF)
-  Destination:       mymain/button_cond1/M_ctr_q_19 (FF)
+Delay:               3.662ns (Levels of Logic = 5)
+  Source:            reset_cond3/M_stage_q_3_1 (FF)
+  Destination:       mymain/mypropogater/randomizer/numb_gen/M_w_q_19 (FF)
   Source Clock:      clk rising
   Destination Clock: clk rising
 
-  Data Path: mymain/button_cond1/M_ctr_q_3 to mymain/button_cond1/M_ctr_q_19
+  Data Path: reset_cond3/M_stage_q_3_1 to mymain/mypropogater/randomizer/numb_gen/M_w_q_19
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FDRE:C->Q             2   0.525   1.181  M_ctr_q_3 (M_ctr_q_3)
-     LUT6:I0->O            3   0.254   0.994  out1 (mymain/button_cond1/out)
-     end scope: 'mymain/button_cond1:mymain/button_cond1/out'
-     LUT5:I2->O           19   0.235   1.260  M_button_cond1_out_inv1 (M_button_cond1_out_inv)
-     begin scope: 'mymain/button_cond1:M_button_cond1_out_inv'
-     FDRE:CE                   0.302          M_ctr_q_1
+     FDS:C->Q              2   0.525   0.954  M_stage_q_3_1 (M_stage_q_3_1)
+     end scope: 'reset_cond3:M_stage_q_3_1'
+     begin scope: 'mymain:M_stage_q_3_1'
+     begin scope: 'mymain/mypropogater:M_stage_q_3_1'
+     LUT3:I0->O           38   0.235   1.620  _n0063_inv1 (M_randomizer_randnumrst)
+     begin scope: 'mymain/mypropogater/randomizer:randnumrst'
+     begin scope: 'mymain/mypropogater/randomizer/numb_gen:rst'
+     LUT5:I4->O            1   0.254   0.000  Mmux_M_w_d111 (M_w_d<19>)
+     FDE:D                     0.074          M_w_q_19
     ----------------------------------------
-    Total                      4.751ns (1.316ns logic, 3.435ns route)
-                                       (27.7% logic, 72.3% route)
-
-=========================================================================
-Timing constraint: Default period analysis for Clock 'mymain/mypropogater/slowclk25/M_ctr_q_22'
-  Clock period: 1.744ns (frequency: 573.395MHz)
-  Total number of paths / destination ports: 6 / 3
--------------------------------------------------------------------------
-Delay:               1.744ns (Levels of Logic = 2)
-  Source:            mymain/edge_detector1/M_last_q (FF)
-  Destination:       mymain/M_left_q_0 (FF)
-  Source Clock:      mymain/mypropogater/slowclk25/M_ctr_q_22 rising
-  Destination Clock: mymain/mypropogater/slowclk25/M_ctr_q_22 rising
-
-  Data Path: mymain/edge_detector1/M_last_q to mymain/M_left_q_0
-                                Gate     Net
-    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
-    ----------------------------------------  ------------
-     FD:C->Q               1   0.525   0.910  M_last_q (M_last_q)
-     end scope: 'mymain/edge_detector1:M_last_q'
-     LUT5:I2->O            1   0.235   0.000  Mmux_M_left_d11 (M_left_d)
-     FDR:D                     0.074          M_left_q_0
-    ----------------------------------------
-    Total                      1.744ns (0.834ns logic, 0.910ns route)
-                                       (47.8% logic, 52.2% route)
+    Total                      3.662ns (1.088ns logic, 2.574ns route)
+                                       (29.7% logic, 70.3% route)
 
 =========================================================================
 Timing constraint: Default period analysis for Clock 'mymain/mypropogater/chosenClk_0'
-  Clock period: 4.369ns (frequency: 228.906MHz)
-  Total number of paths / destination ports: 603 / 93
+  Clock period: 4.013ns (frequency: 249.168MHz)
+  Total number of paths / destination ports: 597 / 90
 -------------------------------------------------------------------------
-Delay:               4.369ns (Levels of Logic = 2)
+Delay:               4.013ns (Levels of Logic = 2)
   Source:            mymain/mypropogater/rowCtr/M_ctr_q_1 (FF)
   Destination:       mymain/mypropogater/M_clkseed_q_21 (FF)
   Source Clock:      mymain/mypropogater/chosenClk_0 rising
@@ -957,17 +976,17 @@ Delay:               4.369ns (Levels of Logic = 2)
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FDR:C->Q             20   0.525   1.394  M_ctr_q_1 (M_ctr_q_1)
-     end scope: 'mymain/mypropogater/rowCtr:M_ctr_q_1'
-     LUT3:I1->O           60   0.250   1.898  _n0085_inv1 (M_randomizer_randnumrst)
-     FDE:CE                    0.302          M_seed_q_0
+     FDR:C->Q             17   0.525   1.317  M_ctr_q_1 (M_ctr_q_1)
+     end scope: 'mymain/mypropogater/rowCtr:value<1>'
+     LUT3:I1->O           38   0.250   1.619  _n0063_inv1 (M_randomizer_randnumrst)
+     FDE:CE                    0.302          M_clkseed_q_0
     ----------------------------------------
-    Total                      4.369ns (1.077ns logic, 3.292ns route)
-                                       (24.7% logic, 75.3% route)
+    Total                      4.013ns (1.077ns logic, 2.936ns route)
+                                       (26.8% logic, 73.2% route)
 
 =========================================================================
 Timing constraint: Default OFFSET IN BEFORE for Clock 'clk'
-  Total number of paths / destination ports: 8 / 8
+  Total number of paths / destination ports: 5 / 5
 -------------------------------------------------------------------------
 Offset:              3.563ns (Levels of Logic = 3)
   Source:            rst_n (PAD)
@@ -987,75 +1006,51 @@ Offset:              3.563ns (Levels of Logic = 3)
                                        (57.3% logic, 42.7% route)
 
 =========================================================================
-Timing constraint: Default OFFSET OUT AFTER for Clock 'mymain/mypropogater/slowclk25/M_ctr_q_22'
-  Total number of paths / destination ports: 13 / 5
--------------------------------------------------------------------------
-Offset:              6.824ns (Levels of Logic = 4)
-  Source:            mymain/M_left_q_0 (FF)
-  Destination:       led<0> (PAD)
-  Source Clock:      mymain/mypropogater/slowclk25/M_ctr_q_22 rising
-
-  Data Path: mymain/M_left_q_0 to led<0>
-                                Gate     Net
-    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
-    ----------------------------------------  ------------
-     FDR:C->Q              3   0.525   1.196  M_left_q_0 (M_left_q_0)
-     LUT5:I0->O            2   0.254   1.002  M_myalu_alu<0>21 (M_myalu_alu<0>3)
-     LUT4:I0->O            1   0.254   0.681  Mmux_result12 (result<0>)
-     end scope: 'mymain:result<0>'
-     OBUF:I->O                 2.912          led_0_OBUF (led<0>)
-    ----------------------------------------
-    Total                      6.824ns (3.945ns logic, 2.879ns route)
-                                       (57.8% logic, 42.2% route)
-
-=========================================================================
 Timing constraint: Default OFFSET OUT AFTER for Clock 'clk'
-  Total number of paths / destination ports: 27 / 5
+  Total number of paths / destination ports: 10 / 6
 -------------------------------------------------------------------------
-Offset:              6.833ns (Levels of Logic = 6)
-  Source:            mymain/mypropogater/randomizer/numbreg1/M_regs_q_1 (FF)
-  Destination:       led<1> (PAD)
+Offset:              5.307ns (Levels of Logic = 4)
+  Source:            mymain/mypropogater/randomizer/numbreg1/M_regs_q_0 (FF)
+  Destination:       low1 (PAD)
   Source Clock:      clk rising
 
-  Data Path: mymain/mypropogater/randomizer/numbreg1/M_regs_q_1 to led<1>
+  Data Path: mymain/mypropogater/randomizer/numbreg1/M_regs_q_0 to low1
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FDRE:C->Q             6   0.525   1.306  M_regs_q_1 (M_regs_q_1)
-     end scope: 'mymain/mypropogater/randomizer/numbreg1:out<1>'
-     end scope: 'mymain/mypropogater/randomizer:ranNum<1>'
-     end scope: 'mymain/mypropogater:M_regs_q_1'
-     LUT6:I1->O            1   0.254   0.000  Mmux_result11_G (N8)
-     MUXF7:I1->O           2   0.175   0.726  Mmux_result11 (Mmux_result11)
-     LUT4:I3->O            1   0.254   0.681  Mmux_result12 (result<0>)
-     end scope: 'mymain:result<0>'
-     OBUF:I->O                 2.912          led_0_OBUF (led<0>)
+     FDRE:C->Q             2   0.525   0.954  M_regs_q_0 (M_regs_q_0)
+     end scope: 'mymain/mypropogater/randomizer/numbreg1:out<0>'
+     end scope: 'mymain/mypropogater/randomizer:ranNum<0>'
+     LUT3:I0->O            1   0.235   0.681  gnd11 (gnd1)
+     end scope: 'mymain/mypropogater:gnd1'
+     end scope: 'mymain:low1'
+     OBUF:I->O                 2.912          low1_OBUF (low1)
     ----------------------------------------
-    Total                      6.833ns (4.120ns logic, 2.713ns route)
-                                       (60.3% logic, 39.7% route)
+    Total                      5.307ns (3.672ns logic, 1.635ns route)
+                                       (69.2% logic, 30.8% route)
 
 =========================================================================
 Timing constraint: Default OFFSET OUT AFTER for Clock 'mymain/mypropogater/chosenClk_0'
-  Total number of paths / destination ports: 21 / 8
+  Total number of paths / destination ports: 8 / 5
 -------------------------------------------------------------------------
-Offset:              6.498ns (Levels of Logic = 4)
-  Source:            mymain/mypropogater/M_numb_gen1_q_2 (FF)
-  Destination:       led<0> (PAD)
+Offset:              5.939ns (Levels of Logic = 4)
+  Source:            mymain/mypropogater/rowCtr/M_ctr_q_0 (FF)
+  Destination:       high1 (PAD)
   Source Clock:      mymain/mypropogater/chosenClk_0 rising
 
-  Data Path: mymain/mypropogater/M_numb_gen1_q_2 to led<0>
+  Data Path: mymain/mypropogater/rowCtr/M_ctr_q_0 to high1
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FD:C->Q               3   0.525   0.874  M_numb_gen1_q_2 (M_numb_gen1_q_2)
-     end scope: 'mymain/mypropogater:M_numb_gen1_q_2'
-     LUT5:I3->O            2   0.250   1.002  M_myalu_alu<0>21 (M_myalu_alu<0>3)
-     LUT4:I0->O            1   0.254   0.681  Mmux_result12 (result<0>)
-     end scope: 'mymain:result<0>'
-     OBUF:I->O                 2.912          led_0_OBUF (led<0>)
+     FDR:C->Q             18   0.525   1.343  M_ctr_q_0 (M_ctr_q_0)
+     end scope: 'mymain/mypropogater/rowCtr:value<0>'
+     end scope: 'mymain/mypropogater:rowLit<0>'
+     LUT2:I0->O            7   0.250   0.909  M_mypropogater_row11 (high1)
+     end scope: 'mymain:high1'
+     OBUF:I->O                 2.912          high1_OBUF (high1)
     ----------------------------------------
-    Total                      6.498ns (3.941ns logic, 2.557ns route)
-                                       (60.6% logic, 39.4% route)
+    Total                      5.939ns (3.687ns logic, 2.252ns route)
+                                       (62.1% logic, 37.9% route)
 
 =========================================================================
 
@@ -1067,8 +1062,8 @@ Clock to Setup on destination clock clk
                                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock                   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 -------------------------------+---------+---------+---------+---------+
-clk                            |    4.751|         |         |         |
-mymain/mypropogater/chosenClk_0|    4.396|         |         |         |
+clk                            |    3.662|         |         |         |
+mymain/mypropogater/chosenClk_0|    4.040|         |         |         |
 -------------------------------+---------+---------+---------+---------+
 
 Clock to Setup on destination clock mymain/mypropogater/chosenClk_0
@@ -1076,31 +1071,21 @@ Clock to Setup on destination clock mymain/mypropogater/chosenClk_0
                                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock                   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 -------------------------------+---------+---------+---------+---------+
-clk                            |    4.442|         |         |         |
-mymain/mypropogater/chosenClk_0|    4.369|         |         |         |
+clk                            |    4.396|         |         |         |
+mymain/mypropogater/chosenClk_0|    4.013|         |         |         |
 -------------------------------+---------+---------+---------+---------+
-
-Clock to Setup on destination clock mymain/mypropogater/slowclk25/M_ctr_q_22
-----------------------------------------+---------+---------+---------+---------+
-                                        | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
-Source Clock                            |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
-----------------------------------------+---------+---------+---------+---------+
-clk                                     |    4.347|         |         |         |
-mymain/mypropogater/chosenClk_0         |    2.569|         |         |         |
-mymain/mypropogater/slowclk25/M_ctr_q_22|    1.744|         |         |         |
-----------------------------------------+---------+---------+---------+---------+
 
 =========================================================================
 
 
-Total REAL time to Xst completion: 6.00 secs
-Total CPU time to Xst completion: 6.56 secs
+Total REAL time to Xst completion: 7.00 secs
+Total CPU time to Xst completion: 6.82 secs
  
 --> 
 
 Total memory usage is 345088 kilobytes
 
 Number of errors   :    0 (   0 filtered)
-Number of warnings :  279 (   0 filtered)
-Number of infos    :   40 (   0 filtered)
+Number of warnings :  353 (   0 filtered)
+Number of infos    :   43 (   0 filtered)
 
