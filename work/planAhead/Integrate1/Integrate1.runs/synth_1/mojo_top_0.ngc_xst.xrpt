@@ -5,7 +5,7 @@
     The structure and the elements are likely to change over the next few releases.
     This means code written to parse this file will need to be revisited each subsequent release.-->
 
-  <application stringID="Xst" timeStamp="Thu Dec 07 17:55:23 2017">
+  <application stringID="Xst" timeStamp="Thu Dec 07 19:21:48 2017">
     <section stringID="User_Env">
       <table stringID="User_EnvVar">
         <column stringID="variable"/>
@@ -78,8 +78,8 @@
       <item dataType="int" stringID="XST_COMPARATORS" value="6">
         <item dataType="int" stringID="XST_8BIT_COMPARATOR_GREATER" value="2"/>
       </item>
-      <item dataType="int" stringID="XST_MULTIPLEXERS" value="38">
-        <item dataType="int" stringID="XST_1BIT_2TO1_MULTIPLEXER" value="23"/>
+      <item dataType="int" stringID="XST_MULTIPLEXERS" value="35">
+        <item dataType="int" stringID="XST_1BIT_2TO1_MULTIPLEXER" value="20"/>
         <item dataType="int" stringID="XST_3BIT_2TO1_MULTIPLEXER" value="1"/>
         <item dataType="int" stringID="XST_32BIT_2TO1_MULTIPLEXER" value="10"/>
         <item dataType="int" stringID="XST_8BIT_2TO1_MULTIPLEXER" value="3"/>
@@ -104,8 +104,8 @@
       <item dataType="int" stringID="XST_COMPARATORS" value="6">
         <item dataType="int" stringID="XST_8BIT_COMPARATOR_GREATER" value="2"/>
       </item>
-      <item dataType="int" stringID="XST_MULTIPLEXERS" value="36">
-        <item dataType="int" stringID="XST_1BIT_2TO1_MULTIPLEXER" value="23"/>
+      <item dataType="int" stringID="XST_MULTIPLEXERS" value="33">
+        <item dataType="int" stringID="XST_1BIT_2TO1_MULTIPLEXER" value="20"/>
         <item dataType="int" stringID="XST_3BIT_2TO1_MULTIPLEXER" value="1"/>
         <item dataType="int" stringID="XST_32BIT_2TO1_MULTIPLEXER" value="8"/>
         <item dataType="int" stringID="XST_8BIT_2TO1_MULTIPLEXER" value="3"/>
@@ -135,8 +135,8 @@
           <item dataType="int" stringID="XST_GND" value="12"/>
           <item dataType="int" stringID="XST_INV" value="13"/>
           <item dataType="int" stringID="XST_LUT1" value="104"/>
-          <item dataType="int" stringID="XST_LUT2" value="5"/>
-          <item dataType="int" stringID="XST_LUT3" value="24"/>
+          <item dataType="int" stringID="XST_LUT2" value="6"/>
+          <item dataType="int" stringID="XST_LUT3" value="23"/>
           <item dataType="int" stringID="XST_LUT4" value="14"/>
           <item dataType="int" stringID="XST_LUT5" value="92"/>
           <item dataType="int" stringID="XST_LUT6" value="40"/>

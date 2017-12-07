@@ -24,7 +24,6 @@ module state (
     .rst(rst) {
 
     fsm state(#INIT(HALT)) = {MAIN,SUMUP,HALT}; // MAIN = random + propagate + compare the button and the result, sumup = add to score, halt = pause game
-      
       bcounter bttnpress;
       reg8bit scoreSum; //use an 8bit register to store the toal score of the game // i cannot use dff becuase it mojo clk constantly resets it //try connecting register to the propagtor clock cycle
   //  multi_seven_seg seg;
@@ -43,12 +42,14 @@ module state (
 //  sig out[8];   
       
   always {
-  //  rowResult=2b00; //rowResult is assumed to be 0 unless specified otherwise
+  //  rowResult=2b00; //rowResult is assumed to be 0 unless specified other
+    
+    
+    mainState.rst = rst;
     totalScore = scoreSum.out;
     scoreSum.data = 8b0; //am i always re-setting my register???????
     scoreSum.en=0;
     
-    mainState.rst = rst;
     result = mainState.result;
     //setting up inpts of main state and button press
     mainState.left2 = leftBtn;
@@ -72,8 +73,8 @@ module state (
     gnd2=1;
     gnd3=1; //put ground to high to deactivate the columns
    // totalScore = bttnpress.bttnPress;// this for debugging to test start game on any button press
-    
     case (state.q){
+    
       state.MAIN:
         //in the main state the LEDs are controlled by the main state;
         
@@ -89,8 +90,7 @@ module state (
         
        
         
-        // scoreSum.en=0;
-        // scoreSum.data = scoreSum.out;
+
         
         //**********THIS IS THE CODE FOR IF YOU MISS EVERYTHING & GAME OVER(LIKE UR LIFE U KUMQUAT)
         /*
@@ -100,21 +100,22 @@ module state (
         */
         //*************************************************
         
-        if (mainState.result!=0 && mainState.rowOn==RowNumb.ROW4){
+        if (mainState.result!=0 && mainState.rowOn==RowNumb.ROW3){
+            //TRY row 3 (halt state very weird) and row 4
             state.d = state.SUMUP;
         }
-        else{ 
-            state.d = state.MAIN;
-        }        
-              
+        else {
+            state.d = state.MAIN; //if i miss everything // change to HALT later on
+          }
+        
         state.SUMUP:
       //add score of this round to the score of your game
         myalu.alufn = Inst.ADD;
         myalu.a= mainState.result; //this is provided the mainstate clock has stopped
         myalu.b= scoreSum.out; //user's total score so far
-        scoreSum.en =1;
         scoreSum.data = myalu.alu; //cnt new score into register input
-        state.d = state.HALT; //*****TO DEBUG: GO TO HALT *****//
+        scoreSum.en =1;
+        state.d = state.MAIN; //*****TO DEBUG: GO TO HALT *****//
         
         //write enable the register so you can store the new score
       //  state.d = state.MAIN;
@@ -153,18 +154,19 @@ module state (
     row1=0;
     row2=0;
     row3=0;
-    gnd1=1;
-    gnd2=1;
-    gnd3=1;
+    gnd1=0;
+    gnd2=0;
+    gnd3=0;
         //scoreSum.data=scoreSum.out;
         scoreSum.en=0; //dont write into my register
         if (bttnpress.bttnPress==1) { 
-          mainState.rst=1;
+           mainState.rst=1;
           //if i detect a button press i go to main state and start the game
           //mainState.rst=1; //reset my main sate before i re start the game //****DOESNT REALLY WORK***//
           state.d = state.MAIN;
           }
 
   }
-}
+
+  }
 }

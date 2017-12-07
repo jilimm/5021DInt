@@ -101,10 +101,10 @@ module state_4 (
   always @* begin
     M_state_d = M_state_q;
     
+    M_mainState_rst = rst;
     totalScore = M_scoreSum_out;
     M_scoreSum_data = 8'h00;
     M_scoreSum_en = 1'h0;
-    M_mainState_rst = rst;
     result = M_mainState_result;
     M_mainState_left2 = leftBtn;
     M_mainState_right0 = rightBtn;
@@ -131,7 +131,7 @@ module state_4 (
         row2 = M_mainState_high2;
         row3 = M_mainState_high3;
         M_scoreSum_en = 1'h0;
-        if (M_mainState_result != 1'h0 && M_mainState_rowOn == 2'h0) begin
+        if (M_mainState_result != 1'h0 && M_mainState_rowOn == 2'h3) begin
           M_state_d = SUMUP_state;
         end else begin
           M_state_d = MAIN_state;
@@ -141,17 +141,17 @@ module state_4 (
         M_myalu_alufn = 6'h00;
         M_myalu_a = M_mainState_result;
         M_myalu_b = M_scoreSum_out;
-        M_scoreSum_en = 1'h1;
         M_scoreSum_data = M_myalu_alu;
-        M_state_d = HALT_state;
+        M_scoreSum_en = 1'h1;
+        M_state_d = MAIN_state;
       end
       HALT_state: begin
         row1 = 1'h0;
         row2 = 1'h0;
         row3 = 1'h0;
-        gnd1 = 1'h1;
-        gnd2 = 1'h1;
-        gnd3 = 1'h1;
+        gnd1 = 1'h0;
+        gnd2 = 1'h0;
+        gnd3 = 1'h0;
         M_scoreSum_en = 1'h0;
         if (M_bttnpress_bttnPress == 1'h1) begin
           M_mainState_rst = 1'h1;

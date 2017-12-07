@@ -27,6 +27,7 @@ module main (
       counter edge_ctr(#SIZE(1),#DIV(22)); //detect edge every ~0.08sec
       
       propogate mypropogater;
+      
      // dff mainResult[2];
     }
   }
@@ -35,7 +36,7 @@ module main (
     edge_detector edge_detector2(#RISE(1), #FALL(0)); // detect rising edges
     edge_detector edge_detector3(#RISE(1), #FALL(0)); // detect rising edges
     .rst(rst) {
-      reg2bit score;  
+      reg2bit resultreg;
       dff left[1];
       dff right[1];
       dff cent[1];    
@@ -43,7 +44,6 @@ module main (
   }
   
   alu myalu;
-  sig result1[2];
   
   always {
     myalu.alufn = 6b0;
@@ -68,8 +68,8 @@ module main (
     rowOn = mypropogater.rowLit;
     //instantiate
     //setting up output
-    result = score.out;
-    score.data = 2b00;
+    result = resultreg.out;
+    resultreg.data = 2b00;
     
     //connect my register input to the
    
@@ -109,33 +109,35 @@ module main (
               
       if(mypropogater.rowLit==RowNumb.ROW2){
               if (myalu.alu[0]){
-                  score.data = 2b01;
-                  score.en=1;
+                  resultreg.data = 2b01;
+                  resultreg.en=1;
                   }
               else{
-                score.data = 2b00;
-                score.en=1;
+                resultreg.data = 2b00;
+                resultreg.en=1;
                   }
       
       //will default to 10 when goes to row 3
     }
       else if (mypropogater.rowLit==RowNumb.ROW3){
-              if (score.out==2b00 && myalu.alu[0]){
-                  score.en=1;
-                  score.data=2b10;
+              if (resultreg.out==2b00 && myalu.alu[0]){
+                  resultreg.en=1;
+                  resultreg.data=2b10;
                 }
               else{
-                  score.en=0;
-                  score.data=2b00;
+                //  resultreg.data=2b11;
+                  resultreg.en=0;//only write into register if my button press is correct and my current result is 0
+                 // score.data=2b00;
               }
     }
       
       else{
-              result1 = 2b00; //person gets 0 points // when its not at row 2 or 3 i dont write into my register at all who gives a fuck?
+               resultreg.data = 2b00;
                left.d=0;
                right.d=0;
                cent.d=0;
-              score.en=1;
+               resultreg.en=1;
+             // resultreg.data=2b00;
     }
 }
 }

@@ -93,15 +93,15 @@ module main_7 (
     .in(M_edge_detector3_in),
     .out(M_edge_detector3_out)
   );
-  wire [2-1:0] M_score_out;
-  reg [1-1:0] M_score_en;
-  reg [2-1:0] M_score_data;
-  reg2bit_24 score (
+  wire [2-1:0] M_resultreg_out;
+  reg [1-1:0] M_resultreg_en;
+  reg [2-1:0] M_resultreg_data;
+  reg2bit_24 resultreg (
     .clk(M_edge_ctr_value),
     .rst(rst),
-    .en(M_score_en),
-    .data(M_score_data),
-    .out(M_score_out)
+    .en(M_resultreg_en),
+    .data(M_resultreg_data),
+    .out(M_resultreg_out)
   );
   reg [0:0] M_left_d, M_left_q = 1'h0;
   reg [0:0] M_right_d, M_right_q = 1'h0;
@@ -124,8 +124,6 @@ module main_7 (
     .alu(M_myalu_alu)
   );
   
-  reg [1:0] result1;
-  
   always @* begin
     M_cent_d = M_cent_q;
     M_left_d = M_left_q;
@@ -136,8 +134,8 @@ module main_7 (
     M_myalu_b = 8'h00;
     result = 2'h0;
     rowOn = M_mypropogater_rowLit;
-    result = M_score_out;
-    M_score_data = 2'h0;
+    result = M_resultreg_out;
+    M_resultreg_data = 2'h0;
     high1 = M_mypropogater_row1;
     high2 = M_mypropogater_row2;
     high3 = M_mypropogater_row3;
@@ -166,27 +164,26 @@ module main_7 (
     M_myalu_b[0+2-:3] = M_mypropogater_numSeq;
     if (M_mypropogater_rowLit == 2'h2) begin
       if (M_myalu_alu[0+0-:1]) begin
-        M_score_data = 2'h1;
-        M_score_en = 1'h1;
+        M_resultreg_data = 2'h1;
+        M_resultreg_en = 1'h1;
       end else begin
-        M_score_data = 2'h0;
-        M_score_en = 1'h1;
+        M_resultreg_data = 2'h0;
+        M_resultreg_en = 1'h1;
       end
     end else begin
       if (M_mypropogater_rowLit == 2'h3) begin
-        if (M_score_out == 2'h0 && M_myalu_alu[0+0-:1]) begin
-          M_score_en = 1'h1;
-          M_score_data = 2'h2;
+        if (M_resultreg_out == 2'h0 && M_myalu_alu[0+0-:1]) begin
+          M_resultreg_en = 1'h1;
+          M_resultreg_data = 2'h2;
         end else begin
-          M_score_en = 1'h0;
-          M_score_data = 2'h0;
+          M_resultreg_en = 1'h0;
         end
       end else begin
-        result1 = 2'h0;
+        M_resultreg_data = 2'h0;
         M_left_d = 1'h0;
         M_right_d = 1'h0;
         M_cent_d = 1'h0;
-        M_score_en = 1'h1;
+        M_resultreg_en = 1'h1;
       end
     end
   end
