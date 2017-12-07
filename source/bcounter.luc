@@ -1,3 +1,4 @@
+//******THIS MODULE CHECKS FOR ANY BUTTON PRESS TO START GAME
 module bcounter (
     input clk,       // clock
     input rst,       // reset

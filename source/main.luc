@@ -12,10 +12,11 @@ module main (
     output low1,
     output low2,
     output low3,
+    output rowOn[3]   //what is the row that is lit up
    // output butt1, //for debugging
  //   output butt2,  //for debugging
  //   output butt3,  //for debugging
-    output rowOn[3]  //for debugging
+   // output rowOn[3]  //for debugging
   //  output clkchoice[3]  //for debugging
   ) {
   

@@ -65,6 +65,7 @@ module mojo_top (
     low2 = myState.gnd2; //mymain.low2;
     low3 = myState.gnd3; //mymain.low3;
     
-    led = myState.totalScore; //mymain.result;      // display results on the mojo LED
+    led[1:0] = myState.result; //to check the result of each round      // display results on the mojo LED
+    led[7:2] = myState.totalScore; //for total score of all rounds
   }
 }

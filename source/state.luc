@@ -4,13 +4,15 @@ module state (
     input leftBtn,
     input centBtn,
     input rightBtn,
+   // input currentRow[3],
     output row1,
     output row2,
     output row3,
     output gnd1,
     output gnd2,
     output gnd3,
-    output totalScore
+    output totalScore[6],
+    output result[2]
     
 
     //output //led matrix
@@ -21,20 +23,21 @@ module state (
   .clk(clk) {
     .rst(rst) {
 
-    fsm state(#INIT(HALT)) = {MAIN,HALT}; // MAIN = random + propagate + compare the button and the result, sumup = add to score, halt = pause game
+    fsm state(#INIT(HALT)) = {MAIN,SUMUP,HALT}; // MAIN = random + propagate + compare the button and the result, sumup = add to score, halt = pause game
       main mainState;
       bcounter bttnpress;
- //     dff scoreSum[8];
+     dff scoreSum[8];
   //  multi_seven_seg seg;
     }
     
   }
-//  alu myalu;
+  alu myalu;
   
 //  bintoAscii translater;
-  sig score[8];
+  sig currentRow[3];
+  sig score[2];
   sig out[8];
-  sig result;
+  sig rowResult[2];
   sig highscore[8];
   sig z;
   sig v;
@@ -42,6 +45,8 @@ module state (
   always {
     score = 0;
     result = 8d0;
+    rowResult=2b00; //rowResult is assumed to be 0 unless specified otherwise
+    //setting up inpts of main state and button press
     mainState.left2 = leftBtn;
     mainState.right0 = rightBtn;
     mainState.center1 = centBtn;
@@ -49,6 +54,9 @@ module state (
     bttnpress.button2 = centBtn;
     bttnpress.button3 = rightBtn;
     
+    //******connect main state output of row On to current row
+    currentRow = mainState.rowOn;
+    //instantiating outputs of state
     row1=0;
     row2=0;
     row3=0;
@@ -56,6 +64,7 @@ module state (
     gnd2=1;
     gnd3=1; //put ground to high to deactivate the columns
     totalScore = bttnpress.bttnPress;
+    
     case (state.q){
       state.MAIN:
       
@@ -68,21 +77,29 @@ module state (
          row2 = mainState.high2;
          row3 = mainState.high3;
         
-        
-      /*
-        scoreSum.d = mainState.result + scoreSum.q;
-        mainout = mainState.result; //store the result of MAIN
-        
-        /*
-        if (mainout==0) {state.d=state.HALT;}
-        else{state.d=state.SUMUP;}
+        //SUM UP WHEN the row is 3 and the 
+        if (currentRow==RowNumb.ROW2 && mainState.result==2b01){
+          rowResult = 2b01;  
+          state.d = state.SUMUP;
+            
+            
+        }
+        else if (currentRow==RowNumb.ROW3 && mainState.result==2b10){
+          rowResult = 2b10;  
+          state.d = state.SUMUP;
+            
+          }
+          /*
+        else if (currentRow==RowNumb.ROW4 && mainState.result==2b00){
+             rowResult==2b00;
+            state.d =state.HALT; //got it wrong or missed everything //GAME OVER
+          }
         */
-      
         
-   //   state.SUMUP:
-      /*
+              
+        state.SUMUP:
         myalu.alufn = 6b000000;        
-        myalu.a= score;
+        myalu.a= rowResult;
         myalu.b= mainout;
 
         out = myalu.alu;
