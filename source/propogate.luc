@@ -1,8 +1,8 @@
 global RowNumb{
-  const ROW1 = 2b00;
-  const ROW2= 2b01;
-  const ROW3= 2b10;
-  const ROW4 = 2b11; 
+  const ROW4 = 2b00;
+  const ROW1= 2b01;
+  const ROW2= 2b10;
+  const ROW3 = 2b11; 
 }
 
 global ClkNumb{
@@ -27,15 +27,13 @@ module propogate (
     output gnd1,
     output gnd2,
     output gnd3,
-    output clkChoice[3],
-    input propState //decides when to start or halt propogater
+    output clkChoice[3]
   //  output propClkValue
   ) {
 
   sig chosenClk; 
   sig randNum[3];
   sig clkSel[3];
-  sig propControl;
   
   .clk(clk){
   .rst(rst){
@@ -45,11 +43,10 @@ module propogate (
         counter slowclk24(#SIZE(1),#DIV(24));
         counter slowclk25(#SIZE(1),#DIV(25));
         randomizer randomizer; //this randomizer outputs 2 3 bit numbers (1. clk selection number, 2. number sequence)
-       // fsm propstate(#INIT(STOP)) = {START,STOP};
     }
   } 
 
- .clk(propControl) {   //connect my normal clock to a slower clock
+ .clk(chosenClk) {   //connect my normal clock to a slower clock
     .rst(rst){
         counter rowCtr(#SIZE(2)); //ctr will go from 00 to 11 this will be the number of row that is lit
         dff seed[32] (#INIT(32d1)); //seed to start numb_gen
@@ -59,12 +56,39 @@ module propogate (
  
    
   always {
-  
-    //initialise
-    chosenClk=0;
-     clkSel = randomizer.ranClk;
+    //initializin randomizer
+    randomizer.numSeed = seed.q;
+    randomizer.clkSeed = clkseed.q;
+    randomizer.randnumNext = 0; 
+    randomizer.randclkNext = 0; 
+    randomizer.numbregEn = 0; 
+    randomizer.clkregEn = 0;
+    randomizer.randnumrst=rst;
+    randomizer.randclkrst = rst;
+    if (randomizer.ranNum==3b000){
+            randNum = 3b101; //if the randomizer gives me 000 I will make the number sequence 101
+    }
+    else{
+          randNum = randomizer.ranNum; //if not the number sequence is the number given by randomizer
+    }
+    
+    clkSel = randomizer.ranClk;
     clkChoice = clkSel;
-    case (clkSel){
+    rowLit = rowCtr.value;
+    
+
+    //instantiate my outputs
+    row1=0; 
+    row2=0;
+    row3=0;
+    gnd1 = ~randNum[0];  //when column is active connect corresponding gnd to 0
+    gnd2 = ~randNum[1];
+    gnd3 = ~randNum[2];
+    
+    numSeq = randNum;
+    
+      
+   case (clkSel){
       ClkNumb.SLOWCLK251:
        chosenClk= slowclk25.value;
       ClkNumb.SLOWCLK22:
@@ -82,62 +106,7 @@ module propogate (
       ClkNumb.SLOWCLK241:
       chosenClk = slowclk24.value;
     }
-      
     
-    propControl = chosenClk && propState;
-    //initializin randomizer
-  /*  
-    row1=0; 
-    row2=0;
-    row3=0;
-    gnd1 = 1;  //when column is active connect corresponding gnd to 0
-    gnd2 = 1;
-    gnd3 = 1;
-    randomizer.numSeed = 0; //dont seed the randomizer coz u dont want to start it
-    randomizer.clkSeed = 0;
-    randomizer.randnumNext = 0; 
-    randomizer.randclkNext = 0; 
-    randomizer.numbregEn = 0; 
-    randomizer.clkregEn = 0;
-    randomizer.randnumrst=rst;
-    randomizer.randclkrst = rst;
-    rowLit = 0; //initialize
-    numSeq = 0;
-    clkChoice =0;
-  */  
-  //  case (propstate.q){
-  //  propstate.START:
-    randomizer.numSeed = seed.q;
-    randomizer.clkSeed = clkseed.q;
-    randomizer.randnumNext = 0; 
-    randomizer.randclkNext = 0; 
-    randomizer.numbregEn = 0; 
-    randomizer.clkregEn = 0;
-    randomizer.randnumrst=rst;
-    randomizer.randclkrst = rst;
-    if (randomizer.ranNum==3b000){
-            randNum = 3b101; //if the randomizer gives me 000 I will make the number sequence 101
-    }
-    else{
-          randNum = randomizer.ranNum; //if not the number sequence is the number given by randomizer
-    }
-    
-   
-    rowLit = rowCtr.value;
-    
-
-    //instantiate my outputs
-    row1=0; 
-    row2=0;
-    row3=0;
-    gnd1 = ~randNum[0];  //when column is active connect corresponding gnd to 0
-    gnd2 = ~randNum[1];
-    gnd3 = ~randNum[2];
-    
-    numSeq = randNum;
-    
-      
-   
  //  propClkValue = chosenClk;
     
     case (rowCtr.value){
@@ -184,17 +153,13 @@ module propogate (
           randomizer.clkregEn = 1;
           randomizer.randnumrst = 1; //reset so you can generate new numb later
           randomizer.randclkrst = 1; 
-        row1=1;
-        row2=1; //change to all 0 after debugging
-        row3=1;
+        row1=0;
+        row2=0; //change to all 0 after debugging
+        row3=0;
         
        
     }
-    /*
-    propstate.STOP:
-      if (state){
-    propstate.d = propstate.START;
-    }  
-    */  
+    
+    
   }
 }

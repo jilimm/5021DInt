@@ -6,64 +6,56 @@ module main (
     input left2,       // button input left
     input center1,       // button input right
     input right0,        // button input center
-    output result[2],  // score after sequence has finished propogating
+    output result[2],  // press counter
     output high1,
     output high2,
     output high3,
     output low1,
     output low2,
     output low3,
-    output rowOn[2],
-    input mainState   //what is the row that is lit up
+    output rowOn[2]   //what is the row that is lit up
+   // output propClk, 
   ) {
   
-  sig mainControl;
-  
-  
-  .clk(mainControl) {
+  .clk(clk) {
     
+    button_conditioner button_cond1;     // button input conditioner
+    button_conditioner button_cond2;     // button input reset_conditioner
+    button_conditioner button_cond3;     // button input conditioner
     // dff clk_ctr[24];
     .rst(rst) {
       counter edge_ctr(#SIZE(1),#DIV(22)); //detect edge every ~0.08sec
       
       propogate mypropogater;
-      dff left[1];
-      dff right[1];
-      dff cent[1];  
+      reg2bit score; 
      // dff mainResult[2];
     }
   }
   .clk(edge_ctr.value){
-  button_conditioner button_cond1;     // button input conditioner
-     button_conditioner button_cond2;     // button input reset_conditioner
-    button_conditioner button_cond3;     // button input conditioner
     edge_detector edge_detector1(#RISE(1), #FALL(0)); // detect rising edges
     edge_detector edge_detector2(#RISE(1), #FALL(0)); // detect rising edges
     edge_detector edge_detector3(#RISE(1), #FALL(0)); // detect rising edges
     .rst(rst) {
-      reg2bit score;  
-      
+       
+      dff left[1];
+      dff right[1];
+      dff cent[1];    
     }
   }
   
   alu myalu;
- // sig result1[2];
+  sig result1[2];
   
   always {
-    mainControl = clk && mainState;
     myalu.alufn = 6b0;
     myalu.a = 8b0;
     myalu.b = 8b0; 
     result = 2b0;
-    
- 
-    rowOn = mypropogater.rowLit; //output the row that is being lit up
-    mypropogater.propState = 1;
-    //instantiate
-    //setting up output
+    rowOn = mypropogater.rowLit;
+
     result = score.out;
-    score.data = 2b00; //default 0
-    score.en = 1;
+    score.data = 2b00;
+    
     //connect my register input to the
    
     //connect propogator output to mymain so i can pass it to mojo top
@@ -98,45 +90,38 @@ module main (
       myalu.a[0] = right.q; 
       myalu.b [2:0] = mypropogater.numSeq;
      
-    //no button press
-      if (left.q==0 && right.q ==0 && cent.q ==0){
-          if (mypropogater.rowLit == RowNumb.ROW4){
-              score.data=  2b11;
-              score.en=1;
-              mypropogater.propState = 0; //stop propogation
-        }
-          else{
-              score.data = 2b00;
-              score.en=1;
+      
               
-        }
-      }
-      //when there is a button press
-      else { 
-        if (myalu.alu[0]){ 
-            if (mypropogater.rowLit==RowNumb.ROW2){
-                score.data=2b01;
+      if(mypropogater.rowLit==RowNumb.ROW2){
+              if (myalu.alu[0]){
+                  score.data = 2b01;
+                  score.en=1;
+                  }
+              else{
+                score.data = 2b00;
                 score.en=1;
-        }  
-            else if (mypropogater.rowLit==RowNumb.ROW3){
-                score.data=2b10;
-                score.en=1;
-          }
-            else { //sequence entered at wrong time
-                score.data=2b11;
-                score.en=1;
-          }
-      }     
-       else { //if sequence is wrong at any point in time
-                 score.data=2b11;
-                score.en=1; 
-        }
-        mypropogater.propState = 0; //stop propogation
-        left.d=0; //reset all button inputs 
-        right.d=0;
-        cent.d=0;     
-      }
-        
-            
+                  }
+      
+      //will default to 10 when goes to row 3
     }
+      else if (mypropogater.rowLit==RowNumb.ROW3){
+              if (score.out==2b00 && myalu.alu[0]){
+                    score.data=2b10;
+                    score.en=1;
+                  
+                }
+              else{
+                  score.en=0;
+              }
+    }
+      
+      else{
+              score.en=0;
+               //person gets 0 points // when its not at row 2 or 3 i dont write into my register at all who gives a fuck?
+               left.d=0;
+               right.d=0;
+               cent.d=0;
+              
+    }
+}
 }

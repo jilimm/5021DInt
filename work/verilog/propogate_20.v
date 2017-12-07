@@ -4,7 +4,7 @@
    This is a temporary file and any changes made to it will be destroyed.
 */
 
-module propogate_17 (
+module propogate_20 (
     input clk,
     input rst,
     output reg [1:0] rowLit,
@@ -15,8 +15,7 @@ module propogate_17 (
     output reg gnd1,
     output reg gnd2,
     output reg gnd3,
-    output reg [2:0] clkChoice,
-    input propState
+    output reg [2:0] clkChoice
   );
   
   
@@ -27,28 +26,26 @@ module propogate_17 (
   
   reg [2:0] clkSel;
   
-  reg propControl;
-  
   wire [1-1:0] M_slowclk22_value;
-  counter_15 slowclk22 (
+  counter_12 slowclk22 (
     .clk(clk),
     .rst(rst),
     .value(M_slowclk22_value)
   );
   wire [1-1:0] M_slowclk23_value;
-  counter_29 slowclk23 (
+  counter_32 slowclk23 (
     .clk(clk),
     .rst(rst),
     .value(M_slowclk23_value)
   );
   wire [1-1:0] M_slowclk24_value;
-  counter_30 slowclk24 (
+  counter_33 slowclk24 (
     .clk(clk),
     .rst(rst),
     .value(M_slowclk24_value)
   );
   wire [1-1:0] M_slowclk25_value;
-  counter_31 slowclk25 (
+  counter_34 slowclk25 (
     .clk(clk),
     .rst(rst),
     .value(M_slowclk25_value)
@@ -63,7 +60,7 @@ module propogate_17 (
   reg [1-1:0] M_randomizer_randclkrst;
   reg [1-1:0] M_randomizer_numbregEn;
   reg [1-1:0] M_randomizer_clkregEn;
-  randomizer_32 randomizer (
+  randomizer_35 randomizer (
     .clk(clk),
     .rst(rst),
     .numSeed(M_randomizer_numSeed),
@@ -79,8 +76,8 @@ module propogate_17 (
   );
   
   wire [2-1:0] M_rowCtr_value;
-  counter_33 rowCtr (
-    .clk(propControl),
+  counter_36 rowCtr (
+    .clk(chosenClk),
     .rst(rst),
     .value(M_rowCtr_value)
   );
@@ -91,9 +88,29 @@ module propogate_17 (
     M_seed_d = M_seed_q;
     M_clkseed_d = M_clkseed_q;
     
-    chosenClk = 1'h0;
+    M_randomizer_numSeed = M_seed_q;
+    M_randomizer_clkSeed = M_clkseed_q;
+    M_randomizer_randnumNext = 1'h0;
+    M_randomizer_randclkNext = 1'h0;
+    M_randomizer_numbregEn = 1'h0;
+    M_randomizer_clkregEn = 1'h0;
+    M_randomizer_randnumrst = rst;
+    M_randomizer_randclkrst = rst;
+    if (M_randomizer_ranNum == 3'h0) begin
+      randNum = 3'h5;
+    end else begin
+      randNum = M_randomizer_ranNum;
+    end
     clkSel = M_randomizer_ranClk;
     clkChoice = clkSel;
+    rowLit = M_rowCtr_value;
+    row1 = 1'h0;
+    row2 = 1'h0;
+    row3 = 1'h0;
+    gnd1 = ~randNum[0+0-:1];
+    gnd2 = ~randNum[1+0-:1];
+    gnd3 = ~randNum[2+0-:1];
+    numSeq = randNum;
     
     case (clkSel)
       3'h0: begin
@@ -121,46 +138,15 @@ module propogate_17 (
         chosenClk = M_slowclk24_value;
       end
     endcase
-    propControl = chosenClk && propState;
-    M_randomizer_numSeed = M_seed_q;
-    M_randomizer_clkSeed = M_clkseed_q;
-    M_randomizer_randnumNext = 1'h0;
-    M_randomizer_randclkNext = 1'h0;
-    M_randomizer_numbregEn = 1'h0;
-    M_randomizer_clkregEn = 1'h0;
-    M_randomizer_randnumrst = rst;
-    M_randomizer_randclkrst = rst;
-    if (M_randomizer_ranNum == 3'h0) begin
-      randNum = 3'h5;
-    end else begin
-      randNum = M_randomizer_ranNum;
-    end
-    rowLit = M_rowCtr_value;
-    row1 = 1'h0;
-    row2 = 1'h0;
-    row3 = 1'h0;
-    gnd1 = ~randNum[0+0-:1];
-    gnd2 = ~randNum[1+0-:1];
-    gnd3 = ~randNum[2+0-:1];
-    numSeq = randNum;
     
     case (M_rowCtr_value)
-      2'h0: begin
+      2'h1: begin
         M_randomizer_randnumNext = 1'h0;
         M_randomizer_randclkNext = 1'h0;
         M_randomizer_numbregEn = 1'h0;
         M_randomizer_clkregEn = 1'h0;
         row1 = 1'h1;
         row2 = 1'h0;
-        row3 = 1'h0;
-      end
-      2'h1: begin
-        M_randomizer_randnumNext = 1'h0;
-        M_randomizer_randclkNext = 1'h0;
-        M_randomizer_numbregEn = 1'h0;
-        M_randomizer_clkregEn = 1'h0;
-        row1 = 1'h0;
-        row2 = 1'h1;
         row3 = 1'h0;
       end
       2'h2: begin
@@ -169,10 +155,19 @@ module propogate_17 (
         M_randomizer_numbregEn = 1'h0;
         M_randomizer_clkregEn = 1'h0;
         row1 = 1'h0;
+        row2 = 1'h1;
+        row3 = 1'h0;
+      end
+      2'h3: begin
+        M_randomizer_randnumNext = 1'h0;
+        M_randomizer_randclkNext = 1'h0;
+        M_randomizer_numbregEn = 1'h0;
+        M_randomizer_clkregEn = 1'h0;
+        row1 = 1'h0;
         row2 = 1'h0;
         row3 = 1'h1;
       end
-      2'h3: begin
+      2'h0: begin
         M_seed_d = M_seed_q + 1'h1;
         M_clkseed_d = M_clkseed_q + 1'h1;
         M_randomizer_randnumNext = 1'h1;
@@ -181,14 +176,14 @@ module propogate_17 (
         M_randomizer_clkregEn = 1'h1;
         M_randomizer_randnumrst = 1'h1;
         M_randomizer_randclkrst = 1'h1;
-        row1 = 1'h1;
-        row2 = 1'h1;
-        row3 = 1'h1;
+        row1 = 1'h0;
+        row2 = 1'h0;
+        row3 = 1'h0;
       end
     endcase
   end
   
-  always @(posedge propControl) begin
+  always @(posedge chosenClk) begin
     if (rst == 1'b1) begin
       M_seed_q <= 32'h00000001;
       M_clkseed_q <= 32'h00000003;

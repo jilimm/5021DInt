@@ -36,38 +36,38 @@ module bcounter_5 (
     .in(M_button_cond3_in),
     .out(M_button_cond3_out)
   );
+  reg [0:0] M_ctr_d, M_ctr_q = 1'h0;
+  wire [1-1:0] M_edge_ctr_value;
+  counter_12 edge_ctr (
+    .clk(clk),
+    .rst(rst),
+    .value(M_edge_ctr_value)
+  );
+  
   wire [1-1:0] M_edge_detector_out;
   reg [1-1:0] M_edge_detector_in;
-  edge_detector_12 edge_detector (
-    .clk(clk),
+  edge_detector_13 edge_detector (
+    .clk(M_edge_ctr_value),
     .in(M_edge_detector_in),
     .out(M_edge_detector_out)
   );
   wire [1-1:0] M_edge_detector2_out;
   reg [1-1:0] M_edge_detector2_in;
-  edge_detector_12 edge_detector2 (
-    .clk(clk),
+  edge_detector_13 edge_detector2 (
+    .clk(M_edge_ctr_value),
     .in(M_edge_detector2_in),
     .out(M_edge_detector2_out)
   );
   wire [1-1:0] M_edge_detector3_out;
   reg [1-1:0] M_edge_detector3_in;
-  edge_detector_12 edge_detector3 (
-    .clk(clk),
+  edge_detector_13 edge_detector3 (
+    .clk(M_edge_ctr_value),
     .in(M_edge_detector3_in),
     .out(M_edge_detector3_out)
-  );
-  reg [0:0] M_ctr_d, M_ctr_q = 1'h0;
-  wire [1-1:0] M_edge_ctr_value;
-  counter_15 edge_ctr (
-    .clk(clk),
-    .rst(rst),
-    .value(M_edge_ctr_value)
   );
   reg [0:0] M_left_d, M_left_q = 1'h0;
   reg [0:0] M_right_d, M_right_q = 1'h0;
   reg [0:0] M_cent_d, M_cent_q = 1'h0;
-  
   
   always @* begin
     M_cent_d = M_cent_q;
@@ -99,17 +99,24 @@ module bcounter_5 (
     end
   end
   
-  always @(posedge clk) begin
+  always @(posedge M_edge_ctr_value) begin
     if (rst == 1'b1) begin
-      M_ctr_q <= 1'h0;
       M_left_q <= 1'h0;
       M_right_q <= 1'h0;
       M_cent_q <= 1'h0;
     end else begin
-      M_ctr_q <= M_ctr_d;
       M_left_q <= M_left_d;
       M_right_q <= M_right_d;
       M_cent_q <= M_cent_d;
+    end
+  end
+  
+  
+  always @(posedge clk) begin
+    if (rst == 1'b1) begin
+      M_ctr_q <= 1'h0;
+    end else begin
+      M_ctr_q <= M_ctr_d;
     end
   end
   

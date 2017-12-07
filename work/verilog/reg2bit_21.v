@@ -8,7 +8,7 @@
    Parameters:
      WIDTH = 2
 */
-module reg2bit_24 (
+module reg2bit_21 (
     input clk,
     input en,
     input rst,

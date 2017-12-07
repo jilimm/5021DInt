@@ -13,22 +13,23 @@ module bcounter (
     button_conditioner button_cond;     // button input conditioner
     button_conditioner button_cond2;     // button input reset_conditioner
     button_conditioner button_cond3;     // button input conditioner
-    edge_detector edge_detector(#RISE(1), #FALL(0)); // detect rising edges
-    edge_detector edge_detector2(#RISE(1), #FALL(0)); // detect rising edges
-    edge_detector edge_detector3(#RISE(1), #FALL(0)); // detect rising edges
+  
     // dff clk_ctr[24];
     .rst(rst) {
       dff ctr[1]; // our lovely counter
       //prev was 1000 log2(1000) is 10, 10bits for 1 secs
       counter edge_ctr(#SIZE(1),#DIV(22)); //detect edge every ~0.16sec
-      dff left[1];
-      dff right[1];
-      dff cent[1];
+      
     }
   }
   .clk(edge_ctr.value){
-    
+      edge_detector edge_detector(#RISE(1), #FALL(0)); // detect rising edges
+    edge_detector edge_detector2(#RISE(1), #FALL(0)); // detect rising edges
+    edge_detector edge_detector3(#RISE(1), #FALL(0)); // detect rising edges
     .rst(rst) {
+    dff left[1];
+      dff right[1];
+      dff cent[1];
     }
   }
   

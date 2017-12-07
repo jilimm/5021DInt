@@ -73,17 +73,10 @@ module mojo_top (
     io_led[2] = 8b0;
     led = myState.totalScore;
     */
-   led = myState.startbutt; 
-    
+   led = myState.totalScore; 
    io_led[2][0] = myState.result[0];
    io_led[2][1] = myState.result[1];
    io_led[2][7:2] = 6b0;
-    led[0] = myState.main;
-    led[1] = myState.main1;
-    led[2] = myState.main2;
-    led[3] = myState.main3;
-    led[4] = myState.halt;
-    led[7] = myState.startbutt;
    io_led[1][7:0] = 8b0;
     io_led[0][7:0] = 8b0;
    

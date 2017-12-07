@@ -4,7 +4,7 @@
    This is a temporary file and any changes made to it will be destroyed.
 */
 
-module randomizer_32 (
+module randomizer_35 (
     input clk,
     input rst,
     input [31:0] numSeed,
