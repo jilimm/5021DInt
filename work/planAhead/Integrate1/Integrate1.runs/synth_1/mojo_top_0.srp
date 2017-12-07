@@ -266,7 +266,7 @@ Synthesizing Unit <propogate_20>.
     Found 32-bit register for signal <M_seed_q>.
     Found 32-bit adder for signal <M_seed_q[31]_GND_11_o_add_3_OUT> created at line 318.
     Found 32-bit adder for signal <M_clkseed_q[31]_GND_11_o_add_4_OUT> created at line 319.
-    Found 16x11-bit Read Only RAM for signal <_n0100>
+    Found 16x11-bit Read Only RAM for signal <_n0094>
     Summary:
 	inferred   1 RAM(s).
 	inferred   2 Adder/Subtractor(s).
@@ -446,7 +446,7 @@ Unit <counter_36> synthesized (advanced).
 Synthesizing (advanced) Unit <propogate_20>.
 The following registers are absorbed into counter <M_clkseed_q>: 1 register on signal <M_clkseed_q>.
 The following registers are absorbed into counter <M_seed_q>: 1 register on signal <M_seed_q>.
-INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram__n0100> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram__n0094> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
     -----------------------------------------------------------------------
     | ram_type           | Distributed                         |          |
     -----------------------------------------------------------------------
@@ -874,15 +874,15 @@ Top Level Output File Name         : mojo_top_0.ngc
 
 Primitive and Black Box Usage:
 ------------------------------
-# BELS                             : 628
+# BELS                             : 629
 #      GND                         : 11
 #      INV                         : 14
 #      LUT1                        : 152
-#      LUT2                        : 5
+#      LUT2                        : 6
 #      LUT3                        : 6
 #      LUT4                        : 60
-#      LUT5                        : 28
-#      LUT6                        : 31
+#      LUT5                        : 27
+#      LUT6                        : 32
 #      MUXCY                       : 152
 #      VCC                         : 10
 #      XORCY                       : 159
@@ -911,16 +911,16 @@ Selected Device : 6slx9tqg144-2
 
 Slice Logic Utilization: 
  Number of Slice Registers:             230  out of  11440     2%  
- Number of Slice LUTs:                  299  out of   5720     5%  
-    Number used as Logic:               296  out of   5720     5%  
+ Number of Slice LUTs:                  300  out of   5720     5%  
+    Number used as Logic:               297  out of   5720     5%  
     Number used as Memory:                3  out of   1440     0%  
        Number used as SRL:                3
 
 Slice Logic Distribution: 
- Number of LUT Flip Flop pairs used:    313
-   Number with an unused Flip Flop:      83  out of    313    26%  
-   Number with an unused LUT:            14  out of    313     4%  
-   Number of fully used LUT-FF pairs:   216  out of    313    69%  
+ Number of LUT Flip Flop pairs used:    314
+   Number with an unused Flip Flop:      84  out of    314    26%  
+   Number with an unused LUT:            14  out of    314     4%  
+   Number of fully used LUT-FF pairs:   216  out of    314    68%  
    Number of unique control sets:        25
 
 IO Utilization: 
@@ -970,7 +970,7 @@ Speed Grade: -2
 
    Minimum period: 4.789ns (Maximum Frequency: 208.812MHz)
    Minimum input arrival time before clock: 3.563ns
-   Maximum output required time after clock: 6.590ns
+   Maximum output required time after clock: 6.606ns
    Maximum combinational path delay: No path found
 
 Timing Details:
@@ -1019,7 +1019,7 @@ Delay:               4.412ns (Levels of Logic = 2)
     ----------------------------------------  ------------
      FD:C->Q              18   0.525   1.511  M_ctr_q_3 (M_ctr_q_3)
      end scope: 'myState/mainState/mypropogater/rowCtr:value<3>'
-     LUT4:I0->O           50   0.254   1.820  Mram__n0100101_1 (_n0100<0>)
+     LUT4:I0->O           50   0.254   1.820  Mram__n0094101_1 (_n0094<0>)
      FDSE:CE                   0.302          M_seed_q_1
     ----------------------------------------
     Total                      4.412ns (1.081ns logic, 3.331ns route)
@@ -1052,10 +1052,10 @@ Timing constraint: Default OFFSET OUT AFTER for Clock 'myState/mainState/mypropo
 -------------------------------------------------------------------------
 Offset:              5.909ns (Levels of Logic = 4)
   Source:            myState/mainState/mypropogater/rowCtr/M_ctr_q_2 (FF)
-  Destination:       high2 (PAD)
+  Destination:       high1 (PAD)
   Source Clock:      myState/mainState/mypropogater/chosenClk_0 rising
 
-  Data Path: myState/mainState/mypropogater/rowCtr/M_ctr_q_2 to high2
+  Data Path: myState/mainState/mypropogater/rowCtr/M_ctr_q_2 to high1
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
@@ -1063,9 +1063,9 @@ Offset:              5.909ns (Levels of Logic = 4)
      end scope: 'myState/mainState/mypropogater/rowCtr:value<2>'
      end scope: 'myState/mainState/mypropogater:rowLit<2>'
      end scope: 'myState/mainState:M_ctr_q_2'
-     LUT5:I1->O            1   0.254   0.681  Mmux_row711 (row7)
-     end scope: 'myState:row7'
-     OBUF:I->O                 2.912          high7_OBUF (high7)
+     LUT5:I1->O            1   0.254   0.681  Mmux_row811 (row8)
+     end scope: 'myState:row8'
+     OBUF:I->O                 2.912          high8_OBUF (high8)
     ----------------------------------------
     Total                      5.909ns (3.691ns logic, 2.218ns route)
                                        (62.5% logic, 37.5% route)
@@ -1074,7 +1074,7 @@ Offset:              5.909ns (Levels of Logic = 4)
 Timing constraint: Default OFFSET OUT AFTER for Clock 'clk'
   Total number of paths / destination ports: 20 / 13
 -------------------------------------------------------------------------
-Offset:              6.590ns (Levels of Logic = 3)
+Offset:              6.606ns (Levels of Logic = 3)
   Source:            myState/M_state_q (FF)
   Destination:       high1 (PAD)
   Source Clock:      clk rising
@@ -1083,13 +1083,13 @@ Offset:              6.590ns (Levels of Logic = 3)
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FDS:C->Q             48   0.525   2.218  M_state_q (M_state_q)
-     LUT5:I0->O            1   0.254   0.681  Mmux_row911 (row9)
-     end scope: 'myState:row9'
-     OBUF:I->O                 2.912          high9_OBUF (high9)
+     FDS:C->Q             49   0.525   2.234  M_state_q (M_state_q)
+     LUT5:I0->O            1   0.254   0.681  Mmux_row1011 (row10)
+     end scope: 'myState:row10'
+     OBUF:I->O                 2.912          high10_OBUF (high10)
     ----------------------------------------
-    Total                      6.590ns (3.691ns logic, 2.899ns route)
-                                       (56.0% logic, 44.0% route)
+    Total                      6.606ns (3.691ns logic, 2.915ns route)
+                                       (55.9% logic, 44.1% route)
 
 =========================================================================
 
@@ -1119,15 +1119,15 @@ Clock to Setup on destination clock myState/mainState/mypropogater/chosenClk_0
                                           | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock                              |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ------------------------------------------+---------+---------+---------+---------+
-clk                                       |    5.273|         |         |         |
+clk                                       |    5.282|         |         |         |
 myState/mainState/mypropogater/chosenClk_0|    4.412|         |         |         |
 ------------------------------------------+---------+---------+---------+---------+
 
 =========================================================================
 
 
-Total REAL time to Xst completion: 7.00 secs
-Total CPU time to Xst completion: 6.48 secs
+Total REAL time to Xst completion: 6.00 secs
+Total CPU time to Xst completion: 6.50 secs
  
 --> 
 

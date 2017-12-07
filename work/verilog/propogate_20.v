@@ -154,7 +154,7 @@ module propogate_20 (
     endcase
     
     case (M_rowCtr_value)
-      4'h1: begin
+      4'h0: begin
         M_randomizer_randnumNext = 1'h0;
         M_randomizer_randclkNext = 1'h0;
         M_randomizer_numbregEn = 1'h0;
@@ -170,7 +170,7 @@ module propogate_20 (
         row9 = 1'h0;
         row10 = 1'h0;
       end
-      4'h2: begin
+      4'h1: begin
         M_randomizer_randnumNext = 1'h0;
         M_randomizer_randclkNext = 1'h0;
         M_randomizer_numbregEn = 1'h0;
@@ -186,7 +186,7 @@ module propogate_20 (
         row9 = 1'h0;
         row10 = 1'h0;
       end
-      4'h3: begin
+      4'h2: begin
         M_randomizer_randnumNext = 1'h0;
         M_randomizer_randclkNext = 1'h0;
         M_randomizer_numbregEn = 1'h0;
@@ -202,7 +202,7 @@ module propogate_20 (
         row9 = 1'h0;
         row10 = 1'h0;
       end
-      4'h4: begin
+      4'h3: begin
         M_randomizer_randnumNext = 1'h0;
         M_randomizer_randclkNext = 1'h0;
         M_randomizer_numbregEn = 1'h0;
@@ -218,7 +218,7 @@ module propogate_20 (
         row9 = 1'h0;
         row10 = 1'h0;
       end
-      4'h5: begin
+      4'h4: begin
         M_randomizer_randnumNext = 1'h0;
         M_randomizer_randclkNext = 1'h0;
         M_randomizer_numbregEn = 1'h0;
@@ -234,7 +234,7 @@ module propogate_20 (
         row9 = 1'h0;
         row10 = 1'h0;
       end
-      4'h6: begin
+      4'h5: begin
         M_randomizer_randnumNext = 1'h0;
         M_randomizer_randclkNext = 1'h0;
         M_randomizer_numbregEn = 1'h0;
@@ -250,7 +250,7 @@ module propogate_20 (
         row9 = 1'h0;
         row10 = 1'h0;
       end
-      4'h7: begin
+      4'h6: begin
         M_randomizer_randnumNext = 1'h0;
         M_randomizer_randclkNext = 1'h0;
         M_randomizer_numbregEn = 1'h0;
@@ -266,7 +266,7 @@ module propogate_20 (
         row9 = 1'h0;
         row10 = 1'h0;
       end
-      4'h8: begin
+      4'h7: begin
         M_randomizer_randnumNext = 1'h0;
         M_randomizer_randclkNext = 1'h0;
         M_randomizer_numbregEn = 1'h0;
@@ -282,7 +282,7 @@ module propogate_20 (
         row9 = 1'h0;
         row10 = 1'h0;
       end
-      4'h9: begin
+      4'h8: begin
         M_randomizer_randnumNext = 1'h0;
         M_randomizer_randclkNext = 1'h0;
         M_randomizer_numbregEn = 1'h0;
@@ -298,7 +298,7 @@ module propogate_20 (
         row9 = 1'h1;
         row10 = 1'h0;
       end
-      4'ha: begin
+      4'h9: begin
         M_randomizer_randnumNext = 1'h0;
         M_randomizer_randclkNext = 1'h0;
         M_randomizer_numbregEn = 1'h0;
@@ -314,7 +314,7 @@ module propogate_20 (
         row9 = 1'h0;
         row10 = 1'h1;
       end
-      4'h0: begin
+      4'ha: begin
         M_seed_d = M_seed_q + 1'h1;
         M_clkseed_d = M_clkseed_q + 1'h1;
         M_randomizer_randnumNext = 1'h1;

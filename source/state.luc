@@ -93,7 +93,7 @@ module state (
         
         scoreSum.en=0;
         
-        if (mainState.result!=0 && mainState.rowOn==RowNumb.ROW4){
+        if (mainState.result!=0 && mainState.rowOn==RowNumb.ROW11){
             myalu.alufn = Inst.ADD;
             myalu.a= mainState.result; //this is provided the mainstate clock has stopped
             myalu.b= scoreSum.out; //user's total score so far

@@ -113,7 +113,6 @@ module main (
                 score.en=1;
                   }
       
-      //will default to 10 when goes to row 3
     }
       //in the last row
       else if (mypropogater.rowLit==RowNumb.ROW10){

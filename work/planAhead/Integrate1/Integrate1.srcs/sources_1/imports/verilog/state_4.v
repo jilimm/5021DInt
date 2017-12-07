@@ -163,7 +163,7 @@ module state_4 (
         row9 = M_mainState_high9;
         row10 = M_mainState_high10;
         M_scoreSum_en = 1'h0;
-        if (M_mainState_result != 1'h0 && M_mainState_rowOn == 4'h4) begin
+        if (M_mainState_result != 1'h0 && M_mainState_rowOn == 4'ha) begin
           M_myalu_alufn = 6'h00;
           M_myalu_a = M_mainState_result;
           M_myalu_b = M_scoreSum_out;

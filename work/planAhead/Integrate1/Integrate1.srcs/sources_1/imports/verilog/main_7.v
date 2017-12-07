@@ -192,7 +192,7 @@ module main_7 (
     M_myalu_a[1+0-:1] = M_cent_q;
     M_myalu_a[0+0-:1] = M_right_q;
     M_myalu_b[0+2-:3] = M_mypropogater_numSeq;
-    if (M_mypropogater_rowLit == 4'h9) begin
+    if (M_mypropogater_rowLit == 4'h8) begin
       if (M_myalu_alu[0+0-:1]) begin
         M_score_data = 2'h1;
         M_score_en = 1'h1;
@@ -201,7 +201,7 @@ module main_7 (
         M_score_en = 1'h1;
       end
     end else begin
-      if (M_mypropogater_rowLit == 4'ha) begin
+      if (M_mypropogater_rowLit == 4'h9) begin
         if (M_score_out == 2'h0 && M_myalu_alu[0+0-:1]) begin
           M_score_data = 2'h2;
           M_score_en = 1'h1;
@@ -209,7 +209,7 @@ module main_7 (
           M_score_en = 1'h0;
         end
       end else begin
-        if (M_mypropogater_rowLit == 4'h1) begin
+        if (M_mypropogater_rowLit == 4'h0) begin
           M_score_data = 2'h0;
           M_score_en = 1'h1;
         end else begin

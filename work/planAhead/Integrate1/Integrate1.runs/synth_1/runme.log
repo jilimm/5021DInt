@@ -220,7 +220,7 @@ Synthesizing Unit <propogate_20>.
     Found 32-bit register for signal <M_seed_q>.
     Found 32-bit adder for signal <M_seed_q[31]_GND_11_o_add_3_OUT> created at line 318.
     Found 32-bit adder for signal <M_clkseed_q[31]_GND_11_o_add_4_OUT> created at line 319.
-    Found 16x11-bit Read Only RAM for signal <_n0100>
+    Found 16x11-bit Read Only RAM for signal <_n0094>
     Summary:
 	inferred   1 RAM(s).
 	inferred   2 Adder/Subtractor(s).
@@ -400,7 +400,7 @@ Unit <counter_36> synthesized (advanced).
 Synthesizing (advanced) Unit <propogate_20>.
 The following registers are absorbed into counter <M_clkseed_q>: 1 register on signal <M_clkseed_q>.
 The following registers are absorbed into counter <M_seed_q>: 1 register on signal <M_seed_q>.
-INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram__n0100> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram__n0094> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
     -----------------------------------------------------------------------
     | ram_type           | Distributed                         |          |
     -----------------------------------------------------------------------
@@ -848,7 +848,7 @@ Speed Grade: -2
 
    Minimum period: 4.789ns (Maximum Frequency: 208.812MHz)
    Minimum input arrival time before clock: 3.563ns
-   Maximum output required time after clock: 6.590ns
+   Maximum output required time after clock: 6.606ns
    Maximum combinational path delay: No path found
 
 =========================================================================
