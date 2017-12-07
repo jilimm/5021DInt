@@ -20,7 +20,11 @@ module state (
     output totalScore[8],
     output rowresult[2],
     output startbutt,
-    output scoreDisplay[4] //display to the seven seg
+    output scoreDisplay[4], //display to the seven seg
+    output test1,
+    output test2,
+    output buttonCounter[8],
+    output buttonReg[8]
   ) {
 
   .clk(clk) {
@@ -28,8 +32,9 @@ module state (
 
     fsm state(#INIT(HALT)) = {MAIN,HALT}; // MAIN = random + propagate + compare the button and the result, sumup = add to score, halt = pause game
       
-      bcounter bttnpress;
+      bcounter btnCounter;
       reg8bit scoreSum; //use an 8bit register to store the toal score of the game // i cannot use dff becuase it mojo clk constantly resets it //try connecting register to the propagtor clock cycle
+      reg8bit btnReg; //stores previous value of button presses
       //multi_seven_seg seg;
     }
     main mainState;
@@ -38,10 +43,19 @@ module state (
   alu myalu;
   binToAscii translater;
   sig result;
+  sig anybttnStart;
     
 
   always {
   //  rowResult=2b00; //rowResult is assumed to be 0 unless specified otherwise
+    test1=0;
+    test2=0;
+    
+    buttonCounter = btnCounter.count;
+    buttonReg = btnReg.out;
+    //instantiate
+    startbutt=0;
+    
     totalScore = scoreSum.out;
     scoreSum.data = 8b0; //am i always re-setting my register???????
     scoreSum.en=0;
@@ -52,10 +66,17 @@ module state (
     mainState.left2 = leftBtn;
     mainState.right0 = rightBtn;
     mainState.center1 = centBtn;
-    bttnpress.button = leftBtn;
-    bttnpress.button2 = centBtn;
-    bttnpress.button3 = rightBtn;
-    startbutt = bttnpress.bttnPress;
+    
+    //raw button input
+    btnCounter.button = leftBtn;
+    btnCounter.button2 = rightBtn;
+    btnCounter.button3 = centBtn;
+    
+    //instantiate
+    btnReg.data = 8b0; //connect register data to number of button presses
+    btnReg.en=0;  //dont write into register
+    
+
     //setting up alu
     myalu.a=0;
     myalu.b=0;
@@ -76,7 +97,7 @@ module state (
     gnd2=1;
     gnd3=1; //put ground to high to deactivate the columns
     
-    
+
     //setting up my seven_seg output
     //****CURRENTLY DISPLAYS CURRENT SCORE
     //result = scoreSum.out[0]+scoreSum.out[1]*2+scoreSum.out[2]*4+scoreSum.out[3]*8+scoreSum.out[4]*16+scoreSum.out[5]*32+scoreSum.out[6]*64+scoreSum.out[7]*128;
@@ -88,6 +109,15 @@ module state (
     
     case (state.q){
       state.MAIN:
+      test1=1;
+        //dont count button press in main state
+         btnCounter.button = 0;
+          btnCounter.button2 = 0;
+          btnCounter.button3 = 0;
+        
+        btnReg.en=0; //dont write enable anything into button register
+        
+        
         //in the main state the LEDs are controlled by the main state;
          gnd1 = mainState.low1;
          gnd2 = mainState.low2;
@@ -104,18 +134,19 @@ module state (
         row9=mainState.high9;
         row10=mainState.high10;
         
-        scoreSum.en=0;
+        scoreSum.en=0; //dont write to score register until row 11
         
-        if (mainState.result!=0 && mainState.rowOn==RowNumb.ROW11){
+        if (mainState.result!=0 && mainState.rowOn==RowNumb.ROW11){ //you have a result
             myalu.alufn = Inst.ADD;
             myalu.a= mainState.result; //this is provided the mainstate clock has stopped
             myalu.b= scoreSum.out; //user's total score so far
             scoreSum.data = myalu.alu; //cnt new score into register input
             scoreSum.en =1;
-          //*******MY LOGIC ONLY WORKS WHEN I MAKE STATE HALT***//
-            state.d = state.HALT; //*****TO DEBUG: GO TO HALT *****//
-          //output is all 1 when i go to state.main
+          //continue to main state (works without if loop below)
         } 
+        if (mainState.result==2b0 && mainState.rowOn==RowNumb.ROW11){//you missed the sequence or you entered it wrongly 
+            state.d = state.HALT;
+          }
        
             result = scoreSum.out[0]+scoreSum.out[1]*2+scoreSum.out[2]*4+scoreSum.out[3]*8+scoreSum.out[4]*16+scoreSum.out[5]*32+scoreSum.out[6]*64+scoreSum.out[7]*128;
             translater.num = result;
@@ -126,8 +157,14 @@ module state (
         
         
         state.HALT:
+      test2=1;
+       btnCounter.button = leftBtn;
+       btnCounter.button2 = rightBtn;
+        btnCounter.button3 = centBtn;
+        btnReg.en = 0; //dont write enable 
+      //at the halt state i get my button input from the physcial buttons 
       row1=0; 
-    row2=0;
+      row2=0;
     row3=0;
     row4=0;
     row5=0;
@@ -139,10 +176,20 @@ module state (
       gnd1=1;
       gnd2=1;
       gnd3=1;
+        //check register (previous number of button presses) with the current number of button presses 
+         if (btnReg.out < btnCounter.count){
+            anybttnStart=1; //more buttons have been pressed
+        }
+          else{
+            anybttnStart=0;
+        }
         //scoreSum.data=scoreSum.out;
         scoreSum.en=0; //dont write into my register
-        if (bttnpress.bttnPress==1) { 
-          mainState.rst=1;
+        if (anybttnStart==1) { //buttonpress is remembered :(
+            mainState.rst=1;
+            btnReg.data = btnCounter.count;
+            btnReg.en=1; //record new number of button presses
+          //reset my button press 
           state.d = state.MAIN;
           }
 

@@ -2,6 +2,7 @@
 <project name="Integrate1" board="Mojo V3" language="Lucid">
   <files>
     <src>alu.luc</src>
+    <src>reg1bit.luc</src>
     <src>reg3bit.luc</src>
     <src>bintoAscii.luc</src>
     <src>seven_seg.luc</src>

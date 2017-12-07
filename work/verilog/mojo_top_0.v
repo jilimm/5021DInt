@@ -34,7 +34,8 @@ module mojo_top_0 (
     output reg low2,
     output reg low3,
     output reg [7:0] ext_seven_seg,
-    output reg [3:0] seven_seg_sel
+    output reg [3:0] seven_seg_sel,
+    output reg [23:0] io_led
   );
   
   
@@ -79,6 +80,10 @@ module mojo_top_0 (
   wire [2-1:0] M_myState_rowresult;
   wire [1-1:0] M_myState_startbutt;
   wire [4-1:0] M_myState_scoreDisplay;
+  wire [1-1:0] M_myState_test1;
+  wire [1-1:0] M_myState_test2;
+  wire [8-1:0] M_myState_buttonCounter;
+  wire [8-1:0] M_myState_buttonReg;
   reg [1-1:0] M_myState_leftBtn;
   reg [1-1:0] M_myState_centBtn;
   reg [1-1:0] M_myState_rightBtn;
@@ -104,7 +109,11 @@ module mojo_top_0 (
     .totalScore(M_myState_totalScore),
     .rowresult(M_myState_rowresult),
     .startbutt(M_myState_startbutt),
-    .scoreDisplay(M_myState_scoreDisplay)
+    .scoreDisplay(M_myState_scoreDisplay),
+    .test1(M_myState_test1),
+    .test2(M_myState_test2),
+    .buttonCounter(M_myState_buttonCounter),
+    .buttonReg(M_myState_buttonReg)
   );
   wire [7-1:0] M_seg_seg;
   wire [4-1:0] M_seg_sel;
@@ -150,7 +159,11 @@ module mojo_top_0 (
     M_seg_values[8+3-:4] = M_myState_scoreDisplay[2+0-:1];
     M_seg_values[12+3-:4] = M_myState_scoreDisplay[3+0-:1];
     led[0+0-:1] = M_myState_startbutt;
-    led[1+1-:2] = M_myState_rowresult;
+    led[2+0-:1] = M_myState_test2;
+    led[1+0-:1] = M_myState_test1;
     led[3+4-:5] = M_myState_totalScore[0+5-:6];
+    io_led[0+7-:8] = M_myState_buttonCounter;
+    io_led[8+7-:8] = M_myState_buttonReg;
+    io_led[16+7-:8] = 8'h00;
   end
 endmodule
