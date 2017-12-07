@@ -29,10 +29,10 @@
 <msg type="warning" file="HDLCompiler" num="1127" delta="new" >"C:/Users/Jing Yun/Desktop/50.002 Computation Structure/1D_Game Design/502IntGitRepo/5021DInt/work/planAhead/Integrate1/Integrate1.srcs/sources_1/imports/verilog/state_4.v" Line 115: Assignment to <arg fmt="%s" index="1">M_myalu_n</arg> ignored, since the identifier is never used
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="413" delta="new" >"C:/Users/Jing Yun/Desktop/50.002 Computation Structure/1D_Game Design/502IntGitRepo/5021DInt/work/planAhead/Integrate1/Integrate1.srcs/sources_1/imports/verilog/state_4.v" Line 193: Result of <arg fmt="%d" index="1">8</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">1</arg>-bit target.
+<msg type="warning" file="HDLCompiler" num="413" delta="new" >"C:/Users/Jing Yun/Desktop/50.002 Computation Structure/1D_Game Design/502IntGitRepo/5021DInt/work/planAhead/Integrate1/Integrate1.srcs/sources_1/imports/verilog/state_4.v" Line 189: Result of <arg fmt="%d" index="1">8</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">1</arg>-bit target.
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="413" delta="new" >"C:/Users/Jing Yun/Desktop/50.002 Computation Structure/1D_Game Design/502IntGitRepo/5021DInt/work/planAhead/Integrate1/Integrate1.srcs/sources_1/imports/verilog/state_4.v" Line 195: Result of <arg fmt="%d" index="1">4</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">1</arg>-bit target.
+<msg type="warning" file="HDLCompiler" num="413" delta="new" >"C:/Users/Jing Yun/Desktop/50.002 Computation Structure/1D_Game Design/502IntGitRepo/5021DInt/work/planAhead/Integrate1/Integrate1.srcs/sources_1/imports/verilog/state_4.v" Line 191: Result of <arg fmt="%d" index="1">4</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">1</arg>-bit target.
 </msg>
 
 <msg type="warning" file="HDLCompiler" num="1127" delta="new" >"C:/Users/Jing Yun/Desktop/50.002 Computation Structure/1D_Game Design/502IntGitRepo/5021DInt/work/planAhead/Integrate1/Integrate1.srcs/sources_1/imports/verilog/mojo_top_0.v" Line 105: Assignment to <arg fmt="%s" index="1">M_myState_rowresult</arg> ignored, since the identifier is never used

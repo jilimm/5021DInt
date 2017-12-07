@@ -144,7 +144,7 @@ module mojo_top_0 (
     low2 = M_myState_gnd2;
     low3 = M_myState_gnd3;
     ext_seven_seg = ~M_seg_seg;
-    seven_seg_sel = ~M_seg_sel;
+    seven_seg_sel = M_seg_sel;
     M_seg_values[0+3-:4] = M_myState_scoreDisplay[0+0-:1];
     M_seg_values[4+3-:4] = M_myState_scoreDisplay[1+0-:1];
     M_seg_values[8+3-:4] = M_myState_scoreDisplay[2+0-:1];

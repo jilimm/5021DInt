@@ -37,8 +37,6 @@ module state (
   }
   alu myalu;
   binToAscii translater;
-  sig score[8];
-  sig out[8];
   sig result;
     
 
@@ -120,12 +118,14 @@ module state (
         } 
        
             result = scoreSum.out[0]+scoreSum.out[1]*2+scoreSum.out[2]*4+scoreSum.out[3]*8+scoreSum.out[4]*16+scoreSum.out[5]*32+scoreSum.out[6]*64+scoreSum.out[7]*128;
-    translater.num = result;
-    scoreDisplay[3] = 11;
-    scoreDisplay[2]=translater.ascii[2];
-    scoreDisplay[1]=translater.ascii[1];
-    scoreDisplay[0]=translater.ascii[0];
-      state.HALT:
+            translater.num = result;
+             scoreDisplay[3] = 11;
+            scoreDisplay[2]=translater.ascii[2];
+            scoreDisplay[1]=translater.ascii[1];
+              scoreDisplay[0]=translater.ascii[0];
+      
+        
+        state.HALT:
       row1=0; 
     row2=0;
     row3=0;

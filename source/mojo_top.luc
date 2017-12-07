@@ -87,7 +87,7 @@ module mojo_top (
    
     //configuring seven seg display
     ext_seven_seg = ~seg.seg;
-    seven_seg_sel = ~seg.sel;
+    seven_seg_sel = seg.sel;
     
     seg.values[0] = myState.scoreDisplay[0];
     seg.values[1] = myState.scoreDisplay[1];
@@ -99,7 +99,7 @@ module mojo_top (
     
     
     
-   led = myState.totalScore; //does the bttn press reset?
+   led = myState.totalScore; //outputs the total score
    
     // led[7:2] =  //for total score of all rounds
   }

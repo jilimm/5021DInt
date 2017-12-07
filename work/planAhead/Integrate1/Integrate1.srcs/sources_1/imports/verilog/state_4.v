@@ -123,10 +123,6 @@ module state_4 (
     .ascii(M_translater_ascii)
   );
   
-  reg [7:0] score;
-  
-  reg [7:0] out;
-  
   reg result;
   
   always @* begin

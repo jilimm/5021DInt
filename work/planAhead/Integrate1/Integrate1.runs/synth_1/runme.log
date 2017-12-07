@@ -111,8 +111,8 @@ WARNING:HDLCompiler:1127 - "C:/Users/Jing Yun/Desktop/50.002 Computation Structu
 WARNING:HDLCompiler:1127 - "C:/Users/Jing Yun/Desktop/50.002 Computation Structure/1D_Game Design/502IntGitRepo/5021DInt/work/planAhead/Integrate1/Integrate1.srcs/sources_1/imports/verilog/state_4.v" Line 115: Assignment to M_myalu_n ignored, since the identifier is never used
 
 Elaborating module <binToAscii_10>.
-WARNING:HDLCompiler:413 - "C:/Users/Jing Yun/Desktop/50.002 Computation Structure/1D_Game Design/502IntGitRepo/5021DInt/work/planAhead/Integrate1/Integrate1.srcs/sources_1/imports/verilog/state_4.v" Line 193: Result of 8-bit expression is truncated to fit in 1-bit target.
-WARNING:HDLCompiler:413 - "C:/Users/Jing Yun/Desktop/50.002 Computation Structure/1D_Game Design/502IntGitRepo/5021DInt/work/planAhead/Integrate1/Integrate1.srcs/sources_1/imports/verilog/state_4.v" Line 195: Result of 4-bit expression is truncated to fit in 1-bit target.
+WARNING:HDLCompiler:413 - "C:/Users/Jing Yun/Desktop/50.002 Computation Structure/1D_Game Design/502IntGitRepo/5021DInt/work/planAhead/Integrate1/Integrate1.srcs/sources_1/imports/verilog/state_4.v" Line 189: Result of 8-bit expression is truncated to fit in 1-bit target.
+WARNING:HDLCompiler:413 - "C:/Users/Jing Yun/Desktop/50.002 Computation Structure/1D_Game Design/502IntGitRepo/5021DInt/work/planAhead/Integrate1/Integrate1.srcs/sources_1/imports/verilog/state_4.v" Line 191: Result of 4-bit expression is truncated to fit in 1-bit target.
 WARNING:HDLCompiler:1127 - "C:/Users/Jing Yun/Desktop/50.002 Computation Structure/1D_Game Design/502IntGitRepo/5021DInt/work/planAhead/Integrate1/Integrate1.srcs/sources_1/imports/verilog/mojo_top_0.v" Line 105: Assignment to M_myState_rowresult ignored, since the identifier is never used
 WARNING:HDLCompiler:1127 - "C:/Users/Jing Yun/Desktop/50.002 Computation Structure/1D_Game Design/502IntGitRepo/5021DInt/work/planAhead/Integrate1/Integrate1.srcs/sources_1/imports/verilog/mojo_top_0.v" Line 106: Assignment to M_myState_startbutt ignored, since the identifier is never used
 
@@ -168,13 +168,13 @@ INFO:Xst:3210 - "C:/Users/Jing Yun/Desktop/50.002 Computation Structure/1D_Game 
 INFO:Xst:3210 - "C:/Users/Jing Yun/Desktop/50.002 Computation Structure/1D_Game Design/502IntGitRepo/5021DInt/work/planAhead/Integrate1/Integrate1.srcs/sources_1/imports/verilog/state_4.v" line 109: Output port <v> of the instance <myalu> is unconnected or connected to loadless signal.
 INFO:Xst:3210 - "C:/Users/Jing Yun/Desktop/50.002 Computation Structure/1D_Game Design/502IntGitRepo/5021DInt/work/planAhead/Integrate1/Integrate1.srcs/sources_1/imports/verilog/state_4.v" line 109: Output port <n> of the instance <myalu> is unconnected or connected to loadless signal.
     Found 1-bit register for signal <M_state_q>.
-    Found 3-bit adder for signal <n0071[2:0]> created at line 193.
-    Found 4-bit adder for signal <n0074[3:0]> created at line 193.
-    Found 5-bit adder for signal <n0077[4:0]> created at line 193.
-    Found 6-bit adder for signal <n0080[5:0]> created at line 193.
-    Found 7-bit adder for signal <n0083[6:0]> created at line 193.
-    Found 8-bit adder for signal <_n0091> created at line 193.
-    Found 8-bit adder for signal <n0053> created at line 193.
+    Found 3-bit adder for signal <n0071[2:0]> created at line 189.
+    Found 4-bit adder for signal <n0074[3:0]> created at line 189.
+    Found 5-bit adder for signal <n0077[4:0]> created at line 189.
+    Found 6-bit adder for signal <n0080[5:0]> created at line 189.
+    Found 7-bit adder for signal <n0083[6:0]> created at line 189.
+    Found 8-bit adder for signal <_n0091> created at line 189.
+    Found 8-bit adder for signal <n0053> created at line 189.
     Summary:
 	inferred   7 Adder/Subtractor(s).
 	inferred   1 D-type flip-flop(s).
