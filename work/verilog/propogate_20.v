@@ -7,11 +7,18 @@
 module propogate_20 (
     input clk,
     input rst,
-    output reg [1:0] rowLit,
+    output reg [3:0] rowLit,
     output reg [2:0] numSeq,
     output reg row1,
     output reg row2,
     output reg row3,
+    output reg row4,
+    output reg row5,
+    output reg row6,
+    output reg row7,
+    output reg row8,
+    output reg row9,
+    output reg row10,
     output reg gnd1,
     output reg gnd2,
     output reg gnd3,
@@ -75,13 +82,13 @@ module propogate_20 (
     .ranClk(M_randomizer_ranClk)
   );
   
-  wire [2-1:0] M_rowCtr_value;
+  wire [4-1:0] M_rowCtr_value;
   counter_36 rowCtr (
     .clk(chosenClk),
     .rst(rst),
     .value(M_rowCtr_value)
   );
-  reg [31:0] M_seed_d, M_seed_q = 32'h00000001;
+  reg [31:0] M_seed_d, M_seed_q = 32'h00000033;
   reg [31:0] M_clkseed_d, M_clkseed_q = 32'h00000003;
   
   always @* begin
@@ -107,6 +114,13 @@ module propogate_20 (
     row1 = 1'h0;
     row2 = 1'h0;
     row3 = 1'h0;
+    row4 = 1'h0;
+    row5 = 1'h0;
+    row6 = 1'h0;
+    row7 = 1'h0;
+    row8 = 1'h0;
+    row9 = 1'h0;
+    row10 = 1'h0;
     gnd1 = ~randNum[0+0-:1];
     gnd2 = ~randNum[1+0-:1];
     gnd3 = ~randNum[2+0-:1];
@@ -140,7 +154,7 @@ module propogate_20 (
     endcase
     
     case (M_rowCtr_value)
-      2'h1: begin
+      4'h1: begin
         M_randomizer_randnumNext = 1'h0;
         M_randomizer_randclkNext = 1'h0;
         M_randomizer_numbregEn = 1'h0;
@@ -148,8 +162,15 @@ module propogate_20 (
         row1 = 1'h1;
         row2 = 1'h0;
         row3 = 1'h0;
+        row4 = 1'h0;
+        row5 = 1'h0;
+        row6 = 1'h0;
+        row7 = 1'h0;
+        row8 = 1'h0;
+        row9 = 1'h0;
+        row10 = 1'h0;
       end
-      2'h2: begin
+      4'h2: begin
         M_randomizer_randnumNext = 1'h0;
         M_randomizer_randclkNext = 1'h0;
         M_randomizer_numbregEn = 1'h0;
@@ -157,8 +178,15 @@ module propogate_20 (
         row1 = 1'h0;
         row2 = 1'h1;
         row3 = 1'h0;
+        row4 = 1'h0;
+        row5 = 1'h0;
+        row6 = 1'h0;
+        row7 = 1'h0;
+        row8 = 1'h0;
+        row9 = 1'h0;
+        row10 = 1'h0;
       end
-      2'h3: begin
+      4'h3: begin
         M_randomizer_randnumNext = 1'h0;
         M_randomizer_randclkNext = 1'h0;
         M_randomizer_numbregEn = 1'h0;
@@ -166,8 +194,127 @@ module propogate_20 (
         row1 = 1'h0;
         row2 = 1'h0;
         row3 = 1'h1;
+        row4 = 1'h0;
+        row5 = 1'h0;
+        row6 = 1'h0;
+        row7 = 1'h0;
+        row8 = 1'h0;
+        row9 = 1'h0;
+        row10 = 1'h0;
       end
-      2'h0: begin
+      4'h4: begin
+        M_randomizer_randnumNext = 1'h0;
+        M_randomizer_randclkNext = 1'h0;
+        M_randomizer_numbregEn = 1'h0;
+        M_randomizer_clkregEn = 1'h0;
+        row1 = 1'h0;
+        row2 = 1'h0;
+        row3 = 1'h0;
+        row4 = 1'h1;
+        row5 = 1'h0;
+        row6 = 1'h0;
+        row7 = 1'h0;
+        row8 = 1'h0;
+        row9 = 1'h0;
+        row10 = 1'h0;
+      end
+      4'h5: begin
+        M_randomizer_randnumNext = 1'h0;
+        M_randomizer_randclkNext = 1'h0;
+        M_randomizer_numbregEn = 1'h0;
+        M_randomizer_clkregEn = 1'h0;
+        row1 = 1'h0;
+        row2 = 1'h0;
+        row3 = 1'h0;
+        row4 = 1'h0;
+        row5 = 1'h1;
+        row6 = 1'h0;
+        row7 = 1'h0;
+        row8 = 1'h0;
+        row9 = 1'h0;
+        row10 = 1'h0;
+      end
+      4'h6: begin
+        M_randomizer_randnumNext = 1'h0;
+        M_randomizer_randclkNext = 1'h0;
+        M_randomizer_numbregEn = 1'h0;
+        M_randomizer_clkregEn = 1'h0;
+        row1 = 1'h0;
+        row2 = 1'h0;
+        row3 = 1'h0;
+        row4 = 1'h0;
+        row5 = 1'h0;
+        row6 = 1'h1;
+        row7 = 1'h0;
+        row8 = 1'h0;
+        row9 = 1'h0;
+        row10 = 1'h0;
+      end
+      4'h7: begin
+        M_randomizer_randnumNext = 1'h0;
+        M_randomizer_randclkNext = 1'h0;
+        M_randomizer_numbregEn = 1'h0;
+        M_randomizer_clkregEn = 1'h0;
+        row1 = 1'h0;
+        row2 = 1'h0;
+        row3 = 1'h0;
+        row4 = 1'h0;
+        row5 = 1'h0;
+        row6 = 1'h0;
+        row7 = 1'h1;
+        row8 = 1'h0;
+        row9 = 1'h0;
+        row10 = 1'h0;
+      end
+      4'h8: begin
+        M_randomizer_randnumNext = 1'h0;
+        M_randomizer_randclkNext = 1'h0;
+        M_randomizer_numbregEn = 1'h0;
+        M_randomizer_clkregEn = 1'h0;
+        row1 = 1'h0;
+        row2 = 1'h0;
+        row3 = 1'h0;
+        row4 = 1'h0;
+        row5 = 1'h0;
+        row6 = 1'h0;
+        row7 = 1'h0;
+        row8 = 1'h1;
+        row9 = 1'h0;
+        row10 = 1'h0;
+      end
+      4'h9: begin
+        M_randomizer_randnumNext = 1'h0;
+        M_randomizer_randclkNext = 1'h0;
+        M_randomizer_numbregEn = 1'h0;
+        M_randomizer_clkregEn = 1'h0;
+        row1 = 1'h0;
+        row2 = 1'h0;
+        row3 = 1'h0;
+        row4 = 1'h0;
+        row5 = 1'h0;
+        row6 = 1'h0;
+        row7 = 1'h0;
+        row8 = 1'h0;
+        row9 = 1'h1;
+        row10 = 1'h0;
+      end
+      4'ha: begin
+        M_randomizer_randnumNext = 1'h0;
+        M_randomizer_randclkNext = 1'h0;
+        M_randomizer_numbregEn = 1'h0;
+        M_randomizer_clkregEn = 1'h0;
+        row1 = 1'h0;
+        row2 = 1'h0;
+        row3 = 1'h0;
+        row4 = 1'h0;
+        row5 = 1'h0;
+        row6 = 1'h0;
+        row7 = 1'h0;
+        row8 = 1'h0;
+        row9 = 1'h0;
+        row10 = 1'h1;
+      end
+      4'h0: begin
         M_seed_d = M_seed_q + 1'h1;
         M_clkseed_d = M_clkseed_q + 1'h1;
         M_randomizer_randnumNext = 1'h1;
@@ -179,13 +326,20 @@ module propogate_20 (
         row1 = 1'h0;
         row2 = 1'h0;
         row3 = 1'h0;
+        row4 = 1'h0;
+        row5 = 1'h0;
+        row6 = 1'h0;
+        row7 = 1'h0;
+        row8 = 1'h0;
+        row9 = 1'h0;
+        row10 = 1'h0;
       end
     endcase
   end
   
   always @(posedge chosenClk) begin
     if (rst == 1'b1) begin
-      M_seed_q <= 32'h00000001;
+      M_seed_q <= 32'h00000033;
       M_clkseed_q <= 32'h00000003;
     end else begin
       M_seed_q <= M_seed_d;

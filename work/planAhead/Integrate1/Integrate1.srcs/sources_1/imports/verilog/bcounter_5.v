@@ -43,6 +43,9 @@ module bcounter_5 (
     .rst(rst),
     .value(M_edge_ctr_value)
   );
+  reg [0:0] M_left_d, M_left_q = 1'h0;
+  reg [0:0] M_right_d, M_right_q = 1'h0;
+  reg [0:0] M_cent_d, M_cent_q = 1'h0;
   
   wire [1-1:0] M_edge_detector_out;
   reg [1-1:0] M_edge_detector_in;
@@ -65,9 +68,6 @@ module bcounter_5 (
     .in(M_edge_detector3_in),
     .out(M_edge_detector3_out)
   );
-  reg [0:0] M_left_d, M_left_q = 1'h0;
-  reg [0:0] M_right_d, M_right_q = 1'h0;
-  reg [0:0] M_cent_d, M_cent_q = 1'h0;
   
   always @* begin
     M_cent_d = M_cent_q;
@@ -99,24 +99,17 @@ module bcounter_5 (
     end
   end
   
-  always @(posedge M_edge_ctr_value) begin
+  always @(posedge clk) begin
     if (rst == 1'b1) begin
+      M_ctr_q <= 1'h0;
       M_left_q <= 1'h0;
       M_right_q <= 1'h0;
       M_cent_q <= 1'h0;
     end else begin
+      M_ctr_q <= M_ctr_d;
       M_left_q <= M_left_d;
       M_right_q <= M_right_d;
       M_cent_q <= M_cent_d;
-    end
-  end
-  
-  
-  always @(posedge clk) begin
-    if (rst == 1'b1) begin
-      M_ctr_q <= 1'h0;
-    end else begin
-      M_ctr_q <= M_ctr_d;
     end
   end
   

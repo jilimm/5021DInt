@@ -13,11 +13,19 @@ module state_4 (
     output reg row1,
     output reg row2,
     output reg row3,
+    output reg row4,
+    output reg row5,
+    output reg row6,
+    output reg row7,
+    output reg row8,
+    output reg row9,
+    output reg row10,
     output reg gnd1,
     output reg gnd2,
     output reg gnd3,
     output reg [7:0] totalScore,
-    output reg [1:0] result
+    output reg [1:0] result,
+    output reg startbutt
   );
   
   
@@ -52,6 +60,13 @@ module state_4 (
   wire [1-1:0] M_mainState_high1;
   wire [1-1:0] M_mainState_high2;
   wire [1-1:0] M_mainState_high3;
+  wire [1-1:0] M_mainState_high4;
+  wire [1-1:0] M_mainState_high5;
+  wire [1-1:0] M_mainState_high6;
+  wire [1-1:0] M_mainState_high7;
+  wire [1-1:0] M_mainState_high8;
+  wire [1-1:0] M_mainState_high9;
+  wire [1-1:0] M_mainState_high10;
   wire [1-1:0] M_mainState_low1;
   wire [1-1:0] M_mainState_low2;
   wire [1-1:0] M_mainState_low3;
@@ -70,6 +85,13 @@ module state_4 (
     .high1(M_mainState_high1),
     .high2(M_mainState_high2),
     .high3(M_mainState_high3),
+    .high4(M_mainState_high4),
+    .high5(M_mainState_high5),
+    .high6(M_mainState_high6),
+    .high7(M_mainState_high7),
+    .high8(M_mainState_high8),
+    .high9(M_mainState_high9),
+    .high10(M_mainState_high10),
     .low1(M_mainState_low1),
     .low2(M_mainState_low2),
     .low3(M_mainState_low3),
@@ -107,12 +129,20 @@ module state_4 (
     M_bttnpress_button = leftBtn;
     M_bttnpress_button2 = centBtn;
     M_bttnpress_button3 = rightBtn;
+    startbutt = M_bttnpress_bttnPress;
     M_myalu_a = 1'h0;
     M_myalu_b = 1'h0;
     M_myalu_alufn = 1'h0;
     row1 = 1'h0;
     row2 = 1'h0;
     row3 = 1'h0;
+    row4 = 1'h0;
+    row5 = 1'h0;
+    row6 = 1'h0;
+    row7 = 1'h0;
+    row8 = 1'h0;
+    row9 = 1'h0;
+    row10 = 1'h0;
     gnd1 = 1'h1;
     gnd2 = 1'h1;
     gnd3 = 1'h1;
@@ -125,8 +155,15 @@ module state_4 (
         row1 = M_mainState_high1;
         row2 = M_mainState_high2;
         row3 = M_mainState_high3;
+        row4 = M_mainState_high4;
+        row5 = M_mainState_high5;
+        row6 = M_mainState_high6;
+        row7 = M_mainState_high7;
+        row8 = M_mainState_high8;
+        row9 = M_mainState_high9;
+        row10 = M_mainState_high10;
         M_scoreSum_en = 1'h0;
-        if (M_mainState_result != 1'h0 && M_mainState_rowOn == 2'h0) begin
+        if (M_mainState_result != 1'h0 && M_mainState_rowOn == 4'h4) begin
           M_myalu_alufn = 6'h00;
           M_myalu_a = M_mainState_result;
           M_myalu_b = M_scoreSum_out;
@@ -139,6 +176,13 @@ module state_4 (
         row1 = 1'h0;
         row2 = 1'h0;
         row3 = 1'h0;
+        row4 = 1'h0;
+        row5 = 1'h0;
+        row6 = 1'h0;
+        row7 = 1'h0;
+        row8 = 1'h0;
+        row9 = 1'h0;
+        row10 = 1'h0;
         gnd1 = 1'h1;
         gnd2 = 1'h1;
         gnd3 = 1'h1;

@@ -17,10 +17,17 @@ module mojo_top (
     output high1,
     output high2,
     output high3,
+    output high4,
+    output high5,
+    output high6,
+    output high7,
+    output high8,
+    output high9,
+    output high10,
     output low1,
     output low2,
-    output low3,
-    output io_led[3][8]
+    output low3
+   // output io_led[3][8]
  //   output io_led[3][8]
   ) {
   
@@ -64,6 +71,13 @@ module mojo_top (
     high1 = myState.row1; //mymain.high1;
     high2 = myState.row2; //mymain.high2;
     high3 = myState.row3; //mymain.high3;
+    high4 = myState.row4;
+    high5 = myState.row5; //mymain.high1;
+    high6 = myState.row6; 
+    high7 = myState.row7; 
+    high8 = myState.row8;
+    high9 = myState.row9; 
+    high10 = myState.row10;
     low1 = myState.gnd1; //mymain.low1;
     low2 = myState.gnd2; //mymain.low2;
     low3 = myState.gnd3; //mymain.low3;
@@ -73,12 +87,8 @@ module mojo_top (
     io_led[2] = 8b0;
     led = myState.totalScore;
     */
-   led = myState.totalScore; 
-   io_led[2][0] = myState.result[0];
-   io_led[2][1] = myState.result[1];
-   io_led[2][7:2] = 6b0;
-   io_led[1][7:0] = 8b0;
-    io_led[0][7:0] = 8b0;
+//   led = myState.totalScore; 
+   led = myState.totalScore; //does the bttn press reset?
    
     // led[7:2] =  //for total score of all rounds
   }

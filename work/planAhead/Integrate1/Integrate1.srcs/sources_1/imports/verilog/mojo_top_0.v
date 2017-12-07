@@ -23,10 +23,16 @@ module mojo_top_0 (
     output reg high1,
     output reg high2,
     output reg high3,
+    output reg high4,
+    output reg high5,
+    output reg high6,
+    output reg high7,
+    output reg high8,
+    output reg high9,
+    output reg high10,
     output reg low1,
     output reg low2,
-    output reg low3,
-    output reg [23:0] io_led
+    output reg low3
   );
   
   
@@ -57,11 +63,19 @@ module mojo_top_0 (
   wire [1-1:0] M_myState_row1;
   wire [1-1:0] M_myState_row2;
   wire [1-1:0] M_myState_row3;
+  wire [1-1:0] M_myState_row4;
+  wire [1-1:0] M_myState_row5;
+  wire [1-1:0] M_myState_row6;
+  wire [1-1:0] M_myState_row7;
+  wire [1-1:0] M_myState_row8;
+  wire [1-1:0] M_myState_row9;
+  wire [1-1:0] M_myState_row10;
   wire [1-1:0] M_myState_gnd1;
   wire [1-1:0] M_myState_gnd2;
   wire [1-1:0] M_myState_gnd3;
   wire [8-1:0] M_myState_totalScore;
   wire [2-1:0] M_myState_result;
+  wire [1-1:0] M_myState_startbutt;
   reg [1-1:0] M_myState_leftBtn;
   reg [1-1:0] M_myState_centBtn;
   reg [1-1:0] M_myState_rightBtn;
@@ -74,11 +88,19 @@ module mojo_top_0 (
     .row1(M_myState_row1),
     .row2(M_myState_row2),
     .row3(M_myState_row3),
+    .row4(M_myState_row4),
+    .row5(M_myState_row5),
+    .row6(M_myState_row6),
+    .row7(M_myState_row7),
+    .row8(M_myState_row8),
+    .row9(M_myState_row9),
+    .row10(M_myState_row10),
     .gnd1(M_myState_gnd1),
     .gnd2(M_myState_gnd2),
     .gnd3(M_myState_gnd3),
     .totalScore(M_myState_totalScore),
-    .result(M_myState_result)
+    .result(M_myState_result),
+    .startbutt(M_myState_startbutt)
   );
   
   always @* begin
@@ -97,14 +119,16 @@ module mojo_top_0 (
     high1 = M_myState_row1;
     high2 = M_myState_row2;
     high3 = M_myState_row3;
+    high4 = M_myState_row4;
+    high5 = M_myState_row5;
+    high6 = M_myState_row6;
+    high7 = M_myState_row7;
+    high8 = M_myState_row8;
+    high9 = M_myState_row9;
+    high10 = M_myState_row10;
     low1 = M_myState_gnd1;
     low2 = M_myState_gnd2;
     low3 = M_myState_gnd3;
     led = M_myState_totalScore;
-    io_led[16+0+0-:1] = M_myState_result[0+0-:1];
-    io_led[16+1+0-:1] = M_myState_result[1+0-:1];
-    io_led[16+2+5-:6] = 6'h00;
-    io_led[8+0+7-:8] = 8'h00;
-    io_led[0+0+7-:8] = 8'h00;
   end
 endmodule

@@ -10,6 +10,13 @@ module main (
     output high1,
     output high2,
     output high3,
+    output high4,
+    output high5,
+    output high6,
+    output high7,
+    output high8,
+    output high9,
+    output high10,
     output low1,
     output low2,
     output low3,
@@ -56,12 +63,16 @@ module main (
     result = score.out;
     score.data = 2b00;
     
-    //connect my register input to the
-   
-    //connect propogator output to mymain so i can pass it to mojo top
     high1 = mypropogater.row1;
     high2 = mypropogater.row2;
     high3 = mypropogater.row3;
+    high4 = mypropogater.row4;
+    high5 = mypropogater.row5;
+    high6 = mypropogater.row6;
+    high7 = mypropogater.row7;
+    high8 = mypropogater.row8;
+    high9 = mypropogater.row9;
+    high10 = mypropogater.row10;
     low1 = mypropogater.gnd1;
     low2 = mypropogater.gnd2;
     low3 = mypropogater.gnd3;
@@ -91,8 +102,8 @@ module main (
       myalu.b [2:0] = mypropogater.numSeq;
      
       
-              
-      if(mypropogater.rowLit==RowNumb.ROW2){
+      //in the second last row        
+      if(mypropogater.rowLit==RowNumb.ROW9){
               if (myalu.alu[0]){
                   score.data = 2b01;
                   score.en=1;
@@ -104,8 +115,9 @@ module main (
       
       //will default to 10 when goes to row 3
     }
-      else if (mypropogater.rowLit==RowNumb.ROW3){
-              if (score.out==2b00 && myalu.alu[0]){
+      //in the last row
+      else if (mypropogater.rowLit==RowNumb.ROW10){
+              if (score.out==2b00 && myalu.alu[0]){ //write 2 to score if and only if i enter correct seq at row 3
                     score.data=2b10;
                     score.en=1;
                   
@@ -114,8 +126,14 @@ module main (
                   score.en=0;
               }
     }
+      else if (mypropogater.rowLit==RowNumb.ROW1){
+            //reset my score register value
+            score.data=2b00;
+            score.en=1;
+    }
       
-      else{
+      else{  //at every other row dont write anything to register
+            //keep my register value
               score.en=0;
                //person gets 0 points // when its not at row 2 or 3 i dont write into my register at all who gives a fuck?
                left.d=0;

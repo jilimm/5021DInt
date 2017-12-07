@@ -14,6 +14,13 @@ module main_7 (
     output reg high1,
     output reg high2,
     output reg high3,
+    output reg high4,
+    output reg high5,
+    output reg high6,
+    output reg high7,
+    output reg high8,
+    output reg high9,
+    output reg high10,
     output reg low1,
     output reg low2,
     output reg low3,
@@ -49,11 +56,18 @@ module main_7 (
     .rst(rst),
     .value(M_edge_ctr_value)
   );
-  wire [2-1:0] M_mypropogater_rowLit;
+  wire [4-1:0] M_mypropogater_rowLit;
   wire [3-1:0] M_mypropogater_numSeq;
   wire [1-1:0] M_mypropogater_row1;
   wire [1-1:0] M_mypropogater_row2;
   wire [1-1:0] M_mypropogater_row3;
+  wire [1-1:0] M_mypropogater_row4;
+  wire [1-1:0] M_mypropogater_row5;
+  wire [1-1:0] M_mypropogater_row6;
+  wire [1-1:0] M_mypropogater_row7;
+  wire [1-1:0] M_mypropogater_row8;
+  wire [1-1:0] M_mypropogater_row9;
+  wire [1-1:0] M_mypropogater_row10;
   wire [1-1:0] M_mypropogater_gnd1;
   wire [1-1:0] M_mypropogater_gnd2;
   wire [1-1:0] M_mypropogater_gnd3;
@@ -66,6 +80,13 @@ module main_7 (
     .row1(M_mypropogater_row1),
     .row2(M_mypropogater_row2),
     .row3(M_mypropogater_row3),
+    .row4(M_mypropogater_row4),
+    .row5(M_mypropogater_row5),
+    .row6(M_mypropogater_row6),
+    .row7(M_mypropogater_row7),
+    .row8(M_mypropogater_row8),
+    .row9(M_mypropogater_row9),
+    .row10(M_mypropogater_row10),
     .gnd1(M_mypropogater_gnd1),
     .gnd2(M_mypropogater_gnd2),
     .gnd3(M_mypropogater_gnd3),
@@ -141,6 +162,13 @@ module main_7 (
     high1 = M_mypropogater_row1;
     high2 = M_mypropogater_row2;
     high3 = M_mypropogater_row3;
+    high4 = M_mypropogater_row4;
+    high5 = M_mypropogater_row5;
+    high6 = M_mypropogater_row6;
+    high7 = M_mypropogater_row7;
+    high8 = M_mypropogater_row8;
+    high9 = M_mypropogater_row9;
+    high10 = M_mypropogater_row10;
     low1 = M_mypropogater_gnd1;
     low2 = M_mypropogater_gnd2;
     low3 = M_mypropogater_gnd3;
@@ -164,7 +192,7 @@ module main_7 (
     M_myalu_a[1+0-:1] = M_cent_q;
     M_myalu_a[0+0-:1] = M_right_q;
     M_myalu_b[0+2-:3] = M_mypropogater_numSeq;
-    if (M_mypropogater_rowLit == 2'h2) begin
+    if (M_mypropogater_rowLit == 4'h9) begin
       if (M_myalu_alu[0+0-:1]) begin
         M_score_data = 2'h1;
         M_score_en = 1'h1;
@@ -173,7 +201,7 @@ module main_7 (
         M_score_en = 1'h1;
       end
     end else begin
-      if (M_mypropogater_rowLit == 2'h3) begin
+      if (M_mypropogater_rowLit == 4'ha) begin
         if (M_score_out == 2'h0 && M_myalu_alu[0+0-:1]) begin
           M_score_data = 2'h2;
           M_score_en = 1'h1;
@@ -181,10 +209,15 @@ module main_7 (
           M_score_en = 1'h0;
         end
       end else begin
-        M_score_en = 1'h0;
-        M_left_d = 1'h0;
-        M_right_d = 1'h0;
-        M_cent_d = 1'h0;
+        if (M_mypropogater_rowLit == 4'h1) begin
+          M_score_data = 2'h0;
+          M_score_en = 1'h1;
+        end else begin
+          M_score_en = 1'h0;
+          M_left_d = 1'h0;
+          M_right_d = 1'h0;
+          M_cent_d = 1'h0;
+        end
       end
     end
   end

@@ -7,11 +7,19 @@ module state (
     output row1,
     output row2,
     output row3,
+    output row4,
+    output row5,
+    output row6,
+    output row7,
+    output row8,
+    output row9,
+    output row10,
     output gnd1,
     output gnd2,
     output gnd3,
     output totalScore[8],
-    output result[2]
+    output result[2],
+    output startbutt
   ) {
 
   .clk(clk) {
@@ -44,16 +52,23 @@ module state (
     bttnpress.button = leftBtn;
     bttnpress.button2 = centBtn;
     bttnpress.button3 = rightBtn;
-   
+    startbutt = bttnpress.bttnPress;
     //setting up alu
     myalu.a=0;
     myalu.b=0;
     myalu.alufn=0;
     
     //instantiating outputs of state
-    row1=0;
+    row1=0; 
     row2=0;
     row3=0;
+    row4=0;
+    row5=0;
+    row6=0;
+    row7=0;
+    row8=0;
+    row9=0;
+    row10=0;
     gnd1=1;
     gnd2=1;
     gnd3=1; //put ground to high to deactivate the columns
@@ -61,7 +76,6 @@ module state (
     case (state.q){
       state.MAIN:
         //in the main state the LEDs are controlled by the main state;
-        
          gnd1 = mainState.low1;
          gnd2 = mainState.low2;
          gnd3 = mainState.low3;
@@ -69,6 +83,13 @@ module state (
          row1 = mainState.high1;
          row2 = mainState.high2;
          row3 = mainState.high3;
+        row4=mainState.high4;
+        row5=mainState.high5;
+        row6=mainState.high6;
+        row7=mainState.high7;
+        row8=mainState.high8;
+        row9=mainState.high9;
+        row10=mainState.high10;
         
         scoreSum.en=0;
         
@@ -78,15 +99,23 @@ module state (
             myalu.b= scoreSum.out; //user's total score so far
             scoreSum.data = myalu.alu; //cnt new score into register input
             scoreSum.en =1;
+          //*******MY LOGIC ONLY WORKS WHEN I MAKE STATE HALT***//
             state.d = state.HALT; //*****TO DEBUG: GO TO HALT *****//
+          //output is all 1 when i go to state.main
         } 
        
 
       state.HALT:
-
-      row1=0;
-      row2=0;
-      row3=0;
+      row1=0; 
+    row2=0;
+    row3=0;
+    row4=0;
+    row5=0;
+    row6=0;
+    row7=0;
+    row8=0;
+    row9=0;
+    row10=0;
       gnd1=1;
       gnd2=1;
       gnd3=1;

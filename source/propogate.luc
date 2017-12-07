@@ -1,8 +1,15 @@
 global RowNumb{
-  const ROW4 = 2b00;
-  const ROW1= 2b01;
-  const ROW2= 2b10;
-  const ROW3 = 2b11; 
+  const ROW11 = 4b0000;
+  const ROW1= 4b0001;
+  const ROW2= 4b0010;
+  const ROW3 = 4b0011;
+  const ROW4 = 4b0100;
+  const ROW5 = 4b0101;
+  const ROW6 = 4b0110;
+  const ROW7 = 4b0111;
+  const ROW8 = 4b1000;
+  const ROW9 = 4b1001;
+  const ROW10 = 4b1010;
 }
 
 global ClkNumb{
@@ -19,11 +26,18 @@ global ClkNumb{
 module propogate (
     input clk,  // clock
     input rst,  // reset
-    output rowLit[2], //the row to be lit up (ctr.value)
+    output rowLit[4], //the row to be lit up (ctr.value)
     output numSeq[3], //column to be lighted up
     output row1,
     output row2,
     output row3,
+    output row4,
+    output row5,
+    output row6,
+    output row7,
+    output row8,
+    output row9,
+    output row10,
     output gnd1,
     output gnd2,
     output gnd3,
@@ -48,8 +62,8 @@ module propogate (
 
  .clk(chosenClk) {   //connect my normal clock to a slower clock
     .rst(rst){
-        counter rowCtr(#SIZE(2)); //ctr will go from 00 to 11 this will be the number of row that is lit
-        dff seed[32] (#INIT(32d1)); //seed to start numb_gen
+        counter rowCtr(#SIZE(4),#TOP(4b1010)); //ctr will go from 00 to 11 this will be the number of row that is lit
+        dff seed[32] (#INIT(32d51)); //seed to start numb_gen
         dff clkseed[32] (#INIT(32d3)); // seed to start clk_gen seed chosen is diff from seed1 to ensure randomness
   }
  }
@@ -81,6 +95,13 @@ module propogate (
     row1=0; 
     row2=0;
     row3=0;
+    row4=0;
+    row5=0;
+    row6=0;
+    row7=0;
+    row8=0;
+    row9=0;
+    row10=0;
     gnd1 = ~randNum[0];  //when column is active connect corresponding gnd to 0
     gnd2 = ~randNum[1];
     gnd3 = ~randNum[2];
@@ -107,44 +128,174 @@ module propogate (
       chosenClk = slowclk24.value;
     }
     
- //  propClkValue = chosenClk;
     
     case (rowCtr.value){
     //when the corresponding row is 'active' make the entire row active
       RowNumb.ROW1:
-          randomizer.randnumNext = 0; //generate random number seq
-          randomizer.randclkNext = 0; //generate random clk number
-          randomizer.numbregEn = 0; //write enable register to rmb new value
+          randomizer.randnumNext = 0; //dont generate a randome number sequence
+          randomizer.randclkNext = 0; //dont generate a random clock selection
+          randomizer.numbregEn = 0; //dont write enable any of my clock registers
           randomizer.clkregEn = 0;
-          row1=1;
+          row1=1; 
           row2=0;
           row3=0;
+          row4=0;
+          row5=0;
+          row6=0;
+          row7=0;
+          row8=0;
+          row9=0;
+          row10=0;
    
       RowNumb.ROW2:
       //light up row 2 with specified numbers
-        randomizer.randnumNext = 0; //generate random number seq
-          randomizer.randclkNext = 0; //generate random clk number
-          randomizer.numbregEn = 0; //write enable register to rmb new value
+        randomizer.randnumNext = 0; 
+          randomizer.randclkNext = 0; 
+          randomizer.numbregEn = 0; 
           randomizer.clkregEn = 0;
-        row1=0;
-        row2=1;
-        row3=0;
+        row1=0; 
+    row2=1;
+    row3=0;
+    row4=0;
+    row5=0;
+    row6=0;
+    row7=0;
+    row8=0;
+    row9=0;
+    row10=0;
         
       RowNumb.ROW3:
-      //light up row 3 with active numbers
-        randomizer.randnumNext = 0; //generate random number seq
-          randomizer.randclkNext = 0; //generate random clk number
-          randomizer.numbregEn = 0; //write enable register to rmb new value
+        randomizer.randnumNext = 0; 
+          randomizer.randclkNext = 0; 
+          randomizer.numbregEn = 0; 
           randomizer.clkregEn = 0;
-        row1=0;
-        row2=0;
-        row3=1;
+        row1=0; 
+    row2=0;
+    row3=1;
+    row4=0;
+    row5=0;
+    row6=0;
+    row7=0;
+    row8=0;
+    row9=0;
+    row10=0;
+        
         
         RowNumb.ROW4:
-      //no rows light up (pause to give user time to react) 
+        randomizer.randnumNext = 0; 
+          randomizer.randclkNext = 0; 
+          randomizer.numbregEn = 0; 
+          randomizer.clkregEn = 0;
+        row1=0; 
+    row2=0;
+    row3=0;
+    row4=1;
+    row5=0;
+    row6=0;
+    row7=0;
+    row8=0;
+    row9=0;
+    row10=0;
         
-        //generate the random number and clock sequence here
-        //time difference/delay when generating it in row 1 as it has to display seq and clk cycle simultaneously causes some problems
+         RowNumb.ROW5:
+        randomizer.randnumNext = 0; 
+          randomizer.randclkNext = 0; 
+          randomizer.numbregEn = 0; 
+          randomizer.clkregEn = 0;
+        row1=0; 
+    row2=0;
+    row3=0;
+    row4=0;
+    row5=1;
+    row6=0;
+    row7=0;
+    row8=0;
+    row9=0;
+    row10=0;
+        
+        RowNumb.ROW6:
+        randomizer.randnumNext = 0; 
+          randomizer.randclkNext = 0; 
+          randomizer.numbregEn = 0; 
+          randomizer.clkregEn = 0;
+        row1=0; 
+    row2=0;
+    row3=0;
+    row4=0;
+    row5=0;
+    row6=1;
+    row7=0;
+    row8=0;
+    row9=0;
+    row10=0;
+        
+        
+        RowNumb.ROW7:
+        randomizer.randnumNext = 0; 
+          randomizer.randclkNext = 0; 
+          randomizer.numbregEn = 0; 
+          randomizer.clkregEn = 0;
+        row1=0; 
+    row2=0;
+    row3=0;
+    row4=0;
+    row5=0;
+    row6=0;
+    row7=1;
+    row8=0;
+    row9=0;
+    row10=0;
+        
+        RowNumb.ROW8:
+        randomizer.randnumNext = 0; 
+          randomizer.randclkNext = 0; 
+          randomizer.numbregEn = 0; 
+          randomizer.clkregEn = 0;
+        row1=0; 
+    row2=0;
+    row3=0;
+    row4=0;
+    row5=0;
+    row6=0;
+    row7=0;
+    row8=1;
+    row9=0;
+    row10=0;
+        
+         
+        RowNumb.ROW9:
+        randomizer.randnumNext = 0; 
+          randomizer.randclkNext = 0; 
+          randomizer.numbregEn = 0; 
+          randomizer.clkregEn = 0;
+        row1=0; 
+    row2=0;
+    row3=0;
+    row4=0;
+    row5=0;
+    row6=0;
+    row7=0;
+    row8=0;
+    row9=1;
+    row10=0;
+        
+        RowNumb.ROW10:
+        randomizer.randnumNext = 0; 
+          randomizer.randclkNext = 0; 
+          randomizer.numbregEn = 0; 
+          randomizer.clkregEn = 0;
+        row1=0; 
+    row2=0;
+    row3=0;
+    row4=0;
+    row5=0;
+    row6=0;
+    row7=0;
+    row8=0;
+    row9=0;
+    row10=1;
+        
+        RowNumb.ROW11:
         seed.d = seed.q + 1;
           clkseed.d = clkseed.q + 1;
           randomizer.randnumNext = 1; //generate random number seq
@@ -153,11 +304,16 @@ module propogate (
           randomizer.clkregEn = 1;
           randomizer.randnumrst = 1; //reset so you can generate new numb later
           randomizer.randclkrst = 1; 
-        row1=0;
-        row2=0; //change to all 0 after debugging
-        row3=0;
-        
-       
+        row1=0; 
+    row2=0;
+    row3=0;
+    row4=0;
+    row5=0;
+    row6=0;
+    row7=0;
+    row8=0;
+    row9=0;
+    row10=0;
     }
     
     
