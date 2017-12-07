@@ -12,11 +12,11 @@ module main (
     output low1,
     output low2,
     output low3,
-    output butt1,
-    output butt2,
-    output butt3,
-    output rowOn[3],
-    output clkchoice[3]
+   // output butt1, //for debugging
+ //   output butt2,  //for debugging
+ //   output butt3,  //for debugging
+    output rowOn[3]  //for debugging
+  //  output clkchoice[3]  //for debugging
   ) {
   
   .clk(clk) {
@@ -51,12 +51,14 @@ module main (
     myalu.a = 8b0;
     myalu.b = 8b0; 
     
+    //******for debugging
    // mypropogater.num = 3b110;
-    rowOn = mypropogater.rowLit;
-    butt1 = left.q;
-    butt2 = cent.q;
-    butt3 = right.q;
     
+//    butt1 = left.q;
+ //   butt2 = cent.q;
+ //   butt3 = right.q;
+ //************   
+    rowOn = mypropogater.rowLit;
     
     //connect propogator output to mymain so i can pass it to mojo top
     high1 = mypropogater.row1;
@@ -66,7 +68,7 @@ module main (
     low2 = mypropogater.gnd2;
     low3 = mypropogater.gnd3;
        
-    clkchoice = mypropogater.clkChoice;
+ //   clkchoice = mypropogater.clkChoice;//for debugging
     //propagate should have a dff counter somewhere where i can refer to.
     button_cond1.in = left2;            // raw button input
     edge_detector1.in = button_cond1.out; // input to the edge_detector

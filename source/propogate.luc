@@ -41,7 +41,7 @@ module propogate (
   .clk(clk){
   .rst(rst){
         //set up an array of slow clocks i can choose from
-        counter slowclk21(#SIZE(1),#DIV(21));
+        //counter slowclk21(#SIZE(1),#DIV(21));
         counter slowclk22(#SIZE(1),#DIV(22));
         counter slowclk23(#SIZE(1),#DIV(23));
         counter slowclk24(#SIZE(1),#DIV(24));
@@ -146,6 +146,9 @@ module propogate (
         
         RowNumb.ROW4:
       //no rows light up (pause to give user time to react) 
+        
+        //generate the random number and clock sequence here
+        //time difference/delay when generating it in row 1 as it has to display seq and clk cycle simultaneously causes some problems
         seed.d = seed.q + 1;
           clkseed.d = clkseed.q + 1;
           randomizer.randnumNext = 1; //generate random number seq
