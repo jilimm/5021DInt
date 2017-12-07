@@ -18,6 +18,8 @@ global Inst {
 }
 //input a,b,alufm, output z,v,n,alu 
 module alu (
+    //input aluClk; 
+    //input rst;
     input a[8],
     input b[8],
     input alufn[6],

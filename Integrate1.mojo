@@ -2,10 +2,11 @@
 <project name="Integrate1" board="Mojo V3" language="Lucid">
   <files>
     <src>alu.luc</src>
+    <src>reg3bit.luc</src>
+    <src>reg2bit.luc</src>
     <src>state.luc</src>
     <src>main.luc</src>
-    <src>register.luc</src>
-    <src>register2.luc</src>
+    <src>reg8bit.luc</src>
     <src>randomizer.luc</src>
     <src top="true">mojo_top.luc</src>
     <src>propogate.luc</src>

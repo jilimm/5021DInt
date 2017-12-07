@@ -19,7 +19,8 @@ module mojo_top (
     output high3,
     output low1,
     output low2,
-    output low3
+    output low3,
+    output io_led[3][8]
  //   output io_led[3][8]
   ) {
   
@@ -33,7 +34,8 @@ module mojo_top (
     reset_conditioner reset_cond3;
     .rst(rst){
      // bcounter counter;        // button press counter
-      main mymain;
+     // main mymain;
+      state myState; // my super dope state machine
     }
   }
   
@@ -54,25 +56,30 @@ module mojo_top (
     myState.rightBtn = !button3;
     */
     
-    mymain.left2 = !button; // make button active high 
-    mymain.center1 = !button2; 
-    mymain.right0 = !button3;
+    myState.leftBtn = !button; // make button active high 
+    myState.centBtn = !button2; 
+    myState.rightBtn = !button3;
    
     //make lights go light up
-    high1 = mymain.high1;
-    high2 = mymain.high2;
-    high3 = mymain.high3;
-    low1 = mymain.low1;
-    low2 = mymain.low2;
-    low3 = mymain.low3;
+    high1 = myState.row1; //mymain.high1;
+    high2 = myState.row2; //mymain.high2;
+    high3 = myState.row3; //mymain.high3;
+    low1 = myState.gnd1; //mymain.low1;
+    low2 = myState.gnd2; //mymain.low2;
+    low3 = myState.gnd3; //mymain.low3;
     /*
     io_led[0] = myState.result;
     io_led[1] = 8b0;
     io_led[2] = 8b0;
     led = myState.totalScore;
     */
-   led[1:0] = mymain.result; //to check the result of each round      // display results on the mojo LED
-   led[7:2]=0;
+   led = myState.totalScore; 
+   io_led[2][0] = myState.result[0];
+   io_led[2][1] = myState.result[1];
+   io_led[2][7:2] = 6b0;
+   io_led[1][7:0] = 8b0;
+    io_led[0][7:0] = 8b0;
+   
     // led[7:2] =  //for total score of all rounds
   }
 }

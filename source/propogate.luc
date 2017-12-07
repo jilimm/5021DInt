@@ -6,7 +6,7 @@ global RowNumb{
 }
 
 global ClkNumb{
-  const SLOWCLK221 = 3b000;
+  const SLOWCLK251 = 3b000;
   const SLOWCLK22= 3b001;
   const SLOWCLK23= 3b010;
   const SLOWCLK24= 3b011;
@@ -18,13 +18,9 @@ global ClkNumb{
 
 module propogate (
     input clk,  // clock
-//input clkinput[3],
     input rst,  // reset
- //   input num[3], //LED column to light up on each row
-//    input clkSel[3], //numbers to select which clock
     output rowLit[2], //the row to be lit up (ctr.value)
-    output numSeq[3], //column to be lit-ted up
-    //output numOut[3], //LED column that should be lit up on the active row
+    output numSeq[3], //column to be lighted up
     output row1,
     output row2,
     output row3,
@@ -32,7 +28,7 @@ module propogate (
     output gnd2,
     output gnd3,
     output clkChoice[3]
-  //  output propClk
+  //  output propClkValue
   ) {
 
   sig chosenClk; 
@@ -42,12 +38,11 @@ module propogate (
   .clk(clk){
   .rst(rst){
         //set up an array of slow clocks i can choose from
-        //counter slowclk21(#SIZE(1),#DIV(21));
         counter slowclk22(#SIZE(1),#DIV(22));
         counter slowclk23(#SIZE(1),#DIV(23));
         counter slowclk24(#SIZE(1),#DIV(24));
         counter slowclk25(#SIZE(1),#DIV(25));
-        randomizer randomizer;
+        randomizer randomizer; //this randomizer outputs 2 3 bit numbers (1. clk selection number, 2. number sequence)
     }
   } 
 
@@ -61,7 +56,6 @@ module propogate (
  
    
   always {
-  //  propClk = chosenClk;
     //initializin randomizer
     randomizer.numSeed = seed.q;
     randomizer.clkSeed = clkseed.q;
@@ -72,21 +66,21 @@ module propogate (
     randomizer.randnumrst=rst;
     randomizer.randclkrst = rst;
     if (randomizer.ranNum==3b000){
-            randNum = 3b101;
+            randNum = 3b101; //if the randomizer gives me 000 I will make the number sequence 101
     }
     else{
-          randNum = randomizer.ranNum;
+          randNum = randomizer.ranNum; //if not the number sequence is the number given by randomizer
     }
     
     clkSel = randomizer.ranClk;
-    
     clkChoice = clkSel;
-  //instantiate outputs 
-   rowLit = rowCtr.value;
-  //  numSeq = num;
+    rowLit = rowCtr.value;
+    
+
+    //instantiate my outputs
     row1=0; 
-   row2=0;
-   row3=0;
+    row2=0;
+    row3=0;
     gnd1 = ~randNum[0];  //when column is active connect corresponding gnd to 0
     gnd2 = ~randNum[1];
     gnd3 = ~randNum[2];
@@ -95,8 +89,8 @@ module propogate (
     
       
    case (clkSel){
-      ClkNumb.SLOWCLK221:
-       chosenClk= slowclk22.value;
+      ClkNumb.SLOWCLK251:
+       chosenClk= slowclk25.value;
       ClkNumb.SLOWCLK22:
       chosenClk = slowclk22.value;
       ClkNumb.SLOWCLK23:
@@ -113,7 +107,8 @@ module propogate (
       chosenClk = slowclk24.value;
     }
     
-   
+ //  propClkValue = chosenClk;
+    
     case (rowCtr.value){
     //when the corresponding row is 'active' make the entire row active
       RowNumb.ROW1:

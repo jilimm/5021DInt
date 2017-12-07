@@ -3,7 +3,7 @@ Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 --> 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.05 secs
+Total CPU time to Xst completion: 0.06 secs
  
 --> Reading design: mojo_top_0.prj
 
@@ -53,38 +53,44 @@ Netlist Hierarchy                  : rebuilt
 =========================================================================
 *                          HDL Parsing                                  *
 =========================================================================
-Analyzing Verilog file "C:/Users/Jing Yun/Desktop/50.002 Computation Structure/1D_Game Design/502IntGitRepo/5021DInt/work/planAhead/Integrate1/Integrate1.srcs/sources_1/imports/verilog/register_23.v" into library work
-Parsing module <register_23>.
-Analyzing Verilog file "C:/Users/Jing Yun/Desktop/50.002 Computation Structure/1D_Game Design/502IntGitRepo/5021DInt/work/planAhead/Integrate1/Integrate1.srcs/sources_1/imports/verilog/pn_gen_25.v" into library work
-Parsing module <pn_gen_25>.
-Analyzing Verilog file "C:/Users/Jing Yun/Desktop/50.002 Computation Structure/1D_Game Design/502IntGitRepo/5021DInt/work/planAhead/Integrate1/Integrate1.srcs/sources_1/imports/verilog/randomizer_21.v" into library work
-Parsing module <randomizer_21>.
-Analyzing Verilog file "C:/Users/Jing Yun/Desktop/50.002 Computation Structure/1D_Game Design/502IntGitRepo/5021DInt/work/planAhead/Integrate1/Integrate1.srcs/sources_1/imports/verilog/pipeline_15.v" into library work
-Parsing module <pipeline_15>.
-Analyzing Verilog file "C:/Users/Jing Yun/Desktop/50.002 Computation Structure/1D_Game Design/502IntGitRepo/5021DInt/work/planAhead/Integrate1/Integrate1.srcs/sources_1/imports/verilog/counter_8.v" into library work
-Parsing module <counter_8>.
-Analyzing Verilog file "C:/Users/Jing Yun/Desktop/50.002 Computation Structure/1D_Game Design/502IntGitRepo/5021DInt/work/planAhead/Integrate1/Integrate1.srcs/sources_1/imports/verilog/counter_22.v" into library work
-Parsing module <counter_22>.
-Analyzing Verilog file "C:/Users/Jing Yun/Desktop/50.002 Computation Structure/1D_Game Design/502IntGitRepo/5021DInt/work/planAhead/Integrate1/Integrate1.srcs/sources_1/imports/verilog/counter_20.v" into library work
-Parsing module <counter_20>.
-Analyzing Verilog file "C:/Users/Jing Yun/Desktop/50.002 Computation Structure/1D_Game Design/502IntGitRepo/5021DInt/work/planAhead/Integrate1/Integrate1.srcs/sources_1/imports/verilog/counter_19.v" into library work
-Parsing module <counter_19>.
-Analyzing Verilog file "C:/Users/Jing Yun/Desktop/50.002 Computation Structure/1D_Game Design/502IntGitRepo/5021DInt/work/planAhead/Integrate1/Integrate1.srcs/sources_1/imports/verilog/counter_18.v" into library work
-Parsing module <counter_18>.
-Analyzing Verilog file "C:/Users/Jing Yun/Desktop/50.002 Computation Structure/1D_Game Design/502IntGitRepo/5021DInt/work/planAhead/Integrate1/Integrate1.srcs/sources_1/imports/verilog/register2_13.v" into library work
-Parsing module <register2_13>.
-Analyzing Verilog file "C:/Users/Jing Yun/Desktop/50.002 Computation Structure/1D_Game Design/502IntGitRepo/5021DInt/work/planAhead/Integrate1/Integrate1.srcs/sources_1/imports/verilog/propogate_9.v" into library work
-Parsing module <propogate_9>.
-Analyzing Verilog file "C:/Users/Jing Yun/Desktop/50.002 Computation Structure/1D_Game Design/502IntGitRepo/5021DInt/work/planAhead/Integrate1/Integrate1.srcs/sources_1/imports/verilog/edge_detector_10.v" into library work
-Parsing module <edge_detector_10>.
-Analyzing Verilog file "C:/Users/Jing Yun/Desktop/50.002 Computation Structure/1D_Game Design/502IntGitRepo/5021DInt/work/planAhead/Integrate1/Integrate1.srcs/sources_1/imports/verilog/button_conditioner_5.v" into library work
-Parsing module <button_conditioner_5>.
-Analyzing Verilog file "C:/Users/Jing Yun/Desktop/50.002 Computation Structure/1D_Game Design/502IntGitRepo/5021DInt/work/planAhead/Integrate1/Integrate1.srcs/sources_1/imports/verilog/alu_14.v" into library work
-Parsing module <alu_14>.
+Analyzing Verilog file "C:/Users/Jing Yun/Desktop/50.002 Computation Structure/1D_Game Design/502IntGitRepo/5021DInt/work/planAhead/Integrate1/Integrate1.srcs/sources_1/imports/verilog/reg3bit_37.v" into library work
+Parsing module <reg3bit_37>.
+Analyzing Verilog file "C:/Users/Jing Yun/Desktop/50.002 Computation Structure/1D_Game Design/502IntGitRepo/5021DInt/work/planAhead/Integrate1/Integrate1.srcs/sources_1/imports/verilog/pn_gen_39.v" into library work
+Parsing module <pn_gen_39>.
+Analyzing Verilog file "C:/Users/Jing Yun/Desktop/50.002 Computation Structure/1D_Game Design/502IntGitRepo/5021DInt/work/planAhead/Integrate1/Integrate1.srcs/sources_1/imports/verilog/randomizer_35.v" into library work
+Parsing module <randomizer_35>.
+Analyzing Verilog file "C:/Users/Jing Yun/Desktop/50.002 Computation Structure/1D_Game Design/502IntGitRepo/5021DInt/work/planAhead/Integrate1/Integrate1.srcs/sources_1/imports/verilog/pipeline_26.v" into library work
+Parsing module <pipeline_26>.
+Analyzing Verilog file "C:/Users/Jing Yun/Desktop/50.002 Computation Structure/1D_Game Design/502IntGitRepo/5021DInt/work/planAhead/Integrate1/Integrate1.srcs/sources_1/imports/verilog/counter_36.v" into library work
+Parsing module <counter_36>.
+Analyzing Verilog file "C:/Users/Jing Yun/Desktop/50.002 Computation Structure/1D_Game Design/502IntGitRepo/5021DInt/work/planAhead/Integrate1/Integrate1.srcs/sources_1/imports/verilog/counter_34.v" into library work
+Parsing module <counter_34>.
+Analyzing Verilog file "C:/Users/Jing Yun/Desktop/50.002 Computation Structure/1D_Game Design/502IntGitRepo/5021DInt/work/planAhead/Integrate1/Integrate1.srcs/sources_1/imports/verilog/counter_33.v" into library work
+Parsing module <counter_33>.
+Analyzing Verilog file "C:/Users/Jing Yun/Desktop/50.002 Computation Structure/1D_Game Design/502IntGitRepo/5021DInt/work/planAhead/Integrate1/Integrate1.srcs/sources_1/imports/verilog/counter_32.v" into library work
+Parsing module <counter_32>.
+Analyzing Verilog file "C:/Users/Jing Yun/Desktop/50.002 Computation Structure/1D_Game Design/502IntGitRepo/5021DInt/work/planAhead/Integrate1/Integrate1.srcs/sources_1/imports/verilog/counter_12.v" into library work
+Parsing module <counter_12>.
+Analyzing Verilog file "C:/Users/Jing Yun/Desktop/50.002 Computation Structure/1D_Game Design/502IntGitRepo/5021DInt/work/planAhead/Integrate1/Integrate1.srcs/sources_1/imports/verilog/reg2bit_24.v" into library work
+Parsing module <reg2bit_24>.
+Analyzing Verilog file "C:/Users/Jing Yun/Desktop/50.002 Computation Structure/1D_Game Design/502IntGitRepo/5021DInt/work/planAhead/Integrate1/Integrate1.srcs/sources_1/imports/verilog/propogate_20.v" into library work
+Parsing module <propogate_20>.
+Analyzing Verilog file "C:/Users/Jing Yun/Desktop/50.002 Computation Structure/1D_Game Design/502IntGitRepo/5021DInt/work/planAhead/Integrate1/Integrate1.srcs/sources_1/imports/verilog/edge_detector_13.v" into library work
+Parsing module <edge_detector_13>.
+Analyzing Verilog file "C:/Users/Jing Yun/Desktop/50.002 Computation Structure/1D_Game Design/502IntGitRepo/5021DInt/work/planAhead/Integrate1/Integrate1.srcs/sources_1/imports/verilog/button_conditioner_9.v" into library work
+Parsing module <button_conditioner_9>.
+Analyzing Verilog file "C:/Users/Jing Yun/Desktop/50.002 Computation Structure/1D_Game Design/502IntGitRepo/5021DInt/work/planAhead/Integrate1/Integrate1.srcs/sources_1/imports/verilog/alu_8.v" into library work
+Parsing module <alu_8>.
+Analyzing Verilog file "C:/Users/Jing Yun/Desktop/50.002 Computation Structure/1D_Game Design/502IntGitRepo/5021DInt/work/planAhead/Integrate1/Integrate1.srcs/sources_1/imports/verilog/reg8bit_6.v" into library work
+Parsing module <reg8bit_6>.
+Analyzing Verilog file "C:/Users/Jing Yun/Desktop/50.002 Computation Structure/1D_Game Design/502IntGitRepo/5021DInt/work/planAhead/Integrate1/Integrate1.srcs/sources_1/imports/verilog/main_7.v" into library work
+Parsing module <main_7>.
+Analyzing Verilog file "C:/Users/Jing Yun/Desktop/50.002 Computation Structure/1D_Game Design/502IntGitRepo/5021DInt/work/planAhead/Integrate1/Integrate1.srcs/sources_1/imports/verilog/bcounter_5.v" into library work
+Parsing module <bcounter_5>.
+Analyzing Verilog file "C:/Users/Jing Yun/Desktop/50.002 Computation Structure/1D_Game Design/502IntGitRepo/5021DInt/work/planAhead/Integrate1/Integrate1.srcs/sources_1/imports/verilog/state_4.v" into library work
+Parsing module <state_4>.
 Analyzing Verilog file "C:/Users/Jing Yun/Desktop/50.002 Computation Structure/1D_Game Design/502IntGitRepo/5021DInt/work/planAhead/Integrate1/Integrate1.srcs/sources_1/imports/verilog/reset_conditioner_1.v" into library work
 Parsing module <reset_conditioner_1>.
-Analyzing Verilog file "C:/Users/Jing Yun/Desktop/50.002 Computation Structure/1D_Game Design/502IntGitRepo/5021DInt/work/planAhead/Integrate1/Integrate1.srcs/sources_1/imports/verilog/main_4.v" into library work
-Parsing module <main_4>.
 Analyzing Verilog file "C:/Users/Jing Yun/Desktop/50.002 Computation Structure/1D_Game Design/502IntGitRepo/5021DInt/work/planAhead/Integrate1/Integrate1.srcs/sources_1/imports/verilog/mojo_top_0.v" into library work
 Parsing module <mojo_top_0>.
 
@@ -96,42 +102,50 @@ Elaborating module <mojo_top_0>.
 
 Elaborating module <reset_conditioner_1>.
 
-Elaborating module <main_4>.
+Elaborating module <state_4>.
 
-Elaborating module <button_conditioner_5>.
+Elaborating module <bcounter_5>.
 
-Elaborating module <pipeline_15>.
+Elaborating module <button_conditioner_9>.
 
-Elaborating module <counter_8>.
+Elaborating module <pipeline_26>.
 
-Elaborating module <propogate_9>.
+Elaborating module <counter_12>.
 
-Elaborating module <counter_18>.
+Elaborating module <edge_detector_13>.
 
-Elaborating module <counter_19>.
+Elaborating module <reg8bit_6>.
 
-Elaborating module <counter_20>.
+Elaborating module <main_7>.
 
-Elaborating module <randomizer_21>.
+Elaborating module <propogate_20>.
 
-Elaborating module <register_23>.
+Elaborating module <counter_32>.
 
-Elaborating module <pn_gen_25>.
+Elaborating module <counter_33>.
 
-Elaborating module <counter_22>.
-WARNING:HDLCompiler:1127 - "C:/Users/Jing Yun/Desktop/50.002 Computation Structure/1D_Game Design/502IntGitRepo/5021DInt/work/planAhead/Integrate1/Integrate1.srcs/sources_1/imports/verilog/main_4.v" Line 72: Assignment to M_mypropogater_clkChoice ignored, since the identifier is never used
+Elaborating module <counter_34>.
 
-Elaborating module <edge_detector_10>.
+Elaborating module <randomizer_35>.
 
-Elaborating module <register2_13>.
+Elaborating module <reg3bit_37>.
 
-Elaborating module <alu_14>.
-WARNING:HDLCompiler:1127 - "C:/Users/Jing Yun/Desktop/50.002 Computation Structure/1D_Game Design/502IntGitRepo/5021DInt/work/planAhead/Integrate1/Integrate1.srcs/sources_1/imports/verilog/main_4.v" Line 121: Assignment to M_myalu_z ignored, since the identifier is never used
-WARNING:HDLCompiler:1127 - "C:/Users/Jing Yun/Desktop/50.002 Computation Structure/1D_Game Design/502IntGitRepo/5021DInt/work/planAhead/Integrate1/Integrate1.srcs/sources_1/imports/verilog/main_4.v" Line 122: Assignment to M_myalu_v ignored, since the identifier is never used
-WARNING:HDLCompiler:1127 - "C:/Users/Jing Yun/Desktop/50.002 Computation Structure/1D_Game Design/502IntGitRepo/5021DInt/work/planAhead/Integrate1/Integrate1.srcs/sources_1/imports/verilog/main_4.v" Line 123: Assignment to M_myalu_n ignored, since the identifier is never used
-WARNING:HDLCompiler:1127 - "C:/Users/Jing Yun/Desktop/50.002 Computation Structure/1D_Game Design/502IntGitRepo/5021DInt/work/planAhead/Integrate1/Integrate1.srcs/sources_1/imports/verilog/mojo_top_0.v" Line 80: Assignment to M_mymain_rowOn ignored, since the identifier is never used
-WARNING:Xst:2972 - "C:/Users/Jing Yun/Desktop/50.002 Computation Structure/1D_Game Design/502IntGitRepo/5021DInt/work/planAhead/Integrate1/Integrate1.srcs/sources_1/imports/verilog/mojo_top_0.v" line 37. All outputs of instance <reset_cond> of block <reset_conditioner_1> are unconnected in block <mojo_top_0>. Underlying logic will be removed.
-WARNING:Xst:2972 - "C:/Users/Jing Yun/Desktop/50.002 Computation Structure/1D_Game Design/502IntGitRepo/5021DInt/work/planAhead/Integrate1/Integrate1.srcs/sources_1/imports/verilog/mojo_top_0.v" line 44. All outputs of instance <reset_cond2> of block <reset_conditioner_1> are unconnected in block <mojo_top_0>. Underlying logic will be removed.
+Elaborating module <pn_gen_39>.
+
+Elaborating module <counter_36>.
+WARNING:HDLCompiler:1127 - "C:/Users/Jing Yun/Desktop/50.002 Computation Structure/1D_Game Design/502IntGitRepo/5021DInt/work/planAhead/Integrate1/Integrate1.srcs/sources_1/imports/verilog/main_7.v" Line 72: Assignment to M_mypropogater_clkChoice ignored, since the identifier is never used
+
+Elaborating module <reg2bit_24>.
+
+Elaborating module <alu_8>.
+WARNING:HDLCompiler:1127 - "C:/Users/Jing Yun/Desktop/50.002 Computation Structure/1D_Game Design/502IntGitRepo/5021DInt/work/planAhead/Integrate1/Integrate1.srcs/sources_1/imports/verilog/main_7.v" Line 121: Assignment to M_myalu_z ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "C:/Users/Jing Yun/Desktop/50.002 Computation Structure/1D_Game Design/502IntGitRepo/5021DInt/work/planAhead/Integrate1/Integrate1.srcs/sources_1/imports/verilog/main_7.v" Line 122: Assignment to M_myalu_v ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "C:/Users/Jing Yun/Desktop/50.002 Computation Structure/1D_Game Design/502IntGitRepo/5021DInt/work/planAhead/Integrate1/Integrate1.srcs/sources_1/imports/verilog/main_7.v" Line 123: Assignment to M_myalu_n ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "C:/Users/Jing Yun/Desktop/50.002 Computation Structure/1D_Game Design/502IntGitRepo/5021DInt/work/planAhead/Integrate1/Integrate1.srcs/sources_1/imports/verilog/state_4.v" Line 91: Assignment to M_myalu_z ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "C:/Users/Jing Yun/Desktop/50.002 Computation Structure/1D_Game Design/502IntGitRepo/5021DInt/work/planAhead/Integrate1/Integrate1.srcs/sources_1/imports/verilog/state_4.v" Line 92: Assignment to M_myalu_v ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "C:/Users/Jing Yun/Desktop/50.002 Computation Structure/1D_Game Design/502IntGitRepo/5021DInt/work/planAhead/Integrate1/Integrate1.srcs/sources_1/imports/verilog/state_4.v" Line 93: Assignment to M_myalu_n ignored, since the identifier is never used
+WARNING:Xst:2972 - "C:/Users/Jing Yun/Desktop/50.002 Computation Structure/1D_Game Design/502IntGitRepo/5021DInt/work/planAhead/Integrate1/Integrate1.srcs/sources_1/imports/verilog/mojo_top_0.v" line 38. All outputs of instance <reset_cond> of block <reset_conditioner_1> are unconnected in block <mojo_top_0>. Underlying logic will be removed.
+WARNING:Xst:2972 - "C:/Users/Jing Yun/Desktop/50.002 Computation Structure/1D_Game Design/502IntGitRepo/5021DInt/work/planAhead/Integrate1/Integrate1.srcs/sources_1/imports/verilog/mojo_top_0.v" line 45. All outputs of instance <reset_cond2> of block <reset_conditioner_1> are unconnected in block <mojo_top_0>. Underlying logic will be removed.
 
 =========================================================================
 *                           HDL Synthesis                               *
@@ -145,15 +159,14 @@ WARNING:Xst:647 - Input <spi_mosi> is never used. This port will be preserved an
 WARNING:Xst:647 - Input <spi_sck> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 WARNING:Xst:647 - Input <avr_tx> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 WARNING:Xst:647 - Input <avr_rx_busy> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
-INFO:Xst:3210 - "C:/Users/Jing Yun/Desktop/50.002 Computation Structure/1D_Game Design/502IntGitRepo/5021DInt/work/planAhead/Integrate1/Integrate1.srcs/sources_1/imports/verilog/mojo_top_0.v" line 37: Output port <out> of the instance <reset_cond> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "C:/Users/Jing Yun/Desktop/50.002 Computation Structure/1D_Game Design/502IntGitRepo/5021DInt/work/planAhead/Integrate1/Integrate1.srcs/sources_1/imports/verilog/mojo_top_0.v" line 44: Output port <out> of the instance <reset_cond2> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "C:/Users/Jing Yun/Desktop/50.002 Computation Structure/1D_Game Design/502IntGitRepo/5021DInt/work/planAhead/Integrate1/Integrate1.srcs/sources_1/imports/verilog/mojo_top_0.v" line 67: Output port <rowOn> of the instance <mymain> is unconnected or connected to loadless signal.
-    Found 1-bit tristate buffer for signal <spi_miso> created at line 83
-    Found 1-bit tristate buffer for signal <spi_channel<3>> created at line 83
-    Found 1-bit tristate buffer for signal <spi_channel<2>> created at line 83
-    Found 1-bit tristate buffer for signal <spi_channel<1>> created at line 83
-    Found 1-bit tristate buffer for signal <spi_channel<0>> created at line 83
-    Found 1-bit tristate buffer for signal <avr_rx> created at line 83
+INFO:Xst:3210 - "C:/Users/Jing Yun/Desktop/50.002 Computation Structure/1D_Game Design/502IntGitRepo/5021DInt/work/planAhead/Integrate1/Integrate1.srcs/sources_1/imports/verilog/mojo_top_0.v" line 38: Output port <out> of the instance <reset_cond> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:/Users/Jing Yun/Desktop/50.002 Computation Structure/1D_Game Design/502IntGitRepo/5021DInt/work/planAhead/Integrate1/Integrate1.srcs/sources_1/imports/verilog/mojo_top_0.v" line 45: Output port <out> of the instance <reset_cond2> is unconnected or connected to loadless signal.
+    Found 1-bit tristate buffer for signal <spi_miso> created at line 84
+    Found 1-bit tristate buffer for signal <spi_channel<3>> created at line 84
+    Found 1-bit tristate buffer for signal <spi_channel<2>> created at line 84
+    Found 1-bit tristate buffer for signal <spi_channel<1>> created at line 84
+    Found 1-bit tristate buffer for signal <spi_channel<0>> created at line 84
+    Found 1-bit tristate buffer for signal <avr_rx> created at line 84
     Summary:
 	inferred   6 Tristate(s).
 Unit <mojo_top_0> synthesized.
@@ -165,12 +178,86 @@ Synthesizing Unit <reset_conditioner_1>.
 	inferred   4 D-type flip-flop(s).
 Unit <reset_conditioner_1> synthesized.
 
-Synthesizing Unit <main_4>.
-    Related source file is "C:/Users/Jing Yun/Desktop/50.002 Computation Structure/1D_Game Design/502IntGitRepo/5021DInt/work/planAhead/Integrate1/Integrate1.srcs/sources_1/imports/verilog/main_4.v".
-INFO:Xst:3210 - "C:/Users/Jing Yun/Desktop/50.002 Computation Structure/1D_Game Design/502IntGitRepo/5021DInt/work/planAhead/Integrate1/Integrate1.srcs/sources_1/imports/verilog/main_4.v" line 61: Output port <clkChoice> of the instance <mypropogater> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "C:/Users/Jing Yun/Desktop/50.002 Computation Structure/1D_Game Design/502IntGitRepo/5021DInt/work/planAhead/Integrate1/Integrate1.srcs/sources_1/imports/verilog/main_4.v" line 117: Output port <z> of the instance <myalu> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "C:/Users/Jing Yun/Desktop/50.002 Computation Structure/1D_Game Design/502IntGitRepo/5021DInt/work/planAhead/Integrate1/Integrate1.srcs/sources_1/imports/verilog/main_4.v" line 117: Output port <v> of the instance <myalu> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "C:/Users/Jing Yun/Desktop/50.002 Computation Structure/1D_Game Design/502IntGitRepo/5021DInt/work/planAhead/Integrate1/Integrate1.srcs/sources_1/imports/verilog/main_4.v" line 117: Output port <n> of the instance <myalu> is unconnected or connected to loadless signal.
+Synthesizing Unit <state_4>.
+    Related source file is "C:/Users/Jing Yun/Desktop/50.002 Computation Structure/1D_Game Design/502IntGitRepo/5021DInt/work/planAhead/Integrate1/Integrate1.srcs/sources_1/imports/verilog/state_4.v".
+INFO:Xst:3210 - "C:/Users/Jing Yun/Desktop/50.002 Computation Structure/1D_Game Design/502IntGitRepo/5021DInt/work/planAhead/Integrate1/Integrate1.srcs/sources_1/imports/verilog/state_4.v" line 87: Output port <z> of the instance <myalu> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:/Users/Jing Yun/Desktop/50.002 Computation Structure/1D_Game Design/502IntGitRepo/5021DInt/work/planAhead/Integrate1/Integrate1.srcs/sources_1/imports/verilog/state_4.v" line 87: Output port <v> of the instance <myalu> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:/Users/Jing Yun/Desktop/50.002 Computation Structure/1D_Game Design/502IntGitRepo/5021DInt/work/planAhead/Integrate1/Integrate1.srcs/sources_1/imports/verilog/state_4.v" line 87: Output port <n> of the instance <myalu> is unconnected or connected to loadless signal.
+    Found 2-bit register for signal <M_state_q>.
+    Found finite state machine <FSM_0> for signal <M_state_q>.
+    -----------------------------------------------------------------------
+    | States             | 3                                              |
+    | Transitions        | 6                                              |
+    | Inputs             | 3                                              |
+    | Outputs            | 3                                              |
+    | Clock              | clk (rising_edge)                              |
+    | Reset              | rst (positive)                                 |
+    | Reset type         | synchronous                                    |
+    | Reset State        | 10                                             |
+    | Power Up State     | 10                                             |
+    | Encoding           | auto                                           |
+    | Implementation     | LUT                                            |
+    -----------------------------------------------------------------------
+    Summary:
+	inferred  11 Multiplexer(s).
+	inferred   1 Finite State Machine(s).
+Unit <state_4> synthesized.
+
+Synthesizing Unit <bcounter_5>.
+    Related source file is "C:/Users/Jing Yun/Desktop/50.002 Computation Structure/1D_Game Design/502IntGitRepo/5021DInt/work/planAhead/Integrate1/Integrate1.srcs/sources_1/imports/verilog/bcounter_5.v".
+    Found 1-bit register for signal <M_left_q>.
+    Found 1-bit register for signal <M_right_q>.
+    Found 1-bit register for signal <M_cent_q>.
+    Found 8-bit register for signal <M_ctr_q>.
+    Summary:
+	inferred  11 D-type flip-flop(s).
+Unit <bcounter_5> synthesized.
+
+Synthesizing Unit <button_conditioner_9>.
+    Related source file is "C:/Users/Jing Yun/Desktop/50.002 Computation Structure/1D_Game Design/502IntGitRepo/5021DInt/work/planAhead/Integrate1/Integrate1.srcs/sources_1/imports/verilog/button_conditioner_9.v".
+    Found 20-bit register for signal <M_ctr_q>.
+    Found 20-bit adder for signal <M_ctr_q[19]_GND_5_o_add_2_OUT> created at line 39.
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+	inferred  20 D-type flip-flop(s).
+Unit <button_conditioner_9> synthesized.
+
+Synthesizing Unit <pipeline_26>.
+    Related source file is "C:/Users/Jing Yun/Desktop/50.002 Computation Structure/1D_Game Design/502IntGitRepo/5021DInt/work/planAhead/Integrate1/Integrate1.srcs/sources_1/imports/verilog/pipeline_26.v".
+    Found 2-bit register for signal <M_pipe_q>.
+    Summary:
+	inferred   2 D-type flip-flop(s).
+Unit <pipeline_26> synthesized.
+
+Synthesizing Unit <counter_12>.
+    Related source file is "C:/Users/Jing Yun/Desktop/50.002 Computation Structure/1D_Game Design/502IntGitRepo/5021DInt/work/planAhead/Integrate1/Integrate1.srcs/sources_1/imports/verilog/counter_12.v".
+    Found 23-bit register for signal <M_ctr_q>.
+    Found 23-bit adder for signal <M_ctr_d> created at line 35.
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+	inferred  23 D-type flip-flop(s).
+Unit <counter_12> synthesized.
+
+Synthesizing Unit <edge_detector_13>.
+    Related source file is "C:/Users/Jing Yun/Desktop/50.002 Computation Structure/1D_Game Design/502IntGitRepo/5021DInt/work/planAhead/Integrate1/Integrate1.srcs/sources_1/imports/verilog/edge_detector_13.v".
+    Found 1-bit register for signal <M_last_q>.
+    Summary:
+	inferred   1 D-type flip-flop(s).
+Unit <edge_detector_13> synthesized.
+
+Synthesizing Unit <reg8bit_6>.
+    Related source file is "C:/Users/Jing Yun/Desktop/50.002 Computation Structure/1D_Game Design/502IntGitRepo/5021DInt/work/planAhead/Integrate1/Integrate1.srcs/sources_1/imports/verilog/reg8bit_6.v".
+    Found 8-bit register for signal <M_regs_q>.
+    Summary:
+	inferred   8 D-type flip-flop(s).
+Unit <reg8bit_6> synthesized.
+
+Synthesizing Unit <main_7>.
+    Related source file is "C:/Users/Jing Yun/Desktop/50.002 Computation Structure/1D_Game Design/502IntGitRepo/5021DInt/work/planAhead/Integrate1/Integrate1.srcs/sources_1/imports/verilog/main_7.v".
+INFO:Xst:3210 - "C:/Users/Jing Yun/Desktop/50.002 Computation Structure/1D_Game Design/502IntGitRepo/5021DInt/work/planAhead/Integrate1/Integrate1.srcs/sources_1/imports/verilog/main_7.v" line 61: Output port <clkChoice> of the instance <mypropogater> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:/Users/Jing Yun/Desktop/50.002 Computation Structure/1D_Game Design/502IntGitRepo/5021DInt/work/planAhead/Integrate1/Integrate1.srcs/sources_1/imports/verilog/main_7.v" line 117: Output port <z> of the instance <myalu> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:/Users/Jing Yun/Desktop/50.002 Computation Structure/1D_Game Design/502IntGitRepo/5021DInt/work/planAhead/Integrate1/Integrate1.srcs/sources_1/imports/verilog/main_7.v" line 117: Output port <v> of the instance <myalu> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:/Users/Jing Yun/Desktop/50.002 Computation Structure/1D_Game Design/502IntGitRepo/5021DInt/work/planAhead/Integrate1/Integrate1.srcs/sources_1/imports/verilog/main_7.v" line 117: Output port <n> of the instance <myalu> is unconnected or connected to loadless signal.
     Found 1-bit register for signal <M_right_q>.
     Found 1-bit register for signal <M_cent_q>.
     Found 1-bit register for signal <M_left_q>.
@@ -178,89 +265,64 @@ INFO:Xst:3210 - "C:/Users/Jing Yun/Desktop/50.002 Computation Structure/1D_Game 
     Summary:
 	inferred   3 D-type flip-flop(s).
 	inferred   8 Multiplexer(s).
-Unit <main_4> synthesized.
+Unit <main_7> synthesized.
 
-Synthesizing Unit <button_conditioner_5>.
-    Related source file is "C:/Users/Jing Yun/Desktop/50.002 Computation Structure/1D_Game Design/502IntGitRepo/5021DInt/work/planAhead/Integrate1/Integrate1.srcs/sources_1/imports/verilog/button_conditioner_5.v".
-    Found 20-bit register for signal <M_ctr_q>.
-    Found 20-bit adder for signal <M_ctr_q[19]_GND_4_o_add_2_OUT> created at line 39.
-    Summary:
-	inferred   1 Adder/Subtractor(s).
-	inferred  20 D-type flip-flop(s).
-Unit <button_conditioner_5> synthesized.
-
-Synthesizing Unit <pipeline_15>.
-    Related source file is "C:/Users/Jing Yun/Desktop/50.002 Computation Structure/1D_Game Design/502IntGitRepo/5021DInt/work/planAhead/Integrate1/Integrate1.srcs/sources_1/imports/verilog/pipeline_15.v".
-    Found 2-bit register for signal <M_pipe_q>.
-    Summary:
-	inferred   2 D-type flip-flop(s).
-Unit <pipeline_15> synthesized.
-
-Synthesizing Unit <counter_8>.
-    Related source file is "C:/Users/Jing Yun/Desktop/50.002 Computation Structure/1D_Game Design/502IntGitRepo/5021DInt/work/planAhead/Integrate1/Integrate1.srcs/sources_1/imports/verilog/counter_8.v".
-    Found 23-bit register for signal <M_ctr_q>.
-    Found 23-bit adder for signal <M_ctr_d> created at line 35.
-    Summary:
-	inferred   1 Adder/Subtractor(s).
-	inferred  23 D-type flip-flop(s).
-Unit <counter_8> synthesized.
-
-Synthesizing Unit <propogate_9>.
-    Related source file is "C:/Users/Jing Yun/Desktop/50.002 Computation Structure/1D_Game Design/502IntGitRepo/5021DInt/work/planAhead/Integrate1/Integrate1.srcs/sources_1/imports/verilog/propogate_9.v".
+Synthesizing Unit <propogate_20>.
+    Related source file is "C:/Users/Jing Yun/Desktop/50.002 Computation Structure/1D_Game Design/502IntGitRepo/5021DInt/work/planAhead/Integrate1/Integrate1.srcs/sources_1/imports/verilog/propogate_20.v".
     Found 32-bit register for signal <M_clkseed_q>.
     Found 32-bit register for signal <M_seed_q>.
-    Found 32-bit adder for signal <M_seed_q[31]_GND_7_o_add_3_OUT> created at line 171.
-    Found 32-bit adder for signal <M_clkseed_q[31]_GND_7_o_add_4_OUT> created at line 172.
-    Found 4x4-bit Read Only RAM for signal <_n0078>
+    Found 32-bit adder for signal <M_seed_q[31]_GND_11_o_add_3_OUT> created at line 171.
+    Found 32-bit adder for signal <M_clkseed_q[31]_GND_11_o_add_4_OUT> created at line 172.
+    Found 4x4-bit Read Only RAM for signal <_n0079>
     Summary:
 	inferred   1 RAM(s).
 	inferred   2 Adder/Subtractor(s).
 	inferred  64 D-type flip-flop(s).
-	inferred  10 Multiplexer(s).
-Unit <propogate_9> synthesized.
+	inferred  11 Multiplexer(s).
+Unit <propogate_20> synthesized.
 
-Synthesizing Unit <counter_18>.
-    Related source file is "C:/Users/Jing Yun/Desktop/50.002 Computation Structure/1D_Game Design/502IntGitRepo/5021DInt/work/planAhead/Integrate1/Integrate1.srcs/sources_1/imports/verilog/counter_18.v".
+Synthesizing Unit <counter_32>.
+    Related source file is "C:/Users/Jing Yun/Desktop/50.002 Computation Structure/1D_Game Design/502IntGitRepo/5021DInt/work/planAhead/Integrate1/Integrate1.srcs/sources_1/imports/verilog/counter_32.v".
     Found 24-bit register for signal <M_ctr_q>.
     Found 24-bit adder for signal <M_ctr_d> created at line 35.
     Summary:
 	inferred   1 Adder/Subtractor(s).
 	inferred  24 D-type flip-flop(s).
-Unit <counter_18> synthesized.
+Unit <counter_32> synthesized.
 
-Synthesizing Unit <counter_19>.
-    Related source file is "C:/Users/Jing Yun/Desktop/50.002 Computation Structure/1D_Game Design/502IntGitRepo/5021DInt/work/planAhead/Integrate1/Integrate1.srcs/sources_1/imports/verilog/counter_19.v".
+Synthesizing Unit <counter_33>.
+    Related source file is "C:/Users/Jing Yun/Desktop/50.002 Computation Structure/1D_Game Design/502IntGitRepo/5021DInt/work/planAhead/Integrate1/Integrate1.srcs/sources_1/imports/verilog/counter_33.v".
     Found 25-bit register for signal <M_ctr_q>.
     Found 25-bit adder for signal <M_ctr_d> created at line 35.
     Summary:
 	inferred   1 Adder/Subtractor(s).
 	inferred  25 D-type flip-flop(s).
-Unit <counter_19> synthesized.
+Unit <counter_33> synthesized.
 
-Synthesizing Unit <counter_20>.
-    Related source file is "C:/Users/Jing Yun/Desktop/50.002 Computation Structure/1D_Game Design/502IntGitRepo/5021DInt/work/planAhead/Integrate1/Integrate1.srcs/sources_1/imports/verilog/counter_20.v".
+Synthesizing Unit <counter_34>.
+    Related source file is "C:/Users/Jing Yun/Desktop/50.002 Computation Structure/1D_Game Design/502IntGitRepo/5021DInt/work/planAhead/Integrate1/Integrate1.srcs/sources_1/imports/verilog/counter_34.v".
     Found 26-bit register for signal <M_ctr_q>.
     Found 26-bit adder for signal <M_ctr_d> created at line 35.
     Summary:
 	inferred   1 Adder/Subtractor(s).
 	inferred  26 D-type flip-flop(s).
-Unit <counter_20> synthesized.
+Unit <counter_34> synthesized.
 
-Synthesizing Unit <randomizer_21>.
-    Related source file is "C:/Users/Jing Yun/Desktop/50.002 Computation Structure/1D_Game Design/502IntGitRepo/5021DInt/work/planAhead/Integrate1/Integrate1.srcs/sources_1/imports/verilog/randomizer_21.v".
+Synthesizing Unit <randomizer_35>.
+    Related source file is "C:/Users/Jing Yun/Desktop/50.002 Computation Structure/1D_Game Design/502IntGitRepo/5021DInt/work/planAhead/Integrate1/Integrate1.srcs/sources_1/imports/verilog/randomizer_35.v".
     Summary:
 	no macro.
-Unit <randomizer_21> synthesized.
+Unit <randomizer_35> synthesized.
 
-Synthesizing Unit <register_23>.
-    Related source file is "C:/Users/Jing Yun/Desktop/50.002 Computation Structure/1D_Game Design/502IntGitRepo/5021DInt/work/planAhead/Integrate1/Integrate1.srcs/sources_1/imports/verilog/register_23.v".
+Synthesizing Unit <reg3bit_37>.
+    Related source file is "C:/Users/Jing Yun/Desktop/50.002 Computation Structure/1D_Game Design/502IntGitRepo/5021DInt/work/planAhead/Integrate1/Integrate1.srcs/sources_1/imports/verilog/reg3bit_37.v".
     Found 3-bit register for signal <M_regs_q>.
     Summary:
 	inferred   3 D-type flip-flop(s).
-Unit <register_23> synthesized.
+Unit <reg3bit_37> synthesized.
 
-Synthesizing Unit <pn_gen_25>.
-    Related source file is "C:/Users/Jing Yun/Desktop/50.002 Computation Structure/1D_Game Design/502IntGitRepo/5021DInt/work/planAhead/Integrate1/Integrate1.srcs/sources_1/imports/verilog/pn_gen_25.v".
+Synthesizing Unit <pn_gen_39>.
+    Related source file is "C:/Users/Jing Yun/Desktop/50.002 Computation Structure/1D_Game Design/502IntGitRepo/5021DInt/work/planAhead/Integrate1/Integrate1.srcs/sources_1/imports/verilog/pn_gen_39.v".
     Found 32-bit register for signal <M_y_q>.
     Found 32-bit register for signal <M_z_q>.
     Found 32-bit register for signal <M_w_q>.
@@ -268,38 +330,31 @@ Synthesizing Unit <pn_gen_25>.
     Summary:
 	inferred 128 D-type flip-flop(s).
 	inferred   4 Multiplexer(s).
-Unit <pn_gen_25> synthesized.
+Unit <pn_gen_39> synthesized.
 
-Synthesizing Unit <counter_22>.
-    Related source file is "C:/Users/Jing Yun/Desktop/50.002 Computation Structure/1D_Game Design/502IntGitRepo/5021DInt/work/planAhead/Integrate1/Integrate1.srcs/sources_1/imports/verilog/counter_22.v".
+Synthesizing Unit <counter_36>.
+    Related source file is "C:/Users/Jing Yun/Desktop/50.002 Computation Structure/1D_Game Design/502IntGitRepo/5021DInt/work/planAhead/Integrate1/Integrate1.srcs/sources_1/imports/verilog/counter_36.v".
     Found 2-bit register for signal <M_ctr_q>.
     Found 2-bit adder for signal <M_ctr_d> created at line 35.
     Summary:
 	inferred   1 Adder/Subtractor(s).
 	inferred   2 D-type flip-flop(s).
-Unit <counter_22> synthesized.
+Unit <counter_36> synthesized.
 
-Synthesizing Unit <edge_detector_10>.
-    Related source file is "C:/Users/Jing Yun/Desktop/50.002 Computation Structure/1D_Game Design/502IntGitRepo/5021DInt/work/planAhead/Integrate1/Integrate1.srcs/sources_1/imports/verilog/edge_detector_10.v".
-    Found 1-bit register for signal <M_last_q>.
-    Summary:
-	inferred   1 D-type flip-flop(s).
-Unit <edge_detector_10> synthesized.
-
-Synthesizing Unit <register2_13>.
-    Related source file is "C:/Users/Jing Yun/Desktop/50.002 Computation Structure/1D_Game Design/502IntGitRepo/5021DInt/work/planAhead/Integrate1/Integrate1.srcs/sources_1/imports/verilog/register2_13.v".
+Synthesizing Unit <reg2bit_24>.
+    Related source file is "C:/Users/Jing Yun/Desktop/50.002 Computation Structure/1D_Game Design/502IntGitRepo/5021DInt/work/planAhead/Integrate1/Integrate1.srcs/sources_1/imports/verilog/reg2bit_24.v".
     Found 2-bit register for signal <M_regs_q>.
     Summary:
 	inferred   2 D-type flip-flop(s).
-Unit <register2_13> synthesized.
+Unit <reg2bit_24> synthesized.
 
-Synthesizing Unit <alu_14>.
-    Related source file is "C:/Users/Jing Yun/Desktop/50.002 Computation Structure/1D_Game Design/502IntGitRepo/5021DInt/work/planAhead/Integrate1/Integrate1.srcs/sources_1/imports/verilog/alu_14.v".
-    Found 9-bit subtractor for signal <GND_17_o_GND_17_o_sub_4_OUT> created at line 45.
+Synthesizing Unit <alu_8>.
+    Related source file is "C:/Users/Jing Yun/Desktop/50.002 Computation Structure/1D_Game Design/502IntGitRepo/5021DInt/work/planAhead/Integrate1/Integrate1.srcs/sources_1/imports/verilog/alu_8.v".
+    Found 9-bit subtractor for signal <GND_20_o_GND_20_o_sub_4_OUT> created at line 45.
     Found 9-bit adder for signal <n0127[8:0]> created at line 37.
     Found 8x8-bit multiplier for signal <a[7]_b[7]_MuLt_0_OUT> created at line 34.
-    Found 16-bit shifter logical left for signal <GND_17_o_b[2]_shift_left_5_OUT> created at line 53
-    Found 16-bit shifter logical right for signal <GND_17_o_b[2]_shift_right_6_OUT> created at line 56
+    Found 16-bit shifter logical left for signal <GND_20_o_b[2]_shift_left_5_OUT> created at line 53
+    Found 16-bit shifter logical right for signal <GND_20_o_b[2]_shift_right_6_OUT> created at line 56
     Found 16-bit shifter arithmetic right for signal <a[7]_b[2]_shift_right_7_OUT> created at line 59
 WARNING:Xst:737 - Found 1-bit latch for signal <alu1<14>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
 WARNING:Xst:737 - Found 1-bit latch for signal <alu1<13>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
@@ -317,11 +372,16 @@ WARNING:Xst:737 - Found 1-bit latch for signal <alu1<2>>. Latches may be generat
 WARNING:Xst:737 - Found 1-bit latch for signal <alu1<1>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
 WARNING:Xst:737 - Found 1-bit latch for signal <alu1<0>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
 WARNING:Xst:737 - Found 1-bit latch for signal <alu1<15>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+    Found 8-bit comparator greater for signal <b[7]_a[7]_LessThan_12_o> created at line 74
+    Found 8-bit comparator lessequal for signal <n0027> created at line 81
     Found 8-bit comparator equal for signal <a[7]_b[7]_equal_16_o> created at line 88
     Summary:
+	inferred   1 Multiplier(s).
+	inferred   2 Adder/Subtractor(s).
 	inferred  16 Latch(s).
-	inferred   1 Comparator(s).
-Unit <alu_14> synthesized.
+	inferred   3 Comparator(s).
+	inferred   3 Combinational logic shifter(s).
+Unit <alu_8> synthesized.
 
 =========================================================================
 HDL Synthesis Report
@@ -329,37 +389,51 @@ HDL Synthesis Report
 Macro Statistics
 # RAMs                                                 : 1
  4x4-bit single-port Read Only RAM                     : 1
-# Adders/Subtractors                                   : 11
+# Multipliers                                          : 2
+ 8x8-bit multiplier                                    : 2
+# Adders/Subtractors                                   : 19
  2-bit adder                                           : 1
- 20-bit adder                                          : 3
- 23-bit adder                                          : 2
+ 20-bit adder                                          : 6
+ 23-bit adder                                          : 3
  24-bit adder                                          : 1
  25-bit adder                                          : 1
  26-bit adder                                          : 1
  32-bit adder                                          : 2
-# Registers                                            : 32
- 1-bit register                                        : 6
- 2-bit register                                        : 5
- 20-bit register                                       : 3
- 23-bit register                                       : 2
+ 9-bit adder                                           : 2
+ 9-bit subtractor                                      : 2
+# Registers                                            : 47
+ 1-bit register                                        : 12
+ 2-bit register                                        : 8
+ 20-bit register                                       : 6
+ 23-bit register                                       : 3
  24-bit register                                       : 1
  25-bit register                                       : 1
  26-bit register                                       : 1
  3-bit register                                        : 2
  32-bit register                                       : 10
  4-bit register                                        : 1
-# Latches                                              : 16
- 1-bit latch                                           : 16
-# Comparators                                          : 1
- 8-bit comparator equal                                : 1
-# Multiplexers                                         : 26
- 1-bit 2-to-1 multiplexer                              : 14
+ 8-bit register                                        : 2
+# Latches                                              : 32
+ 1-bit latch                                           : 32
+# Comparators                                          : 6
+ 8-bit comparator equal                                : 2
+ 8-bit comparator greater                              : 2
+ 8-bit comparator lessequal                            : 2
+# Multiplexers                                         : 38
+ 1-bit 2-to-1 multiplexer                              : 23
  2-bit 3-to-1 multiplexer                              : 1
  3-bit 2-to-1 multiplexer                              : 1
  32-bit 2-to-1 multiplexer                             : 10
+ 8-bit 2-to-1 multiplexer                              : 3
+# Logic shifters                                       : 6
+ 16-bit shifter arithmetic right                       : 2
+ 16-bit shifter logical left                           : 2
+ 16-bit shifter logical right                          : 2
 # Tristates                                            : 6
  1-bit tristate buffer                                 : 6
-# Xors                                                 : 6
+# FSMs                                                 : 1
+# Xors                                                 : 8
+ 16-bit xor2                                           : 2
  32-bit xor2                                           : 4
  32-bit xor4                                           : 2
 
@@ -370,34 +444,34 @@ Macro Statistics
 =========================================================================
 
 
-Synthesizing (advanced) Unit <button_conditioner_5>.
+Synthesizing (advanced) Unit <button_conditioner_9>.
 The following registers are absorbed into counter <M_ctr_q>: 1 register on signal <M_ctr_q>.
-Unit <button_conditioner_5> synthesized (advanced).
+Unit <button_conditioner_9> synthesized (advanced).
 
-Synthesizing (advanced) Unit <counter_18>.
+Synthesizing (advanced) Unit <counter_12>.
 The following registers are absorbed into counter <M_ctr_q>: 1 register on signal <M_ctr_q>.
-Unit <counter_18> synthesized (advanced).
+Unit <counter_12> synthesized (advanced).
 
-Synthesizing (advanced) Unit <counter_19>.
+Synthesizing (advanced) Unit <counter_32>.
 The following registers are absorbed into counter <M_ctr_q>: 1 register on signal <M_ctr_q>.
-Unit <counter_19> synthesized (advanced).
+Unit <counter_32> synthesized (advanced).
 
-Synthesizing (advanced) Unit <counter_20>.
+Synthesizing (advanced) Unit <counter_33>.
 The following registers are absorbed into counter <M_ctr_q>: 1 register on signal <M_ctr_q>.
-Unit <counter_20> synthesized (advanced).
+Unit <counter_33> synthesized (advanced).
 
-Synthesizing (advanced) Unit <counter_22>.
+Synthesizing (advanced) Unit <counter_34>.
 The following registers are absorbed into counter <M_ctr_q>: 1 register on signal <M_ctr_q>.
-Unit <counter_22> synthesized (advanced).
+Unit <counter_34> synthesized (advanced).
 
-Synthesizing (advanced) Unit <counter_8>.
+Synthesizing (advanced) Unit <counter_36>.
 The following registers are absorbed into counter <M_ctr_q>: 1 register on signal <M_ctr_q>.
-Unit <counter_8> synthesized (advanced).
+Unit <counter_36> synthesized (advanced).
 
-Synthesizing (advanced) Unit <propogate_9>.
+Synthesizing (advanced) Unit <propogate_20>.
 The following registers are absorbed into counter <M_seed_q>: 1 register on signal <M_seed_q>.
 The following registers are absorbed into counter <M_clkseed_q>: 1 register on signal <M_clkseed_q>.
-INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram__n0078> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram__n0079> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
     -----------------------------------------------------------------------
     | ram_type           | Distributed                         |          |
     -----------------------------------------------------------------------
@@ -408,7 +482,7 @@ INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram__n0078> will be implemented on LUTs 
     |     diA            | connected to signal <GND>           |          |
     |     doA            | connected to internal node          |          |
     -----------------------------------------------------------------------
-Unit <propogate_9> synthesized (advanced).
+Unit <propogate_20> synthesized (advanced).
 
 =========================================================================
 Advanced HDL Synthesis Report
@@ -416,24 +490,38 @@ Advanced HDL Synthesis Report
 Macro Statistics
 # RAMs                                                 : 1
  4x4-bit single-port distributed Read Only RAM         : 1
-# Counters                                             : 11
+# Multipliers                                          : 2
+ 8x8-bit multiplier                                    : 2
+# Adders/Subtractors                                   : 4
+ 8-bit adder                                           : 2
+ 8-bit subtractor                                      : 2
+# Counters                                             : 15
  2-bit up counter                                      : 1
- 20-bit up counter                                     : 3
- 23-bit up counter                                     : 2
+ 20-bit up counter                                     : 6
+ 23-bit up counter                                     : 3
  24-bit up counter                                     : 1
  25-bit up counter                                     : 1
  26-bit up counter                                     : 1
  32-bit up counter                                     : 2
-# Registers                                            : 280
- Flip-Flops                                            : 280
-# Comparators                                          : 1
- 8-bit comparator equal                                : 1
-# Multiplexers                                         : 24
- 1-bit 2-to-1 multiplexer                              : 14
+# Registers                                            : 308
+ Flip-Flops                                            : 308
+# Comparators                                          : 6
+ 8-bit comparator equal                                : 2
+ 8-bit comparator greater                              : 2
+ 8-bit comparator lessequal                            : 2
+# Multiplexers                                         : 36
+ 1-bit 2-to-1 multiplexer                              : 23
  2-bit 3-to-1 multiplexer                              : 1
  3-bit 2-to-1 multiplexer                              : 1
  32-bit 2-to-1 multiplexer                             : 8
-# Xors                                                 : 6
+ 8-bit 2-to-1 multiplexer                              : 3
+# Logic shifters                                       : 6
+ 16-bit shifter arithmetic right                       : 2
+ 16-bit shifter logical left                           : 2
+ 16-bit shifter logical right                          : 2
+# FSMs                                                 : 1
+# Xors                                                 : 8
+ 16-bit xor2                                           : 2
  32-bit xor2                                           : 4
  32-bit xor4                                           : 2
 
@@ -442,284 +530,423 @@ Macro Statistics
 =========================================================================
 *                         Low Level Synthesis                           *
 =========================================================================
-INFO:Xst:2146 - In block <main_4>, Counter <edge_ctr/M_ctr_q> <mypropogater/slowclk22/M_ctr_q> are equivalent, XST will keep only <edge_ctr/M_ctr_q>.
+WARNING:Xst:1293 - FF/Latch <M_ctr_q_1> has a constant value of 0 in block <bcounter_5>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <M_ctr_q_2> has a constant value of 0 in block <bcounter_5>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <M_ctr_q_3> has a constant value of 0 in block <bcounter_5>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <M_ctr_q_4> has a constant value of 0 in block <bcounter_5>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <M_ctr_q_5> has a constant value of 0 in block <bcounter_5>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <M_ctr_q_6> has a constant value of 0 in block <bcounter_5>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <M_ctr_q_7> has a constant value of 0 in block <bcounter_5>. This FF/Latch will be trimmed during the optimization process.
+Analyzing FSM <MFsm> for best encoding.
+Optimizing FSM <myState/FSM_0> on signal <M_state_q[1:2]> with user encoding.
+-------------------
+ State | Encoding
+-------------------
+ 10    | 10
+ 00    | 00
+ 01    | 01
+-------------------
+INFO:Xst:2146 - In block <main_7>, Counter <edge_ctr/M_ctr_q> <mypropogater/slowclk22/M_ctr_q> are equivalent, XST will keep only <edge_ctr/M_ctr_q>.
+
+Optimizing unit <reg8bit_6> ...
 
 Optimizing unit <mojo_top_0> ...
 
-Optimizing unit <main_4> ...
+Optimizing unit <state_4> ...
 
-Optimizing unit <pn_gen_25> ...
-WARNING:Xst:1293 - FF/Latch <mymain/mypropogater/randomizer/clk_gen/M_z_q_18> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <mymain/mypropogater/randomizer/clk_gen/M_z_q_19> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <mymain/mypropogater/randomizer/clk_gen/M_z_q_20> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <mymain/mypropogater/randomizer/clk_gen/M_z_q_23> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <mymain/mypropogater/randomizer/clk_gen/M_z_q_24> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <mymain/mypropogater/randomizer/clk_gen/M_z_q_26> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <mymain/mypropogater/randomizer/clk_gen/M_z_q_30> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <mymain/mypropogater/randomizer/clk_gen/M_z_q_31> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <mymain/mypropogater/randomizer/clk_gen/M_y_q_1> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <mymain/mypropogater/randomizer/clk_gen/M_y_q_3> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <mymain/mypropogater/randomizer/clk_gen/M_y_q_4> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <mymain/mypropogater/randomizer/clk_gen/M_y_q_6> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <mymain/mypropogater/randomizer/clk_gen/M_y_q_7> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <mymain/mypropogater/randomizer/clk_gen/M_y_q_8> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <mymain/mypropogater/randomizer/clk_gen/M_y_q_10> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <mymain/mypropogater/randomizer/clk_gen/M_y_q_11> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <mymain/mypropogater/randomizer/clk_gen/M_y_q_12> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <mymain/mypropogater/randomizer/clk_gen/M_y_q_15> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <mymain/mypropogater/randomizer/clk_gen/M_y_q_18> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <mymain/mypropogater/randomizer/clk_gen/M_y_q_22> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <mymain/mypropogater/randomizer/clk_gen/M_y_q_23> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <mymain/mypropogater/randomizer/clk_gen/M_y_q_24> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <mymain/mypropogater/randomizer/clk_gen/M_y_q_26> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <mymain/mypropogater/randomizer/clk_gen/M_y_q_27> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <mymain/mypropogater/randomizer/clk_gen/M_y_q_28> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <mymain/mypropogater/randomizer/clk_gen/M_y_q_29> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <mymain/mypropogater/randomizer/clk_gen/M_y_q_31> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <mymain/mypropogater/randomizer/clk_gen/M_x_q_0> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <mymain/mypropogater/randomizer/clk_gen/M_x_q_2> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <mymain/mypropogater/randomizer/clk_gen/M_x_q_3> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <mymain/mypropogater/randomizer/clk_gen/M_x_q_4> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <mymain/mypropogater/randomizer/clk_gen/M_x_q_7> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <mymain/mypropogater/randomizer/clk_gen/M_x_q_8> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <mymain/mypropogater/randomizer/clk_gen/M_x_q_9> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <mymain/mypropogater/randomizer/clk_gen/M_x_q_12> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <mymain/mypropogater/randomizer/clk_gen/M_x_q_14> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <mymain/mypropogater/randomizer/clk_gen/M_x_q_15> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <mymain/mypropogater/randomizer/clk_gen/M_x_q_17> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <mymain/mypropogater/randomizer/clk_gen/M_x_q_18> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <mymain/mypropogater/randomizer/clk_gen/M_x_q_21> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <mymain/mypropogater/randomizer/clk_gen/M_x_q_23> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <mymain/mypropogater/randomizer/clk_gen/M_x_q_24> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <mymain/mypropogater/randomizer/clk_gen/M_x_q_26> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <mymain/mypropogater/randomizer/clk_gen/M_x_q_27> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <mymain/mypropogater/randomizer/clk_gen/M_x_q_28> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <mymain/mypropogater/randomizer/clk_gen/M_x_q_31> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <mymain/mypropogater/randomizer/clk_gen/M_z_q_0> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <mymain/mypropogater/randomizer/clk_gen/M_z_q_3> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <mymain/mypropogater/randomizer/clk_gen/M_z_q_4> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <mymain/mypropogater/randomizer/clk_gen/M_z_q_7> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <mymain/mypropogater/randomizer/clk_gen/M_z_q_9> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <mymain/mypropogater/randomizer/clk_gen/M_z_q_10> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <mymain/mypropogater/randomizer/clk_gen/M_z_q_14> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <mymain/mypropogater/randomizer/clk_gen/M_z_q_15> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <mymain/mypropogater/randomizer/clk_gen/M_z_q_17> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <mymain/mypropogater/randomizer/numb_gen/M_z_q_18> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <mymain/mypropogater/randomizer/numb_gen/M_z_q_19> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <mymain/mypropogater/randomizer/numb_gen/M_z_q_20> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <mymain/mypropogater/randomizer/numb_gen/M_z_q_23> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <mymain/mypropogater/randomizer/numb_gen/M_z_q_24> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <mymain/mypropogater/randomizer/numb_gen/M_z_q_26> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <mymain/mypropogater/randomizer/numb_gen/M_z_q_30> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <mymain/mypropogater/randomizer/numb_gen/M_z_q_31> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <mymain/mypropogater/randomizer/numb_gen/M_y_q_1> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <mymain/mypropogater/randomizer/numb_gen/M_y_q_3> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <mymain/mypropogater/randomizer/numb_gen/M_y_q_4> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <mymain/mypropogater/randomizer/numb_gen/M_y_q_6> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <mymain/mypropogater/randomizer/numb_gen/M_y_q_7> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <mymain/mypropogater/randomizer/numb_gen/M_y_q_8> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <mymain/mypropogater/randomizer/numb_gen/M_y_q_10> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <mymain/mypropogater/randomizer/numb_gen/M_y_q_11> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <mymain/mypropogater/randomizer/numb_gen/M_y_q_12> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <mymain/mypropogater/randomizer/numb_gen/M_y_q_15> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <mymain/mypropogater/randomizer/numb_gen/M_y_q_18> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <mymain/mypropogater/randomizer/numb_gen/M_y_q_22> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <mymain/mypropogater/randomizer/numb_gen/M_y_q_23> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <mymain/mypropogater/randomizer/numb_gen/M_y_q_24> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <mymain/mypropogater/randomizer/numb_gen/M_y_q_26> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <mymain/mypropogater/randomizer/numb_gen/M_y_q_27> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <mymain/mypropogater/randomizer/numb_gen/M_y_q_28> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <mymain/mypropogater/randomizer/numb_gen/M_y_q_29> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <mymain/mypropogater/randomizer/numb_gen/M_y_q_31> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <mymain/mypropogater/randomizer/numb_gen/M_x_q_0> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <mymain/mypropogater/randomizer/numb_gen/M_x_q_2> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <mymain/mypropogater/randomizer/numb_gen/M_x_q_3> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <mymain/mypropogater/randomizer/numb_gen/M_x_q_4> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <mymain/mypropogater/randomizer/numb_gen/M_x_q_7> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <mymain/mypropogater/randomizer/numb_gen/M_x_q_8> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <mymain/mypropogater/randomizer/numb_gen/M_x_q_9> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <mymain/mypropogater/randomizer/numb_gen/M_x_q_12> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <mymain/mypropogater/randomizer/numb_gen/M_x_q_14> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <mymain/mypropogater/randomizer/numb_gen/M_x_q_15> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <mymain/mypropogater/randomizer/numb_gen/M_x_q_17> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <mymain/mypropogater/randomizer/numb_gen/M_x_q_18> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <mymain/mypropogater/randomizer/numb_gen/M_x_q_21> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <mymain/mypropogater/randomizer/numb_gen/M_x_q_23> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <mymain/mypropogater/randomizer/numb_gen/M_x_q_24> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <mymain/mypropogater/randomizer/numb_gen/M_x_q_26> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <mymain/mypropogater/randomizer/numb_gen/M_x_q_27> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <mymain/mypropogater/randomizer/numb_gen/M_x_q_28> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <mymain/mypropogater/randomizer/numb_gen/M_x_q_31> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <mymain/mypropogater/randomizer/numb_gen/M_z_q_0> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <mymain/mypropogater/randomizer/numb_gen/M_z_q_3> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <mymain/mypropogater/randomizer/numb_gen/M_z_q_4> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <mymain/mypropogater/randomizer/numb_gen/M_z_q_7> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <mymain/mypropogater/randomizer/numb_gen/M_z_q_9> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <mymain/mypropogater/randomizer/numb_gen/M_z_q_10> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <mymain/mypropogater/randomizer/numb_gen/M_z_q_14> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <mymain/mypropogater/randomizer/numb_gen/M_z_q_15> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <mymain/mypropogater/randomizer/numb_gen/M_z_q_17> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1898 - Due to constant pushing, FF/Latch <mymain/mypropogater/randomizer/numb_gen/M_z_q_29> is unconnected in block <mojo_top_0>.
-WARNING:Xst:1898 - Due to constant pushing, FF/Latch <mymain/mypropogater/randomizer/numb_gen/M_z_q_28> is unconnected in block <mojo_top_0>.
-WARNING:Xst:1898 - Due to constant pushing, FF/Latch <mymain/mypropogater/randomizer/numb_gen/M_z_q_27> is unconnected in block <mojo_top_0>.
-WARNING:Xst:1898 - Due to constant pushing, FF/Latch <mymain/mypropogater/randomizer/numb_gen/M_z_q_22> is unconnected in block <mojo_top_0>.
-WARNING:Xst:1898 - Due to constant pushing, FF/Latch <mymain/mypropogater/randomizer/numb_gen/M_z_q_12> is unconnected in block <mojo_top_0>.
-WARNING:Xst:1898 - Due to constant pushing, FF/Latch <mymain/mypropogater/randomizer/numb_gen/M_z_q_11> is unconnected in block <mojo_top_0>.
-WARNING:Xst:1898 - Due to constant pushing, FF/Latch <mymain/mypropogater/randomizer/numb_gen/M_z_q_8> is unconnected in block <mojo_top_0>.
-WARNING:Xst:1898 - Due to constant pushing, FF/Latch <mymain/mypropogater/randomizer/numb_gen/M_z_q_6> is unconnected in block <mojo_top_0>.
-WARNING:Xst:1898 - Due to constant pushing, FF/Latch <mymain/mypropogater/randomizer/numb_gen/M_z_q_1> is unconnected in block <mojo_top_0>.
-WARNING:Xst:1898 - Due to constant pushing, FF/Latch <mymain/mypropogater/randomizer/numb_gen/M_z_q_21> is unconnected in block <mojo_top_0>.
-WARNING:Xst:1898 - Due to constant pushing, FF/Latch <mymain/mypropogater/randomizer/numb_gen/M_y_q_21> is unconnected in block <mojo_top_0>.
-WARNING:Xst:1898 - Due to constant pushing, FF/Latch <mymain/mypropogater/randomizer/numb_gen/M_y_q_17> is unconnected in block <mojo_top_0>.
-WARNING:Xst:1898 - Due to constant pushing, FF/Latch <mymain/mypropogater/randomizer/numb_gen/M_y_q_14> is unconnected in block <mojo_top_0>.
-WARNING:Xst:1898 - Due to constant pushing, FF/Latch <mymain/mypropogater/randomizer/numb_gen/M_y_q_9> is unconnected in block <mojo_top_0>.
-WARNING:Xst:1898 - Due to constant pushing, FF/Latch <mymain/mypropogater/randomizer/numb_gen/M_z_q_2> is unconnected in block <mojo_top_0>.
-WARNING:Xst:1898 - Due to constant pushing, FF/Latch <mymain/mypropogater/randomizer/numb_gen/M_y_q_2> is unconnected in block <mojo_top_0>.
-WARNING:Xst:1898 - Due to constant pushing, FF/Latch <mymain/mypropogater/randomizer/numb_gen/M_y_q_0> is unconnected in block <mojo_top_0>.
-WARNING:Xst:1898 - Due to constant pushing, FF/Latch <mymain/mypropogater/randomizer/clk_gen/M_z_q_29> is unconnected in block <mojo_top_0>.
-WARNING:Xst:1898 - Due to constant pushing, FF/Latch <mymain/mypropogater/randomizer/clk_gen/M_z_q_28> is unconnected in block <mojo_top_0>.
-WARNING:Xst:1898 - Due to constant pushing, FF/Latch <mymain/mypropogater/randomizer/clk_gen/M_z_q_27> is unconnected in block <mojo_top_0>.
-WARNING:Xst:1898 - Due to constant pushing, FF/Latch <mymain/mypropogater/randomizer/clk_gen/M_z_q_22> is unconnected in block <mojo_top_0>.
-WARNING:Xst:1898 - Due to constant pushing, FF/Latch <mymain/mypropogater/randomizer/clk_gen/M_z_q_12> is unconnected in block <mojo_top_0>.
-WARNING:Xst:1898 - Due to constant pushing, FF/Latch <mymain/mypropogater/randomizer/clk_gen/M_z_q_11> is unconnected in block <mojo_top_0>.
-WARNING:Xst:1898 - Due to constant pushing, FF/Latch <mymain/mypropogater/randomizer/clk_gen/M_z_q_8> is unconnected in block <mojo_top_0>.
-WARNING:Xst:1898 - Due to constant pushing, FF/Latch <mymain/mypropogater/randomizer/clk_gen/M_z_q_6> is unconnected in block <mojo_top_0>.
-WARNING:Xst:1898 - Due to constant pushing, FF/Latch <mymain/mypropogater/randomizer/clk_gen/M_z_q_1> is unconnected in block <mojo_top_0>.
-WARNING:Xst:1898 - Due to constant pushing, FF/Latch <mymain/mypropogater/randomizer/clk_gen/M_z_q_21> is unconnected in block <mojo_top_0>.
-WARNING:Xst:1898 - Due to constant pushing, FF/Latch <mymain/mypropogater/randomizer/clk_gen/M_y_q_21> is unconnected in block <mojo_top_0>.
-WARNING:Xst:1898 - Due to constant pushing, FF/Latch <mymain/mypropogater/randomizer/clk_gen/M_y_q_17> is unconnected in block <mojo_top_0>.
-WARNING:Xst:1898 - Due to constant pushing, FF/Latch <mymain/mypropogater/randomizer/clk_gen/M_y_q_14> is unconnected in block <mojo_top_0>.
-WARNING:Xst:1898 - Due to constant pushing, FF/Latch <mymain/mypropogater/randomizer/clk_gen/M_y_q_9> is unconnected in block <mojo_top_0>.
-WARNING:Xst:1898 - Due to constant pushing, FF/Latch <mymain/mypropogater/randomizer/clk_gen/M_z_q_2> is unconnected in block <mojo_top_0>.
-WARNING:Xst:1898 - Due to constant pushing, FF/Latch <mymain/mypropogater/randomizer/clk_gen/M_y_q_2> is unconnected in block <mojo_top_0>.
-WARNING:Xst:1898 - Due to constant pushing, FF/Latch <mymain/mypropogater/randomizer/clk_gen/M_y_q_0> is unconnected in block <mojo_top_0>.
-WARNING:Xst:2677 - Node <mymain/mypropogater/M_seed_q_31> of sequential type is unconnected in block <mojo_top_0>.
-WARNING:Xst:2677 - Node <mymain/mypropogater/M_seed_q_30> of sequential type is unconnected in block <mojo_top_0>.
-WARNING:Xst:2677 - Node <mymain/mypropogater/M_seed_q_29> of sequential type is unconnected in block <mojo_top_0>.
-WARNING:Xst:2677 - Node <mymain/mypropogater/M_seed_q_28> of sequential type is unconnected in block <mojo_top_0>.
-WARNING:Xst:2677 - Node <mymain/mypropogater/M_seed_q_27> of sequential type is unconnected in block <mojo_top_0>.
-WARNING:Xst:2677 - Node <mymain/mypropogater/M_seed_q_26> of sequential type is unconnected in block <mojo_top_0>.
-WARNING:Xst:2677 - Node <mymain/mypropogater/M_seed_q_25> of sequential type is unconnected in block <mojo_top_0>.
-WARNING:Xst:2677 - Node <mymain/mypropogater/M_clkseed_q_31> of sequential type is unconnected in block <mojo_top_0>.
-WARNING:Xst:2677 - Node <mymain/mypropogater/M_clkseed_q_30> of sequential type is unconnected in block <mojo_top_0>.
-WARNING:Xst:2677 - Node <mymain/mypropogater/M_clkseed_q_29> of sequential type is unconnected in block <mojo_top_0>.
-WARNING:Xst:2677 - Node <mymain/mypropogater/M_clkseed_q_28> of sequential type is unconnected in block <mojo_top_0>.
-WARNING:Xst:2677 - Node <mymain/mypropogater/M_clkseed_q_27> of sequential type is unconnected in block <mojo_top_0>.
-WARNING:Xst:2677 - Node <mymain/mypropogater/M_clkseed_q_26> of sequential type is unconnected in block <mojo_top_0>.
-WARNING:Xst:2677 - Node <mymain/mypropogater/M_clkseed_q_25> of sequential type is unconnected in block <mojo_top_0>.
-WARNING:Xst:2677 - Node <mymain/mypropogater/randomizer/numb_gen/M_y_q_30> of sequential type is unconnected in block <mojo_top_0>.
-WARNING:Xst:2677 - Node <mymain/mypropogater/randomizer/numb_gen/M_y_q_25> of sequential type is unconnected in block <mojo_top_0>.
-WARNING:Xst:2677 - Node <mymain/mypropogater/randomizer/numb_gen/M_z_q_25> of sequential type is unconnected in block <mojo_top_0>.
-WARNING:Xst:2677 - Node <mymain/mypropogater/randomizer/numb_gen/M_w_q_31> of sequential type is unconnected in block <mojo_top_0>.
-WARNING:Xst:2677 - Node <mymain/mypropogater/randomizer/numb_gen/M_w_q_30> of sequential type is unconnected in block <mojo_top_0>.
-WARNING:Xst:2677 - Node <mymain/mypropogater/randomizer/numb_gen/M_w_q_29> of sequential type is unconnected in block <mojo_top_0>.
-WARNING:Xst:2677 - Node <mymain/mypropogater/randomizer/numb_gen/M_w_q_28> of sequential type is unconnected in block <mojo_top_0>.
-WARNING:Xst:2677 - Node <mymain/mypropogater/randomizer/numb_gen/M_w_q_27> of sequential type is unconnected in block <mojo_top_0>.
-WARNING:Xst:2677 - Node <mymain/mypropogater/randomizer/numb_gen/M_w_q_26> of sequential type is unconnected in block <mojo_top_0>.
-WARNING:Xst:2677 - Node <mymain/mypropogater/randomizer/numb_gen/M_w_q_25> of sequential type is unconnected in block <mojo_top_0>.
-WARNING:Xst:2677 - Node <mymain/mypropogater/randomizer/numb_gen/M_w_q_23> of sequential type is unconnected in block <mojo_top_0>.
-WARNING:Xst:2677 - Node <mymain/mypropogater/randomizer/numb_gen/M_w_q_22> of sequential type is unconnected in block <mojo_top_0>.
-WARNING:Xst:2677 - Node <mymain/mypropogater/randomizer/numb_gen/M_w_q_18> of sequential type is unconnected in block <mojo_top_0>.
-WARNING:Xst:2677 - Node <mymain/mypropogater/randomizer/numb_gen/M_w_q_17> of sequential type is unconnected in block <mojo_top_0>.
-WARNING:Xst:2677 - Node <mymain/mypropogater/randomizer/numb_gen/M_w_q_15> of sequential type is unconnected in block <mojo_top_0>.
-WARNING:Xst:2677 - Node <mymain/mypropogater/randomizer/numb_gen/M_w_q_14> of sequential type is unconnected in block <mojo_top_0>.
-WARNING:Xst:2677 - Node <mymain/mypropogater/randomizer/numb_gen/M_w_q_12> of sequential type is unconnected in block <mojo_top_0>.
-WARNING:Xst:2677 - Node <mymain/mypropogater/randomizer/numb_gen/M_w_q_11> of sequential type is unconnected in block <mojo_top_0>.
-WARNING:Xst:2677 - Node <mymain/mypropogater/randomizer/numb_gen/M_w_q_10> of sequential type is unconnected in block <mojo_top_0>.
-WARNING:Xst:2677 - Node <mymain/mypropogater/randomizer/numb_gen/M_w_q_9> of sequential type is unconnected in block <mojo_top_0>.
-WARNING:Xst:2677 - Node <mymain/mypropogater/randomizer/numb_gen/M_w_q_8> of sequential type is unconnected in block <mojo_top_0>.
-WARNING:Xst:2677 - Node <mymain/mypropogater/randomizer/numb_gen/M_w_q_7> of sequential type is unconnected in block <mojo_top_0>.
-WARNING:Xst:2677 - Node <mymain/mypropogater/randomizer/numb_gen/M_w_q_6> of sequential type is unconnected in block <mojo_top_0>.
-WARNING:Xst:2677 - Node <mymain/mypropogater/randomizer/numb_gen/M_w_q_4> of sequential type is unconnected in block <mojo_top_0>.
-WARNING:Xst:2677 - Node <mymain/mypropogater/randomizer/numb_gen/M_w_q_3> of sequential type is unconnected in block <mojo_top_0>.
-WARNING:Xst:2677 - Node <mymain/mypropogater/randomizer/numb_gen/M_x_q_30> of sequential type is unconnected in block <mojo_top_0>.
-WARNING:Xst:2677 - Node <mymain/mypropogater/randomizer/numb_gen/M_x_q_25> of sequential type is unconnected in block <mojo_top_0>.
-WARNING:Xst:2677 - Node <mymain/mypropogater/randomizer/numb_gen/M_x_q_22> of sequential type is unconnected in block <mojo_top_0>.
-WARNING:Xst:2677 - Node <mymain/mypropogater/randomizer/numb_gen/M_x_q_11> of sequential type is unconnected in block <mojo_top_0>.
-WARNING:Xst:2677 - Node <mymain/mypropogater/randomizer/numb_gen/M_x_q_6> of sequential type is unconnected in block <mojo_top_0>.
-WARNING:Xst:2677 - Node <mymain/mypropogater/randomizer/clk_gen/M_y_q_30> of sequential type is unconnected in block <mojo_top_0>.
-WARNING:Xst:2677 - Node <mymain/mypropogater/randomizer/clk_gen/M_y_q_25> of sequential type is unconnected in block <mojo_top_0>.
-WARNING:Xst:2677 - Node <mymain/mypropogater/randomizer/clk_gen/M_z_q_25> of sequential type is unconnected in block <mojo_top_0>.
-WARNING:Xst:2677 - Node <mymain/mypropogater/randomizer/clk_gen/M_w_q_31> of sequential type is unconnected in block <mojo_top_0>.
-WARNING:Xst:2677 - Node <mymain/mypropogater/randomizer/clk_gen/M_w_q_30> of sequential type is unconnected in block <mojo_top_0>.
-WARNING:Xst:2677 - Node <mymain/mypropogater/randomizer/clk_gen/M_w_q_29> of sequential type is unconnected in block <mojo_top_0>.
-WARNING:Xst:2677 - Node <mymain/mypropogater/randomizer/clk_gen/M_w_q_28> of sequential type is unconnected in block <mojo_top_0>.
-WARNING:Xst:2677 - Node <mymain/mypropogater/randomizer/clk_gen/M_w_q_27> of sequential type is unconnected in block <mojo_top_0>.
-WARNING:Xst:2677 - Node <mymain/mypropogater/randomizer/clk_gen/M_w_q_26> of sequential type is unconnected in block <mojo_top_0>.
-WARNING:Xst:2677 - Node <mymain/mypropogater/randomizer/clk_gen/M_w_q_25> of sequential type is unconnected in block <mojo_top_0>.
-WARNING:Xst:2677 - Node <mymain/mypropogater/randomizer/clk_gen/M_w_q_23> of sequential type is unconnected in block <mojo_top_0>.
-WARNING:Xst:2677 - Node <mymain/mypropogater/randomizer/clk_gen/M_w_q_22> of sequential type is unconnected in block <mojo_top_0>.
-WARNING:Xst:2677 - Node <mymain/mypropogater/randomizer/clk_gen/M_w_q_18> of sequential type is unconnected in block <mojo_top_0>.
-WARNING:Xst:2677 - Node <mymain/mypropogater/randomizer/clk_gen/M_w_q_17> of sequential type is unconnected in block <mojo_top_0>.
-WARNING:Xst:2677 - Node <mymain/mypropogater/randomizer/clk_gen/M_w_q_15> of sequential type is unconnected in block <mojo_top_0>.
-WARNING:Xst:2677 - Node <mymain/mypropogater/randomizer/clk_gen/M_w_q_14> of sequential type is unconnected in block <mojo_top_0>.
-WARNING:Xst:2677 - Node <mymain/mypropogater/randomizer/clk_gen/M_w_q_12> of sequential type is unconnected in block <mojo_top_0>.
-WARNING:Xst:2677 - Node <mymain/mypropogater/randomizer/clk_gen/M_w_q_11> of sequential type is unconnected in block <mojo_top_0>.
-WARNING:Xst:2677 - Node <mymain/mypropogater/randomizer/clk_gen/M_w_q_10> of sequential type is unconnected in block <mojo_top_0>.
-WARNING:Xst:2677 - Node <mymain/mypropogater/randomizer/clk_gen/M_w_q_9> of sequential type is unconnected in block <mojo_top_0>.
-WARNING:Xst:2677 - Node <mymain/mypropogater/randomizer/clk_gen/M_w_q_8> of sequential type is unconnected in block <mojo_top_0>.
-WARNING:Xst:2677 - Node <mymain/mypropogater/randomizer/clk_gen/M_w_q_7> of sequential type is unconnected in block <mojo_top_0>.
-WARNING:Xst:2677 - Node <mymain/mypropogater/randomizer/clk_gen/M_w_q_6> of sequential type is unconnected in block <mojo_top_0>.
-WARNING:Xst:2677 - Node <mymain/mypropogater/randomizer/clk_gen/M_w_q_4> of sequential type is unconnected in block <mojo_top_0>.
-WARNING:Xst:2677 - Node <mymain/mypropogater/randomizer/clk_gen/M_w_q_3> of sequential type is unconnected in block <mojo_top_0>.
-WARNING:Xst:2677 - Node <mymain/mypropogater/randomizer/clk_gen/M_x_q_30> of sequential type is unconnected in block <mojo_top_0>.
-WARNING:Xst:2677 - Node <mymain/mypropogater/randomizer/clk_gen/M_x_q_25> of sequential type is unconnected in block <mojo_top_0>.
-WARNING:Xst:2677 - Node <mymain/mypropogater/randomizer/clk_gen/M_x_q_22> of sequential type is unconnected in block <mojo_top_0>.
-WARNING:Xst:2677 - Node <mymain/mypropogater/randomizer/clk_gen/M_x_q_11> of sequential type is unconnected in block <mojo_top_0>.
-WARNING:Xst:2677 - Node <mymain/mypropogater/randomizer/clk_gen/M_x_q_6> of sequential type is unconnected in block <mojo_top_0>.
-INFO:Xst:2261 - The FF/Latch <mymain/mypropogater/slowclk25/M_ctr_q_10> in Unit <mojo_top_0> is equivalent to the following 3 FFs/Latches, which will be removed : <mymain/mypropogater/slowclk24/M_ctr_q_10> <mymain/mypropogater/slowclk23/M_ctr_q_10> <mymain/edge_ctr/M_ctr_q_10> 
-INFO:Xst:2261 - The FF/Latch <mymain/mypropogater/slowclk25/M_ctr_q_11> in Unit <mojo_top_0> is equivalent to the following 3 FFs/Latches, which will be removed : <mymain/mypropogater/slowclk24/M_ctr_q_11> <mymain/mypropogater/slowclk23/M_ctr_q_11> <mymain/edge_ctr/M_ctr_q_11> 
-INFO:Xst:2261 - The FF/Latch <mymain/mypropogater/slowclk25/M_ctr_q_12> in Unit <mojo_top_0> is equivalent to the following 3 FFs/Latches, which will be removed : <mymain/mypropogater/slowclk24/M_ctr_q_12> <mymain/mypropogater/slowclk23/M_ctr_q_12> <mymain/edge_ctr/M_ctr_q_12> 
-INFO:Xst:2261 - The FF/Latch <mymain/mypropogater/slowclk25/M_ctr_q_13> in Unit <mojo_top_0> is equivalent to the following 3 FFs/Latches, which will be removed : <mymain/mypropogater/slowclk24/M_ctr_q_13> <mymain/mypropogater/slowclk23/M_ctr_q_13> <mymain/edge_ctr/M_ctr_q_13> 
-INFO:Xst:2261 - The FF/Latch <mymain/mypropogater/slowclk25/M_ctr_q_14> in Unit <mojo_top_0> is equivalent to the following 3 FFs/Latches, which will be removed : <mymain/mypropogater/slowclk24/M_ctr_q_14> <mymain/mypropogater/slowclk23/M_ctr_q_14> <mymain/edge_ctr/M_ctr_q_14> 
-INFO:Xst:2261 - The FF/Latch <mymain/mypropogater/slowclk25/M_ctr_q_20> in Unit <mojo_top_0> is equivalent to the following 3 FFs/Latches, which will be removed : <mymain/mypropogater/slowclk24/M_ctr_q_20> <mymain/mypropogater/slowclk23/M_ctr_q_20> <mymain/edge_ctr/M_ctr_q_20> 
-INFO:Xst:2261 - The FF/Latch <mymain/mypropogater/slowclk25/M_ctr_q_15> in Unit <mojo_top_0> is equivalent to the following 3 FFs/Latches, which will be removed : <mymain/mypropogater/slowclk24/M_ctr_q_15> <mymain/mypropogater/slowclk23/M_ctr_q_15> <mymain/edge_ctr/M_ctr_q_15> 
-INFO:Xst:2261 - The FF/Latch <mymain/mypropogater/slowclk25/M_ctr_q_21> in Unit <mojo_top_0> is equivalent to the following 3 FFs/Latches, which will be removed : <mymain/mypropogater/slowclk24/M_ctr_q_21> <mymain/mypropogater/slowclk23/M_ctr_q_21> <mymain/edge_ctr/M_ctr_q_21> 
-INFO:Xst:2261 - The FF/Latch <mymain/mypropogater/slowclk25/M_ctr_q_16> in Unit <mojo_top_0> is equivalent to the following 3 FFs/Latches, which will be removed : <mymain/mypropogater/slowclk24/M_ctr_q_16> <mymain/mypropogater/slowclk23/M_ctr_q_16> <mymain/edge_ctr/M_ctr_q_16> 
-INFO:Xst:2261 - The FF/Latch <mymain/mypropogater/slowclk25/M_ctr_q_22> in Unit <mojo_top_0> is equivalent to the following 3 FFs/Latches, which will be removed : <mymain/mypropogater/slowclk24/M_ctr_q_22> <mymain/mypropogater/slowclk23/M_ctr_q_22> <mymain/edge_ctr/M_ctr_q_22> 
-INFO:Xst:2261 - The FF/Latch <mymain/mypropogater/slowclk25/M_ctr_q_17> in Unit <mojo_top_0> is equivalent to the following 3 FFs/Latches, which will be removed : <mymain/mypropogater/slowclk24/M_ctr_q_17> <mymain/mypropogater/slowclk23/M_ctr_q_17> <mymain/edge_ctr/M_ctr_q_17> 
-INFO:Xst:2261 - The FF/Latch <mymain/mypropogater/slowclk25/M_ctr_q_23> in Unit <mojo_top_0> is equivalent to the following 2 FFs/Latches, which will be removed : <mymain/mypropogater/slowclk24/M_ctr_q_23> <mymain/mypropogater/slowclk23/M_ctr_q_23> 
-INFO:Xst:2261 - The FF/Latch <mymain/mypropogater/slowclk25/M_ctr_q_18> in Unit <mojo_top_0> is equivalent to the following 3 FFs/Latches, which will be removed : <mymain/mypropogater/slowclk24/M_ctr_q_18> <mymain/mypropogater/slowclk23/M_ctr_q_18> <mymain/edge_ctr/M_ctr_q_18> 
-INFO:Xst:2261 - The FF/Latch <mymain/mypropogater/slowclk25/M_ctr_q_24> in Unit <mojo_top_0> is equivalent to the following FF/Latch, which will be removed : <mymain/mypropogater/slowclk24/M_ctr_q_24> 
-INFO:Xst:2261 - The FF/Latch <mymain/mypropogater/slowclk25/M_ctr_q_19> in Unit <mojo_top_0> is equivalent to the following 3 FFs/Latches, which will be removed : <mymain/mypropogater/slowclk24/M_ctr_q_19> <mymain/mypropogater/slowclk23/M_ctr_q_19> <mymain/edge_ctr/M_ctr_q_19> 
-INFO:Xst:2261 - The FF/Latch <mymain/mypropogater/slowclk25/M_ctr_q_0> in Unit <mojo_top_0> is equivalent to the following 3 FFs/Latches, which will be removed : <mymain/mypropogater/slowclk24/M_ctr_q_0> <mymain/mypropogater/slowclk23/M_ctr_q_0> <mymain/edge_ctr/M_ctr_q_0> 
-INFO:Xst:2261 - The FF/Latch <mymain/mypropogater/slowclk25/M_ctr_q_1> in Unit <mojo_top_0> is equivalent to the following 3 FFs/Latches, which will be removed : <mymain/mypropogater/slowclk24/M_ctr_q_1> <mymain/mypropogater/slowclk23/M_ctr_q_1> <mymain/edge_ctr/M_ctr_q_1> 
-INFO:Xst:2261 - The FF/Latch <mymain/mypropogater/slowclk25/M_ctr_q_2> in Unit <mojo_top_0> is equivalent to the following 3 FFs/Latches, which will be removed : <mymain/mypropogater/slowclk24/M_ctr_q_2> <mymain/mypropogater/slowclk23/M_ctr_q_2> <mymain/edge_ctr/M_ctr_q_2> 
-INFO:Xst:2261 - The FF/Latch <mymain/mypropogater/slowclk25/M_ctr_q_3> in Unit <mojo_top_0> is equivalent to the following 3 FFs/Latches, which will be removed : <mymain/mypropogater/slowclk24/M_ctr_q_3> <mymain/mypropogater/slowclk23/M_ctr_q_3> <mymain/edge_ctr/M_ctr_q_3> 
-INFO:Xst:2261 - The FF/Latch <mymain/mypropogater/slowclk25/M_ctr_q_4> in Unit <mojo_top_0> is equivalent to the following 3 FFs/Latches, which will be removed : <mymain/mypropogater/slowclk24/M_ctr_q_4> <mymain/mypropogater/slowclk23/M_ctr_q_4> <mymain/edge_ctr/M_ctr_q_4> 
-INFO:Xst:2261 - The FF/Latch <mymain/mypropogater/slowclk25/M_ctr_q_5> in Unit <mojo_top_0> is equivalent to the following 3 FFs/Latches, which will be removed : <mymain/mypropogater/slowclk24/M_ctr_q_5> <mymain/mypropogater/slowclk23/M_ctr_q_5> <mymain/edge_ctr/M_ctr_q_5> 
-INFO:Xst:2261 - The FF/Latch <mymain/mypropogater/slowclk25/M_ctr_q_6> in Unit <mojo_top_0> is equivalent to the following 3 FFs/Latches, which will be removed : <mymain/mypropogater/slowclk24/M_ctr_q_6> <mymain/mypropogater/slowclk23/M_ctr_q_6> <mymain/edge_ctr/M_ctr_q_6> 
-INFO:Xst:2261 - The FF/Latch <mymain/mypropogater/slowclk25/M_ctr_q_7> in Unit <mojo_top_0> is equivalent to the following 3 FFs/Latches, which will be removed : <mymain/mypropogater/slowclk24/M_ctr_q_7> <mymain/mypropogater/slowclk23/M_ctr_q_7> <mymain/edge_ctr/M_ctr_q_7> 
-INFO:Xst:2261 - The FF/Latch <mymain/mypropogater/slowclk25/M_ctr_q_8> in Unit <mojo_top_0> is equivalent to the following 3 FFs/Latches, which will be removed : <mymain/mypropogater/slowclk24/M_ctr_q_8> <mymain/mypropogater/slowclk23/M_ctr_q_8> <mymain/edge_ctr/M_ctr_q_8> 
-INFO:Xst:2261 - The FF/Latch <mymain/mypropogater/slowclk25/M_ctr_q_9> in Unit <mojo_top_0> is equivalent to the following 3 FFs/Latches, which will be removed : <mymain/mypropogater/slowclk24/M_ctr_q_9> <mymain/mypropogater/slowclk23/M_ctr_q_9> <mymain/edge_ctr/M_ctr_q_9> 
-INFO:Xst:2261 - The FF/Latch <mymain/mypropogater/randomizer/clk_gen/M_y_q_20> in Unit <mojo_top_0> is equivalent to the following 4 FFs/Latches, which will be removed : <mymain/mypropogater/randomizer/clk_gen/M_y_q_19> <mymain/mypropogater/randomizer/clk_gen/M_x_q_29> <mymain/mypropogater/randomizer/clk_gen/M_x_q_10> <mymain/mypropogater/randomizer/clk_gen/M_x_q_1> 
-INFO:Xst:2261 - The FF/Latch <mymain/mypropogater/randomizer/numb_gen/M_y_q_20> in Unit <mojo_top_0> is equivalent to the following 4 FFs/Latches, which will be removed : <mymain/mypropogater/randomizer/numb_gen/M_y_q_19> <mymain/mypropogater/randomizer/numb_gen/M_x_q_29> <mymain/mypropogater/randomizer/numb_gen/M_x_q_10> <mymain/mypropogater/randomizer/numb_gen/M_x_q_1> 
+Optimizing unit <bcounter_5> ...
+
+Optimizing unit <main_7> ...
+
+Optimizing unit <pn_gen_39> ...
+
+Optimizing unit <alu_8> ...
+WARNING:Xst:2677 - Node <myState/mainState/myalu/alu1_1> of sequential type is unconnected in block <mojo_top_0>.
+WARNING:Xst:2677 - Node <myState/mainState/myalu/alu1_2> of sequential type is unconnected in block <mojo_top_0>.
+WARNING:Xst:2677 - Node <myState/mainState/myalu/alu1_3> of sequential type is unconnected in block <mojo_top_0>.
+WARNING:Xst:2677 - Node <myState/mainState/myalu/alu1_5> of sequential type is unconnected in block <mojo_top_0>.
+WARNING:Xst:2677 - Node <myState/mainState/myalu/alu1_6> of sequential type is unconnected in block <mojo_top_0>.
+WARNING:Xst:2677 - Node <myState/mainState/myalu/alu1_4> of sequential type is unconnected in block <mojo_top_0>.
+WARNING:Xst:2677 - Node <myState/mainState/myalu/alu1_7> of sequential type is unconnected in block <mojo_top_0>.
+WARNING:Xst:1294 - Latch <myState/mainState/myalu/alu1_0> is equivalent to a wire in block <mojo_top_0>.
+WARNING:Xst:1294 - Latch <myState/myalu/alu1_0> is equivalent to a wire in block <mojo_top_0>.
+WARNING:Xst:1294 - Latch <myState/myalu/alu1_1> is equivalent to a wire in block <mojo_top_0>.
+WARNING:Xst:1294 - Latch <myState/myalu/alu1_2> is equivalent to a wire in block <mojo_top_0>.
+WARNING:Xst:1294 - Latch <myState/myalu/alu1_3> is equivalent to a wire in block <mojo_top_0>.
+WARNING:Xst:1294 - Latch <myState/myalu/alu1_5> is equivalent to a wire in block <mojo_top_0>.
+WARNING:Xst:1294 - Latch <myState/myalu/alu1_6> is equivalent to a wire in block <mojo_top_0>.
+WARNING:Xst:1294 - Latch <myState/myalu/alu1_4> is equivalent to a wire in block <mojo_top_0>.
+WARNING:Xst:1294 - Latch <myState/myalu/alu1_7> is equivalent to a wire in block <mojo_top_0>.
+WARNING:Xst:2677 - Node <myState/mainState/myalu/Mmult_a[7]_b[7]_MuLt_0_OUT> of sequential type is unconnected in block <mojo_top_0>.
+WARNING:Xst:2677 - Node <myState/myalu/Mmult_a[7]_b[7]_MuLt_0_OUT> of sequential type is unconnected in block <mojo_top_0>.
+WARNING:Xst:1293 - FF/Latch <myState/mainState/mypropogater/randomizer/clk_gen/M_z_q_18> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <myState/mainState/mypropogater/randomizer/clk_gen/M_z_q_19> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <myState/mainState/mypropogater/randomizer/clk_gen/M_z_q_20> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <myState/mainState/mypropogater/randomizer/clk_gen/M_z_q_23> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <myState/mainState/mypropogater/randomizer/clk_gen/M_z_q_24> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <myState/mainState/mypropogater/randomizer/clk_gen/M_z_q_26> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <myState/mainState/mypropogater/randomizer/clk_gen/M_z_q_30> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <myState/mainState/mypropogater/randomizer/clk_gen/M_z_q_31> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <myState/mainState/mypropogater/randomizer/clk_gen/M_y_q_1> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <myState/mainState/mypropogater/randomizer/clk_gen/M_y_q_3> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <myState/mainState/mypropogater/randomizer/clk_gen/M_y_q_4> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <myState/mainState/mypropogater/randomizer/clk_gen/M_y_q_6> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <myState/mainState/mypropogater/randomizer/clk_gen/M_y_q_7> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <myState/mainState/mypropogater/randomizer/clk_gen/M_y_q_8> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <myState/mainState/mypropogater/randomizer/clk_gen/M_y_q_10> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <myState/mainState/mypropogater/randomizer/clk_gen/M_y_q_11> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <myState/mainState/mypropogater/randomizer/clk_gen/M_y_q_12> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <myState/mainState/mypropogater/randomizer/clk_gen/M_y_q_15> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <myState/mainState/mypropogater/randomizer/clk_gen/M_y_q_18> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <myState/mainState/mypropogater/randomizer/clk_gen/M_y_q_22> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <myState/mainState/mypropogater/randomizer/clk_gen/M_y_q_23> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <myState/mainState/mypropogater/randomizer/clk_gen/M_y_q_24> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <myState/mainState/mypropogater/randomizer/clk_gen/M_y_q_26> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <myState/mainState/mypropogater/randomizer/clk_gen/M_y_q_27> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <myState/mainState/mypropogater/randomizer/clk_gen/M_y_q_28> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <myState/mainState/mypropogater/randomizer/clk_gen/M_y_q_29> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <myState/mainState/mypropogater/randomizer/clk_gen/M_y_q_31> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <myState/mainState/mypropogater/randomizer/clk_gen/M_x_q_0> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <myState/mainState/mypropogater/randomizer/clk_gen/M_x_q_2> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <myState/mainState/mypropogater/randomizer/clk_gen/M_x_q_3> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <myState/mainState/mypropogater/randomizer/clk_gen/M_x_q_4> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <myState/mainState/mypropogater/randomizer/clk_gen/M_x_q_7> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <myState/mainState/mypropogater/randomizer/clk_gen/M_x_q_8> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <myState/mainState/mypropogater/randomizer/clk_gen/M_x_q_9> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <myState/mainState/mypropogater/randomizer/clk_gen/M_x_q_12> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <myState/mainState/mypropogater/randomizer/clk_gen/M_x_q_14> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <myState/mainState/mypropogater/randomizer/clk_gen/M_x_q_15> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <myState/mainState/mypropogater/randomizer/clk_gen/M_x_q_17> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <myState/mainState/mypropogater/randomizer/clk_gen/M_x_q_18> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <myState/mainState/mypropogater/randomizer/clk_gen/M_x_q_21> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <myState/mainState/mypropogater/randomizer/clk_gen/M_x_q_23> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <myState/mainState/mypropogater/randomizer/clk_gen/M_x_q_24> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <myState/mainState/mypropogater/randomizer/clk_gen/M_x_q_26> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <myState/mainState/mypropogater/randomizer/clk_gen/M_x_q_27> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <myState/mainState/mypropogater/randomizer/clk_gen/M_x_q_28> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <myState/mainState/mypropogater/randomizer/clk_gen/M_x_q_31> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <myState/mainState/mypropogater/randomizer/clk_gen/M_z_q_0> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <myState/mainState/mypropogater/randomizer/clk_gen/M_z_q_3> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <myState/mainState/mypropogater/randomizer/clk_gen/M_z_q_4> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <myState/mainState/mypropogater/randomizer/clk_gen/M_z_q_7> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <myState/mainState/mypropogater/randomizer/clk_gen/M_z_q_9> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <myState/mainState/mypropogater/randomizer/clk_gen/M_z_q_10> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <myState/mainState/mypropogater/randomizer/clk_gen/M_z_q_14> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <myState/mainState/mypropogater/randomizer/clk_gen/M_z_q_15> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <myState/mainState/mypropogater/randomizer/clk_gen/M_z_q_17> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <myState/mainState/mypropogater/randomizer/numb_gen/M_z_q_18> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <myState/mainState/mypropogater/randomizer/numb_gen/M_z_q_19> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <myState/mainState/mypropogater/randomizer/numb_gen/M_z_q_20> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <myState/mainState/mypropogater/randomizer/numb_gen/M_z_q_23> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <myState/mainState/mypropogater/randomizer/numb_gen/M_z_q_24> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <myState/mainState/mypropogater/randomizer/numb_gen/M_z_q_26> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <myState/mainState/mypropogater/randomizer/numb_gen/M_z_q_30> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <myState/mainState/mypropogater/randomizer/numb_gen/M_z_q_31> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <myState/mainState/mypropogater/randomizer/numb_gen/M_y_q_1> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <myState/mainState/mypropogater/randomizer/numb_gen/M_y_q_3> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <myState/mainState/mypropogater/randomizer/numb_gen/M_y_q_4> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <myState/mainState/mypropogater/randomizer/numb_gen/M_y_q_6> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <myState/mainState/mypropogater/randomizer/numb_gen/M_y_q_7> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <myState/mainState/mypropogater/randomizer/numb_gen/M_y_q_8> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <myState/mainState/mypropogater/randomizer/numb_gen/M_y_q_10> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <myState/mainState/mypropogater/randomizer/numb_gen/M_y_q_11> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <myState/mainState/mypropogater/randomizer/numb_gen/M_y_q_12> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <myState/mainState/mypropogater/randomizer/numb_gen/M_y_q_15> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <myState/mainState/mypropogater/randomizer/numb_gen/M_y_q_18> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <myState/mainState/mypropogater/randomizer/numb_gen/M_y_q_22> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <myState/mainState/mypropogater/randomizer/numb_gen/M_y_q_23> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <myState/mainState/mypropogater/randomizer/numb_gen/M_y_q_24> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <myState/mainState/mypropogater/randomizer/numb_gen/M_y_q_26> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <myState/mainState/mypropogater/randomizer/numb_gen/M_y_q_27> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <myState/mainState/mypropogater/randomizer/numb_gen/M_y_q_28> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <myState/mainState/mypropogater/randomizer/numb_gen/M_y_q_29> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <myState/mainState/mypropogater/randomizer/numb_gen/M_y_q_31> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <myState/mainState/mypropogater/randomizer/numb_gen/M_x_q_0> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <myState/mainState/mypropogater/randomizer/numb_gen/M_x_q_2> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <myState/mainState/mypropogater/randomizer/numb_gen/M_x_q_3> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <myState/mainState/mypropogater/randomizer/numb_gen/M_x_q_4> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <myState/mainState/mypropogater/randomizer/numb_gen/M_x_q_7> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <myState/mainState/mypropogater/randomizer/numb_gen/M_x_q_8> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <myState/mainState/mypropogater/randomizer/numb_gen/M_x_q_9> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <myState/mainState/mypropogater/randomizer/numb_gen/M_x_q_12> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <myState/mainState/mypropogater/randomizer/numb_gen/M_x_q_14> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <myState/mainState/mypropogater/randomizer/numb_gen/M_x_q_15> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <myState/mainState/mypropogater/randomizer/numb_gen/M_x_q_17> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <myState/mainState/mypropogater/randomizer/numb_gen/M_x_q_18> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <myState/mainState/mypropogater/randomizer/numb_gen/M_x_q_21> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <myState/mainState/mypropogater/randomizer/numb_gen/M_x_q_23> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <myState/mainState/mypropogater/randomizer/numb_gen/M_x_q_24> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <myState/mainState/mypropogater/randomizer/numb_gen/M_x_q_26> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <myState/mainState/mypropogater/randomizer/numb_gen/M_x_q_27> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <myState/mainState/mypropogater/randomizer/numb_gen/M_x_q_28> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <myState/mainState/mypropogater/randomizer/numb_gen/M_x_q_31> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <myState/mainState/mypropogater/randomizer/numb_gen/M_z_q_0> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <myState/mainState/mypropogater/randomizer/numb_gen/M_z_q_3> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <myState/mainState/mypropogater/randomizer/numb_gen/M_z_q_4> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <myState/mainState/mypropogater/randomizer/numb_gen/M_z_q_7> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <myState/mainState/mypropogater/randomizer/numb_gen/M_z_q_9> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <myState/mainState/mypropogater/randomizer/numb_gen/M_z_q_10> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <myState/mainState/mypropogater/randomizer/numb_gen/M_z_q_14> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <myState/mainState/mypropogater/randomizer/numb_gen/M_z_q_15> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <myState/mainState/mypropogater/randomizer/numb_gen/M_z_q_17> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1898 - Due to constant pushing, FF/Latch <myState/mainState/mypropogater/randomizer/numb_gen/M_z_q_29> is unconnected in block <mojo_top_0>.
+WARNING:Xst:1898 - Due to constant pushing, FF/Latch <myState/mainState/mypropogater/randomizer/numb_gen/M_z_q_28> is unconnected in block <mojo_top_0>.
+WARNING:Xst:1898 - Due to constant pushing, FF/Latch <myState/mainState/mypropogater/randomizer/numb_gen/M_z_q_27> is unconnected in block <mojo_top_0>.
+WARNING:Xst:1898 - Due to constant pushing, FF/Latch <myState/mainState/mypropogater/randomizer/numb_gen/M_z_q_22> is unconnected in block <mojo_top_0>.
+WARNING:Xst:1898 - Due to constant pushing, FF/Latch <myState/mainState/mypropogater/randomizer/numb_gen/M_z_q_12> is unconnected in block <mojo_top_0>.
+WARNING:Xst:1898 - Due to constant pushing, FF/Latch <myState/mainState/mypropogater/randomizer/numb_gen/M_z_q_11> is unconnected in block <mojo_top_0>.
+WARNING:Xst:1898 - Due to constant pushing, FF/Latch <myState/mainState/mypropogater/randomizer/numb_gen/M_z_q_8> is unconnected in block <mojo_top_0>.
+WARNING:Xst:1898 - Due to constant pushing, FF/Latch <myState/mainState/mypropogater/randomizer/numb_gen/M_z_q_6> is unconnected in block <mojo_top_0>.
+WARNING:Xst:1898 - Due to constant pushing, FF/Latch <myState/mainState/mypropogater/randomizer/numb_gen/M_z_q_1> is unconnected in block <mojo_top_0>.
+WARNING:Xst:1898 - Due to constant pushing, FF/Latch <myState/mainState/mypropogater/randomizer/numb_gen/M_z_q_21> is unconnected in block <mojo_top_0>.
+WARNING:Xst:1898 - Due to constant pushing, FF/Latch <myState/mainState/mypropogater/randomizer/numb_gen/M_y_q_21> is unconnected in block <mojo_top_0>.
+WARNING:Xst:1898 - Due to constant pushing, FF/Latch <myState/mainState/mypropogater/randomizer/numb_gen/M_y_q_17> is unconnected in block <mojo_top_0>.
+WARNING:Xst:1898 - Due to constant pushing, FF/Latch <myState/mainState/mypropogater/randomizer/numb_gen/M_y_q_14> is unconnected in block <mojo_top_0>.
+WARNING:Xst:1898 - Due to constant pushing, FF/Latch <myState/mainState/mypropogater/randomizer/numb_gen/M_y_q_9> is unconnected in block <mojo_top_0>.
+WARNING:Xst:1898 - Due to constant pushing, FF/Latch <myState/mainState/mypropogater/randomizer/numb_gen/M_z_q_2> is unconnected in block <mojo_top_0>.
+WARNING:Xst:1898 - Due to constant pushing, FF/Latch <myState/mainState/mypropogater/randomizer/numb_gen/M_y_q_2> is unconnected in block <mojo_top_0>.
+WARNING:Xst:1898 - Due to constant pushing, FF/Latch <myState/mainState/mypropogater/randomizer/numb_gen/M_y_q_0> is unconnected in block <mojo_top_0>.
+WARNING:Xst:1898 - Due to constant pushing, FF/Latch <myState/mainState/mypropogater/randomizer/clk_gen/M_z_q_29> is unconnected in block <mojo_top_0>.
+WARNING:Xst:1898 - Due to constant pushing, FF/Latch <myState/mainState/mypropogater/randomizer/clk_gen/M_z_q_28> is unconnected in block <mojo_top_0>.
+WARNING:Xst:1898 - Due to constant pushing, FF/Latch <myState/mainState/mypropogater/randomizer/clk_gen/M_z_q_27> is unconnected in block <mojo_top_0>.
+WARNING:Xst:1898 - Due to constant pushing, FF/Latch <myState/mainState/mypropogater/randomizer/clk_gen/M_z_q_22> is unconnected in block <mojo_top_0>.
+WARNING:Xst:1898 - Due to constant pushing, FF/Latch <myState/mainState/mypropogater/randomizer/clk_gen/M_z_q_12> is unconnected in block <mojo_top_0>.
+WARNING:Xst:1898 - Due to constant pushing, FF/Latch <myState/mainState/mypropogater/randomizer/clk_gen/M_z_q_11> is unconnected in block <mojo_top_0>.
+WARNING:Xst:1898 - Due to constant pushing, FF/Latch <myState/mainState/mypropogater/randomizer/clk_gen/M_z_q_8> is unconnected in block <mojo_top_0>.
+WARNING:Xst:1898 - Due to constant pushing, FF/Latch <myState/mainState/mypropogater/randomizer/clk_gen/M_z_q_6> is unconnected in block <mojo_top_0>.
+WARNING:Xst:1898 - Due to constant pushing, FF/Latch <myState/mainState/mypropogater/randomizer/clk_gen/M_z_q_1> is unconnected in block <mojo_top_0>.
+WARNING:Xst:1898 - Due to constant pushing, FF/Latch <myState/mainState/mypropogater/randomizer/clk_gen/M_z_q_21> is unconnected in block <mojo_top_0>.
+WARNING:Xst:1898 - Due to constant pushing, FF/Latch <myState/mainState/mypropogater/randomizer/clk_gen/M_y_q_21> is unconnected in block <mojo_top_0>.
+WARNING:Xst:1898 - Due to constant pushing, FF/Latch <myState/mainState/mypropogater/randomizer/clk_gen/M_y_q_17> is unconnected in block <mojo_top_0>.
+WARNING:Xst:1898 - Due to constant pushing, FF/Latch <myState/mainState/mypropogater/randomizer/clk_gen/M_y_q_14> is unconnected in block <mojo_top_0>.
+WARNING:Xst:1898 - Due to constant pushing, FF/Latch <myState/mainState/mypropogater/randomizer/clk_gen/M_y_q_9> is unconnected in block <mojo_top_0>.
+WARNING:Xst:1898 - Due to constant pushing, FF/Latch <myState/mainState/mypropogater/randomizer/clk_gen/M_z_q_2> is unconnected in block <mojo_top_0>.
+WARNING:Xst:1898 - Due to constant pushing, FF/Latch <myState/mainState/mypropogater/randomizer/clk_gen/M_y_q_2> is unconnected in block <mojo_top_0>.
+WARNING:Xst:1898 - Due to constant pushing, FF/Latch <myState/mainState/mypropogater/randomizer/clk_gen/M_y_q_0> is unconnected in block <mojo_top_0>.
+WARNING:Xst:2677 - Node <myState/mainState/mypropogater/M_seed_q_31> of sequential type is unconnected in block <mojo_top_0>.
+WARNING:Xst:2677 - Node <myState/mainState/mypropogater/M_seed_q_30> of sequential type is unconnected in block <mojo_top_0>.
+WARNING:Xst:2677 - Node <myState/mainState/mypropogater/M_seed_q_29> of sequential type is unconnected in block <mojo_top_0>.
+WARNING:Xst:2677 - Node <myState/mainState/mypropogater/M_seed_q_28> of sequential type is unconnected in block <mojo_top_0>.
+WARNING:Xst:2677 - Node <myState/mainState/mypropogater/M_seed_q_27> of sequential type is unconnected in block <mojo_top_0>.
+WARNING:Xst:2677 - Node <myState/mainState/mypropogater/M_seed_q_26> of sequential type is unconnected in block <mojo_top_0>.
+WARNING:Xst:2677 - Node <myState/mainState/mypropogater/M_seed_q_25> of sequential type is unconnected in block <mojo_top_0>.
+WARNING:Xst:2677 - Node <myState/mainState/mypropogater/M_clkseed_q_31> of sequential type is unconnected in block <mojo_top_0>.
+WARNING:Xst:2677 - Node <myState/mainState/mypropogater/M_clkseed_q_30> of sequential type is unconnected in block <mojo_top_0>.
+WARNING:Xst:2677 - Node <myState/mainState/mypropogater/M_clkseed_q_29> of sequential type is unconnected in block <mojo_top_0>.
+WARNING:Xst:2677 - Node <myState/mainState/mypropogater/M_clkseed_q_28> of sequential type is unconnected in block <mojo_top_0>.
+WARNING:Xst:2677 - Node <myState/mainState/mypropogater/M_clkseed_q_27> of sequential type is unconnected in block <mojo_top_0>.
+WARNING:Xst:2677 - Node <myState/mainState/mypropogater/M_clkseed_q_26> of sequential type is unconnected in block <mojo_top_0>.
+WARNING:Xst:2677 - Node <myState/mainState/mypropogater/M_clkseed_q_25> of sequential type is unconnected in block <mojo_top_0>.
+WARNING:Xst:2677 - Node <myState/mainState/mypropogater/randomizer/numb_gen/M_y_q_30> of sequential type is unconnected in block <mojo_top_0>.
+WARNING:Xst:2677 - Node <myState/mainState/mypropogater/randomizer/numb_gen/M_y_q_25> of sequential type is unconnected in block <mojo_top_0>.
+WARNING:Xst:2677 - Node <myState/mainState/mypropogater/randomizer/numb_gen/M_z_q_25> of sequential type is unconnected in block <mojo_top_0>.
+WARNING:Xst:2677 - Node <myState/mainState/mypropogater/randomizer/numb_gen/M_w_q_31> of sequential type is unconnected in block <mojo_top_0>.
+WARNING:Xst:2677 - Node <myState/mainState/mypropogater/randomizer/numb_gen/M_w_q_30> of sequential type is unconnected in block <mojo_top_0>.
+WARNING:Xst:2677 - Node <myState/mainState/mypropogater/randomizer/numb_gen/M_w_q_29> of sequential type is unconnected in block <mojo_top_0>.
+WARNING:Xst:2677 - Node <myState/mainState/mypropogater/randomizer/numb_gen/M_w_q_28> of sequential type is unconnected in block <mojo_top_0>.
+WARNING:Xst:2677 - Node <myState/mainState/mypropogater/randomizer/numb_gen/M_w_q_27> of sequential type is unconnected in block <mojo_top_0>.
+WARNING:Xst:2677 - Node <myState/mainState/mypropogater/randomizer/numb_gen/M_w_q_26> of sequential type is unconnected in block <mojo_top_0>.
+WARNING:Xst:2677 - Node <myState/mainState/mypropogater/randomizer/numb_gen/M_w_q_25> of sequential type is unconnected in block <mojo_top_0>.
+WARNING:Xst:2677 - Node <myState/mainState/mypropogater/randomizer/numb_gen/M_w_q_23> of sequential type is unconnected in block <mojo_top_0>.
+WARNING:Xst:2677 - Node <myState/mainState/mypropogater/randomizer/numb_gen/M_w_q_22> of sequential type is unconnected in block <mojo_top_0>.
+WARNING:Xst:2677 - Node <myState/mainState/mypropogater/randomizer/numb_gen/M_w_q_18> of sequential type is unconnected in block <mojo_top_0>.
+WARNING:Xst:2677 - Node <myState/mainState/mypropogater/randomizer/numb_gen/M_w_q_17> of sequential type is unconnected in block <mojo_top_0>.
+WARNING:Xst:2677 - Node <myState/mainState/mypropogater/randomizer/numb_gen/M_w_q_15> of sequential type is unconnected in block <mojo_top_0>.
+WARNING:Xst:2677 - Node <myState/mainState/mypropogater/randomizer/numb_gen/M_w_q_14> of sequential type is unconnected in block <mojo_top_0>.
+WARNING:Xst:2677 - Node <myState/mainState/mypropogater/randomizer/numb_gen/M_w_q_12> of sequential type is unconnected in block <mojo_top_0>.
+WARNING:Xst:2677 - Node <myState/mainState/mypropogater/randomizer/numb_gen/M_w_q_11> of sequential type is unconnected in block <mojo_top_0>.
+WARNING:Xst:2677 - Node <myState/mainState/mypropogater/randomizer/numb_gen/M_w_q_10> of sequential type is unconnected in block <mojo_top_0>.
+WARNING:Xst:2677 - Node <myState/mainState/mypropogater/randomizer/numb_gen/M_w_q_9> of sequential type is unconnected in block <mojo_top_0>.
+WARNING:Xst:2677 - Node <myState/mainState/mypropogater/randomizer/numb_gen/M_w_q_8> of sequential type is unconnected in block <mojo_top_0>.
+WARNING:Xst:2677 - Node <myState/mainState/mypropogater/randomizer/numb_gen/M_w_q_7> of sequential type is unconnected in block <mojo_top_0>.
+WARNING:Xst:2677 - Node <myState/mainState/mypropogater/randomizer/numb_gen/M_w_q_6> of sequential type is unconnected in block <mojo_top_0>.
+WARNING:Xst:2677 - Node <myState/mainState/mypropogater/randomizer/numb_gen/M_w_q_4> of sequential type is unconnected in block <mojo_top_0>.
+WARNING:Xst:2677 - Node <myState/mainState/mypropogater/randomizer/numb_gen/M_w_q_3> of sequential type is unconnected in block <mojo_top_0>.
+WARNING:Xst:2677 - Node <myState/mainState/mypropogater/randomizer/numb_gen/M_x_q_30> of sequential type is unconnected in block <mojo_top_0>.
+WARNING:Xst:2677 - Node <myState/mainState/mypropogater/randomizer/numb_gen/M_x_q_25> of sequential type is unconnected in block <mojo_top_0>.
+WARNING:Xst:2677 - Node <myState/mainState/mypropogater/randomizer/numb_gen/M_x_q_22> of sequential type is unconnected in block <mojo_top_0>.
+WARNING:Xst:2677 - Node <myState/mainState/mypropogater/randomizer/numb_gen/M_x_q_11> of sequential type is unconnected in block <mojo_top_0>.
+WARNING:Xst:2677 - Node <myState/mainState/mypropogater/randomizer/numb_gen/M_x_q_6> of sequential type is unconnected in block <mojo_top_0>.
+WARNING:Xst:2677 - Node <myState/mainState/mypropogater/randomizer/clk_gen/M_y_q_30> of sequential type is unconnected in block <mojo_top_0>.
+WARNING:Xst:2677 - Node <myState/mainState/mypropogater/randomizer/clk_gen/M_y_q_25> of sequential type is unconnected in block <mojo_top_0>.
+WARNING:Xst:2677 - Node <myState/mainState/mypropogater/randomizer/clk_gen/M_z_q_25> of sequential type is unconnected in block <mojo_top_0>.
+WARNING:Xst:2677 - Node <myState/mainState/mypropogater/randomizer/clk_gen/M_w_q_31> of sequential type is unconnected in block <mojo_top_0>.
+WARNING:Xst:2677 - Node <myState/mainState/mypropogater/randomizer/clk_gen/M_w_q_30> of sequential type is unconnected in block <mojo_top_0>.
+WARNING:Xst:2677 - Node <myState/mainState/mypropogater/randomizer/clk_gen/M_w_q_29> of sequential type is unconnected in block <mojo_top_0>.
+WARNING:Xst:2677 - Node <myState/mainState/mypropogater/randomizer/clk_gen/M_w_q_28> of sequential type is unconnected in block <mojo_top_0>.
+WARNING:Xst:2677 - Node <myState/mainState/mypropogater/randomizer/clk_gen/M_w_q_27> of sequential type is unconnected in block <mojo_top_0>.
+WARNING:Xst:2677 - Node <myState/mainState/mypropogater/randomizer/clk_gen/M_w_q_26> of sequential type is unconnected in block <mojo_top_0>.
+WARNING:Xst:2677 - Node <myState/mainState/mypropogater/randomizer/clk_gen/M_w_q_25> of sequential type is unconnected in block <mojo_top_0>.
+WARNING:Xst:2677 - Node <myState/mainState/mypropogater/randomizer/clk_gen/M_w_q_23> of sequential type is unconnected in block <mojo_top_0>.
+WARNING:Xst:2677 - Node <myState/mainState/mypropogater/randomizer/clk_gen/M_w_q_22> of sequential type is unconnected in block <mojo_top_0>.
+WARNING:Xst:2677 - Node <myState/mainState/mypropogater/randomizer/clk_gen/M_w_q_18> of sequential type is unconnected in block <mojo_top_0>.
+WARNING:Xst:2677 - Node <myState/mainState/mypropogater/randomizer/clk_gen/M_w_q_17> of sequential type is unconnected in block <mojo_top_0>.
+WARNING:Xst:2677 - Node <myState/mainState/mypropogater/randomizer/clk_gen/M_w_q_15> of sequential type is unconnected in block <mojo_top_0>.
+WARNING:Xst:2677 - Node <myState/mainState/mypropogater/randomizer/clk_gen/M_w_q_14> of sequential type is unconnected in block <mojo_top_0>.
+WARNING:Xst:2677 - Node <myState/mainState/mypropogater/randomizer/clk_gen/M_w_q_12> of sequential type is unconnected in block <mojo_top_0>.
+WARNING:Xst:2677 - Node <myState/mainState/mypropogater/randomizer/clk_gen/M_w_q_11> of sequential type is unconnected in block <mojo_top_0>.
+WARNING:Xst:2677 - Node <myState/mainState/mypropogater/randomizer/clk_gen/M_w_q_10> of sequential type is unconnected in block <mojo_top_0>.
+WARNING:Xst:2677 - Node <myState/mainState/mypropogater/randomizer/clk_gen/M_w_q_9> of sequential type is unconnected in block <mojo_top_0>.
+WARNING:Xst:2677 - Node <myState/mainState/mypropogater/randomizer/clk_gen/M_w_q_8> of sequential type is unconnected in block <mojo_top_0>.
+WARNING:Xst:2677 - Node <myState/mainState/mypropogater/randomizer/clk_gen/M_w_q_7> of sequential type is unconnected in block <mojo_top_0>.
+WARNING:Xst:2677 - Node <myState/mainState/mypropogater/randomizer/clk_gen/M_w_q_6> of sequential type is unconnected in block <mojo_top_0>.
+WARNING:Xst:2677 - Node <myState/mainState/mypropogater/randomizer/clk_gen/M_w_q_4> of sequential type is unconnected in block <mojo_top_0>.
+WARNING:Xst:2677 - Node <myState/mainState/mypropogater/randomizer/clk_gen/M_w_q_3> of sequential type is unconnected in block <mojo_top_0>.
+WARNING:Xst:2677 - Node <myState/mainState/mypropogater/randomizer/clk_gen/M_x_q_30> of sequential type is unconnected in block <mojo_top_0>.
+WARNING:Xst:2677 - Node <myState/mainState/mypropogater/randomizer/clk_gen/M_x_q_25> of sequential type is unconnected in block <mojo_top_0>.
+WARNING:Xst:2677 - Node <myState/mainState/mypropogater/randomizer/clk_gen/M_x_q_22> of sequential type is unconnected in block <mojo_top_0>.
+WARNING:Xst:2677 - Node <myState/mainState/mypropogater/randomizer/clk_gen/M_x_q_11> of sequential type is unconnected in block <mojo_top_0>.
+WARNING:Xst:2677 - Node <myState/mainState/mypropogater/randomizer/clk_gen/M_x_q_6> of sequential type is unconnected in block <mojo_top_0>.
+INFO:Xst:2261 - The FF/Latch <myState/bttnpress/button_cond/M_ctr_q_10> in Unit <mojo_top_0> is equivalent to the following FF/Latch, which will be removed : <myState/mainState/button_cond1/M_ctr_q_10> 
+INFO:Xst:2261 - The FF/Latch <myState/bttnpress/button_cond/M_ctr_q_11> in Unit <mojo_top_0> is equivalent to the following FF/Latch, which will be removed : <myState/mainState/button_cond1/M_ctr_q_11> 
+INFO:Xst:2261 - The FF/Latch <myState/bttnpress/button_cond2/M_ctr_q_0> in Unit <mojo_top_0> is equivalent to the following FF/Latch, which will be removed : <myState/mainState/button_cond2/M_ctr_q_0> 
+INFO:Xst:2261 - The FF/Latch <myState/bttnpress/button_cond/M_ctr_q_12> in Unit <mojo_top_0> is equivalent to the following FF/Latch, which will be removed : <myState/mainState/button_cond1/M_ctr_q_12> 
+INFO:Xst:2261 - The FF/Latch <myState/bttnpress/button_cond2/M_ctr_q_1> in Unit <mojo_top_0> is equivalent to the following FF/Latch, which will be removed : <myState/mainState/button_cond2/M_ctr_q_1> 
+INFO:Xst:2261 - The FF/Latch <myState/bttnpress/button_cond/M_ctr_q_13> in Unit <mojo_top_0> is equivalent to the following FF/Latch, which will be removed : <myState/mainState/button_cond1/M_ctr_q_13> 
+INFO:Xst:2261 - The FF/Latch <myState/bttnpress/button_cond2/M_ctr_q_2> in Unit <mojo_top_0> is equivalent to the following FF/Latch, which will be removed : <myState/mainState/button_cond2/M_ctr_q_2> 
+INFO:Xst:2261 - The FF/Latch <myState/bttnpress/button_cond/M_ctr_q_14> in Unit <mojo_top_0> is equivalent to the following FF/Latch, which will be removed : <myState/mainState/button_cond1/M_ctr_q_14> 
+INFO:Xst:2261 - The FF/Latch <myState/bttnpress/button_cond2/M_ctr_q_3> in Unit <mojo_top_0> is equivalent to the following FF/Latch, which will be removed : <myState/mainState/button_cond2/M_ctr_q_3> 
+INFO:Xst:2261 - The FF/Latch <myState/bttnpress/button_cond/M_ctr_q_15> in Unit <mojo_top_0> is equivalent to the following FF/Latch, which will be removed : <myState/mainState/button_cond1/M_ctr_q_15> 
+INFO:Xst:2261 - The FF/Latch <myState/bttnpress/button_cond2/M_ctr_q_4> in Unit <mojo_top_0> is equivalent to the following FF/Latch, which will be removed : <myState/mainState/button_cond2/M_ctr_q_4> 
+INFO:Xst:2261 - The FF/Latch <myState/bttnpress/button_cond/M_ctr_q_16> in Unit <mojo_top_0> is equivalent to the following FF/Latch, which will be removed : <myState/mainState/button_cond1/M_ctr_q_16> 
+INFO:Xst:2261 - The FF/Latch <myState/bttnpress/button_cond2/M_ctr_q_5> in Unit <mojo_top_0> is equivalent to the following FF/Latch, which will be removed : <myState/mainState/button_cond2/M_ctr_q_5> 
+INFO:Xst:2261 - The FF/Latch <myState/bttnpress/button_cond/M_ctr_q_17> in Unit <mojo_top_0> is equivalent to the following FF/Latch, which will be removed : <myState/mainState/button_cond1/M_ctr_q_17> 
+INFO:Xst:2261 - The FF/Latch <myState/bttnpress/button_cond2/M_ctr_q_6> in Unit <mojo_top_0> is equivalent to the following FF/Latch, which will be removed : <myState/mainState/button_cond2/M_ctr_q_6> 
+INFO:Xst:2261 - The FF/Latch <myState/bttnpress/button_cond/M_ctr_q_18> in Unit <mojo_top_0> is equivalent to the following FF/Latch, which will be removed : <myState/mainState/button_cond1/M_ctr_q_18> 
+INFO:Xst:2261 - The FF/Latch <myState/bttnpress/button_cond2/M_ctr_q_7> in Unit <mojo_top_0> is equivalent to the following FF/Latch, which will be removed : <myState/mainState/button_cond2/M_ctr_q_7> 
+INFO:Xst:2261 - The FF/Latch <myState/bttnpress/button_cond/M_ctr_q_19> in Unit <mojo_top_0> is equivalent to the following FF/Latch, which will be removed : <myState/mainState/button_cond1/M_ctr_q_19> 
+INFO:Xst:2261 - The FF/Latch <myState/bttnpress/button_cond2/M_ctr_q_8> in Unit <mojo_top_0> is equivalent to the following FF/Latch, which will be removed : <myState/mainState/button_cond2/M_ctr_q_8> 
+INFO:Xst:2261 - The FF/Latch <myState/bttnpress/button_cond2/M_ctr_q_9> in Unit <mojo_top_0> is equivalent to the following FF/Latch, which will be removed : <myState/mainState/button_cond2/M_ctr_q_9> 
+INFO:Xst:2261 - The FF/Latch <myState/bttnpress/button_cond3/M_ctr_q_0> in Unit <mojo_top_0> is equivalent to the following FF/Latch, which will be removed : <myState/mainState/button_cond3/M_ctr_q_0> 
+INFO:Xst:2261 - The FF/Latch <myState/bttnpress/button_cond3/M_ctr_q_1> in Unit <mojo_top_0> is equivalent to the following FF/Latch, which will be removed : <myState/mainState/button_cond3/M_ctr_q_1> 
+INFO:Xst:2261 - The FF/Latch <myState/bttnpress/button_cond3/M_ctr_q_2> in Unit <mojo_top_0> is equivalent to the following FF/Latch, which will be removed : <myState/mainState/button_cond3/M_ctr_q_2> 
+INFO:Xst:2261 - The FF/Latch <myState/bttnpress/button_cond3/M_ctr_q_3> in Unit <mojo_top_0> is equivalent to the following FF/Latch, which will be removed : <myState/mainState/button_cond3/M_ctr_q_3> 
+INFO:Xst:2261 - The FF/Latch <myState/bttnpress/button_cond3/M_ctr_q_4> in Unit <mojo_top_0> is equivalent to the following FF/Latch, which will be removed : <myState/mainState/button_cond3/M_ctr_q_4> 
+INFO:Xst:2261 - The FF/Latch <myState/bttnpress/button_cond3/M_ctr_q_5> in Unit <mojo_top_0> is equivalent to the following FF/Latch, which will be removed : <myState/mainState/button_cond3/M_ctr_q_5> 
+INFO:Xst:2261 - The FF/Latch <myState/bttnpress/button_cond3/M_ctr_q_6> in Unit <mojo_top_0> is equivalent to the following FF/Latch, which will be removed : <myState/mainState/button_cond3/M_ctr_q_6> 
+INFO:Xst:2261 - The FF/Latch <myState/bttnpress/button_cond3/M_ctr_q_7> in Unit <mojo_top_0> is equivalent to the following FF/Latch, which will be removed : <myState/mainState/button_cond3/M_ctr_q_7> 
+INFO:Xst:2261 - The FF/Latch <myState/bttnpress/button_cond3/M_ctr_q_8> in Unit <mojo_top_0> is equivalent to the following FF/Latch, which will be removed : <myState/mainState/button_cond3/M_ctr_q_8> 
+INFO:Xst:2261 - The FF/Latch <myState/bttnpress/button_cond3/M_ctr_q_9> in Unit <mojo_top_0> is equivalent to the following FF/Latch, which will be removed : <myState/mainState/button_cond3/M_ctr_q_9> 
+INFO:Xst:2261 - The FF/Latch <myState/bttnpress/button_cond/M_ctr_q_0> in Unit <mojo_top_0> is equivalent to the following FF/Latch, which will be removed : <myState/mainState/button_cond1/M_ctr_q_0> 
+INFO:Xst:2261 - The FF/Latch <myState/bttnpress/button_cond2/M_ctr_q_10> in Unit <mojo_top_0> is equivalent to the following FF/Latch, which will be removed : <myState/mainState/button_cond2/M_ctr_q_10> 
+INFO:Xst:2261 - The FF/Latch <myState/bttnpress/button_cond/M_ctr_q_1> in Unit <mojo_top_0> is equivalent to the following FF/Latch, which will be removed : <myState/mainState/button_cond1/M_ctr_q_1> 
+INFO:Xst:2261 - The FF/Latch <myState/bttnpress/button_cond2/M_ctr_q_11> in Unit <mojo_top_0> is equivalent to the following FF/Latch, which will be removed : <myState/mainState/button_cond2/M_ctr_q_11> 
+INFO:Xst:2261 - The FF/Latch <myState/bttnpress/button_cond/M_ctr_q_2> in Unit <mojo_top_0> is equivalent to the following FF/Latch, which will be removed : <myState/mainState/button_cond1/M_ctr_q_2> 
+INFO:Xst:2261 - The FF/Latch <myState/bttnpress/button_cond2/M_ctr_q_12> in Unit <mojo_top_0> is equivalent to the following FF/Latch, which will be removed : <myState/mainState/button_cond2/M_ctr_q_12> 
+INFO:Xst:2261 - The FF/Latch <myState/mainState/mypropogater/slowclk25/M_ctr_q_0> in Unit <mojo_top_0> is equivalent to the following 3 FFs/Latches, which will be removed : <myState/mainState/mypropogater/slowclk24/M_ctr_q_0> <myState/mainState/mypropogater/slowclk23/M_ctr_q_0> <myState/mainState/edge_ctr/M_ctr_q_0> 
+INFO:Xst:2261 - The FF/Latch <myState/bttnpress/button_cond2/M_ctr_q_13> in Unit <mojo_top_0> is equivalent to the following FF/Latch, which will be removed : <myState/mainState/button_cond2/M_ctr_q_13> 
+INFO:Xst:2261 - The FF/Latch <myState/bttnpress/button_cond/M_ctr_q_3> in Unit <mojo_top_0> is equivalent to the following FF/Latch, which will be removed : <myState/mainState/button_cond1/M_ctr_q_3> 
+INFO:Xst:2261 - The FF/Latch <myState/mainState/mypropogater/slowclk25/M_ctr_q_1> in Unit <mojo_top_0> is equivalent to the following 3 FFs/Latches, which will be removed : <myState/mainState/mypropogater/slowclk24/M_ctr_q_1> <myState/mainState/mypropogater/slowclk23/M_ctr_q_1> <myState/mainState/edge_ctr/M_ctr_q_1> 
+INFO:Xst:2261 - The FF/Latch <myState/bttnpress/button_cond2/M_ctr_q_14> in Unit <mojo_top_0> is equivalent to the following FF/Latch, which will be removed : <myState/mainState/button_cond2/M_ctr_q_14> 
+INFO:Xst:2261 - The FF/Latch <myState/bttnpress/button_cond/M_ctr_q_4> in Unit <mojo_top_0> is equivalent to the following FF/Latch, which will be removed : <myState/mainState/button_cond1/M_ctr_q_4> 
+INFO:Xst:2261 - The FF/Latch <myState/mainState/mypropogater/slowclk25/M_ctr_q_2> in Unit <mojo_top_0> is equivalent to the following 3 FFs/Latches, which will be removed : <myState/mainState/mypropogater/slowclk24/M_ctr_q_2> <myState/mainState/mypropogater/slowclk23/M_ctr_q_2> <myState/mainState/edge_ctr/M_ctr_q_2> 
+INFO:Xst:2261 - The FF/Latch <myState/bttnpress/button_cond2/M_ctr_q_15> in Unit <mojo_top_0> is equivalent to the following FF/Latch, which will be removed : <myState/mainState/button_cond2/M_ctr_q_15> 
+INFO:Xst:2261 - The FF/Latch <myState/bttnpress/button_cond/M_ctr_q_5> in Unit <mojo_top_0> is equivalent to the following FF/Latch, which will be removed : <myState/mainState/button_cond1/M_ctr_q_5> 
+INFO:Xst:2261 - The FF/Latch <myState/mainState/mypropogater/slowclk25/M_ctr_q_3> in Unit <mojo_top_0> is equivalent to the following 3 FFs/Latches, which will be removed : <myState/mainState/mypropogater/slowclk24/M_ctr_q_3> <myState/mainState/mypropogater/slowclk23/M_ctr_q_3> <myState/mainState/edge_ctr/M_ctr_q_3> 
+INFO:Xst:2261 - The FF/Latch <myState/bttnpress/button_cond2/M_ctr_q_16> in Unit <mojo_top_0> is equivalent to the following FF/Latch, which will be removed : <myState/mainState/button_cond2/M_ctr_q_16> 
+INFO:Xst:2261 - The FF/Latch <myState/bttnpress/button_cond/M_ctr_q_6> in Unit <mojo_top_0> is equivalent to the following FF/Latch, which will be removed : <myState/mainState/button_cond1/M_ctr_q_6> 
+INFO:Xst:2261 - The FF/Latch <myState/mainState/mypropogater/slowclk25/M_ctr_q_4> in Unit <mojo_top_0> is equivalent to the following 3 FFs/Latches, which will be removed : <myState/mainState/mypropogater/slowclk24/M_ctr_q_4> <myState/mainState/mypropogater/slowclk23/M_ctr_q_4> <myState/mainState/edge_ctr/M_ctr_q_4> 
+INFO:Xst:2261 - The FF/Latch <myState/bttnpress/button_cond2/M_ctr_q_17> in Unit <mojo_top_0> is equivalent to the following FF/Latch, which will be removed : <myState/mainState/button_cond2/M_ctr_q_17> 
+INFO:Xst:2261 - The FF/Latch <myState/bttnpress/button_cond/M_ctr_q_7> in Unit <mojo_top_0> is equivalent to the following FF/Latch, which will be removed : <myState/mainState/button_cond1/M_ctr_q_7> 
+INFO:Xst:2261 - The FF/Latch <myState/mainState/mypropogater/slowclk25/M_ctr_q_5> in Unit <mojo_top_0> is equivalent to the following 3 FFs/Latches, which will be removed : <myState/mainState/mypropogater/slowclk24/M_ctr_q_5> <myState/mainState/mypropogater/slowclk23/M_ctr_q_5> <myState/mainState/edge_ctr/M_ctr_q_5> 
+INFO:Xst:2261 - The FF/Latch <myState/bttnpress/button_cond2/M_ctr_q_18> in Unit <mojo_top_0> is equivalent to the following FF/Latch, which will be removed : <myState/mainState/button_cond2/M_ctr_q_18> 
+INFO:Xst:2261 - The FF/Latch <myState/bttnpress/button_cond/M_ctr_q_8> in Unit <mojo_top_0> is equivalent to the following FF/Latch, which will be removed : <myState/mainState/button_cond1/M_ctr_q_8> 
+INFO:Xst:2261 - The FF/Latch <myState/mainState/mypropogater/slowclk25/M_ctr_q_6> in Unit <mojo_top_0> is equivalent to the following 3 FFs/Latches, which will be removed : <myState/mainState/mypropogater/slowclk24/M_ctr_q_6> <myState/mainState/mypropogater/slowclk23/M_ctr_q_6> <myState/mainState/edge_ctr/M_ctr_q_6> 
+INFO:Xst:2261 - The FF/Latch <myState/bttnpress/button_cond2/M_ctr_q_19> in Unit <mojo_top_0> is equivalent to the following FF/Latch, which will be removed : <myState/mainState/button_cond2/M_ctr_q_19> 
+INFO:Xst:2261 - The FF/Latch <myState/bttnpress/button_cond/M_ctr_q_9> in Unit <mojo_top_0> is equivalent to the following FF/Latch, which will be removed : <myState/mainState/button_cond1/M_ctr_q_9> 
+INFO:Xst:2261 - The FF/Latch <myState/mainState/mypropogater/slowclk25/M_ctr_q_7> in Unit <mojo_top_0> is equivalent to the following 3 FFs/Latches, which will be removed : <myState/mainState/mypropogater/slowclk24/M_ctr_q_7> <myState/mainState/mypropogater/slowclk23/M_ctr_q_7> <myState/mainState/edge_ctr/M_ctr_q_7> 
+INFO:Xst:2261 - The FF/Latch <myState/mainState/mypropogater/slowclk25/M_ctr_q_8> in Unit <mojo_top_0> is equivalent to the following 3 FFs/Latches, which will be removed : <myState/mainState/mypropogater/slowclk24/M_ctr_q_8> <myState/mainState/mypropogater/slowclk23/M_ctr_q_8> <myState/mainState/edge_ctr/M_ctr_q_8> 
+INFO:Xst:2261 - The FF/Latch <myState/mainState/mypropogater/slowclk25/M_ctr_q_9> in Unit <mojo_top_0> is equivalent to the following 3 FFs/Latches, which will be removed : <myState/mainState/mypropogater/slowclk24/M_ctr_q_9> <myState/mainState/mypropogater/slowclk23/M_ctr_q_9> <myState/mainState/edge_ctr/M_ctr_q_9> 
+INFO:Xst:2261 - The FF/Latch <myState/bttnpress/button_cond2/sync/M_pipe_q_0> in Unit <mojo_top_0> is equivalent to the following FF/Latch, which will be removed : <myState/mainState/button_cond2/sync/M_pipe_q_0> 
+INFO:Xst:2261 - The FF/Latch <myState/bttnpress/button_cond2/sync/M_pipe_q_1> in Unit <mojo_top_0> is equivalent to the following FF/Latch, which will be removed : <myState/mainState/button_cond2/sync/M_pipe_q_1> 
+INFO:Xst:2261 - The FF/Latch <myState/bttnpress/button_cond3/sync/M_pipe_q_0> in Unit <mojo_top_0> is equivalent to the following FF/Latch, which will be removed : <myState/mainState/button_cond3/sync/M_pipe_q_0> 
+INFO:Xst:2261 - The FF/Latch <myState/bttnpress/button_cond3/sync/M_pipe_q_1> in Unit <mojo_top_0> is equivalent to the following FF/Latch, which will be removed : <myState/mainState/button_cond3/sync/M_pipe_q_1> 
+INFO:Xst:2261 - The FF/Latch <myState/mainState/mypropogater/slowclk25/M_ctr_q_10> in Unit <mojo_top_0> is equivalent to the following 3 FFs/Latches, which will be removed : <myState/mainState/mypropogater/slowclk24/M_ctr_q_10> <myState/mainState/mypropogater/slowclk23/M_ctr_q_10> <myState/mainState/edge_ctr/M_ctr_q_10> 
+INFO:Xst:2261 - The FF/Latch <myState/mainState/mypropogater/slowclk25/M_ctr_q_11> in Unit <mojo_top_0> is equivalent to the following 3 FFs/Latches, which will be removed : <myState/mainState/mypropogater/slowclk24/M_ctr_q_11> <myState/mainState/mypropogater/slowclk23/M_ctr_q_11> <myState/mainState/edge_ctr/M_ctr_q_11> 
+INFO:Xst:2261 - The FF/Latch <myState/mainState/mypropogater/slowclk25/M_ctr_q_12> in Unit <mojo_top_0> is equivalent to the following 3 FFs/Latches, which will be removed : <myState/mainState/mypropogater/slowclk24/M_ctr_q_12> <myState/mainState/mypropogater/slowclk23/M_ctr_q_12> <myState/mainState/edge_ctr/M_ctr_q_12> 
+INFO:Xst:2261 - The FF/Latch <myState/bttnpress/button_cond/sync/M_pipe_q_0> in Unit <mojo_top_0> is equivalent to the following FF/Latch, which will be removed : <myState/mainState/button_cond1/sync/M_pipe_q_0> 
+INFO:Xst:2261 - The FF/Latch <myState/mainState/mypropogater/slowclk25/M_ctr_q_13> in Unit <mojo_top_0> is equivalent to the following 3 FFs/Latches, which will be removed : <myState/mainState/mypropogater/slowclk24/M_ctr_q_13> <myState/mainState/mypropogater/slowclk23/M_ctr_q_13> <myState/mainState/edge_ctr/M_ctr_q_13> 
+INFO:Xst:2261 - The FF/Latch <myState/bttnpress/button_cond/sync/M_pipe_q_1> in Unit <mojo_top_0> is equivalent to the following FF/Latch, which will be removed : <myState/mainState/button_cond1/sync/M_pipe_q_1> 
+INFO:Xst:2261 - The FF/Latch <myState/mainState/mypropogater/slowclk25/M_ctr_q_14> in Unit <mojo_top_0> is equivalent to the following 3 FFs/Latches, which will be removed : <myState/mainState/mypropogater/slowclk24/M_ctr_q_14> <myState/mainState/mypropogater/slowclk23/M_ctr_q_14> <myState/mainState/edge_ctr/M_ctr_q_14> 
+INFO:Xst:2261 - The FF/Latch <myState/mainState/mypropogater/slowclk25/M_ctr_q_20> in Unit <mojo_top_0> is equivalent to the following 3 FFs/Latches, which will be removed : <myState/mainState/mypropogater/slowclk24/M_ctr_q_20> <myState/mainState/mypropogater/slowclk23/M_ctr_q_20> <myState/mainState/edge_ctr/M_ctr_q_20> 
+INFO:Xst:2261 - The FF/Latch <myState/mainState/mypropogater/slowclk25/M_ctr_q_15> in Unit <mojo_top_0> is equivalent to the following 3 FFs/Latches, which will be removed : <myState/mainState/mypropogater/slowclk24/M_ctr_q_15> <myState/mainState/mypropogater/slowclk23/M_ctr_q_15> <myState/mainState/edge_ctr/M_ctr_q_15> 
+INFO:Xst:2261 - The FF/Latch <myState/mainState/mypropogater/slowclk25/M_ctr_q_21> in Unit <mojo_top_0> is equivalent to the following 3 FFs/Latches, which will be removed : <myState/mainState/mypropogater/slowclk24/M_ctr_q_21> <myState/mainState/mypropogater/slowclk23/M_ctr_q_21> <myState/mainState/edge_ctr/M_ctr_q_21> 
+INFO:Xst:2261 - The FF/Latch <myState/mainState/mypropogater/slowclk25/M_ctr_q_16> in Unit <mojo_top_0> is equivalent to the following 3 FFs/Latches, which will be removed : <myState/mainState/mypropogater/slowclk24/M_ctr_q_16> <myState/mainState/mypropogater/slowclk23/M_ctr_q_16> <myState/mainState/edge_ctr/M_ctr_q_16> 
+INFO:Xst:2261 - The FF/Latch <myState/mainState/mypropogater/slowclk25/M_ctr_q_22> in Unit <mojo_top_0> is equivalent to the following 3 FFs/Latches, which will be removed : <myState/mainState/mypropogater/slowclk24/M_ctr_q_22> <myState/mainState/mypropogater/slowclk23/M_ctr_q_22> <myState/mainState/edge_ctr/M_ctr_q_22> 
+INFO:Xst:2261 - The FF/Latch <myState/mainState/mypropogater/slowclk25/M_ctr_q_17> in Unit <mojo_top_0> is equivalent to the following 3 FFs/Latches, which will be removed : <myState/mainState/mypropogater/slowclk24/M_ctr_q_17> <myState/mainState/mypropogater/slowclk23/M_ctr_q_17> <myState/mainState/edge_ctr/M_ctr_q_17> 
+INFO:Xst:2261 - The FF/Latch <myState/mainState/mypropogater/slowclk25/M_ctr_q_23> in Unit <mojo_top_0> is equivalent to the following 2 FFs/Latches, which will be removed : <myState/mainState/mypropogater/slowclk24/M_ctr_q_23> <myState/mainState/mypropogater/slowclk23/M_ctr_q_23> 
+INFO:Xst:2261 - The FF/Latch <myState/mainState/mypropogater/slowclk25/M_ctr_q_18> in Unit <mojo_top_0> is equivalent to the following 3 FFs/Latches, which will be removed : <myState/mainState/mypropogater/slowclk24/M_ctr_q_18> <myState/mainState/mypropogater/slowclk23/M_ctr_q_18> <myState/mainState/edge_ctr/M_ctr_q_18> 
+INFO:Xst:2261 - The FF/Latch <myState/mainState/mypropogater/slowclk25/M_ctr_q_24> in Unit <mojo_top_0> is equivalent to the following FF/Latch, which will be removed : <myState/mainState/mypropogater/slowclk24/M_ctr_q_24> 
+INFO:Xst:2261 - The FF/Latch <myState/mainState/mypropogater/slowclk25/M_ctr_q_19> in Unit <mojo_top_0> is equivalent to the following 3 FFs/Latches, which will be removed : <myState/mainState/mypropogater/slowclk24/M_ctr_q_19> <myState/mainState/mypropogater/slowclk23/M_ctr_q_19> <myState/mainState/edge_ctr/M_ctr_q_19> 
+INFO:Xst:2261 - The FF/Latch <myState/bttnpress/button_cond3/M_ctr_q_10> in Unit <mojo_top_0> is equivalent to the following FF/Latch, which will be removed : <myState/mainState/button_cond3/M_ctr_q_10> 
+INFO:Xst:2261 - The FF/Latch <myState/bttnpress/button_cond3/M_ctr_q_11> in Unit <mojo_top_0> is equivalent to the following FF/Latch, which will be removed : <myState/mainState/button_cond3/M_ctr_q_11> 
+INFO:Xst:2261 - The FF/Latch <myState/bttnpress/button_cond3/M_ctr_q_12> in Unit <mojo_top_0> is equivalent to the following FF/Latch, which will be removed : <myState/mainState/button_cond3/M_ctr_q_12> 
+INFO:Xst:2261 - The FF/Latch <myState/bttnpress/button_cond3/M_ctr_q_13> in Unit <mojo_top_0> is equivalent to the following FF/Latch, which will be removed : <myState/mainState/button_cond3/M_ctr_q_13> 
+INFO:Xst:2261 - The FF/Latch <myState/bttnpress/button_cond3/M_ctr_q_14> in Unit <mojo_top_0> is equivalent to the following FF/Latch, which will be removed : <myState/mainState/button_cond3/M_ctr_q_14> 
+INFO:Xst:2261 - The FF/Latch <myState/bttnpress/button_cond3/M_ctr_q_15> in Unit <mojo_top_0> is equivalent to the following FF/Latch, which will be removed : <myState/mainState/button_cond3/M_ctr_q_15> 
+INFO:Xst:2261 - The FF/Latch <myState/bttnpress/button_cond3/M_ctr_q_16> in Unit <mojo_top_0> is equivalent to the following FF/Latch, which will be removed : <myState/mainState/button_cond3/M_ctr_q_16> 
+INFO:Xst:2261 - The FF/Latch <myState/bttnpress/button_cond3/M_ctr_q_17> in Unit <mojo_top_0> is equivalent to the following FF/Latch, which will be removed : <myState/mainState/button_cond3/M_ctr_q_17> 
+INFO:Xst:2261 - The FF/Latch <myState/bttnpress/button_cond3/M_ctr_q_18> in Unit <mojo_top_0> is equivalent to the following FF/Latch, which will be removed : <myState/mainState/button_cond3/M_ctr_q_18> 
+INFO:Xst:2261 - The FF/Latch <myState/bttnpress/button_cond3/M_ctr_q_19> in Unit <mojo_top_0> is equivalent to the following FF/Latch, which will be removed : <myState/mainState/button_cond3/M_ctr_q_19> 
+INFO:Xst:2261 - The FF/Latch <myState/mainState/mypropogater/randomizer/clk_gen/M_y_q_20> in Unit <mojo_top_0> is equivalent to the following 4 FFs/Latches, which will be removed : <myState/mainState/mypropogater/randomizer/clk_gen/M_y_q_19> <myState/mainState/mypropogater/randomizer/clk_gen/M_x_q_29> <myState/mainState/mypropogater/randomizer/clk_gen/M_x_q_10> <myState/mainState/mypropogater/randomizer/clk_gen/M_x_q_1> 
+INFO:Xst:2261 - The FF/Latch <myState/mainState/mypropogater/randomizer/numb_gen/M_y_q_20> in Unit <mojo_top_0> is equivalent to the following 4 FFs/Latches, which will be removed : <myState/mainState/mypropogater/randomizer/numb_gen/M_y_q_19> <myState/mainState/mypropogater/randomizer/numb_gen/M_x_q_29> <myState/mainState/mypropogater/randomizer/numb_gen/M_x_q_10> <myState/mainState/mypropogater/randomizer/numb_gen/M_x_q_1> 
 
 Mapping all equations...
 Building and optimizing final netlist ...
-INFO:Xst:2261 - The FF/Latch <mymain/mypropogater/randomizer/numb_gen/M_x_q_20> in Unit <mojo_top_0> is equivalent to the following FF/Latch, which will be removed : <mymain/mypropogater/randomizer/numb_gen/M_x_q_19> 
-INFO:Xst:2261 - The FF/Latch <mymain/mypropogater/randomizer/numb_gen/M_y_q_20> in Unit <mojo_top_0> is equivalent to the following FF/Latch, which will be removed : <mymain/mypropogater/randomizer/clk_gen/M_y_q_20> 
-INFO:Xst:2261 - The FF/Latch <mymain/mypropogater/randomizer/clk_gen/M_x_q_20> in Unit <mojo_top_0> is equivalent to the following FF/Latch, which will be removed : <mymain/mypropogater/randomizer/clk_gen/M_x_q_19> 
-INFO:Xst:2261 - The FF/Latch <mymain/mypropogater/randomizer/numb_gen/M_x_q_20> in Unit <mojo_top_0> is equivalent to the following FF/Latch, which will be removed : <mymain/mypropogater/randomizer/clk_gen/M_x_q_20> 
-Found area constraint ratio of 100 (+ 0) on block mojo_top_0, actual ratio is 4.
-FlipFlop mymain/mypropogater/rowCtr/M_ctr_q_0 has been replicated 1 time(s)
-FlipFlop mymain/mypropogater/rowCtr/M_ctr_q_1 has been replicated 1 time(s)
-FlipFlop reset_cond3/M_stage_q_3 has been replicated 1 time(s)
+INFO:Xst:2261 - The FF/Latch <myState/mainState/mypropogater/randomizer/numb_gen/M_x_q_20> in Unit <mojo_top_0> is equivalent to the following FF/Latch, which will be removed : <myState/mainState/mypropogater/randomizer/numb_gen/M_x_q_19> 
+INFO:Xst:2261 - The FF/Latch <myState/mainState/mypropogater/randomizer/clk_gen/M_x_q_20> in Unit <mojo_top_0> is equivalent to the following FF/Latch, which will be removed : <myState/mainState/mypropogater/randomizer/clk_gen/M_x_q_19> 
+INFO:Xst:2261 - The FF/Latch <myState/mainState/mypropogater/randomizer/numb_gen/M_y_q_20> in Unit <mojo_top_0> is equivalent to the following FF/Latch, which will be removed : <myState/mainState/mypropogater/randomizer/clk_gen/M_y_q_20> 
+INFO:Xst:2261 - The FF/Latch <myState/mainState/mypropogater/randomizer/numb_gen/M_x_q_20> in Unit <mojo_top_0> is equivalent to the following FF/Latch, which will be removed : <myState/mainState/mypropogater/randomizer/clk_gen/M_x_q_20> 
+Found area constraint ratio of 100 (+ 0) on block mojo_top_0, actual ratio is 6.
+WARNING:Xst:2677 - Node <myState/mainState/mypropogater/M_seed_q_24> of sequential type is unconnected in block <mojo_top_0>.
+WARNING:Xst:2677 - Node <myState/mainState/mypropogater/M_seed_q_23> of sequential type is unconnected in block <mojo_top_0>.
+WARNING:Xst:2677 - Node <myState/mainState/mypropogater/M_seed_q_22> of sequential type is unconnected in block <mojo_top_0>.
+WARNING:Xst:2677 - Node <myState/mainState/mypropogater/M_clkseed_q_24> of sequential type is unconnected in block <mojo_top_0>.
+WARNING:Xst:2677 - Node <myState/mainState/mypropogater/M_clkseed_q_23> of sequential type is unconnected in block <mojo_top_0>.
+WARNING:Xst:2677 - Node <myState/mainState/mypropogater/M_clkseed_q_22> of sequential type is unconnected in block <mojo_top_0>.
+WARNING:Xst:2677 - Node <myState/mainState/mypropogater/randomizer/numb_gen/M_w_q_24> of sequential type is unconnected in block <mojo_top_0>.
+WARNING:Xst:2677 - Node <myState/mainState/mypropogater/randomizer/numb_gen/M_w_q_16> of sequential type is unconnected in block <mojo_top_0>.
+WARNING:Xst:2677 - Node <myState/mainState/mypropogater/randomizer/numb_gen/M_w_q_13> of sequential type is unconnected in block <mojo_top_0>.
+WARNING:Xst:2677 - Node <myState/mainState/mypropogater/randomizer/numb_gen/M_w_q_5> of sequential type is unconnected in block <mojo_top_0>.
+WARNING:Xst:2677 - Node <myState/mainState/mypropogater/randomizer/clk_gen/M_w_q_24> of sequential type is unconnected in block <mojo_top_0>.
+WARNING:Xst:2677 - Node <myState/mainState/mypropogater/randomizer/clk_gen/M_w_q_16> of sequential type is unconnected in block <mojo_top_0>.
+WARNING:Xst:2677 - Node <myState/mainState/mypropogater/randomizer/clk_gen/M_w_q_13> of sequential type is unconnected in block <mojo_top_0>.
+WARNING:Xst:2677 - Node <myState/mainState/mypropogater/randomizer/clk_gen/M_w_q_5> of sequential type is unconnected in block <mojo_top_0>.
+WARNING:Xst:2677 - Node <myState/mainState/mypropogater/randomizer/numb_gen/M_y_q_16> of sequential type is unconnected in block <mojo_top_0>.
+WARNING:Xst:2677 - Node <myState/mainState/mypropogater/randomizer/numb_gen/M_y_q_13> of sequential type is unconnected in block <mojo_top_0>.
+WARNING:Xst:2677 - Node <myState/mainState/mypropogater/randomizer/numb_gen/M_y_q_5> of sequential type is unconnected in block <mojo_top_0>.
+WARNING:Xst:2677 - Node <myState/mainState/mypropogater/randomizer/numb_gen/M_z_q_16> of sequential type is unconnected in block <mojo_top_0>.
+WARNING:Xst:2677 - Node <myState/mainState/mypropogater/randomizer/numb_gen/M_z_q_13> of sequential type is unconnected in block <mojo_top_0>.
+WARNING:Xst:2677 - Node <myState/mainState/mypropogater/randomizer/numb_gen/M_z_q_5> of sequential type is unconnected in block <mojo_top_0>.
+WARNING:Xst:2677 - Node <myState/mainState/mypropogater/randomizer/numb_gen/M_x_q_13> of sequential type is unconnected in block <mojo_top_0>.
+WARNING:Xst:2677 - Node <myState/mainState/mypropogater/randomizer/numb_gen/M_x_q_5> of sequential type is unconnected in block <mojo_top_0>.
+WARNING:Xst:2677 - Node <myState/mainState/mypropogater/randomizer/clk_gen/M_y_q_16> of sequential type is unconnected in block <mojo_top_0>.
+WARNING:Xst:2677 - Node <myState/mainState/mypropogater/randomizer/clk_gen/M_y_q_13> of sequential type is unconnected in block <mojo_top_0>.
+WARNING:Xst:2677 - Node <myState/mainState/mypropogater/randomizer/clk_gen/M_y_q_5> of sequential type is unconnected in block <mojo_top_0>.
+WARNING:Xst:2677 - Node <myState/mainState/mypropogater/randomizer/clk_gen/M_z_q_16> of sequential type is unconnected in block <mojo_top_0>.
+WARNING:Xst:2677 - Node <myState/mainState/mypropogater/randomizer/clk_gen/M_z_q_13> of sequential type is unconnected in block <mojo_top_0>.
+WARNING:Xst:2677 - Node <myState/mainState/mypropogater/randomizer/clk_gen/M_z_q_5> of sequential type is unconnected in block <mojo_top_0>.
+WARNING:Xst:2677 - Node <myState/mainState/mypropogater/randomizer/clk_gen/M_x_q_13> of sequential type is unconnected in block <mojo_top_0>.
+WARNING:Xst:2677 - Node <myState/mainState/mypropogater/randomizer/clk_gen/M_x_q_5> of sequential type is unconnected in block <mojo_top_0>.
+FlipFlop myState/M_state_q_FSM_FFd1 has been replicated 2 time(s)
+FlipFlop myState/M_state_q_FSM_FFd2 has been replicated 1 time(s)
+FlipFlop myState/bttnpress/M_ctr_q_0 has been replicated 2 time(s)
+FlipFlop reset_cond3/M_stage_q_3 has been replicated 2 time(s)
 
 Final Macro Processing ...
 
 Processing Unit <mojo_top_0> :
-	Found 2-bit shift register for signal <mymain/button_cond3/sync/M_pipe_q_1>.
-	Found 2-bit shift register for signal <mymain/button_cond2/sync/M_pipe_q_1>.
-	Found 2-bit shift register for signal <mymain/button_cond1/sync/M_pipe_q_1>.
+	Found 2-bit shift register for signal <myState/bttnpress/button_cond3/sync/M_pipe_q_1>.
+	Found 2-bit shift register for signal <myState/bttnpress/button_cond2/sync/M_pipe_q_1>.
+	Found 2-bit shift register for signal <myState/bttnpress/button_cond/sync/M_pipe_q_1>.
 Unit <mojo_top_0> processed.
 
 =========================================================================
 Final Register Report
 
 Macro Statistics
-# Registers                                            : 199
- Flip-Flops                                            : 199
+# Registers                                            : 213
+ Flip-Flops                                            : 213
 # Shift Registers                                      : 3
  2-bit shift register                                  : 3
 
@@ -744,33 +971,32 @@ Top Level Output File Name         : mojo_top_0.ngc
 
 Primitive and Black Box Usage:
 ------------------------------
-# BELS                             : 513
-#      GND                         : 10
-#      INV                         : 14
-#      LUT1                        : 82
-#      LUT2                        : 7
-#      LUT3                        : 55
-#      LUT4                        : 22
-#      LUT5                        : 19
-#      LUT6                        : 28
-#      MUXCY                       : 130
-#      MUXF7                       : 1
+# BELS                             : 627
+#      GND                         : 12
+#      INV                         : 13
+#      LUT1                        : 104
+#      LUT2                        : 5
+#      LUT3                        : 24
+#      LUT4                        : 14
+#      LUT5                        : 92
+#      LUT6                        : 40
+#      MUXCY                       : 153
 #      VCC                         : 9
-#      XORCY                       : 136
-# FlipFlops/Latches                : 202
-#      FD                          : 6
-#      FDE                         : 93
-#      FDR                         : 35
-#      FDRE                        : 63
-#      FDS                         : 5
+#      XORCY                       : 161
+# FlipFlops/Latches                : 216
+#      FD                          : 47
+#      FDE                         : 57
+#      FDR                         : 36
+#      FDRE                        : 67
+#      FDS                         : 9
 # Shift Registers                  : 3
 #      SRLC16E                     : 3
 # Clock Buffers                    : 2
 #      BUFG                        : 1
 #      BUFGP                       : 1
-# IO Buffers                       : 24
+# IO Buffers                       : 48
 #      IBUF                        : 4
-#      OBUF                        : 14
+#      OBUF                        : 38
 #      OBUFT                       : 6
 
 Device utilization summary:
@@ -780,22 +1006,22 @@ Selected Device : 6slx9tqg144-2
 
 
 Slice Logic Utilization: 
- Number of Slice Registers:             202  out of  11440     1%  
- Number of Slice LUTs:                  230  out of   5720     4%  
-    Number used as Logic:               227  out of   5720     3%  
+ Number of Slice Registers:             216  out of  11440     1%  
+ Number of Slice LUTs:                  295  out of   5720     5%  
+    Number used as Logic:               292  out of   5720     5%  
     Number used as Memory:                3  out of   1440     0%  
        Number used as SRL:                3
 
 Slice Logic Distribution: 
- Number of LUT Flip Flop pairs used:    248
-   Number with an unused Flip Flop:      46  out of    248    18%  
-   Number with an unused LUT:            18  out of    248     7%  
-   Number of fully used LUT-FF pairs:   184  out of    248    74%  
-   Number of unique control sets:        22
+ Number of LUT Flip Flop pairs used:    323
+   Number with an unused Flip Flop:     107  out of    323    33%  
+   Number with an unused LUT:            28  out of    323     8%  
+   Number of fully used LUT-FF pairs:   188  out of    323    58%  
+   Number of unique control sets:        32
 
 IO Utilization: 
- Number of IOs:                          31
- Number of bonded IOBs:                  25  out of    102    24%  
+ Number of IOs:                          55
+ Number of bonded IOBs:                  49  out of    102    48%  
 
 Specific Feature Utilization:
  Number of BUFG/BUFGCTRLs:                2  out of     16    12%  
@@ -818,13 +1044,14 @@ NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
 
 Clock Information:
 ------------------
-----------------------------------------------------------------------+-----------------------------------------+-------+
-Clock Signal                                                          | Clock buffer(FF name)                   | Load  |
-----------------------------------------------------------------------+-----------------------------------------+-------+
-clk                                                                   | BUFGP                                   | 143   |
-mymain/mypropogater/slowclk25/M_ctr_q_22                              | NONE(mymain/M_cent_q_0)                 | 8     |
-mymain/mypropogater/chosenClk_0(mymain/mypropogater/Mmux_chosenClk1:O)| BUFG(*)(mymain/mypropogater/M_seed_q_24)| 54    |
-----------------------------------------------------------------------+-----------------------------------------+-------+
+---------------------------------------------------------------------------------------------+----------------------------------------------------+-------+
+Clock Signal                                                                                 | Clock buffer(FF name)                              | Load  |
+---------------------------------------------------------------------------------------------+----------------------------------------------------+-------+
+clk                                                                                          | BUFGP                                              | 162   |
+myState/mainState/mypropogater/slowclk25/M_ctr_q_22                                          | NONE(myState/mainState/M_cent_q_0)                 | 8     |
+myState/mainState/mypropogater/chosenClk_0(myState/mainState/mypropogater/Mmux_chosenClk12:O)| BUFG(*)(myState/mainState/mypropogater/M_seed_q_21)| 46    |
+myState/bttnpress/edge_ctr/M_ctr_q_22                                                        | NONE(myState/bttnpress/edge_detector2/M_last_q)    | 3     |
+---------------------------------------------------------------------------------------------+----------------------------------------------------+-------+
 (*) This 1 clock signal(s) are generated by combinatorial logic,
 and XST is not able to identify which are the primary clock signals.
 Please use the CLOCK_SIGNAL constraint to specify the clock signal(s) generated by combinatorial logic.
@@ -838,9 +1065,9 @@ Timing Summary:
 ---------------
 Speed Grade: -2
 
-   Minimum period: 4.751ns (Maximum Frequency: 210.482MHz)
-   Minimum input arrival time before clock: 3.563ns
-   Maximum output required time after clock: 6.113ns
+   Minimum period: 4.829ns (Maximum Frequency: 207.082MHz)
+   Minimum input arrival time before clock: 3.598ns
+   Maximum output required time after clock: 6.632ns
    Maximum combinational path delay: No path found
 
 Timing Details:
@@ -849,82 +1076,87 @@ All values displayed in nanoseconds (ns)
 
 =========================================================================
 Timing constraint: Default period analysis for Clock 'clk'
-  Clock period: 4.751ns (frequency: 210.482MHz)
-  Total number of paths / destination ports: 2440 / 325
+  Clock period: 4.829ns (frequency: 207.082MHz)
+  Total number of paths / destination ports: 3095 / 332
 -------------------------------------------------------------------------
-Delay:               4.751ns (Levels of Logic = 3)
-  Source:            mymain/button_cond1/M_ctr_q_3 (FF)
-  Destination:       mymain/button_cond1/M_ctr_q_19 (FF)
+Delay:               4.829ns (Levels of Logic = 3)
+  Source:            myState/bttnpress/button_cond2/M_ctr_q_3 (FF)
+  Destination:       myState/bttnpress/button_cond2/M_ctr_q_19 (FF)
   Source Clock:      clk rising
   Destination Clock: clk rising
 
-  Data Path: mymain/button_cond1/M_ctr_q_3 to mymain/button_cond1/M_ctr_q_19
+  Data Path: myState/bttnpress/button_cond2/M_ctr_q_3 to myState/bttnpress/button_cond2/M_ctr_q_19
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FDRE:C->Q             2   0.525   1.181  M_ctr_q_3 (M_ctr_q_3)
-     LUT6:I0->O            3   0.254   0.994  out1 (mymain/button_cond1/out)
-     end scope: 'mymain/button_cond1:mymain/button_cond1/out'
-     LUT5:I2->O           19   0.235   1.260  M_button_cond1_out_inv1 (M_button_cond1_out_inv)
-     begin scope: 'mymain/button_cond1:M_button_cond1_out_inv'
+     FDRE:C->Q             3   0.525   1.221  M_ctr_q_3 (M_ctr_q_3)
+     LUT6:I0->O            4   0.254   1.032  out1 (myState/bttnpress/button_cond2/out)
+     end scope: 'myState/bttnpress/button_cond2:myState/bttnpress/button_cond2/out'
+     LUT5:I2->O           19   0.235   1.260  M_button_cond2_out_inv1 (M_button_cond2_out_inv)
+     begin scope: 'myState/bttnpress/button_cond2:M_button_cond2_out_inv'
      FDRE:CE                   0.302          M_ctr_q_1
     ----------------------------------------
-    Total                      4.751ns (1.316ns logic, 3.435ns route)
-                                       (27.7% logic, 72.3% route)
+    Total                      4.829ns (1.316ns logic, 3.513ns route)
+                                       (27.3% logic, 72.7% route)
 
 =========================================================================
-Timing constraint: Default period analysis for Clock 'mymain/mypropogater/slowclk25/M_ctr_q_22'
-  Clock period: 3.782ns (frequency: 264.410MHz)
-  Total number of paths / destination ports: 25 / 5
+Timing constraint: Default period analysis for Clock 'myState/mainState/mypropogater/slowclk25/M_ctr_q_22'
+  Clock period: 3.761ns (frequency: 265.887MHz)
+  Total number of paths / destination ports: 24 / 7
 -------------------------------------------------------------------------
-Delay:               3.782ns (Levels of Logic = 4)
-  Source:            mymain/M_cent_q_0 (FF)
-  Destination:       mymain/score/M_regs_q_1 (FF)
-  Source Clock:      mymain/mypropogater/slowclk25/M_ctr_q_22 rising
-  Destination Clock: mymain/mypropogater/slowclk25/M_ctr_q_22 rising
+Delay:               3.761ns (Levels of Logic = 4)
+  Source:            myState/mainState/M_left_q_0 (FF)
+  Destination:       myState/mainState/score/M_regs_q_0 (FF)
+  Source Clock:      myState/mainState/mypropogater/slowclk25/M_ctr_q_22 rising
+  Destination Clock: myState/mainState/mypropogater/slowclk25/M_ctr_q_22 rising
 
-  Data Path: mymain/M_cent_q_0 to mymain/score/M_regs_q_1
+  Data Path: myState/mainState/M_left_q_0 to myState/mainState/score/M_regs_q_0
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FDR:C->Q              4   0.525   1.032  M_cent_q_0 (M_cent_q_0)
-     LUT6:I3->O            2   0.235   0.726  M_score_out[1]_M_myalu_alu[0]_AND_126_o1 (M_score_out[1]_M_myalu_alu[0]_AND_126_o1)
-     LUT5:I4->O            1   0.254   0.682  Mmux_M_score_en11 (M_score_en)
-     begin scope: 'mymain/score:en'
-     LUT5:I4->O            1   0.254   0.000  M_regs_q_1_rstpot (M_regs_q_1_rstpot)
-     FDR:D                     0.074          M_regs_q_1
+     FDR:C->Q              2   0.525   0.954  M_left_q_0 (M_left_q_0)
+     begin scope: 'myState/mainState/myalu:a<2>'
+     LUT6:I3->O            3   0.235   0.766  alufn[5]_a[7]_Select_68_o<0>1 (alu<0>)
+     end scope: 'myState/mainState/myalu:alu<0>'
+     LUT5:I4->O            2   0.254   0.725  Mmux_M_score_en11 (M_score_en)
+     begin scope: 'myState/mainState/score:en'
+     FDRE:CE                   0.302          M_regs_q_0
     ----------------------------------------
-    Total                      3.782ns (1.342ns logic, 2.440ns route)
-                                       (35.5% logic, 64.5% route)
+    Total                      3.761ns (1.316ns logic, 2.445ns route)
+                                       (35.0% logic, 65.0% route)
 
 =========================================================================
-Timing constraint: Default period analysis for Clock 'mymain/mypropogater/chosenClk_0'
-  Clock period: 3.687ns (frequency: 271.223MHz)
-  Total number of paths / destination ports: 756 / 104
+Timing constraint: Default period analysis for Clock 'myState/mainState/mypropogater/chosenClk_0'
+  Clock period: 4.483ns (frequency: 223.055MHz)
+  Total number of paths / destination ports: 597 / 90
 -------------------------------------------------------------------------
-Delay:               3.687ns (Levels of Logic = 2)
-  Source:            mymain/mypropogater/rowCtr/M_ctr_q_0_1 (FF)
-  Destination:       mymain/mypropogater/M_seed_q_24 (FF)
-  Source Clock:      mymain/mypropogater/chosenClk_0 rising
-  Destination Clock: mymain/mypropogater/chosenClk_0 rising
+Delay:               4.483ns (Levels of Logic = 4)
+  Source:            myState/mainState/mypropogater/rowCtr/M_ctr_q_0 (FF)
+  Destination:       myState/mainState/mypropogater/M_clkseed_q_21 (FF)
+  Source Clock:      myState/mainState/mypropogater/chosenClk_0 rising
+  Destination Clock: myState/mainState/mypropogater/chosenClk_0 rising
 
-  Data Path: mymain/mypropogater/rowCtr/M_ctr_q_0_1 to mymain/mypropogater/M_seed_q_24
+  Data Path: myState/mainState/mypropogater/rowCtr/M_ctr_q_0 to myState/mainState/mypropogater/M_clkseed_q_21
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FDR:C->Q              1   0.525   0.790  M_ctr_q_0_1 (M_ctr_q_0_1)
-     end scope: 'mymain/mypropogater/rowCtr:M_ctr_q_0_1'
-     LUT3:I1->O           50   0.250   1.820  _n0064_inv1_1 (M_randomizer_randnumrst)
+     FDR:C->Q             28   0.525   1.883  M_ctr_q_0 (M_ctr_q_0)
+     end scope: 'myState/mainState/mypropogater/rowCtr:value<0>'
+     begin scope: 'myState/mainState/mypropogater/randomizer:M_ctr_q_0'
+     begin scope: 'myState/mainState/mypropogater/randomizer/numb_gen:M_ctr_q_0'
+     LUT6:I1->O           32   0.254   1.519  _n0042_inv1 (_n0064_inv)
+     end scope: 'myState/mainState/mypropogater/randomizer/numb_gen:_n0064_inv'
+     end scope: 'myState/mainState/mypropogater/randomizer:_n0064_inv'
      FDE:CE                    0.302          M_clkseed_q_0
     ----------------------------------------
-    Total                      3.687ns (1.077ns logic, 2.610ns route)
-                                       (29.2% logic, 70.8% route)
+    Total                      4.483ns (1.081ns logic, 3.402ns route)
+                                       (24.1% logic, 75.9% route)
 
 =========================================================================
 Timing constraint: Default OFFSET IN BEFORE for Clock 'clk'
-  Total number of paths / destination ports: 8 / 8
+  Total number of paths / destination ports: 9 / 9
 -------------------------------------------------------------------------
-Offset:              3.563ns (Levels of Logic = 3)
+Offset:              3.598ns (Levels of Logic = 3)
   Source:            rst_n (PAD)
   Destination:       reset_cond3/M_stage_q_3 (FF)
   Destination Clock: clk rising
@@ -934,80 +1166,79 @@ Offset:              3.563ns (Levels of Logic = 3)
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
      IBUF:I->O             1   1.328   0.681  rst_n_IBUF (rst_n_IBUF)
-     INV:I->O              5   0.255   0.840  M_reset_cond_in1_INV_0 (M_reset_cond_in)
+     INV:I->O              6   0.255   0.875  M_reset_cond_in1_INV_0 (M_reset_cond_in)
      begin scope: 'reset_cond3:in'
      FDS:S                     0.459          M_stage_q_0
     ----------------------------------------
-    Total                      3.563ns (2.042ns logic, 1.521ns route)
-                                       (57.3% logic, 42.7% route)
-
-=========================================================================
-Timing constraint: Default OFFSET OUT AFTER for Clock 'mymain/mypropogater/slowclk25/M_ctr_q_22'
-  Total number of paths / destination ports: 2 / 2
--------------------------------------------------------------------------
-Offset:              4.240ns (Levels of Logic = 2)
-  Source:            mymain/score/M_regs_q_1 (FF)
-  Destination:       led<1> (PAD)
-  Source Clock:      mymain/mypropogater/slowclk25/M_ctr_q_22 rising
-
-  Data Path: mymain/score/M_regs_q_1 to led<1>
-                                Gate     Net
-    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
-    ----------------------------------------  ------------
-     FDR:C->Q              4   0.525   0.803  M_regs_q_1 (M_regs_q_1)
-     end scope: 'mymain/score:out<1>'
-     end scope: 'mymain:result<1>'
-     OBUF:I->O                 2.912          led_1_OBUF (led<1>)
-    ----------------------------------------
-    Total                      4.240ns (3.437ns logic, 0.803ns route)
-                                       (81.1% logic, 18.9% route)
-
-=========================================================================
-Timing constraint: Default OFFSET OUT AFTER for Clock 'mymain/mypropogater/chosenClk_0'
-  Total number of paths / destination ports: 6 / 3
--------------------------------------------------------------------------
-Offset:              6.113ns (Levels of Logic = 4)
-  Source:            mymain/mypropogater/rowCtr/M_ctr_q_1 (FF)
-  Destination:       high2 (PAD)
-  Source Clock:      mymain/mypropogater/chosenClk_0 rising
-
-  Data Path: mymain/mypropogater/rowCtr/M_ctr_q_1 to high2
-                                Gate     Net
-    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
-    ----------------------------------------  ------------
-     FDR:C->Q             39   0.525   1.745  M_ctr_q_1 (M_ctr_q_1)
-     end scope: 'mymain/mypropogater/rowCtr:M_ctr_q_1'
-     end scope: 'mymain/mypropogater:M_ctr_q_1'
-     LUT2:I0->O            1   0.250   0.681  M_mypropogater_row31 (high3)
-     end scope: 'mymain:high3'
-     OBUF:I->O                 2.912          high3_OBUF (high3)
-    ----------------------------------------
-    Total                      6.113ns (3.687ns logic, 2.426ns route)
-                                       (60.3% logic, 39.7% route)
+    Total                      3.598ns (2.042ns logic, 1.556ns route)
+                                       (56.8% logic, 43.2% route)
 
 =========================================================================
 Timing constraint: Default OFFSET OUT AFTER for Clock 'clk'
-  Total number of paths / destination ports: 7 / 3
+  Total number of paths / destination ports: 27 / 14
 -------------------------------------------------------------------------
-Offset:              5.457ns (Levels of Logic = 4)
-  Source:            mymain/mypropogater/randomizer/numbreg1/M_regs_q_0 (FF)
-  Destination:       low1 (PAD)
+Offset:              6.632ns (Levels of Logic = 3)
+  Source:            myState/M_state_q_FSM_FFd1 (FF)
+  Destination:       high1 (PAD)
   Source Clock:      clk rising
 
-  Data Path: mymain/mypropogater/randomizer/numbreg1/M_regs_q_0 to low1
+  Data Path: myState/M_state_q_FSM_FFd1 to high1
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FDRE:C->Q             6   0.525   1.104  M_regs_q_0 (M_regs_q_0)
-     end scope: 'mymain/mypropogater/randomizer/numbreg1:out<0>'
-     end scope: 'mymain/mypropogater/randomizer:ranNum<0>'
-     LUT3:I0->O            1   0.235   0.681  gnd11 (gnd1)
-     end scope: 'mymain/mypropogater:gnd1'
-     end scope: 'mymain:low1'
-     OBUF:I->O                 2.912          low1_OBUF (low1)
+     FDS:C->Q             71   0.525   2.260  M_state_q_FSM_FFd1 (M_state_q_FSM_FFd1)
+     LUT4:I0->O            1   0.254   0.681  Mmux_row311 (row3)
+     end scope: 'myState:row3'
+     OBUF:I->O                 2.912          high3_OBUF (high3)
     ----------------------------------------
-    Total                      5.457ns (3.672ns logic, 1.785ns route)
-                                       (67.3% logic, 32.7% route)
+    Total                      6.632ns (3.691ns logic, 2.941ns route)
+                                       (55.7% logic, 44.3% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'myState/mainState/mypropogater/slowclk25/M_ctr_q_22'
+  Total number of paths / destination ports: 2 / 2
+-------------------------------------------------------------------------
+Offset:              4.312ns (Levels of Logic = 3)
+  Source:            myState/mainState/score/M_regs_q_1 (FF)
+  Destination:       io_led<17> (PAD)
+  Source Clock:      myState/mainState/mypropogater/slowclk25/M_ctr_q_22 rising
+
+  Data Path: myState/mainState/score/M_regs_q_1 to io_led<17>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDRE:C->Q             6   0.525   0.875  M_regs_q_1 (M_regs_q_1)
+     end scope: 'myState/mainState/score:out<1>'
+     end scope: 'myState/mainState:result<1>'
+     end scope: 'myState:result<1>'
+     OBUF:I->O                 2.912          io_led_17_OBUF (io_led<17>)
+    ----------------------------------------
+    Total                      4.312ns (3.437ns logic, 0.875ns route)
+                                       (79.7% logic, 20.3% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'myState/mainState/mypropogater/chosenClk_0'
+  Total number of paths / destination ports: 6 / 3
+-------------------------------------------------------------------------
+Offset:              5.963ns (Levels of Logic = 4)
+  Source:            myState/mainState/mypropogater/rowCtr/M_ctr_q_1 (FF)
+  Destination:       high2 (PAD)
+  Source Clock:      myState/mainState/mypropogater/chosenClk_0 rising
+
+  Data Path: myState/mainState/mypropogater/rowCtr/M_ctr_q_1 to high2
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDR:C->Q             30   0.525   1.595  M_ctr_q_1 (M_ctr_q_1)
+     end scope: 'myState/mainState/mypropogater/rowCtr:value<1>'
+     end scope: 'myState/mainState/mypropogater:rowLit<1>'
+     end scope: 'myState/mainState:rowOn<1>'
+     LUT4:I2->O            1   0.250   0.681  Mmux_row311 (row3)
+     end scope: 'myState:row3'
+     OBUF:I->O                 2.912          high3_OBUF (high3)
+    ----------------------------------------
+    Total                      5.963ns (3.687ns logic, 2.276ns route)
+                                       (61.8% logic, 38.2% route)
 
 =========================================================================
 
@@ -1015,44 +1246,54 @@ Cross Clock Domains Report:
 --------------------------
 
 Clock to Setup on destination clock clk
--------------------------------+---------+---------+---------+---------+
-                               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
-Source Clock                   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
--------------------------------+---------+---------+---------+---------+
-clk                            |    4.751|         |         |         |
-mymain/mypropogater/chosenClk_0|    4.764|         |         |         |
--------------------------------+---------+---------+---------+---------+
+---------------------------------------------------+---------+---------+---------+---------+
+                                                   | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock                                       |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------------------------------------------+---------+---------+---------+---------+
+clk                                                |    4.829|         |         |         |
+myState/bttnpress/edge_ctr/M_ctr_q_22              |    2.575|         |         |         |
+myState/mainState/mypropogater/chosenClk_0         |    4.483|         |         |         |
+myState/mainState/mypropogater/slowclk25/M_ctr_q_22|    3.502|         |         |         |
+---------------------------------------------------+---------+---------+---------+---------+
 
-Clock to Setup on destination clock mymain/mypropogater/chosenClk_0
--------------------------------+---------+---------+---------+---------+
-                               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
-Source Clock                   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
--------------------------------+---------+---------+---------+---------+
-clk                            |    4.610|         |         |         |
-mymain/mypropogater/chosenClk_0|    3.687|         |         |         |
--------------------------------+---------+---------+---------+---------+
+Clock to Setup on destination clock myState/bttnpress/edge_ctr/M_ctr_q_22
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clk            |    3.341|         |         |         |
+---------------+---------+---------+---------+---------+
 
-Clock to Setup on destination clock mymain/mypropogater/slowclk25/M_ctr_q_22
-----------------------------------------+---------+---------+---------+---------+
-                                        | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
-Source Clock                            |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
-----------------------------------------+---------+---------+---------+---------+
-clk                                     |    4.347|         |         |         |
-mymain/mypropogater/chosenClk_0         |    3.823|         |         |         |
-mymain/mypropogater/slowclk25/M_ctr_q_22|    3.782|         |         |         |
-----------------------------------------+---------+---------+---------+---------+
+Clock to Setup on destination clock myState/mainState/mypropogater/chosenClk_0
+------------------------------------------+---------+---------+---------+---------+
+                                          | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock                              |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+------------------------------------------+---------+---------+---------+---------+
+clk                                       |    4.656|         |         |         |
+myState/mainState/mypropogater/chosenClk_0|    4.483|         |         |         |
+------------------------------------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock myState/mainState/mypropogater/slowclk25/M_ctr_q_22
+---------------------------------------------------+---------+---------+---------+---------+
+                                                   | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock                                       |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------------------------------------------+---------+---------+---------+---------+
+clk                                                |    5.966|         |         |         |
+myState/mainState/mypropogater/chosenClk_0         |    3.723|         |         |         |
+myState/mainState/mypropogater/slowclk25/M_ctr_q_22|    3.761|         |         |         |
+---------------------------------------------------+---------+---------+---------+---------+
 
 =========================================================================
 
 
-Total REAL time to Xst completion: 6.00 secs
-Total CPU time to Xst completion: 6.39 secs
+Total REAL time to Xst completion: 8.00 secs
+Total CPU time to Xst completion: 7.96 secs
  
 --> 
 
-Total memory usage is 345088 kilobytes
+Total memory usage is 347388 kilobytes
 
 Number of errors   :    0 (   0 filtered)
-Number of warnings :  247 (   0 filtered)
-Number of infos    :   41 (   0 filtered)
+Number of warnings :  304 (   0 filtered)
+Number of infos    :  109 (   0 filtered)
 

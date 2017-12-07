@@ -1,4 +1,5 @@
-
+//***THIS MAIN FILE WILL COMPRE THE ROW BEING LIT, THE BUTTON PRESS AND THE NUMBER SEQUENCE
+//OUTPUTS A RESULT
 module main (
     input clk,       // clock
     input rst,       // reset
@@ -12,12 +13,8 @@ module main (
     output low1,
     output low2,
     output low3,
-    output rowOn[3]   //what is the row that is lit up
-   // output butt1, //for debugging
- //   output butt2,  //for debugging
- //   output butt3,  //for debugging
-   // output rowOn[3]  //for debugging
-  //  output clkchoice[3]  //for debugging
+    output rowOn[2]   //what is the row that is lit up
+   // output propClk, 
   ) {
   
   .clk(clk) {
@@ -38,7 +35,7 @@ module main (
     edge_detector edge_detector2(#RISE(1), #FALL(0)); // detect rising edges
     edge_detector edge_detector3(#RISE(1), #FALL(0)); // detect rising edges
     .rst(rst) {
-      register2 score;  
+      reg2bit score;  
       dff left[1];
       dff right[1];
       dff cent[1];    
@@ -55,7 +52,7 @@ module main (
     result = 2b0;
     
     
-    
+ //   propClk = mypropogater.
     /*
     mainResult.d = mainResult.q;
     rowresult = mainResult.q;
