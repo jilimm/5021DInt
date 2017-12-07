@@ -123,7 +123,7 @@ module state (
             scoreDisplay[2]=translater.ascii[2];
             scoreDisplay[1]=translater.ascii[1];
               scoreDisplay[0]=translater.ascii[0];
-      
+        
         
         state.HALT:
       row1=0; 

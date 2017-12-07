@@ -113,8 +113,6 @@ WARNING:HDLCompiler:1127 - "C:/Users/Jing Yun/Desktop/50.002 Computation Structu
 Elaborating module <binToAscii_10>.
 WARNING:HDLCompiler:413 - "C:/Users/Jing Yun/Desktop/50.002 Computation Structure/1D_Game Design/502IntGitRepo/5021DInt/work/planAhead/Integrate1/Integrate1.srcs/sources_1/imports/verilog/state_4.v" Line 189: Result of 8-bit expression is truncated to fit in 1-bit target.
 WARNING:HDLCompiler:413 - "C:/Users/Jing Yun/Desktop/50.002 Computation Structure/1D_Game Design/502IntGitRepo/5021DInt/work/planAhead/Integrate1/Integrate1.srcs/sources_1/imports/verilog/state_4.v" Line 191: Result of 4-bit expression is truncated to fit in 1-bit target.
-WARNING:HDLCompiler:1127 - "C:/Users/Jing Yun/Desktop/50.002 Computation Structure/1D_Game Design/502IntGitRepo/5021DInt/work/planAhead/Integrate1/Integrate1.srcs/sources_1/imports/verilog/mojo_top_0.v" Line 105: Assignment to M_myState_rowresult ignored, since the identifier is never used
-WARNING:HDLCompiler:1127 - "C:/Users/Jing Yun/Desktop/50.002 Computation Structure/1D_Game Design/502IntGitRepo/5021DInt/work/planAhead/Integrate1/Integrate1.srcs/sources_1/imports/verilog/mojo_top_0.v" Line 106: Assignment to M_myState_startbutt ignored, since the identifier is never used
 
 Elaborating module <multi_seven_seg_5>.
 
@@ -123,6 +121,7 @@ Elaborating module <counter_11>.
 Elaborating module <seven_seg_12>.
 
 Elaborating module <decoder_13>.
+WARNING:HDLCompiler:413 - "C:/Users/Jing Yun/Desktop/50.002 Computation Structure/1D_Game Design/502IntGitRepo/5021DInt/work/planAhead/Integrate1/Integrate1.srcs/sources_1/imports/verilog/mojo_top_0.v" Line 154: Result of 6-bit expression is truncated to fit in 5-bit target.
 WARNING:Xst:2972 - "C:/Users/Jing Yun/Desktop/50.002 Computation Structure/1D_Game Design/502IntGitRepo/5021DInt/work/planAhead/Integrate1/Integrate1.srcs/sources_1/imports/verilog/state_4.v" line 109. All outputs of instance <myalu> of block <alu_9> are unconnected in block <state_4>. Underlying logic will be removed.
 WARNING:Xst:2972 - "C:/Users/Jing Yun/Desktop/50.002 Computation Structure/1D_Game Design/502IntGitRepo/5021DInt/work/planAhead/Integrate1/Integrate1.srcs/sources_1/imports/verilog/mojo_top_0.v" line 46. All outputs of instance <reset_cond> of block <reset_conditioner_1> are unconnected in block <mojo_top_0>. Underlying logic will be removed.
 WARNING:Xst:2972 - "C:/Users/Jing Yun/Desktop/50.002 Computation Structure/1D_Game Design/502IntGitRepo/5021DInt/work/planAhead/Integrate1/Integrate1.srcs/sources_1/imports/verilog/mojo_top_0.v" line 53. All outputs of instance <reset_cond2> of block <reset_conditioner_1> are unconnected in block <mojo_top_0>. Underlying logic will be removed.
@@ -141,8 +140,6 @@ WARNING:Xst:647 - Input <avr_tx> is never used. This port will be preserved and 
 WARNING:Xst:647 - Input <avr_rx_busy> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 INFO:Xst:3210 - "C:/Users/Jing Yun/Desktop/50.002 Computation Structure/1D_Game Design/502IntGitRepo/5021DInt/work/planAhead/Integrate1/Integrate1.srcs/sources_1/imports/verilog/mojo_top_0.v" line 46: Output port <out> of the instance <reset_cond> is unconnected or connected to loadless signal.
 INFO:Xst:3210 - "C:/Users/Jing Yun/Desktop/50.002 Computation Structure/1D_Game Design/502IntGitRepo/5021DInt/work/planAhead/Integrate1/Integrate1.srcs/sources_1/imports/verilog/mojo_top_0.v" line 53: Output port <out> of the instance <reset_cond2> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "C:/Users/Jing Yun/Desktop/50.002 Computation Structure/1D_Game Design/502IntGitRepo/5021DInt/work/planAhead/Integrate1/Integrate1.srcs/sources_1/imports/verilog/mojo_top_0.v" line 85: Output port <rowresult> of the instance <myState> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "C:/Users/Jing Yun/Desktop/50.002 Computation Structure/1D_Game Design/502IntGitRepo/5021DInt/work/planAhead/Integrate1/Integrate1.srcs/sources_1/imports/verilog/mojo_top_0.v" line 85: Output port <startbutt> of the instance <myState> is unconnected or connected to loadless signal.
     Found 1-bit tristate buffer for signal <spi_miso> created at line 120
     Found 1-bit tristate buffer for signal <spi_channel<3>> created at line 120
     Found 1-bit tristate buffer for signal <spi_channel<2>> created at line 120
@@ -364,7 +361,7 @@ Unit <binToAscii_10> synthesized.
 Synthesizing Unit <multi_seven_seg_5>.
     Related source file is "C:/Users/Jing Yun/Desktop/50.002 Computation Structure/1D_Game Design/502IntGitRepo/5021DInt/work/planAhead/Integrate1/Integrate1.srcs/sources_1/imports/verilog/multi_seven_seg_5.v".
     Found 4-bit adder for signal <M_ctr_value[1]_GND_39_o_add_0_OUT> created at line 48.
-    Found 31-bit shifter logical right for signal <n0011> created at line 48
+    Found 31-bit shifter logical right for signal <n0010> created at line 48
     Summary:
 	inferred   1 Adder/Subtractor(s).
 	inferred   1 Combinational logic shifter(s).
@@ -381,8 +378,9 @@ Unit <counter_11> synthesized.
 
 Synthesizing Unit <seven_seg_12>.
     Related source file is "C:/Users/Jing Yun/Desktop/50.002 Computation Structure/1D_Game Design/502IntGitRepo/5021DInt/work/planAhead/Integrate1/Integrate1.srcs/sources_1/imports/verilog/seven_seg_12.v".
+    Found 16x7-bit Read Only RAM for signal <segs>
     Summary:
-	inferred   1 Multiplexer(s).
+	inferred   1 RAM(s).
 Unit <seven_seg_12> synthesized.
 
 Synthesizing Unit <decoder_13>.
@@ -395,8 +393,9 @@ Unit <decoder_13> synthesized.
 HDL Synthesis Report
 
 Macro Statistics
-# RAMs                                                 : 1
+# RAMs                                                 : 2
  16x11-bit single-port Read Only RAM                   : 1
+ 16x7-bit single-port Read Only RAM                    : 1
 # Adders/Subtractors                                   : 24
  18-bit adder                                          : 1
  20-bit adder                                          : 6
@@ -428,13 +427,12 @@ Macro Statistics
  1-bit latch                                           : 16
 # Comparators                                          : 1
  8-bit comparator equal                                : 1
-# Multiplexers                                         : 33
+# Multiplexers                                         : 32
  1-bit 2-to-1 multiplexer                              : 26
  2-bit 2-to-1 multiplexer                              : 2
  3-bit 2-to-1 multiplexer                              : 1
  32-bit 2-to-1 multiplexer                             : 2
  4-bit 2-to-1 multiplexer                              : 1
- 7-bit 2-to-1 multiplexer                              : 1
 # Logic shifters                                       : 1
  31-bit shifter logical right                          : 1
 # Tristates                                            : 6
@@ -494,12 +492,27 @@ INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram__n0094> will be implemented on LUTs 
     -----------------------------------------------------------------------
 Unit <propogate_25> synthesized (advanced).
 
+Synthesizing (advanced) Unit <seven_seg_12>.
+INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram_segs> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 16-word x 7-bit                     |          |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <char>          |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to signal <segs>          |          |
+    -----------------------------------------------------------------------
+Unit <seven_seg_12> synthesized (advanced).
+
 =========================================================================
 Advanced HDL Synthesis Report
 
 Macro Statistics
-# RAMs                                                 : 1
+# RAMs                                                 : 2
  16x11-bit single-port distributed Read Only RAM       : 1
+ 16x7-bit single-port distributed Read Only RAM        : 1
 # Adders/Subtractors                                   : 6
  1-bit adder                                           : 2
  1-bit adder carry in                                  : 1
@@ -519,13 +532,12 @@ Macro Statistics
  Flip-Flops                                            : 302
 # Comparators                                          : 1
  8-bit comparator equal                                : 1
-# Multiplexers                                         : 33
+# Multiplexers                                         : 32
  1-bit 2-to-1 multiplexer                              : 26
  2-bit 2-to-1 multiplexer                              : 2
  3-bit 2-to-1 multiplexer                              : 1
  32-bit 2-to-1 multiplexer                             : 2
  4-bit 2-to-1 multiplexer                              : 1
- 7-bit 2-to-1 multiplexer                              : 1
 # Logic shifters                                       : 1
  31-bit shifter logical right                          : 1
 # Xors                                                 : 6
@@ -556,80 +568,6 @@ Optimizing unit <bcounter_6> ...
 Optimizing unit <main_8> ...
 
 Optimizing unit <pn_gen_44> ...
-WARNING:Xst:2677 - Node <myState/mainState/button_cond2/M_ctr_q_19> of sequential type is unconnected in block <mojo_top_0>.
-WARNING:Xst:2677 - Node <myState/mainState/button_cond2/M_ctr_q_18> of sequential type is unconnected in block <mojo_top_0>.
-WARNING:Xst:2677 - Node <myState/mainState/button_cond2/M_ctr_q_17> of sequential type is unconnected in block <mojo_top_0>.
-WARNING:Xst:2677 - Node <myState/mainState/button_cond2/M_ctr_q_16> of sequential type is unconnected in block <mojo_top_0>.
-WARNING:Xst:2677 - Node <myState/mainState/button_cond2/M_ctr_q_15> of sequential type is unconnected in block <mojo_top_0>.
-WARNING:Xst:2677 - Node <myState/mainState/button_cond2/M_ctr_q_14> of sequential type is unconnected in block <mojo_top_0>.
-WARNING:Xst:2677 - Node <myState/mainState/button_cond2/M_ctr_q_13> of sequential type is unconnected in block <mojo_top_0>.
-WARNING:Xst:2677 - Node <myState/mainState/button_cond2/M_ctr_q_12> of sequential type is unconnected in block <mojo_top_0>.
-WARNING:Xst:2677 - Node <myState/mainState/button_cond2/M_ctr_q_11> of sequential type is unconnected in block <mojo_top_0>.
-WARNING:Xst:2677 - Node <myState/mainState/button_cond2/M_ctr_q_10> of sequential type is unconnected in block <mojo_top_0>.
-WARNING:Xst:2677 - Node <myState/mainState/button_cond2/M_ctr_q_9> of sequential type is unconnected in block <mojo_top_0>.
-WARNING:Xst:2677 - Node <myState/mainState/button_cond2/M_ctr_q_8> of sequential type is unconnected in block <mojo_top_0>.
-WARNING:Xst:2677 - Node <myState/mainState/button_cond2/M_ctr_q_7> of sequential type is unconnected in block <mojo_top_0>.
-WARNING:Xst:2677 - Node <myState/mainState/button_cond2/M_ctr_q_6> of sequential type is unconnected in block <mojo_top_0>.
-WARNING:Xst:2677 - Node <myState/mainState/button_cond2/M_ctr_q_5> of sequential type is unconnected in block <mojo_top_0>.
-WARNING:Xst:2677 - Node <myState/mainState/button_cond2/M_ctr_q_4> of sequential type is unconnected in block <mojo_top_0>.
-WARNING:Xst:2677 - Node <myState/mainState/button_cond2/M_ctr_q_3> of sequential type is unconnected in block <mojo_top_0>.
-WARNING:Xst:2677 - Node <myState/mainState/button_cond2/M_ctr_q_2> of sequential type is unconnected in block <mojo_top_0>.
-WARNING:Xst:2677 - Node <myState/mainState/button_cond2/M_ctr_q_1> of sequential type is unconnected in block <mojo_top_0>.
-WARNING:Xst:2677 - Node <myState/mainState/button_cond2/M_ctr_q_0> of sequential type is unconnected in block <mojo_top_0>.
-WARNING:Xst:2677 - Node <myState/mainState/button_cond1/M_ctr_q_19> of sequential type is unconnected in block <mojo_top_0>.
-WARNING:Xst:2677 - Node <myState/mainState/button_cond1/M_ctr_q_18> of sequential type is unconnected in block <mojo_top_0>.
-WARNING:Xst:2677 - Node <myState/mainState/button_cond1/M_ctr_q_17> of sequential type is unconnected in block <mojo_top_0>.
-WARNING:Xst:2677 - Node <myState/mainState/button_cond1/M_ctr_q_16> of sequential type is unconnected in block <mojo_top_0>.
-WARNING:Xst:2677 - Node <myState/mainState/button_cond1/M_ctr_q_15> of sequential type is unconnected in block <mojo_top_0>.
-WARNING:Xst:2677 - Node <myState/mainState/button_cond1/M_ctr_q_14> of sequential type is unconnected in block <mojo_top_0>.
-WARNING:Xst:2677 - Node <myState/mainState/button_cond1/M_ctr_q_13> of sequential type is unconnected in block <mojo_top_0>.
-WARNING:Xst:2677 - Node <myState/mainState/button_cond1/M_ctr_q_12> of sequential type is unconnected in block <mojo_top_0>.
-WARNING:Xst:2677 - Node <myState/mainState/button_cond1/M_ctr_q_11> of sequential type is unconnected in block <mojo_top_0>.
-WARNING:Xst:2677 - Node <myState/mainState/button_cond1/M_ctr_q_10> of sequential type is unconnected in block <mojo_top_0>.
-WARNING:Xst:2677 - Node <myState/mainState/button_cond1/M_ctr_q_9> of sequential type is unconnected in block <mojo_top_0>.
-WARNING:Xst:2677 - Node <myState/mainState/button_cond1/M_ctr_q_8> of sequential type is unconnected in block <mojo_top_0>.
-WARNING:Xst:2677 - Node <myState/mainState/button_cond1/M_ctr_q_7> of sequential type is unconnected in block <mojo_top_0>.
-WARNING:Xst:2677 - Node <myState/mainState/button_cond1/M_ctr_q_6> of sequential type is unconnected in block <mojo_top_0>.
-WARNING:Xst:2677 - Node <myState/mainState/button_cond1/M_ctr_q_5> of sequential type is unconnected in block <mojo_top_0>.
-WARNING:Xst:2677 - Node <myState/mainState/button_cond1/M_ctr_q_4> of sequential type is unconnected in block <mojo_top_0>.
-WARNING:Xst:2677 - Node <myState/mainState/button_cond1/M_ctr_q_3> of sequential type is unconnected in block <mojo_top_0>.
-WARNING:Xst:2677 - Node <myState/mainState/button_cond1/M_ctr_q_2> of sequential type is unconnected in block <mojo_top_0>.
-WARNING:Xst:2677 - Node <myState/mainState/button_cond1/M_ctr_q_1> of sequential type is unconnected in block <mojo_top_0>.
-WARNING:Xst:2677 - Node <myState/mainState/button_cond1/M_ctr_q_0> of sequential type is unconnected in block <mojo_top_0>.
-WARNING:Xst:2677 - Node <myState/mainState/button_cond3/M_ctr_q_19> of sequential type is unconnected in block <mojo_top_0>.
-WARNING:Xst:2677 - Node <myState/mainState/button_cond3/M_ctr_q_18> of sequential type is unconnected in block <mojo_top_0>.
-WARNING:Xst:2677 - Node <myState/mainState/button_cond3/M_ctr_q_17> of sequential type is unconnected in block <mojo_top_0>.
-WARNING:Xst:2677 - Node <myState/mainState/button_cond3/M_ctr_q_16> of sequential type is unconnected in block <mojo_top_0>.
-WARNING:Xst:2677 - Node <myState/mainState/button_cond3/M_ctr_q_15> of sequential type is unconnected in block <mojo_top_0>.
-WARNING:Xst:2677 - Node <myState/mainState/button_cond3/M_ctr_q_14> of sequential type is unconnected in block <mojo_top_0>.
-WARNING:Xst:2677 - Node <myState/mainState/button_cond3/M_ctr_q_13> of sequential type is unconnected in block <mojo_top_0>.
-WARNING:Xst:2677 - Node <myState/mainState/button_cond3/M_ctr_q_12> of sequential type is unconnected in block <mojo_top_0>.
-WARNING:Xst:2677 - Node <myState/mainState/button_cond3/M_ctr_q_11> of sequential type is unconnected in block <mojo_top_0>.
-WARNING:Xst:2677 - Node <myState/mainState/button_cond3/M_ctr_q_10> of sequential type is unconnected in block <mojo_top_0>.
-WARNING:Xst:2677 - Node <myState/mainState/button_cond3/M_ctr_q_9> of sequential type is unconnected in block <mojo_top_0>.
-WARNING:Xst:2677 - Node <myState/mainState/button_cond3/M_ctr_q_8> of sequential type is unconnected in block <mojo_top_0>.
-WARNING:Xst:2677 - Node <myState/mainState/button_cond3/M_ctr_q_7> of sequential type is unconnected in block <mojo_top_0>.
-WARNING:Xst:2677 - Node <myState/mainState/button_cond3/M_ctr_q_6> of sequential type is unconnected in block <mojo_top_0>.
-WARNING:Xst:2677 - Node <myState/mainState/button_cond3/M_ctr_q_5> of sequential type is unconnected in block <mojo_top_0>.
-WARNING:Xst:2677 - Node <myState/mainState/button_cond3/M_ctr_q_4> of sequential type is unconnected in block <mojo_top_0>.
-WARNING:Xst:2677 - Node <myState/mainState/button_cond3/M_ctr_q_3> of sequential type is unconnected in block <mojo_top_0>.
-WARNING:Xst:2677 - Node <myState/mainState/button_cond3/M_ctr_q_2> of sequential type is unconnected in block <mojo_top_0>.
-WARNING:Xst:2677 - Node <myState/mainState/button_cond3/M_ctr_q_1> of sequential type is unconnected in block <mojo_top_0>.
-WARNING:Xst:2677 - Node <myState/mainState/button_cond3/M_ctr_q_0> of sequential type is unconnected in block <mojo_top_0>.
-WARNING:Xst:2677 - Node <myState/mainState/score/M_regs_q_0> of sequential type is unconnected in block <mojo_top_0>.
-WARNING:Xst:2677 - Node <myState/mainState/score/M_regs_q_1> of sequential type is unconnected in block <mojo_top_0>.
-WARNING:Xst:2677 - Node <myState/mainState/edge_detector1/M_last_q> of sequential type is unconnected in block <mojo_top_0>.
-WARNING:Xst:2677 - Node <myState/mainState/edge_detector2/M_last_q> of sequential type is unconnected in block <mojo_top_0>.
-WARNING:Xst:2677 - Node <myState/mainState/edge_detector3/M_last_q> of sequential type is unconnected in block <mojo_top_0>.
-WARNING:Xst:2677 - Node <myState/mainState/button_cond3/sync/M_pipe_q_0> of sequential type is unconnected in block <mojo_top_0>.
-WARNING:Xst:2677 - Node <myState/mainState/button_cond3/sync/M_pipe_q_1> of sequential type is unconnected in block <mojo_top_0>.
-WARNING:Xst:2677 - Node <myState/mainState/button_cond2/sync/M_pipe_q_0> of sequential type is unconnected in block <mojo_top_0>.
-WARNING:Xst:2677 - Node <myState/mainState/button_cond2/sync/M_pipe_q_1> of sequential type is unconnected in block <mojo_top_0>.
-WARNING:Xst:2677 - Node <myState/mainState/button_cond1/sync/M_pipe_q_0> of sequential type is unconnected in block <mojo_top_0>.
-WARNING:Xst:2677 - Node <myState/mainState/button_cond1/sync/M_pipe_q_1> of sequential type is unconnected in block <mojo_top_0>.
-WARNING:Xst:2677 - Node <myState/mainState/M_left_q_0> of sequential type is unconnected in block <mojo_top_0>.
-WARNING:Xst:2677 - Node <myState/mainState/M_cent_q_0> of sequential type is unconnected in block <mojo_top_0>.
-WARNING:Xst:2677 - Node <myState/mainState/M_right_q_0> of sequential type is unconnected in block <mojo_top_0>.
 WARNING:Xst:1293 - FF/Latch <myState/mainState/mypropogater/randomizer/clk_gen/M_z_q_20> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <myState/mainState/mypropogater/randomizer/clk_gen/M_z_q_19> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <myState/mainState/mypropogater/randomizer/clk_gen/M_z_q_18> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
@@ -848,13 +786,63 @@ WARNING:Xst:2677 - Node <myState/mainState/mypropogater/randomizer/clk_gen/M_x_q
 WARNING:Xst:2677 - Node <myState/mainState/mypropogater/randomizer/clk_gen/M_y_q_30> of sequential type is unconnected in block <mojo_top_0>.
 WARNING:Xst:2677 - Node <myState/mainState/mypropogater/randomizer/clk_gen/M_y_q_25> of sequential type is unconnected in block <mojo_top_0>.
 WARNING:Xst:2677 - Node <myState/mainState/mypropogater/randomizer/clk_gen/M_z_q_25> of sequential type is unconnected in block <mojo_top_0>.
+INFO:Xst:2261 - The FF/Latch <myState/bttnpress/button_cond/M_ctr_q_10> in Unit <mojo_top_0> is equivalent to the following FF/Latch, which will be removed : <myState/mainState/button_cond1/M_ctr_q_10> 
+INFO:Xst:2261 - The FF/Latch <myState/bttnpress/button_cond2/M_ctr_q_0> in Unit <mojo_top_0> is equivalent to the following FF/Latch, which will be removed : <myState/mainState/button_cond2/M_ctr_q_0> 
+INFO:Xst:2261 - The FF/Latch <myState/bttnpress/button_cond/M_ctr_q_11> in Unit <mojo_top_0> is equivalent to the following FF/Latch, which will be removed : <myState/mainState/button_cond1/M_ctr_q_11> 
+INFO:Xst:2261 - The FF/Latch <myState/bttnpress/button_cond2/M_ctr_q_1> in Unit <mojo_top_0> is equivalent to the following FF/Latch, which will be removed : <myState/mainState/button_cond2/M_ctr_q_1> 
+INFO:Xst:2261 - The FF/Latch <myState/bttnpress/button_cond/M_ctr_q_12> in Unit <mojo_top_0> is equivalent to the following FF/Latch, which will be removed : <myState/mainState/button_cond1/M_ctr_q_12> 
+INFO:Xst:2261 - The FF/Latch <myState/bttnpress/button_cond2/M_ctr_q_2> in Unit <mojo_top_0> is equivalent to the following FF/Latch, which will be removed : <myState/mainState/button_cond2/M_ctr_q_2> 
+INFO:Xst:2261 - The FF/Latch <myState/bttnpress/button_cond/M_ctr_q_13> in Unit <mojo_top_0> is equivalent to the following FF/Latch, which will be removed : <myState/mainState/button_cond1/M_ctr_q_13> 
+INFO:Xst:2261 - The FF/Latch <myState/bttnpress/button_cond2/M_ctr_q_3> in Unit <mojo_top_0> is equivalent to the following FF/Latch, which will be removed : <myState/mainState/button_cond2/M_ctr_q_3> 
+INFO:Xst:2261 - The FF/Latch <myState/bttnpress/button_cond/M_ctr_q_14> in Unit <mojo_top_0> is equivalent to the following FF/Latch, which will be removed : <myState/mainState/button_cond1/M_ctr_q_14> 
+INFO:Xst:2261 - The FF/Latch <myState/bttnpress/button_cond2/M_ctr_q_4> in Unit <mojo_top_0> is equivalent to the following FF/Latch, which will be removed : <myState/mainState/button_cond2/M_ctr_q_4> 
+INFO:Xst:2261 - The FF/Latch <myState/bttnpress/button_cond/M_ctr_q_15> in Unit <mojo_top_0> is equivalent to the following FF/Latch, which will be removed : <myState/mainState/button_cond1/M_ctr_q_15> 
+INFO:Xst:2261 - The FF/Latch <myState/bttnpress/button_cond2/M_ctr_q_5> in Unit <mojo_top_0> is equivalent to the following FF/Latch, which will be removed : <myState/mainState/button_cond2/M_ctr_q_5> 
+INFO:Xst:2261 - The FF/Latch <myState/bttnpress/button_cond/M_ctr_q_16> in Unit <mojo_top_0> is equivalent to the following FF/Latch, which will be removed : <myState/mainState/button_cond1/M_ctr_q_16> 
+INFO:Xst:2261 - The FF/Latch <myState/bttnpress/button_cond2/M_ctr_q_6> in Unit <mojo_top_0> is equivalent to the following FF/Latch, which will be removed : <myState/mainState/button_cond2/M_ctr_q_6> 
+INFO:Xst:2261 - The FF/Latch <myState/bttnpress/button_cond/M_ctr_q_17> in Unit <mojo_top_0> is equivalent to the following FF/Latch, which will be removed : <myState/mainState/button_cond1/M_ctr_q_17> 
+INFO:Xst:2261 - The FF/Latch <myState/bttnpress/button_cond2/M_ctr_q_7> in Unit <mojo_top_0> is equivalent to the following FF/Latch, which will be removed : <myState/mainState/button_cond2/M_ctr_q_7> 
+INFO:Xst:2261 - The FF/Latch <myState/bttnpress/button_cond/M_ctr_q_18> in Unit <mojo_top_0> is equivalent to the following FF/Latch, which will be removed : <myState/mainState/button_cond1/M_ctr_q_18> 
+INFO:Xst:2261 - The FF/Latch <myState/bttnpress/button_cond2/M_ctr_q_8> in Unit <mojo_top_0> is equivalent to the following FF/Latch, which will be removed : <myState/mainState/button_cond2/M_ctr_q_8> 
+INFO:Xst:2261 - The FF/Latch <myState/bttnpress/button_cond/M_ctr_q_19> in Unit <mojo_top_0> is equivalent to the following FF/Latch, which will be removed : <myState/mainState/button_cond1/M_ctr_q_19> 
+INFO:Xst:2261 - The FF/Latch <myState/bttnpress/button_cond2/M_ctr_q_9> in Unit <mojo_top_0> is equivalent to the following FF/Latch, which will be removed : <myState/mainState/button_cond2/M_ctr_q_9> 
+INFO:Xst:2261 - The FF/Latch <myState/bttnpress/button_cond3/M_ctr_q_0> in Unit <mojo_top_0> is equivalent to the following FF/Latch, which will be removed : <myState/mainState/button_cond3/M_ctr_q_0> 
+INFO:Xst:2261 - The FF/Latch <myState/bttnpress/button_cond3/M_ctr_q_1> in Unit <mojo_top_0> is equivalent to the following FF/Latch, which will be removed : <myState/mainState/button_cond3/M_ctr_q_1> 
+INFO:Xst:2261 - The FF/Latch <myState/bttnpress/button_cond3/M_ctr_q_2> in Unit <mojo_top_0> is equivalent to the following FF/Latch, which will be removed : <myState/mainState/button_cond3/M_ctr_q_2> 
+INFO:Xst:2261 - The FF/Latch <myState/bttnpress/button_cond3/M_ctr_q_3> in Unit <mojo_top_0> is equivalent to the following FF/Latch, which will be removed : <myState/mainState/button_cond3/M_ctr_q_3> 
+INFO:Xst:2261 - The FF/Latch <myState/bttnpress/button_cond3/M_ctr_q_4> in Unit <mojo_top_0> is equivalent to the following FF/Latch, which will be removed : <myState/mainState/button_cond3/M_ctr_q_4> 
+INFO:Xst:2261 - The FF/Latch <myState/bttnpress/button_cond3/M_ctr_q_5> in Unit <mojo_top_0> is equivalent to the following FF/Latch, which will be removed : <myState/mainState/button_cond3/M_ctr_q_5> 
+INFO:Xst:2261 - The FF/Latch <myState/bttnpress/button_cond3/M_ctr_q_6> in Unit <mojo_top_0> is equivalent to the following FF/Latch, which will be removed : <myState/mainState/button_cond3/M_ctr_q_6> 
+INFO:Xst:2261 - The FF/Latch <myState/bttnpress/button_cond3/M_ctr_q_7> in Unit <mojo_top_0> is equivalent to the following FF/Latch, which will be removed : <myState/mainState/button_cond3/M_ctr_q_7> 
+INFO:Xst:2261 - The FF/Latch <myState/bttnpress/button_cond3/M_ctr_q_8> in Unit <mojo_top_0> is equivalent to the following FF/Latch, which will be removed : <myState/mainState/button_cond3/M_ctr_q_8> 
+INFO:Xst:2261 - The FF/Latch <myState/bttnpress/button_cond3/M_ctr_q_9> in Unit <mojo_top_0> is equivalent to the following FF/Latch, which will be removed : <myState/mainState/button_cond3/M_ctr_q_9> 
+INFO:Xst:2261 - The FF/Latch <myState/bttnpress/button_cond2/M_ctr_q_10> in Unit <mojo_top_0> is equivalent to the following FF/Latch, which will be removed : <myState/mainState/button_cond2/M_ctr_q_10> 
+INFO:Xst:2261 - The FF/Latch <myState/bttnpress/button_cond/M_ctr_q_0> in Unit <mojo_top_0> is equivalent to the following FF/Latch, which will be removed : <myState/mainState/button_cond1/M_ctr_q_0> 
+INFO:Xst:2261 - The FF/Latch <myState/bttnpress/button_cond2/M_ctr_q_11> in Unit <mojo_top_0> is equivalent to the following FF/Latch, which will be removed : <myState/mainState/button_cond2/M_ctr_q_11> 
+INFO:Xst:2261 - The FF/Latch <myState/bttnpress/button_cond/M_ctr_q_1> in Unit <mojo_top_0> is equivalent to the following FF/Latch, which will be removed : <myState/mainState/button_cond1/M_ctr_q_1> 
+INFO:Xst:2261 - The FF/Latch <myState/bttnpress/button_cond2/M_ctr_q_12> in Unit <mojo_top_0> is equivalent to the following FF/Latch, which will be removed : <myState/mainState/button_cond2/M_ctr_q_12> 
+INFO:Xst:2261 - The FF/Latch <myState/bttnpress/button_cond/M_ctr_q_2> in Unit <mojo_top_0> is equivalent to the following FF/Latch, which will be removed : <myState/mainState/button_cond1/M_ctr_q_2> 
 INFO:Xst:2261 - The FF/Latch <myState/mainState/mypropogater/slowclk25/M_ctr_q_0> in Unit <mojo_top_0> is equivalent to the following 3 FFs/Latches, which will be removed : <myState/mainState/mypropogater/slowclk24/M_ctr_q_0> <myState/mainState/mypropogater/slowclk23/M_ctr_q_0> <myState/mainState/edge_ctr/M_ctr_q_0> 
+INFO:Xst:2261 - The FF/Latch <myState/bttnpress/button_cond/M_ctr_q_3> in Unit <mojo_top_0> is equivalent to the following FF/Latch, which will be removed : <myState/mainState/button_cond1/M_ctr_q_3> 
+INFO:Xst:2261 - The FF/Latch <myState/bttnpress/button_cond2/M_ctr_q_13> in Unit <mojo_top_0> is equivalent to the following FF/Latch, which will be removed : <myState/mainState/button_cond2/M_ctr_q_13> 
 INFO:Xst:2261 - The FF/Latch <myState/mainState/mypropogater/slowclk25/M_ctr_q_1> in Unit <mojo_top_0> is equivalent to the following 3 FFs/Latches, which will be removed : <myState/mainState/mypropogater/slowclk24/M_ctr_q_1> <myState/mainState/mypropogater/slowclk23/M_ctr_q_1> <myState/mainState/edge_ctr/M_ctr_q_1> 
+INFO:Xst:2261 - The FF/Latch <myState/bttnpress/button_cond/M_ctr_q_4> in Unit <mojo_top_0> is equivalent to the following FF/Latch, which will be removed : <myState/mainState/button_cond1/M_ctr_q_4> 
+INFO:Xst:2261 - The FF/Latch <myState/bttnpress/button_cond2/M_ctr_q_14> in Unit <mojo_top_0> is equivalent to the following FF/Latch, which will be removed : <myState/mainState/button_cond2/M_ctr_q_14> 
 INFO:Xst:2261 - The FF/Latch <myState/mainState/mypropogater/slowclk25/M_ctr_q_2> in Unit <mojo_top_0> is equivalent to the following 3 FFs/Latches, which will be removed : <myState/mainState/mypropogater/slowclk24/M_ctr_q_2> <myState/mainState/mypropogater/slowclk23/M_ctr_q_2> <myState/mainState/edge_ctr/M_ctr_q_2> 
+INFO:Xst:2261 - The FF/Latch <myState/bttnpress/button_cond/M_ctr_q_5> in Unit <mojo_top_0> is equivalent to the following FF/Latch, which will be removed : <myState/mainState/button_cond1/M_ctr_q_5> 
+INFO:Xst:2261 - The FF/Latch <myState/bttnpress/button_cond2/M_ctr_q_15> in Unit <mojo_top_0> is equivalent to the following FF/Latch, which will be removed : <myState/mainState/button_cond2/M_ctr_q_15> 
 INFO:Xst:2261 - The FF/Latch <myState/mainState/mypropogater/slowclk25/M_ctr_q_3> in Unit <mojo_top_0> is equivalent to the following 3 FFs/Latches, which will be removed : <myState/mainState/mypropogater/slowclk24/M_ctr_q_3> <myState/mainState/mypropogater/slowclk23/M_ctr_q_3> <myState/mainState/edge_ctr/M_ctr_q_3> 
+INFO:Xst:2261 - The FF/Latch <myState/bttnpress/button_cond/M_ctr_q_6> in Unit <mojo_top_0> is equivalent to the following FF/Latch, which will be removed : <myState/mainState/button_cond1/M_ctr_q_6> 
+INFO:Xst:2261 - The FF/Latch <myState/bttnpress/button_cond2/M_ctr_q_16> in Unit <mojo_top_0> is equivalent to the following FF/Latch, which will be removed : <myState/mainState/button_cond2/M_ctr_q_16> 
 INFO:Xst:2261 - The FF/Latch <myState/mainState/mypropogater/slowclk25/M_ctr_q_4> in Unit <mojo_top_0> is equivalent to the following 3 FFs/Latches, which will be removed : <myState/mainState/mypropogater/slowclk24/M_ctr_q_4> <myState/mainState/mypropogater/slowclk23/M_ctr_q_4> <myState/mainState/edge_ctr/M_ctr_q_4> 
+INFO:Xst:2261 - The FF/Latch <myState/bttnpress/button_cond/M_ctr_q_7> in Unit <mojo_top_0> is equivalent to the following FF/Latch, which will be removed : <myState/mainState/button_cond1/M_ctr_q_7> 
+INFO:Xst:2261 - The FF/Latch <myState/bttnpress/button_cond2/M_ctr_q_17> in Unit <mojo_top_0> is equivalent to the following FF/Latch, which will be removed : <myState/mainState/button_cond2/M_ctr_q_17> 
 INFO:Xst:2261 - The FF/Latch <myState/mainState/mypropogater/slowclk25/M_ctr_q_5> in Unit <mojo_top_0> is equivalent to the following 3 FFs/Latches, which will be removed : <myState/mainState/mypropogater/slowclk24/M_ctr_q_5> <myState/mainState/mypropogater/slowclk23/M_ctr_q_5> <myState/mainState/edge_ctr/M_ctr_q_5> 
+INFO:Xst:2261 - The FF/Latch <myState/bttnpress/button_cond/M_ctr_q_8> in Unit <mojo_top_0> is equivalent to the following FF/Latch, which will be removed : <myState/mainState/button_cond1/M_ctr_q_8> 
+INFO:Xst:2261 - The FF/Latch <myState/bttnpress/button_cond2/M_ctr_q_18> in Unit <mojo_top_0> is equivalent to the following FF/Latch, which will be removed : <myState/mainState/button_cond2/M_ctr_q_18> 
 INFO:Xst:2261 - The FF/Latch <seg/ctr/M_ctr_q_0> in Unit <mojo_top_0> is equivalent to the following FF/Latch, which will be removed : <myState/bttnpress/edge_ctr/M_ctr_q_0> 
+INFO:Xst:2261 - The FF/Latch <myState/bttnpress/button_cond/M_ctr_q_9> in Unit <mojo_top_0> is equivalent to the following FF/Latch, which will be removed : <myState/mainState/button_cond1/M_ctr_q_9> 
+INFO:Xst:2261 - The FF/Latch <myState/bttnpress/button_cond2/M_ctr_q_19> in Unit <mojo_top_0> is equivalent to the following FF/Latch, which will be removed : <myState/mainState/button_cond2/M_ctr_q_19> 
 INFO:Xst:2261 - The FF/Latch <myState/mainState/mypropogater/slowclk25/M_ctr_q_6> in Unit <mojo_top_0> is equivalent to the following 3 FFs/Latches, which will be removed : <myState/mainState/mypropogater/slowclk24/M_ctr_q_6> <myState/mainState/mypropogater/slowclk23/M_ctr_q_6> <myState/mainState/edge_ctr/M_ctr_q_6> 
 INFO:Xst:2261 - The FF/Latch <seg/ctr/M_ctr_q_1> in Unit <mojo_top_0> is equivalent to the following FF/Latch, which will be removed : <myState/bttnpress/edge_ctr/M_ctr_q_1> 
 INFO:Xst:2261 - The FF/Latch <myState/mainState/mypropogater/slowclk25/M_ctr_q_7> in Unit <mojo_top_0> is equivalent to the following 3 FFs/Latches, which will be removed : <myState/mainState/mypropogater/slowclk24/M_ctr_q_7> <myState/mainState/mypropogater/slowclk23/M_ctr_q_7> <myState/mainState/edge_ctr/M_ctr_q_7> 
@@ -864,7 +852,9 @@ INFO:Xst:2261 - The FF/Latch <seg/ctr/M_ctr_q_3> in Unit <mojo_top_0> is equival
 INFO:Xst:2261 - The FF/Latch <myState/mainState/mypropogater/slowclk25/M_ctr_q_9> in Unit <mojo_top_0> is equivalent to the following 3 FFs/Latches, which will be removed : <myState/mainState/mypropogater/slowclk24/M_ctr_q_9> <myState/mainState/mypropogater/slowclk23/M_ctr_q_9> <myState/mainState/edge_ctr/M_ctr_q_9> 
 INFO:Xst:2261 - The FF/Latch <seg/ctr/M_ctr_q_4> in Unit <mojo_top_0> is equivalent to the following FF/Latch, which will be removed : <myState/bttnpress/edge_ctr/M_ctr_q_4> 
 INFO:Xst:2261 - The FF/Latch <seg/ctr/M_ctr_q_5> in Unit <mojo_top_0> is equivalent to the following FF/Latch, which will be removed : <myState/bttnpress/edge_ctr/M_ctr_q_5> 
+INFO:Xst:2261 - The FF/Latch <myState/bttnpress/button_cond2/sync/M_pipe_q_0> in Unit <mojo_top_0> is equivalent to the following FF/Latch, which will be removed : <myState/mainState/button_cond2/sync/M_pipe_q_0> 
 INFO:Xst:2261 - The FF/Latch <seg/ctr/M_ctr_q_6> in Unit <mojo_top_0> is equivalent to the following FF/Latch, which will be removed : <myState/bttnpress/edge_ctr/M_ctr_q_6> 
+INFO:Xst:2261 - The FF/Latch <myState/bttnpress/button_cond2/sync/M_pipe_q_1> in Unit <mojo_top_0> is equivalent to the following FF/Latch, which will be removed : <myState/mainState/button_cond2/sync/M_pipe_q_1> 
 INFO:Xst:2261 - The FF/Latch <seg/ctr/M_ctr_q_7> in Unit <mojo_top_0> is equivalent to the following FF/Latch, which will be removed : <myState/bttnpress/edge_ctr/M_ctr_q_7> 
 INFO:Xst:2261 - The FF/Latch <seg/ctr/M_ctr_q_10> in Unit <mojo_top_0> is equivalent to the following FF/Latch, which will be removed : <myState/bttnpress/edge_ctr/M_ctr_q_10> 
 INFO:Xst:2261 - The FF/Latch <seg/ctr/M_ctr_q_8> in Unit <mojo_top_0> is equivalent to the following FF/Latch, which will be removed : <myState/bttnpress/edge_ctr/M_ctr_q_8> 
@@ -876,10 +866,14 @@ INFO:Xst:2261 - The FF/Latch <seg/ctr/M_ctr_q_14> in Unit <mojo_top_0> is equiva
 INFO:Xst:2261 - The FF/Latch <seg/ctr/M_ctr_q_15> in Unit <mojo_top_0> is equivalent to the following FF/Latch, which will be removed : <myState/bttnpress/edge_ctr/M_ctr_q_15> 
 INFO:Xst:2261 - The FF/Latch <seg/ctr/M_ctr_q_16> in Unit <mojo_top_0> is equivalent to the following FF/Latch, which will be removed : <myState/bttnpress/edge_ctr/M_ctr_q_16> 
 INFO:Xst:2261 - The FF/Latch <seg/ctr/M_ctr_q_17> in Unit <mojo_top_0> is equivalent to the following FF/Latch, which will be removed : <myState/bttnpress/edge_ctr/M_ctr_q_17> 
+INFO:Xst:2261 - The FF/Latch <myState/bttnpress/button_cond3/sync/M_pipe_q_0> in Unit <mojo_top_0> is equivalent to the following FF/Latch, which will be removed : <myState/mainState/button_cond3/sync/M_pipe_q_0> 
+INFO:Xst:2261 - The FF/Latch <myState/bttnpress/button_cond3/sync/M_pipe_q_1> in Unit <mojo_top_0> is equivalent to the following FF/Latch, which will be removed : <myState/mainState/button_cond3/sync/M_pipe_q_1> 
 INFO:Xst:2261 - The FF/Latch <myState/mainState/mypropogater/slowclk25/M_ctr_q_10> in Unit <mojo_top_0> is equivalent to the following 3 FFs/Latches, which will be removed : <myState/mainState/mypropogater/slowclk24/M_ctr_q_10> <myState/mainState/mypropogater/slowclk23/M_ctr_q_10> <myState/mainState/edge_ctr/M_ctr_q_10> 
 INFO:Xst:2261 - The FF/Latch <myState/mainState/mypropogater/slowclk25/M_ctr_q_11> in Unit <mojo_top_0> is equivalent to the following 3 FFs/Latches, which will be removed : <myState/mainState/mypropogater/slowclk24/M_ctr_q_11> <myState/mainState/mypropogater/slowclk23/M_ctr_q_11> <myState/mainState/edge_ctr/M_ctr_q_11> 
 INFO:Xst:2261 - The FF/Latch <myState/mainState/mypropogater/slowclk25/M_ctr_q_12> in Unit <mojo_top_0> is equivalent to the following 3 FFs/Latches, which will be removed : <myState/mainState/mypropogater/slowclk24/M_ctr_q_12> <myState/mainState/mypropogater/slowclk23/M_ctr_q_12> <myState/mainState/edge_ctr/M_ctr_q_12> 
+INFO:Xst:2261 - The FF/Latch <myState/bttnpress/button_cond/sync/M_pipe_q_0> in Unit <mojo_top_0> is equivalent to the following FF/Latch, which will be removed : <myState/mainState/button_cond1/sync/M_pipe_q_0> 
 INFO:Xst:2261 - The FF/Latch <myState/mainState/mypropogater/slowclk25/M_ctr_q_13> in Unit <mojo_top_0> is equivalent to the following 3 FFs/Latches, which will be removed : <myState/mainState/mypropogater/slowclk24/M_ctr_q_13> <myState/mainState/mypropogater/slowclk23/M_ctr_q_13> <myState/mainState/edge_ctr/M_ctr_q_13> 
+INFO:Xst:2261 - The FF/Latch <myState/bttnpress/button_cond/sync/M_pipe_q_1> in Unit <mojo_top_0> is equivalent to the following FF/Latch, which will be removed : <myState/mainState/button_cond1/sync/M_pipe_q_1> 
 INFO:Xst:2261 - The FF/Latch <myState/mainState/mypropogater/slowclk25/M_ctr_q_14> in Unit <mojo_top_0> is equivalent to the following 3 FFs/Latches, which will be removed : <myState/mainState/mypropogater/slowclk24/M_ctr_q_14> <myState/mainState/mypropogater/slowclk23/M_ctr_q_14> <myState/mainState/edge_ctr/M_ctr_q_14> 
 INFO:Xst:2261 - The FF/Latch <myState/mainState/mypropogater/slowclk25/M_ctr_q_20> in Unit <mojo_top_0> is equivalent to the following 3 FFs/Latches, which will be removed : <myState/mainState/mypropogater/slowclk24/M_ctr_q_20> <myState/mainState/mypropogater/slowclk23/M_ctr_q_20> <myState/mainState/edge_ctr/M_ctr_q_20> 
 INFO:Xst:2261 - The FF/Latch <myState/mainState/mypropogater/slowclk25/M_ctr_q_15> in Unit <mojo_top_0> is equivalent to the following 3 FFs/Latches, which will be removed : <myState/mainState/mypropogater/slowclk24/M_ctr_q_15> <myState/mainState/mypropogater/slowclk23/M_ctr_q_15> <myState/mainState/edge_ctr/M_ctr_q_15> 
@@ -891,6 +885,16 @@ INFO:Xst:2261 - The FF/Latch <myState/mainState/mypropogater/slowclk25/M_ctr_q_2
 INFO:Xst:2261 - The FF/Latch <myState/mainState/mypropogater/slowclk25/M_ctr_q_18> in Unit <mojo_top_0> is equivalent to the following 3 FFs/Latches, which will be removed : <myState/mainState/mypropogater/slowclk24/M_ctr_q_18> <myState/mainState/mypropogater/slowclk23/M_ctr_q_18> <myState/mainState/edge_ctr/M_ctr_q_18> 
 INFO:Xst:2261 - The FF/Latch <myState/mainState/mypropogater/slowclk25/M_ctr_q_24> in Unit <mojo_top_0> is equivalent to the following FF/Latch, which will be removed : <myState/mainState/mypropogater/slowclk24/M_ctr_q_24> 
 INFO:Xst:2261 - The FF/Latch <myState/mainState/mypropogater/slowclk25/M_ctr_q_19> in Unit <mojo_top_0> is equivalent to the following 3 FFs/Latches, which will be removed : <myState/mainState/mypropogater/slowclk24/M_ctr_q_19> <myState/mainState/mypropogater/slowclk23/M_ctr_q_19> <myState/mainState/edge_ctr/M_ctr_q_19> 
+INFO:Xst:2261 - The FF/Latch <myState/bttnpress/button_cond3/M_ctr_q_10> in Unit <mojo_top_0> is equivalent to the following FF/Latch, which will be removed : <myState/mainState/button_cond3/M_ctr_q_10> 
+INFO:Xst:2261 - The FF/Latch <myState/bttnpress/button_cond3/M_ctr_q_11> in Unit <mojo_top_0> is equivalent to the following FF/Latch, which will be removed : <myState/mainState/button_cond3/M_ctr_q_11> 
+INFO:Xst:2261 - The FF/Latch <myState/bttnpress/button_cond3/M_ctr_q_12> in Unit <mojo_top_0> is equivalent to the following FF/Latch, which will be removed : <myState/mainState/button_cond3/M_ctr_q_12> 
+INFO:Xst:2261 - The FF/Latch <myState/bttnpress/button_cond3/M_ctr_q_13> in Unit <mojo_top_0> is equivalent to the following FF/Latch, which will be removed : <myState/mainState/button_cond3/M_ctr_q_13> 
+INFO:Xst:2261 - The FF/Latch <myState/bttnpress/button_cond3/M_ctr_q_14> in Unit <mojo_top_0> is equivalent to the following FF/Latch, which will be removed : <myState/mainState/button_cond3/M_ctr_q_14> 
+INFO:Xst:2261 - The FF/Latch <myState/bttnpress/button_cond3/M_ctr_q_15> in Unit <mojo_top_0> is equivalent to the following FF/Latch, which will be removed : <myState/mainState/button_cond3/M_ctr_q_15> 
+INFO:Xst:2261 - The FF/Latch <myState/bttnpress/button_cond3/M_ctr_q_16> in Unit <mojo_top_0> is equivalent to the following FF/Latch, which will be removed : <myState/mainState/button_cond3/M_ctr_q_16> 
+INFO:Xst:2261 - The FF/Latch <myState/bttnpress/button_cond3/M_ctr_q_17> in Unit <mojo_top_0> is equivalent to the following FF/Latch, which will be removed : <myState/mainState/button_cond3/M_ctr_q_17> 
+INFO:Xst:2261 - The FF/Latch <myState/bttnpress/button_cond3/M_ctr_q_18> in Unit <mojo_top_0> is equivalent to the following FF/Latch, which will be removed : <myState/mainState/button_cond3/M_ctr_q_18> 
+INFO:Xst:2261 - The FF/Latch <myState/bttnpress/button_cond3/M_ctr_q_19> in Unit <mojo_top_0> is equivalent to the following FF/Latch, which will be removed : <myState/mainState/button_cond3/M_ctr_q_19> 
 INFO:Xst:2261 - The FF/Latch <myState/mainState/mypropogater/randomizer/numb_gen/M_x_q_29> in Unit <mojo_top_0> is equivalent to the following 9 FFs/Latches, which will be removed : <myState/mainState/mypropogater/randomizer/numb_gen/M_x_q_10> <myState/mainState/mypropogater/randomizer/numb_gen/M_x_q_1> <myState/mainState/mypropogater/randomizer/numb_gen/M_y_q_20> <myState/mainState/mypropogater/randomizer/numb_gen/M_y_q_19> <myState/mainState/mypropogater/randomizer/clk_gen/M_x_q_29> <myState/mainState/mypropogater/randomizer/clk_gen/M_x_q_10> <myState/mainState/mypropogater/randomizer/clk_gen/M_x_q_1> <myState/mainState/mypropogater/randomizer/clk_gen/M_y_q_20> <myState/mainState/mypropogater/randomizer/clk_gen/M_y_q_19> 
 
 Mapping all equations...
@@ -910,8 +914,8 @@ Unit <mojo_top_0> processed.
 Final Register Report
 
 Macro Statistics
-# Registers                                            : 225
- Flip-Flops                                            : 225
+# Registers                                            : 233
+ Flip-Flops                                            : 233
 # Shift Registers                                      : 3
  2-bit shift register                                  : 3
 
@@ -937,7 +941,8 @@ Clock Information:
 ---------------------------------------------------------------------------------------------+-------------------------------------------------------+-------+
 Clock Signal                                                                                 | Clock buffer(FF name)                                 | Load  |
 ---------------------------------------------------------------------------------------------+-------------------------------------------------------+-------+
-clk                                                                                          | BUFGP                                                 | 171   |
+clk                                                                                          | BUFGP                                                 | 173   |
+myState/mainState/mypropogater/slowclk25/M_ctr_q_22                                          | NONE(myState/mainState/M_left_q_0)                    | 6     |
 myState/mainState/mypropogater/chosenClk_0(myState/mainState/mypropogater/Mmux_chosenClk12:O)| BUFG(*)(myState/mainState/mypropogater/M_clkseed_q_23)| 54    |
 myState/bttnpress/edge_ctr/M_ctr_q_22                                                        | NONE(myState/bttnpress/M_left_q_0)                    | 6     |
 ---------------------------------------------------------------------------------------------+-------------------------------------------------------+-------+
@@ -954,9 +959,9 @@ Timing Summary:
 ---------------
 Speed Grade: -2
 
-   Minimum period: 4.751ns (Maximum Frequency: 210.482MHz)
+   Minimum period: 4.791ns (Maximum Frequency: 208.725MHz)
    Minimum input arrival time before clock: 3.563ns
-   Maximum output required time after clock: 6.646ns
+   Maximum output required time after clock: 6.671ns
    Maximum combinational path delay: No path found
 
 =========================================================================

@@ -125,11 +125,14 @@ module main (
                   score.en=0;
               }
     }
+      
       else if (mypropogater.rowLit==RowNumb.ROW1){
             //reset my score register value
             score.data=2b00;
             score.en=1;
+    
     }
+    
       
       else{  //at every other row dont write anything to register
             //keep my register value

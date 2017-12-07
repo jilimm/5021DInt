@@ -5,7 +5,7 @@
 */
 
 module seven_seg_12 (
-    input [11:0] char,
+    input [3:0] char,
     output reg [6:0] segs
   );
   
