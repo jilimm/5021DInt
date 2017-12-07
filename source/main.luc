@@ -30,6 +30,7 @@ module main (
       counter edge_ctr(#SIZE(1),#DIV(22)); //detect edge every ~0.08sec
       
       propogate mypropogater;
+     // dff mainResult[2];
     }
   }
   .clk(edge_ctr.value){
@@ -37,20 +38,28 @@ module main (
     edge_detector edge_detector2(#RISE(1), #FALL(0)); // detect rising edges
     edge_detector edge_detector3(#RISE(1), #FALL(0)); // detect rising edges
     .rst(rst) {
+      register2 score;  
       dff left[1];
       dff right[1];
-      dff cent[1];
-      
+      dff cent[1];    
     }
   }
   
   alu myalu;
-  
+  sig result1[2];
   
   always {
     myalu.alufn = 6b0;
     myalu.a = 8b0;
     myalu.b = 8b0; 
+    result = 2b0;
+    
+    
+    
+    /*
+    mainResult.d = mainResult.q;
+    rowresult = mainResult.q;
+    */
     
     //******for debugging
    // mypropogater.num = 3b110;
@@ -60,7 +69,13 @@ module main (
  //   butt3 = right.q;
  //************   
     rowOn = mypropogater.rowLit;
+    //instantiate
+    //setting up output
+    result = score.out;
+    score.data = 2b11;
     
+    //connect my register input to the
+   
     //connect propogator output to mymain so i can pass it to mojo top
     high1 = mypropogater.row1;
     high2 = mypropogater.row2;
@@ -69,8 +84,6 @@ module main (
     low2 = mypropogater.gnd2;
     low3 = mypropogater.gnd3;
        
- //   clkchoice = mypropogater.clkChoice;//for debugging
-    //propagate should have a dff counter somewhere where i can refer to.
     button_cond1.in = left2;            // raw button input
     edge_detector1.in = button_cond1.out; // input to the edge_detector
     button_cond2.in = center1;            // raw button input
@@ -78,7 +91,6 @@ module main (
     button_cond3.in = right0;            // raw button input
     edge_detector3.in = button_cond3.out; // input to the edge_detector
     
-    result = 0; //default to 0
     
     if(edge_detector1.out){
        left.d = 1;
@@ -89,48 +101,44 @@ module main (
     if(edge_detector3.out){
        right.d = 1;
       }
-   // if(mypropogater.propClk){ 
-      // where i should check position of light
-      //check if value matched first, else return 0
-      //if(propage counter value ==9, if matched, check location using propagation counter, if 9, add 1 point, if 10, add 2 points, else return 0
-      //if (pattern[2] == left.q && pattern[1] == cent.q && pattern[0] == right.q){ // if pattern matched
-      //  if(propagate counter ==9) result = 1;
-      //  else if (counter ==10) result =2;
-      //  else result = 0;
       
       myalu.alufn = Inst.CMPEQ;
       myalu.a[2] = left.q;
       myalu.a[1] = cent.q;
       myalu.a[0] = right.q; 
       myalu.b [2:0] = mypropogater.numSeq;
-      
-        
+     
       
               
       if(mypropogater.rowLit==RowNumb.ROW2){
               if (myalu.alu[0]){
-                  result = 2b01;
-          }
-      else{
-      result = 2b00;
-      }
+                  score.data = 2b01;
+                  score.en=1;
+                  }
+              else{
+                score.data = 2b11;
+                score.en=1;
+                  }
       
       //will default to 10 when goes to row 3
     }
       else if (mypropogater.rowLit==RowNumb.ROW3){
-              if (myalu.alu[0]){
-                  result = 2b10;
-          }
-      else{
-      result = 2b00;
-      }
+              if (score.out==2b11 && myalu.alu[0]){
+                  score.en=1;
+                  score.data=2b10;
+                }
+              else{
+                  score.en=0;
+                  score.data=2b11;
+              }
     }
       
       else{
-              result = 2b00; //person gets 0 points
+              result1 = 2b11; //person gets 0 points // when its not at row 2 or 3 i dont write into my register at all who gives a fuck?
                left.d=0;
-              right.d=0;
-              cent.d=0;
+               right.d=0;
+               cent.d=0;
+              score.en=1;
     }
 }
 }

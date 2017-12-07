@@ -5,6 +5,7 @@
     <src>state.luc</src>
     <src>main.luc</src>
     <src>register.luc</src>
+    <src>register2.luc</src>
     <src>randomizer.luc</src>
     <src top="true">mojo_top.luc</src>
     <src>propogate.luc</src>

@@ -32,6 +32,7 @@ module propogate (
     output gnd2,
     output gnd3,
     output clkChoice[3]
+  //  output propClk
   ) {
 
   sig chosenClk; 
@@ -60,7 +61,7 @@ module propogate (
  
    
   always {
-
+  //  propClk = chosenClk;
     //initializin randomizer
     randomizer.numSeed = seed.q;
     randomizer.clkSeed = clkseed.q;

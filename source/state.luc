@@ -71,7 +71,7 @@ module state (
     gnd1=1;
     gnd2=1;
     gnd3=1; //put ground to high to deactivate the columns
-    totalScore = bttnpress.bttnPress;
+   // totalScore = bttnpress.bttnPress;// this for debugging to test start game on any button press
     
     case (state.q){
       state.MAIN:
@@ -85,7 +85,7 @@ module state (
          row2 = mainState.high2;
          row3 = mainState.high3;
         
-        //SUM UP WHEN the row is 3 and the 
+        /*
         if (currentRow==RowNumb.ROW2 && mainState.result==2b01){
           rowResult = 2b01;  
           state.d = state.SUMUP;
@@ -99,6 +99,10 @@ module state (
           rowResult = 2b00;
           state.d = state.SUMUP; //miss everything dont add anything
          }
+        else {
+          state.d = state.MAIN; //let the light propogate down
+        }
+        */
         //THIS CODE STOPS THE GAME IF YOU GET SHIT WRONG
           /*
         
