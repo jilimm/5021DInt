@@ -6,7 +6,7 @@ module main (
     input left2,       // button input left
     input center1,       // button input right
     input right0,        // button input center
-    output result[2],  // press counter
+    output result[2],  // output results to state so it knows where to go 01: 1 point 10: 2 points, 11: error 00: miss
     output high1,
     output high2,
     output high3,
@@ -107,7 +107,11 @@ module main (
                   score.data = 2b01;
                   score.en=1;
                   }
-              else{
+              else if (left.q|right.q|cent.q){ //errnous input
+                  score.data = 2b11;
+                  score.en=1;
+                }
+              else{ //no input wait for the last row
                 score.data = 2b00;
                 score.en=1;
                   }
@@ -115,13 +119,20 @@ module main (
     }
       //in the last row if my sequence is correct i get 2 points
       else if (mypropogater.rowLit==RowNumb.ROW10){
-              if (score.out==2b00 && myalu.alu[0]){ //write 2 to score if and only if i enter correct seq at row 3
+              if (left.q | right.q| cent.q){
+                  if (score.out==2b00 && myalu.alu[0]){ //write 2 to score if and only if i enter correct seq at row 3
                     score.data=2b10;
                     score.en=1;
-                  
-                }
-              else{
-                  score.en=0;
+                }    
+                   else{
+                    score.data=2b11;
+                    score.en=1;
+        }   
+        }
+              
+              else{  //no button input, wait until row 10 period complete this gives user time to input sequence
+                  score.data = 2b00; 
+                  score.en=1;
               }
     }
       //at the first row, i reset my number of points 
@@ -131,16 +142,27 @@ module main (
             score.en=1;
     
     }
-    
       
-      else{  //at every other row dont write anything to register
-            //keep my register value
-              score.en=0;
-               //person gets 0 points 
-              //dont register any button inputs
-               left.d=0;
-               right.d=0;
-               cent.d=0;
+      else if (mypropogater.rowLit==RowNumb.ROW11){
+            //row 11 is for me to check my scores keep it at 0 dont overwrite
+            score.en=0;
+            //ignore button inputs made, check the score out-putted
+            left.d=0;
+            cent.d=0;
+            right.d=0;
+    
+    }
+      
+      else{  //at every other row (row2-row8)
+             //if there is a button press, result = errornous input
+            if (left.q|right.q|cent.q){
+                score.data=2b11;
+                score.en=0;
+              }
+            else{
+                score.data = 2b00; //no input score 0, let propogater propogate
+                score.en=1; 
+              }
               
     }
 }

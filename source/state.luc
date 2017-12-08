@@ -36,7 +36,7 @@ module state (
       bcounter btnCounter;
       reg8bit scoreSum; //use an 8bit register to store the toal score of the game // i cannot use dff becuase it mojo clk constantly resets it //try connecting register to the propagtor clock cycle
       reg8bit btnReg; //stores previous value of button presses
-      reg8bit addReg;
+      reg8bit addReg; //addReg is used to store the current Score that has to be used in alu addition. separate registers were used to a
       //multi_seven_seg seg;
     }
     
@@ -47,7 +47,7 @@ module state (
   binToAscii translater;
   sig result;
   sig anybttnStart;
-  sig fromMain;
+ // sig gameOver;
 
     
 
@@ -116,7 +116,7 @@ module state (
     case (state.q){
     //main state starts propogation
       state.MAIN:
-      addReg.en=1; //enable addReg to allow addition
+      addReg.en=1; //write enable addReg add REg now contains current score and is ready for addition
       scoreSum.en=0;
       test1=1;
         
@@ -144,16 +144,20 @@ module state (
         row9=mainState.high9;
         row10=mainState.high10;
         
-        scoreSum.en=0; //dont write to score register until row 11
+        scoreSum.en=0; //dont write anything to score register 
         
-        if (mainState.result!=2b00 && mainState.rowOn==RowNumb.ROW11){ //you have a result
+        if (mainState.result==2b11){ //erronous input
+          //gameOvr=1;   
+          state.d = state.HALT;
+        }
+        else if (mainState.result==2b01 | mainState.result==2b10) { //you have a result
             myalu.alufn = Inst.ADD;
             myalu.a=mainState.result;
-            //myalu.a= mainState.result; //points gained from 1 propogation cycle
             myalu.b= addReg.out; //current score of user
-            scoreSum.data = myalu.alu; //connect new score into register input
-            scoreSum.en =1; //update my score
-            addReg.en=0;
+            scoreSum.data = myalu.alu; //connect new score into current Score register input
+            scoreSum.en =1; //write enable score Sum to update your score. 
+            addReg.en=0; //dont write enable add Reg. addREg and scoreSUm are consecutive registers, write enabling both of them will result in cyclic circuit and multiple additions per mojo clk cycle
+             
           //code for 7 seg LED
           result = scoreSum.out[0]+scoreSum.out[1]*2+scoreSum.out[2]*4+scoreSum.out[3]*8+scoreSum.out[4]*16+scoreSum.out[5]*32+scoreSum.out[6]*64+scoreSum.out[7]*128;
             translater.num = result;
@@ -161,29 +165,25 @@ module state (
             scoreDisplay[2]=translater.ascii[2];
             scoreDisplay[1]=translater.ascii[1];
               scoreDisplay[0]=translater.ascii[0];
-             
-          
-          
-          //BUG: score only adds up properly when mainState.rst=1
-          
+            state.d = state.HALT;
         } 
           
         else if (mainState.result==2b00 && mainState.rowOn==RowNumb.ROW11){//you missed the sequence or you entered it wrongly
-            state.d = state.HALT;
+          //gameOvr=1;  
+          state.d = state.HALT;
           }
-        
+        else{ //mainState.result is 2b00 and you are not at row 11 (still midway through game) let the thing propogate
+            state.d = state.MAIN;
+          }
       
         
-     
-        
-        
         state.HALT:
-      //reset the totalScore to 0
+      //if its a game over set score to 0
         //scoreSum.data =0 
         //scoreSum.en=1
       test2=1; //for debugging purposes
       scoreSum.en=0; //dont write into my register
-        addReg.en=0;
+        addReg.en=0; //dont write into my addition register, no addition taking place here
         //make sure there are no LED lighted up in matrix
          row1=0; 
       row2=0;
