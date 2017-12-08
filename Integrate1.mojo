@@ -15,6 +15,7 @@
     <src top="true">mojo_top.luc</src>
     <src>propogate.luc</src>
     <src>bcounter.luc</src>
+    <ucf lib="true">io_shield.ucf</ucf>
     <ucf lib="true">mojo.ucf</ucf>
     <ucf>custom.ucf</ucf>
     <component>decoder.luc</component>

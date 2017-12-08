@@ -2,7 +2,7 @@ Release 14.7 - xst P.20131013 (nt64)
 Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 --> 
 
-Total REAL time to Xst completion: 0.00 secs
+Total REAL time to Xst completion: 1.00 secs
 Total CPU time to Xst completion: 0.07 secs
  
 --> Reading design: mojo_top_0.prj
@@ -53,46 +53,46 @@ Netlist Hierarchy                  : rebuilt
 =========================================================================
 *                          HDL Parsing                                  *
 =========================================================================
-Analyzing Verilog file "C:/Users/Jing Yun/Desktop/50.002 Computation Structure/1D_Game Design/502IntGitRepo/5021DInt/work/planAhead/Integrate1/Integrate1.srcs/sources_1/imports/verilog/reg3bit_43.v" into library work
-Parsing module <reg3bit_43>.
-Analyzing Verilog file "C:/Users/Jing Yun/Desktop/50.002 Computation Structure/1D_Game Design/502IntGitRepo/5021DInt/work/planAhead/Integrate1/Integrate1.srcs/sources_1/imports/verilog/pn_gen_45.v" into library work
-Parsing module <pn_gen_45>.
-Analyzing Verilog file "C:/Users/Jing Yun/Desktop/50.002 Computation Structure/1D_Game Design/502IntGitRepo/5021DInt/work/planAhead/Integrate1/Integrate1.srcs/sources_1/imports/verilog/randomizer_41.v" into library work
-Parsing module <randomizer_41>.
-Analyzing Verilog file "C:/Users/Jing Yun/Desktop/50.002 Computation Structure/1D_Game Design/502IntGitRepo/5021DInt/work/planAhead/Integrate1/Integrate1.srcs/sources_1/imports/verilog/pipeline_32.v" into library work
-Parsing module <pipeline_32>.
-Analyzing Verilog file "C:/Users/Jing Yun/Desktop/50.002 Computation Structure/1D_Game Design/502IntGitRepo/5021DInt/work/planAhead/Integrate1/Integrate1.srcs/sources_1/imports/verilog/counter_42.v" into library work
-Parsing module <counter_42>.
+Analyzing Verilog file "C:/Users/Jing Yun/Desktop/50.002 Computation Structure/1D_Game Design/502IntGitRepo/5021DInt/work/planAhead/Integrate1/Integrate1.srcs/sources_1/imports/verilog/reg3bit_44.v" into library work
+Parsing module <reg3bit_44>.
+Analyzing Verilog file "C:/Users/Jing Yun/Desktop/50.002 Computation Structure/1D_Game Design/502IntGitRepo/5021DInt/work/planAhead/Integrate1/Integrate1.srcs/sources_1/imports/verilog/pn_gen_46.v" into library work
+Parsing module <pn_gen_46>.
+Analyzing Verilog file "C:/Users/Jing Yun/Desktop/50.002 Computation Structure/1D_Game Design/502IntGitRepo/5021DInt/work/planAhead/Integrate1/Integrate1.srcs/sources_1/imports/verilog/randomizer_42.v" into library work
+Parsing module <randomizer_42>.
+Analyzing Verilog file "C:/Users/Jing Yun/Desktop/50.002 Computation Structure/1D_Game Design/502IntGitRepo/5021DInt/work/planAhead/Integrate1/Integrate1.srcs/sources_1/imports/verilog/pipeline_33.v" into library work
+Parsing module <pipeline_33>.
+Analyzing Verilog file "C:/Users/Jing Yun/Desktop/50.002 Computation Structure/1D_Game Design/502IntGitRepo/5021DInt/work/planAhead/Integrate1/Integrate1.srcs/sources_1/imports/verilog/counter_43.v" into library work
+Parsing module <counter_43>.
+Analyzing Verilog file "C:/Users/Jing Yun/Desktop/50.002 Computation Structure/1D_Game Design/502IntGitRepo/5021DInt/work/planAhead/Integrate1/Integrate1.srcs/sources_1/imports/verilog/counter_41.v" into library work
+Parsing module <counter_41>.
 Analyzing Verilog file "C:/Users/Jing Yun/Desktop/50.002 Computation Structure/1D_Game Design/502IntGitRepo/5021DInt/work/planAhead/Integrate1/Integrate1.srcs/sources_1/imports/verilog/counter_40.v" into library work
 Parsing module <counter_40>.
 Analyzing Verilog file "C:/Users/Jing Yun/Desktop/50.002 Computation Structure/1D_Game Design/502IntGitRepo/5021DInt/work/planAhead/Integrate1/Integrate1.srcs/sources_1/imports/verilog/counter_39.v" into library work
 Parsing module <counter_39>.
-Analyzing Verilog file "C:/Users/Jing Yun/Desktop/50.002 Computation Structure/1D_Game Design/502IntGitRepo/5021DInt/work/planAhead/Integrate1/Integrate1.srcs/sources_1/imports/verilog/counter_38.v" into library work
-Parsing module <counter_38>.
-Analyzing Verilog file "C:/Users/Jing Yun/Desktop/50.002 Computation Structure/1D_Game Design/502IntGitRepo/5021DInt/work/planAhead/Integrate1/Integrate1.srcs/sources_1/imports/verilog/counter_18.v" into library work
-Parsing module <counter_18>.
-Analyzing Verilog file "C:/Users/Jing Yun/Desktop/50.002 Computation Structure/1D_Game Design/502IntGitRepo/5021DInt/work/planAhead/Integrate1/Integrate1.srcs/sources_1/imports/verilog/reg2bit_27.v" into library work
-Parsing module <reg2bit_27>.
-Analyzing Verilog file "C:/Users/Jing Yun/Desktop/50.002 Computation Structure/1D_Game Design/502IntGitRepo/5021DInt/work/planAhead/Integrate1/Integrate1.srcs/sources_1/imports/verilog/propogate_26.v" into library work
-Parsing module <propogate_26>.
-Analyzing Verilog file "C:/Users/Jing Yun/Desktop/50.002 Computation Structure/1D_Game Design/502IntGitRepo/5021DInt/work/planAhead/Integrate1/Integrate1.srcs/sources_1/imports/verilog/edge_detector_19.v" into library work
-Parsing module <edge_detector_19>.
-Analyzing Verilog file "C:/Users/Jing Yun/Desktop/50.002 Computation Structure/1D_Game Design/502IntGitRepo/5021DInt/work/planAhead/Integrate1/Integrate1.srcs/sources_1/imports/verilog/button_conditioner_15.v" into library work
-Parsing module <button_conditioner_15>.
-Analyzing Verilog file "C:/Users/Jing Yun/Desktop/50.002 Computation Structure/1D_Game Design/502IntGitRepo/5021DInt/work/planAhead/Integrate1/Integrate1.srcs/sources_1/imports/verilog/alu_10.v" into library work
-Parsing module <alu_10>.
-Analyzing Verilog file "C:/Users/Jing Yun/Desktop/50.002 Computation Structure/1D_Game Design/502IntGitRepo/5021DInt/work/planAhead/Integrate1/Integrate1.srcs/sources_1/imports/verilog/seven_seg_13.v" into library work
-Parsing module <seven_seg_13>.
+Analyzing Verilog file "C:/Users/Jing Yun/Desktop/50.002 Computation Structure/1D_Game Design/502IntGitRepo/5021DInt/work/planAhead/Integrate1/Integrate1.srcs/sources_1/imports/verilog/counter_19.v" into library work
+Parsing module <counter_19>.
+Analyzing Verilog file "C:/Users/Jing Yun/Desktop/50.002 Computation Structure/1D_Game Design/502IntGitRepo/5021DInt/work/planAhead/Integrate1/Integrate1.srcs/sources_1/imports/verilog/reg2bit_28.v" into library work
+Parsing module <reg2bit_28>.
+Analyzing Verilog file "C:/Users/Jing Yun/Desktop/50.002 Computation Structure/1D_Game Design/502IntGitRepo/5021DInt/work/planAhead/Integrate1/Integrate1.srcs/sources_1/imports/verilog/propogate_27.v" into library work
+Parsing module <propogate_27>.
+Analyzing Verilog file "C:/Users/Jing Yun/Desktop/50.002 Computation Structure/1D_Game Design/502IntGitRepo/5021DInt/work/planAhead/Integrate1/Integrate1.srcs/sources_1/imports/verilog/edge_detector_20.v" into library work
+Parsing module <edge_detector_20>.
+Analyzing Verilog file "C:/Users/Jing Yun/Desktop/50.002 Computation Structure/1D_Game Design/502IntGitRepo/5021DInt/work/planAhead/Integrate1/Integrate1.srcs/sources_1/imports/verilog/button_conditioner_16.v" into library work
+Parsing module <button_conditioner_16>.
+Analyzing Verilog file "C:/Users/Jing Yun/Desktop/50.002 Computation Structure/1D_Game Design/502IntGitRepo/5021DInt/work/planAhead/Integrate1/Integrate1.srcs/sources_1/imports/verilog/alu_11.v" into library work
+Parsing module <alu_11>.
+Analyzing Verilog file "C:/Users/Jing Yun/Desktop/50.002 Computation Structure/1D_Game Design/502IntGitRepo/5021DInt/work/planAhead/Integrate1/Integrate1.srcs/sources_1/imports/verilog/seven_seg_14.v" into library work
+Parsing module <seven_seg_14>.
 Analyzing Verilog file "C:/Users/Jing Yun/Desktop/50.002 Computation Structure/1D_Game Design/502IntGitRepo/5021DInt/work/planAhead/Integrate1/Integrate1.srcs/sources_1/imports/verilog/reg8bit_7.v" into library work
 Parsing module <reg8bit_7>.
-Analyzing Verilog file "C:/Users/Jing Yun/Desktop/50.002 Computation Structure/1D_Game Design/502IntGitRepo/5021DInt/work/planAhead/Integrate1/Integrate1.srcs/sources_1/imports/verilog/main_9.v" into library work
-Parsing module <main_9>.
-Analyzing Verilog file "C:/Users/Jing Yun/Desktop/50.002 Computation Structure/1D_Game Design/502IntGitRepo/5021DInt/work/planAhead/Integrate1/Integrate1.srcs/sources_1/imports/verilog/decoder_14.v" into library work
-Parsing module <decoder_14>.
-Analyzing Verilog file "C:/Users/Jing Yun/Desktop/50.002 Computation Structure/1D_Game Design/502IntGitRepo/5021DInt/work/planAhead/Integrate1/Integrate1.srcs/sources_1/imports/verilog/counter_12.v" into library work
-Parsing module <counter_12>.
-Analyzing Verilog file "C:/Users/Jing Yun/Desktop/50.002 Computation Structure/1D_Game Design/502IntGitRepo/5021DInt/work/planAhead/Integrate1/Integrate1.srcs/sources_1/imports/verilog/bintoAscii_11.v" into library work
-Parsing module <binToAscii_11>.
+Analyzing Verilog file "C:/Users/Jing Yun/Desktop/50.002 Computation Structure/1D_Game Design/502IntGitRepo/5021DInt/work/planAhead/Integrate1/Integrate1.srcs/sources_1/imports/verilog/main_10.v" into library work
+Parsing module <main_10>.
+Analyzing Verilog file "C:/Users/Jing Yun/Desktop/50.002 Computation Structure/1D_Game Design/502IntGitRepo/5021DInt/work/planAhead/Integrate1/Integrate1.srcs/sources_1/imports/verilog/decoder_15.v" into library work
+Parsing module <decoder_15>.
+Analyzing Verilog file "C:/Users/Jing Yun/Desktop/50.002 Computation Structure/1D_Game Design/502IntGitRepo/5021DInt/work/planAhead/Integrate1/Integrate1.srcs/sources_1/imports/verilog/counter_13.v" into library work
+Parsing module <counter_13>.
+Analyzing Verilog file "C:/Users/Jing Yun/Desktop/50.002 Computation Structure/1D_Game Design/502IntGitRepo/5021DInt/work/planAhead/Integrate1/Integrate1.srcs/sources_1/imports/verilog/bintoAscii_12.v" into library work
+Parsing module <binToAscii_12>.
 Analyzing Verilog file "C:/Users/Jing Yun/Desktop/50.002 Computation Structure/1D_Game Design/502IntGitRepo/5021DInt/work/planAhead/Integrate1/Integrate1.srcs/sources_1/imports/verilog/bcounter_6.v" into library work
 Parsing module <bcounter_6>.
 Analyzing Verilog file "C:/Users/Jing Yun/Desktop/50.002 Computation Structure/1D_Game Design/502IntGitRepo/5021DInt/work/planAhead/Integrate1/Integrate1.srcs/sources_1/imports/verilog/state_4.v" into library work
@@ -116,60 +116,58 @@ Elaborating module <state_4>.
 
 Elaborating module <bcounter_6>.
 
-Elaborating module <button_conditioner_15>.
+Elaborating module <button_conditioner_16>.
 
-Elaborating module <pipeline_32>.
+Elaborating module <pipeline_33>.
 
-Elaborating module <counter_18>.
+Elaborating module <counter_19>.
 
-Elaborating module <edge_detector_19>.
+Elaborating module <edge_detector_20>.
 
 Elaborating module <reg8bit_7>.
 
-Elaborating module <main_9>.
+Elaborating module <main_10>.
 
-Elaborating module <propogate_26>.
-
-Elaborating module <counter_38>.
+Elaborating module <propogate_27>.
 
 Elaborating module <counter_39>.
 
 Elaborating module <counter_40>.
 
-Elaborating module <randomizer_41>.
+Elaborating module <counter_41>.
 
-Elaborating module <reg3bit_43>.
+Elaborating module <randomizer_42>.
 
-Elaborating module <pn_gen_45>.
+Elaborating module <reg3bit_44>.
 
-Elaborating module <counter_42>.
-WARNING:HDLCompiler:1127 - "C:/Users/Jing Yun/Desktop/50.002 Computation Structure/1D_Game Design/502IntGitRepo/5021DInt/work/planAhead/Integrate1/Integrate1.srcs/sources_1/imports/verilog/main_9.v" Line 93: Assignment to M_mypropogater_clkChoice ignored, since the identifier is never used
+Elaborating module <pn_gen_46>.
 
-Elaborating module <reg2bit_27>.
+Elaborating module <counter_43>.
+WARNING:HDLCompiler:1127 - "C:/Users/Jing Yun/Desktop/50.002 Computation Structure/1D_Game Design/502IntGitRepo/5021DInt/work/planAhead/Integrate1/Integrate1.srcs/sources_1/imports/verilog/main_10.v" Line 93: Assignment to M_mypropogater_clkChoice ignored, since the identifier is never used
 
-Elaborating module <alu_10>.
-WARNING:HDLCompiler:1127 - "C:/Users/Jing Yun/Desktop/50.002 Computation Structure/1D_Game Design/502IntGitRepo/5021DInt/work/planAhead/Integrate1/Integrate1.srcs/sources_1/imports/verilog/main_9.v" Line 142: Assignment to M_myalu_z ignored, since the identifier is never used
-WARNING:HDLCompiler:1127 - "C:/Users/Jing Yun/Desktop/50.002 Computation Structure/1D_Game Design/502IntGitRepo/5021DInt/work/planAhead/Integrate1/Integrate1.srcs/sources_1/imports/verilog/main_9.v" Line 143: Assignment to M_myalu_v ignored, since the identifier is never used
-WARNING:HDLCompiler:1127 - "C:/Users/Jing Yun/Desktop/50.002 Computation Structure/1D_Game Design/502IntGitRepo/5021DInt/work/planAhead/Integrate1/Integrate1.srcs/sources_1/imports/verilog/main_9.v" Line 144: Assignment to M_myalu_n ignored, since the identifier is never used
-WARNING:HDLCompiler:1127 - "C:/Users/Jing Yun/Desktop/50.002 Computation Structure/1D_Game Design/502IntGitRepo/5021DInt/work/planAhead/Integrate1/Integrate1.srcs/sources_1/imports/verilog/state_4.v" Line 127: Assignment to M_myalu_z ignored, since the identifier is never used
-WARNING:HDLCompiler:1127 - "C:/Users/Jing Yun/Desktop/50.002 Computation Structure/1D_Game Design/502IntGitRepo/5021DInt/work/planAhead/Integrate1/Integrate1.srcs/sources_1/imports/verilog/state_4.v" Line 128: Assignment to M_myalu_v ignored, since the identifier is never used
-WARNING:HDLCompiler:1127 - "C:/Users/Jing Yun/Desktop/50.002 Computation Structure/1D_Game Design/502IntGitRepo/5021DInt/work/planAhead/Integrate1/Integrate1.srcs/sources_1/imports/verilog/state_4.v" Line 129: Assignment to M_myalu_n ignored, since the identifier is never used
+Elaborating module <reg2bit_28>.
 
-Elaborating module <binToAscii_11>.
-WARNING:HDLCompiler:413 - "C:/Users/Jing Yun/Desktop/50.002 Computation Structure/1D_Game Design/502IntGitRepo/5021DInt/work/planAhead/Integrate1/Integrate1.srcs/sources_1/imports/verilog/state_4.v" Line 224: Result of 8-bit expression is truncated to fit in 1-bit target.
-WARNING:HDLCompiler:413 - "C:/Users/Jing Yun/Desktop/50.002 Computation Structure/1D_Game Design/502IntGitRepo/5021DInt/work/planAhead/Integrate1/Integrate1.srcs/sources_1/imports/verilog/state_4.v" Line 226: Result of 4-bit expression is truncated to fit in 1-bit target.
+Elaborating module <alu_11>.
+WARNING:HDLCompiler:1127 - "C:/Users/Jing Yun/Desktop/50.002 Computation Structure/1D_Game Design/502IntGitRepo/5021DInt/work/planAhead/Integrate1/Integrate1.srcs/sources_1/imports/verilog/main_10.v" Line 142: Assignment to M_myalu_z ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "C:/Users/Jing Yun/Desktop/50.002 Computation Structure/1D_Game Design/502IntGitRepo/5021DInt/work/planAhead/Integrate1/Integrate1.srcs/sources_1/imports/verilog/main_10.v" Line 143: Assignment to M_myalu_v ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "C:/Users/Jing Yun/Desktop/50.002 Computation Structure/1D_Game Design/502IntGitRepo/5021DInt/work/planAhead/Integrate1/Integrate1.srcs/sources_1/imports/verilog/main_10.v" Line 144: Assignment to M_myalu_n ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "C:/Users/Jing Yun/Desktop/50.002 Computation Structure/1D_Game Design/502IntGitRepo/5021DInt/work/planAhead/Integrate1/Integrate1.srcs/sources_1/imports/verilog/state_4.v" Line 140: Assignment to M_myalu_z ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "C:/Users/Jing Yun/Desktop/50.002 Computation Structure/1D_Game Design/502IntGitRepo/5021DInt/work/planAhead/Integrate1/Integrate1.srcs/sources_1/imports/verilog/state_4.v" Line 141: Assignment to M_myalu_v ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "C:/Users/Jing Yun/Desktop/50.002 Computation Structure/1D_Game Design/502IntGitRepo/5021DInt/work/planAhead/Integrate1/Integrate1.srcs/sources_1/imports/verilog/state_4.v" Line 142: Assignment to M_myalu_n ignored, since the identifier is never used
+
+Elaborating module <binToAscii_12>.
+WARNING:HDLCompiler:413 - "C:/Users/Jing Yun/Desktop/50.002 Computation Structure/1D_Game Design/502IntGitRepo/5021DInt/work/planAhead/Integrate1/Integrate1.srcs/sources_1/imports/verilog/state_4.v" Line 235: Result of 8-bit expression is truncated to fit in 1-bit target.
 WARNING:HDLCompiler:1127 - "C:/Users/Jing Yun/Desktop/50.002 Computation Structure/1D_Game Design/502IntGitRepo/5021DInt/work/planAhead/Integrate1/Integrate1.srcs/sources_1/imports/verilog/mojo_top_0.v" Line 111: Assignment to M_myState_startbutt ignored, since the identifier is never used
 WARNING:HDLCompiler:1127 - "C:/Users/Jing Yun/Desktop/50.002 Computation Structure/1D_Game Design/502IntGitRepo/5021DInt/work/planAhead/Integrate1/Integrate1.srcs/sources_1/imports/verilog/mojo_top_0.v" Line 113: Assignment to M_myState_test1 ignored, since the identifier is never used
 WARNING:HDLCompiler:1127 - "C:/Users/Jing Yun/Desktop/50.002 Computation Structure/1D_Game Design/502IntGitRepo/5021DInt/work/planAhead/Integrate1/Integrate1.srcs/sources_1/imports/verilog/mojo_top_0.v" Line 114: Assignment to M_myState_test2 ignored, since the identifier is never used
 
 Elaborating module <multi_seven_seg_5>.
 
-Elaborating module <counter_12>.
+Elaborating module <counter_13>.
 
-Elaborating module <seven_seg_13>.
+Elaborating module <seven_seg_14>.
 
-Elaborating module <decoder_14>.
-WARNING:HDLCompiler:413 - "C:/Users/Jing Yun/Desktop/50.002 Computation Structure/1D_Game Design/502IntGitRepo/5021DInt/work/planAhead/Integrate1/Integrate1.srcs/sources_1/imports/verilog/mojo_top_0.v" Line 162: Result of 7-bit expression is truncated to fit in 6-bit target.
+Elaborating module <decoder_15>.
 WARNING:Xst:2972 - "C:/Users/Jing Yun/Desktop/50.002 Computation Structure/1D_Game Design/502IntGitRepo/5021DInt/work/planAhead/Integrate1/Integrate1.srcs/sources_1/imports/verilog/mojo_top_0.v" line 47. All outputs of instance <reset_cond> of block <reset_conditioner_1> are unconnected in block <mojo_top_0>. Underlying logic will be removed.
 WARNING:Xst:2972 - "C:/Users/Jing Yun/Desktop/50.002 Computation Structure/1D_Game Design/502IntGitRepo/5021DInt/work/planAhead/Integrate1/Integrate1.srcs/sources_1/imports/verilog/mojo_top_0.v" line 54. All outputs of instance <reset_cond2> of block <reset_conditioner_1> are unconnected in block <mojo_top_0>. Underlying logic will be removed.
 
@@ -209,23 +207,37 @@ Unit <reset_conditioner_1> synthesized.
 
 Synthesizing Unit <state_4>.
     Related source file is "C:/Users/Jing Yun/Desktop/50.002 Computation Structure/1D_Game Design/502IntGitRepo/5021DInt/work/planAhead/Integrate1/Integrate1.srcs/sources_1/imports/verilog/state_4.v".
-INFO:Xst:3210 - "C:/Users/Jing Yun/Desktop/50.002 Computation Structure/1D_Game Design/502IntGitRepo/5021DInt/work/planAhead/Integrate1/Integrate1.srcs/sources_1/imports/verilog/state_4.v" line 123: Output port <z> of the instance <myalu> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "C:/Users/Jing Yun/Desktop/50.002 Computation Structure/1D_Game Design/502IntGitRepo/5021DInt/work/planAhead/Integrate1/Integrate1.srcs/sources_1/imports/verilog/state_4.v" line 123: Output port <v> of the instance <myalu> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "C:/Users/Jing Yun/Desktop/50.002 Computation Structure/1D_Game Design/502IntGitRepo/5021DInt/work/planAhead/Integrate1/Integrate1.srcs/sources_1/imports/verilog/state_4.v" line 123: Output port <n> of the instance <myalu> is unconnected or connected to loadless signal.
-    Found 1-bit register for signal <M_state_q>.
-    Found 3-bit adder for signal <n0109[2:0]> created at line 224.
-    Found 4-bit adder for signal <n0112[3:0]> created at line 224.
-    Found 5-bit adder for signal <n0115[4:0]> created at line 224.
-    Found 6-bit adder for signal <n0118[5:0]> created at line 224.
-    Found 7-bit adder for signal <n0121[6:0]> created at line 224.
-    Found 8-bit adder for signal <_n0128> created at line 224.
-    Found 8-bit adder for signal <n0089> created at line 224.
-    Found 8-bit comparator greater for signal <M_btnReg_out[7]_PWR_3_o_equal_16_o> created at line 254
+INFO:Xst:3210 - "C:/Users/Jing Yun/Desktop/50.002 Computation Structure/1D_Game Design/502IntGitRepo/5021DInt/work/planAhead/Integrate1/Integrate1.srcs/sources_1/imports/verilog/state_4.v" line 136: Output port <z> of the instance <myalu> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:/Users/Jing Yun/Desktop/50.002 Computation Structure/1D_Game Design/502IntGitRepo/5021DInt/work/planAhead/Integrate1/Integrate1.srcs/sources_1/imports/verilog/state_4.v" line 136: Output port <v> of the instance <myalu> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:/Users/Jing Yun/Desktop/50.002 Computation Structure/1D_Game Design/502IntGitRepo/5021DInt/work/planAhead/Integrate1/Integrate1.srcs/sources_1/imports/verilog/state_4.v" line 136: Output port <n> of the instance <myalu> is unconnected or connected to loadless signal.
+    Found 2-bit register for signal <M_state_q>.
+    Found finite state machine <FSM_0> for signal <M_state_q>.
+    -----------------------------------------------------------------------
+    | States             | 2                                              |
+    | Transitions        | 5                                              |
+    | Inputs             | 4                                              |
+    | Outputs            | 2                                              |
+    | Clock              | clk (rising_edge)                              |
+    | Reset              | rst (positive)                                 |
+    | Reset type         | synchronous                                    |
+    | Reset State        | 01                                             |
+    | Power Up State     | 01                                             |
+    | Encoding           | auto                                           |
+    | Implementation     | LUT                                            |
+    -----------------------------------------------------------------------
+    Found 3-bit adder for signal <n0125[2:0]> created at line 235.
+    Found 4-bit adder for signal <n0128[3:0]> created at line 235.
+    Found 5-bit adder for signal <n0131[4:0]> created at line 235.
+    Found 6-bit adder for signal <n0134[5:0]> created at line 235.
+    Found 7-bit adder for signal <n0137[6:0]> created at line 235.
+    Found 8-bit adder for signal <_n0147> created at line 235.
+    Found 8-bit adder for signal <n0096> created at line 235.
+    Found 8-bit comparator greater for signal <M_btnReg_out[7]_PWR_3_o_equal_19_o> created at line 269
     Summary:
 	inferred   7 Adder/Subtractor(s).
-	inferred   1 D-type flip-flop(s).
 	inferred   1 Comparator(s).
-	inferred  30 Multiplexer(s).
+	inferred  33 Multiplexer(s).
+	inferred   1 Finite State Machine(s).
 Unit <state_4> synthesized.
 
 Synthesizing Unit <bcounter_6>.
@@ -242,37 +254,37 @@ Synthesizing Unit <bcounter_6>.
 	inferred  11 D-type flip-flop(s).
 Unit <bcounter_6> synthesized.
 
-Synthesizing Unit <button_conditioner_15>.
-    Related source file is "C:/Users/Jing Yun/Desktop/50.002 Computation Structure/1D_Game Design/502IntGitRepo/5021DInt/work/planAhead/Integrate1/Integrate1.srcs/sources_1/imports/verilog/button_conditioner_15.v".
+Synthesizing Unit <button_conditioner_16>.
+    Related source file is "C:/Users/Jing Yun/Desktop/50.002 Computation Structure/1D_Game Design/502IntGitRepo/5021DInt/work/planAhead/Integrate1/Integrate1.srcs/sources_1/imports/verilog/button_conditioner_16.v".
     Found 20-bit register for signal <M_ctr_q>.
     Found 20-bit adder for signal <M_ctr_q[19]_GND_5_o_add_2_OUT> created at line 39.
     Summary:
 	inferred   1 Adder/Subtractor(s).
 	inferred  20 D-type flip-flop(s).
-Unit <button_conditioner_15> synthesized.
+Unit <button_conditioner_16> synthesized.
 
-Synthesizing Unit <pipeline_32>.
-    Related source file is "C:/Users/Jing Yun/Desktop/50.002 Computation Structure/1D_Game Design/502IntGitRepo/5021DInt/work/planAhead/Integrate1/Integrate1.srcs/sources_1/imports/verilog/pipeline_32.v".
+Synthesizing Unit <pipeline_33>.
+    Related source file is "C:/Users/Jing Yun/Desktop/50.002 Computation Structure/1D_Game Design/502IntGitRepo/5021DInt/work/planAhead/Integrate1/Integrate1.srcs/sources_1/imports/verilog/pipeline_33.v".
     Found 2-bit register for signal <M_pipe_q>.
     Summary:
 	inferred   2 D-type flip-flop(s).
-Unit <pipeline_32> synthesized.
+Unit <pipeline_33> synthesized.
 
-Synthesizing Unit <counter_18>.
-    Related source file is "C:/Users/Jing Yun/Desktop/50.002 Computation Structure/1D_Game Design/502IntGitRepo/5021DInt/work/planAhead/Integrate1/Integrate1.srcs/sources_1/imports/verilog/counter_18.v".
+Synthesizing Unit <counter_19>.
+    Related source file is "C:/Users/Jing Yun/Desktop/50.002 Computation Structure/1D_Game Design/502IntGitRepo/5021DInt/work/planAhead/Integrate1/Integrate1.srcs/sources_1/imports/verilog/counter_19.v".
     Found 23-bit register for signal <M_ctr_q>.
     Found 23-bit adder for signal <M_ctr_d> created at line 35.
     Summary:
 	inferred   1 Adder/Subtractor(s).
 	inferred  23 D-type flip-flop(s).
-Unit <counter_18> synthesized.
+Unit <counter_19> synthesized.
 
-Synthesizing Unit <edge_detector_19>.
-    Related source file is "C:/Users/Jing Yun/Desktop/50.002 Computation Structure/1D_Game Design/502IntGitRepo/5021DInt/work/planAhead/Integrate1/Integrate1.srcs/sources_1/imports/verilog/edge_detector_19.v".
+Synthesizing Unit <edge_detector_20>.
+    Related source file is "C:/Users/Jing Yun/Desktop/50.002 Computation Structure/1D_Game Design/502IntGitRepo/5021DInt/work/planAhead/Integrate1/Integrate1.srcs/sources_1/imports/verilog/edge_detector_20.v".
     Found 1-bit register for signal <M_last_q>.
     Summary:
 	inferred   1 D-type flip-flop(s).
-Unit <edge_detector_19> synthesized.
+Unit <edge_detector_20> synthesized.
 
 Synthesizing Unit <reg8bit_7>.
     Related source file is "C:/Users/Jing Yun/Desktop/50.002 Computation Structure/1D_Game Design/502IntGitRepo/5021DInt/work/planAhead/Integrate1/Integrate1.srcs/sources_1/imports/verilog/reg8bit_7.v".
@@ -281,22 +293,22 @@ Synthesizing Unit <reg8bit_7>.
 	inferred   8 D-type flip-flop(s).
 Unit <reg8bit_7> synthesized.
 
-Synthesizing Unit <main_9>.
-    Related source file is "C:/Users/Jing Yun/Desktop/50.002 Computation Structure/1D_Game Design/502IntGitRepo/5021DInt/work/planAhead/Integrate1/Integrate1.srcs/sources_1/imports/verilog/main_9.v".
-INFO:Xst:3210 - "C:/Users/Jing Yun/Desktop/50.002 Computation Structure/1D_Game Design/502IntGitRepo/5021DInt/work/planAhead/Integrate1/Integrate1.srcs/sources_1/imports/verilog/main_9.v" line 75: Output port <clkChoice> of the instance <mypropogater> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "C:/Users/Jing Yun/Desktop/50.002 Computation Structure/1D_Game Design/502IntGitRepo/5021DInt/work/planAhead/Integrate1/Integrate1.srcs/sources_1/imports/verilog/main_9.v" line 138: Output port <z> of the instance <myalu> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "C:/Users/Jing Yun/Desktop/50.002 Computation Structure/1D_Game Design/502IntGitRepo/5021DInt/work/planAhead/Integrate1/Integrate1.srcs/sources_1/imports/verilog/main_9.v" line 138: Output port <v> of the instance <myalu> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "C:/Users/Jing Yun/Desktop/50.002 Computation Structure/1D_Game Design/502IntGitRepo/5021DInt/work/planAhead/Integrate1/Integrate1.srcs/sources_1/imports/verilog/main_9.v" line 138: Output port <n> of the instance <myalu> is unconnected or connected to loadless signal.
+Synthesizing Unit <main_10>.
+    Related source file is "C:/Users/Jing Yun/Desktop/50.002 Computation Structure/1D_Game Design/502IntGitRepo/5021DInt/work/planAhead/Integrate1/Integrate1.srcs/sources_1/imports/verilog/main_10.v".
+INFO:Xst:3210 - "C:/Users/Jing Yun/Desktop/50.002 Computation Structure/1D_Game Design/502IntGitRepo/5021DInt/work/planAhead/Integrate1/Integrate1.srcs/sources_1/imports/verilog/main_10.v" line 75: Output port <clkChoice> of the instance <mypropogater> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:/Users/Jing Yun/Desktop/50.002 Computation Structure/1D_Game Design/502IntGitRepo/5021DInt/work/planAhead/Integrate1/Integrate1.srcs/sources_1/imports/verilog/main_10.v" line 138: Output port <z> of the instance <myalu> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:/Users/Jing Yun/Desktop/50.002 Computation Structure/1D_Game Design/502IntGitRepo/5021DInt/work/planAhead/Integrate1/Integrate1.srcs/sources_1/imports/verilog/main_10.v" line 138: Output port <v> of the instance <myalu> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:/Users/Jing Yun/Desktop/50.002 Computation Structure/1D_Game Design/502IntGitRepo/5021DInt/work/planAhead/Integrate1/Integrate1.srcs/sources_1/imports/verilog/main_10.v" line 138: Output port <n> of the instance <myalu> is unconnected or connected to loadless signal.
     Found 1-bit register for signal <M_right_q>.
     Found 1-bit register for signal <M_cent_q>.
     Found 1-bit register for signal <M_left_q>.
     Summary:
 	inferred   3 D-type flip-flop(s).
 	inferred   4 Multiplexer(s).
-Unit <main_9> synthesized.
+Unit <main_10> synthesized.
 
-Synthesizing Unit <propogate_26>.
-    Related source file is "C:/Users/Jing Yun/Desktop/50.002 Computation Structure/1D_Game Design/502IntGitRepo/5021DInt/work/planAhead/Integrate1/Integrate1.srcs/sources_1/imports/verilog/propogate_26.v".
+Synthesizing Unit <propogate_27>.
+    Related source file is "C:/Users/Jing Yun/Desktop/50.002 Computation Structure/1D_Game Design/502IntGitRepo/5021DInt/work/planAhead/Integrate1/Integrate1.srcs/sources_1/imports/verilog/propogate_27.v".
     Found 32-bit register for signal <M_clkseed_q>.
     Found 32-bit register for signal <M_seed_q>.
     Found 32-bit adder for signal <M_seed_q[31]_GND_11_o_add_3_OUT> created at line 318.
@@ -307,50 +319,50 @@ Synthesizing Unit <propogate_26>.
 	inferred   2 Adder/Subtractor(s).
 	inferred  64 D-type flip-flop(s).
 	inferred   9 Multiplexer(s).
-Unit <propogate_26> synthesized.
+Unit <propogate_27> synthesized.
 
-Synthesizing Unit <counter_38>.
-    Related source file is "C:/Users/Jing Yun/Desktop/50.002 Computation Structure/1D_Game Design/502IntGitRepo/5021DInt/work/planAhead/Integrate1/Integrate1.srcs/sources_1/imports/verilog/counter_38.v".
+Synthesizing Unit <counter_39>.
+    Related source file is "C:/Users/Jing Yun/Desktop/50.002 Computation Structure/1D_Game Design/502IntGitRepo/5021DInt/work/planAhead/Integrate1/Integrate1.srcs/sources_1/imports/verilog/counter_39.v".
     Found 24-bit register for signal <M_ctr_q>.
     Found 24-bit adder for signal <M_ctr_d> created at line 35.
     Summary:
 	inferred   1 Adder/Subtractor(s).
 	inferred  24 D-type flip-flop(s).
-Unit <counter_38> synthesized.
+Unit <counter_39> synthesized.
 
-Synthesizing Unit <counter_39>.
-    Related source file is "C:/Users/Jing Yun/Desktop/50.002 Computation Structure/1D_Game Design/502IntGitRepo/5021DInt/work/planAhead/Integrate1/Integrate1.srcs/sources_1/imports/verilog/counter_39.v".
+Synthesizing Unit <counter_40>.
+    Related source file is "C:/Users/Jing Yun/Desktop/50.002 Computation Structure/1D_Game Design/502IntGitRepo/5021DInt/work/planAhead/Integrate1/Integrate1.srcs/sources_1/imports/verilog/counter_40.v".
     Found 25-bit register for signal <M_ctr_q>.
     Found 25-bit adder for signal <M_ctr_d> created at line 35.
     Summary:
 	inferred   1 Adder/Subtractor(s).
 	inferred  25 D-type flip-flop(s).
-Unit <counter_39> synthesized.
+Unit <counter_40> synthesized.
 
-Synthesizing Unit <counter_40>.
-    Related source file is "C:/Users/Jing Yun/Desktop/50.002 Computation Structure/1D_Game Design/502IntGitRepo/5021DInt/work/planAhead/Integrate1/Integrate1.srcs/sources_1/imports/verilog/counter_40.v".
+Synthesizing Unit <counter_41>.
+    Related source file is "C:/Users/Jing Yun/Desktop/50.002 Computation Structure/1D_Game Design/502IntGitRepo/5021DInt/work/planAhead/Integrate1/Integrate1.srcs/sources_1/imports/verilog/counter_41.v".
     Found 26-bit register for signal <M_ctr_q>.
     Found 26-bit adder for signal <M_ctr_d> created at line 35.
     Summary:
 	inferred   1 Adder/Subtractor(s).
 	inferred  26 D-type flip-flop(s).
-Unit <counter_40> synthesized.
+Unit <counter_41> synthesized.
 
-Synthesizing Unit <randomizer_41>.
-    Related source file is "C:/Users/Jing Yun/Desktop/50.002 Computation Structure/1D_Game Design/502IntGitRepo/5021DInt/work/planAhead/Integrate1/Integrate1.srcs/sources_1/imports/verilog/randomizer_41.v".
+Synthesizing Unit <randomizer_42>.
+    Related source file is "C:/Users/Jing Yun/Desktop/50.002 Computation Structure/1D_Game Design/502IntGitRepo/5021DInt/work/planAhead/Integrate1/Integrate1.srcs/sources_1/imports/verilog/randomizer_42.v".
     Summary:
 	no macro.
-Unit <randomizer_41> synthesized.
+Unit <randomizer_42> synthesized.
 
-Synthesizing Unit <reg3bit_43>.
-    Related source file is "C:/Users/Jing Yun/Desktop/50.002 Computation Structure/1D_Game Design/502IntGitRepo/5021DInt/work/planAhead/Integrate1/Integrate1.srcs/sources_1/imports/verilog/reg3bit_43.v".
+Synthesizing Unit <reg3bit_44>.
+    Related source file is "C:/Users/Jing Yun/Desktop/50.002 Computation Structure/1D_Game Design/502IntGitRepo/5021DInt/work/planAhead/Integrate1/Integrate1.srcs/sources_1/imports/verilog/reg3bit_44.v".
     Found 3-bit register for signal <M_regs_q>.
     Summary:
 	inferred   3 D-type flip-flop(s).
-Unit <reg3bit_43> synthesized.
+Unit <reg3bit_44> synthesized.
 
-Synthesizing Unit <pn_gen_45>.
-    Related source file is "C:/Users/Jing Yun/Desktop/50.002 Computation Structure/1D_Game Design/502IntGitRepo/5021DInt/work/planAhead/Integrate1/Integrate1.srcs/sources_1/imports/verilog/pn_gen_45.v".
+Synthesizing Unit <pn_gen_46>.
+    Related source file is "C:/Users/Jing Yun/Desktop/50.002 Computation Structure/1D_Game Design/502IntGitRepo/5021DInt/work/planAhead/Integrate1/Integrate1.srcs/sources_1/imports/verilog/pn_gen_46.v".
     Found 32-bit register for signal <M_y_q>.
     Found 32-bit register for signal <M_z_q>.
     Found 32-bit register for signal <M_w_q>.
@@ -358,26 +370,26 @@ Synthesizing Unit <pn_gen_45>.
     Summary:
 	inferred 128 D-type flip-flop(s).
 	inferred   1 Multiplexer(s).
-Unit <pn_gen_45> synthesized.
+Unit <pn_gen_46> synthesized.
 
-Synthesizing Unit <counter_42>.
-    Related source file is "C:/Users/Jing Yun/Desktop/50.002 Computation Structure/1D_Game Design/502IntGitRepo/5021DInt/work/planAhead/Integrate1/Integrate1.srcs/sources_1/imports/verilog/counter_42.v".
+Synthesizing Unit <counter_43>.
+    Related source file is "C:/Users/Jing Yun/Desktop/50.002 Computation Structure/1D_Game Design/502IntGitRepo/5021DInt/work/planAhead/Integrate1/Integrate1.srcs/sources_1/imports/verilog/counter_43.v".
     Found 4-bit register for signal <M_ctr_q>.
     Found 4-bit adder for signal <M_ctr_q[3]_GND_18_o_add_0_OUT> created at line 35.
     Summary:
 	inferred   1 Adder/Subtractor(s).
 	inferred   4 D-type flip-flop(s).
-Unit <counter_42> synthesized.
+Unit <counter_43> synthesized.
 
-Synthesizing Unit <reg2bit_27>.
-    Related source file is "C:/Users/Jing Yun/Desktop/50.002 Computation Structure/1D_Game Design/502IntGitRepo/5021DInt/work/planAhead/Integrate1/Integrate1.srcs/sources_1/imports/verilog/reg2bit_27.v".
+Synthesizing Unit <reg2bit_28>.
+    Related source file is "C:/Users/Jing Yun/Desktop/50.002 Computation Structure/1D_Game Design/502IntGitRepo/5021DInt/work/planAhead/Integrate1/Integrate1.srcs/sources_1/imports/verilog/reg2bit_28.v".
     Found 2-bit register for signal <M_regs_q>.
     Summary:
 	inferred   2 D-type flip-flop(s).
-Unit <reg2bit_27> synthesized.
+Unit <reg2bit_28> synthesized.
 
-Synthesizing Unit <alu_10>.
-    Related source file is "C:/Users/Jing Yun/Desktop/50.002 Computation Structure/1D_Game Design/502IntGitRepo/5021DInt/work/planAhead/Integrate1/Integrate1.srcs/sources_1/imports/verilog/alu_10.v".
+Synthesizing Unit <alu_11>.
+    Related source file is "C:/Users/Jing Yun/Desktop/50.002 Computation Structure/1D_Game Design/502IntGitRepo/5021DInt/work/planAhead/Integrate1/Integrate1.srcs/sources_1/imports/verilog/alu_11.v".
     Found 9-bit subtractor for signal <GND_20_o_GND_20_o_sub_4_OUT> created at line 45.
     Found 9-bit adder for signal <n0127[8:0]> created at line 37.
     Found 8x8-bit multiplier for signal <a[7]_b[7]_MuLt_0_OUT> created at line 34.
@@ -409,13 +421,13 @@ WARNING:Xst:737 - Found 1-bit latch for signal <alu1<15>>. Latches may be genera
 	inferred  16 Latch(s).
 	inferred   3 Comparator(s).
 	inferred   3 Combinational logic shifter(s).
-Unit <alu_10> synthesized.
+Unit <alu_11> synthesized.
 
-Synthesizing Unit <binToAscii_11>.
-    Related source file is "C:/Users/Jing Yun/Desktop/50.002 Computation Structure/1D_Game Design/502IntGitRepo/5021DInt/work/planAhead/Integrate1/Integrate1.srcs/sources_1/imports/verilog/bintoAscii_11.v".
+Synthesizing Unit <binToAscii_12>.
+    Related source file is "C:/Users/Jing Yun/Desktop/50.002 Computation Structure/1D_Game Design/502IntGitRepo/5021DInt/work/planAhead/Integrate1/Integrate1.srcs/sources_1/imports/verilog/bintoAscii_12.v".
     Summary:
 	no macro.
-Unit <binToAscii_11> synthesized.
+Unit <binToAscii_12> synthesized.
 
 Synthesizing Unit <multi_seven_seg_5>.
     Related source file is "C:/Users/Jing Yun/Desktop/50.002 Computation Structure/1D_Game Design/502IntGitRepo/5021DInt/work/planAhead/Integrate1/Integrate1.srcs/sources_1/imports/verilog/multi_seven_seg_5.v".
@@ -426,27 +438,27 @@ Synthesizing Unit <multi_seven_seg_5>.
 	inferred   1 Combinational logic shifter(s).
 Unit <multi_seven_seg_5> synthesized.
 
-Synthesizing Unit <counter_12>.
-    Related source file is "C:/Users/Jing Yun/Desktop/50.002 Computation Structure/1D_Game Design/502IntGitRepo/5021DInt/work/planAhead/Integrate1/Integrate1.srcs/sources_1/imports/verilog/counter_12.v".
+Synthesizing Unit <counter_13>.
+    Related source file is "C:/Users/Jing Yun/Desktop/50.002 Computation Structure/1D_Game Design/502IntGitRepo/5021DInt/work/planAhead/Integrate1/Integrate1.srcs/sources_1/imports/verilog/counter_13.v".
     Found 18-bit register for signal <M_ctr_q>.
     Found 18-bit adder for signal <M_ctr_q[17]_GND_40_o_add_0_OUT> created at line 35.
     Summary:
 	inferred   1 Adder/Subtractor(s).
 	inferred  18 D-type flip-flop(s).
-Unit <counter_12> synthesized.
+Unit <counter_13> synthesized.
 
-Synthesizing Unit <seven_seg_13>.
-    Related source file is "C:/Users/Jing Yun/Desktop/50.002 Computation Structure/1D_Game Design/502IntGitRepo/5021DInt/work/planAhead/Integrate1/Integrate1.srcs/sources_1/imports/verilog/seven_seg_13.v".
+Synthesizing Unit <seven_seg_14>.
+    Related source file is "C:/Users/Jing Yun/Desktop/50.002 Computation Structure/1D_Game Design/502IntGitRepo/5021DInt/work/planAhead/Integrate1/Integrate1.srcs/sources_1/imports/verilog/seven_seg_14.v".
     Found 16x7-bit Read Only RAM for signal <segs>
     Summary:
 	inferred   1 RAM(s).
-Unit <seven_seg_13> synthesized.
+Unit <seven_seg_14> synthesized.
 
-Synthesizing Unit <decoder_14>.
-    Related source file is "C:/Users/Jing Yun/Desktop/50.002 Computation Structure/1D_Game Design/502IntGitRepo/5021DInt/work/planAhead/Integrate1/Integrate1.srcs/sources_1/imports/verilog/decoder_14.v".
+Synthesizing Unit <decoder_15>.
+    Related source file is "C:/Users/Jing Yun/Desktop/50.002 Computation Structure/1D_Game Design/502IntGitRepo/5021DInt/work/planAhead/Integrate1/Integrate1.srcs/sources_1/imports/verilog/decoder_15.v".
     Summary:
 	no macro.
-Unit <decoder_14> synthesized.
+Unit <decoder_15> synthesized.
 
 =========================================================================
 HDL Synthesis Report
@@ -474,7 +486,7 @@ Macro Statistics
  9-bit adder                                           : 2
  9-bit subtractor                                      : 2
 # Registers                                            : 50
- 1-bit register                                        : 13
+ 1-bit register                                        : 12
  18-bit register                                       : 1
  2-bit register                                        : 7
  20-bit register                                       : 6
@@ -485,19 +497,19 @@ Macro Statistics
  3-bit register                                        : 2
  32-bit register                                       : 10
  4-bit register                                        : 2
- 8-bit register                                        : 3
+ 8-bit register                                        : 4
 # Latches                                              : 32
  1-bit latch                                           : 32
 # Comparators                                          : 7
  8-bit comparator equal                                : 2
  8-bit comparator greater                              : 3
  8-bit comparator lessequal                            : 2
-# Multiplexers                                         : 45
- 1-bit 2-to-1 multiplexer                              : 31
+# Multiplexers                                         : 48
+ 1-bit 2-to-1 multiplexer                              : 33
+ 16-bit 2-to-1 multiplexer                             : 2
  2-bit 2-to-1 multiplexer                              : 2
  3-bit 2-to-1 multiplexer                              : 1
  32-bit 2-to-1 multiplexer                             : 2
- 4-bit 2-to-1 multiplexer                              : 1
  8-bit 2-to-1 multiplexer                              : 8
 # Logic shifters                                       : 7
  16-bit shifter arithmetic right                       : 2
@@ -506,6 +518,7 @@ Macro Statistics
  31-bit shifter logical right                          : 1
 # Tristates                                            : 6
  1-bit tristate buffer                                 : 6
+# FSMs                                                 : 1
 # Xors                                                 : 8
  16-bit xor2                                           : 2
  32-bit xor2                                           : 4
@@ -522,21 +535,17 @@ Synthesizing (advanced) Unit <bcounter_6>.
 The following registers are absorbed into accumulator <M_ctr_q>: 1 register on signal <M_ctr_q>.
 Unit <bcounter_6> synthesized (advanced).
 
-Synthesizing (advanced) Unit <button_conditioner_15>.
+Synthesizing (advanced) Unit <button_conditioner_16>.
 The following registers are absorbed into counter <M_ctr_q>: 1 register on signal <M_ctr_q>.
-Unit <button_conditioner_15> synthesized (advanced).
+Unit <button_conditioner_16> synthesized (advanced).
 
-Synthesizing (advanced) Unit <counter_12>.
+Synthesizing (advanced) Unit <counter_13>.
 The following registers are absorbed into counter <M_ctr_q>: 1 register on signal <M_ctr_q>.
-Unit <counter_12> synthesized (advanced).
+Unit <counter_13> synthesized (advanced).
 
-Synthesizing (advanced) Unit <counter_18>.
+Synthesizing (advanced) Unit <counter_19>.
 The following registers are absorbed into counter <M_ctr_q>: 1 register on signal <M_ctr_q>.
-Unit <counter_18> synthesized (advanced).
-
-Synthesizing (advanced) Unit <counter_38>.
-The following registers are absorbed into counter <M_ctr_q>: 1 register on signal <M_ctr_q>.
-Unit <counter_38> synthesized (advanced).
+Unit <counter_19> synthesized (advanced).
 
 Synthesizing (advanced) Unit <counter_39>.
 The following registers are absorbed into counter <M_ctr_q>: 1 register on signal <M_ctr_q>.
@@ -546,11 +555,15 @@ Synthesizing (advanced) Unit <counter_40>.
 The following registers are absorbed into counter <M_ctr_q>: 1 register on signal <M_ctr_q>.
 Unit <counter_40> synthesized (advanced).
 
-Synthesizing (advanced) Unit <counter_42>.
+Synthesizing (advanced) Unit <counter_41>.
 The following registers are absorbed into counter <M_ctr_q>: 1 register on signal <M_ctr_q>.
-Unit <counter_42> synthesized (advanced).
+Unit <counter_41> synthesized (advanced).
 
-Synthesizing (advanced) Unit <propogate_26>.
+Synthesizing (advanced) Unit <counter_43>.
+The following registers are absorbed into counter <M_ctr_q>: 1 register on signal <M_ctr_q>.
+Unit <counter_43> synthesized (advanced).
+
+Synthesizing (advanced) Unit <propogate_27>.
 The following registers are absorbed into counter <M_clkseed_q>: 1 register on signal <M_clkseed_q>.
 The following registers are absorbed into counter <M_seed_q>: 1 register on signal <M_seed_q>.
 INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram__n0094> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
@@ -564,9 +577,9 @@ INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram__n0094> will be implemented on LUTs 
     |     diA            | connected to signal <GND>           |          |
     |     doA            | connected to internal node          |          |
     -----------------------------------------------------------------------
-Unit <propogate_26> synthesized (advanced).
+Unit <propogate_27> synthesized (advanced).
 
-Synthesizing (advanced) Unit <seven_seg_13>.
+Synthesizing (advanced) Unit <seven_seg_14>.
 INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram_segs> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
     -----------------------------------------------------------------------
     | ram_type           | Distributed                         |          |
@@ -578,7 +591,7 @@ INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram_segs> will be implemented on LUTs ei
     |     diA            | connected to signal <GND>           |          |
     |     doA            | connected to signal <segs>          |          |
     -----------------------------------------------------------------------
-Unit <seven_seg_13> synthesized (advanced).
+Unit <seven_seg_14> synthesized (advanced).
 
 =========================================================================
 Advanced HDL Synthesis Report
@@ -608,24 +621,25 @@ Macro Statistics
  4-bit up counter                                      : 1
 # Accumulators                                         : 1
  8-bit up accumulator cin                              : 1
-# Registers                                            : 309
- Flip-Flops                                            : 309
+# Registers                                            : 316
+ Flip-Flops                                            : 316
 # Comparators                                          : 7
  8-bit comparator equal                                : 2
  8-bit comparator greater                              : 3
  8-bit comparator lessequal                            : 2
-# Multiplexers                                         : 45
- 1-bit 2-to-1 multiplexer                              : 31
+# Multiplexers                                         : 48
+ 1-bit 2-to-1 multiplexer                              : 33
+ 16-bit 2-to-1 multiplexer                             : 2
  2-bit 2-to-1 multiplexer                              : 2
  3-bit 2-to-1 multiplexer                              : 1
  32-bit 2-to-1 multiplexer                             : 2
- 4-bit 2-to-1 multiplexer                              : 1
  8-bit 2-to-1 multiplexer                              : 8
 # Logic shifters                                       : 7
  16-bit shifter arithmetic right                       : 2
  16-bit shifter logical left                           : 2
  16-bit shifter logical right                          : 2
  31-bit shifter logical right                          : 1
+# FSMs                                                 : 1
 # Xors                                                 : 8
  16-bit xor2                                           : 2
  32-bit xor2                                           : 4
@@ -636,7 +650,15 @@ Macro Statistics
 =========================================================================
 *                         Low Level Synthesis                           *
 =========================================================================
-INFO:Xst:2146 - In block <main_9>, Counter <edge_ctr/M_ctr_q> <mypropogater/slowclk22/M_ctr_q> are equivalent, XST will keep only <edge_ctr/M_ctr_q>.
+Analyzing FSM <MFsm> for best encoding.
+Optimizing FSM <myState/FSM_0> on signal <M_state_q[1:1]> with sequential encoding.
+-------------------
+ State | Encoding
+-------------------
+ 01    | 0
+ 00    | 1
+-------------------
+INFO:Xst:2146 - In block <main_10>, Counter <edge_ctr/M_ctr_q> <mypropogater/slowclk22/M_ctr_q> are equivalent, XST will keep only <edge_ctr/M_ctr_q>.
 
 Optimizing unit <reg8bit_7> ...
 
@@ -646,11 +668,11 @@ Optimizing unit <state_4> ...
 
 Optimizing unit <bcounter_6> ...
 
-Optimizing unit <main_9> ...
+Optimizing unit <main_10> ...
 
-Optimizing unit <pn_gen_45> ...
+Optimizing unit <pn_gen_46> ...
 
-Optimizing unit <alu_10> ...
+Optimizing unit <alu_11> ...
 WARNING:Xst:2677 - Node <myState/mainState/myalu/alu1_1> of sequential type is unconnected in block <mojo_top_0>.
 WARNING:Xst:2677 - Node <myState/mainState/myalu/alu1_2> of sequential type is unconnected in block <mojo_top_0>.
 WARNING:Xst:2677 - Node <myState/mainState/myalu/alu1_3> of sequential type is unconnected in block <mojo_top_0>.
@@ -667,6 +689,8 @@ WARNING:Xst:1294 - Latch <myState/myalu/alu1_5> is equivalent to a wire in block
 WARNING:Xst:1294 - Latch <myState/myalu/alu1_6> is equivalent to a wire in block <mojo_top_0>.
 WARNING:Xst:1294 - Latch <myState/myalu/alu1_4> is equivalent to a wire in block <mojo_top_0>.
 WARNING:Xst:1294 - Latch <myState/myalu/alu1_7> is equivalent to a wire in block <mojo_top_0>.
+WARNING:Xst:2677 - Node <myState/addReg/M_regs_q_7> of sequential type is unconnected in block <mojo_top_0>.
+WARNING:Xst:2677 - Node <myState/addReg/M_regs_q_6> of sequential type is unconnected in block <mojo_top_0>.
 WARNING:Xst:2677 - Node <myState/scoreSum/M_regs_q_7> of sequential type is unconnected in block <mojo_top_0>.
 WARNING:Xst:2677 - Node <myState/scoreSum/M_regs_q_6> of sequential type is unconnected in block <mojo_top_0>.
 WARNING:Xst:2677 - Node <myState/mainState/myalu/Mmult_a[7]_b[7]_MuLt_0_OUT> of sequential type is unconnected in block <mojo_top_0>.
@@ -951,8 +975,8 @@ Unit <mojo_top_0> processed.
 Final Register Report
 
 Macro Statistics
-# Registers                                            : 319
- Flip-Flops                                            : 319
+# Registers                                            : 325
+ Flip-Flops                                            : 325
 # Shift Registers                                      : 3
  2-bit shift register                                  : 3
 
@@ -977,24 +1001,24 @@ Top Level Output File Name         : mojo_top_0.ngc
 
 Primitive and Black Box Usage:
 ------------------------------
-# BELS                             : 940
+# BELS                             : 944
 #      GND                         : 16
 #      INV                         : 22
 #      LUT1                        : 226
-#      LUT2                        : 14
-#      LUT3                        : 17
-#      LUT4                        : 79
-#      LUT5                        : 38
+#      LUT2                        : 15
+#      LUT3                        : 18
+#      LUT4                        : 78
+#      LUT5                        : 41
 #      LUT6                        : 57
 #      MUXCY                       : 231
 #      VCC                         : 15
 #      XORCY                       : 225
-# FlipFlops/Latches                : 322
+# FlipFlops/Latches                : 328
 #      FD                          : 71
 #      FDE                         : 21
-#      FDR                         : 33
-#      FDRE                        : 186
-#      FDS                         : 5
+#      FDR                         : 34
+#      FDRE                        : 192
+#      FDS                         : 4
 #      FDSE                        : 6
 # Shift Registers                  : 3
 #      SRLC16E                     : 3
@@ -1013,18 +1037,18 @@ Selected Device : 6slx9tqg144-2
 
 
 Slice Logic Utilization: 
- Number of Slice Registers:             322  out of  11440     2%  
- Number of Slice LUTs:                  456  out of   5720     7%  
-    Number used as Logic:               453  out of   5720     7%  
+ Number of Slice Registers:             328  out of  11440     2%  
+ Number of Slice LUTs:                  460  out of   5720     8%  
+    Number used as Logic:               457  out of   5720     7%  
     Number used as Memory:                3  out of   1440     0%  
        Number used as SRL:                3
 
 Slice Logic Distribution: 
- Number of LUT Flip Flop pairs used:    483
-   Number with an unused Flip Flop:     161  out of    483    33%  
-   Number with an unused LUT:            27  out of    483     5%  
-   Number of fully used LUT-FF pairs:   295  out of    483    61%  
-   Number of unique control sets:        37
+ Number of LUT Flip Flop pairs used:    493
+   Number with an unused Flip Flop:     165  out of    493    33%  
+   Number with an unused LUT:            33  out of    493     6%  
+   Number of fully used LUT-FF pairs:   295  out of    493    59%  
+   Number of unique control sets:        38
 
 IO Utilization: 
  Number of IOs:                          74
@@ -1054,7 +1078,7 @@ Clock Information:
 ---------------------------------------------------------------------------------------------+-------------------------------------------------------+-------+
 Clock Signal                                                                                 | Clock buffer(FF name)                                 | Load  |
 ---------------------------------------------------------------------------------------------+-------------------------------------------------------+-------+
-clk                                                                                          | BUFGP                                                 | 262   |
+clk                                                                                          | BUFGP                                                 | 268   |
 myState/mainState/mypropogater/slowclk25/M_ctr_q_22                                          | NONE(myState/mainState/M_left_q_0)                    | 6     |
 myState/mainState/mypropogater/chosenClk_0(myState/mainState/mypropogater/Mmux_chosenClk12:O)| BUFG(*)(myState/mainState/mypropogater/M_clkseed_q_23)| 54    |
 myState/btnCounter/edge_ctr/M_ctr_q_22                                                       | NONE(myState/btnCounter/edge_detector2/M_last_q)      | 3     |
@@ -1072,9 +1096,9 @@ Timing Summary:
 ---------------
 Speed Grade: -2
 
-   Minimum period: 5.890ns (Maximum Frequency: 169.779MHz)
+   Minimum period: 6.423ns (Maximum Frequency: 155.690MHz)
    Minimum input arrival time before clock: 3.526ns
-   Maximum output required time after clock: 6.879ns
+   Maximum output required time after clock: 8.097ns
    Maximum combinational path delay: No path found
 
 Timing Details:
@@ -1083,10 +1107,10 @@ All values displayed in nanoseconds (ns)
 
 =========================================================================
 Timing constraint: Default period analysis for Clock 'clk'
-  Clock period: 5.890ns (frequency: 169.779MHz)
-  Total number of paths / destination ports: 8346 / 587
+  Clock period: 6.423ns (frequency: 155.690MHz)
+  Total number of paths / destination ports: 8376 / 605
 -------------------------------------------------------------------------
-Delay:               5.890ns (Levels of Logic = 8)
+Delay:               6.423ns (Levels of Logic = 6)
   Source:            myState/btnReg/M_regs_q_4 (FF)
   Destination:       myState/mainState/mypropogater/randomizer/numb_gen/M_w_q_24 (FF)
   Source Clock:      clk rising
@@ -1098,20 +1122,19 @@ Delay:               5.890ns (Levels of Logic = 8)
     ----------------------------------------  ------------
      FDRE:C->Q             4   0.525   1.080  M_regs_q_4 (M_regs_q_4)
      end scope: 'myState/btnReg:out<4>'
-     LUT4:I0->O            2   0.254   1.156  M_btnReg_out[7]_PWR_3_o_equal_16_o1_SW1 (N5)
-     LUT5:I0->O            4   0.254   0.804  M_btnReg_out[7]_PWR_3_o_equal_16_o21_1 (M_btnReg_out[7]_PWR_3_o_equal_16_o21)
-     begin scope: 'myState/mainState:M_btnReg_out[7]_PWR_3_o_equal_16_o21'
-     begin scope: 'myState/mainState/mypropogater:M_btnReg_out[7]_PWR_3_o_equal_16_o21'
-     begin scope: 'myState/mainState/mypropogater/rowCtr:M_btnReg_out[7]_PWR_3_o_equal_16_o21'
-     LUT6:I5->O           18   0.254   1.235  Mcount_M_ctr_q_val1_1 (Mcount_M_ctr_q_val1)
-     end scope: 'myState/mainState/mypropogater/rowCtr:Mcount_M_ctr_q_val1'
-     begin scope: 'myState/mainState/mypropogater/randomizer:randnumrst'
-     begin scope: 'myState/mainState/mypropogater/randomizer/numb_gen:rst'
-     LUT4:I3->O            1   0.254   0.000  Mmux_M_w_d15 (M_w_d<0>)
-     FDE:D                     0.074          M_w_q_0
+     LUT4:I0->O            4   0.254   1.234  M_btnReg_out[7]_PWR_3_o_equal_19_o1_SW1 (N7)
+     LUT5:I0->O           20   0.254   1.286  M_btnReg_out[7]_PWR_3_o_equal_19_o21 (M_btnReg_out[7]_PWR_3_o_equal_19_o)
+     begin scope: 'myState/mainState:M_btnReg_out[7]_PWR_3_o_equal_19_o'
+     begin scope: 'myState/mainState/mypropogater:M_btnReg_out[7]_PWR_3_o_equal_19_o'
+     begin scope: 'myState/mainState/mypropogater/randomizer:M_btnReg_out[7]_PWR_3_o_equal_19_o'
+     begin scope: 'myState/mainState/mypropogater/randomizer/numb_gen:M_btnReg_out[7]_PWR_3_o_equal_19_o'
+     LUT6:I5->O           18   0.254   1.234  _n0042_inv1 (_n0042_inv)
+     end scope: 'myState/mainState/mypropogater/randomizer/numb_gen:_n0042_inv'
+     begin scope: 'myState/mainState/mypropogater/randomizer/clk_gen:_n0042_inv'
+     FDE:CE                    0.302          M_w_q_0
     ----------------------------------------
-    Total                      5.890ns (1.615ns logic, 4.275ns route)
-                                       (27.4% logic, 72.6% route)
+    Total                      6.423ns (1.589ns logic, 4.834ns route)
+                                       (24.7% logic, 75.3% route)
 
 =========================================================================
 Timing constraint: Default period analysis for Clock 'myState/mainState/mypropogater/slowclk25/M_ctr_q_22'
@@ -1139,32 +1162,32 @@ Delay:               3.110ns (Levels of Logic = 3)
 
 =========================================================================
 Timing constraint: Default period analysis for Clock 'myState/mainState/mypropogater/chosenClk_0'
-  Clock period: 5.062ns (frequency: 197.555MHz)
+  Clock period: 5.348ns (frequency: 186.984MHz)
   Total number of paths / destination ports: 876 / 108
 -------------------------------------------------------------------------
-Delay:               5.062ns (Levels of Logic = 5)
-  Source:            myState/mainState/mypropogater/rowCtr/M_ctr_q_1 (FF)
+Delay:               5.348ns (Levels of Logic = 5)
+  Source:            myState/mainState/mypropogater/rowCtr/M_ctr_q_0 (FF)
   Destination:       myState/mainState/mypropogater/rowCtr/M_ctr_q_2 (FF)
   Source Clock:      myState/mainState/mypropogater/chosenClk_0 rising
   Destination Clock: myState/mainState/mypropogater/chosenClk_0 rising
 
-  Data Path: myState/mainState/mypropogater/rowCtr/M_ctr_q_1 to myState/mainState/mypropogater/rowCtr/M_ctr_q_2
+  Data Path: myState/mainState/mypropogater/rowCtr/M_ctr_q_0 to myState/mainState/mypropogater/rowCtr/M_ctr_q_2
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FDR:C->Q             29   0.525   1.578  M_ctr_q_1 (M_ctr_q_1)
-     end scope: 'myState/mainState/mypropogater/rowCtr:value<1>'
-     end scope: 'myState/mainState/mypropogater:rowLit<1>'
-     end scope: 'myState/mainState:rowOn<1>'
-     LUT2:I0->O            3   0.250   0.874  Mmux_M_mainState_rst11_SW0 (N14)
-     begin scope: 'myState/mainState:N14'
-     begin scope: 'myState/mainState/mypropogater:N14'
-     begin scope: 'myState/mainState/mypropogater/rowCtr:N14'
-     LUT6:I4->O           14   0.250   1.126  Mcount_M_ctr_q_val1 (Mcount_M_ctr_q_val)
+     FDR:C->Q             30   0.525   1.595  M_ctr_q_0 (M_ctr_q_0)
+     end scope: 'myState/mainState/mypropogater/rowCtr:value<0>'
+     end scope: 'myState/mainState/mypropogater:rowLit<0>'
+     end scope: 'myState/mainState:rowOn<0>'
+     LUT2:I0->O            2   0.250   0.834  Mmux_M_mainState_rst11_SW0 (N16)
+     begin scope: 'myState/mainState:N16'
+     begin scope: 'myState/mainState/mypropogater:N16'
+     begin scope: 'myState/mainState/mypropogater/rowCtr:N16'
+     LUT6:I4->O           27   0.250   1.435  Mcount_M_ctr_q_val1 (Mcount_M_ctr_q_val)
      FDR:R                     0.459          M_ctr_q_0
     ----------------------------------------
-    Total                      5.062ns (1.484ns logic, 3.578ns route)
-                                       (29.3% logic, 70.7% route)
+    Total                      5.348ns (1.484ns logic, 3.864ns route)
+                                       (27.7% logic, 72.3% route)
 
 =========================================================================
 Timing constraint: Default OFFSET IN BEFORE for Clock 'clk'
@@ -1189,48 +1212,60 @@ Offset:              3.526ns (Levels of Logic = 3)
 
 =========================================================================
 Timing constraint: Default OFFSET OUT AFTER for Clock 'clk'
-  Total number of paths / destination ports: 68 / 45
+  Total number of paths / destination ports: 86 / 47
 -------------------------------------------------------------------------
-Offset:              6.879ns (Levels of Logic = 3)
-  Source:            myState/M_state_q (FF)
-  Destination:       high1 (PAD)
+Offset:              7.169ns (Levels of Logic = 7)
+  Source:            myState/mainState/score/M_regs_q_0 (FF)
+  Destination:       ext_sev_seg<5> (PAD)
   Source Clock:      clk rising
 
-  Data Path: myState/M_state_q to high1
+  Data Path: myState/mainState/score/M_regs_q_0 to ext_sev_seg<5>
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FDS:C->Q             83   0.525   2.507  M_state_q (M_state_q)
-     LUT5:I0->O            1   0.254   0.681  Mmux_row911 (row9)
-     end scope: 'myState:row9'
-     OBUF:I->O                 2.912          high9_OBUF (high9)
+     FD:C->Q               7   0.525   1.018  M_regs_q_0 (M_regs_q_0)
+     end scope: 'myState/mainState/score:out<0>'
+     end scope: 'myState/mainState:result<0>'
+     LUT6:I4->O           17   0.250   1.485  M_mainState_result[1]_M_mainState_rowOn[3]_AND_127_o1 (M_mainState_result[1]_M_mainState_rowOn[3]_AND_127_o)
+     end scope: 'myState:M_mainState_result[1]_M_mainState_rowOn[3]_AND_127_o'
+     begin scope: 'seg:M_mainState_result[1]_M_mainState_rowOn[3]_AND_127_o'
+     begin scope: 'seg/seg_dec:M_mainState_result[1]_M_mainState_rowOn[3]_AND_127_o'
+     LUT5:I1->O            2   0.254   0.725  Mram_segs121 (segs<3>)
+     end scope: 'seg/seg_dec:segs<3>'
+     end scope: 'seg:seg<3>'
+     OBUF:I->O                 2.912          ext_sev_seg_0_OBUF (ext_sev_seg<0>)
     ----------------------------------------
-    Total                      6.879ns (3.691ns logic, 3.188ns route)
-                                       (53.7% logic, 46.3% route)
+    Total                      7.169ns (3.941ns logic, 3.228ns route)
+                                       (55.0% logic, 45.0% route)
 
 =========================================================================
 Timing constraint: Default OFFSET OUT AFTER for Clock 'myState/mainState/mypropogater/chosenClk_0'
-  Total number of paths / destination ports: 40 / 10
+  Total number of paths / destination ports: 64 / 16
 -------------------------------------------------------------------------
-Offset:              6.135ns (Levels of Logic = 4)
-  Source:            myState/mainState/mypropogater/rowCtr/M_ctr_q_2 (FF)
-  Destination:       high1 (PAD)
+Offset:              8.097ns (Levels of Logic = 7)
+  Source:            myState/mainState/mypropogater/rowCtr/M_ctr_q_0 (FF)
+  Destination:       ext_sev_seg<5> (PAD)
   Source Clock:      myState/mainState/mypropogater/chosenClk_0 rising
 
-  Data Path: myState/mainState/mypropogater/rowCtr/M_ctr_q_2 to high1
+  Data Path: myState/mainState/mypropogater/rowCtr/M_ctr_q_0 to ext_sev_seg<5>
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FDR:C->Q             30   0.525   1.763  M_ctr_q_2 (M_ctr_q_2)
-     end scope: 'myState/mainState/mypropogater/rowCtr:value<2>'
-     end scope: 'myState/mainState/mypropogater:rowLit<2>'
-     end scope: 'myState/mainState:rowOn<2>'
-     LUT5:I1->O            1   0.254   0.681  Mmux_row811 (row8)
-     end scope: 'myState:row8'
-     OBUF:I->O                 2.912          high8_OBUF (high8)
+     FDR:C->Q             30   0.525   1.942  M_ctr_q_0 (M_ctr_q_0)
+     end scope: 'myState/mainState/mypropogater/rowCtr:value<0>'
+     end scope: 'myState/mainState/mypropogater:rowLit<0>'
+     end scope: 'myState/mainState:rowOn<0>'
+     LUT6:I0->O           17   0.254   1.485  M_mainState_result[1]_M_mainState_rowOn[3]_AND_127_o1 (M_mainState_result[1]_M_mainState_rowOn[3]_AND_127_o)
+     end scope: 'myState:M_mainState_result[1]_M_mainState_rowOn[3]_AND_127_o'
+     begin scope: 'seg:M_mainState_result[1]_M_mainState_rowOn[3]_AND_127_o'
+     begin scope: 'seg/seg_dec:M_mainState_result[1]_M_mainState_rowOn[3]_AND_127_o'
+     LUT5:I1->O            2   0.254   0.725  Mram_segs121 (segs<3>)
+     end scope: 'seg/seg_dec:segs<3>'
+     end scope: 'seg:seg<3>'
+     OBUF:I->O                 2.912          ext_sev_seg_0_OBUF (ext_sev_seg<0>)
     ----------------------------------------
-    Total                      6.135ns (3.691ns logic, 2.444ns route)
-                                       (60.2% logic, 39.8% route)
+    Total                      8.097ns (3.945ns logic, 4.152ns route)
+                                       (48.7% logic, 51.3% route)
 
 =========================================================================
 
@@ -1242,7 +1277,7 @@ Clock to Setup on destination clock clk
                                                    | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock                                       |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------------------------------------------+---------+---------+---------+---------+
-clk                                                |    5.890|         |         |         |
+clk                                                |    6.423|         |         |         |
 myState/btnCounter/edge_ctr/M_ctr_q_22             |    1.535|         |         |         |
 myState/mainState/mypropogater/chosenClk_0         |    6.637|         |         |         |
 myState/mainState/mypropogater/slowclk25/M_ctr_q_22|    4.549|         |         |         |
@@ -1261,8 +1296,8 @@ Clock to Setup on destination clock myState/mainState/mypropogater/chosenClk_0
                                           | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock                              |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ------------------------------------------+---------+---------+---------+---------+
-clk                                       |    7.662|         |         |         |
-myState/mainState/mypropogater/chosenClk_0|    5.062|         |         |         |
+clk                                       |    7.458|         |         |         |
+myState/mainState/mypropogater/chosenClk_0|    5.348|         |         |         |
 ------------------------------------------+---------+---------+---------+---------+
 
 Clock to Setup on destination clock myState/mainState/mypropogater/slowclk25/M_ctr_q_22
@@ -1270,7 +1305,7 @@ Clock to Setup on destination clock myState/mainState/mypropogater/slowclk25/M_c
                                                    | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock                                       |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------------------------------------------+---------+---------+---------+---------+
-clk                                                |    8.682|         |         |         |
+clk                                                |    8.478|         |         |         |
 myState/mainState/mypropogater/chosenClk_0         |    3.903|         |         |         |
 myState/mainState/mypropogater/slowclk25/M_ctr_q_22|    3.110|         |         |         |
 ---------------------------------------------------+---------+---------+---------+---------+
@@ -1279,11 +1314,11 @@ myState/mainState/mypropogater/slowclk25/M_ctr_q_22|    3.110|         |        
 
 
 Total REAL time to Xst completion: 8.00 secs
-Total CPU time to Xst completion: 7.97 secs
+Total CPU time to Xst completion: 8.00 secs
  
 --> 
 
-Total memory usage is 347392 kilobytes
+Total memory usage is 347368 kilobytes
 
 Number of errors   :    0 (   0 filtered)
 Number of warnings :  275 (   0 filtered)
